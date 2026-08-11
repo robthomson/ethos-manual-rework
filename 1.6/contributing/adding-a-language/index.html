@@ -3202,6 +3202,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-confirm-the-locale-code-before-touching-anything" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3371,6 +3382,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-confirm-the-locale-code-before-touching-anything" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3500,6 +3522,21 @@ translated, fully navigable manual — written for whoever (human or agent)
 does the next one. Every step below was actually run, in this order, for
 <code>de</code>, <code>fr</code>, <code>es</code>, <code>it</code>, <code>pt-BR</code>, and <code>zh</code>; the gotchas called out are real
 failures hit while doing it, not hypotheticals.</p>
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<p>Work through in order; each item links to the section with the actual
+commands and the gotchas hit doing it for real. Don't skip straight to
+step 4 — steps 1 and 3 are cheap and avoid rework later.</p>
+<ul>
+<li>[ ] <strong><a href="#1-confirm-the-locale-code-before-touching-anything">1</a></strong> — Confirm Ethos ships a UI in this language, and pick a locale code <code>mkdocs-material</code> actually has a template for (not necessarily the code FrSky's own tooling uses internally — <code>pb</code> vs <code>pt-BR</code> bit us here).</li>
+<li>[ ] <strong><a href="#2-add-the-locale-to-mkdocsyml">2</a></strong> — Add the locale to <code>mkdocs.yml</code> (no <code>nav_translations</code> yet).</li>
+<li>[ ] <strong><a href="#3-seed-a-glossary-in-scriptstranslatepy">3</a></strong> — Seed a ~30-term glossary in <code>scripts/translate.py</code>'s <code>GLOSSARIES</code>.</li>
+<li>[ ] <strong><a href="#4-translate">4</a></strong> — Run <code>scripts/translate.py --only &lt;code&gt;</code> (dry-run first); confirm <code>0 failed</code>.</li>
+<li>[ ] <strong><a href="#5-check-for-existing-screenshots-before-considering-the-simulator">5</a></strong> — Check the old <code>ethos-manual</code> repo for an already-captured screenshot set before assuming the simulator pipeline is needed; bulk-copy and spot-check visually if one matches.</li>
+<li>[ ] <strong><a href="#6-check-and-fix-anchor-links">6</a></strong> — Run <code>python scripts/check_anchors.py --fix</code>.</li>
+<li>[ ] <strong><a href="#7-verify-for-real">7</a></strong> — <code>mkdocs build --strict</code> and check <code>$?</code> is <code>0</code> (not just that the output looks clean); <code>check_anchors.py</code> reports 0.</li>
+<li>[ ] <strong><a href="#8-add-nav_translations-once-after-page-coverage-is-complete">8</a></strong> — Once page coverage is complete, add <code>nav_translations</code> (leaf labels from each page's own H1, section tabs from the glossary).</li>
+<li>[ ] <strong><a href="#9-ship-it">9</a></strong> — Commit, push, watch the Action, verify live (allow for CDN propagation lag on brand-new paths).</li>
+</ul>
 <h2 id="1-confirm-the-locale-code-before-touching-anything">1. Confirm the locale code before touching anything<a class="headerlink" href="#1-confirm-the-locale-code-before-touching-anything" title="Permanent link">&para;</a></h2>
 <p>Two separate things need to agree, and getting either wrong is annoying to
 unwind later (URLs bake the code in permanently):</p>
