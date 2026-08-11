@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1838,7 +1838,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2063,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2260,7 +2260,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2625,7 +2625,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2824,10 +2824,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connection-modes" class="md-nav__link">
+  <a href="#modes-de-connexion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connection modes
+        Modes de connexion
       
     </span>
   </a>
@@ -2970,7 +2970,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3083,7 +3083,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3215,10 +3215,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connection-modes" class="md-nav__link">
+  <a href="#modes-de-connexion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connection modes
+        Modes de connexion
       
     </span>
   </a>
@@ -3242,7 +3242,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/ethos-suite/index.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/ethos-suite/index.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3251,64 +3251,42 @@
 
 
 <h1 id="ethos-suite">Ethos Suite<a class="headerlink" href="#ethos-suite" title="Permanent link">&para;</a></h1>
-<p>Ethos Suite is the companion Windows/Mac application for managing a radio
-running Ethos, connected over USB.</p>
+<p>Ethos Suite est l'application compagnon Windows/Mac permettant de gérer une radio fonctionnant sous Ethos, connectée en USB.</p>
 <div class="admonition note">
-<p class="admonition-title">Screenshots pending</p>
-<p>Ethos Suite is a separate PC application, not the radio itself, so
-this section doesn't use the simulator-captured screenshots the rest
-of the manual does — see <a href="../contributing/screenshot-pipeline/">Screenshot
-Pipeline</a>.</p>
+<p class="admonition-title">Captures d'écran à venir</p>
+<p>Ethos Suite est une application PC distincte, et non la radio elle-même : cette section n'utilise donc pas les captures d'écran issues du simulateur employées dans le reste du manuel — voir <a href="../contributing/screenshot-pipeline/">Chaîne de production des captures d'écran</a>.</p>
 </div>
-<p>Once connected, Ethos Suite can:</p>
+<p>Une fois la connexion établie, Ethos Suite permet de :</p>
 <ol>
-<li>Read the radio's type, ID, and installed versions — firmware,
-   bootloader, internal RF module, flash memory files, and SD card/eMMC
-   files.</li>
-<li>Switch the radio between bootloader mode and running Ethos, and back.</li>
-<li>Compare installed versions against current and update automatically —
-   outdated components only, everything regardless, or components
-   individually.</li>
-<li>Back up models to disk via <strong>Model Manager</strong>, or restore a previous
-   backup (needed since model files aren't backwards-compatible across
-   firmware versions).</li>
-<li>Download any firmware from the FrSky download site via the <strong>Download
-   center</strong>, and use the radio as a proxy to flash a module, sensor,
-   servo, or receiver directly.</li>
-<li>Convert images and audio files to Ethos's native formats.</li>
-<li>Provide <strong>Lua development tools</strong> — API docs, demo scripts, and a
-   debug terminal.</li>
-<li>Flash the radio's bootloader in DFU mode (a power-off connection),
-   independent of whether the radio's own firmware still runs.</li>
-<li>Repair internal storage on X18/S, TW Lite, XE, and X20 Pro/R/RS radios
-   via the <strong>Repair Tool</strong>, if NAND can't be read or settings won't save.</li>
-<li>Eject the radio's USB drives cleanly.</li>
-<li>Notify at startup when a Suite update itself is available (installed
-    on exit).</li>
+<li>Lire le type, l'identifiant et les versions installées sur la radio — firmware, bootloader, module RF interne, fichiers de la mémoire flash et fichiers de la SD card/eMMC.</li>
+<li>Basculer la radio entre le mode bootloader et l'exécution d'Ethos, et inversement.</li>
+<li>Comparer les versions installées avec les versions actuelles et effectuer la mise à jour automatiquement — uniquement les composants obsolètes, l'ensemble des composants, ou chaque composant individuellement.</li>
+<li>Sauvegarder les modèles sur le disque via <strong>Model Manager</strong>, ou restaurer une sauvegarde antérieure (nécessaire car les fichiers de modèles ne sont pas rétrocompatibles entre les versions de firmware).</li>
+<li>Télécharger n'importe quel firmware depuis le site de téléchargement FrSky via le <strong>Download center</strong>, et utiliser la radio comme relais pour flasher directement un module, un capteur, un servo ou un récepteur.</li>
+<li>Convertir des images et des fichiers audio vers les formats natifs d'Ethos.</li>
+<li>Fournir les <strong>Lua development tools</strong> — documentation de l'API, scripts de démonstration et terminal de débogage.</li>
+<li>Flasher le bootloader de la radio en mode DFU (connexion hors tension), indépendamment du fait que le firmware de la radio fonctionne encore ou non.</li>
+<li>Réparer le stockage interne des radios X18/S, TW Lite, XE et X20 Pro/R/RS via le <strong>Repair Tool</strong>, si la NAND ne peut pas être lue ou si les réglages ne sont pas enregistrés.</li>
+<li>Éjecter proprement les lecteurs USB de la radio.</li>
+<li>Signaler au démarrage la disponibilité d'une mise à jour de Suite elle-même (installée à la fermeture).</li>
 </ol>
-<h2 id="connection-modes">Connection modes<a class="headerlink" href="#connection-modes" title="Permanent link">&para;</a></h2>
-<p>Beyond its Tools, Suite operates in three distinct radio connection
-states:</p>
+<h2 id="modes-de-connexion">Modes de connexion<a class="headerlink" href="#modes-de-connexion" title="Permanent link">&para;</a></h2>
+<p>Au-delà de ses outils, Suite fonctionne selon trois états de connexion distincts de la radio :</p>
 <ul>
-<li><strong>Radio in Bootloader mode</strong> — the <strong>Radio</strong> tab checks/updates
-  firmware and the flash/SD-card/eMMC files; <strong>Model Manager</strong> backs up
-  or restores the radio.</li>
-<li><strong>Radio in Ethos mode</strong> — Suite uses the radio as a proxy (via the
-  <strong>FRSK Flasher</strong>/Download center tools) to flash the internal module,
-  or any connected sensor/servo/receiver, directly.</li>
-<li><strong>Radio in DFU mode</strong> — power-off connection, used by the <strong>DFU
-  Flasher</strong> to flash the bootloader itself, e.g. when firmware corruption
-  prevents the radio from powering up normally.</li>
+<li><strong>Radio en mode bootloader</strong> — l'onglet <strong>Radio</strong> vérifie/met à jour le firmware ainsi que les fichiers de la flash, de la SD card ou de l'eMMC ; <strong>Model Manager</strong> sauvegarde ou restaure la radio.</li>
+<li><strong>Radio en mode Ethos</strong> — Suite utilise la radio comme relais (via les outils <strong>FRSK Flasher</strong>/Download center) pour flasher directement le module interne, ou tout capteur, servo ou récepteur connecté.</li>
+<li><strong>Radio en mode DFU</strong> — connexion hors tension, utilisée par le <strong>DFU Flasher</strong> pour flasher le bootloader lui-même, par exemple lorsqu'une corruption du firmware empêche la radio de démarrer normalement.</li>
 </ul>
-<p>See <a href="migration/">Migration</a> for moving an existing radio to Ethos
-Suite for the first time, and <a href="operation/">Operation</a> for the Suite
-interface itself.</p>
+<p>Voir <a href="migration/">Migration</a> pour transférer une radio existante vers Ethos Suite pour la première fois, et <a href="operation/">Utilisation</a> pour l'interface de Suite proprement dite.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

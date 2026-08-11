@@ -772,10 +772,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mode-radio-eteinte" class="md-nav__link">
+  <a href="#mode-hors-tension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mode radio éteinte
+        Mode hors tension
       
     </span>
   </a>
@@ -794,10 +794,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-radio-allumee" class="md-nav__link">
+  <a href="#mode-sous-tension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mode radio allumée
+        Mode sous tension
       
     </span>
   </a>
@@ -912,7 +912,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1249,7 +1249,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1782,7 +1782,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1923,7 +1923,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2148,7 +2148,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2710,7 +2710,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2992,7 +2992,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3105,7 +3105,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3237,10 +3237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mode-radio-eteinte" class="md-nav__link">
+  <a href="#mode-hors-tension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mode radio éteinte
+        Mode hors tension
       
     </span>
   </a>
@@ -3259,10 +3259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-radio-allumee" class="md-nav__link">
+  <a href="#mode-sous-tension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mode radio allumée
+        Mode sous tension
       
     </span>
   </a>
@@ -3296,32 +3296,17 @@
 
 <h1 id="modes-de-connexion-usb">Modes de connexion USB<a class="headerlink" href="#modes-de-connexion-usb" title="Permanent link">&para;</a></h1>
 <p><img alt="Menu USB" src="../../../assets/usbmenu.png" /></p>
-<p>Ce que fait une connexion USB à un PC dépend de l'état d'alimentation de
-la radio au moment du branchement.</p>
-<h2 id="mode-radio-eteinte">Mode radio éteinte<a class="headerlink" href="#mode-radio-eteinte" title="Permanent link">&para;</a></h2>
-<p>Brancher la radio à un PC en USB <strong>alors qu'elle est éteinte</strong> la place
-en mode DFU, utilisé pour flasher le bootloader lui-même.</p>
+<p>Le comportement d'une connexion USB vers un PC dépend de la manière dont la radio était alimentée au moment du branchement.</p>
+<h2 id="mode-hors-tension">Mode hors tension<a class="headerlink" href="#mode-hors-tension" title="Permanent link">&para;</a></h2>
+<p>Connecter la radio à un PC via USB <strong>alors qu'elle est éteinte</strong> la place en mode DFU, utilisé pour flasher le bootloader lui-même.</p>
 <h2 id="bootloader-mode">Mode bootloader<a class="headerlink" href="#bootloader-mode" title="Permanent link">&para;</a></h2>
-<p>Allumez la radio <strong>en maintenant <code>ENT</code> enfoncé</strong> pour démarrer en mode
-bootloader (l'écran affiche « Bootloader »). Brancher l'USB fait alors
-passer le statut à « USB branché » et le PC monte <strong>deux</strong> lecteurs : la
-mémoire flash interne de la radio, et le contenu de la carte SD/eMMC.
-C'est le mode permettant de lire et écrire des fichiers directement sur
-l'un ou l'autre espace de stockage, et c'est aussi celui utilisé par
-<a href="../../ethos-suite/">Ethos Suite</a> pour mettre à jour le firmware de
-la radio — voir la section Mode Bootloader d'Ethos Suite.</p>
-<h2 id="mode-radio-allumee">Mode radio allumée<a class="headerlink" href="#mode-radio-allumee" title="Permanent link">&para;</a></h2>
-<p>Brancher l'USB alors que la radio est <strong>allumée normalement</strong> fait
-apparaître un sélecteur de mode :</p>
+<p>Allumez la radio <strong>en maintenant <code>ENT</code> enfoncé</strong> pour démarrer en mode bootloader (l'écran affiche « Bootloader »). Le branchement de l'USB fait alors passer l'état à « USB Plugged » et le PC monte <strong>deux</strong> volumes : la mémoire flash interne de la radio et le contenu de la SD card/eMMC. C'est le mode à utiliser pour lire et écrire directement des fichiers dans l'une ou l'autre de ces zones de stockage, et c'est également ainsi qu'<a href="../../ethos-suite/">Ethos Suite</a> met à jour le firmware de la radio — voir la section Mode bootloader propre à Ethos Suite.</p>
+<h2 id="mode-sous-tension">Mode sous tension<a class="headerlink" href="#mode-sous-tension" title="Permanent link">&para;</a></h2>
+<p>Le branchement de l'USB alors que la radio est <strong>allumée normalement</strong> affiche un sélecteur de mode :</p>
 <ul>
-<li><strong>Joystick</strong> — présente la radio comme un joystick USB HID, pour
-  piloter des simulateurs de vol PC.</li>
-<li><strong>FrSky Suite</strong> — place la radio en « mode Ethos » pour communiquer
-  avec <a href="../../ethos-suite/">Ethos Suite</a>.</li>
-<li><strong>Série</strong> — envoie les traces de débogage Lua via USB-série (115200
-  bps). L'onglet Outils de développement Lua d'Ethos Suite dispose d'un
-  terminal intégré pour les afficher ; un pilote de port COM virtuel
-  Windows peut être nécessaire.</li>
+<li><strong>Joystick</strong> — présente la radio comme un joystick USB HID, pour piloter des simulateurs de vol sur PC.</li>
+<li><strong>FrSky Suite</strong> — place la radio en « mode Ethos » pour communiquer avec <a href="../../ethos-suite/">Ethos Suite</a>.</li>
+<li><strong>Serial</strong> — redirige les traces de débogage Lua sur la liaison USB-série (115200 bps). L'onglet Lua Development Tools d'Ethos Suite intègre un terminal permettant de les afficher ; un pilote Virtual COM Port pour Windows peut être nécessaire.</li>
 </ul>
 
 

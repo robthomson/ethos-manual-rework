@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#timers" class="md-skip">
+        <a href="#chronos" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1169,7 +1169,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1390,10 +1390,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-fields-count-down-and-count-up" class="md-nav__link">
+  <a href="#champs-communs-decompte-et-comptage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common fields (count-down and count-up)
+        Champs communs (décompte et comptage)
       
     </span>
   </a>
@@ -1401,10 +1401,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audio-actions" class="md-nav__link">
+  <a href="#actions-audio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Audio actions
+        Actions audio
       
     </span>
   </a>
@@ -1771,7 +1771,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1912,7 +1912,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2137,7 +2137,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2334,7 +2334,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2699,7 +2699,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2981,7 +2981,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3094,7 +3094,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3226,10 +3226,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-fields-count-down-and-count-up" class="md-nav__link">
+  <a href="#champs-communs-decompte-et-comptage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common fields (count-down and count-up)
+        Champs communs (décompte et comptage)
       
     </span>
   </a>
@@ -3237,10 +3237,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audio-actions" class="md-nav__link">
+  <a href="#actions-audio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Audio actions
+        Actions audio
       
     </span>
   </a>
@@ -3264,7 +3264,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/model-setup/timers.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/model-setup/timers.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3272,75 +3272,88 @@
   
 
 
-<h1 id="timers">Timers<a class="headerlink" href="#timers" title="Permanent link">&para;</a></h1>
-<p><img alt="Timers" src="../../../assets/model-timers.png" /></p>
-<p>Eight fully programmable timers, each counting up or down. Add one with
-the <strong>+</strong> next to the column headings, or via <strong>Add</strong> below. Touching a
-timer opens reset/edit/add/move/copy-paste options.</p>
-<p><img alt="Timer edit" src="../../../assets/model-timer1-edit.png" /></p>
-<h2 id="common-fields-count-down-and-count-up">Common fields (count-down and count-up)<a class="headerlink" href="#common-fields-count-down-and-count-up" title="Permanent link">&para;</a></h2>
+<h1 id="chronos">Chronos<a class="headerlink" href="#chronos" title="Permanent link">&para;</a></h1>
+<p><img alt="Chronos" src="../../../assets/model-timers.png" /></p>
+<p>Huit chronos entièrement programmables, comptant chacun vers le haut ou
+vers le bas. Ajoutez-en un avec le <strong>+</strong> situé à côté des en-têtes de
+colonnes, ou via <strong>Ajouter</strong> en dessous. Toucher un chrono ouvre les
+options de réinitialisation/édition/ajout/déplacement/copier-coller.</p>
+<p><img alt="Édition d'un chrono" src="../../../assets/model-timer1-edit.png" /></p>
+<h2 id="champs-communs-decompte-et-comptage">Champs communs (décompte et comptage)<a class="headerlink" href="#champs-communs-decompte-et-comptage" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Value</strong> — the timer's current reading.</li>
-<li><strong>Name</strong> — editable.</li>
-<li><strong>Mode</strong> — <strong>Up</strong> or <strong>Down</strong>.</li>
-<li><strong>Start value</strong> (count-down only) — the value counted down from.</li>
-<li><strong>Alarm Value</strong> (count-up only) — the value at which the timer is
-  considered elapsed; it keeps counting past this, but shows red in timer
-  widgets.</li>
-<li><strong>Start condition</strong> — starts the timer. If <strong>Stop condition</strong> is left at
-  default, the start condition alone controls start <em>and</em> stop. Otherwise,
-  the timer starts the first time the start condition becomes true, and
-  keeps running from there.</li>
-<li><strong>Stop condition</strong> — if not left at default, controls the timer once
-  running: stopped while true, running while false. In the example below,
-  a timer starts when <code>ThrottleActive</code> becomes true and stops once
-  telemetry is no longer active:</li>
+<li><strong>Valeur</strong> — la lecture actuelle du chronomètre.</li>
+<li><strong>Nom</strong> — modifiable.</li>
+<li><strong>Mode</strong> — <strong>Haut</strong> ou <strong>Bas</strong>.</li>
+<li><strong>Valeur de départ</strong> (décompte uniquement) — la valeur à partir de
+  laquelle le décompte s'effectue.</li>
+<li><strong>Valeur d'alarme</strong> (comptage uniquement) — la valeur à laquelle le
+  chronomètre est considéré comme écoulé ; il continue de compter au-delà,
+  mais s'affiche en rouge dans les widgets de chrono.</li>
+<li><strong>Condition de démarrage</strong> — démarre le chronomètre. Si la <strong>Condition
+  d'arrêt</strong> est laissée à sa valeur par défaut, la condition de démarrage
+  contrôle à elle seule le démarrage <em>et</em> l'arrêt. Sinon, le chronomètre
+  démarre la première fois que la condition de démarrage devient vraie,
+  puis continue de tourner.</li>
+<li><strong>Condition d'arrêt</strong> — si elle n'est pas laissée à sa valeur par défaut,
+  elle contrôle le chronomètre une fois celui-ci lancé : arrêté tant qu'elle
+  est vraie, en marche lorsqu'elle est fausse. Dans l'exemple ci-dessous, un
+  chronomètre démarre lorsque <code>ThrottleActive</code> devient vrai et s'arrête dès
+  que la télémétrie n'est plus active :</li>
 </ul>
-<p><img alt="Stop condition" src="../../../assets/model-timer1-edit-stop.png" /></p>
+<p><img alt="Condition d'arrêt" src="../../../assets/model-timer1-edit-stop.png" /></p>
 <ul>
-<li><strong>Proportional timing source</strong> — <code>---</code> counts in real time. Any other
-  source (e.g. the throttle stick or throttle channel) scales the timer's
-  speed: at −100% the timer is stopped, at +100% it runs at real-time
-  speed, and it scales proportionally in between.</li>
-<li><strong>Reset</strong> — a switch, function switch, logical switch, or trim position
-  that resets the timer; it's held at reset for as long as the condition
-  is true.</li>
-<li><strong>Persistent</strong> — keeps the timer's value across power-off or a model
-  change, reloading it next time the model is used.</li>
-<li><strong>Voice</strong> — which <a href="../../system-setup/general/#audio-settings">voice pack</a>
-  announces this timer.</li>
+<li><strong>Source de comptage proportionnel</strong> — <code>---</code> compte en temps réel. Toute
+  autre source (par exemple le manche des gaz ou la voie des gaz) module la
+  vitesse du chronomètre : à −100 % le chronomètre est arrêté, à +100 % il
+  tourne à la vitesse réelle, et l'évolution est proportionnelle entre les
+  deux.</li>
+<li><strong>Réinitialisation</strong> — un interrupteur, un interrupteur de fonction, un
+  interrupteur logique ou une position de trim qui réinitialise le
+  chronomètre ; celui-ci reste maintenu à zéro aussi longtemps que la
+  condition est vraie.</li>
+<li><strong>Persistant</strong> — conserve la valeur du chronomètre après une mise hors
+  tension ou un changement de modèle, et la recharge lors de la prochaine
+  utilisation du modèle.</li>
+<li><strong>Voix</strong> — quel <a href="../../system-setup/general/#audio-settings">pack vocal</a>
+  annonce ce chronomètre.</li>
 </ul>
-<h2 id="audio-actions">Audio actions<a class="headerlink" href="#audio-actions" title="Permanent link">&para;</a></h2>
-<p><img alt="Add audio action" src="../../../assets/model-timer1-add-action.png" />
-<img alt="Action type" src="../../../assets/model-timer1-action-type-select.png" />
-<img alt="Countdown action" src="../../../assets/model-timer1-action-countdown.png" /></p>
-<p>Fully flexible, per-timer alert configuration. Each action has a type —
-<strong>Countdown</strong> (spoken), <strong>Beep countdown</strong> (beeps instead of speech),
-<strong>Play file</strong>, or <strong>Play value</strong> — plus:</p>
+<h2 id="actions-audio">Actions audio<a class="headerlink" href="#actions-audio" title="Permanent link">&para;</a></h2>
+<p><img alt="Ajouter une action audio" src="../../../assets/model-timer1-add-action.png" />
+<img alt="Type d'action" src="../../../assets/model-timer1-action-type-select.png" />
+<img alt="Action de décompte" src="../../../assets/model-timer1-action-countdown.png" /></p>
+<p>Configuration des alertes entièrement flexible, propre à chaque chrono.
+Chaque action possède un type — <strong>Décompte</strong> (vocal), <strong>Décompte sonore</strong>
+(bips au lieu de la voix), <strong>Jouer un fichier</strong> ou <strong>Annoncer une valeur</strong> —
+ainsi que :</p>
 <ul>
-<li><strong>Start</strong> — the value this action's countdown begins from.</li>
-<li><strong>Step</strong> — announcement interval, up to 10 minutes (600s).</li>
-<li><strong>Haptic</strong> — accompany the announcement with vibration.</li>
+<li><strong>Départ</strong> — la valeur à partir de laquelle le décompte de cette action
+  commence.</li>
+<li><strong>Pas</strong> — l'intervalle entre les annonces, jusqu'à 10 minutes (600 s).</li>
+<li><strong>Vibreur</strong> — accompagner l'annonce d'une vibration.</li>
 </ul>
-<p>A typical three-action stack:</p>
-<p><img alt="Actions summary" src="../../../assets/model-timer1-actions-summary.png" />
-<img alt="Timer 2 actions" src="../../../assets/model-timer2-actions-summary.png" /></p>
+<p>Un empilement typique de trois actions :</p>
+<p><img alt="Résumé des actions" src="../../../assets/model-timer1-actions-summary.png" />
+<img alt="Actions du chrono 2" src="../../../assets/model-timer2-actions-summary.png" /></p>
 <ol>
-<li>Spoken countdown starting at 2:00 remaining, every 30s, with haptic.</li>
-<li>Beep countdown starting at 0:10 remaining, every 1s, with haptic.</li>
-<li>A custom file (e.g. <code>timer-1-elapsed</code>) played on elapse, with haptic.</li>
+<li>Décompte vocal débutant à 2:00 restantes, toutes les 30 s, avec vibreur.</li>
+<li>Décompte sonore débutant à 0:10 restantes, toutes les 1 s, avec vibreur.</li>
+<li>Un fichier personnalisé (par exemple <code>timer-1-elapsed</code>) joué à
+   l'échéance, avec vibreur.</li>
 </ol>
-<p>Add further actions with <strong>Add</strong>; the list runs in priority order with
-the <strong>highest priority last</strong>.</p>
-<p>See also the <a href="../../displays/#widget-types">Timer Log display widget</a>
-for a running log of past timer runs.</p>
-<p><img alt="Timer widget" src="../../../assets/model-timers-widget.png" /></p>
+<p>Ajoutez d'autres actions avec <strong>Ajouter</strong> ; la liste est traitée par ordre
+de priorité, la <strong>priorité la plus élevée en dernier</strong>.</p>
+<p>Voir également le <a href="../../displays/#widget-types">widget d'écran Journal des chronos</a>
+pour un journal des séquences de chronométrage passées.</p>
+<p><img alt="Widget de chrono" src="../../../assets/model-timers-widget.png" /></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1838,7 +1838,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2063,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2260,7 +2260,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2625,7 +2625,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/ethos-suite/migration.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/ethos-suite/migration.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3184,34 +3184,34 @@
 
 
 <h1 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h1>
-<p>Moving a radio from the older, separate PC update tools to Ethos Suite,
-for the first time.</p>
+<p>Passage d'une radio des anciens outils de mise à jour PC séparés vers Ethos Suite,
+pour la première fois.</p>
 <ol>
-<li><strong>Confirm Ethos ≥ 1.1.4</strong> — the minimum version that can flash the new
-   Suite-compatible bootloader (FRSK format) directly from <a href="../../system-setup/file-manager/">File
-   Manager</a>. Update manually to 1.1.4
-   first if needed.</li>
-<li><strong>Back up the SD card/eMMC</strong> — copy the whole thing to a folder on a
+<li><strong>Vérifiez que la version Ethos est ≥ 1.1.4</strong> — la version minimale capable de flasher le nouveau
+   bootloader compatible Suite (format FRSK) directement depuis le <a href="../../system-setup/file-manager/">Gestionnaire
+   de fichiers</a>. Mettez d'abord à jour manuellement vers la version 1.1.4
+   si nécessaire.</li>
+<li><strong>Sauvegardez la carte SD/eMMC</strong> — copiez l'intégralité du contenu dans un dossier sur un
    PC.</li>
-<li><strong>Download the latest bootloader</strong> from
-   <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">ETHOS-Feedback-Community releases</a>
-   and unzip it. Each release publishes a <code>components.json</code> listing every
-   component's current version — see <a href="../../how-to/find-latest-bootloader/">How-To: Find the Latest
-   Bootloader</a> for reading it.</li>
-<li>Find the radio under its <code>targets</code> entry in that file for the exact
-   bootloader version to use, and locate the matching file in that
-   release's assets.</li>
-<li>Power the radio into <a href="../../getting-started/usb-connection-modes/#bootloader-mode">bootloader mode</a>
-   (hold <code>ENT</code>, then power on) and connect via USB.</li>
-<li>Copy the bootloader file to the SD card/eMMC (normally into
-   <code>Firmware/</code>), then eject the drives and disconnect.</li>
-<li>Start the radio normally, go to <strong>System → File Manager</strong>, tap the
-   <code>bootloader.frsk</code> file just copied, and <strong>Flash bootloader</strong>.</li>
-<li>Download and install Ethos Suite — <a href="../operation/">Operation</a> covers
-   updating firmware/files and the rest of Suite's features from here.</li>
-<li>If Ethos Suite doesn't do it automatically, the <code>bitmaps/user</code> folder
-   on the SD card/eMMC may need renaming to <code>bitmaps/models</code> (this is
-   where user model bitmaps live).</li>
+<li><strong>Téléchargez le bootloader le plus récent</strong> depuis les
+   <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">publications ETHOS-Feedback-Community</a>
+   et décompressez l'archive. Chaque publication comporte un fichier <code>components.json</code> listant la version
+   actuelle de chaque composant — voir <a href="../../how-to/find-latest-bootloader/">Guide pratique : trouver le bootloader
+   le plus récent</a> pour savoir comment le lire.</li>
+<li>Recherchez la radio dans l'entrée <code>targets</code> de ce fichier afin de connaître la version exacte
+   du bootloader à utiliser, puis repérez le fichier correspondant parmi les ressources de cette
+   publication.</li>
+<li>Démarrez la radio en <a href="../../getting-started/usb-connection-modes/#bootloader-mode">mode bootloader</a>
+   (maintenez <code>ENT</code>, puis mettez sous tension) et connectez-la en USB.</li>
+<li>Copiez le fichier du bootloader sur la carte SD/eMMC (normalement dans
+   <code>Firmware/</code>), puis éjectez les lecteurs et déconnectez la radio.</li>
+<li>Démarrez la radio normalement, allez dans <strong>System → File Manager</strong>, appuyez sur le
+   fichier <code>bootloader.frsk</code> qui vient d'être copié, puis sur <strong>Flash bootloader</strong>.</li>
+<li>Téléchargez et installez Ethos Suite — la page <a href="../operation/">Utilisation</a> décrit la
+   mise à jour du firmware et des fichiers ainsi que les autres fonctionnalités de Suite à partir de ce point.</li>
+<li>Si Ethos Suite ne le fait pas automatiquement, il peut être nécessaire de renommer le dossier
+   <code>bitmaps/user</code> de la carte SD/eMMC en <code>bitmaps/models</code> (c'est là que
+   se trouvent les images de modèles de l'utilisateur).</li>
 </ol>
 
 
@@ -3219,6 +3219,9 @@ for the first time.</p>
 
 
 
+
+  
+  
 
 
 

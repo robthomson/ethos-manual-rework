@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-scripts-model" class="md-skip">
+        <a href="#scripts-lua-modele" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1169,7 +1169,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1670,10 +1670,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lua-tasks" class="md-nav__link">
+  <a href="#taches-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lua tasks
+        Tâches Lua
       
     </span>
   </a>
@@ -1681,10 +1681,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lua-sources" class="md-nav__link">
+  <a href="#sources-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lua sources
+        Sources Lua
       
     </span>
   </a>
@@ -1692,10 +1692,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-script-authors" class="md-nav__link">
+  <a href="#pour-les-auteurs-de-scripts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For script authors
+        Pour les auteurs de scripts
       
     </span>
   </a>
@@ -1782,7 +1782,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1923,7 +1923,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2148,7 +2148,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2710,7 +2710,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2992,7 +2992,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3105,7 +3105,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3237,10 +3237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lua-tasks" class="md-nav__link">
+  <a href="#taches-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lua tasks
+        Tâches Lua
       
     </span>
   </a>
@@ -3248,10 +3248,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lua-sources" class="md-nav__link">
+  <a href="#sources-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lua sources
+        Sources Lua
       
     </span>
   </a>
@@ -3259,10 +3259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-script-authors" class="md-nav__link">
+  <a href="#pour-les-auteurs-de-scripts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For script authors
+        Pour les auteurs de scripts
       
     </span>
   </a>
@@ -3286,7 +3286,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/model-setup/lua-scripts.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/model-setup/lua-scripts.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3294,41 +3294,46 @@
   
 
 
-<h1 id="lua-scripts-model">Lua Scripts (Model)<a class="headerlink" href="#lua-scripts-model" title="Permanent link">&para;</a></h1>
-<p><img alt="Lua config" src="../../../assets/model-lua-config.png" /></p>
-<p>This menu only appears once a Lua <strong>source</strong> or <strong>task</strong> script has been
-installed under <code>scripts/</code> on the SD card/eMMC (see <a href="../../system-setup/file-manager/#top-level-folders">File
-Manager</a>) — it's for
-activating and configuring those scripts <strong>per model</strong>, not for installing
-them. Once installed, a source or task is available globally to every
-model; this page is where each model opts in and sets its own
-configuration. Example source and task scripts are published on the
-Ethos-Feedback-Community site (<code>/lua/examples/task</code>,
-<code>/lua/examples/source</code>).</p>
-<h2 id="lua-tasks">Lua tasks<a class="headerlink" href="#lua-tasks" title="Permanent link">&para;</a></h2>
-<p>Every installed task is listed with an enable toggle per model. Enabling
-one reveals its configuration form (if it has one) — the task script
-supplies its own read/write functions so each model can save its own
-settings. For example, a task might expose a configurable numeric range
-that's set independently per model.</p>
-<h2 id="lua-sources">Lua sources<a class="headerlink" href="#lua-sources" title="Permanent link">&para;</a></h2>
-<p>The same pattern for sources: enable per model, then configure via
-whatever form the source script provides. A source registered this way
-becomes usable as an ordinary
+<h1 id="scripts-lua-modele">Scripts Lua (modèle)<a class="headerlink" href="#scripts-lua-modele" title="Permanent link">&para;</a></h1>
+<p><img alt="Configuration Lua" src="../../../assets/model-lua-config.png" /></p>
+<p>Ce menu n'apparaît que lorsqu'un script Lua de type <strong>source</strong> ou <strong>tâche</strong> a
+été installé dans le dossier <code>scripts/</code> de la carte SD/eMMC (voir
+<a href="../../system-setup/file-manager/#top-level-folders">Gestionnaire de fichiers</a>) —
+il sert à activer et à configurer ces scripts <strong>pour chaque modèle</strong>, et non à
+les installer. Une fois installée, une source ou une tâche est disponible
+globalement pour tous les modèles ; cette page est l'endroit où chaque modèle
+choisit de l'activer et définit sa propre configuration. Des exemples de
+scripts de sources et de tâches sont publiés sur le site
+Ethos-Feedback-Community (<code>/lua/examples/task</code>, <code>/lua/examples/source</code>).</p>
+<h2 id="taches-lua">Tâches Lua<a class="headerlink" href="#taches-lua" title="Permanent link">&para;</a></h2>
+<p>Chaque tâche installée est répertoriée avec un interrupteur d'activation propre
+à chaque modèle. L'activation d'une tâche fait apparaître son formulaire de
+configuration (si elle en possède un) — le script de la tâche fournit ses
+propres fonctions de lecture/écriture, ce qui permet à chaque modèle
+d'enregistrer ses propres réglages. Par exemple, une tâche peut exposer une
+plage numérique configurable, définie indépendamment pour chaque modèle.</p>
+<h2 id="sources-lua">Sources Lua<a class="headerlink" href="#sources-lua" title="Permanent link">&para;</a></h2>
+<p>Le même principe s'applique aux sources : activation par modèle, puis
+configuration via le formulaire fourni par le script de la source. Une source
+enregistrée de cette manière devient utilisable comme une
 <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">source</a>
-anywhere else in Ethos, exactly like a built-in one.</p>
-<h2 id="for-script-authors">For script authors<a class="headerlink" href="#for-script-authors" title="Permanent link">&para;</a></h2>
-<p>Sources and tasks are registered from Lua via <code>system.registerSource()</code>
-and <code>system.registerTask()</code> — see the Ethos Lua Reference Guide, and
-<a href="../../lua-scripts/">Lua Scripts</a> in this manual for the general
-scripting environment (widgets are a separate, related mechanism — see
-<a href="../../displays/custom-widgets/">Custom Widgets</a>).</p>
+ordinaire partout ailleurs dans Ethos, exactement comme une source intégrée.</p>
+<h2 id="pour-les-auteurs-de-scripts">Pour les auteurs de scripts<a class="headerlink" href="#pour-les-auteurs-de-scripts" title="Permanent link">&para;</a></h2>
+<p>Les sources et les tâches sont enregistrées depuis Lua au moyen de
+<code>system.registerSource()</code> et <code>system.registerTask()</code> — voir le Ethos Lua
+Reference Guide, ainsi que la section <a href="../../lua-scripts/">Scripts Lua</a> de
+ce manuel pour l'environnement de script général (les widgets constituent un
+mécanisme distinct mais apparenté — voir
+<a href="../../displays/custom-widgets/">Widgets personnalisés</a>).</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -3375,13 +3380,13 @@ scripting environment (widgets are a separate, related mechanism — see
         
         
           
-          <a href="../../displays/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Displays">
+          <a href="../../displays/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Écrans">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Displays
+                Écrans
               </div>
             </div>
             <div class="md-footer__button md-icon">

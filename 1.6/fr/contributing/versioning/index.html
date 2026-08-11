@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#versioning" class="md-skip">
+        <a href="#gestion-des-versions" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1838,7 +1838,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2063,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2260,7 +2260,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2625,7 +2625,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2907,7 +2907,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3025,7 +3025,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3134,10 +3134,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How it works
+        Fonctionnement
       
     </span>
   </a>
@@ -3145,10 +3145,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-layout-main-frozen-branches" class="md-nav__link">
+  <a href="#organisation-des-sources-main-branches-figees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Source layout: main + frozen branches
+        Organisation des sources : main + branches figées
       
     </span>
   </a>
@@ -3156,10 +3156,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cutting-a-new-version" class="md-nav__link">
+  <a href="#creer-une-nouvelle-version" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cutting a new version
+        Créer une nouvelle version
       
     </span>
   </a>
@@ -3167,10 +3167,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots-across-versions" class="md-nav__link">
+  <a href="#captures-decran-et-versions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Screenshots across versions
+        Captures d'écran et versions
       
     </span>
   </a>
@@ -3248,10 +3248,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#fonctionnement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How it works
+        Fonctionnement
       
     </span>
   </a>
@@ -3259,10 +3259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-layout-main-frozen-branches" class="md-nav__link">
+  <a href="#organisation-des-sources-main-branches-figees" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Source layout: main + frozen branches
+        Organisation des sources : main + branches figées
       
     </span>
   </a>
@@ -3270,10 +3270,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cutting-a-new-version" class="md-nav__link">
+  <a href="#creer-une-nouvelle-version" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cutting a new version
+        Créer une nouvelle version
       
     </span>
   </a>
@@ -3281,10 +3281,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots-across-versions" class="md-nav__link">
+  <a href="#captures-decran-et-versions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Screenshots across versions
+        Captures d'écran et versions
       
     </span>
   </a>
@@ -3308,7 +3308,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/contributing/versioning.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/contributing/versioning.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3316,86 +3316,97 @@
   
 
 
-<h1 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h1>
-<p>Ethos ships firmware under version numbers today (1.6.x) and has
-signalled a move toward year-based branding (e.g. "Ethos26"). This manual
-needs to keep old versions' documentation available and correct while new
-versions are actively being written — this page is how.</p>
-<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<p>Versioning is handled by <a href="https://github.com/jimporter/mike">mike</a>, the
-tool Material for MkDocs itself recommends. <code>.github/workflows/deploy.yml</code>
-runs <code>mike deploy</code> instead of publishing straight to the <code>gh-pages</code> root:
-each version is built and committed to its own subfolder there (<code>/1.6/</code>,
-<code>/26/</code>, …), and <code>manual.rt-rc.com/</code> redirects to whichever version
-currently holds the <code>latest</code> alias. Material shows a version-select
-dropdown automatically, reading <code>versions.json</code> (which <code>mike</code> maintains)
-— this is unrelated to, and composes cleanly with, the locale switcher:
-version is the outer path segment, locale (once more than <code>en</code> exists) is
-the inner one, e.g. <code>manual.rt-rc.com/26/fr/...</code>.</p>
-<p>This reuses the same "subfolder on <code>gh-pages</code>" mechanism as <a href="../#pr-previews">PR
-previews</a> — <code>mike</code>'s version folders and the
-<code>pr-preview/</code> folder coexist on the same branch without conflicting, since
-each only ever touches its own paths.</p>
-<h2 id="source-layout-main-frozen-branches">Source layout: <code>main</code> + frozen branches<a class="headerlink" href="#source-layout-main-frozen-branches" title="Permanent link">&para;</a></h2>
+<h1 id="gestion-des-versions">Gestion des versions<a class="headerlink" href="#gestion-des-versions" title="Permanent link">&para;</a></h1>
+<p>Ethos publie aujourd'hui son firmware sous des numéros de version (1.6.x) et
+a annoncé une évolution vers une identification par année (par exemple
+« Ethos26 »). Ce manuel doit conserver la documentation des anciennes versions,
+disponible et correcte, pendant que celle des nouvelles versions est en cours de
+rédaction — cette page explique comment.</p>
+<h2 id="fonctionnement">Fonctionnement<a class="headerlink" href="#fonctionnement" title="Permanent link">&para;</a></h2>
+<p>La gestion des versions est assurée par <a href="https://github.com/jimporter/mike">mike</a>,
+l'outil recommandé par Material for MkDocs lui-même. <code>.github/workflows/deploy.yml</code>
+exécute <code>mike deploy</code> au lieu de publier directement à la racine de <code>gh-pages</code> :
+chaque version est construite et validée dans son propre sous-dossier
+(<code>/1.6/</code>, <code>/26/</code>, …), et <code>manual.rt-rc.com/</code> redirige vers la version qui porte
+actuellement l'alias <code>latest</code>. Material affiche automatiquement une liste
+déroulante de sélection de version, en lisant <code>versions.json</code> (maintenu par
+<code>mike</code>) — ce mécanisme est indépendant du sélecteur de langue et se combine
+proprement avec lui : la version constitue le segment de chemin externe, la
+langue (dès qu'une autre que <code>en</code> existera) le segment interne, par exemple
+<code>manual.rt-rc.com/26/fr/...</code>.</p>
+<p>Ceci réutilise le même mécanisme de « sous-dossier sur <code>gh-pages</code> » que les
+<a href="../#pr-previews">prévisualisations de PR</a> — les dossiers de version de
+<code>mike</code> et le dossier <code>pr-preview/</code> coexistent sur la même branche sans conflit,
+puisque chacun ne touche que ses propres chemins.</p>
+<h2 id="organisation-des-sources-main-branches-figees">Organisation des sources : <code>main</code> + branches figées<a class="headerlink" href="#organisation-des-sources-main-branches-figees" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><code>main</code> always tracks the current/latest firmware version's content.</strong>
-  Day-to-day editing happens here exactly as it does today — nothing
-  changes about the normal contribution workflow.</li>
-<li>Once a new firmware version's manual needs to start diverging from
-  what's on <code>main</code>, <strong>cut a branch named for the old version first</strong>,
-  e.g. <code>1.6</code>, to freeze it permanently. <code>main</code> then becomes the new
-  version's content.</li>
-<li>A frozen branch is not dead — it can still receive corrections via its
-  own PRs. It just no longer tracks new-version development.</li>
+<li><strong><code>main</code> suit toujours le contenu de la version de firmware actuelle/la plus
+  récente.</strong> L'édition quotidienne s'y fait exactement comme aujourd'hui — rien
+  ne change dans le processus normal de contribution.</li>
+<li>Dès que le manuel d'une nouvelle version de firmware doit commencer à diverger
+  de ce qui se trouve sur <code>main</code>, <strong>créez d'abord une branche portant le nom de
+  l'ancienne version</strong>, par exemple <code>1.6</code>, afin de la figer définitivement.
+  <code>main</code> devient alors le contenu de la nouvelle version.</li>
+<li>Une branche figée n'est pas morte — elle peut toujours recevoir des
+  corrections via ses propres PR. Elle ne suit simplement plus le développement
+  de la nouvelle version.</li>
 </ul>
-<h2 id="cutting-a-new-version">Cutting a new version<a class="headerlink" href="#cutting-a-new-version" title="Permanent link">&para;</a></h2>
-<p>When the next version's manual needs to start (e.g. Ethos26):</p>
+<h2 id="creer-une-nouvelle-version">Créer une nouvelle version<a class="headerlink" href="#creer-une-nouvelle-version" title="Permanent link">&para;</a></h2>
+<p>Lorsque le manuel de la version suivante doit démarrer (par exemple Ethos26) :</p>
 <ol>
-<li>From <code>main</code>, create and push the frozen branch for the version being
-   left behind:</li>
+<li>Depuis <code>main</code>, créez et poussez la branche figée pour la version laissée
+   derrière :</li>
 </ol>
 <div class="highlight"><pre><span></span><code>git checkout main &amp;&amp; git pull
 git branch 1.6
 git push origin 1.6
 </code></pre></div>
-<p><code>1.6</code>'s copy of <code>.github/workflows/deploy.yml</code> now permanently deploys
-   <code>mike deploy --push --update-aliases 1.6 latest</code> on every push to that
-   branch — correct as-is, no edit needed, since a branch is a full
-   snapshot including its own CI config.</p>
+<p>La copie de <code>.github/workflows/deploy.yml</code> sur la branche <code>1.6</code> déploie
+   désormais en permanence <code>mike deploy --push --update-aliases 1.6 latest</code> à
+   chaque push sur cette branche — correct en l'état, aucune modification n'est
+   nécessaire, puisqu'une branche est un instantané complet incluant sa propre
+   configuration CI.</p>
 <ol>
 <li>
-<p>On <code>main</code>, edit <code>.github/workflows/deploy.yml</code>: change the version
-   string in the <code>Deploy version 1.6 with mike</code> step (and its name) from
-   <code>1.6</code> to the new version's label (e.g. <code>26</code>). This is the <strong>only</strong>
-   required edit to start deploying the new version — the next push to
-   <code>main</code> will publish it to <code>/26/</code> and move the <code>latest</code> alias there,
-   while <code>/1.6/</code> stays exactly as it was.</p>
+<p>Sur <code>main</code>, modifiez <code>.github/workflows/deploy.yml</code> : remplacez la chaîne de
+   version dans l'étape <code>Deploy version 1.6 with mike</code> (et dans son nom) de
+   <code>1.6</code> par le libellé de la nouvelle version (par exemple <code>26</code>). C'est la
+   <strong>seule</strong> modification requise pour commencer à déployer la nouvelle version
+   — le prochain push sur <code>main</code> la publiera dans <code>/26/</code> et y déplacera l'alias
+   <code>latest</code>, tandis que <code>/1.6/</code> restera exactement tel quel.</p>
 </li>
 <li>
-<p>Update the new version's content on <code>main</code> for whatever actually
-   changed — new/renamed menu sections, new screenshots, updated
-   terminology. <code>mkdocs.yml</code>'s <code>nav</code> can differ freely between branches;
-   there's no shared config to keep in sync.</p>
+<p>Mettez à jour le contenu de la nouvelle version sur <code>main</code> en fonction de ce
+   qui a réellement changé — sections de menu nouvelles ou renommées, nouvelles
+   captures d'écran, terminologie actualisée. Le <code>nav</code> de <code>mkdocs.yml</code> peut
+   différer librement d'une branche à l'autre ; il n'y a aucune configuration
+   partagée à maintenir synchronisée.</p>
 </li>
 <li>
-<p>Add the new branch's name to <code>.github/workflows/pr-preview.yml</code>'s
-   <code>branches:</code> trigger list if PRs against it should get live previews
-   too (frozen branches generally don't need this, since they only take
-   occasional correction PRs).</p>
+<p>Ajoutez le nom de la nouvelle branche à la liste de déclencheurs <code>branches:</code>
+   de <code>.github/workflows/pr-preview.yml</code> si les PR la ciblant doivent également
+   bénéficier de prévisualisations en direct (les branches figées n'en ont
+   généralement pas besoin, puisqu'elles ne reçoivent que des PR de correction
+   occasionnelles).</p>
 </li>
 </ol>
-<h2 id="screenshots-across-versions">Screenshots across versions<a class="headerlink" href="#screenshots-across-versions" title="Permanent link">&para;</a></h2>
-<p>Screenshots are captured from a specific Ethos build (see <a href="../screenshot-pipeline/">Screenshot
-Pipeline</a>) and belong to whichever branch's UI
-they show — a version cut naturally forks the screenshot set along with
-everything else, so <code>1.6/assets/</code> and (once regenerated for the new UI)
-<code>main</code>'s <code>docs/en/assets/</code> diverge independently after the branch point.</p>
+<h2 id="captures-decran-et-versions">Captures d'écran et versions<a class="headerlink" href="#captures-decran-et-versions" title="Permanent link">&para;</a></h2>
+<p>Les captures d'écran sont réalisées à partir d'un build Ethos précis (voir
+<a href="../screenshot-pipeline/">Chaîne de production des captures d'écran</a>) et
+appartiennent à la branche dont elles montrent l'interface — la création d'une
+version bifurque naturellement le jeu de captures d'écran en même temps que tout
+le reste, de sorte que <code>1.6/assets/</code> et (une fois régénéré pour la nouvelle
+interface) le <code>docs/en/assets/</code> de <code>main</code> divergent indépendamment après le point
+de branchement.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

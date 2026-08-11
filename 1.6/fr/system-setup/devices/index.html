@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devices" class="md-skip">
+        <a href="#peripheriques" class="md-skip">
           Aller au contenu
         </a>
       
@@ -832,7 +832,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1109,10 +1109,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reassigning-sensor-ids" class="md-nav__link">
+  <a href="#reattribution-des-id-de-capteurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reassigning sensor IDs
+        Réattribution des ID de capteurs
       
     </span>
   </a>
@@ -1120,10 +1120,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#receivers-example" class="md-nav__link">
+  <a href="#exemple-des-recepteurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Receivers example
+        Exemple des récepteurs
       
     </span>
   </a>
@@ -1131,10 +1131,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-via-the-transmitters-sport-connector" class="md-nav__link">
+  <a href="#configuration-via-le-connecteur-sport-de-lemetteur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring via the transmitter's S.Port connector
+        Configuration via le connecteur S.Port de l'émetteur
       
     </span>
   </a>
@@ -1249,7 +1249,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1782,7 +1782,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1923,7 +1923,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2148,7 +2148,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2710,7 +2710,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2992,7 +2992,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3105,7 +3105,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3237,10 +3237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reassigning-sensor-ids" class="md-nav__link">
+  <a href="#reattribution-des-id-de-capteurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reassigning sensor IDs
+        Réattribution des ID de capteurs
       
     </span>
   </a>
@@ -3248,10 +3248,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#receivers-example" class="md-nav__link">
+  <a href="#exemple-des-recepteurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Receivers example
+        Exemple des récepteurs
       
     </span>
   </a>
@@ -3259,10 +3259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-via-the-transmitters-sport-connector" class="md-nav__link">
+  <a href="#configuration-via-le-connecteur-sport-de-lemetteur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring via the transmitter's S.Port connector
+        Configuration via le connecteur S.Port de l'émetteur
       
     </span>
   </a>
@@ -3286,7 +3286,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/system-setup/devices.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/system-setup/devices.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3294,82 +3294,96 @@
   
 
 
-<h1 id="devices">Devices<a class="headerlink" href="#devices" title="Permanent link">&para;</a></h1>
-<p><img alt="Devices" src="../../../assets/system-devices.png" /></p>
-<p>Called <strong>Device config</strong> in the menu — tools for configuring peripheral
-devices connected over S.Port/FBUS: sensors, receivers, the "gas suite",
-servos, VTX, and ESC. <strong>DIY sensors</strong> appears automatically once a DIY
-sensor is detected. Refer to each device's own manual for full detail;
-this page covers what's common across them.</p>
+<h1 id="peripheriques">Périphériques<a class="headerlink" href="#peripheriques" title="Permanent link">&para;</a></h1>
+<p><img alt="Périphériques" src="../../../assets/system-devices.png" /></p>
+<p>Appelé <strong>Configuration des périphériques</strong> dans le menu — ce sont les outils
+de configuration des périphériques raccordés en S.Port/FBUS : capteurs,
+récepteurs, « Gas Suite », servos, VTX et ESC. La rubrique <strong>Capteurs DIY</strong>
+apparaît automatiquement dès qu'un capteur DIY est détecté. Reportez-vous à
+la notice propre à chaque périphérique pour les détails complets ; cette
+page traite de ce qui leur est commun.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is unrelated to choosing which RF module (internal or external) a
-<em>model</em> transmits on — that's a per-model setting, covered in
-<a href="../../model-setup/rf-system/">RF System</a>.</p>
+<p>Cela n'a rien à voir avec le choix du module RF (interne ou externe)
+utilisé par un <em>modèle</em> pour émettre — il s'agit d'un réglage propre à
+chaque modèle, décrit dans <a href="../../model-setup/rf-system/">RF System</a>.</p>
 </div>
-<p>Device Config is extensible: both users and FrSky can add pages here via
-Lua.</p>
-<h2 id="reassigning-sensor-ids">Reassigning sensor IDs<a class="headerlink" href="#reassigning-sensor-ids" title="Permanent link">&para;</a></h2>
-<p>Ethos's Device config screens let you change a device's S.Port <strong>Physical
-ID</strong> and <strong>Application ID</strong> directly. If you have more than one device with
-the same function, connect them <strong>one at a time</strong>: discover each in
-<a href="../../model-setup/telemetry/">Telemetry → Discover new sensors</a>, change its
-Physical ID and Application ID here in Device config, then go back and
-re-discover it under the new ID.</p>
-<h2 id="receivers-example">Receivers example<a class="headerlink" href="#receivers-example" title="Permanent link">&para;</a></h2>
-<p><img alt="Module choice" src="../../../assets/system-devices-module-choice.png" /></p>
-<p>FrSky stabilized receivers can be configured here once their setup Lua
-script is installed (one click, from Ethos Suite's Lua Library). There are
-two configuration paths depending on the receiver generation:</p>
+<p>La configuration des périphériques est extensible : les utilisateurs comme
+FrSky peuvent y ajouter des pages au moyen de Lua.</p>
+<h2 id="reattribution-des-id-de-capteurs">Réattribution des ID de capteurs<a class="headerlink" href="#reattribution-des-id-de-capteurs" title="Permanent link">&para;</a></h2>
+<p>Les écrans de configuration des périphériques d'Ethos permettent de modifier
+directement le <strong>Physical ID</strong> et l'<strong>Application ID</strong> S.Port d'un
+périphérique. Si vous possédez plusieurs périphériques ayant la même
+fonction, raccordez-les <strong>un à la fois</strong> : détectez chacun d'eux dans
+<a href="../../model-setup/telemetry/">Télémétrie → Détecter de nouveaux capteurs</a>,
+modifiez ici son Physical ID et son Application ID dans la configuration des
+périphériques, puis revenez le détecter à nouveau sous son nouvel ID.</p>
+<h2 id="exemple-des-recepteurs">Exemple des récepteurs<a class="headerlink" href="#exemple-des-recepteurs" title="Permanent link">&para;</a></h2>
+<p><img alt="Choix du module" src="../../../assets/system-devices-module-choice.png" /></p>
+<p>Les récepteurs stabilisés FrSky peuvent être configurés ici dès que leur
+script Lua de réglage est installé (en un clic, depuis la bibliothèque Lua
+d'Ethos Suite). Il existe deux voies de configuration selon la génération du
+récepteur :</p>
 <ul>
-<li><strong>Stabilizer config</strong> — newer receivers with "Advanced stabilization"
-  (gain control on channel 13). Two independent stabilization groups are
-  exposed: Group 1 covers channels 1–6, Group 2 covers 7–11 — turn off
-  Group 2 if you're not using pins 7–11 for stabilization. A 6-axis
-  calibration is built in and must be run once on a new receiver, and
-  again after any v3.0.x firmware upgrade (following a factory reset).
-  Under each group's calibration, the old "self-check" step has been
-  replaced by independent calibration of aircraft level, channel center,
-  and channel endpoints, and each channel can be individually
-  activated/deactivated. Configurations (not calibration data) can be
-  saved to and restored from a PC.</li>
-<li><strong>SxR</strong> — older receivers, including legacy units and Archer/Archer Pro,
-  plus receivers like the SR10 Pro that (despite the "SRx" name) have Gain
-  on channel 9 rather than 13.</li>
+<li><strong>Stabilizer config</strong> — récepteurs récents dotés de la « stabilisation
+  avancée » (contrôle du gain sur la voie 13). Deux groupes de stabilisation
+  indépendants sont proposés : le groupe 1 couvre les voies 1 à 6, le groupe
+  2 les voies 7 à 11 — désactivez le groupe 2 si vous n'utilisez pas les
+  broches 7 à 11 pour la stabilisation. Une calibration 6 axes est intégrée
+  et doit être effectuée une fois sur un récepteur neuf, puis à nouveau
+  après toute mise à jour du firmware v3.0.x (à la suite d'une
+  réinitialisation d'usine). Dans la calibration de chaque groupe, l'ancienne
+  étape « self-check » a été remplacée par la calibration indépendante de
+  l'horizontalité de l'appareil, du neutre des voies et des courses
+  extrêmes des voies, et chaque voie peut être activée/désactivée
+  individuellement. Les configurations (mais pas les données de calibration)
+  peuvent être sauvegardées sur un PC et restaurées depuis celui-ci.</li>
+<li><strong>SxR</strong> — récepteurs plus anciens, y compris les modèles historiques et
+  les Archer/Archer Pro, ainsi que des récepteurs comme le SR10 Pro qui
+  (malgré leur nom en « SRx ») disposent du gain sur la voie 9 et non sur la
+  voie 13.</li>
 </ul>
-<p><img alt="Current device" src="../../../assets/system-devices-current.png" /></p>
+<p><img alt="Périphérique courant" src="../../../assets/system-devices-current.png" /></p>
 <div class="admonition warning">
-<p class="admonition-title">After updating to receiver firmware v3.0.x</p>
-<p>Do a factory reset (found under receiver Options in RF setup), then
-rebind and fully reconfigure — especially the Stab functions and 6-axis
-calibration. This is required by v3.0.x's new failsafe-data-saving
-feature; check the failsafe function carefully afterward.</p>
+<p class="admonition-title">Après une mise à jour vers le firmware de récepteur v3.0.x</p>
+<p>Effectuez une réinitialisation d'usine (disponible dans les Options du
+récepteur, dans la configuration RF), puis réappariez et reconfigurez
+entièrement le récepteur — en particulier les fonctions Stab et la
+calibration 6 axes. Cela est imposé par la nouvelle fonction de
+sauvegarde des données de failsafe de la v3.0.x ; vérifiez ensuite
+soigneusement le fonctionnement du failsafe.</p>
 </div>
-<p>FrSky North America publishes a detailed stabilized-receiver setup guide,
-and there's a walkthrough video by FrSky Team Pilot Juan Sanchez Garcia
-covering the same ground.</p>
-<h2 id="configuring-via-the-transmitters-sport-connector">Configuring via the transmitter's S.Port connector<a class="headerlink" href="#configuring-via-the-transmitters-sport-connector" title="Permanent link">&para;</a></h2>
-<p>S.Port and FBUS devices can also be configured directly through the S.Port
-connector on top of the transmitter, without going through a bound
-receiver.</p>
+<p>FrSky North America publie un guide détaillé de configuration des récepteurs
+stabilisés, et il existe une vidéo explicative du pilote de l'équipe FrSky
+Juan Sanchez Garcia qui couvre le même sujet.</p>
+<h2 id="configuration-via-le-connecteur-sport-de-lemetteur">Configuration via le connecteur S.Port de l'émetteur<a class="headerlink" href="#configuration-via-le-connecteur-sport-de-lemetteur" title="Permanent link">&para;</a></h2>
+<p>Les périphériques S.Port et FBUS peuvent également être configurés
+directement via le connecteur S.Port situé sur le dessus de l'émetteur, sans
+passer par un récepteur apparié.</p>
 <ol>
-<li>Plug the device into the transmitter's S.Port connector (white/yellow
-   lead toward the notched side).</li>
-<li>Go to <strong>System → Device config</strong>, scroll to the device (e.g. an FAS40
-   ADV current sensor), and press <code>ENT</code>.</li>
-<li>On the configuration page, set <strong>Module</strong> to <strong>S.Port connector</strong>.</li>
-<li>Make your changes — Physical ID and Application ID must each be
-   unique — then scroll down and tap <strong>Save to flash</strong>.</li>
+<li>Branchez le périphérique sur le connecteur S.Port de l'émetteur (fil
+   blanc/jaune du côté de l'encoche).</li>
+<li>Allez dans <strong>Système → Configuration des périphériques</strong>, faites défiler
+   jusqu'au périphérique (par exemple un capteur de courant FAS40 ADV) et
+   appuyez sur <code>ENT</code>.</li>
+<li>Sur la page de configuration, réglez <strong>Module</strong> sur <strong>Connecteur
+   S.Port</strong>.</li>
+<li>Effectuez vos modifications — le Physical ID et l'Application ID doivent
+   chacun être uniques — puis faites défiler vers le bas et appuyez sur
+   <strong>Save to flash</strong>.</li>
 </ol>
-<p>This applies to both FBUS devices (see also <a href="../../how-to/fbus-setup/">How-To: Configure an FBUS
-System</a>) and plain S.Port devices such as a
-variometer.</p>
+<p>Ceci s'applique aussi bien aux périphériques FBUS (voir également <a href="../../how-to/fbus-setup/">Guide
+pratique : configurer un système FBUS</a>) qu'aux
+périphériques S.Port classiques tels qu'un variomètre.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

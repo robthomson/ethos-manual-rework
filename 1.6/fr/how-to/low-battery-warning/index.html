@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#low-battery-voltage-warning" class="md-skip">
+        <a href="#alerte-de-tension-batterie-basse" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1838,7 +1838,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2063,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2265,7 +2265,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2346,10 +2346,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-connect-and-discover-the-sensor" class="md-nav__link">
+  <a href="#1-connecter-et-detecter-le-capteur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Connect and discover the sensor
+        1. Connecter et détecter le capteur
       
     </span>
   </a>
@@ -2357,10 +2357,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-add-a-logical-switch" class="md-nav__link">
+  <a href="#2-ajouter-un-interrupteur-logique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Add a logical switch
+        2. Ajouter un interrupteur logique
       
     </span>
   </a>
@@ -2368,10 +2368,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-add-a-special-function" class="md-nav__link">
+  <a href="#3-ajouter-une-fonction-speciale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Add a special function
+        3. Ajouter une fonction spéciale
       
     </span>
   </a>
@@ -2710,7 +2710,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2992,7 +2992,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3105,7 +3105,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3237,10 +3237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-connect-and-discover-the-sensor" class="md-nav__link">
+  <a href="#1-connecter-et-detecter-le-capteur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Connect and discover the sensor
+        1. Connecter et détecter le capteur
       
     </span>
   </a>
@@ -3248,10 +3248,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-add-a-logical-switch" class="md-nav__link">
+  <a href="#2-ajouter-un-interrupteur-logique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Add a logical switch
+        2. Ajouter un interrupteur logique
       
     </span>
   </a>
@@ -3259,10 +3259,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-add-a-special-function" class="md-nav__link">
+  <a href="#3-ajouter-une-fonction-speciale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Add a special function
+        3. Ajouter une fonction spéciale
       
     </span>
   </a>
@@ -3286,7 +3286,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/how-to/low-battery-warning.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/how-to/low-battery-warning.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3294,55 +3294,40 @@
   
 
 
-<h1 id="low-battery-voltage-warning">Low Battery Voltage Warning<a class="headerlink" href="#low-battery-voltage-warning" title="Permanent link">&para;</a></h1>
-<p>Monitoring flight-pack voltage <strong>under load</strong> and alerting below a
-threshold is a more reliable approach than relying on a fixed timer — a
-sensor such as a FrSky FLVSS makes this straightforward.</p>
-<h2 id="1-connect-and-discover-the-sensor">1. Connect and discover the sensor<a class="headerlink" href="#1-connect-and-discover-the-sensor" title="Permanent link">&para;</a></h2>
-<p><img alt="LiPo telemetry sensor" src="../../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
-<p>Set <a href="../../system-setup/devices/">Receiver Options → Telemetry
-Port</a> to <strong>S.Port</strong>, connect the FLVSS to the
-receiver via an S.Port cable, then enable <strong>Discover new sensors</strong> under
-<a href="../../model-setup/telemetry/">Telemetry</a> — the LiPo sensor appears
-alongside the others already discovered.</p>
-<h2 id="2-add-a-logical-switch">2. Add a logical switch<a class="headerlink" href="#2-add-a-logical-switch" title="Permanent link">&para;</a></h2>
-<p><img alt="Battery low logical switch" src="../../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
-<p>Add a new <a href="../../model-setup/logical-switches/">logical switch</a> with the
-Lipo sensor as its source. Long-press <code>ENT</code> on the highlighted sensor to
-choose which of its values to use:</p>
-<p><img alt="Select lowest cell" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
+<h1 id="alerte-de-tension-batterie-basse">Alerte de tension batterie basse<a class="headerlink" href="#alerte-de-tension-batterie-basse" title="Permanent link">&para;</a></h1>
+<p>La surveillance de la tension du pack de propulsion <strong>en charge</strong>, avec une alerte lorsque la tension descend sous un seuil, est une approche plus fiable que de se fier à un chronomètre fixe — un capteur tel qu'un FrSky FLVSS rend cela très simple.</p>
+<h2 id="1-connecter-et-detecter-le-capteur">1. Connecter et détecter le capteur<a class="headerlink" href="#1-connecter-et-detecter-le-capteur" title="Permanent link">&para;</a></h2>
+<p><img alt="Capteur de télémétrie LiPo" src="../../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
+<p>Réglez <a href="../../system-setup/devices/">Options du récepteur → Port de télémétrie</a> sur <strong>S.Port</strong>, connectez le FLVSS au récepteur à l'aide d'un câble S.Port, puis activez <strong>Découvrir de nouveaux capteurs</strong> dans <a href="../../model-setup/telemetry/">Télémétrie</a> — le capteur LiPo apparaît aux côtés des autres capteurs déjà détectés.</p>
+<h2 id="2-ajouter-un-interrupteur-logique">2. Ajouter un interrupteur logique<a class="headerlink" href="#2-ajouter-un-interrupteur-logique" title="Permanent link">&para;</a></h2>
+<p><img alt="Interrupteur logique batterie basse" src="../../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
+<p>Ajoutez un nouvel <a href="../../model-setup/logical-switches/">interrupteur logique</a> en prenant le capteur LiPo comme source. Effectuez un appui long sur <code>ENT</code> sur le capteur mis en surbrillance pour choisir laquelle de ses valeurs utiliser :</p>
+<p><img alt="Sélection de la cellule la plus basse" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
 <ul>
-<li>Min pack voltage / Max pack voltage</li>
-<li><strong>Lowest cell voltage</strong> / Highest cell voltage</li>
-<li>Cell count</li>
-<li>Individual cell voltages (only selectable while the sensor is actually
-  connected to a bound receiver with a LiPo attached)</li>
+<li>Tension mini du pack / Tension maxi du pack</li>
+<li><strong>Tension de la cellule la plus basse</strong> / Tension de la cellule la plus haute</li>
+<li>Nombre de cellules</li>
+<li>Tensions individuelles des cellules (sélectionnables uniquement lorsque le capteur est effectivement connecté à un récepteur appairé, avec une LiPo raccordée)</li>
 </ul>
-<p>Select <strong>Lowest</strong> (cell voltage) — the value that matters for LVC-style
-protection.</p>
-<p><img alt="Lowest cell selected" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
-<p>Set the comparison value to around <strong>3.4V</strong> and <strong>Delay before active</strong>
-to <strong>4 seconds</strong> — the switch goes true once the lowest cell has read
-below 3.4V per cell continuously for 4s or more. (3.4V <em>under load</em>
-typically recovers to around 3.7V once load is removed, so this threshold
-reflects a real sag, not just momentary noise.)</p>
-<p><img alt="Completed logical switch" src="../../../assets/how-to-low-batt-lsw-summary.png" /></p>
-<h2 id="3-add-a-special-function">3. Add a special function<a class="headerlink" href="#3-add-a-special-function" title="Permanent link">&para;</a></h2>
-<p><img alt="Special function: BattLow" src="../../../assets/how-to-low-batt-sf-battlow.png" /></p>
-<p>Add a <a href="../../model-setup/special-functions/">Play audio special function</a>,
-<strong>Active condition</strong> set to the <code>BattLow</code> logical switch, choose a voice,
-and under <strong>Sequence</strong> add a <strong>Play value</strong> step for the LiPo total
-voltage:</p>
-<p><img alt="Play value: LiPo" src="../../../assets/how-to-low-batt-sf-play-value-lipo.png" />
-<img alt="Sequence summary" src="../../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
-<p>With <strong>Repeat</strong> set to 10 seconds, the LiPo voltage is spoken every 10s
-for as long as the lowest cell stays below the 3.4V/4s threshold.</p>
+<p>Sélectionnez <strong>Lowest</strong> (tension de cellule) — la valeur qui compte pour une protection de type LVC.</p>
+<p><img alt="Cellule la plus basse sélectionnée" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
+<p>Réglez la valeur de comparaison sur environ <strong>3,4 V</strong> et le <strong>Délai avant activation</strong> sur <strong>4 secondes</strong> — l'interrupteur passe à l'état vrai dès que la cellule la plus basse est mesurée en dessous de 3,4 V par cellule de façon continue pendant 4 s ou plus. (3,4 V <em>en charge</em> remonte généralement autour de 3,7 V une fois la charge supprimée ; ce seuil traduit donc une véritable chute de tension, et non un simple parasite momentané.)</p>
+<p><img alt="Interrupteur logique terminé" src="../../../assets/how-to-low-batt-lsw-summary.png" /></p>
+<h2 id="3-ajouter-une-fonction-speciale">3. Ajouter une fonction spéciale<a class="headerlink" href="#3-ajouter-une-fonction-speciale" title="Permanent link">&para;</a></h2>
+<p><img alt="Fonction spéciale : BattLow" src="../../../assets/how-to-low-batt-sf-battlow.png" /></p>
+<p>Ajoutez une <a href="../../model-setup/special-functions/">fonction spéciale Jouer un son</a>, avec la <strong>Condition d'activation</strong> réglée sur l'interrupteur logique <code>BattLow</code>, choisissez une voix, puis, sous <strong>Séquence</strong>, ajoutez une étape <strong>Annoncer une valeur</strong> pour la tension totale de la LiPo :</p>
+<p><img alt="Annoncer une valeur : LiPo" src="../../../assets/how-to-low-batt-sf-play-value-lipo.png" />
+<img alt="Résumé de la séquence" src="../../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
+<p>Avec <strong>Répétition</strong> réglée sur 10 secondes, la tension de la LiPo est annoncée toutes les 10 s tant que la cellule la plus basse reste sous le seuil de 3,4 V pendant 4 s.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -3372,7 +3357,7 @@ for as long as the lowest cell stays below the 3.4V/4s threshold.</p>
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: How-To Guides">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Guides pratiques">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3382,7 +3367,7 @@ for as long as the lowest cell stays below the 3.4V/4s threshold.</p>
                 Précédent
               </span>
               <div class="md-ellipsis">
-                How-To Guides
+                Guides pratiques
               </div>
             </div>
           </a>

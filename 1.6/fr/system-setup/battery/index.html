@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#battery" class="md-skip">
+        <a href="#batterie" class="md-skip">
           Aller au contenu
         </a>
       
@@ -832,7 +832,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1179,7 +1179,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1712,7 +1712,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1853,7 +1853,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2078,7 +2078,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2275,7 +2275,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2640,7 +2640,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/system-setup/battery.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/system-setup/battery.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3183,35 +3183,39 @@
   
 
 
-<h1 id="battery">Battery<a class="headerlink" href="#battery" title="Permanent link">&para;</a></h1>
-<p><img alt="Radio battery settings" src="../../../assets/system-battery.png" /></p>
-<p>Calibrates the radio's internal battery reading and sets alarm
-thresholds — separate from a model's flight-pack settings (see <a href="../../how-to/low-battery-warning/">How-To:
-Low Battery Voltage Warning</a>).</p>
+<h1 id="batterie">Batterie<a class="headerlink" href="#batterie" title="Permanent link">&para;</a></h1>
+<p><img alt="Réglages de la batterie de la radio" src="../../../assets/system-battery.png" /></p>
+<p>Permet de calibrer la mesure de la batterie interne de la radio et de définir
+les seuils d'alarme — indépendamment des réglages du pack de propulsion d'un
+modèle (voir <a href="../../how-to/low-battery-warning/">Guide pratique : alerte de tension de batterie basse</a>).</p>
 <ul>
-<li><strong>Main voltage</strong> — shows the current reading, and doubles as the
-  calibration adjustment: enter the actual voltage as measured with a
-  multimeter. Default is 8.4V (a fully charged 2S Li-ion pack).</li>
-<li><strong>Low voltage</strong> — the alarm threshold, default 7.2V (7.4V gives extra
-  margin). When the <a href="../alerts/">Main voltage
-  alert</a> is on, dropping below this triggers a warning dialog
-  and a spoken "Radio battery is low" alert every minute, dialog open or
-  not.</li>
+<li><strong>Tension principale</strong> — affiche la valeur mesurée actuelle et sert également
+  au réglage de la calibration : saisissez la tension réelle mesurée à l'aide
+  d'un multimètre. La valeur par défaut est 8,4 V (pack Li-ion 2S pleinement
+  chargé).</li>
+<li><strong>Tension basse</strong> — le seuil d'alarme, par défaut 7,2 V (7,4 V offre une
+  marge supplémentaire). Lorsque l'<a href="../alerts/">alerte de tension principale</a>
+  est activée, une descente sous ce seuil déclenche une fenêtre
+  d'avertissement ainsi qu'une annonce vocale « Radio battery is low » toutes
+  les minutes, que la fenêtre soit ouverte ou non.</li>
 </ul>
 <p>!!! warning
-      Land and charge the radio battery as soon as this alert sounds — it
-      repeats every minute regardless. At 6.0V the radio shuts down
-      unconditionally to protect the 2×3.0V Li-ion cells.</p>
+      Posez le modèle et rechargez la batterie de la radio dès que cette
+      alerte se déclenche — elle se répète chaque minute quoi qu'il arrive.
+      À 6,0 V, la radio s'éteint inconditionnellement afin de protéger les
+      deux cellules Li-ion de 3,0 V.</p>
 <ul>
-<li><strong>Display voltage range</strong> — the min/max for the graphical battery
-  display in the top-right corner: MIN is where the first bar segment
-  goes dark, MAX is where the fourth lights up. Defaults are 6.4–8.4V for
-  the built-in Li-ion pack; many pilots raise the low end to get an
-  earlier low-voltage warning and avoid over-discharging. Set these to
-  match whatever battery type is actually fitted.</li>
-<li><strong>RTC voltage</strong> — the real-time-clock coin cell's voltage. 3.0V when
-  new; replace it below 2.7V to keep the clock accurate, and expect the
-  <a href="../alerts/">RTC voltage alert</a> below 2.5V.</li>
+<li><strong>Plage de tension affichée</strong> — les valeurs min/max de l'indicateur
+  graphique de batterie situé dans le coin supérieur droit : MIN correspond au
+  point où le premier segment s'éteint, MAX au point où le quatrième s'allume.
+  Les valeurs par défaut sont 6,4–8,4 V pour le pack Li-ion intégré ; de
+  nombreux pilotes relèvent la valeur basse afin d'obtenir un avertissement de
+  tension basse plus précoce et d'éviter une décharge excessive. Ajustez ces
+  valeurs en fonction du type de batterie réellement installé.</li>
+<li><strong>Tension RTC</strong> — la tension de la pile bouton de l'horloge temps réel.
+  3,0 V à l'état neuf ; remplacez-la en dessous de 2,7 V afin de conserver une
+  horloge précise, et attendez-vous à l'<a href="../alerts/">alerte de tension RTC</a> en
+  dessous de 2,5 V.</li>
 </ul>
 
 
@@ -3219,6 +3223,9 @@ Low Battery Voltage Warning</a>).</p>
 
 
 
+
+  
+  
 
 
 

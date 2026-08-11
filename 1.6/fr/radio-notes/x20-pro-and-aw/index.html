@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1838,7 +1838,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2063,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2260,7 +2260,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2630,7 +2630,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/radio-notes/x20-pro-and-aw.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/radio-notes/x20-pro-and-aw.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3184,40 +3184,45 @@
 
 
 <h1 id="x20-pro-x20-pro-aw">X20 Pro / X20 Pro AW<a class="headerlink" href="#x20-pro-x20-pro-aw" title="Permanent link">&para;</a></h1>
-<p><img alt="X20 Pro hardware check" src="../../../assets/system-hardware-check-x20pro.png" /></p>
-<p>Differences from the X20S baseline this manual is written against —
-these apply to the <strong>X20 Pro</strong>, and mostly extend to the <strong>X20 Pro AW</strong>
-and <strong>X20R/RS</strong> family too.</p>
+<p><img alt="Vérification matérielle de la X20 Pro" src="../../../assets/system-hardware-check-x20pro.png" /></p>
+<p>Différences par rapport à la X20S, la radio de référence sur laquelle ce
+manuel est basé — ces points concernent la <strong>X20 Pro</strong>, et s'appliquent
+pour l'essentiel également à la <strong>X20 Pro AW</strong> et à la famille
+<strong>X20R/RS</strong>.</p>
 <ul>
-<li><strong>Storage</strong> — internal 8GB eMMC by default, SD card optional — see
-  <a href="../../system-setup/general/#storage-location-x18-and-x20-prorrs">General → Storage
-  location</a>.</li>
-<li><strong>Extra trims</strong> — adds trim switches <strong>T5</strong> and <strong>T6</strong> — see
-  <a href="../../model-setup/trims/#trim-settings">Trims</a>.</li>
-<li><strong>Extra switches</strong> — two latching pushbutton switches, <strong>K</strong> and <strong>L</strong>,
-  on the rear shoulders, plus switch positions <strong>M</strong>/<strong>N</strong> if wired
-  (typically stick-end switches) — see <a href="../../system-setup/hardware/#switches-settings">Hardware →
-  Switches</a>.</li>
-<li><strong>Extra pots</strong> — <strong>Ext1</strong>/<strong>Ext2</strong>, typically used with 3-axis gimbals
-  — see <a href="../../system-setup/hardware/#potssliders-settings">Hardware → Pots/Sliders</a>.
-  This shifts the <a href="../../system-setup/hardware/#adc-value-inspector">ADC value inspector</a>
-  index: Ext1/Ext2 sit between Pot2 and the sliders.</li>
-<li><strong>Haptic feedback</strong> — the <strong>X20 Pro AW</strong> and <strong>X20RS</strong> ship with MC20R
-  gimbals with haptic stick-shaker motors built in; an <strong>X20 Pro</strong> or
-  <strong>X20R</strong> can gain the same via a retrofit MC20R gimbal upgrade, enabled
-  under <a href="../../system-setup/hardware/#radio-specific-hardware-options">Hardware → Enabling haptic gimbal
-  upgrades</a>.
-  Once enabled, <a href="../../model-setup/special-functions/#actions">Select haptic
-  motors</a> offers Default,
-  All motors, Left stick, or Right stick.</li>
-<li><strong>Rotary encoder</strong> — the X20 Pro AW and X20R/RS use a more sensitive
-  encoder; a <strong>half steps</strong> option under <a href="../../system-setup/hardware/#radio-specific-hardware-options">Hardware → Encoder
-  option</a>
-  tones it down.</li>
-<li><strong>Internal RF module</strong> — the X20 Pro/R/RS use the <strong>TD-ISRM Pro</strong>
-  module (LoRa-capable, with tandem dual-band and TD-Pro modes in
-  addition to ACCESS/ACCST D16), rather than the TD-ISRM module in the
-  X18/X20/X20S/X20HD — see <a href="../../model-setup/rf-system/">RF System</a>.</li>
+<li><strong>Stockage</strong> — mémoire interne eMMC de 8 Go par défaut, SD card en
+  option — voir <a href="../../system-setup/general/#storage-location-x18-and-x20-prorrs">Général → Emplacement de
+  stockage</a>.</li>
+<li><strong>Trims supplémentaires</strong> — ajout des interrupteurs de trim <strong>T5</strong> et
+  <strong>T6</strong> — voir <a href="../../model-setup/trims/#trim-settings">Trims</a>.</li>
+<li><strong>Interrupteurs supplémentaires</strong> — deux boutons-poussoirs à
+  verrouillage, <strong>K</strong> et <strong>L</strong>, sur les épaules arrière, ainsi que les
+  positions d'interrupteur <strong>M</strong>/<strong>N</strong> si elles sont câblées
+  (typiquement des interrupteurs en bout de manche) — voir <a href="../../system-setup/hardware/#switches-settings">Matériel →
+  Interrupteurs</a>.</li>
+<li><strong>Potentiomètres supplémentaires</strong> — <strong>Ext1</strong>/<strong>Ext2</strong>, généralement
+  utilisés avec des manches à 3 axes — voir <a href="../../system-setup/hardware/#potssliders-settings">Matériel →
+  Potentiomètres/Curseurs</a>.
+  Cela décale l'index de
+  <a href="../../system-setup/hardware/#adc-value-inspector">l'inspecteur de valeurs ADC</a> :
+  Ext1/Ext2 se placent entre Pot2 et les curseurs.</li>
+<li><strong>Retour haptique</strong> — la <strong>X20 Pro AW</strong> et la <strong>X20RS</strong> sont livrées
+  avec des manches MC20R intégrant des moteurs vibrants (stick-shaker) ;
+  une <strong>X20 Pro</strong> ou une <strong>X20R</strong> peut en bénéficier via une mise à
+  niveau des manches MC20R en rétrofit, à activer dans <a href="../../system-setup/hardware/#radio-specific-hardware-options">Matériel →
+  Activation des mises à niveau de manches
+  haptiques</a>.
+  Une fois activée, l'option <a href="../../model-setup/special-functions/#actions">Sélection des moteurs
+  haptiques</a> propose Défaut,
+  Tous les moteurs, Manche gauche ou Manche droit.</li>
+<li><strong>Encodeur rotatif</strong> — la X20 Pro AW et les X20R/RS utilisent un
+  encodeur plus sensible ; une option <strong>demi-pas</strong> dans <a href="../../system-setup/hardware/#radio-specific-hardware-options">Matériel →
+  Option d'encodeur</a>
+  permet d'en réduire la sensibilité.</li>
+<li><strong>Module RF interne</strong> — les X20 Pro/R/RS utilisent le module <strong>TD-ISRM
+  Pro</strong> (compatible LoRa, avec les modes tandem double bande et TD-Pro en
+  plus d'ACCESS/ACCST D16), au lieu du module TD-ISRM des
+  X18/X20/X20S/X20HD — voir <a href="../../model-setup/rf-system/">Système RF</a>.</li>
 </ul>
 
 
@@ -3225,6 +3230,9 @@ and <strong>X20R/RS</strong> family too.</p>
 
 
 
+
+  
+  
 
 
 

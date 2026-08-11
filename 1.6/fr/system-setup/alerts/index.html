@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#alerts" class="md-skip">
+        <a href="#alertes" class="md-skip">
           Aller au contenu
         </a>
       
@@ -832,7 +832,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1179,7 +1179,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1712,7 +1712,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1853,7 +1853,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2078,7 +2078,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2275,7 +2275,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2640,7 +2640,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/system-setup/alerts.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/system-setup/alerts.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3183,29 +3183,33 @@
   
 
 
-<h1 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">&para;</a></h1>
-<p><img alt="Alerts" src="../../../assets/system-alerts.png" /></p>
-<p>Four radio-wide warnings, each independently switchable — separate from
-the per-model <a href="../../model-setup/special-functions/">special functions</a>
-and <a href="../../model-setup/logical-switches/">logical switches</a> you build
-yourself.</p>
+<h1 id="alertes">Alertes<a class="headerlink" href="#alertes" title="Permanent link">&para;</a></h1>
+<p><img alt="Alertes" src="../../../assets/system-alerts.png" /></p>
+<p>Quatre alertes valables pour l'ensemble de la radio, chacune activable
+indépendamment — distinctes des <a href="../../model-setup/special-functions/">fonctions spéciales</a>
+et des <a href="../../model-setup/logical-switches/">interrupteurs logiques</a>
+propres à chaque modèle que vous créez vous-même.</p>
 <ul>
-<li><strong>Silent mode</strong> — a spoken alert at startup when this check is on and
-  <a href="../general/">General → Audio mode</a> is set to Silent, as a reminder the
-  radio is muted.</li>
-<li><strong>Main voltage</strong> — "Radio battery is low" when the main radio battery
-  drops below the <strong>Low voltage</strong> threshold set in <a href="../battery/">Battery</a>.</li>
-<li><strong>RTC voltage</strong> — "RTC battery is low" when the RTC coin cell drops
-  below 2.5V (the default threshold). Data logging relies on the real-time
-  clock; an invalid time makes logs hard to read, especially telling
-  flight sessions apart. This can be silenced temporarily while waiting to
-  replace the battery, but shouldn't be left off indefinitely.</li>
-<li><strong>Sensor conflict warning</strong> — detects conflicting telemetry sensor IDs.
-  Only worth disabling if you have sensors that don't meet the S.Port
-  specification.</li>
-<li><strong>Inactivity</strong> — a spoken "Prolonged inactivity" alert (plus a haptic
-  buzz, in case the volume is turned down) after the radio has gone
-  unused for longer than the configured time — 10 minutes by default.</li>
+<li><strong>Mode silencieux</strong> — une alerte vocale au démarrage lorsque ce contrôle
+  est activé et que <a href="../general/">Général → Mode audio</a> est réglé sur
+  Silencieux, afin de rappeler que la radio est muette.</li>
+<li><strong>Tension principale</strong> — « La batterie de la radio est faible » lorsque
+  la batterie principale de la radio descend sous le seuil de <strong>Tension
+  basse</strong> défini dans <a href="../battery/">Batterie</a>.</li>
+<li><strong>Tension RTC</strong> — « La batterie RTC est faible » lorsque la pile bouton
+  RTC descend sous 2,5 V (le seuil par défaut). L'enregistrement des
+  données repose sur l'horloge temps réel ; une heure invalide rend les
+  journaux difficiles à exploiter, notamment pour distinguer les sessions
+  de vol. Cette alerte peut être désactivée temporairement en attendant de
+  remplacer la pile, mais elle ne devrait pas rester désactivée
+  indéfiniment.</li>
+<li><strong>Alerte de conflit de capteurs</strong> — détecte les identifiants de capteurs
+  de télémétrie en conflit. Il n'est utile de la désactiver que si vous
+  utilisez des capteurs non conformes à la spécification S.Port.</li>
+<li><strong>Inactivité</strong> — une alerte vocale « Inactivité prolongée » (accompagnée
+  d'une vibration, au cas où le volume serait baissé) après que la radio
+  soit restée inutilisée plus longtemps que la durée configurée —
+  10 minutes par défaut.</li>
 </ul>
 
 
@@ -3213,6 +3217,9 @@ yourself.</p>
 
 
 
+
+  
+  
 
 
 

@@ -31,7 +31,7 @@
     
     
       
-        <title>Lua Scripts - Ethos Manual</title>
+        <title>Scripts Lua - Ethos Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lua-scripts" class="md-skip">
+        <a href="#scripts-lua" class="md-skip">
           Aller au contenu
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lua Scripts
+              Scripts Lua
             
           </span>
         </div>
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1852,7 +1852,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2078,7 +2078,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2275,7 +2275,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2640,7 +2640,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/lua-scripts/index.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/lua-scripts/index.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3183,32 +3183,32 @@
   
 
 
-<h1 id="lua-scripts">Lua Scripts<a class="headerlink" href="#lua-scripts" title="Permanent link">&para;</a></h1>
-<p>Lua scripts let you build custom <a href="../displays/custom-widgets/">display widgets</a>
-to show information Ethos doesn't natively cover, and (per model) custom
-<a href="../model-setup/lua-scripts/">sources and tasks</a> — a foundation planned
-to grow further, toward specialized custom functions and flight
-controller integration.</p>
-<p>Lua itself is a lightweight, embeddable general-purpose scripting
-language (used everywhere from games to web apps); Ethos embeds it for
-exactly this kind of on-radio customization.</p>
+<h1 id="scripts-lua">Scripts Lua<a class="headerlink" href="#scripts-lua" title="Permanent link">&para;</a></h1>
+<p>Les scripts Lua permettent de créer des <a href="../displays/custom-widgets/">widgets d'affichage</a>
+personnalisés pour présenter des informations qu'Ethos ne gère pas nativement, ainsi que
+(par modèle) des <a href="../model-setup/lua-scripts/">sources et tâches</a> personnalisées — une base
+qu'il est prévu d'étoffer davantage, vers des fonctions personnalisées spécialisées et
+l'intégration de contrôleurs de vol.</p>
+<p>Lua est en soi un langage de script généraliste léger et embarquable (utilisé partout, des
+jeux vidéo aux applications web) ; Ethos l'intègre précisément pour ce type de
+personnalisation directement sur la radio.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Lua scripts add to the radio's startup time. A well-written script's
-delay should be unnoticeable — a poorly written one can delay startup
-almost indefinitely.</p>
+<p>Les scripts Lua allongent le temps de démarrage de la radio. Le délai induit par un
+script bien écrit devrait être imperceptible — un script mal écrit peut retarder le
+démarrage presque indéfiniment.</p>
 </div>
 <ul>
-<li><a href="lua-interpreter/">Lua Interpreter</a> — which Lua version and libraries
-  Ethos embeds.</li>
-<li><a href="ethos-lua-documentation/">Ethos Lua Documentation</a> — where the full
-  API reference lives.</li>
-<li><a href="example-script-locations/">Example Script Locations</a> — where to find
-  and download working examples.</li>
-<li><a href="configuration-limits/">Configuration Limits</a> — memory budgets for
-  bitmaps and scripts.</li>
-<li><a href="basic-widget-layout/">Basic Widget Layout</a> — the code structure a
-  custom widget script needs.</li>
+<li><a href="lua-interpreter/">Interpréteur Lua</a> — quelle version de Lua et quelles bibliothèques
+  Ethos intègre.</li>
+<li><a href="ethos-lua-documentation/">Documentation Lua d'Ethos</a> — où se trouve la référence
+  complète de l'API.</li>
+<li><a href="example-script-locations/">Emplacements des scripts d'exemple</a> — où trouver et
+  télécharger des exemples fonctionnels.</li>
+<li><a href="configuration-limits/">Limites de configuration</a> — budgets mémoire pour les images
+  bitmap et les scripts.</li>
+<li><a href="basic-widget-layout/">Structure de base d'un widget</a> — la structure de code
+  nécessaire à un script de widget personnalisé.</li>
 </ul>
 
 
@@ -3216,6 +3216,9 @@ almost indefinitely.</p>
 
 
 
+
+  
+  
 
 
 

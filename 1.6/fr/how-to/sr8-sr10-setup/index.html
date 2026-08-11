@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sr8sr10-model-setup-and-channel-reordering" class="md-skip">
+        <a href="#configuration-du-modele-sr8sr10-et-reorganisation-des-voies" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1838,7 +1838,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2063,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2265,7 +2265,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2402,10 +2402,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-model" class="md-nav__link">
+  <a href="#creation-dun-nouveau-modele" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating a new model
+        Création d'un nouveau modèle
       
     </span>
   </a>
@@ -2413,10 +2413,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reordering-an-existing-model" class="md-nav__link">
+  <a href="#reorganisation-dun-modele-existant" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reordering an existing model
+        Réorganisation d'un modèle existant
       
     </span>
   </a>
@@ -2699,7 +2699,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2981,7 +2981,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3094,7 +3094,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3226,10 +3226,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-model" class="md-nav__link">
+  <a href="#creation-dun-nouveau-modele" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating a new model
+        Création d'un nouveau modèle
       
     </span>
   </a>
@@ -3237,10 +3237,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reordering-an-existing-model" class="md-nav__link">
+  <a href="#reorganisation-dun-modele-existant" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reordering an existing model
+        Réorganisation d'un modèle existant
       
     </span>
   </a>
@@ -3264,7 +3264,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/how-to/sr8-sr10-setup.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/how-to/sr8-sr10-setup.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3272,148 +3272,156 @@
   
 
 
-<h1 id="sr8sr10-model-setup-and-channel-reordering">SR8/SR10 Model Setup and Channel Reordering<a class="headerlink" href="#sr8sr10-model-setup-and-channel-reordering" title="Permanent link">&para;</a></h1>
-<p>FrSky's SRx stabilized receivers expect a specific channel order. Two
-scenarios: building a new model for one from scratch, or converting an
-existing model to match.</p>
+<h1 id="configuration-du-modele-sr8sr10-et-reorganisation-des-voies">Configuration du modèle SR8/SR10 et réorganisation des voies<a class="headerlink" href="#configuration-du-modele-sr8sr10-et-reorganisation-des-voies" title="Permanent link">&para;</a></h1>
+<p>Les récepteurs stabilisés SRx de FrSky attendent un ordre de voies
+spécifique. Deux cas de figure : créer un nouveau modèle de toutes pièces
+pour l'un d'eux, ou convertir un modèle existant pour qu'il corresponde.</p>
 <div class="admonition note">
-<p class="admonition-title">Screenshots pending</p>
-<p>This page doesn't have simulator screenshots yet — see <a href="../../contributing/screenshot-pipeline/">Screenshot
+<p class="admonition-title">Captures d'écran à venir</p>
+<p>Cette page ne comporte pas encore de captures d'écran du simulateur —
+voir <a href="../../contributing/screenshot-pipeline/">Screenshot
 Pipeline</a>.</p>
 </div>
-<h2 id="creating-a-new-model">Creating a new model<a class="headerlink" href="#creating-a-new-model" title="Permanent link">&para;</a></h2>
-<p>The <a href="../../model-setup/model-select/">Model Select</a> wizard groups
-same-function surfaces by default (e.g. 2 ailerons → <code>AAETR</code>), but SRx
-receivers need the first four channels fixed as <strong>AETRA</strong> instead.</p>
+<h2 id="creation-dun-nouveau-modele">Création d'un nouveau modèle<a class="headerlink" href="#creation-dun-nouveau-modele" title="Permanent link">&para;</a></h2>
+<p>L'assistant <a href="../../model-setup/model-select/">Choix du modèle</a> regroupe par
+défaut les gouvernes de même fonction (par exemple 2 ailerons → <code>AAETR</code>),
+mais les récepteurs SRx exigent que les quatre premières voies soient
+fixées en <strong>AETRA</strong> à la place.</p>
 <ol>
-<li>In <a href="../../system-setup/controls/">Controls</a>, confirm <strong>Channel order</strong>
-   is <code>AETR</code>.</li>
-<li>Enable <strong><a href="../../system-setup/controls/#first-four-channels-fixed">First four channels
-   fixed</a></strong> — this
-   stops the wizard from grouping the first four channels, keeping them
-   strictly in <code>AETRA…</code> order regardless of how many of each surface the
-   airframe has.</li>
-<li>Run the model creation wizard as normal — the first 5 channels come
-   out as <code>AETRA</code>.</li>
+<li>Dans <a href="../../system-setup/controls/">Commandes</a>, vérifiez que <strong>l'ordre
+   des voies</strong> est <code>AETR</code>.</li>
+<li>Activez <strong><a href="../../system-setup/controls/#first-four-channels-fixed">Quatre premières voies
+   fixes</a></strong> — cela
+   empêche l'assistant de regrouper les quatre premières voies, en les
+   maintenant strictement dans l'ordre <code>AETRA…</code> quel que soit le nombre de
+   gouvernes de chaque type que comporte la cellule.</li>
+<li>Exécutez l'assistant de création de modèle normalement — les 5 premières
+   voies sont alors obtenues dans l'ordre <code>AETRA</code>.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Archer receiver self-check</p>
-<p>Self-check for Archer receivers now runs through <a href="../../system-setup/devices/">Device Config →
-SxR</a> (firmware v2.1.10+) rather than a
-dedicated self-check procedure. The throttle channel must be at
-−100% or self-check won't start.</p>
+<p class="admonition-title">Auto-test des récepteurs Archer</p>
+<p>L'auto-test des récepteurs Archer s'effectue désormais via
+<a href="../../system-setup/devices/">Configuration des appareils →
+SxR</a> (firmware v2.1.10 et ultérieur) plutôt
+que par une procédure d'auto-test dédiée. La voie des gaz doit être à
+−100 %, sinon l'auto-test ne démarrera pas.</p>
 </div>
-<h2 id="reordering-an-existing-model">Reordering an existing model<a class="headerlink" href="#reordering-an-existing-model" title="Permanent link">&para;</a></h2>
-<p>Converting an existing model (e.g. currently <code>AAETRFF</code>) to the
-stabilized-receiver order (<code>AETRAE</code>, then channel 9 Gain, 10/11 flight
-modes, 12 self-check on older SxR units) is a sequence of channel swaps
-in <a href="../../model-setup/outputs/#swap-channels">Outputs</a>.</p>
-<p>Starting point:</p>
+<h2 id="reorganisation-dun-modele-existant">Réorganisation d'un modèle existant<a class="headerlink" href="#reorganisation-dun-modele-existant" title="Permanent link">&para;</a></h2>
+<p>Convertir un modèle existant (par exemple actuellement en <code>AAETRFF</code>) vers
+l'ordre requis par les récepteurs stabilisés (<code>AETRAE</code>, puis voie 9 pour le
+gain, 10/11 pour les phases de vol, 12 pour l'auto-test sur les anciennes
+unités SxR) consiste en une série d'échanges de voies dans
+<a href="../../model-setup/outputs/#swap-channels">Sorties</a>.</p>
+<p>Point de départ :</p>
 <table>
 <thead>
 <tr>
-<th>Ch</th>
-<th>Function</th>
+<th>Voie</th>
+<th>Fonction</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Aileron1 (right)</td>
+<td>Aileron1 (droit)</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Aileron2 (left)</td>
+<td>Aileron2 (gauche)</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Elevator</td>
+<td>Profondeur</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Throttle</td>
+<td>Gaz</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Rudder</td>
+<td>Dérive</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Flap1 (right)</td>
+<td>Volet1 (droit)</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Flap2 (left)</td>
+<td>Volet2 (gauche)</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Retracts</td>
+<td>Train rentrant</td>
 </tr>
 </tbody>
 </table>
-<p>Target order: <code>AETRAE</code> — Ch1 Aileron1, Ch2 Elevator, Ch3 Throttle,
-Ch4 Rudder, Ch5 Aileron2, Ch6 Elevator2/AUX2 (then Gain/flight
-modes/self-check on 9–12).</p>
+<p>Ordre visé : <code>AETRAE</code> — Voie 1 Aileron1, Voie 2 Profondeur, Voie 3 Gaz,
+Voie 4 Dérive, Voie 5 Aileron2, Voie 6 Profondeur2/AUX2 (puis
+gain/phases de vol/auto-test sur les voies 9 à 12).</p>
 <ol>
-<li><strong>Move Aileron2 out of the way first</strong>: in Outputs, select CH2
-   (Aileron2), tap again, <strong>Swap Channels</strong>, and swap it with an unused
-   channel (e.g. CH9). The swap is immediate — every mix referencing
-   either channel updates automatically.</li>
-<li><strong>Swap CH3 (Elevator) → CH2.</strong></li>
-<li><strong>Swap CH4 (Throttle) → CH3.</strong></li>
-<li><strong>Swap CH5 (Rudder) → CH4.</strong></li>
-<li><strong>Swap CH9 (Aileron2, parked in step 1) → CH5.</strong></li>
+<li><strong>Commencez par déplacer Aileron2 hors du chemin</strong> : dans Sorties,
+   sélectionnez CH2 (Aileron2), appuyez de nouveau, choisissez <strong>Échanger
+   les voies</strong>, et échangez-la avec une voie inutilisée (par exemple CH9).
+   L'échange est immédiat — tous les mixages faisant référence à l'une ou
+   l'autre voie sont mis à jour automatiquement.</li>
+<li><strong>Échangez CH3 (Profondeur) → CH2.</strong></li>
+<li><strong>Échangez CH4 (Gaz) → CH3.</strong></li>
+<li><strong>Échangez CH5 (Dérive) → CH4.</strong></li>
+<li><strong>Échangez CH9 (Aileron2, mise de côté à l'étape 1) → CH5.</strong></li>
 </ol>
-<p>Result:</p>
+<p>Résultat :</p>
 <table>
 <thead>
 <tr>
-<th>Ch</th>
-<th>Function</th>
+<th>Voie</th>
+<th>Fonction</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Aileron1 (right)</td>
+<td>Aileron1 (droit)</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Elevator</td>
+<td>Profondeur</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Throttle</td>
+<td>Gaz</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Rudder</td>
+<td>Dérive</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Aileron2 (left)</td>
+<td>Aileron2 (gauche)</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Flap1 (right)</td>
+<td>Volet1 (droit)</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Flap2 (left)</td>
+<td>Volet2 (gauche)</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Retracts</td>
+<td>Train rentrant</td>
 </tr>
 </tbody>
 </table>
-<p>— now in the order FrSky stabilized receivers expect.</p>
+<p>— soit désormais l'ordre attendu par les récepteurs stabilisés FrSky.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

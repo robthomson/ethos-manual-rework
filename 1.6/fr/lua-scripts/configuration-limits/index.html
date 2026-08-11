@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-limits" class="md-skip">
+        <a href="#limites-de-configuration" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1164,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1697,7 +1697,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1843,7 +1843,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2078,7 +2078,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2275,7 +2275,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2640,7 +2640,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/lua-scripts/configuration-limits.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/lua-scripts/configuration-limits.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3183,18 +3183,18 @@
   
 
 
-<h1 id="configuration-limits">Configuration Limits<a class="headerlink" href="#configuration-limits" title="Permanent link">&para;</a></h1>
+<h1 id="limites-de-configuration">Limites de configuration<a class="headerlink" href="#limites-de-configuration" title="Permanent link">&para;</a></h1>
 <ul>
-<li><strong>2MB</strong> for bitmaps (a single full-screen bitmap on the X20 alone uses
-  roughly 768K).</li>
-<li><strong>2MB</strong> for Lua scripts — a generous budget in practice.</li>
+<li><strong>2 Mo</strong> pour les bitmaps (un seul bitmap plein écran sur le X20 occupe
+  à lui seul environ 768 Ko).</li>
+<li><strong>2 Mo</strong> pour les scripts Lua — un budget largement suffisant en pratique.</li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Bitmaps in scripts</p>
-<p>Avoid holding large amounts of bitmap data in RAM. Prefer <strong>lazy
-loading</strong> — load a bitmap only when it's actually needed, then keep
-it cached in memory for next time rather than re-reading it from the
-SD card/eMMC repeatedly.</p>
+<p class="admonition-title">Bitmaps dans les scripts</p>
+<p>Évitez de conserver de grandes quantités de données bitmap en RAM. Privilégiez
+le <strong>chargement différé</strong> (lazy loading) — ne chargez un bitmap que lorsqu'il est
+réellement nécessaire, puis conservez-le en cache mémoire pour la fois suivante
+plutôt que de le relire répétitivement depuis la SD card/eMMC.</p>
 </div>
 
 
@@ -3202,6 +3202,9 @@ SD card/eMMC repeatedly.</p>
 
 
 
+
+  
+  
 
 
 

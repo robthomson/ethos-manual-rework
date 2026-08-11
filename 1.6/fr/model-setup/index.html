@@ -31,7 +31,7 @@
     
     
       
-        <title>Model Setup - Ethos Manual</title>
+        <title>Configuration du modèle - Ethos Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#model-setup" class="md-skip">
+        <a href="#configuration-du-modele" class="md-skip">
           Aller au contenu
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Model Setup
+              Configuration du modèle
             
           </span>
         </div>
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1178,7 +1178,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1712,7 +1712,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1853,7 +1853,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2078,7 +2078,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2275,7 +2275,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2640,7 +2640,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2922,7 +2922,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3035,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3175,7 +3175,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/model-setup/index.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/model-setup/index.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3183,41 +3183,46 @@
   
 
 
-<h1 id="model-setup">Model Setup<a class="headerlink" href="#model-setup" title="Permanent link">&para;</a></h1>
-<p>Everything in this section is stored <strong>per model</strong> — switching models
-switches all of it. This is where a model actually gets programmed, from
-picking an airframe template through to its mixes, outputs, and safety
-switches. Reached via the <strong>Airplane</strong> tab along the bottom bar (or the
-<code>MDL</code> key) — as distinct from <a href="../system-setup/">System Setup</a>,
-which covers everything common across every model.</p>
+<h1 id="configuration-du-modele">Configuration du modèle<a class="headerlink" href="#configuration-du-modele" title="Permanent link">&para;</a></h1>
+<p>Tout ce qui figure dans cette section est enregistré <strong>par modèle</strong> — changer
+de modèle change l'ensemble de ces réglages. C'est ici qu'un modèle est
+réellement programmé, du choix d'un modèle type de cellule jusqu'à ses
+mixages, ses sorties et ses interrupteurs de sécurité. On y accède par
+l'onglet <strong>Avion</strong> de la barre inférieure (ou par la touche <code>MDL</code>) — à
+distinguer de la <a href="../system-setup/">Configuration du système</a>, qui
+regroupe tout ce qui est commun à l'ensemble des modèles.</p>
 <ul>
-<li><a href="model-select/">Model Select</a> — creating, choosing, and organizing
-  models.</li>
-<li><a href="model-edit/">Model Edit</a> — the model's own name, type, and icon.</li>
-<li><a href="flight-modes/">Flight Modes</a></li>
-<li><a href="mixes/">Mixes</a> — the core of model programming.</li>
-<li><a href="outputs/">Outputs</a> — servo/motor endpoints, subtrim, and reversing.</li>
-<li><a href="timers/">Timers</a></li>
+<li><a href="model-select/">Choix du modèle</a> — création, sélection et organisation
+  des modèles.</li>
+<li><a href="model-edit/">Édition du modèle</a> — le nom, le type et l'icône du modèle.</li>
+<li><a href="flight-modes/">Phases de vol</a></li>
+<li><a href="mixes/">Mixages</a> — le cœur de la programmation d'un modèle.</li>
+<li><a href="outputs/">Sorties</a> — courses des servos/moteurs, subtrim et inversion.</li>
+<li><a href="timers/">Chronos</a></li>
 <li><a href="trims/">Trims</a></li>
-<li><a href="rf-system/">RF System</a> — receiver binding and RF module setup.</li>
-<li><a href="curves/">Curves</a></li>
-<li><a href="logical-switches/">Logical Switches</a></li>
-<li><a href="special-functions/">Special Functions</a></li>
+<li><a href="rf-system/">Système RF</a> — appairage du récepteur et configuration du
+  module RF.</li>
+<li><a href="curves/">Courbes</a></li>
+<li><a href="logical-switches/">Interrupteurs logiques</a></li>
+<li><a href="special-functions/">Fonctions spéciales</a></li>
 <li><a href="variables/">Variables</a></li>
-<li><a href="trainer/">Trainer</a></li>
-<li><a href="telemetry/">Telemetry</a> — sensor discovery and calculated sensors.</li>
-<li><a href="checklist/">Checklist</a></li>
-<li><a href="lua-scripts/">Lua Scripts</a> — per-model Lua scripts and functions.</li>
+<li><a href="trainer/">Écolage</a></li>
+<li><a href="telemetry/">Télémétrie</a> — détection des capteurs et capteurs calculés.</li>
+<li><a href="checklist/">Liste de vérification</a></li>
+<li><a href="lua-scripts/">Scripts Lua</a> — scripts et fonctions Lua propres au modèle.</li>
 </ul>
-<p>For worked, start-to-finish examples of programming a model, see
-<a href="../tutorials/">Tutorials</a>, and for task-focused walkthroughs,
-<a href="../how-to/">How-To Guides</a>.</p>
+<p>Pour des exemples complets de programmation d'un modèle, du début à la fin,
+consultez les <a href="../tutorials/">Tutoriels</a> ; pour des procédures
+orientées tâche, voyez les <a href="../how-to/">Guides pratiques</a>.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

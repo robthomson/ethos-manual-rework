@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#curves" class="md-skip">
+        <a href="#courbes" class="md-skip">
           Aller au contenu
         </a>
       
@@ -827,7 +827,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Configuration du système
   
 
     
@@ -1169,7 +1169,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Configuration du modèle
   
 
     
@@ -1474,10 +1474,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#curve-types" class="md-nav__link">
+  <a href="#types-de-courbes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Curve types
+        Types de courbes
       
     </span>
   </a>
@@ -1485,10 +1485,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#driving-a-curve-from-a-var" class="md-nav__link">
+  <a href="#piloter-une-courbe-depuis-une-var" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Driving a curve from a Var
+        Piloter une courbe depuis une Var
       
     </span>
   </a>
@@ -1771,7 +1771,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Écrans
   
 
     
@@ -1912,7 +1912,7 @@
   <span class="md-ellipsis">
     
   
-    Lua Scripts
+    Scripts Lua
   
 
     
@@ -2137,7 +2137,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Tutoriels
   
 
     
@@ -2334,7 +2334,7 @@
   <span class="md-ellipsis">
     
   
-    How-To Guides
+    Guides pratiques
   
 
     
@@ -2699,7 +2699,7 @@
   <span class="md-ellipsis">
     
   
-    Radio Notes
+    Notes sur les radios
   
 
     
@@ -2981,7 +2981,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    Référence
   
 
     
@@ -3094,7 +3094,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
+    Contribuer
   
 
     
@@ -3226,10 +3226,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#curve-types" class="md-nav__link">
+  <a href="#types-de-courbes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Curve types
+        Types de courbes
       
     </span>
   </a>
@@ -3237,10 +3237,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#driving-a-curve-from-a-var" class="md-nav__link">
+  <a href="#piloter-une-courbe-depuis-une-var" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Driving a curve from a Var
+        Piloter une courbe depuis une Var
       
     </span>
   </a>
@@ -3264,7 +3264,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/model-setup/curves.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/fr/model-setup/curves.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3272,105 +3272,113 @@
   
 
 
-<h1 id="curves">Curves<a class="headerlink" href="#curves" title="Permanent link">&para;</a></h1>
-<p><img alt="Curve types" src="../../../assets/model-curves-type.png" /></p>
-<p>Reusable response curves for <a href="../mixes/#anatomy-of-a-mix">Mixes</a> or
-<a href="../outputs/#editing-a-channel">Outputs</a> — the built-in Expo is available
-directly in both, but anything more elaborate is defined here (or via
-<strong>Add curve</strong>, reachable directly from either edit screen). Up to 50
-curves are available; none exist by default (Expo is always built in
-regardless). Add one with <strong>+</strong>; tap an existing curve for
-<strong>Edit</strong>/<strong>Move</strong>/<strong>Copy-paste</strong>/<strong>Clone</strong>/<strong>Delete</strong>.</p>
-<p><img alt="Add curve" src="../../../assets/model-curves-add.png" /></p>
-<h2 id="curve-types">Curve types<a class="headerlink" href="#curve-types" title="Permanent link">&para;</a></h2>
+<h1 id="courbes">Courbes<a class="headerlink" href="#courbes" title="Permanent link">&para;</a></h1>
+<p><img alt="Types de courbes" src="../../../assets/model-curves-type.png" /></p>
+<p>Courbes de réponse réutilisables pour les <a href="../mixes/#anatomy-of-a-mix">Mixages</a> ou
+les <a href="../outputs/#editing-a-channel">Sorties</a> — l'Expo intégré est disponible
+directement dans les deux, mais tout ce qui est plus élaboré se définit ici (ou via
+<strong>Ajouter courbe</strong>, accessible directement depuis l'un ou l'autre écran d'édition).
+Jusqu'à 50 courbes sont disponibles ; aucune n'existe par défaut (l'Expo reste de
+toute façon toujours intégré). Ajoutez-en une avec <strong>+</strong> ; touchez une courbe
+existante pour <strong>Modifier</strong>/<strong>Déplacer</strong>/<strong>Copier-coller</strong>/<strong>Cloner</strong>/<strong>Supprimer</strong>.</p>
+<p><img alt="Ajouter une courbe" src="../../../assets/model-curves-add.png" /></p>
+<h2 id="types-de-courbes">Types de courbes<a class="headerlink" href="#types-de-courbes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Expo</strong> — default value 40; positive softens the response around
-  center, negative sharpens it. Softening around mid-stick helps avoid
-  over-controlling, especially for less experienced pilots.</li>
+<li><strong>Expo</strong> — valeur par défaut 40 ; une valeur positive adoucit la réponse autour
+  du neutre, une valeur négative l'accentue. L'adoucissement autour du milieu du
+  manche aide à éviter de surpiloter, en particulier pour les pilotes les moins
+  expérimentés.</li>
 </ul>
 <p><img alt="Expo" src="../../../assets/model-curves-expo.png" /></p>
 <ul>
-<li><strong>Function</strong> — a small set of fixed mathematical shapes:</li>
+<li><strong>Fonction</strong> — un petit ensemble de formes mathématiques fixes :</li>
 </ul>
-<p><img alt="Function types" src="../../../assets/model-curves-fn-types.png" /></p>
+<p><img alt="Types de fonctions" src="../../../assets/model-curves-fn-types.png" /></p>
 <ul>
 <li>
-<p><strong>x &gt; 0</strong> — passes the source through unchanged while positive;
-    outputs 0 while negative.</p>
+<p><strong>x &gt; 0</strong> — transmet la source inchangée lorsqu'elle est positive ;
+    sort 0 lorsqu'elle est négative.</p>
 <p><img alt="x &gt; 0" src="../../../assets/model-curves-fn-xgt0.png" /></p>
 </li>
 <li>
-<p><strong>x &lt; 0</strong> — the mirror: passes through while negative, 0 while
-    positive.</p>
+<p><strong>x &lt; 0</strong> — l'inverse : transmet la source lorsqu'elle est négative, 0
+    lorsqu'elle est positive.</p>
 <p><img alt="x &lt; 0" src="../../../assets/model-curves-fn-xlt0.png" /></p>
 </li>
 <li>
-<p><strong>|x|</strong> — passes the source through as its absolute value (always
+<p><strong>|x|</strong> — transmet la source sous forme de valeur absolue (toujours
     positive).</p>
 <p><img alt="|x|" src="../../../assets/model-curves-fn-barx.png" /></p>
 </li>
 <li>
-<p><strong>f &gt; 0</strong> — outputs 100% while the source is positive, 0 while
-    negative (a hard switch, not a pass-through).</p>
+<p><strong>f &gt; 0</strong> — sort 100 % lorsque la source est positive, 0 lorsqu'elle est
+    négative (un interrupteur franc, pas une transmission directe).</p>
 <p><img alt="f &gt; 0" src="../../../assets/model-curves-fn-fgt0.png" /></p>
 </li>
 <li>
-<p><strong>f &lt; 0</strong> — outputs −100% while negative, 0 while positive.</p>
+<p><strong>f &lt; 0</strong> — sort −100 % lorsque la source est négative, 0 lorsqu'elle est
+    positive.</p>
 <p><img alt="f &lt; 0" src="../../../assets/model-curves-fn-flt0.png" /></p>
 </li>
 <li>
-<p><strong>|f|</strong> — outputs −100% while negative, +100% while positive.</p>
+<p><strong>|f|</strong> — sort −100 % lorsque la source est négative, +100 % lorsqu'elle est
+    positive.</p>
 <p><img alt="|f|" src="../../../assets/model-curves-fn-barf.png" /></p>
 </li>
 </ul>
-<p>Every curve type — Function included — also has an <strong>Offset</strong>, shifting
-  it up or down on the Y axis (one decimal place precision, same as Y
-  values generally):</p>
-<p><img alt="Function offset" src="../../../assets/model-curves-fn-xgt0-offset.png" /></p>
+<p>Tous les types de courbes — y compris Fonction — disposent également d'un
+  <strong>Décalage</strong>, qui les déplace vers le haut ou vers le bas sur l'axe Y (précision
+  à une décimale, comme pour les valeurs Y en général) :</p>
+<p><img alt="Décalage de fonction" src="../../../assets/model-curves-fn-xgt0-offset.png" /></p>
 <ul>
-<li><strong>Custom</strong> — a point-based curve, 5 points by default, up to 21.</li>
+<li><strong>Personnalisée</strong> — une courbe définie par points, 5 points par défaut, jusqu'à 21.</li>
 </ul>
-<p><img alt="5-point custom curve" src="../../../assets/model-curves-custom5.png" /></p>
+<p><img alt="Courbe personnalisée à 5 points" src="../../../assets/model-curves-custom5.png" /></p>
 <ul>
 <li>
-<p><strong>Smooth</strong> — runs a smooth curve through all points instead of
-    straight segments between them.</p>
-<p><img alt="Smoothed curve" src="../../../assets/model-curves-custom5-2-smooth.png" /></p>
+<p><strong>Lissage</strong> — fait passer une courbe lisse par tous les points au lieu de
+    segments droits entre eux.</p>
+<p><img alt="Courbe lissée" src="../../../assets/model-curves-custom5-2-smooth.png" /></p>
 </li>
 <li>
-<p><strong>Easy mode</strong> — <strong>On</strong> restricts editing to evenly-spaced Y
-    coordinates only (X is fixed); <strong>Off</strong> allows editing both X and Y
-    per point, except the −100%/+100% endpoints, which are locked since
-    the curve must always cover the full signal range.</p>
-<p><img alt="Easy mode off" src="../../../assets/model-curves-custom-easy-off.png" /></p>
+<p><strong>Mode simple</strong> — <strong>Activé</strong> limite l'édition aux seules coordonnées Y
+    régulièrement espacées (X est fixe) ; <strong>Désactivé</strong> permet de modifier X et Y
+    pour chaque point, à l'exception des extrémités −100 %/+100 %, qui sont
+    verrouillées puisque la courbe doit toujours couvrir toute la plage du signal.</p>
+<p><img alt="Mode simple désactivé" src="../../../assets/model-curves-custom-easy-off.png" /></p>
 </li>
 </ul>
-<p><strong>Editor controls</strong> (same pattern as the <a href="../outputs/#balance-channels">Outputs balance curve
-  editor</a>):</p>
+<p><strong>Commandes de l'éditeur</strong> (même principe que l'<a href="../outputs/#balance-channels">éditeur de courbe d'équilibrage
+  des Sorties</a>) :</p>
 <ul>
-<li><strong>Source</strong> — the curve's own mix source(s) by default, or <strong>Auto
-    analog input</strong> to pick up the first stick/slider/pot moved.</li>
-<li>Nearest-point snapping to the rotary encoder, and a <strong>Lock</strong> toggle
-    to freeze inputs while observing the resulting control surface
-    movement.</li>
-<li>A live cursor shows the current input value driving the curve, to
-    help line it up with a point before adjusting.</li>
+<li><strong>Source</strong> — par défaut, la ou les sources de mixage propres à la courbe, ou
+    <strong>Entrée analogique automatique</strong> pour détecter le premier manche/curseur/
+    potentiomètre déplacé.</li>
+<li>Accrochage au point le plus proche avec l'encodeur rotatif, et un basculement
+    <strong>Verrou</strong> pour figer les entrées pendant l'observation du mouvement de la
+    gouverne obtenu.</li>
+<li>Un curseur en temps réel indique la valeur d'entrée courante qui pilote la
+    courbe, afin de faciliter son alignement sur un point avant l'ajustement.</li>
 </ul>
-<h2 id="driving-a-curve-from-a-var">Driving a curve from a Var<a class="headerlink" href="#driving-a-curve-from-a-var" title="Permanent link">&para;</a></h2>
-<p>Both a Function curve's <strong>Offset</strong> and an individual <strong>Custom</strong> curve
-point can be driven by a <a href="../variables/">Var</a> instead of a fixed value —
-and that Var can in turn be adjusted in flight via a repurposed trim:</p>
-<p><img alt="Function offset from a Var" src="../../../assets/model-curves-fn-offset-var.png" />
-<img alt="Custom curve point from a Var" src="../../../assets/model-curves-custom-with-var.png" /></p>
-<p>See <a href="../variables/">Variables</a> and <a href="../../how-to/in-flight-compensation-curve/">How-To: In-Flight Adjustable
-Compensation Curve</a> for a full
-worked example of this pattern.</p>
+<h2 id="piloter-une-courbe-depuis-une-var">Piloter une courbe depuis une Var<a class="headerlink" href="#piloter-une-courbe-depuis-une-var" title="Permanent link">&para;</a></h2>
+<p>Le <strong>Décalage</strong> d'une courbe Fonction comme un point individuel d'une courbe
+<strong>Personnalisée</strong> peuvent être pilotés par une <a href="../variables/">Var</a> au lieu d'une
+valeur fixe — et cette Var peut à son tour être ajustée en vol grâce à un trim
+réaffecté :</p>
+<p><img alt="Décalage de fonction depuis une Var" src="../../../assets/model-curves-fn-offset-var.png" />
+<img alt="Point de courbe personnalisée depuis une Var" src="../../../assets/model-curves-custom-with-var.png" /></p>
+<p>Voir <a href="../variables/">Variables</a> et <a href="../../how-to/in-flight-compensation-curve/">Guide pratique : courbe de compensation
+ajustable en vol</a> pour un exemple
+complet et détaillé de ce principe.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

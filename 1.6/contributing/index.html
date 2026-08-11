@@ -3172,6 +3172,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#automated-translation-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated translation (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3398,6 +3409,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#automated-translation-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated translation (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3524,6 +3546,33 @@ current, never committed to git) and compares every locale's
 <code>translated_from</code> marker against each English page's actual last-changed
 commit: <strong>current</strong>, <strong>stale</strong> (English moved on), or <strong>missing</strong>. That
 page is the worklist — no GitHub Issues, no digging through Actions logs.</p>
+<h3 id="automated-translation-optional">Automated translation (optional)<a class="headerlink" href="#automated-translation-optional" title="Permanent link">&para;</a></h3>
+<p><code>scripts/translate.py</code> is a standalone local script (not part of the site
+build or CI) that drives the same missing/stale worklist through the
+Claude API to produce a first-draft translation for each page, stamped
+with the correct <code>translated_from:</code> frontmatter automatically:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>anthropic<span class="w"> </span>pyyaml<span class="w">   </span><span class="c1"># if not already installed</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>...<span class="w">   </span><span class="c1"># or use `ant auth login`</span>
+
+python<span class="w"> </span>scripts/translate.py<span class="w"> </span>--dry-run<span class="w">       </span><span class="c1"># see what&#39;s queued, no API calls</span>
+python<span class="w"> </span>scripts/translate.py<span class="w"> </span>--only<span class="w"> </span>fr<span class="w">       </span><span class="c1"># translate everything missing/stale for French</span>
+python<span class="w"> </span>scripts/translate.py<span class="w"> </span>--pages<span class="w"> </span>model-setup/mixes.md<span class="w">   </span><span class="c1"># just one page</span>
+</code></pre></div>
+<p>It reads every locale from <code>mkdocs.yml</code>'s <code>i18n</code> plugin config by default
+(<code>--only</code> restricts to specific ones), skips anything already current
+unless <code>--force</code> is passed, and never commits or pushes — it only writes
+files under <code>docs/&lt;locale&gt;/</code>, same as if you'd hand-edited them. Review the
+diff, do the <a href="#addingupdating-a-translation">anchor-pinning</a> check for any
+newly-translated heading, then open a PR as usual.</p>
+<p>The system prompt pre-seeds Claude with the manual's domain (FrSky Ethos
+radio firmware, RC hobbyist audience) and a list of terms that must never
+be translated (physical key names, protocol names, brand names), the same
+technique used by the sister
+<a href="https://github.com/rotorflight/rotorflight-lua-ethos-suite"><code>rotorflight-lua-ethos-suite</code></a>
+repo's own <code>bin/i18n/auto-translate.py</code>. A glossary of terms established
+during the French pilot is baked in for <code>fr</code>; extend
+<code>GLOSSARIES</code> in the script the same way once another locale has a few
+pages translated and reviewed.</p>
 <p>Nav tab labels (e.g. "Model Setup") stay in English until a locale sets
 <code>nav_translations</code> for them — deliberately not done yet while only a
 handful of pages are translated, since translating labels ahead of the
