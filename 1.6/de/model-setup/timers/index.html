@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#timer" class="md-skip">
+        <a href="#stoppuhren" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -1470,10 +1470,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gemeinsame-felder-abwarts-und-aufwarts-zahlend" class="md-nav__link">
+  <a href="#gemeinsame-felder-ruckwarts-und-vorwarts-zahlend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gemeinsame Felder (abwärts und aufwärts zählend)
+        Gemeinsame Felder (rückwärts und vorwärts zählend)
       
     </span>
   </a>
@@ -2217,7 +2217,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2414,7 +2414,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3334,10 +3334,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gemeinsame-felder-abwarts-und-aufwarts-zahlend" class="md-nav__link">
+  <a href="#gemeinsame-felder-ruckwarts-und-vorwarts-zahlend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gemeinsame Felder (abwärts und aufwärts zählend)
+        Gemeinsame Felder (rückwärts und vorwärts zählend)
       
     </span>
   </a>
@@ -3380,75 +3380,82 @@
   
 
 
-<h1 id="timer">Timer<a class="headerlink" href="#timer" title="Permanent link">&para;</a></h1>
-<p><img alt="Timer" src="../../assets/model-timers.png" /></p>
-<p>Acht vollständig programmierbare Timer, die jeweils aufwärts oder abwärts
-zählen. Ein Timer wird mit dem <strong>+</strong> neben den Spaltenüberschriften oder über
-<strong>Hinzufügen</strong> darunter angelegt. Ein Tippen auf einen Timer öffnet die
-Optionen zum Zurücksetzen, Bearbeiten, Hinzufügen, Verschieben und
-Kopieren/Einfügen.</p>
-<p><img alt="Timer bearbeiten" src="../../assets/model-timer1-edit.png" /></p>
-<h2 id="gemeinsame-felder-abwarts-und-aufwarts-zahlend">Gemeinsame Felder (abwärts und aufwärts zählend)<a class="headerlink" href="#gemeinsame-felder-abwarts-und-aufwarts-zahlend" title="Permanent link">&para;</a></h2>
+<h1 id="stoppuhren">Stoppuhren<a class="headerlink" href="#stoppuhren" title="Permanent link">&para;</a></h1>
+<p><img alt="Stoppuhren" src="../../assets/model-timers.png" /></p>
+<p>Es gibt acht vollständig programmierbare Timer, die entweder vorwärts oder
+rückwärts zählen können. Eine neue Stoppuhr wird über das Symbol <strong>+</strong> neben
+den Spaltenüberschriften oder darunter über <strong>Hinzufügen</strong> angelegt. Durch
+Berühren einer beliebigen Stoppuhr wird ein Popup-Fenster mit Optionen zum
+Zurücksetzen oder Bearbeiten dieser Stoppuhr, zum Hinzufügen einer neuen oder
+zum Verschieben oder Kopieren/Einfügen angezeigt.</p>
+<p><img alt="Stoppuhr bearbeiten" src="../../assets/model-timer1-edit.png" /></p>
+<h2 id="gemeinsame-felder-ruckwarts-und-vorwarts-zahlend">Gemeinsame Felder (rückwärts und vorwärts zählend)<a class="headerlink" href="#gemeinsame-felder-ruckwarts-und-vorwarts-zahlend" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Wert</strong> — der aktuelle Stand des Timers.</li>
-<li><strong>Name</strong> — editierbar.</li>
-<li><strong>Modus</strong> — <strong>Aufwärts</strong> oder <strong>Abwärts</strong>.</li>
-<li><strong>Startwert</strong> (nur abwärts zählend) — der Wert, von dem heruntergezählt wird.</li>
-<li><strong>Alarmwert</strong> (nur aufwärts zählend) — der Wert, ab dem der Timer als
-  abgelaufen gilt; er zählt darüber hinaus weiter, wird in Timer-Widgets
-  jedoch rot dargestellt.</li>
-<li><strong>Startbedingung</strong> — startet den Timer. Bleibt die <strong>Stoppbedingung</strong> auf
-  dem Standardwert, steuert die Startbedingung allein Start <em>und</em> Stopp.
-  Andernfalls startet der Timer, sobald die Startbedingung zum ersten Mal
-  wahr wird, und läuft von da an weiter.</li>
-<li><strong>Stoppbedingung</strong> — sofern nicht auf dem Standardwert belassen, steuert
-  sie den laufenden Timer: gestoppt, solange sie wahr ist, laufend, solange
-  sie falsch ist. Im folgenden Beispiel startet ein Timer, wenn
-  <code>ThrottleActive</code> wahr wird, und stoppt, sobald die Telemetrie nicht mehr
-  aktiv ist:</li>
+<li><strong>Wert</strong> — zeigt den aktuellen Wert des Timers an.</li>
+<li><strong>Name</strong> — ermöglicht die Benennung des Timers.</li>
+<li><strong>Mode</strong> — <strong>aufwärts</strong> oder <strong>abwärts</strong> zählen.</li>
+<li><strong>Start Wert</strong> (nur beim Rückwärtszählen) — der Wert, von dem aus der Timer
+  auf Null herunterzählt.</li>
+<li><strong>Alarmwert</strong> (nur beim Hochzählen) — der Wert, bei dem die Stoppuhr abläuft;
+  sie zählt weiter, der Wert wird in den Uhren-Widgets jedoch rot angezeigt.</li>
+<li><strong>Zustand starten</strong> — die Startbedingung startet den Timer. Wenn die
+  <strong>Stoppbedingung</strong> auf der Standardeinstellung bleibt, startet und stoppt der
+  Timer nur mit der Startbedingung. Andernfalls startet der Timer, wenn die
+  Start-Bedingung zuerst WAHR wird, und läuft dann weiter.</li>
+<li><strong>Zustand anhalten</strong> — wenn diese Bedingung nicht „Standard“ ist, steuert sie
+  die Stoppuhr, sobald diese läuft: Die Stoppuhr wird angehalten, wenn die
+  Stopp-Bedingung WAHR ist, läuft aber weiter, wenn sie FALSCH ist. Im
+  folgenden Beispiel wird die Stoppuhr gestartet, wenn <code>ThrottleActive</code> WAHR
+  wird, und angehalten, wenn die Telemetrie nicht mehr aktiv ist:</li>
 </ul>
-<p><img alt="Stoppbedingung" src="../../assets/model-timer1-edit-stop.png" /></p>
+<p><img alt="Zustand anhalten" src="../../assets/model-timer1-edit-stop.png" /></p>
 <ul>
-<li><strong>Proportionale Zeitquelle</strong> — <code>---</code> zählt in Echtzeit. Jede andere Quelle
-  (z. B. der Gasknüppel oder der Gaskanal) skaliert die Geschwindigkeit des
-  Timers: bei −100 % steht der Timer, bei +100 % läuft er in
-  Echtzeitgeschwindigkeit, dazwischen wird proportional skaliert.</li>
-<li><strong>Reset</strong> — ein Schalter, Funktionsschalter, logischer Schalter oder eine
-  Trimmposition, die den Timer zurücksetzt; er bleibt zurückgesetzt, solange
-  die Bedingung wahr ist.</li>
-<li><strong>Persistent</strong> — erhält den Wert des Timers über das Ausschalten oder einen
-  Modellwechsel hinaus und lädt ihn beim nächsten Einsatz des Modells wieder.</li>
-<li><strong>Stimme</strong> — welches
-  <a href="../../system-setup/general/#audio-settings">Sprachpaket</a> diesen Timer
+<li><strong>Proportionale Zeitquelle</strong> — bei der Einstellung <code>---</code> zählt der Timer in
+  Echtzeit. Jede andere Quelle (z. B. der Gasknüppel oder sogar der Gaskanal)
+  steuert die Geschwindigkeit des Timers: Bei −100 % wird die Stoppuhr
+  angehalten, bei +100 % zählt sie in Echtzeit, bei Zwischenwerten zählt sie
+  proportional.</li>
+<li><strong>Zurücksetzen</strong> — die Stoppuhr kann durch die Stellung von Schaltern,
+  Funktionsschaltern, Logikschaltern oder Trimmschaltern zurückgesetzt werden;
+  sie bleibt so lange zurückgesetzt, wie die Rücksetzbedingung gültig ist.</li>
+<li><strong>Wert speichern, wenn TX AUS?</strong> — die Stoppuhr wird im Speicher gehalten,
+  wenn der Sender ausgeschaltet oder das Modell gewechselt wird. Der Wert wird
+  bei der nächsten Verwendung des Modells wieder geladen.</li>
+<li><strong>Stimme</strong> — legt fest, welches
+  <a href="../../system-setup/general/#audio-settings">Sprachpaket</a> diese Stoppuhr
   ansagt.</li>
 </ul>
 <h2 id="audio-aktionen">Audio-Aktionen<a class="headerlink" href="#audio-aktionen" title="Permanent link">&para;</a></h2>
-<p><img alt="Audio-Aktion hinzufügen" src="../../assets/model-timer1-add-action.png" />
-<img alt="Aktionstyp" src="../../assets/model-timer1-action-type-select.png" />
+<p><img alt="Neue Audio-Aktion hinzufügen" src="../../assets/model-timer1-add-action.png" />
+<img alt="Typ" src="../../assets/model-timer1-action-type-select.png" />
 <img alt="Countdown-Aktion" src="../../assets/model-timer1-action-countdown.png" /></p>
-<p>Vollständig flexible, timerspezifische Konfiguration der Warnmeldungen. Jede
-Aktion besitzt einen Typ — <strong>Countdown</strong> (gesprochen), <strong>Piep-Countdown</strong>
-(Pieptöne statt Sprache), <strong>Datei abspielen</strong> oder <strong>Wert ansagen</strong> — sowie:</p>
+<p>Audio-Aktionen sind sehr leistungsfähig und flexibel, so dass der
+Stoppuhr-Alarm genau nach den Anforderungen des Benutzers konfiguriert werden
+kann. Jede Aktion hat einen Typ — <strong>Countdown</strong> (per Stimme), <strong>Signalton
+Countdown</strong> (mit Pieptönen anstelle der Stimme), <strong>Datei abspielen</strong> oder
+<strong>Wert ansagen</strong> — sowie:</p>
 <ul>
-<li><strong>Start</strong> — der Wert, ab dem der Countdown dieser Aktion beginnt.</li>
-<li><strong>Schritt</strong> — Ansageintervall, bis zu 10 Minuten (600 s).</li>
-<li><strong>Haptik</strong> — die Ansage mit Vibration begleiten.</li>
+<li><strong>Start</strong> — der Wert, ab dem diese Countdown-Aktion beginnt.</li>
+<li><strong>Schritt</strong> — die Intervalle, in denen der Timerwert angesagt wird, bis zu
+  10 Minuten (600 s).</li>
+<li><strong>Haptik</strong> — die Ansagen werden durch haptisches Feedback begleitet.</li>
 </ul>
-<p>Eine typische Kombination aus drei Aktionen:</p>
-<p><img alt="Übersicht der Aktionen" src="../../assets/model-timer1-actions-summary.png" />
-<img alt="Aktionen von Timer 2" src="../../assets/model-timer2-actions-summary.png" /></p>
+<p>Eine typische Kombination aus drei Audio-Aktionen:</p>
+<p><img alt="Übersicht der Audio-Aktionen" src="../../assets/model-timer1-actions-summary.png" />
+<img alt="Audio-Aktionen der Stoppuhr 2" src="../../assets/model-timer2-actions-summary.png" /></p>
 <ol>
-<li>Gesprochener Countdown ab 2:00 Restzeit, alle 30 s, mit Haptik.</li>
-<li>Piep-Countdown ab 0:10 Restzeit, jede Sekunde, mit Haptik.</li>
-<li>Eine eigene Datei (z. B. <code>timer-1-elapsed</code>), die beim Ablauf abgespielt
-   wird, mit Haptik.</li>
+<li>Countdown per Sprache ab 2:00 Restzeit, alle 30 s, mit haptischem Feedback.</li>
+<li>Signalton-Countdown ab 0:10 Restzeit, jede Sekunde, mit haptischem Feedback.</li>
+<li>Eine benutzerdefinierte Audiodatei (z. B. <code>timer-1-elapsed</code>), die beim
+   Ablauf abgespielt wird, mit haptischem Feedback.</li>
 </ol>
-<p>Weitere Aktionen werden über <strong>Hinzufügen</strong> ergänzt; die Liste wird in der
-Reihenfolge der Priorität abgearbeitet, wobei die <strong>höchste Priorität zuletzt</strong>
-steht.</p>
-<p>Siehe auch das <a href="../../displays/#widget-types">Anzeige-Widget Timer-Log</a>
-für ein laufendes Protokoll vergangener Timerläufe.</p>
-<p><img alt="Timer-Widget" src="../../assets/model-timers-widget.png" /></p>
+<p>Weitere Audio-Aktionen können über <strong>Hinzufügen</strong> ergänzt werden. Bitte
+beachten Sie, dass die Liste nach Prioritäten geordnet sein sollte, wobei die
+<strong>höchste Priorität am Ende der Liste</strong> steht.</p>
+<p>Siehe auch das
+<a href="../../displays/#widget-types">Anzeige-Widget Timer-Log</a> für ein
+laufendes Protokoll vergangener Stoppuhrläufe.</p>
+<p><img alt="Stoppuhr-Widget" src="../../assets/model-timers-widget.png" /></p>
 
 
 

@@ -2158,7 +2158,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2355,7 +2355,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3293,27 +3293,28 @@
 
 <h1 id="grundlegender-widget-aufbau">Grundlegender Widget-Aufbau<a class="headerlink" href="#grundlegender-widget-aufbau" title="Permanent link">&para;</a></h1>
 <p>Ein eigenes Lua-Widget (siehe <a href="../../displays/custom-widgets/">Eigene Widgets</a>
-zur Installation) wird aus einer kleinen Menge benannter Felder/Handler
-aufgebaut:</p>
+zur Installation) besteht aus einer kleinen Anzahl benannter Felder bzw.
+Handler:</p>
 <ul>
 <li><strong><code>key</code></strong> <em>(String)</em> — ein eindeutiger Bezeichner für das Widget.</li>
 <li><strong><code>name</code></strong> <em>(String oder Funktion)</em> — der Anzeigename des Widgets. Entweder
   ein einfacher String oder eine Funktion ohne Argumente, die einen solchen
-  zurückgibt — nützlich für einen Namen, der je nach Sprache variiert.</li>
-<li><strong><code>create</code></strong> <em>(Funktion)</em> — wird einmalig beim Erstellen des Widgets
-  aufgerufen, ohne Argumente. Gibt eine <strong>Widget-Tabelle</strong> zurück, die dann an
-  jeden der nachfolgenden Handler übergeben wird — initialisieren Sie hier
-  Ihren Zustand und speichern Sie ihn in dieser Tabelle.</li>
-<li><strong><code>configure</code></strong> <em>(Funktion)</em> — wird aufgerufen, wenn der Benutzer den
-  Konfigurationsbildschirm des Widgets öffnet; erhält die Widget-Tabelle aus
-  <code>create()</code> als einziges Argument und gibt nichts zurück. Erstellen Sie hier
-  das Konfigurationsformular und aktualisieren Sie damit die Werte in der
+  zurückgibt — nützlich für einen Namen, der je nach Sprache unterschiedlich
+  ausfällt.</li>
+<li><strong><code>create</code></strong> <em>(Funktion)</em> — wird einmalig beim Erstellen des Widgets ohne
+  Argumente aufgerufen. Gibt eine <strong>Widget-Tabelle</strong> zurück, die anschließend
+  an alle nachfolgenden Handler übergeben wird — initialisieren Sie hier Ihren
+  Zustand und speichern Sie ihn in dieser Tabelle.</li>
+<li><strong><code>configure</code></strong> <em>(Funktion)</em> — wird aufgerufen, wenn der Benutzer die
+  Konfigurationsseite des Widgets öffnet; erhält als einziges Argument die
+  Widget-Tabelle aus <code>create()</code> und gibt nichts zurück. Erstellen Sie hier das
+  Konfigurationsformular und aktualisieren Sie damit die Werte in der
   Widget-Tabelle.</li>
 <li><strong><code>wakeup</code></strong> <em>(Funktion)</em> — wird in jedem Durchlauf aufgerufen (etwa alle
   50 ms), erhält die Widget-Tabelle und gibt nichts zurück. Prüfen Sie hier,
   ob sich etwas geändert hat; falls ja, rufen Sie <code>invalidateWindow()</code> auf, um
   über <code>paint()</code> ein Neuzeichnen auszulösen. Halten Sie diesen Handler schnell
-  — idealerweise tut er in den meisten Aufrufen überhaupt nichts.</li>
+  — im Idealfall tut er bei den meisten Aufrufen überhaupt nichts.</li>
 <li><strong><code>event</code></strong> <em>(Funktion)</em> — wird aufgerufen, wenn das Widget ein Ereignis
   empfängt; Ethos leitet beliebige Ereignisse über diesen Handler an ein
   Widget weiter.</li>
@@ -3325,8 +3326,8 @@ aufgebaut:</p>
   Widget-Speicher.</li>
 <li><strong><code>write</code></strong> <em>(Funktion, optional)</em> — schreibt den dauerhaft gespeicherten
   Widget-Speicher.</li>
-<li><strong><code>init</code></strong> <em>(Funktion)</em> — registriert das Widget und seine Callbacks bei
-  Ethos. Üblicherweise das Letzte im Skript:</li>
+<li><strong><code>init</code></strong> <em>(Funktion)</em> — meldet das Widget und seine Callbacks bei Ethos an.
+  Üblicherweise das Letzte im Skript:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
 <span class="w">  </span><span class="nv">system</span><span class="p">.</span><span class="nf">registerWidget</span><span class="p">({</span>
@@ -3345,8 +3346,8 @@ aufgebaut:</p>
 </code></pre></div>
 <p><code>key</code> muss über alle installierten Widgets hinweg eindeutig sein; die übrigen
 Felder greifen wie oben beschrieben in den Lebenszyklus des Widgets ein.</p>
-<p>Skripte liegen unter <code>scripts/</code> auf der SD card/eMMC, idealerweise in Ordnern
-pro Widget organisiert (siehe <a href="../../system-setup/file-manager/#top-level-folders">Dateimanager</a>
+<p>Skripte liegen unter <code>scripts/</code> auf der SD card bzw. dem eMMC, idealerweise in
+Ordnern pro Widget organisiert (siehe <a href="../../system-setup/file-manager/#top-level-folders">Dateimanager</a>
 und <a href="../example-script-locations/">Beispielhafte Skript-Speicherorte</a>). Weitere
 ausgearbeitete Beispiele finden Sie im Thread <em>FrSky ETHOS Lua Script
 Programming</em> auf rcgroups.</p>
@@ -3405,13 +3406,13 @@ Programming</em> auf rcgroups.</p>
         
         
           
-          <a href="../../tutorials/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Tutorials">
+          <a href="../../tutorials/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Programmier-Beispiele">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Weiter
               </span>
               <div class="md-ellipsis">
-                Tutorials
+                Programmier-Beispiele
               </div>
             </div>
             <div class="md-footer__button md-icon">

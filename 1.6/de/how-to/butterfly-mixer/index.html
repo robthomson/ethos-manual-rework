@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3513,106 +3513,110 @@
 
 
 <h1 id="butterfly-mischer-krokodil">Butterfly-Mischer (Krokodil)<a class="headerlink" href="#butterfly-mischer-krokodil" title="Permanent link">&para;</a></h1>
-<p>Die Butterfly-Bremsstellung (auch Krähenstellung genannt) steuert die
-Sinkgeschwindigkeit, hauptsächlich bei Seglern: Die Querruder fahren
-geringfügig nach oben, während die Wölbklappen weit nach unten
-ausschlagen, wodurch erheblicher Widerstand entsteht — ideal, um den
-Landeanflug zu kontrollieren. Diese Anleitung geht von einem Segler aus,
-dessen Klappenkanäle bereits vorhanden sind (angelegt durch den Assistenten
-der <a href="../../model-setup/model-select/">Modellauswahl</a>), und verwendet den
+<p>Die Butterfly-Bremsstellung (auch „Krähenstellung“ genannt) steuert die
+Sinkgeschwindigkeit, vor allem bei Seglern: Die Querruder fahren ein
+Stück nach oben, während die Wölbklappen weit nach unten ausschlagen.
+Dadurch entsteht ein erheblicher Widerstand — ideal, um den Landeanflug
+zu kontrollieren. Diese Anleitung geht von einem Segler aus, dessen
+Klappenkanäle bereits vorhanden sind (angelegt vom Assistenten unter
+<a href="../../model-setup/model-select/">Modellauswahl</a>), und verwendet den
 Gasknüppel als Bremseingang: kein Butterfly bei Knüppel oben, zunehmend
-mehr, je weiter er nach unten bewegt wird, mit Höhenruderkompensation,
-damit der Segler beim Ausfahren der Krähenstellung nicht aufbäumt.</p>
+mehr, je weiter der Knüppel nach unten bewegt wird, mit einer
+Höhenruderkompensation, damit der Segler beim Ausfahren der
+Krähenstellung nicht aufbäumt.</p>
 <h2 id="1-den-standardmaigen-klappenmischer-deaktivieren">1. Den standardmäßigen Klappenmischer deaktivieren<a class="headerlink" href="#1-den-standardmaigen-klappenmischer-deaktivieren" title="Permanent link">&para;</a></h2>
 <p><img alt="Klappenmischer deaktivieren" src="../../assets/how-to-butterfly-flaps-disable.png" /></p>
-<p>Setzen Sie die <strong>Aktivierungsbedingung</strong> des vom Assistenten erstellten
-Klappenmischers auf <code>---</code> — er wird nicht verwendet.</p>
+<p>Setzen Sie beim vom Assistenten erstellten Klappenmischer das Feld
+<strong>aktiviert</strong> auf <code>---</code> — er wird nicht verwendet.</p>
 <h2 id="2-den-butterfly-mischer-anlegen">2. Den Butterfly-Mischer anlegen<a class="headerlink" href="#2-den-butterfly-mischer-anlegen" title="Permanent link">&para;</a></h2>
 <p><img alt="Butterfly-Mischer hinzugefügt" src="../../assets/how-to-butterfly-mix-added.png" /></p>
-<p>Tippen Sie auf einen beliebigen Mischer, <strong>Mischer hinzufügen</strong> →
-<strong>Butterfly</strong> aus der
-<a href="../../model-setup/mixes/#mix-libraries">Mischerbibliothek</a>, platziert nach
-dem (nun deaktivierten) Klappenmischer.</p>
+<p>Tippen Sie auf eine beliebige Mischerzeile und wählen Sie <strong>Mischer
+hinzufügen</strong> → <strong>Butterfly</strong> aus der
+<a href="../../model-setup/mixes/#mix-libraries">Mischerbibliothek</a>. Der Mischer
+wird nach dem (nun deaktivierten) Klappenmischer eingefügt.</p>
 <h2 id="3-den-eingang-konfigurieren">3. Den Eingang konfigurieren<a class="headerlink" href="#3-den-eingang-konfigurieren" title="Permanent link">&para;</a></h2>
 <p><img alt="Gas als Eingang" src="../../assets/how-to-butterfly-mix-source-thr.png" /></p>
-<p>Setzen Sie <strong>Eingang</strong> auf <strong>Gas</strong>. Da Gas bei Knüppel oben normalerweise
-den Maximalwert liefert, Butterfly bei Knüppel oben aber 0 sein muss,
-drücken Sie lange <code>ENT</code> auf Gas und wählen Sie <strong>Invertieren</strong>:</p>
+<p>Setzen Sie <strong>Eingang</strong> auf <strong>Gas</strong>. Da Gas bei Knüppel oben
+normalerweise den Maximalwert liefert, Butterfly bei Knüppel oben aber 0
+sein muss, drücken Sie lange die <code>ENT</code>-Taste auf Gas und wählen Sie
+<strong>Invertieren</strong>:</p>
 <p><img alt="Gas invertieren" src="../../assets/how-to-butterfly-mix-source-thr-neg-select.png" />
 <img alt="Invertiertes Gas" src="../../assets/how-to-butterfly-mix-source-thr-neg.png" /></p>
-<p>Der Eingang liefert nun 0 bei ganz nach oben gestelltem Knüppel, und das
-Feld zeigt <code>-Throttle</code> zur Bestätigung der Invertierung. Setzen Sie die
-<strong>Aktivierungsbedingung</strong> auf eine Lande-Flugphase (oder einen anderen
+<p>Der Eingang liefert nun 0, wenn der Knüppel ganz oben steht, und das Feld
+zeigt zur Bestätigung der Invertierung <code>-Throttle</code> an. Setzen Sie das
+Feld <strong>aktiviert</strong> auf eine Lande-Flugphase (oder einen anderen
 Schalter), falls Butterfly nicht immer verfügbar sein soll.</p>
 <h2 id="4-eine-kurve-mit-totzone-hinzufugen">4. Eine Kurve mit Totzone hinzufügen<a class="headerlink" href="#4-eine-kurve-mit-totzone-hinzufugen" title="Permanent link">&para;</a></h2>
 <p><img alt="Kurvenauswahl" src="../../assets/how-to-butterfly-mix-curve-select.png" /></p>
 <p>Eine kleine Totzone am Nullende des Knüppels verhindert ein
-versehentliches Ausfahren durch geringfügige Knüppelbewegungen nahe dem
+versehentliches Ausfahren durch geringe Knüppelbewegungen nahe dem
 Endanschlag. Fügen Sie eine benutzerdefinierte 3-Punkt-Kurve hinzu (z. B.
-mit dem Namen „Crowdb“) und schalten Sie den <strong>Einfachen Modus</strong> aus,
+mit dem Namen „Crowdb“) und schalten Sie den <strong>einfachen Modus</strong> aus,
 damit die X-Punkte verschoben werden können:</p>
 <p><img alt="3-Punkt-Kurve" src="../../assets/how-to-butterfly-mix-curve-3pt.png" />
 <img alt="Kurvenpunkte" src="../../assets/how-to-butterfly-mix-curve-3pt-points.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Das Hinzufügen einer benutzerdefinierten Kurve zum Butterfly-Mischer
-hebt dessen internen 0–100-Offset auf (der normalerweise automatisch
-angewendet wird) — die Kurve selbst muss diese 0–100-Transformation
-nun nachbilden. In diesem Beispiel bleibt der Ausgang bei 0 %, bis der
-Gasknüppel −90 % erreicht, und steigt dann linear auf 100 %:</p>
+<p>Wenn Sie dem Butterfly-Mischer eine eigene Kurve hinzufügen, entfällt
+dessen interner 0–100-Offset (der sonst automatisch angewendet wird)
+— die Kurve selbst muss diese 0–100-Umrechnung nun nachbilden. In
+diesem Beispiel bleibt der Ausgang bei 0 %, bis der Gasknüppel −90 %
+erreicht, und steigt dann linear auf 100 % an:</p>
 <p><img alt="Kurve hinzugefügt" src="../../assets/how-to-butterfly-mix-curve-added.png" /></p>
 </div>
 <h2 id="5-querruder-und-wolbklappen-konfigurieren">5. Querruder und Wölbklappen konfigurieren<a class="headerlink" href="#5-querruder-und-wolbklappen-konfigurieren" title="Permanent link">&para;</a></h2>
 <p><img alt="Querruderausgang" src="../../assets/how-to-butterfly-mix-ailerons.png" /></p>
-<p>Ein moderater Querruderausschlag nach oben (z. B. 20 %) in Kombination mit
-einem großen Klappenausschlag ist die übliche Aufteilung. Wölbklappen
-benötigen typischerweise weit mehr Weg nach unten als nach oben — dies
-wird üblicherweise dadurch erreicht, dass die Servohebel der Klappen in
-der Anlenkung selbst um 20–30° aus der Neutralstellung versetzt werden,
-wodurch die Klappen bei Servo-Neutralstellung etwa halb nach unten stehen:</p>
+<p>Üblich ist ein geringer Querruderausschlag nach oben (z. B. 20 %) in
+Verbindung mit einem großen Klappenausschlag. Wölbklappen benötigen in
+der Regel deutlich mehr Weg nach unten als nach oben — das erreicht man
+meistens dadurch, dass die Servohebel der Klappen in der Anlenkung selbst
+um 20–30° aus der Neutralstellung versetzt werden, wodurch die Klappen
+bei Servo-Neutralstellung etwa halb nach unten stehen:</p>
 <p><img alt="Klappen oben" src="../../assets/how-to-butterfly-mix-flaps-up.png" />
 <img alt="Klappen unten" src="../../assets/how-to-butterfly-mix-flaps-down.png" /></p>
-<p>Setzen Sie die Gewichtung des Klappenmischers hoch (z. B. −180 %) für
-maximalen Weg; der tatsächliche mechanische Weg wird über Min/Max in den
-<a href="../../model-setup/outputs/">Ausgängen</a> bestimmt.</p>
+<p>Stellen Sie die Gewichtung des Klappenmischers hoch ein (z. B. −180 %),
+um den maximalen Weg zu erhalten; der tatsächliche mechanische Weg wird
+über die Min/Max-Werte in den
+<a href="../../model-setup/outputs/">Ausgängen</a> festgelegt.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Um ein Überfahren der Servos zu vermeiden, beginnen Sie bei Min/Max
-der Ausgänge konservativ (z. B. ±30 %) und erweitern Sie die Werte
-beim finalen Einstellen vorsichtig, wobei Sie auf Klemmen achten.</p>
+<p>Um ein Übersteuern der Servos zu vermeiden, beginnen Sie bei den
+Min/Max-Werten der Ausgänge zurückhaltend (z. B. ±30 %) und
+erweitern Sie sie beim endgültigen Einstellen vorsichtig, wobei Sie
+auf mechanische Blockierungen achten.</p>
 </div>
 <h2 id="6-einen-offset-mischer-klappen-neutral-hinzufugen">6. Einen Offset-Mischer „Klappen Neutral“ hinzufügen<a class="headerlink" href="#6-einen-offset-mischer-klappen-neutral-hinzufugen" title="Permanent link">&para;</a></h2>
 <p><img alt="Offset-Mischer mit 80 %" src="../../assets/how-to-butterfly-offset-mix-80.png" /></p>
-<p>Da die versetzten Servohebel die Klappen bei Servo-Neutralstellung um etwa
-20–30 % ausgelenkt lassen, bringt ein <strong>Offset-Mischer</strong> sie für den
-normalen Flug wieder in die tatsächliche Flügel-Neutralstellung. Beginnen
-Sie mit einem Offset von 80 % (der noch abgestimmt wird) und zwei
-Ausgangskanälen, die beiden Klappenkanälen zugeordnet sind:</p>
+<p>Da die versetzten Servohebel die Klappen bei Servo-Neutralstellung um
+etwa 20–30 % ausgelenkt lassen, bringt ein <strong>Offset-Mischer</strong> sie für den
+normalen Flug wieder in die tatsächliche Neutralstellung des Flügels.
+Beginnen Sie mit einem Offset von 80 % (der noch abgestimmt wird) und
+zwei Ausgangskanälen, die den beiden Klappenkanälen zugeordnet sind:</p>
 <p><img alt="Klappen oben mit Offset" src="../../assets/how-to-butterfly-offset-mix-flaps-up.png" />
 <img alt="Klappen unten mit Offset" src="../../assets/how-to-butterfly-offset-mix-flaps-down.png" /></p>
 <p>Prüfen Sie bei ganz nach oben gestelltem Gasknüppel (Butterfly-Mischer
-inaktiv), dass die Werte des Klappenmischers auf dem Offset (80 %) liegen;
-das Bewegen des Klappenknüppels bis zum vollen Ausschlag sollte den
-Mischerausgang um die gesamte Gewichtung verändern (z. B. von 80 % auf
-−100 %, also 180 % Hub). Die tatsächlichen Wegbegrenzungen werden in den
-Ausgängen über Min/Max oder eine Kurve feinabgestimmt.</p>
+inaktiv), dass die Werte des Klappenmischers auf dem Offset (80 %)
+liegen; wenn Sie den Klappenknüppel bis zum vollen Ausschlag bewegen,
+sollte sich der Mischerausgang um die gesamte Gewichtung ändern (z. B.
+von 80 % auf −100 %, also 180 % Hub). Die tatsächlichen Wegbegrenzungen
+stimmen Sie in den Ausgängen über Min/Max oder eine Kurve fein ab.</p>
 <h2 id="7-add-the-elevator-compensation-curve-and-mix">7. Kompensationskurve und Mischer für das Höhenruder hinzufügen<a class="headerlink" href="#7-add-the-elevator-compensation-curve-and-mix" title="Permanent link">&para;</a></h2>
 <p><img alt="Kompensationskurve" src="../../assets/how-to-butterfly-comp-curve.png" />
 <img alt="Punkte der Kompensationskurve" src="../../assets/how-to-butterfly-comp-curve-points.png" /></p>
 <p>Da die erforderliche Kompensation nicht linear ist, verwenden Sie eine
-Kurve anstelle einer festen Gewichtung. Definieren Sie eine
-benutzerdefinierte 5-Punkt-Kurve (z. B. „EleComp“) — dieses Beispiel
+Kurve anstelle einer festen Gewichtung. Legen Sie eine
+benutzerdefinierte 5-Punkt-Kurve an (z. B. „EleComp“) — dieses Beispiel
 beginnt mit 12 %/10 %/8 %/5 %/0 % über die Punkte hinweg; ohne bekannten
-Ausgangswert für Ihre Zelle müssen diese empirisch ermittelt werden.</p>
+Ausgangswert für Ihr Modell müssen diese Werte im Flug ermittelt werden.</p>
 <p>Wandeln Sie diese Kurve anschließend in einen Wert um, der als
 <strong>Gewichtung</strong> eines Mischers nutzbar ist: Fügen Sie einen
 <a href="../../model-setup/mixes/#mix-libraries">Freien Mischer</a> („EleCompx“) mit
-Gas als Quelle und der angehängten EleComp-Kurve hinzu, mit Ausgang auf
-einen hohen, ungenutzten Kanal (z. B. CH20):</p>
+Gas als Quelle und der zugewiesenen EleComp-Kurve hinzu und legen Sie den
+Ausgang auf einen hohen, ungenutzten Kanal (z. B. CH20):</p>
 <p><img alt="Kompensationsmischer auf CH20" src="../../assets/how-to-butterfly-comp-mix-ch20.png" /></p>
-<p>Drücken Sie zurück im Butterfly-Mischer lange <code>ENT</code> auf der
-<strong>Gewichtung</strong> des Höhenruderausgangs, wählen Sie <strong>Quelle verwenden</strong> und
-anschließend CH20 (EleCompx) aus der Kategorie „Kanäle“:</p>
+<p>Drücken Sie zurück im Butterfly-Mischer lange die <code>ENT</code>-Taste auf der
+<strong>Gewichtung</strong> des Höhenruderausgangs, wählen Sie <strong>Quelle verwenden</strong>
+und anschließend CH20 (EleCompx) aus der Kategorie „Kanäle“:</p>
 <p><img alt="Höhenruder verwendet CH20 als Quelle" src="../../assets/how-to-butterfly-mix-ele-use-ch20.png" />
 <img alt="Quelle auswählen" src="../../assets/how-to-butterfly-mix-ele-use-source.png" /></p>
 <p>Der Butterfly-Mischer ist nun vollständig konfiguriert:</p>
@@ -3622,17 +3626,17 @@ anschließend CH20 (EleCompx) aus der Kategorie „Kanäle“:</p>
 <p>Wechseln Sie beim Höhenruder zur
 <a href="../../model-setup/mixes/#per-channel-view">Ansicht nach Kanal</a>, um zu
 beobachten, wie sich alle beteiligten Mischer (Knüppeleingabe +
-Butterfly-Kompensation) gemeinsam aktualisieren, während der Gas-/Brems­knüppel
-bewegt wird — deutlich einfacher zur Fehlersuche als die flache
-Tabellenansicht.</p>
+Butterfly-Kompensation) gemeinsam ändern, während Sie den Gas- bzw.
+Bremsknüppel bewegen — das ist zur Fehlersuche deutlich übersichtlicher
+als die einfache Tabellenansicht.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Daten zum erforderlichen Höhenruderweg im Verhältnis zum
-Klappenausschlag (vom Hersteller der Zelle oder aus
-Community-Quellen) sind vor dem Einstellen der Startwerte der
-Kompensationskurve sehr hilfreich. Fehlen diese, beginnen Sie mit
+<p>Angaben zum erforderlichen Höhenruderweg im Verhältnis zum
+Klappenausschlag (vom Hersteller des Modells oder aus
+Community-Quellen) sind sehr hilfreich, bevor Sie die Startwerte der
+Kompensationskurve festlegen. Fehlen solche Angaben, beginnen Sie mit
 wenigen Millimetern Höhenruderweg bei voll ausgefahrenen Klappen und
-verfeinern Sie von dort aus.</p>
+verfeinern Sie die Werte von dort aus.</p>
 </div>
 
 

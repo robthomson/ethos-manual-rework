@@ -819,10 +819,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fehlerwarnung" class="md-nav__link">
+  <a href="#fehlermeldung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fehlerwarnung
+        Fehlermeldung
       
     </span>
   </a>
@@ -846,10 +846,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#der-widget-bereich" class="md-nav__link">
+  <a href="#der-widgets-bereich" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Der Widget-Bereich
+        Der Widgets-Bereich
       
     </span>
   </a>
@@ -2256,7 +2256,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2453,7 +2453,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3396,10 +3396,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fehlerwarnung" class="md-nav__link">
+  <a href="#fehlermeldung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fehlerwarnung
+        Fehlermeldung
       
     </span>
   </a>
@@ -3423,10 +3423,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#der-widget-bereich" class="md-nav__link">
+  <a href="#der-widgets-bereich" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Der Widget-Bereich
+        Der Widgets-Bereich
       
     </span>
   </a>
@@ -3461,49 +3461,53 @@
 <h1 id="hauptansichten">Hauptansichten<a class="headerlink" href="#hauptansichten" title="Permanent link">&para;</a></h1>
 <h2 id="startbildschirm">Startbildschirm<a class="headerlink" href="#startbildschirm" title="Permanent link">&para;</a></h2>
 <p><img alt="Startbildschirm" src="../../assets/mainview.png" /></p>
-<p>Der Startbildschirm ist das, was Sie sehen, wenn kein Menü geöffnet ist — ein Stapel
-von bis zu <strong>acht</strong> Anzeigebildschirmen, die Sie selbst konfigurieren (siehe
-<a href="../../displays/">Anzeigen</a>) und zwischen denen Sie mit der Taste <code>PAGE</code>
-oder per Wischgeste blättern. Ein neu angelegtes Modell beginnt mit nur einem
-Bildschirm, der ein Modellbild, drei Timer-Widgets sowie die Trimmungs- und
-Potentiometeranzeigen zeigt; alles darauf ist von dort aus frei konfigurierbar.</p>
-<p>Bildschirme verwenden normalerweise die unten beschriebene obere und untere
-Leiste gemeinsam, ein Bildschirm kann jedoch auch auf Vollbild gesetzt werden,
+<p>Der Startbildschirm ist das, was Sie sehen, solange kein Menü geöffnet ist — ein
+Stapel von bis zu <strong>acht</strong> Hauptansichten, die Sie selbst konfigurieren können
+(siehe <a href="../../displays/">Bildschirme konfigurieren</a>) und zwischen denen Sie
+mit der Taste <code>PAGE</code> oder mit einer Touch-Wisch-Geste blättern. Ein neu
+angelegtes Modell beginnt mit nur einer Ansicht, die ein Modellbild, drei
+Stoppuhr-Widgets sowie die Anzeige der Trimmungen und Potis enthält; alles darauf
+kann vom Benutzer frei konfiguriert werden.</p>
+<p>Die Hauptansichten teilen sich normalerweise die nachfolgend beschriebene obere
+und untere Leiste, eine Ansicht kann jedoch auch auf Vollbild gesetzt werden,
 wodurch beide ausgeblendet werden.</p>
 <h2 id="die-obere-leiste">Die obere Leiste<a class="headerlink" href="#die-obere-leiste" title="Permanent link">&para;</a></h2>
-<p>Die obere Leiste zeigt links den Modellnamen (sowie die aktive Flugphase, sofern
-eine konfiguriert ist) und rechts eine Reihe von Statussymbolen:</p>
+<p>In der oberen Leiste wird links der Name des Modells angezeigt (sowie der aktive
+Flugmodus, sofern konfiguriert), auf der rechten Seite befindet sich eine Reihe
+von Statussymbolen:</p>
 <ul>
-<li>Datenaufzeichnung aktiv</li>
-<li>Trainer-Status (Master oder Slave, je nach Fall)</li>
-<li>RSSI — 2,4-GHz-Verbindung</li>
-<li>RSSI — 900-MHz-Verbindung (sofern ein Dualband-/Long-Range-Modul eingebaut ist)</li>
-<li>Lautstärke</li>
-<li>Akkustatus des Senders</li>
+<li>ob die Datenaufzeichnung aktiv ist</li>
+<li>Trainersymbol für Master oder Slave</li>
+<li>RSSI 2.4G</li>
+<li>RSSI 900M (sofern ein Dualband-/Long-Range-Modul eingebaut ist)</li>
+<li>Lautstärke des Lautsprechers</li>
+<li>Batteriezustand des Senders</li>
 </ul>
-<p>Durch Berühren des Lautsprecher- oder Akkusymbols gelangen Sie direkt zum
-zugehörigen Einstellungsbereich <a href="../../system-setup/general/">Allgemein</a> (Audio)
-bzw. <a href="../../system-setup/battery/">Akku</a>.</p>
-<h3 id="fehlerwarnung">Fehlerwarnung<a class="headerlink" href="#fehlerwarnung" title="Permanent link">&para;</a></h3>
-<p>Ein rotes Dreieck erscheint in der oberen Leiste, sobald Ethos einen Fehler
-erkennt — ein Lua-Skriptfehler, ein RAM-Backup-Fehler oder der Betrieb einer
-Nightly-/instabilen Firmware-Version sind die häufigsten Ursachen. Die Details
-zu der Warnung finden Sie stets unter <strong>System → Info</strong>, auf derselben Seite wie
-die Betriebszeit des Senders und die
+<p>Wenn Sie die Lautsprecher- oder Batteriesymbole berühren, werden direkt die
+entsprechenden Bedienfelder <a href="../../system-setup/general/">Allgemein</a> (Audio usw.)
+bzw. <a href="../../system-setup/battery/">Batterie</a> angezeigt.</p>
+<h3 id="fehlermeldung">Fehlermeldung<a class="headerlink" href="#fehlermeldung" title="Permanent link">&para;</a></h3>
+<p>Wenn Ethos einen Fehler feststellt, wird in der oberen Leiste ein rotes Dreieck
+als Fehlerwarnung angezeigt — häufige Ursachen sind ein Lua-Skript-Fehler, ein
+RAM-Backup-Fehler oder das Ausführen einer nächtlichen Firmware-Version
+(Nightlies). Die Einzelheiten zu der Warnung finden Sie stets unter
+<strong>System → Info</strong>, auf derselben Seite wie die Laufzeit des Senders und die
 <a href="../../system-setup/information/">Fehlerprotokolle</a>.</p>
 <h2 id="die-untere-leiste">Die untere Leiste<a class="headerlink" href="#die-untere-leiste" title="Permanent link">&para;</a></h2>
 <p><img alt="Untere Leiste" src="../../assets/bottombar.png" /></p>
-<p>Am unteren Rand befinden sich vier Reiter für die obersten Bereiche — <strong>Start</strong>,
-<strong>Modellkonfiguration</strong>, <strong>Bildschirme konfigurieren</strong>, <strong>Systemeinstellungen</strong> —
-sowie rechts die Systemuhr (Berühren führt direkt zu
+<p>Die untere Leiste hat vier Registerkarten für den Zugriff auf die Funktionen der
+obersten Ebene — <strong>Hauptansicht</strong>, <strong>Model Setup</strong>, <strong>Einstellung Ansichten</strong>,
+<strong>System Setup</strong> — die Systemzeit wird auf der rechten Seite angezeigt (wenn Sie
+die Uhrzeit berühren, gelangen Sie direkt zu
 <a href="../../system-setup/date-and-time/">Datum &amp; Uhrzeit</a>).</p>
-<h2 id="der-widget-bereich">Der Widget-Bereich<a class="headerlink" href="#der-widget-bereich" title="Permanent link">&para;</a></h2>
-<p>Die Mitte jedes Bildschirms wird von <strong>Widgets</strong> ausgefüllt: Modellbild, Timer,
-Telemetrieanzeigen, Trimmungs- und Potentiometerbalken und mehr, alle von Ihnen
-platziert und konfiguriert. Unter <a href="../../displays/">Anzeigen</a> erfahren Sie,
-wie Sie Widgets hinzufügen, verschieben und konfigurieren, und unter
-<a href="../../displays/additional-displays/">Zusätzliche Anzeigen</a>, wie Sie mehr als den
-standardmäßig vorhandenen einzelnen Bildschirm anlegen.</p>
+<h2 id="der-widgets-bereich">Der Widgets-Bereich<a class="headerlink" href="#der-widgets-bereich" title="Permanent link">&para;</a></h2>
+<p>Der mittlere Bereich jeder Ansicht besteht aus <strong>Widgets</strong>: Modellbild,
+Stoppuhren, Telemetrieanzeigen, Trimm- und Poti-Balken und mehr, alle von Ihnen
+platziert und konfiguriert. Unter
+<a href="../../displays/">Bildschirme konfigurieren</a> erfahren Sie, wie Sie Widgets
+hinzufügen, verschieben und konfigurieren, und unter
+<a href="../../displays/additional-displays/">Hinzufügen von weiteren Bildschirmen</a>, wie
+Sie mehr als die standardmäßig vorhandene einzelne Ansicht anlegen.</p>
 
 
 

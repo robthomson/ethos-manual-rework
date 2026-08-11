@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3448,7 +3448,7 @@
 
 <h1 id="sofortige-steuerubernahme-fur-die-trainer-funktion">Sofortige Steuerübernahme für die Trainer-Funktion<a class="headerlink" href="#sofortige-steuerubernahme-fur-die-trainer-funktion" title="Permanent link">&para;</a></h1>
 <p>Eine nützliche Erweiterung der <a href="../../model-setup/trainer/">Trainer</a>-Funktion:
-Statt allein über einen Schalter kann der Lehrer die Kontrolle sofort
+Statt nur über einen Schalter kann der Lehrer die Kontrolle sofort
 zurückholen, indem er einfach den Querruder- oder Höhenruderknüppel
 bewegt — er muss im Problemfall nicht erst den Trainer-Schalter suchen.</p>
 <p>Der Trainer-Schalter startet die Sitzung nach wie vor; die Trainer-Funktion
@@ -3457,31 +3457,32 @@ gesteuert, der entweder durch Ausschalten des Schalters <strong>oder</strong> du
 Erkennen einer Knüppelbewegung des Lehrers beendet wird.</p>
 <p><img alt="Trainer aktiv" src="../../assets/trainer-take-back-trainer-active.png" /></p>
 <h2 id="1-logischer-schalter-zur-querruder-erkennung">1. Logischer Schalter zur Querruder-Erkennung<a class="headerlink" href="#1-logischer-schalter-zur-querruder-erkennung" title="Permanent link">&para;</a></h2>
-<p><img alt="Querruder-Eingabeerkennung" src="../../assets/trainer-take-back-ailinput.png" /></p>
-<p>Ein logischer Schalter mit <strong>|A| &gt; X</strong> auf dem Querruderknüppel, wahr,
-sobald dieser um mehr als 10 % aus der Mittelstellung in eine der beiden
-Richtungen bewegt wird. Drücken Sie lange auf die Querruder-Quelle und
-wählen Sie <strong>Trainer-Eingang ignorieren</strong>, damit die Querruderbewegung des
-<em>Schülers</em> (die über die Trainer-Verbindung eintrifft) den Schalter nicht
-ebenfalls auslöst:</p>
+<p><img alt="Querruder-Eingangserkennung" src="../../assets/trainer-take-back-ailinput.png" /></p>
+<p>Ein logischer Schalter mit der Funktion <strong>|A| &gt; X</strong> auf dem
+Querruderknüppel, der WAHR/aktiv wird, sobald dieser um mehr als 10 % aus
+der Mittelstellung in eine der beiden Richtungen bewegt wird. Drücken Sie
+lange auf die Quelle „Querruder“ und wählen Sie <strong>Trainer-Eingang
+ignorieren</strong>, damit die Querruderbewegung des <em>Schülers</em> (die über die
+Trainer-Verbindung eintrifft) den Schalter nicht ebenfalls auslöst:</p>
 <p><img alt="Trainer-Eingang ignorieren" src="../../assets/trainer-take-back-ailinput-ignore.png" /></p>
 <h2 id="2-logischer-schalter-zur-hohenruder-erkennung">2. Logischer Schalter zur Höhenruder-Erkennung<a class="headerlink" href="#2-logischer-schalter-zur-hohenruder-erkennung" title="Permanent link">&para;</a></h2>
-<p><img alt="Höhenruder-Eingabeerkennung" src="../../assets/trainer-take-back-eleinput.png" /></p>
+<p><img alt="Höhenruder-Eingangserkennung" src="../../assets/trainer-take-back-eleinput.png" /></p>
 <p>Dasselbe Schema, angewendet auf den Höhenruderknüppel.</p>
 <h2 id="3-logischer-schalter-zum-abbrechen">3. Logischer Schalter zum Abbrechen<a class="headerlink" href="#3-logischer-schalter-zum-abbrechen" title="Permanent link">&para;</a></h2>
-<p>Ein <strong>OR</strong>-Logikschalter, der wahr ist, wenn entweder der Querruder- oder
-der Höhenruder-Erkennungsschalter wahr ist <strong>oder</strong> der Trainer-Schalter
-(z. B. SD) nicht unten steht — d. h. sowohl „Lehrer hat einen Knüppel
-bewegt“ als auch „Trainer-Schalter ausgeschaltet“ beendet die Sitzung.</p>
+<p>Ein logischer Schalter mit <strong>OR</strong>, der WAHR/aktiv wird, wenn entweder der
+Querruder- oder der Höhenruder-Erkennungsschalter aktiv ist <strong>oder</strong> der
+Trainer-Schalter (z. B. SD) nicht unten steht — d. h. sowohl „Lehrer hat
+einen Knüppel bewegt“ als auch „Trainer-Schalter ausgeschaltet“ beendet die
+Sitzung.</p>
 <h2 id="4-sticky-logikschalter-zur-trainer-freigabe">4. Sticky-Logikschalter zur Trainer-Freigabe<a class="headerlink" href="#4-sticky-logikschalter-zur-trainer-freigabe" title="Permanent link">&para;</a></h2>
 <p><img alt="Trainer deaktivieren" src="../../assets/trainer-take-back-disable-trainer.png" /></p>
 <p>Ein <strong>Sticky</strong>-Logikschalter: <strong>Trigger ON</strong> ist der Trainer-Schalter (SD
 unten), <strong>Trigger OFF</strong> ist der Abbruch-Schalter aus Schritt 3. Verwenden
 Sie diesen Sticky-Schalter — nennen Sie ihn <code>TrainerActive</code> — anstelle des
-reinen Schalters als Aktivierungsbedingung der Trainer-Funktion.</p>
+reinen Schalters als Bedingung „aktiviert“ der Trainer-Funktion.</p>
 <h2 id="5-akustische-ruckmeldung">5. Akustische Rückmeldung<a class="headerlink" href="#5-akustische-ruckmeldung" title="Permanent link">&para;</a></h2>
-<p>Fügen Sie <a href="../../model-setup/special-functions/">Sonderfunktionen „Play Audio“</a>
-hinzu, die ansagen, wenn <code>TrainerActive</code> wahr wird und wenn der Zustand
+<p>Fügen Sie <a href="../../model-setup/special-functions/">Spezialfunktionen „AUDIO abspielen“</a>
+hinzu, die ansagen, wenn <code>TrainerActive</code> WAHR wird und wenn der Zustand
 wieder aufgehoben wird. So erhalten beide Piloten einen eindeutigen
 akustischen Hinweis darauf, wann genau die Kontrolle wechselt.</p>
 

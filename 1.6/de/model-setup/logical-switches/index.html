@@ -2278,7 +2278,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2475,7 +2475,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3504,175 +3504,190 @@
 
 <h1 id="logische-schalter">Logische Schalter<a class="headerlink" href="#logische-schalter" title="Permanent link">&para;</a></h1>
 <p><img alt="Menü der logischen Schalter" src="../../assets/model-lsw-menu.png" /></p>
-<p>Logische Schalter sind benutzerprogrammierte <em>virtuelle</em> Schalter — keine
-physischen Bedienelemente, aber überall dort einsetzbar, wo auch ein
-physischer Schalter als Auslöser für eine Funktion verwendet werden kann.
-Jeder logische Schalter wertet die konfigurierte Bedingung anhand seiner
-Eingänge aus (andere Schalter, Telemetriewerte, Mischerwerte, Timer-Werte,
-Gyro-/Trainerkanäle und weitere) und wird dadurch Wahr oder Falsch. Bis zu
-100 werden unterstützt; standardmäßig existiert keiner. Mit <strong>+</strong> fügen Sie
-einen hinzu; die Menübezeichnung eines definierten Schalters wird grün
-dargestellt, wenn er Wahr ist, und rot, wenn er Falsch ist. Tippen Sie einen
-vorhandenen Schalter an für <strong>Bearbeiten</strong>/<strong>Verschieben</strong>/<strong>Kopieren-Einfügen</strong>/<strong>Duplizieren</strong>/<strong>Löschen</strong>.</p>
+<p>Logische Schalter sind vom Benutzer programmierte <em>virtuelle</em> Schalter —
+keine physischen Bedienelemente, die Sie umlegen können, aber sie können
+wie jeder physische Schalter als Programmauslöser verwendet werden. Jeder
+logische Schalter vergleicht die programmierte Bedingung mit seinen
+Eingängen (andere Schalter, Telemetriewerte, Mischwerte, Timerwerte,
+Kreisel- und Trainerkanäle und weitere) und wird dadurch WAHR oder FALSCH.
+Es werden bis zu 100 logische Schalter unterstützt; es gibt keine
+Standard-Logikschalter. Mit <strong>+</strong> fügen Sie einen hinzu; die Beschriftung
+eines definierten Schalters in der Menüüberschrift ist grün, wenn sein
+Zustand WAHR ist, und rot, wenn er FALSCH ist. Durch Antippen eines
+vorhandenen Schalters erscheint ein Popup-Menü mit
+<strong>bearbeiten</strong>/<strong>verschieben</strong>/<strong>kopieren-einfügen</strong>/<strong>klonen</strong>/<strong>löschen</strong>.</p>
 <p><img alt="Logischen Schalter hinzufügen" src="../../assets/model-lsw-add.png" /></p>
 <h2 id="funktion">Funktion<a class="headerlink" href="#funktion" title="Permanent link">&para;</a></h2>
-<p>Jede Funktion unterstützt einen normalen oder invertierten Ausgang.</p>
+<p>Alle Funktionen können normale oder invertierte Ausgänge haben.</p>
 <ul>
-<li><strong>A ~ X</strong> — wahr, wenn die Quelle <code>A</code> <em>näherungsweise</em> (innerhalb von
-  ca. 10 %) einem festen Wert <code>X</code> entspricht. Grundsätzlich der exakten
-  Gleichheit vorzuziehen —</li>
+<li><strong>A ~ X</strong> — WAHR, wenn der Wert der ausgewählten Quelle <code>A</code> <em>ungefähr</em>
+  gleich (innerhalb von etwa 10 %) mit <code>X</code>, einem benutzerdefinierten Wert,
+  ist. In den meisten Fällen ist es besser, die Funktion „Ungefähr gleich“
+  zu verwenden als die Funktion „Genau gleich“ —</li>
 </ul>
 <p><img alt="A ~ X" src="../../assets/model-lsw-A~X.png" /></p>
-<p>— denn bei <code>A = X</code> kann ein Telemetriewert, der etwa zwischen 8,5 V und
-  8,35 V um einen Zielwert von 8,4 V schwankt, schlicht nie exakt 8,4 V
-  erreichen, sodass der Schalter niemals auslösen würde.
-- <strong>A = X</strong> — wahr nur dann, wenn <code>A</code> exakt <code>X</code> entspricht.
-- <strong>A &gt; X</strong> / <strong>A &lt; X</strong> — wahr, wenn <code>A</code> größer/kleiner als <code>X</code> ist.
-- <strong>|A| &gt; X</strong> / <strong>|A| &lt; X</strong> — wie oben, jedoch wird der Absolutwert von
-  <code>A</code> verglichen (Vorzeichen wird ignoriert).
-- <strong>Δ &gt; X</strong> — wahr, wenn die Änderung von <code>A</code> (Delta) über das
-  <strong>Prüfintervall</strong> mindestens <code>X</code> erreicht. Ein Intervall von <code>---</code>
-  bedeutet ein unendliches Zeitfenster.</p>
+<p>— denn bei <code>A = X</code> kann der tatsächliche Telemetriewert um einen Zielwert
+  von 8,4 V herum etwa von 8,5 V auf 8,35 V springen, so dass er nie genau
+  8,4 V erreicht, die Bedingung nie erfüllt ist und der logische Schalter
+  nie einschaltet.
+- <strong>A = X</strong> — WAHR nur dann, wenn der Wert von <code>A</code> 'genau' gleich <code>X</code> ist.
+- <strong>A &gt; X</strong> / <strong>A &lt; X</strong> — WAHR, wenn <code>A</code> größer bzw. kleiner ist als <code>X</code>.
+- <strong>|A| &gt; X</strong> / <strong>|A| &lt; X</strong> — wie oben, jedoch wird der absolute Wert von
+  <code>A</code> verglichen (absolut bedeutet, dass nicht berücksichtigt wird, ob <code>A</code>
+  positiv oder negativ ist).
+- <strong>Δ &gt; X</strong> — WAHR, wenn die Änderung des Wertes (Delta) der Quelle <code>A</code>
+  innerhalb des <strong>Prüfintervalls</strong> mindestens <code>X</code> erreicht. Wird das
+  Prüfintervall auf <code>---</code> gesetzt, so wird das Prüfintervall unendlich.</p>
 <p><img alt="Delta größer als X" src="../../assets/model-lsw-delta-gtX.png" />
   <img alt="Absolutes Delta größer als X" src="../../assets/model-lsw-delta-AgtX.png" /></p>
 <ul>
-<li><strong>|Δ| &gt; X</strong> — wie oben, jedoch mit dem Absolutwert der Änderung.</li>
-<li><strong>Range</strong> — wahr, wenn <code>A</code> innerhalb eines angegebenen Bereichs liegt.</li>
+<li><strong>|Δ| &gt; X</strong> — wie oben, jedoch mit dem absoluten Wert der Änderung.</li>
+<li><strong>Bereich</strong> — WAHR, wenn der Wert der Quelle <code>A</code> innerhalb des
+  angegebenen Bereichs liegt.</li>
 </ul>
-<p><img alt="Range" src="../../assets/model-lsw-range.png" /></p>
+<p><img alt="Bereich" src="../../assets/model-lsw-range.png" /></p>
 <ul>
-<li><strong>AND</strong> — wahr nur dann, wenn jede aufgeführte Quelle (Wert 1…N) wahr ist.</li>
+<li><strong>UND</strong> — WAHR nur dann, wenn alle aufgeführten Quellen (Wert 1 … Wert(n))
+  WAHR sind.</li>
 </ul>
-<p><img alt="AND" src="../../assets/model-lsw-AND.png" /></p>
+<p><img alt="UND" src="../../assets/model-lsw-AND.png" /></p>
 <ul>
-<li><strong>OR</strong> — wahr, wenn mindestens eine der aufgeführten Quellen wahr ist.</li>
+<li><strong>ODER</strong> — WAHR, wenn mindestens eine der aufgeführten Quellen WAHR ist.</li>
 </ul>
-<p><img alt="OR" src="../../assets/model-lsw-OR.png" /></p>
+<p><img alt="ODER" src="../../assets/model-lsw-OR.png" /></p>
 <ul>
-<li><strong>XOR</strong> (exklusives ODER) — wahr, wenn <em>genau eine</em> der aufgeführten
-  Quellen wahr ist.</li>
+<li><strong>XOR</strong> (Exklusiv-ODER) — WAHR, wenn <em>nur eine</em> der aufgeführten Quellen
+  WAHR ist.</li>
 </ul>
 <p><img alt="XOR" src="../../assets/model-lsw-XOR.png" /></p>
 <ul>
-<li><strong>Timer generator</strong> — läuft frei und schaltet fortlaufend ein und aus:
-  eingeschaltet für <strong>Duration active</strong>, ausgeschaltet für <strong>Duration
-  inactive</strong>.</li>
+<li><strong>Taktgenerator</strong> — schaltet kontinuierlich ein und aus: eingeschaltet
+  für die Zeit <strong>Laufzeit aktiv</strong>, ausgeschaltet für die Zeit <strong>Laufzeit
+  inaktiv</strong>.</li>
 </ul>
-<p><img alt="Timer generator" src="../../assets/model-lsw-timer-generator.png" /></p>
+<p><img alt="Taktgenerator" src="../../assets/model-lsw-timer-generator.png" /></p>
 <ul>
-<li><strong>Sticky</strong> — eine Verriegelung (SR-Flipflop); siehe <a href="#sticky">unten</a>.</li>
-<li><strong>Edge</strong> — ein kurzzeitiger Impuls; siehe <a href="#edge">unten</a>.</li>
+<li><strong>SR FlipFlop</strong> — eine Verriegelung (SR-Flip-Flop); siehe
+  <a href="#sticky">unten</a>.</li>
+<li><strong>Impuls/Übergang</strong> — ein Momentanimpuls; siehe <a href="#edge">unten</a>.</li>
 </ul>
 <h3 id="sticky">Sticky<a class="headerlink" href="#sticky" title="Permanent link">&para;</a></h3>
-<p><img alt="Sticky" src="../../assets/model-lsw-sticky.png" /></p>
-<p>Verriegelt auf <strong>Wahr</strong>, sobald die Bedingung <strong>Trigger ON</strong> erfüllt ist,
-und bleibt Wahr, bis <strong>Trigger OFF</strong> erfüllt ist — optional freigegeben
-durch die <strong>Active condition</strong> (solange diese Falsch ist, wird der Ausgang
-unabhängig davon auf Falsch gehalten; die interne Verriegelung von Sticky
-wird im Hintergrund weiterhin ausgewertet und wird, sobald die Active
-condition wieder Wahr wird, erneut an den Ausgang durchgeschaltet —
-vorbehaltlich der Verzögerungen).</p>
-<p>Seit Ethos 1.6.2 akzeptieren beide Trigger einen <strong>Edge</strong>-Modifikator
-(langer Druck auf <code>ENT</code> bei der Trigger-Bedingung, dann Edge auswählen —
-angezeigt mit einem vorangestellten <code>†</code>) für eine deutlich feinere
-Steuerung:</p>
-<p><img alt="Sticky mit Edge" src="../../assets/model-lsw-sticky-with-edge.png" />
-<img alt="Auswahl der Edge-Option" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
+<p><img alt="SR FlipFlop" src="../../assets/model-lsw-sticky.png" /></p>
+<p>Verriegelt auf <strong>WAHR</strong>, sobald die <strong>Trigger-EIN-Bedingung</strong> erfüllt ist,
+und hält seinen Wert, bis er durch die erfüllte <strong>Trigger-AUS-Bedingung</strong>
+auf FALSCH gezwungen wird — optional gesteuert durch den Parameter
+<strong>aktiviert</strong> (solange diese Bedingung FALSCH ist, wird der
+Logikschalterausgang ebenfalls auf FALSCH gehalten; die SR-FlipFlop-Funktion
+arbeitet dabei im Hintergrund weiter und die verriegelte Bedingung wird zum
+Ausgang durchgeschaltet, sobald die aktive Bedingung wieder WAHR wird —
+vorbehaltlich aller Verzögerungen).</p>
+<p>Seit Ethos 1.6.2 akzeptieren beide Trigger-Eingänge zusätzlich die Option
+<strong>Impuls/Übergang nach</strong> (Flanke) — dazu lange die <code>ENT</code>-Taste bei der
+Trigger-Bedingung drücken und die Option auswählen, angezeigt mit
+vorangestelltem <code>†</code> — was eine deutlich feinere Konfiguration ermöglicht:</p>
+<p><img alt="SR FlipFlop mit Flanke" src="../../assets/model-lsw-sticky-with-edge.png" />
+<img alt="Auswahl der Flankenoption" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
 <ul>
-<li><strong>Trigger ON <code>SA</code> (keine Verzögerung)</strong> — verriegelt in dem Moment auf
-  Wahr, in dem SA auf High geht.</li>
-<li><strong>Trigger ON <code>SA</code> (Verzögerung = 1 s)</strong> — verriegelt 1 s nach dem
-  High-Wechsel von SA auf Wahr, <em>sofern</em> SA am Ende dieser Sekunde noch
-  immer High ist.</li>
-<li><strong>Trigger ON <code>†SA</code> (Verzögerung = 1 s)</strong> — verriegelt 1 s nach dem
-  High-Wechsel von SA von Wahr→Falsch, <strong>unabhängig</strong> davon, ob SA zu
-  diesem Zeitpunkt noch High ist (die Flanke ist bereits aufgetreten; die
-  Verzögerung bestimmt lediglich den zeitlichen Ablauf des Ergebnisses).</li>
+<li><strong>Trigger EIN <code>SA</code> (keine Verzögerung)</strong> — verriegelt in dem Moment auf
+  WAHR, in dem SA auf EIN geht.</li>
+<li><strong>Trigger EIN <code>SA</code> (Verzögerung = 1 s)</strong> — verriegelt 1 Sekunde,
+  nachdem SA auf EIN gegangen ist, auf WAHR, <em>sofern</em> SA während dieser
+  Verzögerung auf EIN bleibt.</li>
+<li><strong>Trigger EIN <code>†SA</code> (Verzögerung = 1 s)</strong> — schaltet 1 Sekunde, nachdem
+  SA auf EIN gegangen ist, von WAHR auf FALSCH um, <strong>auch wenn</strong> SA während
+  dieser Verzögerung nicht auf EIN bleibt (die Flanke ist bereits
+  aufgetreten; die Verzögerung bestimmt lediglich den zeitlichen Ablauf).</li>
 </ul>
-<p>Trigger OFF verhält sich in umgekehrter Richtung genauso. Verzögerungen
-wirken <strong>nach</strong> der Active condition — eine Änderung der Active condition
-löst also die Verzögerungszeit erneut aus, bevor der verriegelte Wert
-wieder den Ausgang erreicht. Wechseln beide Trigger gleichzeitig von
-Falsch→Wahr, so wird der Ausgang von Sticky einmal <strong>umgeschaltet</strong>. Siehe
-auch <a href="#shared-parameters">Gemeinsame Parameter</a> weiter unten.</p>
+<p>Die Trigger-AUS-Bedingung verhält sich in umgekehrter Richtung genauso.
+Die Verzögerungen wirken <strong>nach</strong> der aktiven Bedingung — eine Änderung der
+aktiven Bedingung startet die Verzögerungszeit also erneut, bevor der
+verriegelte Wert wieder den Ausgang erreicht. Wechseln beide
+Triggerbedingungseingänge gleichzeitig von FALSCH auf WAHR, so ändert der
+SR-FlipFlop-Ausgang einmal seinen Zustand. Bitte beachten Sie auch die
+<a href="#shared-parameters">Gemeinsamen Parameter</a> weiter unten.</p>
 <h3 id="edge">Edge<a class="headerlink" href="#edge" title="Permanent link">&para;</a></h3>
-<p><img alt="Edge" src="../../assets/model-lsw-edge.png" /></p>
-<p>Ein kurzzeitiger Impuls: Wahr für die Dauer <strong>Duration</strong>, sobald die
-Trigger-Bedingung erfüllt ist. <strong>During</strong> ist ein Wertepaar <code>[t1:t2]</code>, das
-genau festlegt, wann dies geschieht:</p>
+<p><img alt="Impuls/Übergang" src="../../assets/model-lsw-edge.png" /></p>
+<p>Ein Momentanschalter, der für die in <strong>Dauer</strong> angegebene Zeitspanne WAHR
+wird, sobald seine Trigger-Bedingung erfüllt ist. <strong>während</strong> besteht aus
+zwei Teilen <code>[t1:t2]</code> und legt genau fest, wann dies geschieht:</p>
 <ul>
-<li><strong>Steigende Flanke, During = 0,0 s</strong> — löst in dem Moment aus, in dem
-  Trigger ON von Falsch→Wahr wechselt.</li>
+<li><strong>Flanke steigend, während = 0,0 s</strong> — löst in dem Moment aus, in dem die
+  Trigger-EIN-Bedingung von FALSCH auf WAHR übergeht.</li>
 </ul>
-<p><img alt="Steigende Flanke" src="../../assets/model-lsw-edge-rising-edge.png" />
-  <img alt="During = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
+<p><img alt="Flanke steigend" src="../../assets/model-lsw-edge-rising-edge.png" />
+  <img alt="während = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
 <ul>
-<li><strong>Steigende Flanke, During ≥ 0,0 s (z. B. 5,0 s)</strong> — löst 5 s nach dem
-  Wechsel von Trigger ON auf Wahr aus und ignoriert kürzere „Spitzen“
-  innerhalb dieses 5-s-Fensters.</li>
+<li><strong>Flanke steigend, während ≥ 0,0 s (z. B. 5,0 s)</strong> — löst 5 Sekunden
+  nach dem Übergang der Trigger-EIN-Bedingung auf WAHR aus; alle weiteren
+  'Einschaltimpulse' während der Periode t1 werden ignoriert.</li>
 </ul>
-<p><img alt="During &gt; 0, steigende Flanke" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
-  <img alt="During &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
+<p><img alt="während &gt; 0, Flanke steigend" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
+  <img alt="während &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
 <ul>
-<li><strong>Fallende Flanke, During = 0,0 s</strong> — löst in dem Moment aus, in dem
-  Trigger ON von Wahr→Falsch wechselt.</li>
-<li><strong>Fallende Flanke, During ≥ 0,0 s (z. B. 3,0 s)</strong> — löst beim Übergang
-  Wahr→Falsch aus, jedoch nur, wenn der Zustand zuvor mindestens 3 s lang
-  Wahr war.</li>
-<li><strong>Impuls (sowohl t1 als auch t2 gesetzt)</strong> — löst nur aus, wenn Trigger
-  ON innerhalb dieses Fensters von Falsch→Wahr→Falsch wechselt (z. B.
-  zwischen 2 s und 5 s später).</li>
+<li><strong>Fallende Flanke, während = 0,0 s</strong> — löst in dem Moment aus, in dem die
+  Trigger-EIN-Bedingung von WAHR auf FALSCH übergeht.</li>
+<li><strong>Fallende Flanke, während ≥ 0,0 s (z. B. 3,0 s)</strong> — löst beim Übergang
+  von WAHR auf FALSCH aus, jedoch nur, wenn die Bedingung zuvor mindestens
+  3 Sekunden lang WAHR war.</li>
+<li><strong>Impuls (sowohl t1 als auch t2 gesetzt)</strong> — löst nur aus, wenn die
+  Trigger-EIN-Bedingung innerhalb dieses Fensters von FALSCH auf WAHR und
+  wieder auf FALSCH wechselt (z. B. nach mindestens 2, aber spätestens
+  nach 5 Sekunden).</li>
 </ul>
 <h2 id="shared-parameters">Gemeinsame Parameter<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
 <p><img alt="Gemeinsame Parameter" src="../../assets/model-lsw-common-parameters.png" /></p>
 <ul>
-<li><strong>Active condition</strong> — gibt den Ausgang des Schalters auf dieselbe Weise
-  frei wie oben bei Sticky beschrieben. Optionen: Immer ein,
-  Schalter-/Funktionsschalter-/Logikschalter-/Trimmpositionen, Telemetrie,
-  Flugphasen oder ein Systemereignis (Leerlaufsperre, Gas-Abschaltung, Gas
-  aktiv, Telemetrie aktiv, RSSI niedrig, Trainer aktiv, Flug-Reset).</li>
-<li><strong>Delay before active</strong> / <strong>Delay before inactive</strong> — wie lange die
-  Bedingung Wahr (bzw. Falsch) bleiben muss, bevor der Ausgang folgt, bis
-  zu 60 s. Für Timer generator und Edge nicht relevant. (Siehe <a href="../../how-to/battery-capacity-warning/">Anleitung:
-  Warnung bei Akkukapazität</a> für
-  eine Verzögerung zum Entprellen eines Spannungseinbruchs.)</li>
-<li><strong>Confirmation before active</strong> / <strong>inactive</strong> — fordert eine
-  Benutzerbestätigung an, bevor der Zustand tatsächlich wechselt (mit einer
-  Abbrechen-Option, für Fälle, in denen sie zu häufig ausgelöst wird, um
-  nützlich zu sein) — praktisch zur Absicherung von riskanten Aktionen,
-  z. B. zur Bestätigung, bevor ein Landfahrzeug per Fernsteuerung
-  abgeschaltet wird.</li>
+<li><strong>Aktiviert durch</strong> — steuert den Ausgang des Logikschalters auf dieselbe
+  Weise wie oben beim SR FlipFlop beschrieben. Auswählbar sind: EIN,
+  Schalterstellungen, Funktionsschalter, Logik-Schalter, Trimm-Positionen,
+  Telemetrie, Flugmodi oder ein System-Ereignis (Gasstellung halten, Motor
+  aus, Gas aktiv, Telemetrie aktiv, RSSI niedrig, Trainer aktiv, Flug
+  zurücksetzen).</li>
+<li><strong>Verzögerung bevor aktiv</strong> / <strong>Verzögerung bevor inaktiv</strong> — bestimmt
+  die Zeit, für die die Logikschalterbedingungen WAHR (bzw. FALSCH) sein
+  müssen, bevor der Logikschalterausgang folgt; die Verzögerung kann bis zu
+  60,0 s betragen. Nicht relevant für Taktgenerator und Impuls/Übergang…
+  (Siehe <a href="../../how-to/battery-capacity-warning/">Anleitung: Warnung bei Akkukapazität</a>
+  für eine Verzögerung, mit der ein Spannungseinbruch entprellt wird.)</li>
+<li><strong>Bestätigung vor Aktivierung</strong> / <strong>vor Inaktivität</strong> — fordert eine
+  Bestätigung des Benutzers an, bevor der Zustand tatsächlich geändert wird
+  (mit einer Option zum Abbrechen für Situationen, in denen der
+  Bestätigungsdialog zu häufig angezeigt wird) — praktisch, bevor man etwas
+  Gefährliches beginnt, z. B. zur Bestätigung, bevor ein Fahrzeug per
+  Fernsteuerung ausgeschaltet wird.</li>
 </ul>
-<p><img alt="Bestätigung Wahr" src="../../assets/model-lsw-confirm-lsw-true.png" />
-  <img alt="Bestätigung Falsch" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
+<p><img alt="Bestätigung WAHR" src="../../assets/model-lsw-confirm-lsw-true.png" />
+  <img alt="Bestätigung FALSCH" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
 <ul>
-<li><strong>Min Duration</strong> — bleibt nach dem Wechsel auf Wahr mindestens für diese
-  Zeit Wahr. Bleibt der Wert auf <code>---</code>, kann der Ausgang unter Umständen
-  nur für einen einzigen Mischerzyklus Wahr sein — zu kurz, um die Zeile in
-  der Benutzeroberfläche überhaupt fett werden zu sehen.</li>
-<li><strong>Max Duration</strong> — wechselt nach dieser Zeit automatisch zurück auf
-  Falsch, sofern noch gesetzt. Beide Zeiten gehen bis zu 60 s.</li>
-<li><strong>Comment</strong> — freier Text, der überall dort angezeigt wird, wo dieser
-  Schalter einem Wert-Widget hinzugefügt wird, um seinen Zweck zu
-  dokumentieren.</li>
+<li><strong>Min. Laufzeit</strong> — sobald der Logikschalter WAHR wird, bleibt er
+  mindestens für diese Zeit WAHR. Beim Standardwert <code>---</code> wird der
+  Logikschalter unter Umständen nur für einen Verarbeitungszyklus des
+  Mischers WAHR, was zu kurz ist, um gesehen zu werden — die Bezeichnung
+  wird dann in der Statuszeile nicht fett.</li>
+<li><strong>Max. Laufzeit</strong> — ist eine maximale Dauer festgelegt, wechselt der
+  Logikschalter nach dieser Zeit automatisch wieder auf FALSCH. Beide
+  Zeiten können bis zu 60,0 s betragen.</li>
+<li><strong>Kommentar</strong> — freier Text zur Erläuterung der Verwendung oder Funktion.
+  Der Kommentar wird angezeigt, wenn ein Logikschalter zu einem
+  Werte-Widget hinzugefügt wird.</li>
 </ul>
 <h2 id="verwendung-mit-telemetrie">Verwendung mit Telemetrie<a class="headerlink" href="#verwendung-mit-telemetrie" title="Permanent link">&para;</a></h2>
-<p>Ein Systemereignis <strong>Telemetrie aktiv</strong> (oder ein Schalter, dessen Quelle
+<p>Das System-Ereignis <strong>Telemetrie aktiv</strong> (oder ein Schalter, dessen Quelle
 ein Telemetriesensor ist und der nur aktiv ist, solange dieser Sensor Daten
 liefert) deckt Bedingungen der Art „wird derzeit Telemetrie empfangen“ ab.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Ein <a href="../mixes/">Mischer</a>, der über einen telemetriebasierten logischen
-Schalter freigegeben wird, benötigt eine <strong>zweite</strong> Mischeraktion mit
-demselben Schalter in <strong>invertierter</strong> Form, damit der Mischer auch bei
-Verlust der Telemetrie noch einen gültigen Wert liefert — denken Sie
-daran, dass ein inaktiver Mischer neutral ausgibt (0 % / 1500 µs bzw.
-<strong>Halbgas</strong> auf einem Gaskanal). Alternativ können Sie eine
-<strong>Offset</strong>-Aktion verwenden, die bereits über getrennte Werte für aktiv
-und inaktiv verfügt — z. B. deckt die Quelle <strong>0</strong> (der spezielle Wert)
-mit einem so eingestellten Offset, dass der Mischer +100 % liefert,
-während <code>LS3</code> aktiv ist, und −100 %, während er inaktiv ist, beide Fälle
-in einer einzigen Aktion ab.</p>
+<p>Wenn ein <a href="../mixes/">Mischer</a> über einen telemetriebasierten logischen
+Schalter freigegeben wird, muss eine <strong>zweite</strong> Aktion mit demselben
+Logikschalter <strong>invertiert</strong> hinzugefügt werden, um sicherzustellen,
+dass der Mischer auch bei Ausfall der Telemetrie gültige Werte enthält —
+denken Sie daran, dass bei einem inaktiven Mischer der Kanalausgang auf
+Neutral = 0 % = 1500 µs steht bzw. auf <strong>Halbgas</strong> bei einem Gaskanal.
+Alternativ können Sie eine <strong>Offset</strong>-Aktion verwenden, die bereits über
+getrennte Werte für aktiv und inaktiv verfügt — z. B. deckt die Quelle
+<strong>0</strong> (der spezielle Wert) mit einem so eingestellten Offset, dass der
+Mischer +100 % liefert, während <code>LS3</code> aktiv ist, und −100 %, während er
+inaktiv ist, beide Fälle in einer einzigen Aktion ab.</p>
 </div>
 <h2 id="vergleich-von-quellen">Vergleich von Quellen<a class="headerlink" href="#vergleich-von-quellen" title="Permanent link">&para;</a></h2>
 <p>Eine Quelle wird normalerweise mit einem festen Wert verglichen, es können
@@ -3685,8 +3700,9 @@ einer Quelle können Trainer-Eingaben von einem angeschlossenen
 Schüler-Sender (Slave) ausschließen — dies wird typischerweise bei einem
 logischen Schalter verwendet, der die Knüppelbewegung des <strong>Lehrers</strong>
 überwacht (z. B. um sofort eingreifen zu können, wenn etwas schiefgeht),
-ohne dass auch die Eingaben des Schülers ihn auslösen. Häufig kombiniert
-mit einem Trainer-Schalter, der die Active condition des Lehrers freigibt.</p>
+ohne dass auch die Eingaben des Schülers ihn auslösen. Häufig wird dies mit
+einem Trainer-Schalter kombiniert, der die aktive Bedingung des Lehrers
+freigibt.</p>
 
 
 

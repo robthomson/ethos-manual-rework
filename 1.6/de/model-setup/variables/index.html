@@ -2234,7 +2234,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2431,7 +2431,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3416,48 +3416,49 @@
 
 <h1 id="variablen">Variablen<a class="headerlink" href="#variablen" title="Permanent link">&para;</a></h1>
 <p><img alt="Variablen" src="../../assets/model-vars.png" /></p>
-<p>Variablen („Vars") sind benannte Container für modelleigene
-Einstellungswerte, die an jeder anderen Stelle der Programmierung
-referenziert werden können – einschließlich <a href="../mixes/">Mischer</a>. Indem
-sie in einem eigenen Bereich abgelegt werden, trennt man die
-<em>Konfigurationsdaten</em> eines Modells von seiner <em>Programmierlogik</em>:
-Anstatt Dutzende von Mischern zu durchsuchen, um einen Wert zu finden und
-anzupassen, befindet sich alles an einer Stelle mit einem aussagekräftigen
-Namen. Es stehen 64 Vars zur Verfügung; standardmäßig existiert keine.
-Mit <strong>+</strong> wird eine hinzugefügt; durch Antippen einer vorhandenen Var
-erhält man <strong>Bearbeiten</strong>/<strong>Verschieben</strong>/<strong>Kopieren</strong>/<strong>Klonen</strong>/<strong>Löschen</strong>.</p>
+<p>Variablen („Vars“) sind benannte Container für modelleigene
+Einstellwerte, die an jeder anderen Stelle der Programmierung
+referenziert werden können – auch in <a href="../mixes/">Mischern</a>. Da sie in
+einem eigenen Bereich abgelegt werden, sind die <em>Konfigurationsdaten</em>
+eines Modells von seiner <em>Programmierlogik</em> getrennt: Anstatt Dutzende
+von Mischern zu durchsuchen, um einen Wert zu finden und anzupassen,
+steht alles an einer Stelle unter einem aussagekräftigen Namen. Es
+werden bis zu 64 Vars unterstützt; standardmäßig ist keine vorhanden.
+Mit <strong>+</strong> fügen Sie eine Var hinzu; durch Antippen einer vorhandenen
+Var erhalten Sie <strong>bearbeiten</strong>/<strong>verschieben</strong>/<strong>kopieren</strong>/<strong>klonen</strong>/<strong>löschen</strong>.</p>
 <p><img alt="Variable hinzufügen" src="../../assets/model-vars-add.png" /></p>
 <p>Eine Var kann eine feste Konstante enthalten oder innerhalb
-benutzerdefinierter Grenzen verstellbar sein (damit unsinnige Werte keinen
-Absturz verursachen) und kann pro aktiver Bedingung (z. B. pro Flugphase)
-einen <em>unterschiedlichen</em> Wert annehmen. Die Werte bleiben über Sitzungen
-hinweg erhalten. Eine Var ersetzt jeden gewöhnlichen numerischen Wert
-überall dort, wo die <a href="../../getting-started/user-interface-and-navigation/#the-options-feature">Options-Funktion</a>
+benutzerdefinierter Grenzen verstellbar sein (damit unsinnige Werte
+keinen Absturz verursachen), und sie kann pro aktiver Bedingung
+(z. B. pro Flugphase) einen <em>unterschiedlichen</em> Wert annehmen. Die Werte
+bleiben über Sitzungen hinweg erhalten. Eine Var kann überall dort
+anstelle eines gewöhnlichen numerischen Werts verwendet werden, wo die
+<a href="../../getting-started/user-interface-and-navigation/#the-options-feature">Optionen-Funktion</a>
 verfügbar ist (die Felder mit dem Hamburger-Symbol).</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Ein Segler mit geteilten Querrudern (die inneren Sektionen dienen
 zugleich als Landeklappen) soll überall dort, wo alle vier Ruder als
-Querruder arbeiten, eine einzige gemeinsame Einstellung für das
-Querruder-Differential verwenden – eine Var, die diesen einen Wert
-enthält und aus jedem betroffenen Mischer referenziert wird, hält ihn
-konsistent und muss nur an einer Stelle abgestimmt werden.</p>
+Querruder arbeiten, ein einziges gemeinsames Querruder-Differential
+verwenden – eine Var, die diesen einen Wert enthält und aus jedem
+betroffenen Mischer referenziert wird, hält ihn konsistent und muss
+nur an einer Stelle abgestimmt werden.</p>
 </div>
 <h2 id="eine-var-hinzufugen">Eine Var hinzufügen<a class="headerlink" href="#eine-var-hinzufugen" title="Permanent link">&para;</a></h2>
 <p><img alt="Neue Variable" src="../../assets/model-vars-new_var.png" /></p>
 <ul>
-<li><strong>Wert</strong> — aktueller Wert (nur Anzeige, nicht editierbar).</li>
-<li><strong>Name</strong> — editierbar.</li>
+<li><strong>Wert</strong> — aktueller Wert (reine Anzeige, nicht editierbar).</li>
+<li><strong>Name</strong> — Ermöglicht die Benennung der Var.</li>
 <li><strong>Kommentar</strong> — Freitext zur Erläuterung des Zwecks.</li>
-<li><strong>Bereich</strong> — untere/obere Grenzen (eine Nachkommastelle, innerhalb
+<li><strong>Bereich</strong> — untere/obere Grenze (eine Kommastelle, innerhalb
   ±500 %), die der Wert der Var niemals überschreiten kann.</li>
 </ul>
 <h3 id="werte">Werte<a class="headerlink" href="#werte" title="Permanent link">&para;</a></h3>
 <p><img alt="Variablenwerte" src="../../assets/model-vars-values.png" /></p>
 <ul>
-<li><strong>Fest</strong> — eine einzelne Konstante mit einer Nachkommastelle.</li>
-<li><strong>Mehrfach/variabel</strong> — <strong>Neuen Wert hinzufügen</strong> hängt pro aktiver
-  Bedingung einen Wert an. Beispiel: <code>Var12</code> liefert 9 %, solange die
+<li><strong>Fest</strong> — eine einzelne Konstante mit einer Kommastelle.</li>
+<li><strong>Mehrfach/variabel</strong> — mit <strong>Neuen Wert hinzufügen</strong> wird pro aktiver
+  Bedingung ein Wert angelegt. Beispiel: <code>Var12</code> liefert 9 %, solange die
   Flugphase Thermik (FM4) aktiv ist, und −3 %, solange Speed (FM5) aktiv
   ist, wobei der Bereich auf −10 %…+15 % begrenzt ist, sodass keiner der
   Werte sinnvolle Grenzen überschreiten kann:</li>
@@ -3467,8 +3468,8 @@ konsistent und muss nur an einer Stelle abgestimmt werden.</p>
 <h3 id="aktionen">Aktionen<a class="headerlink" href="#aktionen" title="Permanent link">&para;</a></h3>
 <p><img alt="Variablenaktionen" src="../../assets/model-vars-actions.png" />
 <img alt="Aktion hinzufügen" src="../../assets/model-vars-add-action.png" /></p>
-<p>Aktionen verändern den Wert einer Var im Zeitverlauf, gesteuert durch eine
-Eingangsgröße.</p>
+<p>Aktionen verändern den Wert einer Var im Zeitverlauf, gesteuert durch
+einen Eingang.</p>
 <p><strong>Umgewidmete Trimmung</strong> — übergibt eine der physischen Trimmungen der
 Verstellung dieser Var anstelle ihrer normalen Funktion, üblicherweise
 beschränkt auf eine aktive Bedingung:</p>
@@ -3476,20 +3477,19 @@ beschränkt auf eine aktive Bedingung:</p>
 <img alt="Umzuwidmende Trimmung auswählen" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Die Gas-Trimmung wird zur Verstellung einer Var für die
+<p>Die Gastrimmung wird zur Verstellung einer Var für die
 Wölbklappenkompensation umgewidmet, allerdings nur, solange die
 Flugphase Landung (FM3) aktiv ist, mit dem Bereich 0–25 % und einer
 Schrittweite von 1,0 % pro Klick. Außerhalb dieser aktiven Bedingung
-kehrt die Trimmung automatisch zu ihrer gewöhnlichen Funktion zurück.</p>
+übernimmt die Trimmung automatisch wieder ihre gewöhnliche Funktion.</p>
 </div>
-<p><strong>Arithmetische Aktionen</strong> — gesteuert durch eine beliebige Eingangsgröße:</p>
+<p><strong>Arithmetische Aktionen</strong> — gesteuert durch einen beliebigen Eingang:</p>
 <ul>
 <li><strong>Zuweisen</strong> — setzt die Var auf einen bestimmten Wert.</li>
 <li><strong>Addieren</strong> / <strong>Subtrahieren</strong> / <strong>Multiplizieren</strong> / <strong>Dividieren</strong> —
   Rechenoperationen mit dem aktuellen Wert.</li>
-<li><strong>Prozent</strong> — wendet einen Prozentsatz der steuernden Eingangsgröße an.</li>
-<li><strong>Min</strong> / <strong>Max</strong> — begrenzt die Var gegenüber der steuernden
-  Eingangsgröße.</li>
+<li><strong>Prozent</strong> — wendet einen Prozentsatz des steuernden Eingangs an.</li>
+<li><strong>Min</strong> / <strong>Max</strong> — begrenzt die Var gegenüber dem steuernden Eingang.</li>
 </ul>
 <p><img alt="Funktionsaktionen" src="../../assets/model-vars-functions.png" /></p>
 <div class="admonition example">
@@ -3497,9 +3497,10 @@ kehrt die Trimmung automatisch zu ihrer gewöhnlichen Funktion zurück.</p>
 <p><code>FS3(edge)</code> weist einer Var direkt 40 % zu; <code>FS1(edge)</code> addiert bei
 jedem Druck 2 (begrenzt auf das Maximum des Bereichs); <code>FS2(edge)</code>
 subtrahiert bei jedem Druck 2 (begrenzt auf das Minimum des Bereichs).
-Die Option <strong>Edge</strong> (langer Druck auf den Funktionsschalter) ist hier
-entscheidend – ohne sie würde die Aktion kontinuierlich ausgelöst,
-solange der Schalter gehalten wird, statt einmal pro Betätigung.</p>
+Die Option <strong>Flanke</strong> („Edge“, langes Drücken auf den
+Funktionsschalter) ist hier entscheidend – ohne sie würde die Aktion
+fortlaufend ausgelöst, solange der Schalter gehalten wird, statt
+einmal pro Betätigung.</p>
 </div>
 <p><img alt="Durchgerechnetes Beispiel" src="../../assets/model-vars-calc-example.png" /></p>
 

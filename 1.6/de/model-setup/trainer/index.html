@@ -1678,10 +1678,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#verbindungsmodus" class="md-nav__link">
+  <a href="#verbindungs-modus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verbindungsmodus
+        Verbindungs-Modus
       
     </span>
   </a>
@@ -1689,10 +1689,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aktivierungsbedingung" class="md-nav__link">
+  <a href="#aktive-bedingung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aktivierungsbedingung
+        Aktive Bedingung
       
     </span>
   </a>
@@ -2256,7 +2256,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2453,7 +2453,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3385,10 +3385,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#verbindungsmodus" class="md-nav__link">
+  <a href="#verbindungs-modus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verbindungsmodus
+        Verbindungs-Modus
       
     </span>
   </a>
@@ -3396,10 +3396,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aktivierungsbedingung" class="md-nav__link">
+  <a href="#aktive-bedingung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aktivierungsbedingung
+        Aktive Bedingung
       
     </span>
   </a>
@@ -3460,95 +3460,100 @@
 
 <h1 id="trainer">Trainer<a class="headerlink" href="#trainer" title="Permanent link">&para;</a></h1>
 <p><img alt="Trainer" src="../../assets/model-trainer.png" /></p>
-<p>Standardmäßig ausgeschaltet. Legen Sie den Sender als <strong>Master</strong> (Sender des
-Lehrers, der bis zu 16 Steuersignale vom Schüler empfängt) oder als <strong>Slave</strong>
-(Sender des Schülers, der eine konfigurierbare Anzahl von Kanälen an den
-Lehrer sendet) fest.</p>
+<p>Standardmäßig ausgeschaltet. Der Sender kann als <strong>Master</strong> (Lehrer-Sender,
+der bis zu 16 Steuersignale vom Schüler empfängt) oder als <strong>Slave</strong>
+(Schülersender, der eine konfigurierbare Anzahl von Kanälen an den Lehrer
+sendet) konfiguriert werden.</p>
 <h2 id="master-modus">Master-Modus<a class="headerlink" href="#master-modus" title="Permanent link">&para;</a></h2>
 <p><img alt="Master-Modus" src="../../assets/model-trainer-master.png" />
 <img alt="Trainer-Optionen" src="../../assets/model-trainer-options.png" /></p>
-<h3 id="verbindungsmodus">Verbindungsmodus<a class="headerlink" href="#verbindungsmodus" title="Permanent link">&para;</a></h3>
-<p><img alt="Optionen für den Verbindungsmodus" src="../../assets/model-trainer-link-mode-options.png" /></p>
+<h3 id="verbindungs-modus">Verbindungs-Modus<a class="headerlink" href="#verbindungs-modus" title="Permanent link">&para;</a></h3>
+<p><img alt="Optionen für den Verbindungs-Modus" src="../../assets/model-trainer-link-mode-options.png" /></p>
 <ul>
-<li><strong>Trainerkabel</strong> — ein 3,5-mm-Mono-Audiokabel zwischen den beiden Sendern.</li>
+<li><strong>Trainer-Kabel</strong> — ein 3,5-mm-Mono-Audiokabel zwischen den beiden Sendern.</li>
 <li><strong>Bluetooth</strong> —</li>
 </ul>
 <p><img alt="Bluetooth-Verbindung" src="../../assets/model-trainer-link-mode-bt.png" /></p>
 <ul>
 <li>
-<p><strong>Modus</strong> — normal oder hohe Geschwindigkeit; verwenden Sie die hohe
-    Geschwindigkeit für geringere Latenz, sofern beide Sender dies
-    unterstützen.</p>
-<p><img alt="Bluetooth-Modus" src="../../assets/model-trainer-link-mode-bt-mode.png" /></p>
+<p><strong>Mode</strong> — normale oder hohe Geschwindigkeit; für eine geringere
+    Latenzzeit sollte die hohe Geschwindigkeit verwendet werden, wenn sie
+    beide Sender unterstützen.</p>
+<p><img alt="Bluetooth-Mode" src="../../assets/model-trainer-link-mode-bt-mode.png" /></p>
 </li>
 <li>
-<p><strong>Lokaler Name</strong> — der BT-Name, der anderen Geräten angezeigt wird
-    (Standard <code>FrSkyBT</code>, änderbar).</p>
+<p><strong>Lokaler Name</strong> — der lokale BT-Name, der in den angeschlossenen
+    Geräten angezeigt wird (Standardname <code>FrSkyBT</code>, kann geändert werden).</p>
 </li>
-<li><strong>Lokale Adresse</strong> — die Bluetooth-Adresse dieses Senders.</li>
-<li><strong>Gegenstellen-Adresse</strong> — die Adresse des gekoppelten Senders, sobald
-    die Verbindung hergestellt ist.</li>
+<li><strong>Lokale Adresse</strong> — die lokale Bluetooth-Adresse dieses Senders.</li>
+<li><strong>Externe Adresse</strong> — die Bluetooth-Adresse des entfernten Geräts,
+    sobald es verbunden wurde.</li>
 <li>
-<p><strong>Geräte suchen</strong> (nur im Master-Modus) — sucht nach Geräten in der
-    Umgebung:</p>
+<p><strong>Geräte suchen</strong> (nur im Master-Modus) — versetzt den Sender in den
+    BT-Suchmodus und sucht nach Geräten in der Umgebung:</p>
 <p><img alt="Suche läuft" src="../../assets/model-trainer-link-mode-bt-search.png" />
 <img alt="Warten" src="../../assets/model-trainer-link-mode-bt-search-waiting.png" />
 <img alt="Gerät auswählen" src="../../assets/model-trainer-link-mode-bt-select-device.png" />
 <img alt="Verbunden" src="../../assets/model-trainer-link-mode-bt-device-connected.png" /></p>
 </li>
 <li>
-<p><strong>Letztes Gerät verbinden</strong> / <strong>Modul zurücksetzen</strong> — erneute
-    Verbindung zur vorherigen Kopplung herstellen oder die Konfiguration
-    des Bluetooth-Moduls vollständig löschen.</p>
+<p><strong>Letztes Gerät anschließen</strong> / <strong>Modul zurücksetzen</strong> — stellt eine
+    Verbindung mit dem zuletzt konfigurierten Gerät her bzw. setzt das
+    Bluetooth-Modul zurück und löscht dessen Konfigurationseinstellungen.</p>
 </li>
 <li>
-<p><strong>Externes SBUS-Modul</strong> — ein SBUS-Eingang am PXX-IN-Pin des externen
-  Modulschachts, um einen FrSky-Empfänger mit SBUS-Ausgang (z. B. Archer RS)
-  als Empfangsseite einer drahtlosen Verbindung anzuschließen — dadurch kann
-  <strong>jeder</strong> FrSky-Sender als Schülerseite (Buddy-Box) dienen, sofern er an
-  diesen Empfänger gebunden ist.</p>
+<p><strong>SBUS externes HF-Modul</strong> — bietet einen SBUS-Eingang am PXX IN Pin im
+  externen Modulschacht. Dies ermöglicht den Einbau eines FrSky-Empfängers
+  mit SBUS-Ausgang (z. B. Archer RS) als Empfänger einer drahtlosen
+  Trainerverbindung — so kann <strong>jeder</strong> FrSky-Sender als Schülerseite
+  (Buddy-Box) dienen, wenn er an diesen Empfänger gebunden ist.</p>
 </li>
-<li><strong>Externes CPPM-Modul</strong> — dasselbe Prinzip über einen CPPM-Eingang, für
+<li><strong>CPPM externes Modul</strong> — in ähnlicher Weise über einen CPPM-Eingang, für
   einen älteren Empfänger mit CPPM-Ausgang.</li>
 </ul>
-<h3 id="aktivierungsbedingung">Aktivierungsbedingung<a class="headerlink" href="#aktivierungsbedingung" title="Permanent link">&para;</a></h3>
-<p><img alt="Aktivierungsbedingung" src="../../assets/model-trainer-active-condition.png" /></p>
-<p>Ein Schalter/Taster, Funktionsschalter, logischer Schalter, eine
-Trimmposition oder eine Flugphase, die im aktiven Zustand die Kontrolle an
-den Schüler übergibt.</p>
+<h3 id="aktive-bedingung">Aktive Bedingung<a class="headerlink" href="#aktive-bedingung" title="Permanent link">&para;</a></h3>
+<p><img alt="Aktive Bedingung" src="../../assets/model-trainer-active-condition.png" /></p>
+<p>Ein Schalter oder Taster, ein Funktionsschalter, ein Logikschalter, eine
+Trimmstellung oder ein Flugmodus, der die Steuerung im aktiven Zustand an den
+Schüler übergibt.</p>
 <h3 id="trainer-kanale">Trainer-Kanäle<a class="headerlink" href="#trainer-kanale" title="Permanent link">&para;</a></h3>
-<p><img alt="Aktivierungsbedingung bearbeiten" src="../../../assets/model-trainer-active-condition-edit.png" /></p>
-<p>Bis zu 16 Kanäle können vom Schüler zum Master übertragen werden, solange die
-Aktivierungsbedingung erfüllt ist. Tippen Sie auf einen Kanal, um ihn
-einzeln zu konfigurieren:</p>
+<p><img alt="Aktive Bedingung bearbeiten" src="../../../assets/model-trainer-active-condition-edit.png" /></p>
+<p>Bis zu 16 Kanäle können vom Schülersender an den Lehrer-Sender übertragen
+werden, solange die aktive Bedingung erfüllt ist. Tippen Sie auf jeden Kanal,
+um ihn einzeln zu konfigurieren:</p>
 <ul>
-<li><strong>Aktivierungsbedingung</strong> — eine kanalspezifische Übersteuerung, z. B. um
-  während eines Teils der Trainingseinheit nur die Höhenruder-Eingabe des
-  Schülers zu deaktivieren.</li>
-<li><strong>Modus</strong> — <strong>OFF</strong> (für den Trainerbetrieb deaktiviert), <strong>Add</strong> (die
-  Signale von Master und Schüler werden addiert, sodass beide gleichzeitig
-  auf das Steuer einwirken können) oder <strong>Replace</strong> (der normale Modus — der
-  Schüler hat im aktiven Zustand die volle Kontrolle über diesen Kanal).</li>
-<li><strong>Prozent</strong> — skaliert die Eingabe des Schülers, normalerweise 100 %.</li>
-<li><strong>Ziel</strong> — auf welche Funktion der Kanal des Schülers abgebildet wird.</li>
+<li><strong>Aktive Bedingung</strong> — jeder einzelne Schüler-Kanal kann zusätzlich von der
+  ausgewählten Quelle gesteuert werden, so kann z. B. der
+  Höhenrudereingang des Schülers während eines Teils des Fluges deaktiviert
+  werden.</li>
+<li><strong>Mode</strong> — <strong>AUS</strong> (deaktiviert den Kanal für die Verwendung durch den
+  Trainer), <strong>hinzufügen</strong> (additiver Modus, bei dem Lehrer- und
+  Schüler-Signale addiert werden, so dass beide gleichzeitig auf die Funktion
+  einwirken können) oder <strong>ersetzen</strong> (die normale Betriebsart — der Schüler
+  hat die volle Kontrolle über diesen Kanal, während die aktive Bedingung
+  erfüllt ist).</li>
+<li><strong>Prozent</strong> — skaliert den Schüler-Eingang, normalerweise auf 100 %
+  eingestellt.</li>
+<li><strong>Zielort</strong> — ordnet den Kanal des Schülersenders der entsprechenden
+  Funktion zu.</li>
 </ul>
 <p>Siehe <a href="../../how-to/instant-takeback/">Anleitung: Sofortige Rückübernahme</a> für
-ein durchgearbeitetes Beispiel, wie ein Lehrer die Kontrolle per Schalter
-sofort zurückholt, sowie <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Trainereingabe
+ein ausgearbeitetes Beispiel, wie ein Lehrer die Steuerung per Schalter
+sofort zurückholt, sowie <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Schülereingaben
 ignorieren</a>,
-um die Knüppelbewegung des Schülers von einem logischen Schalter
-auszuschließen, der die eigenen Steuerknüppel des Lehrers überwacht.</p>
+um zu verhindern, dass die Knüppeleingaben des Schülers einen Logikschalter
+auslösen, der die eigenen Steuerknüppel des Lehrers überwacht.</p>
 <h2 id="slave-modus">Slave-Modus<a class="headerlink" href="#slave-modus" title="Permanent link">&para;</a></h2>
 <p><img alt="Slave-Modus" src="../../assets/model-trainer-slave-mode.png" /></p>
 <ul>
-<li><strong>Verbindungsmodus</strong> — dieselbe Auswahl aus Trainerkabel, Bluetooth oder
+<li><strong>Verbindungs-Modus</strong> — dieselbe Auswahl aus Trainerkabel, Bluetooth oder
   externem SBUS-/CPPM-Modul wie beim Master (mit denselben Bluetooth-Feldern
-  <strong>Modus</strong>/<strong>Lokaler Name</strong>/<strong>Lokale Adresse</strong>/<strong>Gegenstellen-Adresse</strong>).</li>
+  <strong>Mode</strong>/<strong>Lokaler Name</strong>/<strong>Lokale Adresse</strong>/<strong>Externe Adresse</strong>).</li>
 </ul>
-<p><img alt="Slave-Verbindungsmodus" src="../../assets/model-trainer-slave-link-mode.png" /></p>
+<p><img alt="Slave-Verbindungs-Modus" src="../../assets/model-trainer-slave-link-mode.png" /></p>
 <ul>
-<li><strong>Kanalbereich</strong> — welcher Bereich der Kanäle dieses Senders an den Master
-  gesendet wird.</li>
+<li><strong>Kanalbereich</strong> — legt fest, welcher Kanalbereich dieses Senders an den
+  Lehrer-Sender übertragen wird.</li>
 </ul>
 <p><img alt="Slave-Kanäle" src="../../assets/model-trainer-slave-channels.png" />
   <img alt="Slave-Kanal bearbeiten" src="../../assets/model-trainer-slave-channel-edit.png" /></p>

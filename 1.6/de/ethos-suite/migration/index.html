@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2340,7 +2340,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3292,34 +3292,34 @@
 
 
 <h1 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h1>
-<p>Umstellung eines Senders von den älteren, separaten PC-Update-Werkzeugen auf Ethos Suite –
-zum ersten Mal.</p>
+<p>Umstieg eines Senders von den älteren, separaten PC-Update-Werkzeugen auf die
+Ethos Suite – zum ersten Mal.</p>
 <ol>
-<li><strong>Ethos ≥ 1.1.4 sicherstellen</strong> — die Mindestversion, die den neuen
+<li><strong>Ethos ≥ 1.1.4 sicherstellen</strong> — dies ist die Mindestversion, die den neuen
    Suite-kompatiblen Bootloader (FRSK-Format) direkt aus dem
-   <a href="../../system-setup/file-manager/">Dateimanager</a> flashen kann. Bei Bedarf zunächst
-   manuell auf 1.1.4 aktualisieren.</li>
-<li><strong>SD card/eMMC sichern</strong> — den gesamten Inhalt in einen Ordner auf einem
+   <a href="../../system-setup/file-manager/">Dateimanager</a> flashen kann. Falls nötig,
+   zunächst manuell auf 1.1.4 aktualisieren.</li>
+<li><strong>SD card/eMMC sichern</strong> — den gesamten Inhalt in einen Ordner auf dem
    PC kopieren.</li>
 <li><strong>Den aktuellen Bootloader herunterladen</strong> von den
    <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">ETHOS-Feedback-Community Releases</a>
-   und entpacken. Jedes Release enthält eine <code>components.json</code>, die die aktuelle Version
-   jeder Komponente auflistet — siehe <a href="../../how-to/find-latest-bootloader/">Anleitung: Den aktuellen
-   Bootloader finden</a> zum Lesen dieser Datei.</li>
-<li>Den Sender unter dem Eintrag <code>targets</code> in dieser Datei suchen, um die exakt
+   und entpacken. Zu jedem Release gehört eine Datei <code>components.json</code>, in der die
+   aktuelle Version jeder Komponente aufgeführt ist — wie diese zu lesen ist, steht
+   unter <a href="../../how-to/find-latest-bootloader/">Anleitung: Den aktuellen Bootloader finden</a>.</li>
+<li>Den Sender unter dem Eintrag <code>targets</code> in dieser Datei suchen, um die genau
    zu verwendende Bootloader-Version zu ermitteln, und die passende Datei in den
-   Assets dieses Releases lokalisieren.</li>
+   Assets dieses Releases heraussuchen.</li>
 <li>Den Sender in den <a href="../../getting-started/usb-connection-modes/#bootloader-mode">Bootloader-Modus</a>
-   starten (<code>ENT</code> gedrückt halten, dann einschalten) und per USB verbinden.</li>
+   starten (<code>ENT</code> gedrückt halten, dann einschalten) und über USB verbinden.</li>
 <li>Die Bootloader-Datei auf die SD card/eMMC kopieren (normalerweise in den Ordner
    <code>Firmware/</code>), anschließend die Laufwerke auswerfen und die Verbindung trennen.</li>
 <li>Den Sender normal starten, zu <strong>System → Dateimanager</strong> wechseln, die soeben kopierte
-   Datei <code>bootloader.frsk</code> antippen und <strong>Flash bootloader</strong> wählen.</li>
-<li>Ethos Suite herunterladen und installieren — <a href="../operation/">Bedienung</a> beschreibt
-   ab hier das Aktualisieren von Firmware/Dateien sowie die übrigen Funktionen der Suite.</li>
-<li>Falls Ethos Suite dies nicht automatisch erledigt, muss der Ordner <code>bitmaps/user</code>
-   auf der SD card/eMMC eventuell in <code>bitmaps/models</code> umbenannt werden (dort liegen
-   die benutzereigenen Modellbilder).</li>
+   Datei <code>bootloader.frsk</code> antippen und <strong>Bootloader flashen</strong> wählen.</li>
+<li>Die Ethos Suite herunterladen und installieren — <a href="../operation/">Bedienung</a> beschreibt
+   ab hier das Aktualisieren von Firmware und Dateien sowie die übrigen Funktionen der Suite.</li>
+<li>Wenn die Ethos Suite dies nicht automatisch erledigt, muss der Ordner <code>bitmaps/user</code>
+   auf der SD card/eMMC gegebenenfalls in <code>bitmaps/models</code> umbenannt werden (dort werden
+   die Modellbilder des Benutzers abgelegt).</li>
 </ol>
 
 

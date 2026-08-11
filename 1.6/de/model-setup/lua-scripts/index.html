@@ -1750,10 +1750,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lua-tasks" class="md-nav__link">
+  <a href="#lua-aufgaben" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lua-Tasks
+        Lua-Aufgaben
       
     </span>
   </a>
@@ -2228,7 +2228,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2425,7 +2425,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3345,10 +3345,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lua-tasks" class="md-nav__link">
+  <a href="#lua-aufgaben" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lua-Tasks
+        Lua-Aufgaben
       
     </span>
   </a>
@@ -3404,35 +3404,38 @@
 
 <h1 id="lua-skripte-modell">Lua-Skripte (Modell)<a class="headerlink" href="#lua-skripte-modell" title="Permanent link">&para;</a></h1>
 <p><img alt="Lua-Konfiguration" src="../../assets/model-lua-config.png" /></p>
-<p>Dieses Menü erscheint erst, nachdem ein Lua-<strong>Quellen</strong>- oder
-<strong>Task</strong>-Skript unter <code>scripts/</code> auf der SD card/eMMC installiert wurde
-(siehe <a href="../../system-setup/file-manager/#top-level-folders">Dateimanager</a>) —
-es dient dem Aktivieren und Konfigurieren dieser Skripte <strong>pro Modell</strong>,
-nicht deren Installation. Nach der Installation steht eine Quelle oder ein
-Task global für jedes Modell zur Verfügung; auf dieser Seite entscheidet
-jedes Modell, ob es sie verwendet, und legt seine eigene Konfiguration
-fest. Beispiele für Quellen- und Task-Skripte werden auf der
+<p>Dieses Menü erscheint nur, wenn eine Lua-<strong>Quelle</strong> oder ein
+<strong>Aufgabenskript</strong> im Ordner <code>scripts/</code> auf der SD card/eMMC installiert
+ist (siehe <a href="../../system-setup/file-manager/#top-level-folders">Dateimanager</a>)
+— es dient dazu, diese Skripte <strong>pro Modell</strong> zu aktivieren und zu
+konfigurieren, nicht dazu, sie zu installieren. Einmal installiert, sind
+Lua-Quellen oder -Aufgaben global für jedes Modell verfügbar; auf dieser
+Seite entscheidet jedes Modell, ob es sie verwendet, und legt seine eigene
+Konfiguration fest. Beispiele für Quell- und Aufgabenskripte werden auf der
 Ethos-Feedback-Community-Website veröffentlicht (<code>/lua/examples/task</code>,
 <code>/lua/examples/source</code>).</p>
-<h2 id="lua-tasks">Lua-Tasks<a class="headerlink" href="#lua-tasks" title="Permanent link">&para;</a></h2>
-<p>Jeder installierte Task wird mit einem Aktivierungsschalter pro Modell
-aufgeführt. Beim Aktivieren erscheint dessen Konfigurationsformular (sofern
-vorhanden) — das Task-Skript stellt eigene Lese-/Schreibfunktionen bereit,
-sodass jedes Modell seine eigenen Einstellungen speichern kann. Ein Task
-kann beispielsweise einen konfigurierbaren Zahlenbereich bereitstellen, der
-für jedes Modell unabhängig festgelegt wird.</p>
+<h2 id="lua-aufgaben">Lua-Aufgaben<a class="headerlink" href="#lua-aufgaben" title="Permanent link">&para;</a></h2>
+<p>Alle installierten Aufgaben werden aufgelistet und können für das aktive
+Modell einzeln aktiviert werden. Wenn eine Aufgabe aktiviert ist, wird das
+zugehörige Konfigurationsformular angezeigt (sofern vorhanden) — das
+Aufgabenskript verfügt über eine eigene Lese- und Schreibfunktion, damit
+jedes Modell seine eigenen Einstellungen speichern kann. Eine Aufgabe kann
+beispielsweise einen konfigurierbaren Zahlenbereich haben, der für jedes
+Modell unabhängig angepasst werden kann.</p>
 <h2 id="lua-quellen">Lua-Quellen<a class="headerlink" href="#lua-quellen" title="Permanent link">&para;</a></h2>
 <p>Für Quellen gilt dasselbe Prinzip: pro Modell aktivieren und anschließend
-über das vom Quellen-Skript bereitgestellte Formular konfigurieren. Eine so
-registrierte Quelle lässt sich überall sonst in Ethos wie eine gewöhnliche
+über das Formular konfigurieren, das das Quellenskript bereitstellt. Eine
+so registrierte Quelle lässt sich überall sonst in Ethos wie eine
+gewöhnliche
 <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
 verwenden, genau wie eine integrierte.</p>
 <h2 id="fur-skriptautoren">Für Skriptautoren<a class="headerlink" href="#fur-skriptautoren" title="Permanent link">&para;</a></h2>
-<p>Quellen und Tasks werden aus Lua heraus über <code>system.registerSource()</code> und
-<code>system.registerTask()</code> registriert — siehe den Ethos Lua Reference Guide
-sowie <a href="../../lua-scripts/">Lua-Skripte</a> in diesem Handbuch für die
-allgemeine Skriptumgebung (Widgets sind ein separater, verwandter
-Mechanismus — siehe <a href="../../displays/custom-widgets/">Eigene Widgets</a>).</p>
+<p>Quellen und Aufgaben werden aus Lua heraus über <code>system.registerSource()</code>
+und <code>system.registerTask()</code> registriert — weitere Informationen finden Sie
+im Ethos LUA Referenzhandbuch sowie unter
+<a href="../../lua-scripts/">Lua-Skripte</a> in diesem Handbuch zur allgemeinen
+Skriptumgebung (Widgets sind ein separater, verwandter Mechanismus — siehe
+<a href="../../displays/custom-widgets/">Eigene Widgets</a>).</p>
 
 
 

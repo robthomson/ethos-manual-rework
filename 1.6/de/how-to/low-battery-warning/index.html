@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -2426,10 +2426,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-sensor-anschlieen-und-erkennen" class="md-nav__link">
+  <a href="#1-sensor-anschlieen-und-finden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Sensor anschließen und erkennen
+        1. Sensor anschließen und finden
       
     </span>
   </a>
@@ -2448,10 +2448,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sonderfunktion-hinzufugen" class="md-nav__link">
+  <a href="#3-spezialfunktion-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Sonderfunktion hinzufügen
+        3. Spezialfunktion hinzufügen
       
     </span>
   </a>
@@ -3345,10 +3345,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-sensor-anschlieen-und-erkennen" class="md-nav__link">
+  <a href="#1-sensor-anschlieen-und-finden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Sensor anschließen und erkennen
+        1. Sensor anschließen und finden
       
     </span>
   </a>
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-sonderfunktion-hinzufugen" class="md-nav__link">
+  <a href="#3-spezialfunktion-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Sonderfunktion hinzufügen
+        3. Spezialfunktion hinzufügen
       
     </span>
   </a>
@@ -3403,30 +3403,30 @@
 
 
 <h1 id="warnung-bei-niedriger-akkuspannung">Warnung bei niedriger Akkuspannung<a class="headerlink" href="#warnung-bei-niedriger-akkuspannung" title="Permanent link">&para;</a></h1>
-<p>Die Überwachung der Flugakkuspannung <strong>unter Last</strong> mit einer Warnung beim Unterschreiten eines Schwellwerts ist zuverlässiger als das Vertrauen auf einen festen Timer — ein Sensor wie der FrSky FLVSS macht dies unkompliziert.</p>
-<h2 id="1-sensor-anschlieen-und-erkennen">1. Sensor anschließen und erkennen<a class="headerlink" href="#1-sensor-anschlieen-und-erkennen" title="Permanent link">&para;</a></h2>
+<p>Die Batteriespannung <strong>unter Last</strong> zu überwachen und einen Alarm auszulösen, wenn sie unter einen bestimmten Schwellenwert fällt, ist zuverlässiger, als sich auf einen festen Timer zu verlassen — mit einem Batteriespannungssensor wie dem FrSky FLVSS ist das problemlos möglich.</p>
+<h2 id="1-sensor-anschlieen-und-finden">1. Sensor anschließen und finden<a class="headerlink" href="#1-sensor-anschlieen-und-finden" title="Permanent link">&para;</a></h2>
 <p><img alt="LiPo-Telemetriesensor" src="../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
-<p>Stellen Sie <a href="../../system-setup/devices/">Empfängeroptionen → Telemetrieport</a> auf <strong>S.Port</strong>, verbinden Sie den FLVSS über ein S.Port-Kabel mit dem Empfänger und aktivieren Sie anschließend <strong>Neue Sensoren suchen</strong> unter <a href="../../model-setup/telemetry/">Telemetrie</a> — der LiPo-Sensor erscheint zusammen mit den bereits erkannten Sensoren.</p>
+<p>Setzen Sie in den <a href="../../system-setup/devices/">Empfängeroptionen den Telemetrieanschluss</a> auf die Option <strong>S.Port</strong>, schließen Sie den FLVSS über ein S.Port-Kabel an Ihren Empfänger an und aktivieren Sie anschließend die Option <strong>Sensoren finden</strong> unter <a href="../../model-setup/telemetry/">Telemetrie</a> — der LiPo-Sensor erscheint dann neben den bereits gefundenen Sensoren.</p>
 <h2 id="2-logischen-schalter-hinzufugen">2. Logischen Schalter hinzufügen<a class="headerlink" href="#2-logischen-schalter-hinzufugen" title="Permanent link">&para;</a></h2>
 <p><img alt="Logischer Schalter für niedrigen Akkustand" src="../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
-<p>Fügen Sie einen neuen <a href="../../model-setup/logical-switches/">logischen Schalter</a> mit dem LiPo-Sensor als Quelle hinzu. Ein langer Druck auf <code>ENT</code> beim markierten Sensor öffnet die Auswahl, welcher seiner Werte verwendet werden soll:</p>
+<p>Fügen Sie einen neuen <a href="../../model-setup/logical-switches/">logischen Schalter</a> hinzu und wählen Sie den Lipo-Sensor als Quelle. Wenn der Lipo-Sensor markiert ist, drücken Sie lange die <code>ENT</code>-Taste, um einen Optionsdialog aufzurufen, in dem Sie auswählen, welcher seiner Werte verwendet werden soll:</p>
 <p><img alt="Niedrigste Zelle auswählen" src="../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
 <ul>
-<li>Minimale Packspannung / Maximale Packspannung</li>
-<li><strong>Niedrigste Zellenspannung</strong> / Höchste Zellenspannung</li>
+<li>Minimale Akku-Packspannung / maximale Akku-Packspannung</li>
+<li><strong>Niedrigste Zellenspannung</strong> / höchste Zellenspannung</li>
 <li>Zellenanzahl</li>
-<li>Einzelne Zellenspannungen (nur auswählbar, solange der Sensor tatsächlich mit einem gebundenen Empfänger verbunden und ein LiPo angeschlossen ist)</li>
+<li>Einzelne Zellenspannungen (nur als Quelle auswählbar, wenn der Sensor tatsächlich an einen gebundenen Empfänger angeschlossen und ein Lipo angeschlossen ist)</li>
 </ul>
-<p>Wählen Sie <strong>Lowest</strong> (niedrigste Zellenspannung) — der Wert, auf den es bei einem LVC-artigen Schutz ankommt.</p>
+<p>Wählen Sie <strong>niedrigste</strong> (Zellenspannung) — den Wert, auf den es bei einem LVC-artigen Schutz ankommt.</p>
 <p><img alt="Niedrigste Zelle ausgewählt" src="../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
-<p>Setzen Sie den Vergleichswert auf etwa <strong>3,4 V</strong> und <strong>Verzögerung vor Aktivierung</strong> auf <strong>4 Sekunden</strong> — der Schalter wird wahr, sobald die niedrigste Zelle durchgehend 4 s oder länger unter 3,4 V pro Zelle liegt. (3,4 V <em>unter Last</em> erholen sich nach dem Wegfall der Last typischerweise auf etwa 3,7 V, dieser Schwellwert spiegelt also einen echten Spannungseinbruch wider und nicht nur kurzzeitige Störungen.)</p>
+<p>Stellen Sie den Wert auf z. B. <strong>3,4V</strong> und die <strong>Verzögerung bevor aktiv</strong> auf <strong>4 Sekunden</strong>. Der logische Schalter wird WAHR/aktiv, wenn die niedrigste Zellenspannung 4 Sekunden oder länger unter 3,4 V pro Zelle bleibt. (Ein Schwellenwert von 3,4 V <em>unter Last</em> wird sich auf etwa 3,7 V erholen, wenn keine Last mehr anliegt — der Schwellenwert bildet also einen echten Spannungseinbruch ab und nicht nur kurzzeitige Störungen.)</p>
 <p><img alt="Fertiggestellter logischer Schalter" src="../../assets/how-to-low-batt-lsw-summary.png" /></p>
-<h2 id="3-sonderfunktion-hinzufugen">3. Sonderfunktion hinzufügen<a class="headerlink" href="#3-sonderfunktion-hinzufugen" title="Permanent link">&para;</a></h2>
-<p><img alt="Sonderfunktion: BattLow" src="../../assets/how-to-low-batt-sf-battlow.png" /></p>
-<p>Fügen Sie eine <a href="../../model-setup/special-functions/">Sonderfunktion „Audio abspielen“</a> hinzu, setzen Sie die <strong>Aktivierungsbedingung</strong> auf den logischen Schalter <code>BattLow</code>, wählen Sie eine Stimme und fügen Sie unter <strong>Sequenz</strong> einen Schritt <strong>Wert ansagen</strong> für die LiPo-Gesamtspannung hinzu:</p>
+<h2 id="3-spezialfunktion-hinzufugen">3. Spezialfunktion hinzufügen<a class="headerlink" href="#3-spezialfunktion-hinzufugen" title="Permanent link">&para;</a></h2>
+<p><img alt="Spezialfunktion: BattLow" src="../../assets/how-to-low-batt-sf-battlow.png" /></p>
+<p>Fügen Sie eine <a href="../../model-setup/special-functions/">Spezialfunktion „AUDIO abspielen“</a> hinzu, setzen Sie <strong>aktiviert</strong> auf den Logikschalter <code>BattLow</code>, wählen Sie die Stimme, die Sie verwenden möchten, und fügen Sie unter <strong>Sequenz</strong> einen <strong>Wert ansagen</strong>-Befehl für die LiPo-Gesamtspannung hinzu:</p>
 <p><img alt="Wert ansagen: LiPo" src="../../assets/how-to-low-batt-sf-play-value-lipo.png" />
 <img alt="Übersicht der Sequenz" src="../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
-<p>Mit <strong>Wiederholung</strong> auf 10 Sekunden wird die LiPo-Spannung alle 10 s angesagt, solange die niedrigste Zelle unterhalb des Schwellwerts von 3,4 V/4 s bleibt.</p>
+<p>Mit <strong>wiederholen</strong> auf 10 Sekunden wird die Lipo-Spannung alle 10 Sekunden angesagt, solange die niedrigste Zelle unter dem Schwellenwert von 3,4 V für 4 Sekunden bleibt.</p>
 
 
 
@@ -3465,7 +3465,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Anleitungen">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Abschnitt „Gewusst wie“">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3475,7 +3475,7 @@
                 Zurück
               </span>
               <div class="md-ellipsis">
-                Anleitungen
+                Abschnitt „Gewusst wie“
               </div>
             </div>
           </a>

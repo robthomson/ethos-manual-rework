@@ -2267,7 +2267,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2464,7 +2464,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3482,16 +3482,16 @@
 
 <h1 id="modellauswahl">Modellauswahl<a class="headerlink" href="#modellauswahl" title="Permanent link">&para;</a></h1>
 <p><img alt="Modellassistent – Flugzeug" src="../../assets/model-modelselect-model-wizard-airplane.png" /></p>
-<p>Erstellt, wählt, klont und löscht Modelle und verwaltet die
-benutzerdefinierten Kategorieordner, in denen sie organisiert sind.</p>
+<p>Hier werden Modelle erstellt, ausgewählt, geklont und gelöscht sowie die
+benutzerdefinierten Kategorieordner verwaltet, in denen sie abgelegt sind.</p>
 <h2 id="modellordner-verwalten">Modellordner verwalten<a class="headerlink" href="#modellordner-verwalten" title="Permanent link">&para;</a></h2>
 <p><img alt="Modellordner" src="../../assets/model-modelselect-folders.png" /></p>
 <p>Ethos ermöglicht es, Modelle in eigenen Ordnern zu gruppieren – typischerweise
 etwa Flugzeug, Segler, Heli, Quad, Warbird, Boot, Auto, Vorlage oder Archiv.
-Solange kein Ordner angelegt ist, liegen die Modelle in einem automatischen
-Ordner <strong>Uncategorized</strong> (wird beim Upgrade auf Ethos 1.1.0 alpha 17+ oder
-beim Kopieren einer Modelldatei aus anderer Quelle nach <code>\Models</code> erstellt);
-Ethos löscht ihn wieder, sobald er leer ist.</p>
+Solange kein Ordner angelegt ist, liegen die Modelle in einem automatisch
+erzeugten Ordner <strong>Uncategorized</strong> (er wird beim Upgrade auf Ethos 1.1.0
+alpha 17+ angelegt oder wenn eine Modelldatei aus einer anderen Quelle nach
+<code>\Models</code> kopiert wird); Ethos löscht ihn wieder, sobald er leer ist.</p>
 <p>Um einen Ordner zu erstellen, tippen Sie auf <strong>+</strong> neben „Uncategorized“ (oder
 halten Sie <code>PAGE</code> auf/ab gedrückt), vergeben einen Namen (bis zu 15 Zeichen)
 und bestätigen. Ordner werden alphabetisch sortiert, wobei <strong>Uncategorized</strong>
@@ -3508,17 +3508,18 @@ wechseln</strong> und tippen anschließend auf das Ziel:</p>
 <p>Wählen Sie die Kategorie, in der das Modell erstellt werden soll, tippen Sie
 auf <strong>+</strong> und dann auf <strong>Modell erstellen</strong>, um den Assistenten zu starten
 (legen Sie die Kategorie zuvor an, falls sie noch nicht existiert). Assistenten
-gibt es für <strong>Flugzeug</strong>, <strong>Segler</strong>, <strong>Hubschrauber</strong>, <strong>Multirotor</strong> und
-<strong>Sonstiges</strong>; jeder führt durch die Grundeinstellungen des jeweiligen
-Modelltyps, einschließlich optionaler vorbereiteter Mischer für stabilisierte
-FrSky-Empfänger (Gain, Stabilisierungsmodus). Modellnamen dürfen bis zu 15
-Zeichen lang sein.</p>
+zur Modellerstellung gibt es für <strong>Flugzeug</strong>, <strong>Segler</strong>, <strong>Hubschrauber</strong>,
+<strong>Multirotor</strong> und <strong>Andere</strong>; jeder führt durch die Grundeinstellungen des
+jeweiligen Modelltyps, einschließlich optionaler vordefinierter Mischer für
+stabilisierte FrSky-Empfänger (Gain, Stabilisierungsmodus). Modellnamen dürfen
+bis zu 15 Zeichen lang sein.</p>
 <h3 id="stabilisierte-empfanger-und-kanalreihenfolge">Stabilisierte Empfänger und Kanalreihenfolge<a class="headerlink" href="#stabilisierte-empfanger-und-kanalreihenfolge" title="Permanent link">&para;</a></h3>
 <p><img alt="Assistent: Flugzeug" src="../../assets/model-modelselect-model-wizard-airplane.png" /></p>
 <p>Stabilisierte FrSky-Empfänger benötigen zwingend die Kanalreihenfolge
 <strong>AETR</strong> – belassen Sie <a href="../../system-setup/controls/">Steuerknüppel → Kanalreihenfolge</a>
-auf der Vorgabe AETR mit aktivierter Option <strong>Erste vier Kanäle fest</strong>, damit
-die Ausgabe des Assistenten dem entspricht, was der Empfänger erwartet.</p>
+auf der Standardeinstellung AETR mit aktivierter Option <strong>Erste vier Kanäle
+fest</strong>, damit die Ausgabe des Assistenten dem entspricht, was der Empfänger
+erwartet.</p>
 <p>Der Assistent vergibt die Kanäle von rechts nach links. Für 2 Querruder + 1
 Höhenruder + 1 Seitenruder + 1 Motor ergibt sich:</p>
 <table>
@@ -3551,21 +3552,21 @@ Höhenruder + 1 Seitenruder + 1 Motor ergibt sich:</p>
 </tr>
 </tbody>
 </table>
-<p>Mit dieser Zuordnung ist das Querruder-Differential im Normalfall <strong>positiv</strong>
+<p>Mit dieser Zuordnung ist die Querruder-Differenzierung im Normalfall <strong>positiv</strong>
 (mehr Ausschlag nach oben als nach unten). Die FrSky-Empfängeranleitungen
 dokumentieren derzeit die <em>umgekehrte</em> Konvention (von links nach rechts, also
 Kanal 1 = linkes Querruder, Kanal 5 = rechtes Querruder) – in diesem Fall
-müsste das Differential für denselben physikalischen Effekt <strong>negativ</strong> sein.</p>
+müsste die Differenzierung für denselben physikalischen Effekt <strong>negativ</strong> sein.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Es wird empfohlen, durchgängig die Ethos-Konvention zu verwenden – alle
 Stabilisierungsfunktionen arbeiten in beiden Fällen korrekt, da die
-Kompensationsrichtung bei der Stabilisierungseinrichtung festgelegt wird.
-Falls Sie die Konvention der Empfängeranleitung dennoch übernehmen müssen,
-ist der einfachste Weg, das Modell wie gewohnt mit dem Assistenten zu
-erstellen und anschließend über <strong>Kanäle tauschen</strong> in den
+Kompensationsrichtung bei der Einrichtung der Stabilisierung festgelegt
+wird. Falls Sie die Konvention der Empfängeranleitung dennoch übernehmen
+müssen, ist der einfachste Weg, das Modell wie gewohnt mit dem Assistenten
+zu erstellen und anschließend über <strong>Kanäle tauschen</strong> in den
 <a href="../outputs/">Ausgängen</a> die beiden Querruderkanäle zu vertauschen – so
-bleibt das Vorzeichen des Differentials im Querrudermischer positiv.</p>
+bleibt das Vorzeichen der Differenzierung im Querrudermischer positiv.</p>
 </div>
 <h3 id="schritte-des-assistenten">Schritte des Assistenten<a class="headerlink" href="#schritte-des-assistenten" title="Permanent link">&para;</a></h3>
 <p><img alt="Assistent: Leitwerkstyp" src="../../assets/model-modelselect-model-wizard-tail.png" />
@@ -3575,22 +3576,22 @@ bleibt das Vorzeichen des Differentials im Querrudermischer positiv.</p>
 <img alt="Assistent: Kanalneuzuordnung" src="../../assets/model-modelselect-model-wizard-ch-reassignment.png" />
 <img alt="Assistent: Name" src="../../assets/model-modelselect-model-wizard-name.png" />
 <img alt="Assistent: Empfänger" src="../../assets/model-modelselect-model-wizard-rx.png" /></p>
-<p>Bei einem <strong>Flugzeug</strong> folgen nach Leitwerkstyp und Ruderanzahl die Anzahl der
+<p>Bei einem <strong>Flugzeug</strong> folgen nach Leitwerks-Typ und Ruderanzahl die Anzahl der
 Motorkanäle und danach die Anzahl der Querruder-/Klappenkanäle.</p>
-<p>Bei der <strong>Leitwerkskonfiguration</strong> stehen klassisches Kreuzleitwerk, V-Leitwerk
-oder kein Leitwerk (Delta/Nurflügel) zur Auswahl:</p>
+<p>Bei der <strong>Leitwerkskonfiguration</strong> stehen klassisches Kreuz-Leitwerk,
+V-Leitwerk oder kein Leitwerk (Delta/Nurflügel) zur Auswahl:</p>
 <ul>
 <li><strong>Delta/Nurflügel</strong> – wird ein Flugzeugmodell mit 2 Querrudern und ohne
-  Leitwerksflächen erstellt, richtet Ethos automatisch die Elevon-Mischung ein,
-  mit Standardgewichtungen von 50 %, sodass volle gleichzeitige Querruder- und
+  Leitwerksflächen erstellt, wird automatisch ein Elevon-Mischer angelegt, mit
+  Standardgewichtungen von 50 %, sodass volle gleichzeitige Querruder- und
   Höhenruderbefehle weiterhin insgesamt 100 % ergeben.</li>
 <li><strong>Delta mit einem stabilisierten Empfänger, der die Mischung übernimmt</strong> –
   wählen Sie stattdessen 1 Querruder und 1 Höhenruder; die Elevon-Mischung
-  erfolgt gemäß der Empfängeranleitung im Empfänger.</li>
+  erfolgt gemäß der zugehörigen Anleitung im Empfänger.</li>
 <li><strong>Delta mit separaten Querruder- und Höhenruderflächen</strong> – lassen Sie den
   Assistenten so laufen, als hätte das Modell ein Leitwerk; er konfiguriert die
   benötigten Querruder- und Höhenruderkanäle (mit oder ohne Seitenruder), und
-  es wird keine Elevon-Mischung angelegt.</li>
+  es wird kein Elevon-Mischer angelegt.</li>
 </ul>
 <p>Im Schritt <strong>Kanalneuzuordnung</strong> können Sie die Standardzuordnung des
 Assistenten überschreiben – beachten Sie dabei, dass stabilisierte Empfänger
@@ -3604,27 +3605,27 @@ Flächenmodell – Beispiel</a>.</p>
 <h2 id="ein-modell-von-einem-anderen-ethos-sender-empfangen">Ein Modell von einem anderen Ethos-Sender empfangen<a class="headerlink" href="#ein-modell-von-einem-anderen-ethos-sender-empfangen" title="Permanent link">&para;</a></h2>
 <p><img alt="Modell empfangen" src="../../assets/model-modelselect-model-receive.png" /></p>
 <p>Wählen Sie die Zielkategorie, tippen Sie auf <strong>+</strong> und dann auf <strong>Modell
-empfangen</strong> – der Sender wartet und zeigt seine Bluetooth-Adresse an, damit der
-sendende Sender ihn finden kann. Tippen Sie auf dem sendenden Sender auf das
-Modell und wählen Sie <strong>Modell senden</strong>; der empfangende Sender bestätigt den
-eingehenden Dateinamen, bevor er ihn annimmt.</p>
+empfangen</strong> – der Sender wartet und zeigt seine Bluetooth-Adresse an, damit ihn
+der sendende Sender finden kann. Tippen Sie auf dem sendenden Sender auf das
+Modell und wählen Sie <strong>Modell senden</strong>; der empfangende Sender lässt den
+eingehenden Dateinamen bestätigen, bevor er ihn annimmt.</p>
 <h2 id="ein-modell-auswahlen">Ein Modell auswählen<a class="headerlink" href="#ein-modell-auswahlen" title="Permanent link">&para;</a></h2>
 <p>Tippen Sie auf <strong>Modellauswahl</strong>, um die Modellliste zu öffnen.</p>
 <div class="admonition note">
 <p class="admonition-title">Modellkonvertierung nach einem Ethos-Upgrade</p>
 <p>Ethos konvertiert jedes Modell einzeln, wenn es nach einem
-Versionsupgrade erstmals <em>ausgewählt</em> wird, nicht alle Modelle auf einmal
-beim Upgrade – dabei entsteht keine spürbare Verzögerung, und die
+Versionsupgrade erstmals <em>ausgewählt</em> wird, und nicht alle Modelle auf
+einmal beim Upgrade – dabei entsteht keine spürbare Verzögerung, und die
 Konvertierung kann problemlos zu einem späteren Zeitpunkt erfolgen, auch
 unter einer noch neueren Ethos-Version. Das Datum <strong>Letzte Änderung</strong> am
 unteren Rand des Auswahlbildschirms wird aktualisiert, wenn eine
 Konvertierung stattfindet (oder wenn Sie das Modell bearbeiten –
 andernfalls bleibt es unverändert).</p>
 </div>
-<p><strong>Schnellauswahl</strong> – ein langer Fingerdruck oder langes <code>ENT</code> auf einem
+<p><strong>Schnellauswahl</strong> – ein langer Fingerdruck oder ein langes <code>ENT</code> auf einem
 Modellsymbol wechselt sofort zu diesem Modell.</p>
 <p><strong>Modellverwaltungsmenü</strong> – tippen Sie auf ein Modell, um es zu markieren, und
-tippen Sie erneut, um das Menü zu öffnen:</p>
+tippen Sie erneut, um das Menü aufzurufen:</p>
 <ul>
 <li><strong>Als aktuelles Modell setzen</strong></li>
 <li><strong>Klonen</strong> – dupliziert das Modell. Ein Klon erhält automatisch eine neue

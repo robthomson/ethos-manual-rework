@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usb-verbindungsmodi" class="md-skip">
+        <a href="#modi-fur-usb-verbindung-zum-pc" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -852,10 +852,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modus-bei-ausgeschaltetem-sender" class="md-nav__link">
+  <a href="#modus-ausgeschaltet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modus bei ausgeschaltetem Sender
+        Modus „Ausgeschaltet“
       
     </span>
   </a>
@@ -874,10 +874,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modus-bei-eingeschaltetem-sender" class="md-nav__link">
+  <a href="#modus-eingeschaltet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modus bei eingeschaltetem Sender
+        Modus „Eingeschaltet“
       
     </span>
   </a>
@@ -2228,7 +2228,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2425,7 +2425,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3345,10 +3345,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modus-bei-ausgeschaltetem-sender" class="md-nav__link">
+  <a href="#modus-ausgeschaltet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modus bei ausgeschaltetem Sender
+        Modus „Ausgeschaltet“
       
     </span>
   </a>
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modus-bei-eingeschaltetem-sender" class="md-nav__link">
+  <a href="#modus-eingeschaltet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modus bei eingeschaltetem Sender
+        Modus „Eingeschaltet“
       
     </span>
   </a>
@@ -3402,35 +3402,37 @@
   
 
 
-<h1 id="usb-verbindungsmodi">USB-Verbindungsmodi<a class="headerlink" href="#usb-verbindungsmodi" title="Permanent link">&para;</a></h1>
+<h1 id="modi-fur-usb-verbindung-zum-pc">Modi für USB-Verbindung zum PC<a class="headerlink" href="#modi-fur-usb-verbindung-zum-pc" title="Permanent link">&para;</a></h1>
 <p><img alt="USB-Menü" src="../../assets/usbmenu.png" /></p>
-<p>Was eine USB-Verbindung zu einem PC bewirkt, hängt davon ab, wie der Sender
-beim Einstecken mit Strom versorgt wurde.</p>
-<h2 id="modus-bei-ausgeschaltetem-sender">Modus bei ausgeschaltetem Sender<a class="headerlink" href="#modus-bei-ausgeschaltetem-sender" title="Permanent link">&para;</a></h2>
-<p>Wird der Sender <strong>im ausgeschalteten Zustand</strong> per USB mit einem PC
-verbunden, wechselt er in den DFU-Modus, der zum Flashen des Bootloaders
-selbst dient.</p>
+<p>Was eine USB-Verbindung zum PC bewirkt, hängt davon ab, wie der Sender beim
+Einstecken mit Strom versorgt war.</p>
+<h2 id="modus-ausgeschaltet">Modus „Ausgeschaltet“<a class="headerlink" href="#modus-ausgeschaltet" title="Permanent link">&para;</a></h2>
+<p>Schließen Sie den Sender <strong>im ausgeschalteten Zustand</strong> über USB an einen PC
+an, so wechselt er in den DFU-Modus, der zum Flashen des Bootloaders selbst
+dient.</p>
 <h2 id="bootloader-mode">Bootloader-Modus<a class="headerlink" href="#bootloader-mode" title="Permanent link">&para;</a></h2>
-<p>Schalten Sie den Sender <strong>mit gedrückter <code>ENT</code>-Taste</strong> ein, um in den
-Bootloader-Modus zu starten (auf dem Bildschirm erscheint „Bootloader“).
-Wird nun USB angeschlossen, wechselt der Status auf „USB Plugged“, und der
-PC bindet <strong>zwei</strong> Laufwerke ein: den internen Flash-Speicher des Senders
-sowie den Inhalt der SD card/eMMC. Dies ist der Modus zum direkten Lesen
-und Schreiben von Dateien in beiden Speicherbereichen, und auf diese Weise
-aktualisiert auch <a href="../../ethos-suite/">Ethos Suite</a> die Firmware des
-Senders — siehe den Abschnitt „Bootloader-Modus“ von Ethos Suite.</p>
-<h2 id="modus-bei-eingeschaltetem-sender">Modus bei eingeschaltetem Sender<a class="headerlink" href="#modus-bei-eingeschaltetem-sender" title="Permanent link">&para;</a></h2>
-<p>Wird USB angeschlossen, während der Sender <strong>normal eingeschaltet</strong> ist,
-erscheint eine Modus-Auswahl:</p>
+<p>Der Sender wird in den Bootloader-Modus versetzt, indem er <strong>mit gedrückter
+<code>ENT</code>-Taste</strong> eingeschaltet wird (auf dem Bildschirm erscheint die
+Statusmeldung „Bootloader“). Wird nun USB angeschlossen, ändert sich die
+Statusmeldung in „USB Plugged“, und der PC zeigt <strong>zwei</strong> externe Laufwerke
+an: den Flash-Speicher des Senders sowie den Inhalt der SD card/eMMC. Dieser
+Modus wird zum direkten Lesen und Schreiben von Dateien auf beide
+Speicherbereiche verwendet, und über ihn aktualisiert auch <a href="../../ethos-suite/">Ethos
+Suite</a> die Firmware des Senders — siehe den
+Abschnitt „Bootloader-Modus“ im Abschnitt Ethos Suite.</p>
+<h2 id="modus-eingeschaltet">Modus „Eingeschaltet“<a class="headerlink" href="#modus-eingeschaltet" title="Permanent link">&para;</a></h2>
+<p>Wird der Sender im eingeschalteten Zustand über USB mit einem PC verbunden,
+erscheint der folgende Auswahldialog:</p>
 <ul>
-<li><strong>Joystick</strong> — meldet den Sender als USB-HID-Joystick an, zur Steuerung
-  von PC-Flugsimulatoren.</li>
-<li><strong>FrSky Suite</strong> — versetzt den Sender in den „Ethos-Modus“ zur
+<li><strong>Joystick</strong> — meldet den Sender als USB-HID-Joystick an und kann so für
+  die Steuerung von RC-Simulatoren am PC verwendet werden.</li>
+<li><strong>FrSky Suite</strong> — versetzt den Sender in den „Ethos-Modus“ für die
   Kommunikation mit <a href="../../ethos-suite/">Ethos Suite</a>.</li>
-<li><strong>Serial</strong> — leitet Lua-Debug-Ausgaben über USB-Seriell (115200 bps)
-  weiter. Der Reiter „Lua Development Tools“ von Ethos Suite verfügt über
-  ein integriertes Terminal zur Anzeige; unter Windows kann ein Treiber für
-  einen virtuellen COM-Port erforderlich sein.</li>
+<li><strong>Serial</strong> — im seriellen Modus werden Lua-Fehlersuch-Spuren an
+  USB-Serial gesendet (115200 bps). Die Registerkarte „Lua Development
+  Tools“ in der Ethos Suite verfügt über ein integriertes Terminalfenster
+  zur Anzeige; unter Umständen wird ein Windows Virtual COM Port Treiber
+  benötigt.</li>
 </ul>
 
 

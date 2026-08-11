@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3381,8 +3381,8 @@
 
 
 <h1 id="redundante-empfangerkonfiguration-testen">Redundante Empfängerkonfiguration testen<a class="headerlink" href="#redundante-empfangerkonfiguration-testen" title="Permanent link">&para;</a></h1>
-<p>Redundanz ist nur dann sinnvoll, wenn sie vor dem Flug tatsächlich getestet
-wird — hier wird vorausgesetzt, dass ein <a href="../../model-setup/rf-system/#redundant-receivers">redundanter
+<p>Redundanz ist nur dann sinnvoll, wenn sie vor dem Flug auch tatsächlich
+getestet wird — dabei wird vorausgesetzt, dass ein <a href="../../model-setup/rf-system/#redundant-receivers">redundanter
 Empfänger</a> bereits
 konfiguriert ist.</p>
 <div class="admonition note">
@@ -3392,23 +3392,23 @@ konfiguriert ist.</p>
 </div>
 <h2 id="a-test-im-realen-einsatz">A. Test im realen Einsatz<a class="headerlink" href="#a-test-im-realen-einsatz" title="Permanent link">&para;</a></h2>
 <p>Wenn der Hauptempfänger auf 2,4 GHz und der redundante Empfänger auf 900 MHz
-arbeitet, starten Sie eine
-<a href="../../model-setup/rf-system/#range-check">Reichweitenprüfung</a> und entfernen
-Sie sich vom Modell, bis die 2,4-GHz-Verbindung abreißt (über die Warnung
-„RSSI Critical" hinaus). Der redundante 900-MHz-Empfänger sollte an diesem
-Punkt die Steuerung übernehmen.</p>
+arbeitet, starten Sie einen
+<a href="../../model-setup/rf-system/#range-check">Reichweitentest</a> und entfernen Sie
+sich so weit vom Modell, bis die 2,4-GHz-Verbindung abreißt (also über die
+Warnung „RSSI Critical“ hinaus). Der redundante 900-MHz-Empfänger sollte an
+diesem Punkt die Steuerung übernehmen.</p>
 <h2 id="b-test-auf-der-werkbank">B. Test auf der Werkbank<a class="headerlink" href="#b-test-auf-der-werkbank" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Normalen Aufbau prüfen</strong> — beide Empfänger gebunden, beide grünen LEDs
-   leuchten, Steuerfunktionen reagieren normal.</li>
+<li><strong>Normale Konfiguration prüfen</strong> — beide Empfänger gebunden, beide LEDs
+   leuchten grün, alle Steuerfunktionen reagieren normal.</li>
 <li><strong>Hauptempfänger an eine andere Model ID binden</strong> — legen Sie ein
-   Wegwerf-Testmodell (z. B. „TestRx") mit einer anderen Model ID an und
-   binden Sie den <em>Haupt</em>empfänger daran. Wechseln Sie zurück zum zu
-   testenden Modell: Die LED des Hauptempfängers sollte nun <strong>rot</strong> leuchten
-   (anderweitig gebunden), die LED des redundanten Empfängers bleibt
-   <strong>grün</strong> — und die Steuerung sollte weiterhin funktionieren. Damit ist
-   nachgewiesen, dass der redundante Empfänger allein das Modell flugfähig
-   hält.</li>
+   Wegwerf-Testmodell (z. B. „TestRx“) mit einer anderen Model ID an und
+   binden Sie den <em>Haupt</em>empfänger daran. Wechseln Sie anschließend zurück
+   zum zu testenden Modell: Die LED des Hauptempfängers sollte nun <strong>rot</strong>
+   leuchten (anderweitig gebunden), die LED des redundanten Empfängers
+   bleibt <strong>grün</strong> — und die Steuerung sollte weiterhin funktionieren. Damit
+   ist nachgewiesen, dass allein der redundante Empfänger das Modell
+   flugfähig hält.</li>
 <li><strong>Hauptempfänger erneut binden</strong> — wieder an seine normale Model ID.
    Vergewissern Sie sich, dass beide LEDs wieder grün leuchten und die
    Steuerfunktionen arbeiten, bevor Sie den Test als abgeschlossen

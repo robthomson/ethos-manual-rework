@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sr8sr10-modellkonfiguration-und-kanalreihenfolge-andern" class="md-skip">
+        <a href="#sr8sr10-modell-setup-und-andern-der-kanalreihenfolge" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -2482,10 +2482,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ein-neues-modell-anlegen" class="md-nav__link">
+  <a href="#ein-neues-modell-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ein neues Modell anlegen
+        Ein neues Modell erstellen
       
     </span>
   </a>
@@ -3334,10 +3334,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ein-neues-modell-anlegen" class="md-nav__link">
+  <a href="#ein-neues-modell-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ein neues Modell anlegen
+        Ein neues Modell erstellen
       
     </span>
   </a>
@@ -3380,31 +3380,30 @@
   
 
 
-<h1 id="sr8sr10-modellkonfiguration-und-kanalreihenfolge-andern">SR8/SR10 – Modellkonfiguration und Kanalreihenfolge ändern<a class="headerlink" href="#sr8sr10-modellkonfiguration-und-kanalreihenfolge-andern" title="Permanent link">&para;</a></h1>
-<p>Die stabilisierten Empfänger der SRx-Serie von FrSky erwarten eine bestimmte
-Kanalreihenfolge. Es gibt zwei Szenarien: ein neues Modell von Grund auf für
-einen solchen Empfänger anlegen oder ein bestehendes Modell entsprechend
-umstellen.</p>
+<h1 id="sr8sr10-modell-setup-und-andern-der-kanalreihenfolge">SR8/SR10 – Modell-Setup und Ändern der Kanalreihenfolge<a class="headerlink" href="#sr8sr10-modell-setup-und-andern-der-kanalreihenfolge" title="Permanent link">&para;</a></h1>
+<p>Die stabilisierten SRx-Empfänger von FrSky erwarten eine bestimmte
+Kanalreihenfolge. Es gibt zwei Fälle: ein neues Modell von Grund auf für einen
+solchen Empfänger anlegen oder ein bestehendes Modell entsprechend umstellen.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshots folgen</p>
 <p>Für diese Seite liegen noch keine Simulator-Screenshots vor — siehe <a href="../../contributing/screenshot-pipeline/">Screenshot
 Pipeline</a>.</p>
 </div>
-<h2 id="ein-neues-modell-anlegen">Ein neues Modell anlegen<a class="headerlink" href="#ein-neues-modell-anlegen" title="Permanent link">&para;</a></h2>
-<p>Der Assistent unter <a href="../../model-setup/model-select/">Modellauswahl</a> fasst
-Ruderflächen gleicher Funktion standardmäßig zusammen (z. B. 2 Querruder →
-<code>AAETR</code>), SRx-Empfänger benötigen jedoch die ersten vier Kanäle fest in der
-Reihenfolge <strong>AETRA</strong>.</p>
+<h2 id="ein-neues-modell-erstellen">Ein neues Modell erstellen<a class="headerlink" href="#ein-neues-modell-erstellen" title="Permanent link">&para;</a></h2>
+<p>Der Wizard unter <a href="../../model-setup/model-select/">Modellauswahl</a> fasst Flächen
+mit gleicher Funktion normalerweise zusammen (z. B. 2 Querruder → <code>AAETR</code>), die
+SRx-Empfänger benötigen jedoch die ersten vier Kanäle fest in der Reihenfolge
+<strong>AETRA</strong>.</p>
 <ol>
-<li>Prüfen Sie unter <a href="../../system-setup/controls/">Bedienelemente</a>, dass die
-   <strong>Kanalreihenfolge</strong> auf <code>AETR</code> steht.</li>
+<li>Vergewissern Sie sich unter <a href="../../system-setup/controls/">Steuerknüppel</a>, dass
+   die <strong>Reihenfolge der Kanäle</strong> auf <code>AETR</code> steht.</li>
 <li>Aktivieren Sie <strong><a href="../../system-setup/controls/#first-four-channels-fixed">Erste vier Kanäle
-   fest</a></strong> — dadurch
-   fasst der Assistent die ersten vier Kanäle nicht mehr zusammen und behält
-   strikt die Reihenfolge <code>AETRA…</code> bei, unabhängig davon, wie viele Flächen
-   der jeweiligen Funktion die Zelle besitzt.</li>
-<li>Führen Sie den Assistenten zum Anlegen des Modells wie gewohnt aus — die
-   ersten 5 Kanäle ergeben sich als <code>AETRA</code>.</li>
+   fest</a></strong> — dadurch fasst
+   der Wizard die ersten vier Kanäle nicht mehr zusammen und behält strikt die
+   Reihenfolge <code>AETRA…</code> bei, unabhängig davon, wie viele Flächen der jeweiligen
+   Funktion das Modell besitzt.</li>
+<li>Durchlaufen Sie den Wizard zur Modellerstellung wie gewohnt — die ersten
+   5 Kanäle ergeben sich dann als <code>AETRA</code>.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Selbsttest bei Archer-Empfängern</p>
@@ -3415,8 +3414,8 @@ startet der Selbsttest nicht.</p>
 </div>
 <h2 id="ein-bestehendes-modell-umsortieren">Ein bestehendes Modell umsortieren<a class="headerlink" href="#ein-bestehendes-modell-umsortieren" title="Permanent link">&para;</a></h2>
 <p>Die Umstellung eines bestehenden Modells (z. B. aktuell <code>AAETRFF</code>) auf die
-Reihenfolge für stabilisierte Empfänger (<code>AETRAE</code>, anschließend Kanal 9 Gain,
-10/11 Flugphasen, 12 Selbsttest bei älteren SxR-Einheiten) erfolgt über eine
+Reihenfolge für stabilisierte Empfänger (<code>AETRAE</code>, danach Kanal 9 Gain,
+10/11 Flugphasen, 12 Selbsttest bei älteren SxR-Empfängern) erfolgt über eine
 Reihe von Kanaltauschen in den <a href="../../model-setup/outputs/#swap-channels">Ausgängen</a>.</p>
 <p>Ausgangslage:</p>
 <table>
@@ -3469,7 +3468,7 @@ Gain/Flugphasen/Selbsttest auf 9–12).</p>
    (Querruder2), tippen Sie erneut darauf, wählen Sie <strong>Kanäle tauschen</strong> und
    tauschen Sie ihn mit einem freien Kanal (z. B. CH9). Der Tausch wirkt sofort —
    alle Mischer, die einen der beiden Kanäle verwenden, werden automatisch
-   aktualisiert.</li>
+   angepasst.</li>
 <li><strong>CH3 (Höhenruder) → CH2 tauschen.</strong></li>
 <li><strong>CH4 (Gas) → CH3 tauschen.</strong></li>
 <li><strong>CH5 (Seitenruder) → CH4 tauschen.</strong></li>

@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3493,27 +3493,27 @@
 <h1 id="im-flug-einstellbare-kompensationskurve">Im Flug einstellbare Kompensationskurve<a class="headerlink" href="#im-flug-einstellbare-kompensationskurve" title="Permanent link">&para;</a></h1>
 <h2 id="warum">Warum<a class="headerlink" href="#warum" title="Permanent link">&para;</a></h2>
 <p>Das Ausfahren der Klappen verändert die Profilwölbung — Hochdecker neigen
-zum "Aufbäumen", Tiefdecker zum Absacken — und erfordert eine
+zum „Aufbäumen“, Tiefdecker zum Absacken — und erfordert eine
 Höhenruderkorrektur, die nicht linear zum Klappenausschlag verläuft, also
 eine Kurve statt eines festen Offsets. Diese Anleitung nutzt
 <a href="../../model-setup/variables/">Vars</a>, um die Punkte einer
 Kompensationskurve <strong>im Flug</strong> einstellbar zu machen — über eine
-umgewidmete Gastrimmung, gesteuert davon, welchem Kurvenpunkt der
+umgewidmete Gastrimmung, abhängig davon, welchem Kurvenpunkt der
 Klappenknüppel gerade am nächsten ist. Sie baut auf dem Schritt zur
 Höhenruderkompensation aus <a href="../butterfly-mixer/">Anleitung:
 Butterfly-Mischer</a> auf.</p>
 <h2 id="1-kurventyp-wahlen">1. Kurventyp wählen<a class="headerlink" href="#1-kurventyp-wahlen" title="Permanent link">&para;</a></h2>
 <p>Eine <a href="../../model-setup/curves/">benutzerdefinierte Kurve</a> mit 5 Punkten
 reicht für eine sanfte Kompensation aus, ohne unnötig komplex zu werden.
-Punkt 5 (ganz rechts, Klappenknüppel vollständig oben / keine Klappen)
-bleibt immer auf Null fixiert — ohne ausgefahrene Klappen ist keine
-Kompensation nötig. Die anderen 4 Punkte werden über Vars einstellbar
-gemacht. Da der Klappenknüppel häufig zwischen zwei definierten Punkten
-steht, müssen in dieser Überlappungszone beide benachbarten Punkte
-gemeinsam einstellbar sein.</p>
+Punkt 5 (ganz rechts, Klappenknüppel ganz oben / keine Klappen) bleibt
+immer auf Null fixiert — ohne ausgefahrene Klappen ist keine Kompensation
+nötig. Die anderen 4 Punkte werden über Vars einstellbar gemacht. Da der
+Klappenknüppel häufig zwischen zwei definierten Punkten steht, müssen in
+dieser Überlappungszone beide benachbarten Punkte gemeinsam einstellbar
+sein.</p>
 <h2 id="2-uberlappende-bereiche-berechnen">2. Überlappende Bereiche berechnen<a class="headerlink" href="#2-uberlappende-bereiche-berechnen" title="Permanent link">&para;</a></h2>
 <p>Punkt-zu-Punkt-Bereiche (mit freundlicher Genehmigung übernommen von Mike
-Shellims "Crow-aware adaptive elevator trim" für OpenTX auf rc-soar.com —
+Shellims „Crow-aware adaptive elevator trim“ für OpenTX auf rc-soar.com —
 leicht erweitert, sodass der Bereich von Pt2 bis +100 % reicht; die
 Begründung dafür steht in <a href="#6-apply-the-curve">Schritt 6</a>):</p>
 <table>
@@ -3578,8 +3578,8 @@ befindet:</p>
 <p><img alt="Übersicht der Vars" src="../../assets/how-in-flight-comp-vars.png" /></p>
 <p>Vier <a href="../../model-setup/variables/">Vars</a>, <code>VAdjPt2</code>–<code>VAdjPt5</code>, jeweils mit
 dem Bereich 0–50 % (bei Bedarf erweitern) und einer Aktion mit
-<strong>umgewidmeter Gastrimmung</strong> — Schrittweite 1,0 %, als Aktivierungsbedingung
-der jeweils passende logische Schalter:</p>
+<strong>umgewidmeter Gastrimmung</strong> — Schrittweite 1,0 %, als
+Aktivierungsbedingung der jeweils zugehörige logische Schalter:</p>
 <p><img alt="VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2.png" />
 <img alt="Aktion VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2-2.png" />
 <img alt="VAdjPt3" src="../../assets/how-in-flight-comp-var-vadjpt3.png" />
@@ -3589,35 +3589,36 @@ der jeweils passende logische Schalter:</p>
 <img alt="VAdjPt5" src="../../assets/how-in-flight-comp-var-vadjpt5.png" />
 <img alt="Aktion VAdjPt5" src="../../assets/how-in-flight-comp-var-vadjpt5-2.png" /></p>
 <p>Da immer nur ein logischer Schalter aktiv ist (in den Überlappungszonen
-höchstens zwei), stellt dieselbe physische Trimmung je nach Klappenstellung
-gefahrlos unterschiedliche Vars ein.</p>
+höchstens zwei), stellt dieselbe physische Trimmung je nach
+Klappenstellung gefahrlos unterschiedliche Vars ein.</p>
 <h2 id="5-kompensationskurve-definieren">5. Kompensationskurve definieren<a class="headerlink" href="#5-kompensationskurve-definieren" title="Permanent link">&para;</a></h2>
 <p><img alt="Kompensationskurve" src="../../assets/how-in-flight-comp-var-comp-curve.png" />
 <img alt="Punkte der Kompensationskurve" src="../../assets/how-in-flight-comp-var-comp-curve-pts.png" /></p>
-<p>Eine neue benutzerdefinierte Kurve mit 5 Punkten (z. B. "EleComp") mit
-aktivierter Option <strong>Smooth</strong>. Auf den Punkten 1–4 jeweils <code>ENT</code> lang
-drücken und über <strong>Quelle verwenden</strong> <code>VAdjPt5</code>…<code>VAdjPt2</code> zuweisen
-(Punkt 5 bleibt gemäß Schritt 1 fest auf 0).</p>
+<p>Eine neue benutzerdefinierte Kurve mit 5 Punkten (z. B. „EleComp“) mit
+aktiviertem <strong>Glätten</strong>. Auf den Punkten 1–4 jeweils <code>ENT</code> lang drücken
+und über <strong>Quelle verwenden</strong> <code>VAdjPt5</code>…<code>VAdjPt2</code> zuweisen (Punkt 5
+bleibt gemäß Schritt 1 fest auf 0).</p>
 <h2 id="6-apply-the-curve">6. Kurve anwenden<a class="headerlink" href="#6-apply-the-curve" title="Permanent link">&para;</a></h2>
 <p>Diese Kurve wird genau an der Stelle verwendet, an der <a href="../butterfly-mixer/#7-add-the-elevator-compensation-curve-and-mix">Anleitung:
 Butterfly-Mischer</a>
-seine EleComp-Kurve in den Mischer für die Höhenruderkompensation einbindet.</p>
-<p>Wenn möglich, sollte man von realen Daten ausgehen (Herstellerangaben,
+seine EleComp-Kurve in den Mischer für die Höhenruderkompensation
+einbindet.</p>
+<p>Wenn möglich, sollten Sie von realen Daten ausgehen (Herstellerangaben,
 Beiträge aus der Community), wie viel Höhenruderweg ein bestimmter
-Klappenausschlag erfordert; andernfalls sind wenige Millimeter Kompensation
-bei vollem Klappenausschlag ein sinnvoller Ausgangspunkt.</p>
+Klappenausschlag erfordert; andernfalls sind wenige Millimeter
+Kompensation bei vollem Klappenausschlag ein sinnvoller Ausgangspunkt.</p>
 <div class="admonition tip">
 <p class="admonition-title">Vorgehen beim Abstimmen</p>
-<p>Mit kleinen Klappenausschlägen und kleinen Trimmschritten beginnen.
-<code>AdaptivePt2</code> lässt sich <strong>ganz ohne ausgefahrene Klappen</strong> abstimmen —
-kurz etwas Klappe geben, wieder zurücknehmen und jeweils ein wenig
-Kompensation eindrehen, statt unter Zeitdruck gegen ein aufbäumendes
-oder absackendes Modell antrimmen zu müssen. Zur Kontrolle erneut
-etwas Klappe geben und bei Bedarf nachjustieren. Sobald Pt2 passt,
-zum nächsten Punkt in Knüppelmittelstellung übergehen — war für Pt2
-eine große Trimmänderung nötig, lohnt es sich zu landen und die
-verbleibenden Punkte jeweils etwas größer als den vorherigen
-einzustellen, statt blind zu raten.</p>
+<p>Beginnen Sie mit kleinen Klappenausschlägen und kleinen
+Trimmschritten. <code>AdaptivePt2</code> lässt sich <strong>ganz ohne ausgefahrene
+Klappen</strong> abstimmen — kurz etwas Klappe geben, wieder zurücknehmen
+und jeweils ein wenig Kompensation eindrehen, statt unter Zeitdruck
+gegen ein aufbäumendes oder absackendes Modell antrimmen zu müssen.
+Zur Kontrolle erneut etwas Klappe geben und bei Bedarf nachjustieren.
+Sobald Pt2 passt, gehen Sie zum nächsten Punkt in
+Knüppelmittelstellung über — war für Pt2 eine große Trimmänderung
+nötig, lohnt es sich zu landen und die verbleibenden Punkte jeweils
+etwas größer als den vorherigen einzustellen, statt blind zu raten.</p>
 </div>
 
 

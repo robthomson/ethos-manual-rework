@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#warnung-bei-verbrauchter-akkukapazitat" class="md-skip">
+        <a href="#batteriekapazitatswarnung" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3480,32 +3480,35 @@
   
 
 
-<h1 id="warnung-bei-verbrauchter-akkukapazitat">Warnung bei verbrauchter Akkukapazität<a class="headerlink" href="#warnung-bei-verbrauchter-akkukapazitat" title="Permanent link">&para;</a></h1>
+<h1 id="batteriekapazitatswarnung">Batteriekapazitätswarnung<a class="headerlink" href="#batteriekapazitatswarnung" title="Permanent link">&para;</a></h1>
 <p>Warnung anhand der <strong>verbrauchten Kapazität</strong> (mAh) statt der Spannung –
 ein direkteres Maß dafür, wie viel des Akkupacks tatsächlich verbraucht
 ist. Je nach vorhandener Hardware gibt es zwei Wege dorthin.</p>
 <h2 id="variante-a-ein-esc-der-neuron-serie">Variante A: ein ESC der Neuron-Serie<a class="headerlink" href="#variante-a-ein-esc-der-neuron-serie" title="Permanent link">&para;</a></h2>
-<p>Die Neuron-Regler von FrSky melden den Verbrauch direkt – ein berechneter
-Sensor ist nicht nötig. Stellen Sie <a href="../../system-setup/devices/">Receiver Options → Telemetry
-Port</a> auf S.Port, schließen Sie die
-Telemetrieleitung des Neuron an und <a href="../../model-setup/telemetry/#discovering-sensors">suchen Sie die
-Sensoren</a> – der
-gesuchte Sensor ist <strong>ESC Consumption</strong>.</p>
+<p>Die ESCs der FrSky Neuron-Serie melden den Verbrauch direkt – ein
+berechneter Sensor ist dafür nicht nötig. Stellen Sie in den
+<a href="../../system-setup/devices/">Empfängeroptionen den Telemetrieanschluss</a>
+auf die Option S.Port, verbinden Sie den Telemetrieanschluss des Neuron
+ESC über ein S.Port-Kabel mit Ihrem Empfänger und aktivieren Sie die
+Option <a href="../../model-setup/telemetry/#discovering-sensors">„Sensoren suchen“</a> –
+der Sensor, der Sie interessiert, ist <strong>ESC Consumption</strong>.</p>
 <ol>
-<li>Legen Sie einen <a href="../../model-setup/logical-switches/">logischen
-   Schalter</a> auf <code>ESC Consumption</code>
-   an, der oberhalb von (beispielsweise) 900 mAh wahr wird – etwa 60 %
-   eines Akkupacks, der mit rund 30 % Restkapazität landen soll.</li>
-<li>Fügen Sie eine <a href="../../model-setup/special-functions/">Sonderfunktion „Play
-   audio“</a> hinzu, als aktive
+<li>Fügen Sie einen neuen <a href="../../model-setup/logical-switches/">logischen
+   Schalter</a> hinzu, um <code>ESC
+   Consumption</code> zu überwachen; er wird WAHR/aktiv, wenn der Verbrauch
+   z. B. 900 mAh übersteigt – ungefähr 60 % eines Akkupacks, der mit
+   noch etwa 30 % Restkapazität landen soll.</li>
+<li>Fügen Sie eine <a href="../../model-setup/special-functions/">Spezialfunktion „AUDIO
+   abspielen“</a> hinzu, als aktive
    Bedingung den neuen Schalter, mit einem Schritt <strong>Wert ansagen</strong> für
    <code>ESC Consumption</code>.</li>
 </ol>
-<p>Als zweite Absicherung melden Neuron-Regler außerdem <strong>ESC Voltage</strong> –
-richten Sie einen zweiten logischen Schalter genauso ein wie bei
-<a href="../low-battery-warning/">Warnung bei niedriger Akkuspannung</a> (unter
-3,4 V/Zelle bei 4s – also z. B. 13,6 V für einen 4S-Akku), mit einer
-eigenen „Play audio“-Funktion, die sich alle 5 Sekunden wiederholt.</p>
+<p>Als zusätzliche Sicherheitsmaßnahme melden die Neuron-Regler außerdem
+<strong>ESC Voltage</strong> – richten Sie einen zweiten logischen Schalter genauso
+ein wie unter <a href="../low-battery-warning/">Warnung bei niedriger
+Akkuspannung</a> beschrieben (4 Sekunden lang unter
+3,4 V pro Zelle – also z. B. 13,6 V bei einem 4S-Akku), mit einer eigenen
+Funktion „AUDIO abspielen“, die sich alle 5 Sekunden wiederholt.</p>
 <h2 id="variante-b-stromsensor-berechneter-sensor">Variante B: Stromsensor + berechneter Sensor<a class="headerlink" href="#variante-b-stromsensor-berechneter-sensor" title="Permanent link">&para;</a></h2>
 <p>Meldet der Regler keinen Verbrauch, erledigt ein Stromsensor (z. B.
 FrSky FASxxx) in Kombination mit einem <a href="../../model-setup/telemetry/#calculated-sensors">berechneten Sensor
@@ -3526,14 +3529,13 @@ Kapazität des Akkus (z. B. 2800 mAh); <strong>Source</strong> auf <code>Current
 <p><img alt="Sensor bearbeiten" src="../../assets/how-to-consumption-sensor-edit.png" />
 <img alt="Sensor bearbeiten 2" src="../../assets/how-to-consumption-sensor-edit2.png" /></p>
 <p>Stellen Sie <strong>Reset</strong> auf das Systemereignis <code>!Telemetry Active</code> – wählen
-Sie <strong>Telemetry Active</strong>, drücken Sie lange auf <code>ENT</code> und wählen Sie
-<strong>Invert</strong> – damit der laufende Gesamtwert automatisch zurückgesetzt
-wird, sobald die Telemetrie abreißt (das Modell also ausgeschaltet
-wird).</p>
+Sie <strong>Telemetry Active</strong>, drücken Sie lange die <code>ENT</code>-Taste und wählen
+Sie <strong>Invert</strong> – damit der laufende Gesamtwert automatisch zurückgesetzt
+wird, sobald die Telemetrie abreißt (das Modell also ausgeschaltet wird).</p>
 <h3 id="3-ansagen-bei-zwischenschritten">3. Ansagen bei Zwischenschritten<a class="headerlink" href="#3-ansagen-bei-zwischenschritten" title="Permanent link">&para;</a></h3>
 <p><img alt="Logischer Schalter Delta 200 mAh" src="../../assets/how-to-consumption-lsw-delta200mAh.png" /></p>
-<p>Legen Sie einen logischen Schalter mit der Funktion <strong>Δ &gt; X</strong> auf
-<code>Consumption</code> an, der bei jedem festen Zuwachs auslöst – zum Beispiel
+<p>Fügen Sie einen logischen Schalter mit der Funktion <strong>Δ &gt; X</strong> auf
+<code>Consumption</code> hinzu, der bei jedem festen Zuwachs auslöst – zum Beispiel
 alle 200 mAh, ein praktischer Teilbetrag eines 2800-mAh-Akkus.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -3543,7 +3545,7 @@ nach einem festen Zeitfenster zurückgesetzt zu werden. Geben Sie
 <strong>Min Duration</strong> beim Testen einen kleinen Wert ungleich null – bei
 0,0 ist die Auslösung zu kurz, um sie auf dem Bildschirm zu sehen.</p>
 </div>
-<p>Fügen Sie eine „Play Audio“-Funktion mit diesem Schalter als aktiver
+<p>Fügen Sie eine Funktion „AUDIO abspielen“ mit diesem Schalter als aktiver
 Bedingung hinzu, mit einem Schritt „Wert ansagen“ für <code>Consumption</code>:</p>
 <p><img alt="Delta-Ansage abspielen" src="../../assets/how-to-consumption-sf-play-delta200mAh.png" />
 <img alt="Wert ansagen: Consumption" src="../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
@@ -3551,8 +3553,9 @@ Bedingung hinzu, mit einem Schritt „Wert ansagen“ für <code>Consumption</co
 <p><img alt="Zweiter logischer Schalter" src="../../assets/how-to-consumption-lsw2-play-battlow.png" /></p>
 <p>Ein zweiter logischer Schalter löst einmalig aus, sobald eine feste
 Schwelle für geringe Restkapazität überschritten wird – z. B. 2000 mAh
-von einem 2800-mAh-Akku – kombiniert mit einer „Play Audio“-Funktion,
-die sich alle 10 Sekunden wiederholt, bis das Modell zurückgesetzt wird:</p>
+von einem 2800-mAh-Akku – kombiniert mit einer Funktion „AUDIO
+abspielen“, die sich alle 10 Sekunden wiederholt, bis das Modell
+zurückgesetzt wird:</p>
 <p><img alt="Wert ansagen bei niedrigem Akkustand" src="../../assets/how-to-consumption-sf2-play-battlow.png" />
 <img alt="Wert ansagen: Consumption bei niedrigem Akkustand" src="../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
 

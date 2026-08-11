@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2340,7 +2340,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3359,63 +3359,64 @@
 
 
 <h1 id="ethos-suite">Ethos Suite<a class="headerlink" href="#ethos-suite" title="Permanent link">&para;</a></h1>
-<p>Ethos Suite ist die Begleitanwendung für Windows/Mac zur Verwaltung eines
-Senders, auf dem Ethos läuft und der über USB verbunden ist.</p>
+<p>Die Ethos Suite ist die begleitende Windows-/Mac-Anwendung zur Verwaltung
+eines Senders, auf dem Ethos läuft und der über USB angeschlossen ist.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshots ausstehend</p>
-<p>Ethos Suite ist eine eigenständige PC-Anwendung und nicht der Sender
+<p>Die Ethos Suite ist eine eigenständige PC-Anwendung und nicht der Sender
 selbst, daher verwendet dieser Abschnitt nicht die im Simulator
 aufgenommenen Screenshots wie der Rest des Handbuchs — siehe
 <a href="../contributing/screenshot-pipeline/">Screenshot-Pipeline</a>.</p>
 </div>
-<p>Nach dem Verbinden kann Ethos Suite:</p>
+<p>Nach dem Verbinden kann die Ethos Suite:</p>
 <ol>
 <li>Typ, ID und installierte Versionen des Senders auslesen — Firmware,
    Bootloader, internes HF-Modul, Dateien im Flash-Speicher sowie Dateien
    auf SD card/eMMC.</li>
-<li>Den Sender zwischen Bootloader-Modus und laufendem Ethos hin- und
-   herschalten.</li>
+<li>Den Sender vom Bootloader-Modus in den Ethos-Modus umschalten, mit der
+   Möglichkeit, wieder zurückzuschalten.</li>
 <li>Installierte Versionen mit den aktuellen vergleichen und automatisch
-   aktualisieren — nur veraltete Komponenten, alles unabhängig vom Stand
-   oder einzelne Komponenten.</li>
-<li>Modelle über den <strong>Model Manager</strong> auf Datenträger sichern oder eine
-   frühere Sicherung wiederherstellen (erforderlich, da Modelldateien
-   zwischen Firmware-Versionen nicht abwärtskompatibel sind).</li>
-<li>Über das <strong>Download center</strong> beliebige Firmware von der FrSky-Download-Seite
+   aktualisieren — nur veraltete Komponenten, alle Komponenten unabhängig
+   vom Stand oder einzelne Komponenten.</li>
+<li>Modelle über die <strong>Modell Verwaltung</strong> auf der Festplatte sichern oder
+   eine zuvor gespeicherte Sicherung wiederherstellen (erforderlich, da
+   Modelldateien zwischen Firmware-Versionen nicht abwärtskompatibel sind).</li>
+<li>Über das <strong>Download-Center</strong> jede Firmware von der FrSky Download-Seite
    herunterladen und den Sender als Proxy verwenden, um ein Modul, einen
    Sensor, ein Servo oder einen Empfänger direkt zu flashen.</li>
-<li>Bilder und Audiodateien in die nativen Formate von Ethos konvertieren.</li>
+<li>Bilder und Audiodateien in die Ethos-eigenen Formate umwandeln.</li>
 <li><strong>Lua-Entwicklungswerkzeuge</strong> bereitstellen — API-Dokumentation,
    Demo-Skripte und ein Debug-Terminal.</li>
-<li>Den Bootloader des Senders im DFU-Modus flashen (Verbindung bei
-   ausgeschaltetem Sender), unabhängig davon, ob die eigene Firmware des
-   Senders noch läuft.</li>
-<li>Den internen Speicher von X18/S, TW Lite, XE und X20 Pro/R/RS über das
-   <strong>Repair Tool</strong> reparieren, wenn NAND nicht gelesen werden kann oder
-   Einstellungen nicht gespeichert werden.</li>
+<li>Den Bootloader des Senders im DFU-Modus über eine ausgeschaltete
+   Verbindung flashen, unabhängig davon, ob die Firmware des Senders noch
+   läuft.</li>
+<li>Den internen Speicher der Sendertypen X18/S, TW Lite, XE und
+   X20 Pro/R/RS über die <strong>Reparatur-Werkzeuge</strong> reparieren, wenn der
+   Sender nicht vom NAND lesen kann oder die Einstellungen nicht
+   gespeichert werden können.</li>
 <li>Die USB-Laufwerke des Senders sauber auswerfen.</li>
 <li>Beim Start benachrichtigen, wenn ein Update für die Suite selbst
     verfügbar ist (wird beim Beenden installiert).</li>
 </ol>
 <h2 id="verbindungsmodi">Verbindungsmodi<a class="headerlink" href="#verbindungsmodi" title="Permanent link">&para;</a></h2>
-<p>Neben ihren Werkzeugen arbeitet die Suite in drei verschiedenen
+<p>Neben ihren Hilfsprogrammen arbeitet die Suite in drei verschiedenen
 Verbindungszuständen des Senders:</p>
 <ul>
-<li><strong>Sender im Bootloader-Modus</strong> — der Reiter <strong>Radio</strong> prüft und
-  aktualisiert die Firmware sowie die Dateien in Flash/SD card/eMMC; der
-  <strong>Model Manager</strong> sichert den Sender oder stellt ihn wieder her.</li>
-<li><strong>Sender im Ethos-Modus</strong> — die Suite nutzt den Sender als Proxy (über
-  die Werkzeuge <strong>FRSK Flasher</strong>/Download center), um das interne Modul
-  oder einen beliebigen angeschlossenen Sensor/Servo/Empfänger direkt zu
-  flashen.</li>
+<li><strong>Sender im Bootloader-Modus</strong> — die Registerkarte <strong>Sender</strong> prüft und
+  aktualisiert die Firmware sowie die Dateien in Flash/SD card/eMMC; die
+  <strong>Modell Verwaltung</strong> sichert den Sender oder stellt ihn wieder her.</li>
+<li><strong>Sender im Ethos-Modus</strong> — die Suite verwendet den Sender als Proxy
+  (über die Werkzeuge <strong>FRSK Flasher</strong>/Download-Center), um das interne
+  Modul oder einen beliebigen angeschlossenen Sensor, ein Servo oder einen
+  Empfänger direkt zu flashen.</li>
 <li><strong>Sender im DFU-Modus</strong> — Verbindung bei ausgeschaltetem Sender,
   verwendet vom <strong>DFU Flasher</strong>, um den Bootloader selbst zu flashen,
-  z. B. wenn eine beschädigte Firmware das normale Einschalten des
-  Senders verhindert.</li>
+  z. B. wenn eine beschädigte Firmware das normale Einschalten des Senders
+  verhindert.</li>
 </ul>
 <p>Siehe <a href="migration/">Migration</a> für die erstmalige Umstellung eines
-vorhandenen Senders auf Ethos Suite und <a href="operation/">Bedienung</a> für die
-Oberfläche der Suite selbst.</p>
+vorhandenen Senders auf die Ethos Suite und <a href="operation/">Bedienung</a> für
+die Oberfläche der Suite selbst.</p>
 
 
 

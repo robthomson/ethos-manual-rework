@@ -2143,7 +2143,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3492,30 +3492,31 @@
 
 <h1 id="ein-fbus-system-konfigurieren">Ein FBUS-System konfigurieren<a class="headerlink" href="#ein-fbus-system-konfigurieren" title="Permanent link">&para;</a></h1>
 <p><a href="../../model-setup/telemetry/#how-frsky-telemetry-works">FBUS</a> (früher
-F.Port2) legt Steuerung und Telemetrie auf eine Leitung, sodass sich mehrere
-FBUS-Geräte eine einzige, in Reihe geschaltete Verbindung mit vollständiger
-drahtloser Konfiguration teilen können. Diese Anleitung verkabelt zwei
-Xact-Servos an den Querruderkanälen (1 und 5) des <a href="../../tutorials/basic-fixed-wing/">Basis-Beispiels für
-Flächenmodelle</a>.</p>
+F.Port2) legt Steuerung und Telemetrie auf eine gemeinsame Leitung, sodass sich
+mehrere FBUS-Geräte eine einzige, in Reihe (Daisy-Chain) geschaltete Verbindung
+teilen und vollständig drahtlos konfiguriert werden können. In dieser Anleitung
+werden zwei Xact-Servos an den Querruderkanälen (1 und 5) des <a href="../../tutorials/basic-fixed-wing/">grundlegenden
+Beispiels für ein Flächenflugzeug</a>
+angeschlossen.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshots ausstehend</p>
 <p>Für diese Seite gibt es noch keine Simulator-Screenshots — siehe <a href="../../contributing/screenshot-pipeline/">Screenshot
 Pipeline</a>.</p>
 </div>
 <h2 id="1-aktuelle-firmware-herunterladen">1. Aktuelle Firmware herunterladen<a class="headerlink" href="#1-aktuelle-firmware-herunterladen" title="Permanent link">&para;</a></h2>
-<p>FBUS benötigt aktuelle Firmware sowohl auf dem Empfänger als auch auf den
-Geräten — Xact-Servos etwa benötigen v2.0.1 oder neuer. Die entsprechenden
-Updates finden Sie auf der
+<p>FBUS setzt aktuelle Firmware sowohl im Empfänger als auch in den Geräten voraus
+— Xact-Servos benötigen z. B. v2.0.1 oder neuer. Die entsprechenden Updates
+finden Sie auf der
 <a href="https://www.frsky-rc.com/download/">FrSky-Downloadseite</a>.</p>
 <h2 id="2-firmware-flashen">2. Firmware flashen<a class="headerlink" href="#2-firmware-flashen" title="Permanent link">&para;</a></h2>
 <p>Kopieren Sie die Firmware-Dateien in den Ordner <code>Firmware/</code> auf der SD card/eMMC.
 Stecken Sie im <a href="../../system-setup/file-manager/">Dateimanager</a> das Servo an den
 S.Port-Anschluss des Senders (weiße/gelbe Ader zur Kerbe hin), wählen Sie die
-Firmware-Datei aus und wählen Sie <strong>Flash External Device</strong>.</p>
+Firmware-Datei aus und anschließend <strong>Flash External Device</strong>.</p>
 <h2 id="3-5-physical-ids-konfigurieren">3 / 5. Physical IDs konfigurieren<a class="headerlink" href="#3-5-physical-ids-konfigurieren" title="Permanent link">&para;</a></h2>
 <p>Beide Servos verwenden standardmäßig die Physical ID <code>0C</code> hex / Application ID
 <code>6800</code> hex — auf dem gemeinsamen Bus kommt es damit zu einem Konflikt, sofern
-nicht eines geändert wird. Je nach Empfängertyp gibt es zwei Wege:</p>
+nicht eines der beiden geändert wird. Je nach Empfängertyp gibt es zwei Wege:</p>
 <p><strong>Über den S.Port-Anschluss des Senders</strong> (beliebiger Empfänger):</p>
 <ol>
 <li>Servo 1 anstecken, <strong>Device Config → XAct</strong> aufrufen und <strong>Module</strong> auf
@@ -3534,34 +3535,35 @@ angeschlossen — siehe <a href="#4-configure-the-receiver-for-fbus">Schritt 4</
    (<code>0C</code>/<code>6800</code>/<code>CH1</code>), <strong>Save to flash</strong>.</li>
 <li>Nur mit angeschlossenem Servo 2 (Pin5) das gleiche Menü aufrufen (Device
    Config kommuniziert immer nur mit einem Servo) — auf <code>0D</code>/<code>6801</code>/<code>CH5</code>
-   ändern, <strong>Save to flash</strong>. Anschließend Device Config erneut aufrufen, um
-   zu prüfen, ob die Änderung übernommen wurde.</li>
+   ändern, <strong>Save to flash</strong>. Rufen Sie anschließend Device Config erneut auf,
+   um zu prüfen, ob die Änderung übernommen wurde.</li>
 </ol>
 <h2 id="4-configure-the-receiver-for-fbus">4. Den Empfänger für FBUS konfigurieren<a class="headerlink" href="#4-configure-the-receiver-for-fbus" title="Permanent link">&para;</a></h2>
 <p><strong>SR10 Pro</strong>: <a href="../../model-setup/rf-system/">RF System</a> → Schaltfläche des
-Empfängers → <strong>Options</strong> → <strong>Telemetry Port</strong> auf <strong>FBUS</strong> setzen. Xact-Servos
-werden dann in Reihe an diesem Port angeschlossen; da jedes Servo nur einen
-Anschluss besitzt, verteilt ein F.Port2-Mehrkanal-Extender (FP2CH4/6/8) das
-Signal auf mehrere Geräte.</p>
+Empfängers → <strong>Options</strong> → <strong>Telemetry Port</strong> auf <strong>FBUS</strong> setzen. Die
+Xact-Servos werden dann in Reihe an diesen Port angeschlossen; da jedes Servo
+nur einen Anschluss besitzt, verteilt ein F.Port2-Mehrkanal-Extender
+(FP2CH4/6/8) das Signal auf mehrere Geräte.</p>
 <p><strong>TD-R18 Tandem</strong>: RF System → Schaltfläche des Empfängers → <strong>Options</strong> →
 einzelne Pins (z. B. <strong>Pin1</strong>, <strong>Pin5</strong>) auf <strong>FBUS</strong> setzen — auf diese Weise
 lassen sich beliebig viele Pins umbelegen, sodass Extender vollständig entfallen;
-jeder FBUS-zugewiesene Pin führt dasselbe FBUS-Signal.</p>
+jeder auf FBUS gesetzte Pin führt dasselbe FBUS-Signal.</p>
 <h2 id="5-fbus-steuerung-der-servos-prufen">5. FBUS-Steuerung der Servos prüfen<a class="headerlink" href="#5-fbus-steuerung-der-servos-prufen" title="Permanent link">&para;</a></h2>
 <p>Servo 1 an Pin1 und Servo 2 an Pin5 anschließen (die Querruderkanäle des
-Flächenmodell-Beispiels), einschalten und prüfen, ob die Kanäle 1 und 5 die
+Flächenflugzeug-Beispiels), einschalten und prüfen, ob die Kanäle 1 und 5 die
 jeweils richtigen Servos bewegen.</p>
 <h2 id="6-fbus-telemetrie-prufen">6. FBUS-Telemetrie prüfen<a class="headerlink" href="#6-fbus-telemetrie-prufen" title="Permanent link">&para;</a></h2>
 <p>Löschen Sie bei angeschlossenen Servos alle vorhandenen <code>SRV</code>-Sensoren unter
-<a href="../../model-setup/telemetry/">Telemetrie</a> und starten Sie die Sensorsuche
-erneut. Jedes Servo meldet 4 Sensoren: Strom, Spannung, Temperatur und Status
+<a href="../../model-setup/telemetry/">Telemetrie</a> und führen Sie die Sensorsuche erneut
+durch. Jedes Servo meldet 4 Sensoren: Strom, Spannung, Temperatur und Status
 (<code>OK</code> im Normalfall).</p>
 <h2 id="7-spatere-konfigurationsanderungen">7. Spätere Konfigurationsänderungen<a class="headerlink" href="#7-spatere-konfigurationsanderungen" title="Permanent link">&para;</a></h2>
 <p>Ist ein Modell vollständig verkabelt, ist es unpraktisch, ein einzelnes Servo zu
 isolieren, um es über Device Config neu zu konfigurieren. Gehen Sie stattdessen
 zur Telemetrie, suchen Sie einen Sensor des betreffenden Servos (z. B.
 <code>SRV1 curr</code>) und wählen Sie <strong>Configure</strong> — damit wird die Konfiguration genau
-dieses Servos direkt geöffnet. Nach jeder Änderung <strong>Save to flash</strong> ausführen.</p>
+dieses Servos direkt geöffnet. Führen Sie nach jeder Änderung
+<strong>Save to flash</strong> aus.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Ändern Sie in diesem Bildschirm nicht versehentlich die Physical ID oder die

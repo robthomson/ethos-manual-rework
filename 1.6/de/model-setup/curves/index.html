@@ -2217,7 +2217,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2414,7 +2414,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3383,24 +3383,24 @@
 <h1 id="kurven">Kurven<a class="headerlink" href="#kurven" title="Permanent link">&para;</a></h1>
 <p><img alt="Kurventypen" src="../../assets/model-curves-type.png" /></p>
 <p>Wiederverwendbare Übertragungskurven für <a href="../mixes/#anatomy-of-a-mix">Mischer</a> oder
-<a href="../outputs/#editing-a-channel">Ausgänge</a> — das integrierte Expo steht in beiden
+<a href="../outputs/#editing-a-channel">Ausgänge</a> — das eingebaute Expo steht in beiden
 direkt zur Verfügung, alles Weiterführende wird hier definiert (oder über
 <strong>Kurve hinzufügen</strong>, das direkt aus beiden Bearbeitungsbildschirmen erreichbar
-ist). Bis zu 50 Kurven sind verfügbar; standardmäßig existiert keine davon (Expo
-ist unabhängig davon immer integriert). Mit <strong>+</strong> wird eine Kurve hinzugefügt;
-durch Antippen einer vorhandenen Kurve erscheinen
+ist). Es stehen bis zu 50 Kurven zur Verfügung; standardmäßig ist keine davon
+angelegt (Expo ist unabhängig davon immer eingebaut). Mit <strong>+</strong> wird eine Kurve
+hinzugefügt; beim Antippen einer vorhandenen Kurve erscheinen
 <strong>Bearbeiten</strong>/<strong>Verschieben</strong>/<strong>Kopieren-Einfügen</strong>/<strong>Klonen</strong>/<strong>Löschen</strong>.</p>
 <p><img alt="Kurve hinzufügen" src="../../assets/model-curves-add.png" /></p>
 <h2 id="kurventypen">Kurventypen<a class="headerlink" href="#kurventypen" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Expo</strong> — Standardwert 40; positive Werte machen die Reaktion um die
-  Mittelstellung weicher, negative Werte machen sie schärfer. Eine weichere
-  Reaktion um die Knüppelmitte hilft, Übersteuerung zu vermeiden, insbesondere
-  bei weniger erfahrenen Piloten.</li>
+<li><strong>Expo</strong> — Standardwert 40; ein positiver Wert macht die Reaktion um die
+  Mittelstellung herum weicher, ein negativer Wert macht sie schärfer. Eine
+  weichere Reaktion um die Knüppelmitte hilft, ein Übersteuern zu vermeiden,
+  insbesondere bei weniger erfahrenen Piloten.</li>
 </ul>
 <p><img alt="Expo" src="../../assets/model-curves-expo.png" /></p>
 <ul>
-<li><strong>Funktion</strong> — ein kleiner Satz fester mathematischer Formen:</li>
+<li><strong>Funktion</strong> — eine kleine Auswahl fester mathematischer Formen:</li>
 </ul>
 <p><img alt="Funktionstypen" src="../../assets/model-curves-fn-types.png" /></p>
 <ul>
@@ -3433,8 +3433,8 @@ durch Antippen einer vorhandenen Kurve erscheinen
 <p><img alt="|f|" src="../../assets/model-curves-fn-barf.png" /></p>
 </li>
 </ul>
-<p>Jeder Kurventyp — auch Funktion — besitzt zudem einen <strong>Offset</strong>, der die Kurve
-  auf der Y-Achse nach oben oder unten verschiebt (eine Nachkommastelle
+<p>Jeder Kurventyp — auch die Funktion — besitzt zudem einen <strong>Offset</strong>, der die
+  Kurve auf der Y-Achse nach oben oder unten verschiebt (eine Nachkommastelle
   Genauigkeit, wie bei Y-Werten generell):</p>
 <p><img alt="Funktions-Offset" src="../../assets/model-curves-fn-xgt0-offset.png" /></p>
 <ul>
@@ -3444,8 +3444,8 @@ durch Antippen einer vorhandenen Kurve erscheinen
 <p><img alt="Benutzerdefinierte Kurve mit 5 Punkten" src="../../assets/model-curves-custom5.png" /></p>
 <ul>
 <li>
-<p><strong>Glätten</strong> — legt eine glatte Kurve durch alle Punkte statt gerader
-    Teilstrecken zwischen ihnen.</p>
+<p><strong>Glätten</strong> — legt eine weiche Kurve durch alle Punkte, statt sie durch
+    gerade Teilstrecken zu verbinden.</p>
 <p><img alt="Geglättete Kurve" src="../../assets/model-curves-custom5-2-smooth.png" /></p>
 </li>
 <li>
@@ -3456,17 +3456,17 @@ durch Antippen einer vorhandenen Kurve erscheinen
 <p><img alt="Einfacher Modus aus" src="../../assets/model-curves-custom-easy-off.png" /></p>
 </li>
 </ul>
-<p><strong>Bedienelemente des Editors</strong> (gleiches Schema wie beim <a href="../outputs/#balance-channels">Editor für
-  Ausgleichskurven der Ausgänge</a>):</p>
+<p><strong>Bedienelemente des Editors</strong> (nach dem gleichen Schema wie der <a href="../outputs/#balance-channels">Editor für
+  die Ausgleichskurven der Ausgänge</a>):</p>
 <ul>
 <li><strong>Quelle</strong> — standardmäßig die eigene(n) Mischerquelle(n) der Kurve, oder
     <strong>Automatischer Analogeingang</strong>, um den zuerst bewegten
-    Steuerknüppel/Schieberegler/Potentiometer zu übernehmen.</li>
-<li>Einrasten auf den nächstgelegenen Punkt beim Drehgeber sowie ein Schalter
-    <strong>Sperren</strong>, um die Eingaben einzufrieren, während die resultierende Bewegung
-    der Ruderfläche beobachtet wird.</li>
-<li>Ein Live-Cursor zeigt den aktuellen Eingangswert, der die Kurve ansteuert, um
-    ihn vor dem Anpassen mit einem Punkt in Deckung zu bringen.</li>
+    Steuerknüppel/Schieber/Geber zu übernehmen.</li>
+<li>Einrasten auf den nächstgelegenen Punkt mit dem Drehgeber sowie ein Schalter
+    <strong>Sperren</strong>, um die Eingaben einzufrieren, während die daraus resultierende
+    Bewegung der Ruderfläche beobachtet wird.</li>
+<li>Ein Live-Cursor zeigt den aktuellen Eingangswert an, der die Kurve
+    ansteuert, um ihn vor dem Anpassen mit einem Punkt in Deckung zu bringen.</li>
 </ul>
 <h2 id="eine-kurve-uber-eine-var-ansteuern">Eine Kurve über eine Var ansteuern<a class="headerlink" href="#eine-kurve-uber-eine-var-ansteuern" title="Permanent link">&para;</a></h2>
 <p>Sowohl der <strong>Offset</strong> einer Funktionskurve als auch ein einzelner Punkt einer
@@ -3475,9 +3475,9 @@ durch Antippen einer vorhandenen Kurve erscheinen
 eine umgewidmete Trimmung im Flug verstellen:</p>
 <p><img alt="Funktions-Offset über eine Var" src="../../assets/model-curves-fn-offset-var.png" />
 <img alt="Punkt einer benutzerdefinierten Kurve über eine Var" src="../../assets/model-curves-custom-with-var.png" /></p>
-<p>Siehe <a href="../variables/">Variablen</a> und <a href="../../how-to/in-flight-compensation-curve/">Anleitung: Im Flug verstellbare
-Kompensationskurve</a> für ein
-vollständig durchgearbeitetes Beispiel dieses Musters.</p>
+<p>Ein vollständig durchgearbeitetes Beispiel für dieses Vorgehen finden Sie unter
+<a href="../variables/">Variablen</a> und <a href="../../how-to/in-flight-compensation-curve/">Anleitung: Im Flug verstellbare
+Kompensationskurve</a>.</p>
 
 
 

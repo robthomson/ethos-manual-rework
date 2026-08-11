@@ -1228,10 +1228,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#betriebszeit-des-senders" class="md-nav__link">
+  <a href="#sender-laufzeit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Betriebszeit des Senders
+        Sender-Laufzeit
       
     </span>
   </a>
@@ -1239,10 +1239,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fehler" class="md-nav__link">
+  <a href="#fehlermeldungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fehler
+        Fehlermeldungen
       
     </span>
   </a>
@@ -1250,10 +1250,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#werksreset" class="md-nav__link">
+  <a href="#auf-werkseinstellungen-zurucksetzen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Werksreset
+        Auf Werkseinstellungen zurücksetzen
       
     </span>
   </a>
@@ -2239,7 +2239,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2436,7 +2436,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#betriebszeit-des-senders" class="md-nav__link">
+  <a href="#sender-laufzeit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Betriebszeit des Senders
+        Sender-Laufzeit
       
     </span>
   </a>
@@ -3378,10 +3378,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fehler" class="md-nav__link">
+  <a href="#fehlermeldungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fehler
+        Fehlermeldungen
       
     </span>
   </a>
@@ -3389,10 +3389,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#werksreset" class="md-nav__link">
+  <a href="#auf-werkseinstellungen-zurucksetzen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Werksreset
+        Auf Werkseinstellungen zurücksetzen
       
     </span>
   </a>
@@ -3426,60 +3426,67 @@
 
 <h1 id="informationen">Informationen<a class="headerlink" href="#informationen" title="Permanent link">&para;</a></h1>
 <p><img alt="Systeminformationen" src="../../assets/system-info.png" /></p>
-<p>Angaben zur System-Firmware, Gimbal-Typ, Informationen zum internen/externen HF-Modul,
-Informationen zum gebundenen Empfänger, Betriebszeit des Senders, Fehlerprotokolle und Werksreset.</p>
+<p>Auf der Info-Seite werden Angaben zur System-Firmware, zum Steuerknüppel-Typ, zum
+internen/externen HF-Modul, zum gebundenen Empfänger, zur Sender-Laufzeit sowie
+Fehlermeldungen und das Zurücksetzen auf die Werkseinstellungen angezeigt.</p>
 <h2 id="senderinformationen">Senderinformationen<a class="headerlink" href="#senderinformationen" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Seriennummer</strong> — die Seriennummer des Senders.</li>
-<li><strong>Firmware</strong> — Ethos-Version und Sendertyp (z. B. X20).</li>
-<li><strong>Firmware-Version</strong> — Build-Variante, z. B. FCC, LBT oder Flex.</li>
-<li><strong>Datum</strong> — Erstellungsdatum/-zeit der Firmware.</li>
-<li><strong>Verfügbarer RAM</strong> — freier System-RAM, nützlich zum Aufspüren eines fehlerhaften
-  Lua-Skripts; auch als System-<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
-  verfügbar, sodass der Wert in einem Widget angezeigt werden kann.</li>
-<li><strong>Steuerknüppel</strong> — Version der verbauten Gimbal-Hallsensoren (oder „ADC" bei analogen
-  Gimbals).</li>
-<li><strong>Internes Modul</strong> — Hardware- und Firmware-Versionen des internen HF-Moduls.</li>
-<li><strong>Empfänger</strong> — Details des aktuell gebundenen Empfängers, angezeigt nach dem
-  internen Modul. Teilt sich ein redundanter Empfänger denselben Slot mit dem
-  Hauptempfänger, wechseln sich beide in der Anzeige ab (z. B. ein Archer SR10 Pro
-  zusammen mit dem redundanten R9MM-OTA unter „Receiver1").</li>
-<li><strong>Externes Modul</strong> — Hardware-/Firmware-Details eines eingesetzten externen
-  FrSky-HF-Moduls, das das ACCESS-Protokoll verwendet. Multi-protocol-Module
-  werden hier nicht angezeigt.</li>
+<li><strong>Seriennummer</strong> — Seriennummer des Senders.</li>
+<li><strong>Firmware</strong> — Ethos-Version und Typ des Senders (z. B. X20).</li>
+<li><strong>Version (Firmware)</strong> — Build-Variante, z. B. FCC, LBT oder Flex.</li>
+<li><strong>Datum</strong> — Datum und Uhrzeit der Firmware-Version.</li>
+<li><strong>Verfügbarer RAM</strong> — zeigt das verfügbare System-RAM an. Dies ist nützlich, um nach
+  fehlerhaften Lua-Skripten zu suchen; der Wert ist auch als System-<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
+  verfügbar, so dass er z. B. in einem Widget angezeigt werden kann.</li>
+<li><strong>Knüppel Mode</strong> — die installierte Knüppel-Hall-Sensor-Version (bzw. „ADC“ bei
+  analogen Knüppeln).</li>
+<li><strong>Internes Modul</strong> — Angaben zum internen HF-Modul, einschließlich Hardware- und
+  Firmware-Versionen.</li>
+<li><strong>Empfänger</strong> — die Angaben zum aktuell gebundenen Empfänger werden nach dem
+  internen Modul angezeigt. Wenn ein redundanter Empfänger an denselben Steckplatz wie
+  der Hauptempfänger gebunden ist, werden die Empfängerdetails abwechselnd auf dem
+  Display angezeigt (z. B. ein Archer SR10 Pro neben seinem redundanten R9MM-OTA unter
+  „Empfänger1“).</li>
+<li><strong>Externes Modul</strong> — Angaben zu einem externen FrSky-HF-Modul (falls vorhanden),
+  einschließlich Hardware- und Firmware-Versionen, falls ACCESS-Protokoll.
+  Multi-protocol-Module werden hier nicht angezeigt.</li>
 </ul>
 <p><img alt="X20 Pro Informationen" src="../../assets/system-info-x20pro.png" /></p>
-<h2 id="betriebszeit-des-senders">Betriebszeit des Senders<a class="headerlink" href="#betriebszeit-des-senders" title="Permanent link">&para;</a></h2>
-<p><img alt="Betriebszeit des Senders" src="../../assets/system-info-radio-runtime.png" /></p>
-<p>Erfasst die gesamte Nutzungsdauer des Senders; <strong>Reset</strong> setzt sie auf null zurück.</p>
-<h2 id="fehler">Fehler<a class="headerlink" href="#fehler" title="Permanent link">&para;</a></h2>
-<p><img alt="Fehler" src="../../assets/system-info-errors.png" /></p>
-<p>Ein rotes Dreieck in der oberen Leiste der Hauptansicht bedeutet, dass Ethos einen Fehler
-protokolliert hat, der hier im Detail angezeigt wird. Mögliche Ursachen:</p>
+<h2 id="sender-laufzeit">Sender-Laufzeit<a class="headerlink" href="#sender-laufzeit" title="Permanent link">&para;</a></h2>
+<p><img alt="Sender-Laufzeit" src="../../assets/system-info-radio-runtime.png" /></p>
+<p>Diese Uhr für die Laufzeit des Senders zeigt die Gesamtnutzung des Senders an; mit
+<strong>zurücksetz.</strong> kann sie auf Null zurückgesetzt werden.</p>
+<h2 id="fehlermeldungen">Fehlermeldungen<a class="headerlink" href="#fehlermeldungen" title="Permanent link">&para;</a></h2>
+<p><img alt="Fehlermeldungen" src="../../assets/system-info-errors.png" /></p>
+<p>Ein rotes dreieckiges Fehlerwarnsymbol in der oberen Leiste der Hauptansicht bedeutet,
+dass Ethos einen Fehler festgestellt hat; die Fehlertafel zeigt die Fehler im Detail an.
+Fehler können verursacht werden durch:</p>
 <ul>
-<li><strong>Lua-Skriptfehler</strong> — ein Problem in einem laufenden Lua-Skript.</li>
-<li><strong>RAM-Backup-Fehler</strong> — ein Modell, das zu groß für den Modell-Backup-RAM ist. Ethos
-  hat diesen von 4 K auf 32 K erweitert, sodass der Fall inzwischen unwahrscheinlich ist;
-  tritt er dennoch auf, ist es ein bedeutender Fehler: Das Modell wird bei ausgelöstem
+<li><strong>Lua-Skript-Fehler</strong> — ein Problem in einem laufenden Lua-Skript.</li>
+<li><strong>Fehler bei der RAM-Sicherung</strong> — ein Modell kann so groß sein, dass es den
+  Sicherungsspeicher übersteigt. Ethos hat den RAM-Speicherplatz für die Modellsicherung
+  von 4k auf 32k erweitert, so dass eine Überschreitung unwahrscheinlich ist; tritt sie
+  dennoch auf, ist dies ein schwerwiegender Fehler: Das Modell wird bei ausgelöstem
   <a href="../../getting-started/emergency-mode/">Notfallmodus</a> langsamer von der SD card statt aus
   dem Backup-RAM geladen.</li>
-<li><strong>Verwendung eines Nightly-Firmware-Builds</strong> — ein Hinweis darauf, dass Nightly-Builds
-  nicht zum Fliegen vorgesehen sind.</li>
+<li><strong>Ausführen einer nächtlichen Firmware-Version</strong> — ein Hinweis darauf, dass
+  Nightly-Builds nicht zum Fliegen geeignet sind.</li>
 </ul>
-<p><strong>Reset</strong> löscht die protokollierten Fehler — praktisch während einer Lua-Debugging-Sitzung.</p>
-<h2 id="werksreset">Werksreset<a class="headerlink" href="#werksreset" title="Permanent link">&para;</a></h2>
-<p><img alt="Werksreset" src="../../assets/system-info-factory-reset.png" /></p>
-<p>Setzt den Sender vollständig direkt am Gerät auf die Werkseinstellungen zurück — es ist
-keine PC-Verbindung erforderlich.</p>
-<p><img alt="Bestätigung des Werksresets" src="../../assets/system-info-factory-reset-confirm.png" /></p>
+<p><strong>Reset</strong> ermöglicht das Löschen der protokollierten Fehler — praktisch zum Beispiel
+während Lua-Debug-Sitzungen.</p>
+<h2 id="auf-werkseinstellungen-zurucksetzen">Auf Werkseinstellungen zurücksetzen<a class="headerlink" href="#auf-werkseinstellungen-zurucksetzen" title="Permanent link">&para;</a></h2>
+<p><img alt="Auf Werkseinstellungen zurücksetzen" src="../../assets/system-info-factory-reset.png" /></p>
+<p>Ermöglicht das Zurücksetzen des Senders auf die Werkseinstellungen. Es ist keine
+PC-Verbindung erforderlich, alles wird im Sender durchgeführt.</p>
+<p><img alt="Bestätigung des Zurücksetzens auf Werkseinstellungen" src="../../assets/system-info-factory-reset-confirm.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Beim Bestätigen werden <strong>alle</strong> Modelle, Logs, Screenshots, Dokumente,
-Skripte, Bitmaps und Sendereinstellungen gelöscht. Ein Fortschrittsbalken zeigt
-den Löschvorgang an; danach werden alle Laufwerke ausgehängt und der Sender startet neu.</p>
+<p>Wenn Sie bestätigen, löscht der Sender <strong>alle</strong> Modelle, Protokolldateien,
+Screenshots, Dokumente, Skripte, Bitmaps und die Grundeinstellungen des Senders.
+Während des Löschvorgangs ist ein Fortschrittsbalken zu sehen. Danach werden alle
+Laufwerke getrennt und der Sender neu gestartet.</p>
 </div>
-<p>Die Info-Seite des X20 Pro/R/RS zeigt die entsprechenden Informationen für diese
-Senderfamilie an.</p>
+<p>Die Info-Seite des X20 Pro/R/RS zeigt ähnliche Informationen für diese Senderfamilie an.</p>
 
 
 

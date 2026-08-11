@@ -1397,10 +1397,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aktivierungsbedingung" class="md-nav__link">
+  <a href="#aktive-bedingung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aktivierungsbedingung
+        Aktive Bedingung
       
     </span>
   </a>
@@ -2239,7 +2239,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programmier-Beispiele
   
 
     
@@ -2436,7 +2436,7 @@
   <span class="md-ellipsis">
     
   
-    Anleitungen
+    Abschnitt „Gewusst wie“
   
 
     
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aktivierungsbedingung" class="md-nav__link">
+  <a href="#aktive-bedingung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aktivierungsbedingung
+        Aktive Bedingung
       
     </span>
   </a>
@@ -3428,28 +3428,28 @@
 <p><img alt="Flugphasen" src="../../assets/model-fm.png" /></p>
 <p>Flugphasen (Flight Modes) ermöglichen es, über einen Schalter zwischen
 unterschiedlichen Verhaltensweisen desselben Modells umzuschalten — bei
-Segelflugzeugen etwa Start/Strecke/Speed/Thermik, bei Motorflugzeugen
+Segelflugzeugen z. B. Start/Strecke/Speed/Thermik, bei Motorflugzeugen
 Normal/Start/Landung, bei Hubschraubern Normal (Hochlaufen, Start/Landung) /
 Idle Up 1 (Kunstflug) / Idle Up 2 (3D). Sie nehmen dem Piloten den größten
 Teil des manuellen Umschaltens und Nachtrimmens ab: Eine Flugphase kann
 eigene, unabhängige Trimmungen besitzen und sowohl <a href="../variables/">Variablen</a>
 als auch <a href="../mixes/">Mischer</a> freischalten — zusammen genügt das für
-wirklich komplexe Konfigurationen. Siehe <a href="../../tutorials/basic-fixed-wing/">Einfaches Beispiel für
-Flächenmodelle</a> für Flugphasen an einem
-realen Modell.</p>
+wirklich komplexe Konfigurationen. Ein Beispiel für Flugphasen an einem
+realen Modell finden Sie unter <a href="../../tutorials/basic-fixed-wing/">Einfaches Beispiel für
+Flächenmodelle</a>.</p>
 <p>Standardmäßig sind keine Flugphasen definiert. Tippen Sie auf die
-Standard-Flugphase und wählen Sie <strong>Bearbeiten</strong>, um sie umzubenennen, oder
-<strong>Hinzufügen</strong>, um eine neue anzulegen — bis zu 20 insgesamt.</p>
+Standard-Flugphase und wählen Sie <strong>bearbeiten</strong>, um sie umzubenennen, oder
+<strong>add./hinzuf.</strong>, um eine neue anzulegen — bis zu 20 insgesamt.</p>
 <h2 id="name">Name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
 <p>Ein aussagekräftiger Name — Strecke, Speed, Thermik, Start, Landung, was
 immer passt.</p>
-<h2 id="aktivierungsbedingung">Aktivierungsbedingung<a class="headerlink" href="#aktivierungsbedingung" title="Permanent link">&para;</a></h2>
+<h2 id="aktive-bedingung">Aktive Bedingung<a class="headerlink" href="#aktive-bedingung" title="Permanent link">&para;</a></h2>
 <p><img alt="Flugphasen-Formular" src="../../assets/model-fm-form.png" /></p>
 <p>Eine neu angelegte Flugphase ist zunächst inaktiv (<code>---</code>). Nach dem
-Festlegen kann sie durch eine Schalter- oder Tastenstellung, einen
-Funktionsschalter, einen logischen Schalter, ein Systemereignis
-(Gas-Abschaltung/Leerlaufsperre) oder eine Trimmposition ausgelöst werden.</p>
-<p>Die <strong>Standard</strong>-Flugphase besitzt überhaupt keine Aktivierungsbedingung —
+Festlegen kann sie durch die Auswahl von Schalter- oder Tastenpositionen,
+Funktionsschaltern, Logikschaltern, einem Systemereignis wie Gasabschaltung
+oder -haltung oder Trimmpositionen bedingt werden.</p>
+<p>Die <strong>Standard</strong>-Flugphase besitzt überhaupt keine aktive Bedingung —
 sie ist immer dann aktiv, wenn die Bedingung keiner anderen Flugphase
 erfüllt ist. Es ist stets nur eine Flugphase gleichzeitig aktiv: die erste
 (in der Prioritätsreihenfolge), deren Bedingung aktuell erfüllt ist. Die
@@ -3458,26 +3458,27 @@ aktive Flugphase wird fett dargestellt.</p>
 <p class="admonition-title">Eine Flugphase zu einem bestehenden Modell hinzufügen</p>
 <p>Eine neu hinzugefügte Flugphase ist standardmäßig in jedem Mischer
 aktiv, der bereits flugphasenabhängig ist — prüfen Sie, ob sich jeder
-dieser Mischer weiterhin korrekt verhält, insbesondere ein
-<strong>Lock</strong>-Mischer, der einen Kanal auf eine bestimmte Flugphase festlegt.</p>
+dieser Mischer weiterhin korrekt verhält, insbesondere ein Mischer mit
+der Operation <strong>sperren</strong>, der einen Kanal an eine bestimmte Flugphase
+bindet.</p>
 </div>
 <h2 id="ein-ausblenden">Ein-, Ausblenden<a class="headerlink" href="#ein-ausblenden" title="Permanent link">&para;</a></h2>
-<p>Übergangszeiten für das weiche Überblenden zwischen Flugphasen (z. B. 1
+<p>Übergangszeiten für das weiche Überblenden zwischen den Flugphasen (z. B. 1
 Sekunde in jede Richtung) — dies wirkt sich nur auf Mischer aus, die selbst
 flugphasenabhängig sind.</p>
 <h2 id="verwaltung-der-flugphasen">Verwaltung der Flugphasen<a class="headerlink" href="#verwaltung-der-flugphasen" title="Permanent link">&para;</a></h2>
 <p><img alt="Flugphase verschieben" src="../../assets/model-fm-move.png" />
 <img alt="Zum Verschieben auswählen" src="../../assets/model-fm-move-select.png" />
 <img alt="Phasen 0–3" src="../../assets/model-fm-0to3.png" /></p>
-<p>Tippen Sie eine Flugphase an für <strong>Bearbeiten</strong>, <strong>Hinzufügen</strong>,
-<strong>Klonen</strong> oder <strong>Löschen</strong>. Eine <strong>geklonte</strong> Flugphase übernimmt die
-Einstellungen ihrer Ausgangsphase in jedem Mischer, der Flugphasen
-verwendet — gleiches Verhalten, gleicher Aktiv-/Inaktiv-Zustand — daher
-wird ein Klon standardmäßig als letzte Flugphase hinzugefügt, um bestehende
-Phasen nicht zu beeinträchtigen. <strong>Verschieben</strong> ändert die Priorität einer
-Flugphase: Die Priorität verläuft in aufsteigender Reihenfolge, und (wie
-oben beschrieben) ist diejenige aktiv, deren Bedingung als erste erfüllt
-ist.</p>
+<p>Tippen Sie auf eine Flugphase, um <strong>bearbeiten</strong>, <strong>add./hinzuf.</strong>,
+<strong>klonen</strong> oder <strong>löschen</strong> zu wählen. Eine <strong>geklonte</strong> Flugphase
+übernimmt die Einstellungen ihrer Ausgangsphase in jedem Mischer, der
+Flugphasen verwendet — gleiches Verhalten, gleicher Aktiv-/Inaktiv-Zustand
+— daher wird ein Klon standardmäßig als letzte Flugphase hinzugefügt, um
+bestehende Phasen nicht zu beeinträchtigen. Mit <strong>verschieben</strong> ändern Sie
+die Priorität einer Flugphase: Die Priorität verläuft in aufsteigender
+Reihenfolge, und (wie oben beschrieben) ist diejenige aktiv, deren
+Bedingung als erste erfüllt ist.</p>
 
 
 
