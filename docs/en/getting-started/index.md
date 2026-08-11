@@ -12,3 +12,5 @@ model](user-interface-and-navigation.md) itself (the rotary encoder, the
   Ethos.
 - [USB Connection Modes](usb-connection-modes.md) — what changes when the
   radio is plugged into a PC.
+- [Emergency Mode](emergency-mode.md) — what happens if something goes
+  seriously wrong at a low level.

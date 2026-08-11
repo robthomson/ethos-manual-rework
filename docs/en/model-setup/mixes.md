@@ -17,7 +17,7 @@ contextual menu to edit it, add a new mix, switch to the
 it. Inactive mixes are greyed out, and deleting one always asks for
 confirmation first.
 
-## Anatomy of a mix
+## Anatomy of a mix {: #anatomy-of-a-mix }
 
 Every mix shares the same set of fields, regardless of which category it
 came from. The **aileron** mix is a representative example — elevator and
@@ -115,7 +115,7 @@ mix:
     wizard-created model already accounts for this, but hand-built throttle
     mixes should too.
 
-## Mix libraries
+## Mix libraries {: #mix-libraries }
 
 The **Add mix** dialog's library of predefined mixes is tailored to the
 model category chosen when the model was created — airplane, glider, heli,
@@ -133,7 +133,7 @@ Every library also includes **Free Mix** — a general-purpose mix type
 without a preset input/output, more flexible than the specialized entries
 but requiring more setup to reach the same result.
 
-## Per-channel view
+## Per-channel view {: #per-channel-view }
 
 With enough mixes stacked on the same output, it can be hard to see their
 combined effect from the flat table above. Selecting a mix and choosing

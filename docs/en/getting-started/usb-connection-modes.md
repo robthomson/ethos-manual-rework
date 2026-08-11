@@ -10,7 +10,7 @@ when you plugged it in.
 Connecting the radio to a PC via USB **while it's powered off** puts it
 into DFU mode, used for flashing the bootloader itself.
 
-## Bootloader mode
+## Bootloader mode {: #bootloader-mode }
 
 Power the radio on **with `ENT` held down** to boot into bootloader mode
 (the screen shows "Bootloader"). Connecting USB now changes the status to

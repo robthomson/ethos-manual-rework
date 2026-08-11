@@ -74,7 +74,7 @@ are edited the same way:
 
 ![Slider disabled](../assets/keyboard-numbers-options-disable-slider.png)
 
-## The Options feature
+## The Options feature {: #the-options-feature }
 
 Almost anywhere a value or [source](#choosing-a-source) is expected, a long
 press on `ENT` opens an **Options** dialog — look for the small menu
@@ -93,7 +93,7 @@ into a fixed value:
 
 ![Convert source to value](../assets/source-convert-to-value.png)
 
-### Choosing a source
+### Choosing a source {: #choosing-a-source }
 
 Selecting **Choose a source** opens a two-column picker — a **category**
 first (analogs, switches, logical switches, trims, channels, a gyro axis,
