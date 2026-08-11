@@ -25,16 +25,32 @@ There's no CMS or web editor in front of the content — writers and
 translators work directly in git, the same as any other change to this
 repo:
 
-1. Branch off `main`.
+1. Branch off `main` (in this repo directly — see the fork note below).
 2. Edit the relevant `.md` file(s) under `docs/en/`.
 3. Preview locally with `mkdocs serve` (see the root
-   [README](https://github.com/robthomson/ethos-manual-rework)) or rely on
-   the PR preview once one is wired up.
+   [README](https://github.com/robthomson/ethos-manual-rework)), or just open
+   the pull request and use the automatic PR preview below.
 4. Open a pull request.
 
 Screenshots referenced from a page live next to it in `docs/en/assets/` and
 are just Markdown image links — no special syntax. See
 [Screenshot Pipeline](screenshot-pipeline.md) for how they're generated.
+
+### PR previews
+
+Every pull request against `main` gets its own live preview, built and
+deployed automatically by `.github/workflows/pr-preview.yml`: at
+`manual.rt-rc.com/pr-preview/<PR number>/`, linked in a bot comment on the
+PR and updated on every push. It's removed automatically when the PR closes.
+The main site itself (`manual.rt-rc.com`) is unaffected — previews live
+alongside it in a `pr-preview/` folder on the `gh-pages` branch that survives
+every production deploy.
+
+This only runs for branches pushed directly to this repo, not forks — a PR
+from a fork won't get a live preview (GitHub withholds write access to
+`GITHUB_TOKEN` for fork-triggered `pull_request` workflows, deliberately, so
+a fork can't use CI to push arbitrary content to `gh-pages`). Fork
+contributors can still preview locally with `mkdocs serve`.
 
 ## Translation plan
 

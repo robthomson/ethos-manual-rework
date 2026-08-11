@@ -37,10 +37,27 @@ jobs:
       - name: Add custom domain
         run: echo "manual.rt-rc.com" > site/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          ref: gh-pages
+          path: pages
+
+      - name: Sync build into gh-pages root
+        run: |
+          # Replace everything at the gh-pages root with the new build,
+          # except pr-preview/ -- those are separate deploys (see
+          # pr-preview.yml) and must survive a main-branch deploy.
+          rsync -a --delete \
+            --exclude '.git' \
+            --exclude 'pr-preview' \
+            site/ pages/
+
+      - name: Commit and push
+        run: |
+          cd pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "deploy: ${{ github.sha }}" || exit 0
+          git push origin gh-pages
