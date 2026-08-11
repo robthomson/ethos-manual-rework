@@ -6,6 +6,22 @@ does the next one. Every step below was actually run, in this order, for
 `de`, `fr`, `es`, `it`, `pt-BR`, and `zh`; the gotchas called out are real
 failures hit while doing it, not hypotheticals.
 
+## Checklist
+
+Work through in order; each item links to the section with the actual
+commands and the gotchas hit doing it for real. Don't skip straight to
+step 4 — steps 1 and 3 are cheap and avoid rework later.
+
+- [ ] **[1](#1-confirm-the-locale-code-before-touching-anything)** — Confirm Ethos ships a UI in this language, and pick a locale code `mkdocs-material` actually has a template for (not necessarily the code FrSky's own tooling uses internally — `pb` vs `pt-BR` bit us here).
+- [ ] **[2](#2-add-the-locale-to-mkdocsyml)** — Add the locale to `mkdocs.yml` (no `nav_translations` yet).
+- [ ] **[3](#3-seed-a-glossary-in-scriptstranslatepy)** — Seed a ~30-term glossary in `scripts/translate.py`'s `GLOSSARIES`.
+- [ ] **[4](#4-translate)** — Run `scripts/translate.py --only <code>` (dry-run first); confirm `0 failed`.
+- [ ] **[5](#5-check-for-existing-screenshots-before-considering-the-simulator)** — Check the old `ethos-manual` repo for an already-captured screenshot set before assuming the simulator pipeline is needed; bulk-copy and spot-check visually if one matches.
+- [ ] **[6](#6-check-and-fix-anchor-links)** — Run `python scripts/check_anchors.py --fix`.
+- [ ] **[7](#7-verify-for-real)** — `mkdocs build --strict` and check `$?` is `0` (not just that the output looks clean); `check_anchors.py` reports 0.
+- [ ] **[8](#8-add-nav_translations-once-after-page-coverage-is-complete)** — Once page coverage is complete, add `nav_translations` (leaf labels from each page's own H1, section tabs from the glossary).
+- [ ] **[9](#9-ship-it)** — Commit, push, watch the Action, verify live (allow for CDN propagation lag on brand-new paths).
+
 ## 1. Confirm the locale code before touching anything
 
 Two separate things need to agree, and getting either wrong is annoying to
