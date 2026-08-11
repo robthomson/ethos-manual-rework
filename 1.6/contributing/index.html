@@ -22,6 +22,14 @@
         
           <link rel="alternate" href="./" hreflang="en">
         
+          <link rel="alternate" href="../es/contributing/" hreflang="es">
+        
+          <link rel="alternate" href="../it/contributing/" hreflang="it">
+        
+          <link rel="alternate" href="../pt-BR/contributing/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../zh/contributing/" hreflang="zh">
+        
           <link rel="alternate" href="../de/contributing/" hreflang="de">
         
           <link rel="alternate" href="../fr/contributing/" hreflang="fr">
@@ -172,6 +180,30 @@
           <li class="md-select__item">
             <a href="./" hreflang="en" class="md-select__link">
               English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../es/contributing/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../it/contributing/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../pt-BR/contributing/" hreflang="pt-BR" class="md-select__link">
+              Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../zh/contributing/" hreflang="zh" class="md-select__link">
+              中文
             </a>
           </li>
         
@@ -3279,6 +3311,34 @@
   
   
     <li class="md-nav__item">
+      <a href="adding-a-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a New Language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="translation-status/" class="md-nav__link">
         
   
@@ -3612,10 +3672,13 @@ radio firmware, RC hobbyist audience) and a list of terms that must never
 be translated (physical key names, protocol names, brand names), the same
 technique used by the sister
 <a href="https://github.com/rotorflight/rotorflight-lua-ethos-suite"><code>rotorflight-lua-ethos-suite</code></a>
-repo's own <code>bin/i18n/auto-translate.py</code>. A glossary of terms established
-during the French pilot is baked in for <code>fr</code>; extend
-<code>GLOSSARIES</code> in the script the same way once another locale has a few
-pages translated and reviewed.</p>
+repo's own <code>bin/i18n/auto-translate.py</code>. Each supported locale has its own
+glossary baked into <code>GLOSSARIES</code> in the script for terminology
+consistency from the first translated page.</p>
+<p>Bootstrapping an entirely new locale — from picking the right locale code
+through translation, screenshots, anchor fixes, and nav labels — is a
+repeatable process end to end: see <a href="adding-a-language/">Adding a New
+Language</a> for the full playbook.</p>
 <h3 id="nav-labels-nav_translations">Nav labels (<code>nav_translations</code>)<a class="headerlink" href="#nav-labels-nav_translations" title="Permanent link">&para;</a></h3>
 <p>Tab and sidebar labels in <code>nav:</code> (e.g. "Model Setup") don't pick up a
 locale's translated page title automatically unless the nav entry has no
