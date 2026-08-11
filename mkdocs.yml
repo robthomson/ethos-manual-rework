@@ -49,6 +49,10 @@ plugins:
           default: true
           build: true
 
+extra:
+  version:
+    provider: mike
+
 extra_css:
   - stylesheets/extra.css
 
@@ -142,3 +146,4 @@ nav:
   - Contributing:
       - contributing/index.md
       - Screenshot Pipeline: contributing/screenshot-pipeline.md
+      - Versioning: contributing/versioning.md

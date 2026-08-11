@@ -52,6 +52,13 @@ from a fork won't get a live preview (GitHub withholds write access to
 a fork can't use CI to push arbitrary content to `gh-pages`). Fork
 contributors can still preview locally with `mkdocs serve`.
 
+## Versioning
+
+Multiple firmware versions' manuals (e.g. 1.6 alongside a future Ethos26)
+live in the same repo as separate branches, each deployed to its own
+`manual.rt-rc.com/<version>/` path with a version-select dropdown — see
+[Versioning](versioning.md) for the full scheme and how to cut a new one.
+
 ## Translation plan
 
 Translation tooling is deliberately **not** built yet. Non-technical
@@ -64,9 +71,11 @@ Content is kept in plain Markdown specifically so that path stays open:
   `docs/en/` tree directly, producing a sibling `docs/<locale>/` tree with
   the same file structure.
 - [`mkdocs-static-i18n`](https://github.com/ultrabug/mkdocs-static-i18n) is
-  the likely plugin once a second locale exists — it understands exactly
-  this folder-per-locale layout (`docs/en/…`, `docs/fr/…`) and adds a
-  language switcher automatically.
+  already wired up (`docs_structure: folder`, `en` as the default
+  language) — it understands exactly this folder-per-locale layout
+  (`docs/en/…`, `docs/fr/…`) and adds a language switcher automatically
+  the moment a second locale's folder exists; no further plugin
+  configuration is needed to add one.
 - Screenshots are **not** shared across locales — the Ethos UI itself is
   localized, so each locale's `assets/` folder needs its own screenshots
   captured with that language's radio settings file (see [Screenshot

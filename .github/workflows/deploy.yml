@@ -31,11 +31,26 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build site
+      - name: Validate build
         run: mkdocs build --strict
 
-      - name: Add custom domain
-        run: echo "manual.rt-rc.com" > site/CNAME
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch gh-pages
+        run: git fetch origin gh-pages --depth=1
+
+      # This branch is currently the "1.6" version -- when Ethos26 (or
+      # whatever comes next) work begins, cut a frozen `1.6` branch from
+      # main first, then bump the version string below on main. See
+      # docs/en/contributing/versioning.md.
+      - name: Deploy version 1.6 with mike
+        run: mike deploy --push --update-aliases 1.6 latest
+
+      - name: Set default (root redirect) version
+        run: mike set-default --push latest
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
@@ -43,21 +58,12 @@ jobs:
           ref: gh-pages
           path: pages
 
-      - name: Sync build into gh-pages root
-        run: |
-          # Replace everything at the gh-pages root with the new build,
-          # except pr-preview/ -- those are separate deploys (see
-          # pr-preview.yml) and must survive a main-branch deploy.
-          rsync -a --delete \
-            --exclude '.git' \
-            --exclude 'pr-preview' \
-            site/ pages/
-
-      - name: Commit and push
+      - name: Ensure custom domain is set
         run: |
           cd pages
+          echo "manual.rt-rc.com" > CNAME
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "deploy: ${{ github.sha }}" || exit 0
+          git add CNAME
+          git diff --cached --quiet || git commit -m "chore: set custom domain"
           git push origin gh-pages
