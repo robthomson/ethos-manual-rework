@@ -2047,7 +2047,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2834,7 +2834,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3492,32 +3492,32 @@
 
 <h1 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h1>
 <p><img alt="Ajustes generales" src="../../assets/system-general.png" /></p>
-<p>Abarca los atributos de pantalla, el audio, el vario, la vibración y la barra de herramientas superior.</p>
+<p>Abarca los atributos de pantalla, el audio, el vario, la vibración háptica y la barra de herramientas superior.</p>
 <h2 id="atributos-de-pantalla">Atributos de pantalla<a class="headerlink" href="#atributos-de-pantalla" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Language</strong> — el idioma de los menús de la pantalla (English, 中文, Česky, Deutsch,
   Español, Français, עברית, Italiano, Nederlands, Norsk, Português
   Brasileiro, Polish, Português y otros).</li>
 <li><strong>Keyboard</strong> — disposición del teclado virtual: QWERTY, QWERTZ o AZERTY.</li>
-<li><strong>Brightness</strong> — un deslizador para el brillo de la retroiluminación; mantenga pulsado <code>ENT</code>
-  para controlarlo desde una fuente en su lugar (por ejemplo, un deslizador, como en el ejemplo siguiente),
-  o para forzarlo al mínimo/máximo.</li>
+<li><strong>Brightness</strong> — control deslizante para el brillo de la retroiluminación; si mantiene pulsado <code>ENT</code>
+  podrá gobernarlo desde una fuente (por ejemplo un slider, como en el ejemplo siguiente)
+  o forzarlo al mínimo/máximo.</li>
 </ul>
 <p><img alt="Menú de brillo" src="../../assets/system-general-brightness-menu.png" />
   <img alt="Deslizador de brillo" src="../../assets/system-general-brightness-slider.png" /></p>
 <p>!!! note
-      Si <strong>Brightness</strong> es igual a <strong>Sleep mode brightness</strong>, la pantalla táctil
-      permanece activa incluso mientras está «dormida».</p>
+      Si <strong>Brightness</strong> tiene el mismo valor que <strong>Sleep mode brightness</strong>, la pantalla táctil
+      seguirá activa incluso mientras la emisora esté «dormida».</p>
 <ul>
-<li><strong>Wake up</strong> — cuáles de estos elementos despiertan la retroiluminación del reposo (puede
+<li><strong>Wake up</strong> — qué elementos sacan del reposo a la retroiluminación (puede
   habilitarse más de uno): <strong>Always on</strong> (nunca se duerme), <strong>Sticks</strong>,
-  <strong>Switches</strong>, <strong>Gyro</strong> (inclinar la emisora). Las teclas siempre la despiertan,
+  <strong>Switches</strong>, <strong>Gyro</strong> (al inclinar la emisora). Las teclas siempre la despiertan,
   independientemente de estos ajustes.</li>
-<li><strong>Sleep</strong> — tiempo de inactividad antes de que la retroiluminación se apague (aparece atenuado
+<li><strong>Sleep</strong> — tiempo de inactividad antes de que se apague la retroiluminación (aparece atenuado
   si Wake up está configurado como Always on).</li>
 <li><strong>Sleep mode brightness</strong> — brillo de la retroiluminación durante el reposo.</li>
 <li><strong>Dark mode</strong> — tema de pantalla claro u oscuro.</li>
-<li><strong>Highlight Color</strong> — color de acento de la interfaz (por defecto <code>#F8B038</code>).</li>
+<li><strong>Highlight Color</strong> — color de realce de la interfaz (por defecto <code>#F8B038</code>).</li>
 </ul>
 <h2 id="audio-settings">Ajustes de audio<a class="headerlink" href="#audio-settings" title="Permanent link">&para;</a></h2>
 <p><img alt="Ajustes de audio" src="../../assets/system-general-audio.png" /></p>
@@ -3529,41 +3529,41 @@
 <li>
 <p><strong>Voice 1 (main)</strong> — se utiliza para todos los anuncios integrados del sistema. Para
     el inglés, la elección predeterminada es entre los paquetes americano (<code>us</code>) y británico
-    (<code>gb</code>), leídos desde <code>audio/en/us/system</code> y <code>audio/en/gb/system</code>.
-    Los archivos de sonido del usuario para la <a href="../../model-setup/special-functions/">función especial Play Audio</a>
-    se colocan en <code>audio/en/us/</code> o <code>audio/en/gb/</code>, respectivamente.</p>
+    (<code>gb</code>), que se leen de <code>audio/en/us/system</code> y <code>audio/en/gb/system</code>.
+    Los archivos de sonido de usuario para la <a href="../../model-setup/special-functions/">función especial Play Audio</a>
+    se colocan en <code>audio/en/us/</code> o en <code>audio/en/gb/</code>, respectivamente.</p>
 </li>
 <li><strong>Voice 2 / Voice 3</strong> — paquetes adicionales, por ejemplo una voz
-    TTS personalizada. Cada uno necesita la misma estructura de carpetas que Voice 1 — por ejemplo, una voz
-    llamada «Susan» necesita <code>audio/en/Susan/</code> para los sonidos del usuario y
+    TTS personalizada. Cada uno necesita la misma estructura de carpetas que Voice 1; por ejemplo, una voz
+    llamada «Susan» necesita <code>audio/en/Susan/</code> para los sonidos de usuario y
     <code>audio/en/Susan/system</code> para sus sonidos del sistema (toda voz necesita una
     carpeta <code>/system</code>, ya que es de donde leen <strong>Play Value</strong> y los anuncios
-    de los temporizadores; con cada versión de audio se distribuye una lista <code>.csv</code> de los
+    de los cronómetros; con cada versión de audio se distribuye una lista <code>.csv</code> de los
     archivos de sonido estándar del sistema). Una vez instalada, una voz puede
-    asignarse por temporizador y por función Play Audio — o incluso establecerse como Voice
-    1 para reemplazar por completo los anuncios del sistema.</li>
+    asignarse a cada cronómetro y a cada función Play Audio, o incluso establecerse como Voice
+    1 para sustituir por completo los anuncios del sistema.</li>
 <li>
 <p><strong>Voice "default"</strong> — se instala automáticamente como alternativa segura (y
-    se utiliza para evitar problemas de conversión desde instalaciones 1.4.x): si Voice 1 no
-    está ya configurada durante una instalación/actualización, se establece en <code>default</code>, leyendo
-    desde <code>audio/en/default/system</code>. Los archivos de sonido personalizados más solicitados
+    sirve para evitar problemas de conversión desde instalaciones 1.4.x): si Voice 1 no
+    está ya configurada durante una instalación o actualización, se establece en <code>default</code>, que lee
+    de <code>audio/en/default/system</code>. Los archivos de sonido personalizados más solicitados
     para Play Audio se encuentran en <code>audio/en/default/</code>.</p>
 </li>
 <li>
-<p><strong>Main volume</strong> — un deslizador para el volumen general del audio (mantenga pulsado <code>ENT</code> para
-  controlarlo desde un potenciómetro); durante el ajuste suenan pitidos para que pueda juzgar el
+<p><strong>Main volume</strong> — control deslizante para el volumen general del audio (mantenga pulsado <code>ENT</code> para
+  gobernarlo desde un pot); durante el ajuste suenan pitidos para que pueda valorar el
   nivel de oído.</p>
 </li>
 <li><strong>Audio mode</strong>:</li>
-<li><strong>Silent</strong> — sin audio (aún así activa la <a href="../alerts/">alerta de modo silencioso</a>
+<li><strong>Silent</strong> — sin audio (aun así activa la <a href="../alerts/">alerta de modo silencioso</a>
     al arrancar, si está habilitada).</li>
 <li><strong>Alarms only</strong> — solo se oyen las alarmas.</li>
 <li><strong>Default</strong> — sonidos normales.</li>
 <li><strong>Often</strong> — añade pitidos de error cuando un valor se lleva más allá de su
-    mínimo/máximo.</li>
-<li><strong>Always</strong> — añade pitidos para la navegación normal por los menús, además de lo de Often.</li>
+    mínimo o máximo.</li>
+<li><strong>Always</strong> — añade, además de lo anterior (Often), pitidos para la navegación normal por los menús.</li>
 <li>
-<p><strong>Bluetooth</strong> (solo X20S/HD/Pro/R/RS) — retransmite el audio a un dispositivo
+<p><strong>Bluetooth</strong> (solo X20S/HD/Pro/R/RS) — envía el audio a un dispositivo
     Bluetooth emparejado (auriculares, etc.). Elija <strong>Search Devices</strong>, ponga el
     dispositivo de destino en modo de emparejamiento y selecciónelo cuando aparezca:</p>
 <p><img alt="Emparejamiento Bluetooth" src="../../assets/system-general-audio-bluetooth.png" />
@@ -3571,44 +3571,44 @@
 <img alt="Dispositivo Bluetooth seleccionado" src="../../assets/system-general-audio-bluetooth-device-selected.png" />
 <img alt="Conectando por Bluetooth" src="../../assets/system-general-audio-bluetooth-connecting.png" />
 <img alt="Bluetooth conectado" src="../../assets/system-general-audio-bluetooth-connected-ok.png" /></p>
-<p><strong>Speaker mute</strong> controla entonces el altavoz integrado — siempre activo,
-solo mientras la telemetría esté activa, o controlado por una fuente (por ejemplo, un
-interruptor). La emisora recuerda el dispositivo emparejado; encienda la emisora
-antes que el dispositivo Bluetooth para un funcionamiento normal, y espere unos
-segundos después de que se conecte para que el silenciado del altavoz vuelva a activarse.</p>
+<p><strong>Speaker mute</strong> controla entonces el altavoz interno: siempre activo,
+solo mientras la telemetría esté activa, o gobernado por una fuente (por ejemplo un
+interruptor). La emisora recuerda el dispositivo emparejado; para un funcionamiento normal,
+encienda la emisora antes que el dispositivo Bluetooth y espere unos
+segundos tras la conexión para que el silenciado del altavoz vuelva a activarse.</p>
 </li>
 </ul>
 <h2 id="vario">Vario<a class="headerlink" href="#vario" title="Permanent link">&para;</a></h2>
 <p><img alt="Audio del vario" src="../../assets/system-general-audio-vario.png" /></p>
 <ul>
 <li><strong>Volume</strong> — volumen relativo del tono del vario.</li>
-<li><strong>Pitch zero</strong> — tono a velocidad de ascenso cero.</li>
-<li><strong>Pitch max</strong> — tono a la velocidad de ascenso máxima.</li>
+<li><strong>Pitch zero</strong> — frecuencia del tono con velocidad de ascenso cero.</li>
+<li><strong>Pitch max</strong> — frecuencia del tono con la velocidad de ascenso máxima.</li>
 <li><strong>Repeat</strong> — retardo entre pitidos con el tono a cero.</li>
 </ul>
 <p>Consulte también el sensor VSpeed en <a href="../../model-setup/telemetry/">Telemetría</a>
 y la <a href="../../model-setup/special-functions/">función especial Play Vario</a>
-para conocer más comportamientos del vario.</p>
+para conocer más detalles del comportamiento del vario.</p>
 <h2 id="vibracion">Vibración<a class="headerlink" href="#vibracion" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Strength</strong> — un deslizador para la intensidad de la vibración.</li>
+<li><strong>Strength</strong> — control deslizante para la intensidad de la vibración háptica.</li>
 <li><strong>Mode</strong> — el mismo conjunto de opciones que Audio mode, más arriba.</li>
 </ul>
 <h2 id="storage-location-x18-and-x20-prorrs">Ubicación de almacenamiento (X18 y X20 Pro/R/RS)<a class="headerlink" href="#storage-location-x18-and-x20-prorrs" title="Permanent link">&para;</a></h2>
 <p>Estas emisoras disponen de una eMMC interna de 8 GB. Por defecto, Ethos la utiliza, con lo que
-la SD card es opcional — pero puede seleccionar la eMMC, una SD card o una
+la SD card es opcional, pero puede seleccionar la eMMC, una SD card o una
 combinación de ambas. Si traslada el sistema y los modelos a una SD card, copie
-las carpetas/archivos correspondientes (incluidos audio y mapas de bits) <strong>antes</strong>
+las carpetas y archivos correspondientes (incluidos audio y bitmaps) <strong>antes</strong>
 de cambiar la ubicación de almacenamiento.</p>
 <p><img alt="Ubicación de almacenamiento" src="../../assets/system-general-storage.png" /></p>
 <h2 id="barra-de-herramientas-superior">Barra de herramientas superior<a class="headerlink" href="#barra-de-herramientas-superior" title="Permanent link">&para;</a></h2>
 <p><img alt="Ajustes de la barra superior" src="../../assets/system-general-topbar.png" /></p>
 <ul>
 <li><strong>Digital voltage</strong> — muestra el voltaje de la batería de la emisora como un número en lugar de
-  una barra en la barra de herramientas superior.</li>
-<li><strong>Digital RSSI</strong> — lo mismo, para el RSSI de 2,4 GHz y 900 MHz.</li>
+  como una barra en la barra de herramientas superior.</li>
+<li><strong>Digital RSSI</strong> — lo mismo, para el RSSI de 2,4 GHz y de 900 MHz.</li>
 <li><strong>Select model at power on</strong> — muestra la pantalla de selección de modelo al
-  arrancar, antes de que aparezcan las alertas de la lista de verificación del modelo anterior, de modo que pueda
+  arrancar, antes de que aparezcan las alertas de la lista de comprobación del modelo anterior, de modo que pueda
   cambiar de modelo sin tener que descartarlas primero. El último modelo utilizado
   aparece resaltado por defecto.</li>
 </ul>
@@ -3617,7 +3617,7 @@ de cambiar la ubicación de almacenamiento.</p>
 <p><img alt="Modo USB" src="../../assets/system-general-usb.png" /></p>
 <p>Lo que ocurre automáticamente cuando la emisora se conecta a un PC por USB:</p>
 <ul>
-<li><strong>Not set</strong> — solicita una elección en el momento de la conexión.</li>
+<li><strong>Not set</strong> — pregunta qué opción usar en el momento de la conexión.</li>
 <li><strong>Joystick</strong> — entra inmediatamente en modo joystick para un simulador de RC.</li>
 <li><strong>Ethos Suite</strong> — entra inmediatamente en modo Ethos para <a href="../../ethos-suite/">Ethos
   Suite</a>.</li>

@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3404,17 +3404,17 @@
 
 <h1 id="modalita-di-connessione-usb">Modalità di connessione USB<a class="headerlink" href="#modalita-di-connessione-usb" title="Permanent link">&para;</a></h1>
 <p><img alt="Menu USB" src="../../assets/usbmenu.png" /></p>
-<p>Ciò che avviene collegando la radio a un PC tramite USB dipende da come la radio era alimentata al momento del collegamento.</p>
+<p>Ciò che avviene collegando la radio a un PC tramite USB dipende da come era alimentata la radio al momento del collegamento.</p>
 <h2 id="modalita-a-radio-spenta">Modalità a radio spenta<a class="headerlink" href="#modalita-a-radio-spenta" title="Permanent link">&para;</a></h2>
-<p>Collegando la radio a un PC tramite USB <strong>mentre è spenta</strong> la si porta in modalità DFU, utilizzata per il flashing del bootloader stesso.</p>
+<p>Collegando la radio a un PC tramite USB <strong>mentre è spenta</strong>, questa entra in modalità DFU, utilizzata per eseguire il flashing del bootloader stesso.</p>
 <h2 id="bootloader-mode">Modalità bootloader<a class="headerlink" href="#bootloader-mode" title="Permanent link">&para;</a></h2>
-<p>Accendere la radio <strong>tenendo premuto <code>ENT</code></strong> per avviarla in modalità bootloader (lo schermo mostra "Bootloader"). Collegando ora l'USB, lo stato cambia in "USB Plugged" e il PC monta <strong>due</strong> unità: la memoria flash interna della radio e il contenuto della SD card/eMMC. Questa è la modalità per leggere e scrivere file direttamente in entrambe le aree di memoria ed è anche il modo in cui <a href="../../ethos-suite/">Ethos Suite</a> aggiorna il firmware della radio — vedere la sezione Bootloader Mode di Ethos Suite.</p>
+<p>Accendi la radio <strong>tenendo premuto <code>ENT</code></strong> per avviarla in modalità bootloader (lo schermo mostra "Bootloader"). Collegando ora l'USB, lo stato cambia in "USB Plugged" e il PC monta <strong>due</strong> unità: la memoria flash interna della radio e il contenuto della SD card/eMMC. Questa è la modalità che permette di leggere e scrivere i file direttamente in entrambe le aree di memoria ed è anche il modo in cui <a href="../../ethos-suite/">Ethos Suite</a> aggiorna il firmware della radio: consulta la sezione Bootloader Mode di Ethos Suite.</p>
 <h2 id="modalita-a-radio-accesa">Modalità a radio accesa<a class="headerlink" href="#modalita-a-radio-accesa" title="Permanent link">&para;</a></h2>
-<p>Collegando l'USB mentre la radio è <strong>accesa normalmente</strong> compare un selettore di modalità:</p>
+<p>Collegando l'USB mentre la radio è <strong>accesa normalmente</strong> compare un menu di selezione della modalità:</p>
 <ul>
-<li><strong>Joystick</strong> — presenta la radio come joystick USB HID, per pilotare i simulatori di volo su PC.</li>
+<li><strong>Joystick</strong> — la radio viene riconosciuta come joystick USB HID, per utilizzare i simulatori di volo su PC.</li>
 <li><strong>FrSky Suite</strong> — porta la radio in "modalità Ethos" per la comunicazione con <a href="../../ethos-suite/">Ethos Suite</a>.</li>
-<li><strong>Serial</strong> — instrada le tracce di debug Lua su USB-seriale (115200 bps). La scheda Lua Development Tools di Ethos Suite dispone di un terminale integrato per visualizzarle; su Windows può essere necessario il driver Virtual COM Port.</li>
+<li><strong>Serial</strong> — invia le tracce di debug Lua tramite USB-seriale (115200 bps). La scheda Lua Development Tools di Ethos Suite dispone di un terminale integrato per visualizzarle; su Windows può essere necessario il driver Virtual COM Port.</li>
 </ul>
 
 

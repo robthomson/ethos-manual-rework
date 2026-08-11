@@ -2705,7 +2705,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3628,22 +3628,23 @@
 <h2 id="sezione-welcome">Sezione Welcome<a class="headerlink" href="#sezione-welcome" title="Permanent link">&para;</a></h2>
 <p><strong>Update News</strong> — note di rilascio e raccomandazioni sui backup prima
 dell'aggiornamento. Ethos 1.6.0+ richiede che il modulo RF interno e i
-ricevitori TD/TW/AP/AP Plus siano alla versione v3.0.1+ per poterne
-sfruttare i miglioramenti. Attivando le <strong>Pre-releases</strong> (con il server
-impostato su GitHub — vedi <a href="#suite-settings">Impostazioni della
+ricevitori TD/TW/AP/AP Plus siano alla versione 3.0.1 o successiva per
+poterne sfruttare i miglioramenti. Attivando le <strong>Pre-releases</strong> (con
+l'impostazione del server su GitHub — vedi <a href="#suite-settings">Impostazioni della
 Suite</a>) vengono elencate qui anche le build di
 pre-rilascio, insieme allo storico completo delle versioni.</p>
 <p><strong>Ethos web page</strong> — una vista integrata di ethos.frsky-rc.com: risorse,
 collegamenti ai template dei modelli ed elenco delle radio supportate.</p>
 <h2 id="sezione-radio">Sezione Radio<a class="headerlink" href="#sezione-radio" title="Permanent link">&para;</a></h2>
 <p>Gestisce la radio collegata. Accendila in <a href="../../getting-started/usb-connection-modes/#bootloader-mode">modalità
-bootloader</a> e
+Bootloader</a> e
 collegala via USB — la Suite mostra il tipo di radio (ad es. "X20") una
 volta rilevata.</p>
 <h3 id="informazioni-sulla-radio">Informazioni sulla radio<a class="headerlink" href="#informazioni-sulla-radio" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Ethos</strong> — versioni installate di firmware/bootloader; <strong>Manage Ethos</strong>
-  porta direttamente al loro aggiornamento se non sono aggiornate.</li>
+<li><strong>Ethos</strong> — versioni installate di firmware e bootloader; <strong>Manage
+  Ethos</strong> porta direttamente al loro aggiornamento se non sono
+  aggiornate.</li>
 <li><strong>RF Module</strong> — firmware installato del modulo RF interno; <strong>Manage
   internal module</strong> porta direttamente al suo aggiornamento se non è
   aggiornato.</li>
@@ -3651,111 +3652,118 @@ volta rilevata.</p>
   verso questi strumenti.</li>
 </ul>
 <h3 id="updating-ethos">Aggiornamento di Ethos<a class="headerlink" href="#updating-ethos" title="Permanent link">&para;</a></h3>
-<p>La scheda <strong>Ethos</strong> mostra affiancate le versioni di Firmware,
-Bootloader, SD card/eMMC (file audio) e memoria flash (bitmap di
-sistema) — i file di sistema in flash vengono ora aggiornati insieme al
-firmware e non sono più gestiti separatamente.</p>
+<p>La scheda <strong>Ethos</strong> mostra affiancate le versioni del firmware, del
+bootloader, dei file audio della scheda SD o eMMC e delle bitmap di
+sistema della memoria flash — i file di sistema nella memoria flash
+vengono ora aggiornati insieme al firmware, quindi non devono più essere
+gestiti separatamente.</p>
 <ul>
-<li><strong>Write outdated components</strong> — aggiorna solo ciò che non è aggiornato.</li>
+<li><strong>Write outdated components</strong> — aggiorna solo i componenti obsoleti.</li>
 <li><strong>Write all components</strong> — aggiorna tutto, indipendentemente dalla
   versione.</li>
 <li>Opzioni individuali <strong>Write firmware</strong>, <strong>Write bootloader</strong>, <strong>Write
-  audio files</strong>, ciascuna avviata premendo il pulsante grigio scuro
-  accanto all'opzione scelta.</li>
-<li><strong>Flash from a local file</strong> — salta il download e utilizza un file
-  firmware già presente sul disco.</li>
+  audio files</strong>, ciascuna avviata cliccando sul pulsante grigio scuro di
+  aggiornamento accanto all'opzione selezionata.</li>
+<li><strong>Flash from a local file</strong> — salta il download ed esegue il flash
+  della radio da un file firmware già presente sul disco.</li>
 </ul>
-<p>Selezionare una release significa scegliere prima un <strong>branch</strong>
-(Stable/Testing) e poi una versione. L'aggiornamento richiede
-innanzitutto un backup (<strong>Go to backup page</strong>) — eseguilo. Se il modulo
-RF interno non è alla versione v3.0.1+, Ethos 1.6.0+ ne richiede
-l'aggiornamento prima di proseguire (<strong>Go to Module manager</strong> lo
-aggiorna automaticamente, quindi l'aggiornamento di Ethos riprende) — e
-per i ricevitori TD/TW/AP/AP Plus è necessario, successivamente,
-eliminare e riscoprire la telemetria per acquisire i nomi aggiornati dei
-sensori.</p>
+<p>Selezionare una release significa scegliere prima il ramo desiderato
+(Stabile/Versione di prova) e poi la versione. Prima di continuare ti
+verrà richiesto di eseguire un backup della radio (<strong>Go to backup
+page</strong>) — eseguilo. Se il modulo RF interno non è alla versione 3.0.1 o
+successiva, Ethos 1.6.0 o superiore ne richiede l'aggiornamento prima di
+poter proseguire (<strong>Go to Module manager</strong> ne esegue il flash
+automaticamente, dopodiché l'aggiornamento di Ethos continua) — inoltre
+sui ricevitori TD/TW/AP/AP Plus occorre poi cancellare la telemetria e
+riscoprire i sensori per ottenere i nomi aggiornati della telemetria.</p>
 <p>L'avanzamento dell'aggiornamento viene mostrato passo dopo passo
-(passaggio al bootloader, download, copia, smontaggio, scrittura,
-aggiornamento, "Update successful!") — anche lo schermo della radio
-riflette l'avanzamento della scrittura.</p>
+(passaggio al bootloader, download del firmware, copia del firmware,
+smontaggio delle unità, scrittura del firmware, aggiornamento delle
+informazioni radio, "Aggiornamento riuscito!") — a questo punto anche il
+display della radio mostra l'avanzamento della scrittura.</p>
 <div class="admonition note">
-<p class="admonition-title">Aggiornamenti di pre-rilascio</p>
-<p>I file di una pre-release possono cambiare senza che ne cambi il
-numero di versione, cosa che la Suite non è in grado di rilevare —
-riprogramma sempre una versione di pre-rilascio già installata non
-appena diventa una release completa. In caso di dubbio, verifica la
-data del firmware in <a href="../../system-setup/information/">Sistema →
+<p class="admonition-title">Aggiornamenti pre-release</p>
+<p>Con gli aggiornamenti pre-release i file possono cambiare senza che
+il numero di versione venga modificato, una situazione che Ethos
+Suite non rileva — devi quindi eseguire sempre un nuovo flash della
+versione pre-release già installata quando diventa una release
+completa. Nel caso del firmware della radio, in caso di dubbio la
+data può essere controllata nella pagina <a href="../../system-setup/information/">Sistema →
 Info</a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Aggiornamento da Ethos 1.2.8 o versioni precedenti</p>
-<p>La Suite potrebbe non essere in grado di programmare
-firmware/bootloader in modo completamente automatico da una versione
-così datata — in tal caso compare una finestra guidata per la
-programmazione manuale. In entrambi i casi, espelli manualmente le
-unità prima di scollegare l'USB.</p>
+<p>Da una versione così datata Ethos Suite potrebbe non essere in grado
+di eseguire il flash del firmware o del bootloader in modo
+automatico — in questo caso viene visualizzata una finestra di
+dialogo che fornisce una guida al completamento del flash manuale.
+In entrambi i casi, sarebbe prudente espellere manualmente le unità
+prima di scollegare il cavo USB.</p>
 </div>
-<p>I file bitmap di sistema vengono ora aggiornati automaticamente insieme
-al firmware (non è necessaria alcuna gestione separata); i file audio si
-aggiornano tramite <strong>Write all components</strong> o <strong>Write audio files</strong>
-(viene scaricato il pacchetto della lingua selezionata, ad es. "English
-audio pack").</p>
+<p>Ethos Suite scarica ora automaticamente sulla radio i file bitmap di
+sistema corrispondenti al firmware (non è più necessario gestirli
+separatamente); i file audio si aggiornano tramite <strong>Write all
+components</strong> o <strong>Write audio files</strong> (viene scaricato il pacchetto audio
+della lingua selezionata, ad es. "English audio pack").</p>
 <h3 id="rf-module-manager">RF Module Manager<a class="headerlink" href="#rf-module-manager" title="Permanent link">&para;</a></h3>
-<p>Seleziona una versione (normalmente la più recente) e premi <strong>Flash
-module</strong> per aggiornare direttamente il firmware del modulo RF interno —
-al termine viene confermato "...has been flashed successfully". Questa
-operazione viene attivata automaticamente anche dalla procedura di
-aggiornamento obbligatorio a v3.0.1 descritta sopra.</p>
+<p>Seleziona la versione desiderata (di solito la più recente) e clicca su
+<strong>Flash module</strong> per scrivere il firmware nel modulo RF interno — al
+termine viene visualizzata la finestra di dialogo "...è stato flashato
+con successo". Questa operazione viene avviata automaticamente anche
+dalla procedura di aggiornamento obbligatorio alla versione 3.0.1
+descritta sopra.</p>
 <h3 id="ethos-mode">Ethos Mode<a class="headerlink" href="#ethos-mode" title="Permanent link">&para;</a></h3>
-<p><strong>Switch to Ethos</strong> riavvia la radio uscendo dalla modalità bootloader ed
-eseguendo Ethos (indicato da un'icona USB verde sulla radio e dalla
-scomparsa di "(Bootloader Mode)" nell'intestazione della Suite). Questo è
-necessario affinché il <strong>Download center</strong> possa usare la radio come
-proxy per programmare moduli, ricevitori, sensori e servi. Il pulsante
-diventa quindi <strong>Switch to Bootloader</strong> per invertire l'operazione.
-<strong>Eject Drives</strong> scollega la radio in modo sicuro.</p>
+<p><strong>Switch to Ethos</strong> fa uscire la radio dalla modalità bootloader
+riavviandola in Ethos (indicato da un'icona USB verde sulla radio e dalla
+scomparsa di "(Bootloader Mode)" nell'intestazione della Suite). La
+modalità Ethos è necessaria affinché il <strong>Download center</strong> possa usare
+la radio come proxy per eseguire il flash di moduli, ricevitori, sensori
+e servi. Il pulsante diventa quindi <strong>Switch to Bootloader</strong>, che
+permette di tornare in modalità bootloader. <strong>Eject Drives</strong> scollega la
+radio in modo sicuro.</p>
 <h3 id="model-manager">Model Manager<a class="headerlink" href="#model-manager" title="Permanent link">&para;</a></h3>
-<p>Esegue il backup su disco dei file dei modelli e delle impostazioni,
-oppure ripristina un backup precedente.</p>
+<p>Permette di salvare su disco un backup dei file dei modelli e delle
+impostazioni, oppure di ripristinare un backup precedente.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Il ripristino <strong>non</strong> ripristina il firmware — dopo aver ripristinato
-modelli/impostazioni, riprogramma separatamente la versione di
-firmware effettivamente corrispondente a quel backup (vedi
+modelli e impostazioni, devi ancora riscrivere separatamente la
+versione di firmware corrispondente al tuo backup (vedi
 <a href="#updating-ethos">Aggiornamento di Ethos</a>), poiché i file dei modelli
 non sono retrocompatibili.</p>
 </div>
 <ul>
-<li><strong>Backup Location</strong> — seleziona una cartella (memorizzata per ciascun
-  tipo di radio); sotto di essa viene mostrata la data/ora dell'ultimo
-  backup.</li>
+<li><strong>Backup Location</strong> — clicca sull'icona della cartella per navigare e
+  selezionare il percorso di backup desiderato (viene salvato per ogni
+  tipo di radio); sotto la posizione vengono visualizzate la data e l'ora
+  dell'ultimo backup.</li>
 <li><strong>Backup</strong> — salva i file dei modelli, registrando insieme ad essi la
-  versione di Ethos corrente.</li>
-<li><strong>Restore</strong> — seleziona quali componenti ripristinare: Audio
-  (disattivato per impostazione predefinita), Scripts, Screenshots,
-  System Bitmaps (disattivato per impostazione predefinita — ora gestiti
-  con il firmware), Models (inclusi eventuali file di testo di
-  <a href="../../how-to/user-defined-checklist/">checklist definite dall'utente</a>
-  memorizzati insieme ad essi), Language, User Bitmaps, Logs, System
-  Settings.</li>
+  versione corrente di Ethos.</li>
+<li><strong>Restore</strong> — seleziona i componenti da ripristinare: Audio (non
+  selezionato per impostazione predefinita), Script, Screenshot, Bitmap
+  di sistema (non selezionate per impostazione predefinita — ora gestite
+  insieme al firmware), Modelli (inclusi i file di testo della
+  <a href="../../how-to/user-defined-checklist/">checklist definita dall'utente</a>
+  memorizzati insieme ad essi), Lingua, Bitmap utente, Registri,
+  Impostazioni di sistema.</li>
 </ul>
 <h3 id="lua-library">Lua library<a class="headerlink" href="#lua-library" title="Permanent link">&para;</a></h3>
-<p>Consente di sfogliare e installare con un clic script/strumenti Lua dalla
-libreria remota di FrSky (oppure di installarli da un file zip locale);
-gli script installati vengono mostrati accanto al catalogo remoto una
-volta che ne esiste almeno uno.</p>
+<p>Consente di sfogliare e installare con un clic script e strumenti Lua
+dalla libreria remota di FrSky (oppure di installarli da un file zip
+locale); gli script installati vengono mostrati accanto al catalogo
+remoto non appena ne esiste almeno uno.</p>
 <h2 id="sezione-tools">Sezione Tools<a class="headerlink" href="#sezione-tools" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>Download center</strong> — scarica qualsiasi firmware dal sito FrSky e
-  (mentre la radio è in modalità Ethos) la utilizza come proxy per
-  programmare un modulo, un sensore, un servo o un ricevitore collegato
-  tramite una connessione di aggiornamento S.Port. Scegli il prodotto
-  dall'elenco (ad es. un ricevitore TW SR8), sfoglia gli <strong>assets</strong>
-  disponibili, premi <strong>Download</strong> per salvarlo localmente oppure <strong>Flash</strong>
-  per scriverlo direttamente sul dispositivo collegato — una barra di
-  avanzamento segue la programmazione, che termina con "...has been
-  flashed successfully!"</p>
+<p><strong>Download center</strong> — permette di scaricare qualsiasi firmware dal sito
+  di download di FrSky e, mentre la radio è in modalità Ethos, di
+  utilizzarla come proxy per eseguire il flash di un modulo, un sensore,
+  un servo o un ricevitore collegato tramite una connessione di
+  aggiornamento S.Port. Scegli il prodotto dall'elenco (ad es. un
+  ricevitore TW SR8), sfoglia gli <strong>assets</strong> disponibili, clicca su
+  <strong>Download</strong> per salvarlo localmente oppure su <strong>Flash</strong> per scriverlo
+  direttamente sul dispositivo collegato — una barra di avanzamento segue
+  il flash, che termina con "...è stato flashato con successo!"</p>
 </li>
 <li>
 <p><strong>Image manager</strong> — converte le immagini nel formato nativo di Ethos
@@ -3764,21 +3772,21 @@ volta che ne esiste almeno uno.</p>
   riferimento: immagini dei modelli 300×280 (X20) / 180×168 (X18);
   immagini a schermo intero 800×480 (X20) / 480×320 (X18) — vedi <a href="../../system-setup/file-manager/#top-level-folders">File
   Manager</a> per le
-  regole di denominazione dei bitmap. Permette inoltre di sfogliare
+  regole di denominazione delle bitmap. Permette inoltre di sfogliare
   direttamente le cartelle <code>bitmaps/gps</code>, <code>bitmaps/models</code> e
   <code>bitmaps/user</code> della radio, con supporto al caricamento. Aggiungi le
   immagini all'elenco di conversione con <strong>+</strong> (il formato TIFF non è
   supportato), scegli un percorso di destinazione (una cartella locale;
   direttamente sulla radio nelle immagini modello/utente/GPS; oppure la
   cartella della radio attualmente aperta) e, facoltativamente, apri
-  automaticamente la cartella di destinazione o forza un canale alfa.</p>
+  automaticamente la cartella di destinazione o forza il canale alfa.</p>
 </li>
 <li>
 <p><strong>Audio manager</strong> — converte l'audio nel formato di Ethos (PCM lineare,
   32 kHz, mono, 16 bit little-endian). Aggiungi i file con <strong>+</strong>, scegli
-  una cartella locale o inviali direttamente alla cartella <code>audio</code> della
-  radio (spostandoli poi nella sottocartella della voce corretta), con
-  possibilità di aprire automaticamente la destinazione.</p>
+  una cartella locale oppure inviali direttamente alla cartella <code>audio</code>
+  della radio (spostandoli poi nella sottocartella della voce corretta),
+  con la possibilità di aprire automaticamente la destinazione.</p>
 </li>
 <li>
 <p><strong>Lua development tools</strong> — <strong>Lua Docs</strong> rimanda alla guida di
@@ -3802,12 +3810,12 @@ volta che ne esiste almeno uno.</p>
      con le modifiche.</p>
 </li>
 <li>
-<p><strong>DFU Flasher</strong> — programma il bootloader tramite una connessione USB a
-  radio spenta (DFU), funzionando anche con firmware completamente
-  corrotto, poiché il bootloader ST sottostante risiede in ROM. Premi
-  <strong>Select Bootloader</strong> per scegliere un file scaricato (la Suite ne
-  riporta versione/idoneità), collega la radio <strong>spenta</strong>, quindi premi
-  <strong>Flash</strong>.</p>
+<p><strong>DFU Flasher</strong> — esegue il flash del bootloader tramite una
+  connessione USB a radio spenta (DFU), funzionando anche con firmware
+  completamente corrotto, poiché il bootloader ST sottostante risiede in
+  ROM. Clicca su <strong>Select Bootloader</strong> per scegliere un file scaricato
+  (la Suite ne riporta versione e idoneità), collega la radio <strong>spenta</strong>,
+  quindi clicca su <strong>Flash</strong>.</p>
 </li>
 </ul>
 <p>!!! note "\"Radio connection is not detected!\""

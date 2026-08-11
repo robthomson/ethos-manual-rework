@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3384,19 +3384,19 @@
 <p><img alt="Tipi di curva" src="../../assets/model-curves-type.png" /></p>
 <p>Curve di risposta riutilizzabili per i <a href="../mixes/#anatomy-of-a-mix">Mix</a> o le
 <a href="../outputs/#editing-a-channel">Uscite</a> — l'Expo integrato è disponibile
-direttamente in entrambi, ma qualsiasi cosa più elaborata si definisce qui
+direttamente in entrambi, ma tutto ciò che è più elaborato si definisce qui
 (oppure tramite <strong>Aggiungi curva</strong>, raggiungibile direttamente da entrambe le
-schermate di modifica). Sono disponibili fino a 50 curve; nessuna esiste per
-impostazione predefinita (l'Expo è comunque sempre integrato). Aggiungine una
-con <strong>+</strong>; tocca una curva esistente per
-<strong>Modifica</strong>/<strong>Sposta</strong>/<strong>Copia-incolla</strong>/<strong>Clona</strong>/<strong>Elimina</strong>.</p>
+schermate di modifica). Sono disponibili fino a 50 curve; per impostazione
+predefinita non ne esiste nessuna (l'Expo resta comunque sempre integrato).
+Aggiungine una con <strong>+</strong>; tocca una curva esistente per
+<strong>Modifica</strong>/<strong>Muovi</strong>/<strong>Copia-incolla</strong>/<strong>Clona</strong>/<strong>Cancella</strong>.</p>
 <p><img alt="Aggiungi curva" src="../../assets/model-curves-add.png" /></p>
 <h2 id="tipi-di-curva">Tipi di curva<a class="headerlink" href="#tipi-di-curva" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Expo</strong> — valore predefinito 40; un valore positivo addolcisce la risposta
-  attorno al centro, uno negativo la rende più reattiva. Addolcire la risposta
-  a metà corsa dello stick aiuta a evitare comandi eccessivi, soprattutto per i
-  piloti meno esperti.</li>
+<li><strong>Expo</strong> — valore predefinito 40; un valore positivo ammorbidisce la risposta
+  intorno al centro, mentre un valore negativo la rende più netta. Ammorbidire
+  la risposta a metà corsa dello stick aiuta a evitare comandi eccessivi,
+  soprattutto per i piloti meno esperti.</li>
 </ul>
 <p><img alt="Expo" src="../../assets/model-curves-expo.png" /></p>
 <ul>
@@ -3421,7 +3421,7 @@ con <strong>+</strong>; tocca una curva esistente per
 </li>
 <li>
 <p><strong>f &gt; 0</strong> — restituisce 100% quando la sorgente è positiva, 0 quando è
-    negativa (un interruttore netto, non un passaggio diretto).</p>
+    negativa (una commutazione netta, non un passaggio diretto).</p>
 <p><img alt="f &gt; 0" src="../../assets/model-curves-fn-fgt0.png" /></p>
 </li>
 <li>
@@ -3438,21 +3438,21 @@ con <strong>+</strong>; tocca una curva esistente per
   come per i valori Y in generale):</p>
 <p><img alt="Offset della funzione" src="../../assets/model-curves-fn-xgt0-offset.png" /></p>
 <ul>
-<li><strong>Personalizzata</strong> — una curva basata su punti, 5 punti per impostazione
-  predefinita, fino a 21.</li>
+<li><strong>Personalizzata</strong> — una curva definita per punti, 5 punti per impostazione
+  predefinita, fino a un massimo di 21.</li>
 </ul>
 <p><img alt="Curva personalizzata a 5 punti" src="../../assets/model-curves-custom5.png" /></p>
 <ul>
 <li>
 <p><strong>Smooth</strong> — traccia una curva morbida attraverso tutti i punti anziché
-    segmenti rettilinei tra di essi.</p>
+    segmenti rettilinei tra un punto e l'altro.</p>
 <p><img alt="Curva smussata" src="../../assets/model-curves-custom5-2-smooth.png" /></p>
 </li>
 <li>
 <p><strong>Modalità semplice</strong> — <strong>On</strong> limita la modifica alle sole coordinate Y
     equidistanti (la X è fissa); <strong>Off</strong> consente di modificare sia X sia Y per
     ogni punto, tranne gli estremi −100%/+100%, che restano bloccati poiché la
-    curva deve sempre coprire l'intero intervallo del segnale.</p>
+    curva deve sempre coprire l'intera escursione del segnale.</p>
 <p><img alt="Modalità semplice disattivata" src="../../assets/model-curves-custom-easy-off.png" /></p>
 </li>
 </ul>

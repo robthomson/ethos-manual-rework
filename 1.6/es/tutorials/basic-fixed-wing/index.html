@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2257,10 +2257,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#paso-1-confirmar-los-ajustes-del-sistema" class="md-nav__link">
+  <a href="#paso-1-confirme-la-configuracion-del-sistema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 1. Confirmar los ajustes del sistema
+        Paso 1. Confirme la configuración del sistema
       
     </span>
   </a>
@@ -2279,10 +2279,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-crear-un-modelo-nuevo" class="md-nav__link">
+  <a href="#paso-3-crear-un-nuevo-modelo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 3. Crear un modelo nuevo
+        Paso 3. Crear un nuevo modelo
       
     </span>
   </a>
@@ -2313,10 +2313,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#profundidad-y-direccion" class="md-nav__link">
+  <a href="#profundidad-y-timon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Profundidad y dirección
+        Profundidad y timón
       
     </span>
   </a>
@@ -2373,10 +2373,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-7-introduccion-a-las-fases-de-vuelo" class="md-nav__link">
+  <a href="#paso-7-introduccion-a-los-modos-de-vuelo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 7. Introducción a las fases de vuelo
+        Paso 7. Introducción a los modos de vuelo
       
     </span>
   </a>
@@ -2917,7 +2917,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3472,10 +3472,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#paso-1-confirmar-los-ajustes-del-sistema" class="md-nav__link">
+  <a href="#paso-1-confirme-la-configuracion-del-sistema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 1. Confirmar los ajustes del sistema
+        Paso 1. Confirme la configuración del sistema
       
     </span>
   </a>
@@ -3494,10 +3494,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-crear-un-modelo-nuevo" class="md-nav__link">
+  <a href="#paso-3-crear-un-nuevo-modelo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 3. Crear un modelo nuevo
+        Paso 3. Crear un nuevo modelo
       
     </span>
   </a>
@@ -3528,10 +3528,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#profundidad-y-direccion" class="md-nav__link">
+  <a href="#profundidad-y-timon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Profundidad y dirección
+        Profundidad y timón
       
     </span>
   </a>
@@ -3588,10 +3588,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-7-introduccion-a-las-fases-de-vuelo" class="md-nav__link">
+  <a href="#paso-7-introduccion-a-los-modos-de-vuelo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 7. Introducción a las fases de vuelo
+        Paso 7. Introducción a los modos de vuelo
       
     </span>
   </a>
@@ -3658,17 +3658,17 @@
 
 <h1 id="ejemplo-basico-de-ala-fija">Ejemplo básico de ala fija<a class="headerlink" href="#ejemplo-basico-de-ala-fija" title="Permanent link">&para;</a></h1>
 <p>Un recorrido completo para un avión con motor + 2 alerones + 2 flaps +
-profundidad + dirección, con un servo por superficie, construido de principio a
-fin con el asistente. Complete primero la <a href="../initial-radio-setup/">Configuración inicial de la emisora</a>.</p>
-<h2 id="paso-1-confirmar-los-ajustes-del-sistema">Paso 1. Confirmar los ajustes del sistema<a class="headerlink" href="#paso-1-confirmar-los-ajustes-del-sistema" title="Permanent link">&para;</a></h2>
-<p>Este ejemplo utiliza el orden de canales predeterminado <strong>AETR</strong>.</p>
+profundidad + timón, con un servo por superficie, construido de principio a fin
+con el asistente. Complete primero la <a href="../initial-radio-setup/">Configuración inicial de la radio</a>.</p>
+<h2 id="paso-1-confirme-la-configuracion-del-sistema">Paso 1. Confirme la configuración del sistema<a class="headerlink" href="#paso-1-confirme-la-configuracion-del-sistema" title="Permanent link">&para;</a></h2>
+<p>Este ejemplo utiliza el orden de canales <strong>AETR</strong> por defecto.</p>
 <h2 id="paso-2-identificar-los-servoscanales-necesarios">Paso 2. Identificar los servos/canales necesarios<a class="headerlink" href="#paso-2-identificar-los-servoscanales-necesarios" title="Permanent link">&para;</a></h2>
-<p><a href="../../model-setup/mixes/">Mezclas</a> es el corazón de la emisora: hasta 100
-canales de mezcla, normalmente con los números más bajos asignados a los servos
-(ya que los números de canal se corresponden directamente con los canales del
-receptor; el módulo de RF interno del X20 admite hasta 24 canales de salida).
-Los canales superiores quedan libres para canales virtuales o canales reales
-adicionales mediante varios módulos de RF y SBUS. Nuestro modelo:</p>
+<p>La función <a href="../../model-setup/mixes/">Mezclas</a> constituye el corazón de la radio:
+hasta 100 canales de mezcla, normalmente con los números más bajos asignados a
+los servos (ya que los números de canal se corresponden directamente con los
+canales del receptor; el módulo de RF interno del X20 admite hasta 24 canales de
+salida). Los canales superiores quedan libres para canales virtuales o canales
+reales adicionales mediante varios módulos de RF y SBUS. Nuestro modelo:</p>
 <table>
 <thead>
 <tr>
@@ -3694,52 +3694,54 @@ adicionales mediante varios módulos de RF y SBUS. Nuestro modelo:</p>
 <td>1</td>
 </tr>
 <tr>
-<td>Dirección</td>
+<td>Timón</td>
 <td>1</td>
 </tr>
 </tbody>
 </table>
 <p>(El tren retráctil se añade más adelante, en el <a href="#step-10-add-a-mix-for-retracts">Paso 10</a>.)</p>
-<h2 id="paso-3-crear-un-modelo-nuevo">Paso 3. Crear un modelo nuevo<a class="headerlink" href="#paso-3-crear-un-modelo-nuevo" title="Permanent link">&para;</a></h2>
+<h2 id="paso-3-crear-un-nuevo-modelo">Paso 3. Crear un nuevo modelo<a class="headerlink" href="#paso-3-crear-un-nuevo-modelo" title="Permanent link">&para;</a></h2>
 <p><img alt="Crear modelo de avión" src="../../assets/tut-fw-eg-wiz-create-airplane.png" /></p>
-<p>Desde <a href="../../model-setup/model-select/">Selección de modelo</a>, elija una
-categoría, toque <strong>+</strong> e inicie el asistente <strong>Airplane</strong>. Seleccione <strong>Receptor
-no estabilizado</strong> para este ejemplo.</p>
+<p>Desde <a href="../../model-setup/model-select/">Seleccionar modelo</a>, elija una categoría,
+pulse sobre <strong>+</strong> e inicie el asistente <strong>Avión</strong>. Seleccione <strong>Receptor no
+estabilizado</strong> para este ejemplo.</p>
 <p><img alt="Canales del motor" src="../../assets/tut-fw-eg-wiz-engine.png" />
 <img alt="Canales de alerones/flaps" src="../../assets/tut-fw-eg-wiz-ail-flaps.png" /></p>
 <p>Acepte 1 canal de motor, después 2 canales de alerones y seleccione 2 canales de
 flaps.</p>
 <p><img alt="Tipo de cola" src="../../assets/tut-fw-eg-wiz-tail.png" />
-<img alt="Canales de profundidad/dirección" src="../../assets/tut-fw-eg-wiz-ele-rudd.png" /></p>
-<p>Acepte la opción predeterminada <strong>Traditional Tail</strong>, con 1 canal de
-profundidad y 1 de dirección.</p>
+<img alt="Canales de profundidad/timón" src="../../assets/tut-fw-eg-wiz-ele-rudd.png" /></p>
+<p>Acepte la opción por defecto <strong>Cola tradicional</strong>, con 1 canal de profundidad y
+1 de timón.</p>
 <p><img alt="Nombre del modelo" src="../../assets/tut-fw-eg-wiz-name.png" />
 <img alt="Receptor" src="../../assets/tut-fw-eg-wiz-rx.png" /></p>
-<p>Asígnele un nombre (por ejemplo, "FWexample", hasta 15 caracteres), finalice el
-asistente y pasará a ser el modelo activo, creado en la categoría Airplane.</p>
+<p>Defina un nombre (por ejemplo, "FWexample", hasta 15 caracteres), finalice el
+asistente y pasará a ser el modelo activo, creado en la categoría Avión.</p>
 <h2 id="paso-4-revisar-y-configurar-las-mezclas">Paso 4. Revisar y configurar las mezclas<a class="headerlink" href="#paso-4-revisar-y-configurar-las-mezclas" title="Permanent link">&para;</a></h2>
-<p><img alt="Vista general de mezclas" src="../../assets/tut-fw-eg-mixes.png" /></p>
+<p><img alt="Vista general de las mezclas" src="../../assets/tut-fw-eg-mixes.png" /></p>
 <p>El asistente ya ha creado las mezclas de alerones (canales 1 y 5), profundidad,
-acelerador, dirección y flaps (los flaps muestran <code>---</code>: aún no tienen fuente
+acelerador, timón y flaps (los flaps muestran <code>---</code>: aún no tienen fuente
 asignada).</p>
 <h3 id="ailerons">Alerones<a class="headerlink" href="#ailerons" title="Permanent link">&para;</a></h3>
 <p><img alt="Mezcla de alerones" src="../../assets/tut-fw-eg-mixes-ail-mix.png" />
-<img alt="Editar mezcla de alerones" src="../../assets/tut-fw-eg-mixes-ail-edit.png" /></p>
-<p><strong>Peso/Rates</strong>: configure los rates antes de volar algo nuevo; un recorrido
-moderado (por ejemplo, 30%) es adecuado para vuelo deportivo, y el 100% completo
-para 3D. Añada un rate del 60% para el interruptor SB en posición central y un
-rate del 30% para SB abajo; el valor predeterminado (SB arriba) se mantiene al
-100%:</p>
-<p><img alt="Rates de peso" src="../../assets/tut-fw-eg-mixes-ail-weight-rates.png" /></p>
-<p><strong>Expo</strong>: una respuesta lineal puede resultar nerviosa alrededor del centro;
-añada rates de Expo (por ejemplo, 60%/40%/20% en las mismas posiciones de SB)
-para suavizar la respuesta cerca del centro sin reducir el recorrido máximo:</p>
-<p><img alt="Rates de Expo" src="../../assets/tut-fw-eg-mixes-ail-expo-rates.png" /></p>
-<p><strong>Diferencial</strong>: un recorrido igual de alerón hacia arriba y hacia abajo genera
-más resistencia en el alerón que baja que en el que sube, lo que guiña el modelo
-hacia el exterior del viraje ("guiñada adversa"). Un diferencial positivo (50%
-es habitual) reduce el recorrido hacia abajo respecto al de subida para
-contrarrestarlo:</p>
+<img alt="Editar la mezcla de alerones" src="../../assets/tut-fw-eg-mixes-ail-edit.png" /></p>
+<p><strong>Peso / Régimen de giro</strong>: configure los regímenes de giro antes de volar algo
+nuevo; un recorrido moderado (por ejemplo, 30%) es adecuado para vuelo
+deportivo, y el 100% completo para 3D. Añada un régimen del 60% para el
+interruptor SB en posición central y otro del 30% para SB abajo; el valor por
+defecto (SB arriba) se mantiene al 100%:</p>
+<p><img alt="Pesos y regímenes de giro" src="../../assets/tut-fw-eg-mixes-ail-weight-rates.png" /></p>
+<p><strong>Expo</strong>: una respuesta lineal puede resultar demasiado brusca con las palancas
+centradas; añada valores de Expo (por ejemplo, 60%/40%/20% en las mismas
+posiciones de SB) para aplanar la respuesta en el centro del recorrido de las
+palancas sin reducir la deflexión máxima:</p>
+<p><img alt="Valores de Expo" src="../../assets/tut-fw-eg-mixes-ail-expo-rates.png" /></p>
+<p><strong>Diferencial</strong>: si los alerones se mueven hacia arriba y hacia abajo en la
+misma cantidad, el alerón que se mueve hacia abajo causará más resistencia que
+el que se mueve hacia arriba, haciendo que el modelo guiñe en la dirección
+opuesta al giro ("guiñada adversa"). Un valor positivo en el ajuste del
+diferencial (el 50% es habitual) provoca un menor movimiento descendente de los
+alerones respecto al ascendente, contrarrestando este efecto:</p>
 <p><img alt="Diferencial del 50%" src="../../assets/tut-fw-eg-mixes-ail-diff-50.png" /></p>
 <p>Para ajustar el diferencial en vuelo, mantenga pulsado <code>ENT</code> sobre el valor,
 elija <strong>Usar una fuente</strong> y seleccione Pot1:</p>
@@ -3751,89 +3753,93 @@ elija <strong>Convertir a valor</strong> para fijarlo de forma permanente:</p>
 <p><strong>Trim</strong>: permite desvincular esta mezcla de su trim asociado sin desactivar el
 propio trim, dejándolo libre para otro uso:</p>
 <p><img alt="Trim de alerones" src="../../assets/tut-fw-eg-mixes-ail-trim.png" /></p>
-<h3 id="profundidad-y-direccion">Profundidad y dirección<a class="headerlink" href="#profundidad-y-direccion" title="Permanent link">&para;</a></h3>
-<p>El mismo esquema de triple rate + Expo, en este caso con el interruptor SC:</p>
-<p><img alt="Rates de Expo de profundidad" src="../../assets/tut-fw-eg-mixes-ele-expo-rates.png" /></p>
+<h3 id="profundidad-y-timon">Profundidad y timón<a class="headerlink" href="#profundidad-y-timon" title="Permanent link">&para;</a></h3>
+<p>El mismo esquema de triple régimen de giro + Expo, en este caso sobre el
+interruptor SC:</p>
+<p><img alt="Regímenes y Expo de profundidad" src="../../assets/tut-fw-eg-mixes-ele-expo-rates.png" /></p>
 <h3 id="acelerador">Acelerador<a class="headerlink" href="#acelerador" title="Permanent link">&para;</a></h3>
-<p><img alt="Mezcla de acelerador" src="../../assets/tut-fw-eg-mixes-thr-edit.png" /></p>
-<p>Deje la entrada en el stick de acelerador (no se necesitan rates ni Expo), pero
-un interruptor de seguridad es imprescindible; un motor de explosión o eléctrico
-que arranque de forma inesperada puede causar lesiones graves.</p>
+<p><img alt="Mezcla del acelerador" src="../../assets/tut-fw-eg-mixes-thr-edit.png" /></p>
+<p>Deje la entrada en la palanca del acelerador (no se necesitan regímenes de giro
+ni Expo), pero es imprescindible un interruptor de seguridad; un motor de
+explosión o eléctrico que arranque de forma inesperada puede causar lesiones
+graves.</p>
 <p><strong>Trim en posición baja</strong> (motores glow/gasolina): ajusta el ralentí de forma
 independiente del acelerador a fondo:</p>
 <p><img alt="Trim en posición baja" src="../../assets/tut-fw-eg-mixes-thr-low-pos-trim.png" /></p>
-<p>Con esta opción activada, el canal de acelerador se sitúa en −75% con el stick
-en ralentí; la palanca de trim de acelerador ajusta entonces el ralentí entre
-−100% y −50%.</p>
-<p><strong>Corte de gas</strong>: un enclavamiento de seguridad. Con el interruptor SA abajo
-como condición activa (se muestra en negrita cuando está activa), la salida de
-acelerador se mantiene en −100% en cuanto el stick baja de −85%:</p>
-<p><img alt="Corte de gas" src="../../assets/tut-fw-eg-mixes-thr-cut.png" /></p>
+<p>Con esta opción activada, el canal del acelerador se sitúa en −75% con la
+palanca en ralentí; la palanca de trim del acelerador ajusta entonces el ralentí
+entre −100% y −50%.</p>
+<p><strong>Corte de motor (Throttle Cut)</strong>: un enclavamiento de seguridad. Con el
+interruptor SA abajo como condición activa (se muestra en negrita cuando está
+activa), la salida del acelerador se mantiene en −100% en cuanto la palanca baja
+de −85%:</p>
+<p><img alt="Corte de motor" src="../../assets/tut-fw-eg-mixes-thr-cut.png" /></p>
 <p>Con <strong>Sticky</strong> activado, en cambio, el acelerador se corta en el <strong>instante</strong> en
-que SA se pone abajo, independientemente de la posición del stick:</p>
-<p><img alt="Corte de gas con Sticky" src="../../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png" /></p>
-<p>En cualquier caso, una vez que la condición activa desaparece, el stick debe
-volver por debajo de −85% antes de que el acelerador pueda aumentar de nuevo,
-lo que evita que el motor salte a una posición de gas alto en el momento en que
-se suelta el interruptor de corte.</p>
-<p><strong>Retención de gas</strong>: un corte de emergencia desde <em>cualquier</em> posición del
-stick, que lleva la salida directamente a −100% (o a un valor configurado) en el
-instante en que se cumple su condición:</p>
-<p><img alt="Retención de gas" src="../../assets/tut-fw-eg-mixes-thr-hold.png" /></p>
+que SA se pone abajo, independientemente de la posición de la palanca:</p>
+<p><img alt="Corte de motor con Sticky" src="../../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png" /></p>
+<p>En cualquier caso, una vez que la condición activa desaparece, la palanca debe
+volver por debajo de −85% antes de que el acelerador pueda aumentar de nuevo, lo
+que evita que el motor salte a una posición de gas alto en el momento en que se
+suelta el interruptor de corte.</p>
+<p><strong>Throttle hold</strong>: un corte de emergencia desde <em>cualquier</em> posición de la
+palanca, que lleva la salida directamente a −100% (o a un valor configurado) en
+el instante en que se cumple su condición:</p>
+<p><img alt="Throttle hold" src="../../assets/tut-fw-eg-mixes-thr-hold.png" /></p>
 <h3 id="flaps">Flaps<a class="headerlink" href="#flaps" title="Permanent link">&para;</a></h3>
-<p><img alt="Entrada de flaps" src="../../assets/tut-fw-eg-mixes-flaps-input.png" /></p>
+<p><img alt="Entrada de los flaps" src="../../assets/tut-fw-eg-mixes-flaps-input.png" /></p>
 <p>Asigne los flaps al interruptor SE y ajuste el peso de ambos canales de salida
 al 100%:</p>
 <p><img alt="Pesos de los flaps" src="../../assets/tut-fw-eg-mixes-flaps-weights.png" /></p>
 <h2 id="paso-5-vincular-el-receptor">Paso 5. Vincular el receptor<a class="headerlink" href="#paso-5-vincular-el-receptor" title="Permanent link">&para;</a></h2>
-<p>Registre (si es ACCESS) y vincule desde <a href="../../model-setup/rf-system/">Sistema RF</a>.
-Antes de pasar a Salidas, considere desconectar los varillajes de los servos o
-reducir temporalmente su recorrido, para evitar forzar algo mientras establece
-los límites Mín/Máx.</p>
+<p>Use la función <a href="../../model-setup/rf-system/">Sistema RF</a> para registrar (si su
+receptor es ACCESS) y vincular su receptor. Antes de continuar con las Salidas,
+para evitar daños inadvertidos a sus servos por exceso de movimiento, sería
+inteligente desconectar los reenvíos o reducir temporalmente los movimientos de
+los servos mientras ajusta los límites Min/Max.</p>
 <h2 id="paso-6-configurar-las-salidas">Paso 6. Configurar las salidas<a class="headerlink" href="#paso-6-configurar-las-salidas" title="Permanent link">&para;</a></h2>
 <p><img alt="Salidas" src="../../assets/tut-fw-eg-outputs.png" /></p>
-<p><a href="../../model-setup/outputs/">Salidas</a> adapta la lógica del mezclador a la
-mecánica real del modelo.</p>
-<p><strong>Alerón 1</strong>: centre el servo con <strong>Centro PWM</strong> después de optimizar el
-varillaje mecánico y, a continuación, ajuste <strong>Mín</strong>/<strong>Máx</strong>. Asignar
-temporalmente un potenciómetro a Mín (y después a Máx, del mismo modo que en el
+<p>La función <a href="../../model-setup/outputs/">Salidas</a> adapta la lógica del mezclador a
+la mecánica real del modelo.</p>
+<p><strong>Alerón 1</strong>: centre el servo con el ajuste <strong>Centro PWM</strong> después de optimizar
+el reenvío mecánico y, a continuación, ajuste <strong>Min</strong>/<strong>Max</strong>. Asignar
+temporalmente un potenciómetro a Min (y después a Max, del mismo modo que en el
 ejemplo del diferencial anterior) hace que el ajuste sea más rápido:</p>
-<p><img alt="Editar salida de alerón" src="../../assets/tut-fw-eg-outputs-edit-ail.png" /></p>
+<p><img alt="Editar la salida del alerón" src="../../assets/tut-fw-eg-outputs-edit-ail.png" /></p>
 <p><strong>Flaps</strong>: los flaps suelen necesitar una gran deflexión hacia abajo para frenar
-de forma efectiva; se sacrifica parte del recorrido hacia arriba en el varillaje
+de forma efectiva; se sacrifica parte del recorrido hacia arriba en el reenvío
 para conseguirlo, de modo que el flap quede a media bajada con el servo
-centrado, y después se usan Mín/Máx para fijar las posiciones reales de arriba y
+centrado, y después se usan Min/Max para fijar las posiciones reales de arriba y
 de bajada total. Una curva de 5 puntos es una forma habitual de corregir
-cualquier desajuste resultante en el seguimiento entre flaps y alerones. Termine
+cualquier desajuste resultante entre el recorrido de flaps y alerones. Termine
 con <strong><a href="../../model-setup/outputs/#balance-channels">Balancear canales</a></strong> para
 sincronizar los alerones y flaps izquierdo y derecho.</p>
-<h2 id="paso-7-introduccion-a-las-fases-de-vuelo">Paso 7. Introducción a las fases de vuelo<a class="headerlink" href="#paso-7-introduccion-a-las-fases-de-vuelo" title="Permanent link">&para;</a></h2>
-<p>Las <a href="../../model-setup/flight-modes/">fases de vuelo</a> permiten que un modelo
-disponga de ajustes por tarea, como cambiar de marcha. De las 20 disponibles,
-este ejemplo utiliza tres: <strong>Default</strong>, <strong>Flaps Half</strong> (interruptor SE en
-posición central) y <strong>Flaps Full</strong> (SE arriba). Está activa la primera fase de
-vuelo cuya condición sea verdadera; la fase <strong>Default</strong> no tiene ninguna
-condición y actúa siempre que ninguna otra sea aplicable, razón por la cual no
-dispone de opción de selección de interruptor. Un fundido de entrada/salida de
-1 segundo suaviza la transición al desplegar los flaps.</p>
+<h2 id="paso-7-introduccion-a-los-modos-de-vuelo">Paso 7. Introducción a los modos de vuelo<a class="headerlink" href="#paso-7-introduccion-a-los-modos-de-vuelo" title="Permanent link">&para;</a></h2>
+<p>Los <a href="../../model-setup/flight-modes/">modos de vuelo</a> permiten que un modelo
+disponga de ajustes específicos para cada tarea, como si se cambiara de marcha.
+De los 20 disponibles, este ejemplo utiliza tres: <strong>Default</strong>, <strong>Flaps Half</strong>
+(interruptor SE en posición central) y <strong>Flaps Full</strong> (SE arriba). Está activo
+el primer modo de vuelo cuya condición sea verdadera; el modo <strong>Default</strong> no
+tiene ninguna condición y actúa siempre que ningún otro sea aplicable, razón por
+la cual no dispone de opción de selección de interruptor. Un fundido de
+entrada/salida de 1 segundo suaviza la transición al desplegar los flaps.</p>
 <h2 id="paso-8-configurar-los-trims">Paso 8. Configurar los trims<a class="headerlink" href="#paso-8-configurar-los-trims" title="Permanent link">&para;</a></h2>
-<p>Dos formas de gestionar la variación del trim de profundidad según la posición
-de los flaps:</p>
-<p><strong>Trims independientes por fase de vuelo</strong>: la opción más sencilla; el trim de
-profundidad pasa a ser totalmente independiente en cada fase de vuelo,
-cambiando automáticamente al mover SE. Como cada fase se trima desde cero, el
-<a href="../../model-setup/trims/#instant-trim">Trim instantáneo</a> resulta útil: trime
-primero para el vuelo normal, aterrice y utilice ese valor como punto de partida
-para las fases con flaps.</p>
+<p>Hay dos formas de gestionar la variación del trim de profundidad según la
+posición de los flaps:</p>
+<p><strong>Trims independientes por modo de vuelo</strong>: la opción más sencilla; el trim de
+profundidad pasa a ser totalmente independiente en cada modo de vuelo, y cambia
+automáticamente al mover SE. Como cada modo se trima desde cero, el <a href="../../model-setup/trims/#instant-trim">Trim
+instantáneo</a> resulta útil: trime primero
+para el vuelo normal, aterrice y utilice ese valor como punto de partida para
+los modos con flaps.</p>
 <p><strong>Trim base con offset</strong>: se trima una vez en Default, y la compensación de
-profundidad de cada fase con flaps se superpone como un offset:</p>
+profundidad de cada modo con flaps se superpone como un offset:</p>
 <ol>
-<li>Ajuste el <strong>Paso</strong> de trim a Medio (para un trimado inicial más rápido;
+<li>Ajuste el <strong>Paso</strong> del trim a Medio (para un trimado inicial más rápido;
    redúzcalo después para el ajuste fino), el <strong>Modo</strong> a Personalizado y añada un
    nuevo comportamiento.</li>
 <li><strong>Condición activa</strong>: <code>FM1(Flaps Half)</code>, modo <strong>Offset + Default</strong>: el trim
    de Flaps Half pasa a ser el trim base más el offset que se introduzca
-   mientras esa fase está activa:</li>
+   mientras ese modo está activo:</li>
 </ol>
 <p><img alt="Añadir comportamiento" src="../../assets/tut-fw-eg-trims-ele-add-behavior.png" />
    <img alt="Offset + Default, FM1" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png" /></p>
@@ -3842,24 +3848,24 @@ profundidad de cada fase con flaps se superpone como un offset:</p>
 </ol>
 <p><img alt="Seleccionar FM" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png" />
    <img alt="Offset + Default, FM2" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png" /></p>
-<p>Ahora cada fase con flaps puede trimarse de forma independiente, pero si más
+<p>Ahora cada modo con flaps puede trimarse de forma independiente, pero si más
 adelante se ajusta el trim base de Default (por ejemplo, para corregir la deriva
-térmica de un servo), los trims de ambas fases con flaps se desplazan
+térmica de un servo), los trims de ambos modos con flaps se desplazan
 automáticamente en la misma medida.</p>
 <p><img alt="Selección de trim personalizado" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png" /></p>
 <h2 id="paso-9-configurar-un-temporizador-de-bateria-de-vuelo">Paso 9. Configurar un temporizador de batería de vuelo<a class="headerlink" href="#paso-9-configurar-un-temporizador-de-bateria-de-vuelo" title="Permanent link">&para;</a></h2>
 <p>En <a href="../../model-setup/timers/">Temporizadores</a>, edite el Temporizador 1: modo
-<strong>Descendente</strong>, valor inicial de 5 minutos, en funcionamiento siempre que
-<strong>Acelerador activo</strong> sea verdadero (y no esté retenido en reinicio).
-Opcionalmente, asigne una fuente de temporización proporcional (por ejemplo, el
-stick de acelerador) para que el temporizador avance a velocidad real con el
-acelerador a fondo y se ralentice al reducir gas.</p>
+<strong>Descendente</strong>, valor inicial de 5 minutos, en marcha siempre que <strong>Acelerador
+activo</strong> sea verdadero (y no esté retenido en reinicio). Opcionalmente, asigne
+una fuente de temporización proporcional (por ejemplo, la palanca del
+acelerador) para que el temporizador avance a velocidad real con el acelerador a
+fondo y se ralentice al reducir gas.</p>
 <h2 id="step-10-add-a-mix-for-retracts">Paso 10. Añadir una mezcla para el tren retráctil<a class="headerlink" href="#step-10-add-a-mix-for-retracts" title="Permanent link">&para;</a></h2>
 <p><img alt="Fuente de la mezcla del tren retráctil" src="../../assets/tut-fw-eg-retracts-source.png" /></p>
-<p>Toque una mezcla, <strong>Añadir mezcla</strong> → <strong>Mezcla libre</strong>, asígnele el nombre
-"Retracts", establezca la condición en Siempre y la fuente en el interruptor SF.
-La acción predeterminada con Peso = 100% es adecuada; esto asigna, por ejemplo,
-el canal 8 al tren retráctil:</p>
+<p>Pulse sobre una línea de mezcla, seleccione <strong>Añadir Mezcla</strong> → <strong>Mezcla libre</strong>,
+asígnele el nombre "Retracts", establezca la condición en Siempre y la fuente en
+el interruptor SF. La acción por defecto con Peso = 100% es adecuada; esto
+asigna, por ejemplo, el canal 8 al tren retráctil:</p>
 <p><img alt="Salida del tren retráctil" src="../../assets/tut-fw-eg-retracts-outputs.png" /></p>
 
 

@@ -2488,10 +2488,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-creare-il-sensore-calcolato-consumption" class="md-nav__link">
+  <a href="#2-creare-il-sensore-calcolato-consumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Creare il sensore calcolato Consumption
+        2. Creare il sensore calcolato Consumo
       
     </span>
   </a>
@@ -2829,7 +2829,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3418,10 +3418,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-creare-il-sensore-calcolato-consumption" class="md-nav__link">
+  <a href="#2-creare-il-sensore-calcolato-consumo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Creare il sensore calcolato Consumption
+        2. Creare il sensore calcolato Consumo
       
     </span>
   </a>
@@ -3485,71 +3485,71 @@
 misura più diretta di quanta parte del pacco è stata effettivamente utilizzata. Ci sono due
 modi per ottenerlo, a seconda dell'hardware installato.</p>
 <h2 id="opzione-a-un-esc-della-serie-neuron">Opzione A: un ESC della serie Neuron<a class="headerlink" href="#opzione-a-un-esc-della-serie-neuron" title="Permanent link">&para;</a></h2>
-<p>Gli ESC Neuron di FrSky riportano il consumo direttamente — non serve alcun sensore
-calcolato. Imposta <a href="../../system-setup/devices/">Opzioni ricevitore → Porta
-telemetria</a> su S.Port, collega il cavo di telemetria del
-Neuron ed esegui la <a href="../../model-setup/telemetry/#discovering-sensors">ricerca dei
-sensori</a> — il sensore che
-interessa è <strong>ESC Consumption</strong>.</p>
+<p>Gli ESC FrSky della serie Neuron riportano direttamente il consumo — non serve alcun sensore
+calcolato. Nelle <a href="../../system-setup/devices/">Opzioni del ricevitore imposta la Porta di
+telemetria</a> sull'opzione S.Port, collega la porta telemetrica del
+Neuron e attiva l'opzione <a href="../../model-setup/telemetry/#discovering-sensors">«Scopri nuovi
+sensori»</a> — il sensore di interesse
+è <strong>Consumo ESC</strong>.</p>
 <ol>
-<li>Aggiungi un <a href="../../model-setup/logical-switches/">interruttore logico</a> su <code>ESC
-   Consumption</code>, vero al di sopra di (ad esempio) 900mAh — all'incirca il 60% di un pacco dimensionato per
-   atterrare con ancora ~30% di riserva.</li>
-<li>Aggiungi una <a href="../../model-setup/special-functions/">funzione speciale Riproduci
-   audio</a>, con condizione attiva il nuovo
-   interruttore e uno step <strong>Riproduci valore</strong> per <code>ESC Consumption</code>.</li>
+<li>Aggiungi un <a href="../../model-setup/logical-switches/">interruttore logico</a> su <code>Consumo
+   ESC</code>, vero quando il consumo supera, ad esempio, i 900 mAh — ovvero circa il 60% di un pacco dimensionato per
+   atterrare avendo ancora circa il 30% di riserva.</li>
+<li>Aggiungi una <a href="../../model-setup/special-functions/">funzione speciale «Riproduci
+   audio»</a>, con condizione attiva il nuovo
+   interruttore logico e, in «Sequenza», un comando <strong>Riproduci valore</strong> per <code>Consumo ESC</code>.</li>
 </ol>
-<p>Come seconda linea di difesa, gli ESC Neuron riportano anche <strong>ESC Voltage</strong> —
-imposta un secondo interruttore logico allo stesso modo di <a href="../low-battery-warning/">Avviso di tensione
-batteria bassa</a> (sotto 3,4V/cella per 4s — ad esempio
-13,6V per un pacco 4S), con la propria funzione Riproduci audio ripetuta ogni 5
+<p>Come ulteriore salvaguardia, gli ESC Neuron riportano anche la <strong>Tensione ESC</strong> —
+imposta un secondo interruttore logico nello stesso modo descritto in <a href="../low-battery-warning/">Avviso di bassa tensione
+della batteria</a> (al di sotto di 3,4 V per cella per 4 secondi — ad esempio
+13,6 V per una LiPo 4S), con la propria funzione «Riproduci audio» ripetuta ogni 5
 secondi.</p>
 <h2 id="opzione-b-un-sensore-di-corrente-sensore-calcolato">Opzione B: un sensore di corrente + sensore calcolato<a class="headerlink" href="#opzione-b-un-sensore-di-corrente-sensore-calcolato" title="Permanent link">&para;</a></h2>
-<p>Se l'ESC non riporta il consumo, un sensore di corrente (ad esempio FrSky
-FASxxx) combinato con un <a href="../../model-setup/telemetry/#calculated-sensors">sensore <strong>Consumption</strong>
+<p>Se l'ESC non dispone di questa funzionalità, un sensore di corrente (ad esempio della
+serie FrSky FASxxx) insieme a un <a href="../../model-setup/telemetry/#calculated-sensors">sensore di <strong>Consumo</strong>
 calcolato</a> svolge lo stesso
 compito.</p>
 <h3 id="1-collegamento-e-ricerca">1. Collegamento e ricerca<a class="headerlink" href="#1-collegamento-e-ricerca" title="Permanent link">&para;</a></h3>
 <p><img alt="Sensore di corrente" src="../../assets/how-to-consumption-telemetry-current-sensor.png" /></p>
-<p>Collega il cavo S.Port del sensore di corrente ed esegui la ricerca — comparirà come
-<strong>Current</strong>. Imposta il suo <strong>Range</strong> in modo che corrisponda al sensore (ad esempio 0–100A per un
-FAS100):</p>
+<p>Collega la porta telemetrica del sensore di corrente al ricevitore tramite un cavo S.Port e attiva
+l'opzione «Scopri nuovi sensori» — il sensore comparirà come <strong>Corrente</strong>. Imposta il suo
+<strong>Intervallo</strong> in base al sensore (ad esempio 0-100A per un FAS100):</p>
 <p><img alt="Modifica sensore di corrente" src="../../assets/how-to-consumption-telemetry-current-sensor-edit.png" /></p>
-<h3 id="2-creare-il-sensore-calcolato-consumption">2. Creare il sensore calcolato Consumption<a class="headerlink" href="#2-creare-il-sensore-calcolato-consumption" title="Permanent link">&para;</a></h3>
+<h3 id="2-creare-il-sensore-calcolato-consumo">2. Creare il sensore calcolato Consumo<a class="headerlink" href="#2-creare-il-sensore-calcolato-consumo" title="Permanent link">&para;</a></h3>
 <p><img alt="Creazione sensore calcolato" src="../../assets/how-to-consumption-create-calc-select.png" />
-<img alt="Sensore Consumption" src="../../assets/how-to-consumption-create-calc-sensor.png" /></p>
-<p>In Telemetria, <strong>Crea sensore calcolato</strong> → <strong>Consumption</strong>. Imposta l'unità
-su <code>mAh</code> e il <strong>Range</strong> sulla capacità del pacco (ad esempio 2800mAh); la <strong>Sorgente</strong>
-su <code>Current</code>.</p>
+<img alt="Sensore Consumo" src="../../assets/how-to-consumption-create-calc-sensor.png" /></p>
+<p>In Telemetria clicca su <strong>Crea sensore calcolato</strong> → <strong>Consumo</strong>. Configura l'unità di misura
+su <code>mAh</code> e l'<strong>Intervallo</strong> in base alla capacità della tua lipo (ad esempio 2800 mAh); la <strong>Sorgente</strong>
+su <code>Corrente</code>.</p>
 <p><img alt="Modifica sensore" src="../../assets/how-to-consumption-sensor-edit.png" />
 <img alt="Modifica sensore 2" src="../../assets/how-to-consumption-sensor-edit2.png" /></p>
-<p>Imposta <strong>Reset</strong> sull'evento di sistema <code>!Telemetry Active</code> — seleziona <strong>Telemetry
-Active</strong>, premi a lungo <code>ENT</code> e scegli <strong>Inverti</strong> — in modo che il totale progressivo
-si azzeri automaticamente non appena la telemetria viene persa (ovvero quando il modello viene
+<p>Imposta il <strong>Reset</strong> sull'evento di sistema <code>!Telemetria Attiva</code> — seleziona prima <strong>Telemetria
+attiva</strong>, premi a lungo <code>ENT</code> e scegli <strong>Inverti</strong> — in modo che il totale progressivo
+venga resettato automaticamente quando la telemetria viene persa (ovvero quando il modello viene
 spento).</p>
 <h3 id="3-annunci-a-intervalli">3. Annunci a intervalli<a class="headerlink" href="#3-annunci-a-intervalli" title="Permanent link">&para;</a></h3>
 <p><img alt="Interruttore logico Delta 200mAh" src="../../assets/how-to-consumption-lsw-delta200mAh.png" /></p>
-<p>Aggiungi un interruttore logico che usa la funzione <strong>Δ &gt; X</strong> su <code>Consumption</code>,
-attivandosi ogni volta che il valore aumenta di un passo fisso — ad esempio ogni 200mAh, una
-frazione comoda di un pacco da 2800mAh.</p>
+<p>Aggiungi un interruttore logico utilizzando la funzione <strong>Δ &gt; X</strong> su <code>Consumo</code>,
+che diventa vero/attivo ogni volta che il consumo aumenta di un passo fisso — ad esempio ogni 200 mAh, una
+frazione conveniente della capacità di un pacco da 2800 mAh.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Imposta l'<strong>Intervallo di controllo</strong> su <code>---</code> (infinito) affinché continui ad accumulare
-verso la soglia successiva indefinitamente, anziché azzerarsi dopo una
-finestra fissa. Assegna alla <strong>Durata minima</strong> un piccolo valore diverso da zero durante
-il debug — a 0.0 l'attivazione è troppo breve per essere visibile sullo schermo.</p>
+<p>Imposta l'<strong>Intervallo di controllo</strong> su <code>---</code> (Infinito) in modo che la funzione continui
+a misurare fino al raggiungimento della soglia successiva, anziché azzerarsi dopo una
+finestra fissa. Imposta la <strong>Durata minima</strong> su un valore superiore a 0 durante
+il debug — a 0,0 l'attivazione avviene troppo velocemente per poterla vedere sullo schermo.</p>
 </div>
-<p>Aggiungi una funzione Riproduci audio, con condizione attiva questo interruttore e uno step Riproduci
-valore per <code>Consumption</code>:</p>
+<p>Aggiungi una funzione speciale «Riproduci audio», con condizione attiva questo interruttore logico e un
+comando «Riproduci valore» per <code>Consumo</code>:</p>
 <p><img alt="Riproduzione annuncio delta" src="../../assets/how-to-consumption-sf-play-delta200mAh.png" />
-<img alt="Riproduci valore: consumption" src="../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
+<img alt="Riproduci valore: consumo" src="../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
 <h3 id="4-avviso-di-capacita-bassa">4. Avviso di capacità bassa<a class="headerlink" href="#4-avviso-di-capacita-bassa" title="Permanent link">&para;</a></h3>
 <p><img alt="Secondo interruttore logico" src="../../assets/how-to-consumption-lsw2-play-battlow.png" /></p>
-<p>Un secondo interruttore logico si attiva una sola volta, superata una soglia critica di capacità bassa —
-ad esempio 2000mAh su un pacco da 2800mAh — abbinato a una funzione Riproduci audio
-ripetuta ogni 10 secondi finché il modello non viene riavviato:</p>
+<p>Un secondo interruttore logico si attiva una sola volta, al superamento di una soglia critica di capacità —
+ad esempio 2000 mAh per una LiPo da 2800 mAh — abbinato a una funzione speciale «Riproduci audio»
+che si ripete ogni 10 secondi finché il modello non viene riavviato:</p>
 <p><img alt="Riproduci valore con batteria bassa" src="../../assets/how-to-consumption-sf2-play-battlow.png" />
-<img alt="Riproduci valore: consumption con batteria bassa" src="../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
+<img alt="Riproduci valore: consumo con batteria bassa" src="../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
 
 
 

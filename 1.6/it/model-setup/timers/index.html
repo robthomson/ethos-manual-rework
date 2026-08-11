@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3383,24 +3383,25 @@
 <h1 id="timer">Timer<a class="headerlink" href="#timer" title="Permanent link">&para;</a></h1>
 <p><img alt="Timer" src="../../assets/model-timers.png" /></p>
 <p>Otto timer completamente programmabili, ciascuno con conteggio crescente o
-decrescente. Aggiungine uno con il <strong>+</strong> accanto alle intestazioni di colonna,
-oppure tramite <strong>Aggiungi</strong> più sotto. Toccando un timer si aprono le opzioni
-di azzeramento/modifica/aggiunta/spostamento/copia-incolla.</p>
+decrescente. Puoi aggiungerne uno toccando il simbolo <strong>+</strong> accanto alle
+intestazioni delle colonne, oppure selezionando <strong>Aggiungi</strong> più sotto.
+Toccando un timer si apre un menu a comparsa che consente di azzerare,
+modificare, aggiungere, spostare o copiare/incollare il timer.</p>
 <p><img alt="Modifica timer" src="../../assets/model-timer1-edit.png" /></p>
 <h2 id="campi-comuni-conteggio-decrescente-e-crescente">Campi comuni (conteggio decrescente e crescente)<a class="headerlink" href="#campi-comuni-conteggio-decrescente-e-crescente" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Valore</strong> — la lettura corrente del timer.</li>
-<li><strong>Nome</strong> — modificabile.</li>
+<li><strong>Valore</strong> — il valore attuale del timer.</li>
+<li><strong>Nome</strong> — permette di dare un nome al timer.</li>
 <li><strong>Modo</strong> — <strong>Up</strong> (crescente) o <strong>Down</strong> (decrescente).</li>
-<li><strong>Valore iniziale</strong> (solo conteggio decrescente) — il valore da cui inizia il
+<li><strong>Valore iniziale</strong> (solo conteggio decrescente) — il valore da cui parte il
   conteggio alla rovescia.</li>
 <li><strong>Valore allarme</strong> (solo conteggio crescente) — il valore al quale il timer è
-  considerato scaduto; il conteggio prosegue oltre questo valore, ma i widget
-  timer lo mostrano in rosso.</li>
+  considerato scaduto; il conteggio prosegue oltre questo valore, ma nei widget
+  timer viene visualizzato in rosso.</li>
 <li><strong>Condizione di avvio</strong> — avvia il timer. Se la <strong>Condizione di arresto</strong> è
   lasciata al valore predefinito, la sola condizione di avvio controlla sia
   l'avvio <em>sia</em> l'arresto. In caso contrario, il timer parte la prima volta che
-  la condizione di avvio diventa vera e prosegue da quel momento.</li>
+  la condizione di avvio diventa vera e continua a funzionare da quel momento.</li>
 <li><strong>Condizione di arresto</strong> — se non lasciata al valore predefinito, controlla
   il timer una volta avviato: fermo quando è vera, in funzione quando è falsa.
   Nell'esempio seguente, un timer parte quando <code>ThrottleActive</code> diventa vero e
@@ -3408,15 +3409,16 @@ di azzeramento/modifica/aggiunta/spostamento/copia-incolla.</p>
 </ul>
 <p><img alt="Condizione di arresto" src="../../assets/model-timer1-edit-stop.png" /></p>
 <ul>
-<li><strong>Sorgente di temporizzazione proporzionale</strong> — <code>---</code> esegue il conteggio in
-  tempo reale. Qualsiasi altra sorgente (ad esempio lo stick del gas o il canale
-  del gas) scala la velocità del timer: a −100% il timer è fermo, a +100% procede
-  alla velocità reale, e nei valori intermedi scala proporzionalmente.</li>
-<li><strong>Reset</strong> — un interruttore, interruttore funzione, interruttore logico o
-  posizione di trim che azzera il timer; il timer resta azzerato per tutto il
-  tempo in cui la condizione è vera.</li>
-<li><strong>Persistente</strong> — conserva il valore del timer allo spegnimento o al cambio di
-  modello, ricaricandolo alla successiva utilizzazione del modello.</li>
+<li><strong>Sorgente di temporizzazione proporzionale</strong> — con <code>---</code> il conteggio avviene
+  in tempo reale. Qualsiasi altra sorgente (ad esempio lo stick del gas o il
+  canale del gas) modifica la velocità del timer: a −100% il timer è fermo, a
+  +100% procede alla velocità reale e nei valori intermedi varia in modo
+  proporzionale.</li>
+<li><strong>Reset</strong> — un interruttore, un interruttore di funzione, un interruttore
+  logico o una posizione di trim che azzera il timer; il timer resta azzerato
+  per tutto il tempo in cui la condizione è vera.</li>
+<li><strong>Persistente</strong> — mantiene il valore del timer allo spegnimento o al cambio di
+  modello, ricaricandolo al successivo utilizzo del modello.</li>
 <li><strong>Voce</strong> — quale <a href="../../system-setup/general/#audio-settings">pacchetto vocale</a>
   annuncia questo timer.</li>
 </ul>
@@ -3427,7 +3429,7 @@ di azzeramento/modifica/aggiunta/spostamento/copia-incolla.</p>
 <p>Configurazione degli avvisi completamente flessibile, specifica per ciascun
 timer. Ogni azione ha un tipo — <strong>Countdown</strong> (annuncio vocale), <strong>Beep
 countdown</strong> (segnali acustici anziché voce), <strong>Play file</strong> (riproduci file) o
-<strong>Play value</strong> (riproduci valore) — oltre a:</p>
+<strong>Play value</strong> (riproduci valore) — oltre ai seguenti parametri:</p>
 <ul>
 <li><strong>Start</strong> — il valore da cui inizia il conto alla rovescia di questa azione.</li>
 <li><strong>Step</strong> — intervallo tra gli annunci, fino a 10 minuti (600 s).</li>
@@ -3444,9 +3446,9 @@ countdown</strong> (segnali acustici anziché voce), <strong>Play file</strong> 
 <li>Un file personalizzato (ad esempio <code>timer-1-elapsed</code>) riprodotto allo
    scadere, con vibrazione.</li>
 </ol>
-<p>Aggiungi ulteriori azioni con <strong>Aggiungi</strong>; l'elenco viene eseguito in ordine di
-priorità, con la <strong>priorità più alta per ultima</strong>.</p>
-<p>Vedi anche il <a href="../../displays/#widget-types">widget Timer Log</a> per uno
+<p>Puoi aggiungere altre azioni con <strong>Aggiungi</strong>; l'elenco viene eseguito in ordine
+di priorità, con la <strong>priorità più alta per ultima</strong>.</p>
+<p>Consulta anche il <a href="../../displays/#widget-types">widget Timer Log</a> per uno
 storico delle esecuzioni precedenti del timer.</p>
 <p><img alt="Widget timer" src="../../assets/model-timers-widget.png" /></p>
 

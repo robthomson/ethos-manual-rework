@@ -2796,7 +2796,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3417,7 +3417,7 @@
 <h1 id="variabili">Variabili<a class="headerlink" href="#variabili" title="Permanent link">&para;</a></h1>
 <p><img alt="Variabili" src="../../assets/model-vars.png" /></p>
 <p>Le variabili ("Vars") sono contenitori con nome per i valori delle
-impostazioni proprie di un modello, richiamabili in qualunque altro punto
+impostazioni proprie di un modello, richiamabili in qualsiasi altro punto
 della programmazione — <a href="../mixes/">mix</a> inclusi. Tenerle in una sezione
 dedicata separa i <em>dati di configurazione</em> di un modello dalla sua
 <em>logica di programmazione</em>: invece di passare in rassegna decine di mix
@@ -3429,19 +3429,19 @@ esistente per <strong>Modifica</strong>/<strong>Sposta</strong>/<strong>Copia</s
 <p>Una Var può contenere una costante fissa, oppure essere regolabile entro
 limiti definiti dall'utente (per evitare che valori errati provochino un
 incidente), e può assumere un valore <em>diverso</em> per ciascuna condizione
-attiva (ad esempio per fase di volo). I valori sono persistenti tra una
-sessione e l'altra. Una Var sostituisce qualsiasi valore numerico
+attiva (ad esempio per ogni modalità di volo). I valori vengono mantenuti
+tra una sessione e l'altra. Una Var sostituisce qualsiasi valore numerico
 ordinario ovunque sia disponibile la <a href="../../getting-started/user-interface-and-navigation/#the-options-feature">funzione
 Opzioni</a>
 (i campi con l'icona a hamburger).</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Un aliante con alettoni divisi (le sezioni interne fungono anche da
-flap di atterraggio) richiede un'unica impostazione condivisa di
-differenziale alettoni da usare ovunque tutte e quattro le superfici
-agiscano come alettoni — una Var che contiene quell'unico valore,
-richiamata da ogni mix pertinente, lo mantiene coerente e fa sì che
-debba essere regolato in un solo punto.</p>
+<p>Su un aliante con alettoni divisi (le sezioni interne fungono anche
+da flap di atterraggio) si vuole un'unica impostazione condivisa del
+differenziale alettoni da utilizzare ovunque tutte e quattro le
+superfici agiscano come alettoni: una Var che contiene quell'unico
+valore, richiamata da ogni mix interessato, lo mantiene coerente e fa
+sì che debba essere regolato in un solo punto.</p>
 </div>
 <h2 id="aggiungere-una-var">Aggiungere una Var<a class="headerlink" href="#aggiungere-una-var" title="Permanent link">&para;</a></h2>
 <p><img alt="Nuova variabile" src="../../assets/model-vars-new_var.png" /></p>
@@ -3458,11 +3458,11 @@ debba essere regolato in un solo punto.</p>
 <li><strong>Fisso</strong> — una singola costante, con un decimale.</li>
 <li><strong>Multiplo/variabile</strong> — <strong>Aggiungi nuovo valore</strong> associa un valore a
   ciascuna condizione attiva. Ad esempio <code>Var12</code> vale 9% mentre è attiva
-  la fase di volo Thermal (FM4), e −3% mentre è attiva Speed (FM5), con
-  l'intervallo limitato a −10%…+15% affinché nessuno dei due possa
-  eccedere valori sensati:</li>
+  la modalità di volo Thermal (FM4) e −3% mentre è attiva Speed (FM5),
+  con l'intervallo limitato a −10%…+15% affinché nessuno dei due possa
+  eccedere valori ragionevoli:</li>
 </ul>
-<p><img alt="Valori dipendenti dalla fase di volo" src="../../assets/model-vars-fm-dependent.png" />
+<p><img alt="Valori dipendenti dalla modalità di volo" src="../../assets/model-vars-fm-dependent.png" />
   <img alt="Aggiungi un valore" src="../../assets/model-vars-add-value.png" /></p>
 <h3 id="azioni">Azioni<a class="headerlink" href="#azioni" title="Permanent link">&para;</a></h3>
 <p><img alt="Azioni della variabile" src="../../assets/model-vars-actions.png" />
@@ -3476,15 +3476,15 @@ sola condizione attiva:</p>
 <img alt="Selezionare il trim da riassegnare" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Riassegna il trim del gas alla regolazione di una Var di
-compensazione del camber, ma solo mentre è attiva la fase di volo
-Landing (FM3), con intervallo 0–25% e un passo dell'1,0% per scatto.
-Al di fuori di quella condizione attiva, il trim torna
-automaticamente alla sua funzione ordinaria.</p>
+<p>Riassegna il Trim Gas alla regolazione di una Var di compensazione
+del camber, ma solo mentre è attiva la modalità di volo Landing
+(FM3), con intervallo 0–25% e un passo dell'1,0% per scatto. Al di
+fuori di quella condizione attiva, il trim torna automaticamente alla
+sua funzione ordinaria.</p>
 </div>
 <p><strong>Azioni aritmetiche</strong> — pilotate da qualsiasi ingresso:</p>
 <ul>
-<li><strong>Assegna</strong> — imposta la Var a un valore specifico.</li>
+<li><strong>Assegna</strong> — imposta la Var su un valore specifico.</li>
 <li><strong>Somma</strong> / <strong>Sottrai</strong> / <strong>Moltiplica</strong> / <strong>Dividi</strong> — operazioni
   aritmetiche sul valore corrente.</li>
 <li><strong>Percentuale</strong> — applica una percentuale dell'ingresso pilotante.</li>
@@ -3494,12 +3494,12 @@ automaticamente alla sua funzione ordinaria.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><code>FS3(edge)</code> assegna direttamente 40% a una Var; <code>FS1(edge)</code> somma 2 a
-ogni pressione (limitato al massimo dell'intervallo); <code>FS2(edge)</code>
-sottrae 2 a ogni pressione (limitato al minimo dell'intervallo).
-L'opzione <strong>Edge</strong> (pressione prolungata sull'interruttore funzione)
-è importante in questo caso — senza di essa, l'azione verrebbe
-rieseguita continuamente per tutto il tempo in cui l'interruttore
-resta premuto, anziché una volta per ogni pressione.</p>
+ogni pressione (fino al massimo dell'intervallo); <code>FS2(edge)</code> sottrae
+2 a ogni pressione (fino al minimo dell'intervallo). In questo caso
+l'opzione <strong>Edge</strong> (pressione prolungata sull'interruttore funzione)
+è importante: senza di essa l'azione verrebbe rieseguita di continuo
+per tutto il tempo in cui l'interruttore resta premuto, anziché una
+sola volta per ogni pressione.</p>
 </div>
 <p><img alt="Esempio pratico" src="../../assets/model-vars-calc-example.png" /></p>
 

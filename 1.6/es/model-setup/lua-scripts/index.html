@@ -2003,7 +2003,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3404,22 +3404,24 @@
 
 <h1 id="scripts-lua-modelo">Scripts Lua (Modelo)<a class="headerlink" href="#scripts-lua-modelo" title="Permanent link">&para;</a></h1>
 <p><img alt="Configuración de Lua" src="../../assets/model-lua-config.png" /></p>
-<p>Este menú solo aparece cuando se ha instalado un script Lua de <strong>fuente</strong>
-o de <strong>tarea</strong> en <code>scripts/</code> de la SD card/eMMC (véase <a href="../../system-setup/file-manager/#top-level-folders">Gestor de
+<p>Este menú solo aparece una vez que se ha instalado un script Lua de
+<strong>fuente</strong> o de <strong>tarea</strong> en la carpeta <code>scripts/</code> de la SD card/eMMC
+(consulte <a href="../../system-setup/file-manager/#top-level-folders">Gestor de
 archivos</a>): sirve para
 activar y configurar dichos scripts <strong>por modelo</strong>, no para instalarlos.
-Una vez instalada, una fuente o tarea está disponible de forma global
-para todos los modelos; esta página es donde cada modelo la habilita y
+Una vez instalada, una fuente o una tarea está disponible de forma global
+para todos los modelos; en esta página es donde cada modelo la habilita y
 establece su propia configuración. En el sitio de la
 Ethos-Feedback-Community se publican ejemplos de scripts de fuente y de
 tarea (<code>/lua/examples/task</code>, <code>/lua/examples/source</code>).</p>
 <h2 id="tareas-lua">Tareas Lua<a class="headerlink" href="#tareas-lua" title="Permanent link">&para;</a></h2>
-<p>Todas las tareas instaladas se muestran con un conmutador de activación
-por modelo. Al activar una se despliega su formulario de configuración
-(si lo tiene): el script de la tarea proporciona sus propias funciones de
-lectura/escritura, de modo que cada modelo puede guardar sus propios
-ajustes. Por ejemplo, una tarea podría exponer un rango numérico
-configurable que se establece de forma independiente en cada modelo.</p>
+<p>Todas las tareas instaladas aparecen listadas con un conmutador de
+activación por modelo. Al activar una de ellas se despliega su formulario
+de configuración (si lo tiene): el script de la tarea proporciona sus
+propias funciones de lectura/escritura, de modo que cada modelo puede
+guardar sus propios ajustes. Por ejemplo, una tarea puede ofrecer un
+rango numérico configurable que se establece de forma independiente en
+cada modelo.</p>
 <h2 id="fuentes-lua">Fuentes Lua<a class="headerlink" href="#fuentes-lua" title="Permanent link">&para;</a></h2>
 <p>El mismo esquema se aplica a las fuentes: se activan por modelo y después
 se configuran mediante el formulario que proporcione el script de la
@@ -3429,12 +3431,12 @@ una
 normal en cualquier otra parte de Ethos, exactamente igual que una
 integrada.</p>
 <h2 id="para-autores-de-scripts">Para autores de scripts<a class="headerlink" href="#para-autores-de-scripts" title="Permanent link">&para;</a></h2>
-<p>Las fuentes y tareas se registran desde Lua mediante
+<p>Las fuentes y las tareas se registran desde Lua mediante
 <code>system.registerSource()</code> y <code>system.registerTask()</code>: consulte la Ethos
 Lua Reference Guide y el apartado <a href="../../lua-scripts/">Scripts
 Lua</a> de este manual para conocer el entorno
-general de scripting (los widgets son un mecanismo distinto, aunque
-relacionado; véase <a href="../../displays/custom-widgets/">Widgets
+general de programación de scripts (los widgets son un mecanismo
+distinto, aunque relacionado; consulte <a href="../../displays/custom-widgets/">Widgets
 personalizados</a>).</p>
 
 

@@ -1624,7 +1624,7 @@
   <a href="#shared-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parámetros comunes
+        Parámetros compartidos
       
     </span>
   </a>
@@ -1654,10 +1654,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ignorar-la-entrada-de-entrenador-del-esclavo" class="md-nav__link">
+  <a href="#opcion-de-ignorar-la-entrada-del-alumno" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ignorar la entrada de entrenador del esclavo
+        Opción de ignorar la entrada del alumno
       
     </span>
   </a>
@@ -2053,7 +2053,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2840,7 +2840,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3437,7 +3437,7 @@
   <a href="#shared-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parámetros comunes
+        Parámetros compartidos
       
     </span>
   </a>
@@ -3467,10 +3467,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ignorar-la-entrada-de-entrenador-del-esclavo" class="md-nav__link">
+  <a href="#opcion-de-ignorar-la-entrada-del-alumno" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ignorar la entrada de entrenador del esclavo
+        Opción de ignorar la entrada del alumno
       
     </span>
   </a>
@@ -3505,199 +3505,209 @@
 <h1 id="interruptores-logicos">Interruptores lógicos<a class="headerlink" href="#interruptores-logicos" title="Permanent link">&para;</a></h1>
 <p><img alt="Menú de interruptores lógicos" src="../../assets/model-lsw-menu.png" /></p>
 <p>Los interruptores lógicos son interruptores <em>virtuales</em> programados por el
-usuario: no son mandos físicos, pero pueden emplearse en cualquier lugar
+usuario: no son mandos físicos, pero pueden emplearse en cualquier sitio
 donde quepa un interruptor físico, como disparador de programas. Cada uno
-evalúa la condición configurada respecto a sus entradas (otros
-interruptores, valores de telemetría, valores de mezcla, valores de
-temporizador, canales de giróscopo/entrenador y más) para resultar
-verdadero o falso. Se admiten hasta 100; de forma predeterminada no existe
-ninguno. Añada uno con <strong>+</strong>; la etiqueta de menú de un interruptor
-definido se muestra en verde cuando es verdadero y en rojo cuando es
-falso. Toque uno existente para acceder a
+evalúa la condición configurada frente a sus entradas (otros interruptores,
+valores de telemetría, valores de mezclas, valores de cronómetros, canales
+de giróscopo/entrenador y más) para hacerse Verdadero o Falso. Se admiten
+hasta 100; no hay ninguno por defecto. Pulse <strong>+</strong> para añadir uno; la
+etiqueta de un interruptor ya definido se muestra en verde cuando es
+Verdadero y en rojo cuando es Falso. Pulse sobre uno existente para
 <strong>Editar</strong>/<strong>Mover</strong>/<strong>Copiar-pegar</strong>/<strong>Clonar</strong>/<strong>Eliminar</strong>.</p>
 <p><img alt="Añadir interruptor lógico" src="../../assets/model-lsw-add.png" /></p>
 <h2 id="funcion">Función<a class="headerlink" href="#funcion" title="Permanent link">&para;</a></h2>
 <p>Todas las funciones admiten una salida normal o invertida.</p>
 <ul>
-<li><strong>A ~ X</strong> — verdadero cuando la fuente <code>A</code> es <em>aproximadamente</em> igual
-  (dentro de ~10 %) a un valor fijo <code>X</code>. Generalmente preferible a la
+<li><strong>A ~ X</strong> — Verdadera cuando la fuente <code>A</code> es <em>aproximadamente</em> igual
+  (dentro de un ~10 %) a un valor fijo <code>X</code>. Generalmente preferible a la
   igualdad exacta —</li>
 </ul>
 <p><img alt="A ~ X" src="../../assets/model-lsw-A~X.png" /></p>
-<p>— ya que con <code>A = X</code>, una lectura de telemetría que fluctúa entre, por
+<p>— ya que con <code>A = X</code>, una lectura de telemetría que oscile entre, por
   ejemplo, 8,5 V y 8,35 V en torno a un objetivo de 8,4 V puede que nunca
-  coincida exactamente con 8,4 V, por lo que el interruptor nunca se
+  coincida exactamente con 8,4 V, con lo que el interruptor nunca se
   activaría.
-- <strong>A = X</strong> — verdadero solo cuando <code>A</code> es exactamente igual a <code>X</code>.
-- <strong>A &gt; X</strong> / <strong>A &lt; X</strong> — verdadero cuando <code>A</code> es mayor/menor que <code>X</code>.
+- <strong>A = X</strong> — Verdadera sólo cuando <code>A</code> es exactamente igual a <code>X</code>.
+- <strong>A &gt; X</strong> / <strong>A &lt; X</strong> — Verdadera cuando <code>A</code> es mayor/menor que <code>X</code>.
 - <strong>|A| &gt; X</strong> / <strong>|A| &lt; X</strong> — igual que lo anterior, pero comparando el
   valor absoluto de <code>A</code> (se ignora el signo).
-- <strong>Δ &gt; X</strong> — verdadero cuando la variación de <code>A</code> (delta) durante el
-  <strong>intervalo de comprobación</strong> alcanza al menos <code>X</code>. Un intervalo de
-  <code>---</code> significa una ventana infinita.</p>
+- <strong>Δ &gt; X</strong> — Verdadera cuando la variación de <code>A</code> (delta) durante el
+  <strong>intervalo de comprobación</strong> alcanza al menos <code>X</code>. Un intervalo <code>---</code>
+  significa una ventana infinita.</p>
 <p><img alt="Delta mayor que X" src="../../assets/model-lsw-delta-gtX.png" />
   <img alt="Delta absoluto mayor que X" src="../../assets/model-lsw-delta-AgtX.png" /></p>
 <ul>
 <li><strong>|Δ| &gt; X</strong> — igual que lo anterior, usando el valor absoluto de la
   variación.</li>
-<li><strong>Rango</strong> — verdadero cuando <code>A</code> se encuentra dentro de un rango
+<li><strong>Rango</strong> — Verdadera cuando <code>A</code> se encuentra dentro de un rango
   especificado.</li>
 </ul>
 <p><img alt="Rango" src="../../assets/model-lsw-range.png" /></p>
 <ul>
-<li><strong>AND</strong> — verdadero solo si todas las fuentes indicadas (Valor 1…N) son
-  verdaderas.</li>
+<li><strong>AND</strong> — Verdadera sólo si todas las fuentes seleccionadas (Valor 1 …
+  Valor(n)) son verdaderas.</li>
 </ul>
 <p><img alt="AND" src="../../assets/model-lsw-AND.png" /></p>
 <ul>
-<li><strong>OR</strong> — verdadero si al menos una de las fuentes indicadas es
+<li><strong>OR</strong> — Verdadera si al menos una de las fuentes seleccionadas es
   verdadera.</li>
 </ul>
 <p><img alt="OR" src="../../assets/model-lsw-OR.png" /></p>
 <ul>
-<li><strong>XOR</strong> (OR exclusivo) — verdadero si <em>exactamente una</em> de las fuentes
-  indicadas es verdadera.</li>
+<li><strong>XOR</strong> (O Exclusivo) — Verdadera si <em>sólo una</em> de las fuentes
+  seleccionadas es verdadera.</li>
 </ul>
 <p><img alt="XOR" src="../../assets/model-lsw-XOR.png" /></p>
 <ul>
-<li><strong>Generador de temporizador</strong> — conmuta libremente entre activo e
-  inactivo de forma continua: activo durante <strong>Duración activa</strong> e
-  inactivo durante <strong>Duración inactiva</strong>.</li>
+<li><strong>Generador de cronómetros</strong> — el interruptor lógico se activa y
+  desactiva continuamente: se enciende durante el tiempo <strong>Duración
+  activa</strong> y se apaga durante el tiempo <strong>Duración inactiva</strong>.</li>
 </ul>
-<p><img alt="Generador de temporizador" src="../../assets/model-lsw-timer-generator.png" /></p>
+<p><img alt="Generador de cronómetros" src="../../assets/model-lsw-timer-generator.png" /></p>
 <ul>
-<li><strong>Sticky</strong> — un enclavamiento (biestable SR); véase
+<li><strong>Sticky</strong> — una función de enganche/desenganche (SR Flip-flop); véase
   <a href="#sticky">más abajo</a>.</li>
 <li><strong>Edge</strong> — un pulso momentáneo; véase <a href="#edge">más abajo</a>.</li>
 </ul>
 <h3 id="sticky">Sticky<a class="headerlink" href="#sticky" title="Permanent link">&para;</a></h3>
 <p><img alt="Sticky" src="../../assets/model-lsw-sticky.png" /></p>
-<p>Se enclava en <strong>Verdadero</strong> en cuanto se cumple su condición <strong>Trigger
-ON</strong>, y permanece verdadero hasta que se cumple <strong>Trigger OFF</strong>,
-condicionado opcionalmente por la <strong>Condición activa</strong> (mientras esta sea
-falsa, la salida se mantiene en falso independientemente de todo; el
-enclavamiento interno de Sticky sigue evaluándose en segundo plano y se
-transmite de nuevo a la salida en cuanto la condición activa vuelve a ser
-verdadera, sujeto a los retardos).</p>
-<p>Desde Ethos 1.6.2, ambos disparadores admiten un modificador <strong>Edge</strong>
-(pulsación larga de <code>ENT</code> sobre la condición del disparador y seleccionar
-Edge, que se muestra con el prefijo <code>†</code>) para un control mucho más
-preciso:</p>
-<p><img alt="Sticky con edge" src="../../assets/model-lsw-sticky-with-edge.png" />
-<img alt="Selección de la opción Edge" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
+<p>Se engancha en <strong>Verdadero</strong> en cuanto se cumple su condición de
+activación (<strong>Trigger ON</strong>), y mantiene su valor hasta que se cumple la
+condición de desenganche (<strong>Trigger OFF</strong>), todo ello regulado
+opcionalmente por la <strong>Condición activa</strong> (mientras ésta sea Falsa, el
+resultado del interruptor lógico se mantendrá en Falso; el enganche
+interno de Sticky continúa operando en segundo plano y se conmuta de
+nuevo a la salida tan pronto como la condición activa vuelve a ser
+Verdadera, sujeto a los retrasos que se le introduzcan).</p>
+<p>Desde Ethos 1.6.2, ambas condiciones admiten la opción <strong>Borde</strong>
+(mantenga pulsada la tecla <code>ENT</code> sobre la condición de activación y
+seleccione Borde; aparecerá un símbolo <code>†</code> delante de la fuente elegida)
+para un control mucho más flexible:</p>
+<p><img alt="Sticky con borde" src="../../assets/model-lsw-sticky-with-edge.png" />
+<img alt="Selección de la opción Borde" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
 <ul>
-<li><strong>Trigger ON <code>SA</code> (sin retardo)</strong> — se enclava en verdadero en el
-  instante en que SA pasa a nivel alto.</li>
-<li><strong>Trigger ON <code>SA</code> (retardo = 1 s)</strong> — se enclava en verdadero 1 s
-  después de que SA pase a nivel alto, <em>siempre que</em> SA siga en nivel
-  alto al final de ese segundo.</li>
-<li><strong>Trigger ON <code>†SA</code> (retardo = 1 s)</strong> — se enclava en Verdadero→Falso
-  1 s después de que SA pase a nivel alto, <strong>independientemente</strong> de si SA
-  sigue en nivel alto en ese momento (el flanco ya se produjo; el retardo
-  solo temporiza el resultado).</li>
+<li><strong>Condición para ON <code>SA</code> (sin retraso)</strong> — se engancha en Verdadero tan
+  pronto como el interruptor SA se mueve hacia arriba.</li>
+<li><strong>Condición para ON <code>SA</code> (retraso = 1 s)</strong> — se engancha en Verdadero
+  1 segundo después de que SA se haya movido hacia arriba, <em>siempre que</em>
+  ese interruptor SA permanezca arriba durante el retraso.</li>
+<li><strong>Condición para ON <code>†SA</code> (retraso = 1 s)</strong> — cambia de Verdadero a
+  Falso 1 segundo después de que SA esté arriba, <strong>incluso si</strong> SA no
+  permanece arriba durante el retraso (el borde ya se ha producido; el
+  retraso sólo temporiza el resultado).</li>
 </ul>
-<p>Trigger OFF se comporta de la misma manera a la inversa. Los retardos se
-aplican <strong>después</strong> de la condición activa, por lo que un cambio en la
-condición activa vuelve a disparar la temporización del retardo antes de
-que el valor enclavado llegue de nuevo a la salida. Si ambos disparadores
-pasan de falso a verdadero simultáneamente, la salida del Sticky
-<strong>conmuta</strong> una vez. Véase también <a href="#shared-parameters">Parámetros
-comunes</a> más abajo.</p>
+<p>La condición para OFF se comporta del mismo modo, a la inversa. Los
+retrasos se aplican <strong>DESPUÉS</strong> de la condición activa: si la condición
+activa cambia, los periodos de retardo se aplicarán antes de que el valor
+enganchado se conmute de nuevo a la salida. Cambios simultáneos de las
+condiciones de activación y desactivación de Falso a Verdadero harán que
+el resultado de Sticky <strong>cambie su estado</strong> sólo una vez. Vaya también a
+la sección <a href="#shared-parameters">Parámetros compartidos</a> más abajo.</p>
 <h3 id="edge">Edge<a class="headerlink" href="#edge" title="Permanent link">&para;</a></h3>
 <p><img alt="Edge" src="../../assets/model-lsw-edge.png" /></p>
-<p>Un pulso momentáneo: verdadero durante <strong>Duración</strong>, una vez que se
-cumple su condición de disparo. <strong>Durante</strong> es un par <code>[t1:t2]</code> que
-controla exactamente cuándo:</p>
+<p>Es un interruptor momentáneo que se convierte en Verdadero durante el
+periodo especificado en <strong>Duración</strong>, cuando se cumplen sus condiciones de
+activación. <strong>During</strong> está dividido en dos partes, <code>[t1:t2]</code>, que
+controlan exactamente cuándo:</p>
 <ul>
-<li><strong>Flanco de subida, Durante = 0,0 s</strong> — se dispara en el instante en
-  que Trigger ON pasa de falso a verdadero.</li>
+<li><strong>Borde ascendente, During = 0,0 s</strong> — se activa en el instante en que
+  la condición de activación pasa de Falso a Verdadero.</li>
 </ul>
-<p><img alt="Flanco de subida" src="../../assets/model-lsw-edge-rising-edge.png" />
-  <img alt="Durante = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
+<p><img alt="Borde ascendente" src="../../assets/model-lsw-edge-rising-edge.png" />
+  <img alt="During = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
 <ul>
-<li><strong>Flanco de subida, Durante ≥ 0,0 s (p. ej. 5,0 s)</strong> — se dispara 5 s
-  después de que Trigger ON pase a verdadero, ignorando cualquier «pico»
-  más corto durante esa ventana de 5 s.</li>
+<li><strong>Borde ascendente, During ≥ 0,0 s (p. ej. 5,0 s)</strong> — se activa
+  5 segundos después de que la condición de activación pase a Verdadero,
+  ignorando cualquier «pico» adicional durante ese periodo de 5 s.</li>
 </ul>
-<p><img alt="Durante &gt; 0, flanco de subida" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
-  <img alt="Durante &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
+<p><img alt="During &gt; 0, borde ascendente" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
+  <img alt="During &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
 <ul>
-<li><strong>Flanco de bajada, Durante = 0,0 s</strong> — se dispara en el instante en
-  que Trigger ON pasa de verdadero a falso.</li>
-<li><strong>Flanco de bajada, Durante ≥ 0,0 s (p. ej. 3,0 s)</strong> — se dispara en la
-  transición de verdadero a falso, pero solo si antes había estado
-  verdadero durante al menos 3 s.</li>
-<li><strong>Pulso (t1 y t2 ambos definidos)</strong> — se dispara solo si Trigger ON
-  pasa de falso a verdadero y de nuevo a falso dentro de esa ventana
-  (p. ej. entre 2 s y 5 s después).</li>
+<li><strong>Borde descendente, During = 0,0 s</strong> — se activa en el instante en que
+  la condición de activación pasa de Verdadero a Falso.</li>
+<li><strong>Borde descendente, During ≥ 0,0 s (p. ej. 3,0 s)</strong> — se activa en la
+  transición de Verdadero a Falso, pero sólo si antes había sido
+  Verdadera durante al menos 3 segundos.</li>
+<li><strong>Pulso (t1 y t2 con valores)</strong> — se activa sólo si la condición de
+  activación pasa de Falsa a Verdadera y luego de Verdadera a Falsa
+  dentro de esa ventana (p. ej. entre 2 y 5 segundos después).</li>
 </ul>
-<h2 id="shared-parameters">Parámetros comunes<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
-<p><img alt="Parámetros comunes" src="../../assets/model-lsw-common-parameters.png" /></p>
+<h2 id="shared-parameters">Parámetros compartidos<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
+<p><img alt="Parámetros compartidos" src="../../assets/model-lsw-common-parameters.png" /></p>
 <ul>
-<li><strong>Condición activa</strong> — condiciona la salida del interruptor del mismo
-  modo que la de Sticky, más arriba. Opciones: siempre activa, posiciones
-  de interruptor/interruptor de función/interruptor lógico/trim,
-  Telemetría, Fases de vuelo o un evento del sistema (Retención de gas,
-  Corte de gas, Acelerador activo, Telemetría activa, RSSI bajo,
-  Entrenador activo, Reinicio de vuelo).</li>
-<li><strong>Retardo antes de activar</strong> / <strong>Retardo antes de desactivar</strong> —
-  cuánto tiempo debe mantenerse la condición como verdadera (o falsa)
-  antes de que la salida la siga, hasta 60 s. No aplicable al generador
-  de temporizador ni a Edge. (Véase <a href="../../how-to/battery-capacity-warning/">Guía práctica: aviso de capacidad de
-  batería</a> para un retardo
-  utilizado para filtrar una caída de tensión.)</li>
-<li><strong>Confirmación antes de activar</strong> / <strong>de desactivar</strong> — solicita
-  confirmación al usuario antes de que el estado cambie realmente (con
-  opción de Cancelar, para casos en que se dispare demasiado a menudo
-  para resultar útil); resulta práctico para condicionar algo
-  arriesgado, p. ej. confirmar antes de apagar remotamente un vehículo
-  terrestre.</li>
+<li><strong>Condición activa</strong> — regula la salida del interruptor lógico del
+  mismo modo que en Sticky, más arriba. Puede elegirse entre: Siempre
+  activada, Posiciones de interruptor, Interruptores de Función,
+  Interruptores Lógicos, Posiciones de compensador, Telemetría, Modos de
+  vuelo o un evento del sistema (Throttle hold, Throttle cut, Throttle
+  active, Telemetría activa, RSSI baja, Entrenador activo,
+  Restablecimiento del vuelo).</li>
+<li><strong>Retraso antes de activarse</strong> / <strong>Retraso antes de inactividad</strong> —
+  determinan el tiempo durante el cual las condiciones del interruptor
+  lógico tienen que ser Verdaderas (o Falsas) antes de que la salida las
+  siga; los retardos pueden ser de hasta 60,0 s. No es relevante para el
+  Generador de cronómetros ni para Edge. (Véase <a href="../../how-to/battery-capacity-warning/">Cómo hacerlo: aviso de
+  capacidad de batería</a> para un
+  retardo usado para filtrar una caída de tensión.)</li>
+<li><strong>Confirmación antes de activarse</strong> / <strong>antes de desactivarse</strong> — pide
+  confirmación al usuario antes de que el estado cambie realmente (existe
+  la opción de Cancelar para situaciones donde el diálogo de confirmación
+  se active con demasiada frecuencia); resulta muy útil para condicionar
+  algún evento peligroso, por ejemplo pedir confirmación antes de apagar
+  a distancia una máquina terrestre.</li>
 </ul>
 <p><img alt="Confirmar verdadero" src="../../assets/model-lsw-confirm-lsw-true.png" />
   <img alt="Confirmar falso" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
 <ul>
-<li><strong>Duración mínima</strong> — una vez verdadero, permanece verdadero al menos
-  este tiempo. Si se deja en <code>---</code>, la salida puede ser verdadera solo
-  durante un único ciclo del mezclador, demasiado breve incluso para ver
-  que la línea se resalte en negrita en la interfaz.</li>
-<li><strong>Duración máxima</strong> — una vez verdadero, vuelve automáticamente a falso
-  después de este tiempo, si sigue activo. Ambas duraciones admiten hasta
-  60 s.</li>
-<li><strong>Comentario</strong> — texto libre, mostrado en cualquier lugar donde este
-  interruptor se añada a un widget de valor, para documentar su
-  propósito.</li>
+<li><strong>Duración Mínima</strong> — una vez que el interruptor lógico se convierte en
+  Verdadero, permanecerá así al menos durante el tiempo especificado. Si
+  se deja el valor predeterminado <code>---</code>, sólo se convertirá en Verdadero
+  durante un ciclo de procesamiento de la mezcla, demasiado corto para
+  verlo, por lo que la línea LSW no se pondrá en negrita.</li>
+<li><strong>Duración Máxima</strong> — una vez que el interruptor lógico se convierte en
+  Verdadero, sólo permanecerá verdadero hasta que alcance la duración
+  máxima especificada, si se ha ajustado. Ambas duraciones se pueden
+  establecer hasta 60,0 s.</li>
+<li><strong>Comentario</strong> — texto libre para explicar su uso o función. El
+  comentario se muestra cuando se añade el interruptor lógico a un widget
+  con valor.</li>
 </ul>
 <h2 id="uso-con-telemetria">Uso con telemetría<a class="headerlink" href="#uso-con-telemetria" title="Permanent link">&para;</a></h2>
-<p>Un evento del sistema <strong>Telemetría activa</strong> (o un interruptor cuya fuente
-sea un sensor de telemetría, activo solo mientras ese sensor comunique
-datos) cubre las condiciones del tipo «¿se está recibiendo telemetría
-actualmente?».</p>
+<p>El evento del sistema <strong>Telemetría activa</strong> (o un interruptor lógico cuya
+Fuente sea un sensor de telemetría, activo sólo mientras ese sensor esté
+enviando datos) cubre las condiciones del tipo «se está recibiendo
+telemetría».</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Una <a href="../mixes/">mezcla</a> condicionada por un interruptor lógico basado
-en telemetría necesita una <strong>segunda</strong> acción de mezcla que use el
-mismo interruptor <strong>invertido</strong>, para que la mezcla siga teniendo un
-valor válido cuando se pierda la telemetría; recuerde que una mezcla
-inactiva emite el valor neutro (0 % / 1500 µs, o <strong>medio gas</strong> en un
-canal de acelerador). Como alternativa, use una acción <strong>Offset</strong>,
-que ya incorpora valores separados para activo/inactivo; p. ej. la
-fuente <strong>0</strong> (el valor especial) con el offset ajustado para que la
-mezcla dé +100 % mientras <code>LS3</code> está activo y −100 % mientras está
-inactivo cubre ambos casos en una sola acción.</p>
+<p>Cuando se usa en una <a href="../mixes/">mezcla</a> un interruptor lógico que
+dependa de la telemetría, se debe añadir una <strong>segunda</strong> acción de
+mezcla que use el mismo interruptor lógico pero <strong>invertido</strong>, para
+asegurar que la mezcla tenga valores válidos incluso cuando se pierda
+la telemetría. Recuerde que cuando una mezcla está inactiva su canal
+de salida estará en neutral = 0 % = 1500 µs, ¡o <strong>con el motor a
+mitad</strong> si estamos hablando del acelerador! Alternativamente, se puede
+usar una acción de desplazamiento (<strong>Offset</strong>), que ya tiene dos
+valores por defecto, uno cuando está activa y otro cuando está
+inactiva: por ejemplo, con la fuente ajustada al valor especial <strong>0</strong>
+y el desplazamiento configurado para que la salida de la mezcla sea
+del +100 % cuando <code>LS3</code> esté activo y del −100 % cuando esté
+inactivo, se cubren ambos casos en una sola acción.</p>
 </div>
 <h2 id="comparacion-de-fuentes">Comparación de fuentes<a class="headerlink" href="#comparacion-de-fuentes" title="Permanent link">&para;</a></h2>
-<p>Normalmente una fuente se compara con un valor fijo, pero también pueden
-compararse directamente dos fuentes del <em>mismo</em> tipo, p. ej. dos
-temporizadores, dos tensiones o dos sensores de RPM.</p>
-<h2 id="ignorar-la-entrada-de-entrenador-del-esclavo">Ignorar la entrada de entrenador del esclavo<a class="headerlink" href="#ignorar-la-entrada-de-entrenador-del-esclavo" title="Permanent link">&para;</a></h2>
-<p><img alt="Ignorar la entrada de entrenador" src="../../assets/model-lsw-ignore-trainer-input.png" /></p>
-<p>Las <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">opciones</a>
-de una fuente permiten excluir la entrada de entrenador procedente de una
-emisora de alumno (esclava) conectada; se emplea normalmente en un
-interruptor lógico que vigila el movimiento del stick del <strong>maestro</strong>
-(p. ej. para intervenir al instante si algo va mal), sin que las entradas
-del alumno lo activen también. Suele combinarse con un interruptor de
-entrenador que condiciona la propia condición activa del maestro.</p>
+<p>Normalmente, una fuente se compara con un valor fijo. Sin embargo, se
+permite una comparación directa entre dos fuentes que tengan el <em>mismo</em>
+formato, por ejemplo 2 cronos, 2 voltajes o 2 fuentes de RPM.</p>
+<h2 id="opcion-de-ignorar-la-entrada-del-alumno">Opción de ignorar la entrada del alumno<a class="headerlink" href="#opcion-de-ignorar-la-entrada-del-alumno" title="Permanent link">&para;</a></h2>
+<p><img alt="Ignorar entrada entrenador" src="../../assets/model-lsw-ignore-trainer-input.png" /></p>
+<p>En las <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">opciones</a>
+de una fuente se puede ignorar cualquier entrada procedente de la radio
+esclava del alumno. Una aplicación típica es cuando un interruptor lógico
+está configurado para detectar el movimiento de las palancas del
+<strong>instructor</strong> (por ejemplo, para permitir la intervención instantánea si
+las cosas van mal), evitando que las entradas del alumno activen también
+el interruptor lógico. Normalmente se usa en conjunción con un interruptor
+de entrenador que habilita/deshabilita la ‘condición activa’ en la radio
+del maestro.</p>
 
 
 

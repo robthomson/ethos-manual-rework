@@ -2661,10 +2661,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-interruttore-logico-di-rilevamento-profondita" class="md-nav__link">
+  <a href="#2-interruttore-logico-di-rilevamento-elevatore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Interruttore logico di rilevamento profondità
+        2. Interruttore logico di rilevamento elevatore
       
     </span>
   </a>
@@ -2812,7 +2812,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3378,10 +3378,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-interruttore-logico-di-rilevamento-profondita" class="md-nav__link">
+  <a href="#2-interruttore-logico-di-rilevamento-elevatore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Interruttore logico di rilevamento profondità
+        2. Interruttore logico di rilevamento elevatore
       
     </span>
   </a>
@@ -3450,40 +3450,41 @@
 <p>Un utile miglioramento della funzione <a href="../../model-setup/trainer/">Trainer</a>:
 invece di affidarsi al solo interruttore, l'istruttore può riprendere il
 controllo istantaneamente muovendo semplicemente lo stick degli alettoni o
-della profondità — senza dover cercare l'interruttore trainer se qualcosa
+dell'elevatore — senza dover cercare prima l'interruttore trainer se qualcosa
 va storto.</p>
-<p>L'interruttore trainer avvia comunque la sessione; è un <a href="../../model-setup/logical-switches/#sticky">interruttore logico
-Sticky</a> a pilotare la funzione
-trainer vera e propria, annullata sia dal ritorno a off dell'interruttore
-<strong>sia</strong> dal rilevamento del movimento degli stick dell'istruttore.</p>
+<p>L'interruttore trainer avvia comunque la sessione; a pilotare la funzione
+trainer vera e propria è un <a href="../../model-setup/logical-switches/#sticky">interruttore logico
+Sticky</a>, che viene annullato dal
+ritorno a off dell'interruttore <strong>oppure</strong> dal rilevamento del movimento
+degli stick dell'istruttore.</p>
 <p><img alt="Trainer attivo" src="../../assets/trainer-take-back-trainer-active.png" /></p>
 <h2 id="1-interruttore-logico-di-rilevamento-alettoni">1. Interruttore logico di rilevamento alettoni<a class="headerlink" href="#1-interruttore-logico-di-rilevamento-alettoni" title="Permanent link">&para;</a></h2>
 <p><img alt="Rilevamento ingresso alettoni" src="../../assets/trainer-take-back-ailinput.png" /></p>
 <p>Un interruttore logico che utilizza <strong>|A| &gt; X</strong> sullo stick degli alettoni,
 vero quando questo si sposta di oltre il 10% dal centro in una delle due
-direzioni. Premere a lungo sulla sorgente degli alettoni e selezionare
-<strong>Ignore trainer input</strong>, in modo che il movimento degli alettoni
+direzioni. Premi a lungo sulla sorgente degli alettoni e seleziona <strong>Non
+gestito dal Trainer</strong>, in modo che il movimento degli alettoni
 dell'<em>allievo</em> (proveniente dal collegamento trainer) non lo attivi a sua
 volta:</p>
 <p><img alt="Ignora ingresso trainer" src="../../assets/trainer-take-back-ailinput-ignore.png" /></p>
-<h2 id="2-interruttore-logico-di-rilevamento-profondita">2. Interruttore logico di rilevamento profondità<a class="headerlink" href="#2-interruttore-logico-di-rilevamento-profondita" title="Permanent link">&para;</a></h2>
-<p><img alt="Rilevamento ingresso profondità" src="../../assets/trainer-take-back-eleinput.png" /></p>
-<p>Lo stesso schema, applicato allo stick della profondità.</p>
+<h2 id="2-interruttore-logico-di-rilevamento-elevatore">2. Interruttore logico di rilevamento elevatore<a class="headerlink" href="#2-interruttore-logico-di-rilevamento-elevatore" title="Permanent link">&para;</a></h2>
+<p><img alt="Rilevamento ingresso elevatore" src="../../assets/trainer-take-back-eleinput.png" /></p>
+<p>Lo stesso schema, applicato allo stick dell'elevatore.</p>
 <h2 id="3-interruttore-logico-di-annullamento">3. Interruttore logico di annullamento<a class="headerlink" href="#3-interruttore-logico-di-annullamento" title="Permanent link">&para;</a></h2>
 <p>Un interruttore logico <strong>OR</strong>, vero quando è vero l'interruttore di
-rilevamento alettoni oppure quello di rilevamento profondità, <strong>oppure</strong>
+rilevamento alettoni oppure quello di rilevamento elevatore, <strong>oppure</strong>
 quando l'interruttore trainer (ad esempio SD) non è in basso — in altre
 parole, sia "l'istruttore ha mosso uno stick" sia "l'interruttore trainer è
 stato disattivato" terminano la sessione.</p>
 <h2 id="4-interruttore-logico-sticky-di-abilitazione-trainer">4. Interruttore logico Sticky di abilitazione trainer<a class="headerlink" href="#4-interruttore-logico-sticky-di-abilitazione-trainer" title="Permanent link">&para;</a></h2>
 <p><img alt="Disabilita trainer" src="../../assets/trainer-take-back-disable-trainer.png" /></p>
 <p>Un interruttore logico <strong>Sticky</strong>: <strong>Trigger ON</strong> è l'interruttore trainer
-(SD in basso), <strong>Trigger OFF</strong> è l'interruttore di annullamento del punto 3.
-Utilizzare questo interruttore Sticky — chiamiamolo <code>TrainerActive</code> — come
+(SD in basso), <strong>Trigger OFF</strong> è l'interruttore di annullamento del Passo 3.
+Utilizza questo interruttore Sticky — chiamiamolo <code>TrainerActive</code> — come
 condizione di attivazione della funzione Trainer, al posto dell'interruttore
 fisico.</p>
 <h2 id="5-segnalazione-audio">5. Segnalazione audio<a class="headerlink" href="#5-segnalazione-audio" title="Permanent link">&para;</a></h2>
-<p>Aggiungere alcune <a href="../../model-setup/special-functions/">funzioni speciali Play Audio</a>
+<p>Aggiungi alcune <a href="../../model-setup/special-functions/">funzioni speciali "Riproduci audio"</a>
 che annuncino quando <code>TrainerActive</code> diventa vero e quando si azzera, in modo
 che entrambi i piloti ricevano un chiaro segnale acustico dell'esatto momento
 in cui il controllo passa di mano.</p>

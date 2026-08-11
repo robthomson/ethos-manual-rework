@@ -2003,7 +2003,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3402,75 +3402,75 @@
   
 
 
-<h1 id="administrador-de-archivos">Administrador de archivos<a class="headerlink" href="#administrador-de-archivos" title="Permanent link">&para;</a></h1>
-<p><img alt="Administrador de archivos - emisora" src="../../assets/system-filemanager-radio.png" /></p>
-<p>El Administrador de archivos permite explorar el almacenamiento de la emisora y actualizar el firmware del módulo de RF interno, de los dispositivos conectados por S.Port, de los dispositivos OTA (Over-The-Air) y de los módulos externos.</p>
+<h1 id="administrador-de-archivos">Administrador de Archivos<a class="headerlink" href="#administrador-de-archivos" title="Permanent link">&para;</a></h1>
+<p><img alt="Administrador de Archivos - radio" src="../../assets/system-filemanager-radio.png" /></p>
+<p>El Administrador de Archivos permite explorar el almacenamiento de la radio y flashear el firmware del módulo interno de RF, de los dispositivos conectados por S.Port, de los dispositivos OTA (Over-The-Air) y de los módulos externos.</p>
 <h2 id="distribucion-del-almacenamiento">Distribución del almacenamiento<a class="headerlink" href="#distribucion-del-almacenamiento" title="Permanent link">&para;</a></h2>
-<p>Pulse <strong>Flash</strong> (o presione <code>PAGE</code> para cambiar de unidad) para explorar la unidad flash USB virtual interna de la emisora, utilizada para los mapas de bits y las fuentes del sistema:</p>
+<p>Toque <strong>Flash</strong> (o pulse <code>PAGE</code> para cambiar de unidad) para explorar la unidad flash USB virtual interna de la radio, que se utiliza para los bitmaps y las fuentes del sistema:</p>
 <p><img alt="Almacenamiento Flash" src="../../assets/system-filemanager-flash.png" /></p>
 <ul>
-<li><code>bitmaps/system</code> — los mapas de bits utilizados para las pantallas y los iconos</li>
-<li><code>fonts/</code> — fuentes para los distintos idiomas seleccionables</li>
+<li><code>bitmaps/system</code> — los bitmaps utilizados para las pantallas y los iconos</li>
+<li><code>fonts/</code> — las fuentes para los distintos idiomas seleccionables</li>
 </ul>
-<p>Tanto el bootloader como el propio firmware del sistema residen en esta memoria flash interna, en todas las emisoras FrSky desde la X9D original.</p>
-<p>La serie <strong>X20/X20S/X20HD</strong> utiliza una SD card formateada en FAT32, de 32 GB o menos (una tarjeta SanDisk Ultra Micro SDHC Clase 10 de 16 GB es una buena elección). Las <strong>X18</strong> y <strong>X20 Pro/R/RS</strong> emplean por defecto una eMMC interna (se puede añadir una SD card externa junto a ella) — pulse <strong>Radio</strong> para explorarla. Ethos crea automáticamente <code>Logs/</code>, <code>models/</code> y <code>screenshots/</code> si no existen; <code>Firmware/</code> es una convención manual para los archivos de firmware de dispositivos, como los receptores.</p>
+<p>Tanto el gestor de arranque (bootloader) como el propio firmware del sistema residen en esta memoria flash interna, en todas las radios FrSky desde la X9D original.</p>
+<p>La serie <strong>X20/X20S/X20HD</strong> admite una SD card formateada en FAT32, de 32 GB o menos (una SanDisk Ultra Micro SDHC Clase 10 de 16 GB es una buena elección). Las <strong>X18</strong> y <strong>X20 Pro/R/RS</strong> utilizan por defecto una eMMC interna (se puede añadir además una SD card externa) — toque <strong>Radio</strong> para explorarla. Ethos crea automáticamente <code>Logs/</code>, <code>models/</code> y <code>screenshots/</code> si no existen; <code>Firmware/</code> es una convención manual para los archivos de firmware de dispositivos, como los receptores.</p>
 <h2 id="top-level-folders">Carpetas de primer nivel<a class="headerlink" href="#top-level-folders" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong><code>audio/</code></strong> — archivos de sonido del usuario y del sistema, separados por voz (<code>audio/en/gb</code>, <code>audio/en/us</code>, <code>audio/en/default</code>). Los archivos del usuario se reproducen mediante la <a href="../../model-setup/special-functions/">función especial Play Audio</a>; los archivos del sistema incluyen <code>hello.wav</code> (el saludo «Welcome to Ethos» — se puede añadir un <code>bye.wav</code>, aunque no se suministra). Formato: PCM de 16 kHz o 32 kHz, lineal de 16 bits, o A-law (UE)/µ-law (EE. UU.) de 8 bits; nombres de archivo de hasta 31 caracteres más la extensión. Ethos Suite mantiene sincronizadas las tres carpetas de voz, independientemente de cuál esté seleccionada realmente.</li>
 </ul>
 <p><img alt="Carpeta audio" src="../../assets/system-filemanager-audio.png" /></p>
 <ul>
-<li><strong><code>bitmaps/</code></strong> — <code>bitmaps/models/</code> contiene las imágenes de modelo del usuario (definidas en <a href="../../model-setup/model-edit/">Model Edit</a> o en los asistentes de modelo nuevo); <code>bitmaps/user/</code> contiene todo lo demás. Formato recomendado: BMP de 32 bits, 8 bits por color, con canal alfa, 300×280 px — así la decodificación en la emisora resulta poco costosa. Ethos redimensiona los BMP al momento, pero no los PNG/JPEG. Los nombres de archivo solo pueden usar <code>A-Z a-z 0-9 ()!-_@#;[]+=</code> y espacios, y deben tener 11 caracteres o menos (más una extensión de 4 caracteres) para aparecer en el selector de imagen de modelo — los nombres más largos siguen apareciendo en el Administrador de archivos, pero no podrán seleccionarse allí. Las herramientas de conversión de imágenes de Ethos Suite se encargan de la conversión de formato por usted.</li>
+<li><strong><code>bitmaps/</code></strong> — <code>bitmaps/models/</code> contiene las fotos de los modelos de cada usuario (definidas en <a href="../../model-setup/model-edit/">Model Edit</a> o en los asistentes de modelo nuevo); <code>bitmaps/user/</code> contiene todo lo demás. Formato recomendado: BMP de 32 bits, 8 bits por color, con canal alfa, 300×280 px — así la decodificación en la radio resulta poco costosa. Ethos redimensiona los BMP al vuelo, pero no los PNG/JPEG. Los nombres de archivo solo pueden usar <code>A-Z a-z 0-9 ()!-_@#;[]+=</code> y espacios, y deben tener 11 caracteres o menos (más una extensión de 4 caracteres) para aparecer en el selector de imagen del modelo — los nombres más largos siguen apareciendo en el Administrador de Archivos, pero no podrán seleccionarse allí. Las herramientas de conversión de imágenes de Ethos Suite se encargan de la conversión de formato por usted.</li>
 </ul>
 <p><img alt="Carpeta bitmaps" src="../../assets/system-filemanager-bitmaps.png" /></p>
 <ul>
 <li>
-<p><strong><code>documents/user/</code></strong> — documentos de texto del usuario, recuperados desde el widget de pantalla <strong>Text</strong>.</p>
+<p><strong><code>documents/user/</code></strong> — documentos de texto del usuario, que se recuperan desde el widget de pantalla <strong>Text</strong>.</p>
 </li>
 <li>
-<p><strong><code>Firmware/</code></strong> — archivos de firmware para el módulo de RF interno, los módulos externos y otros dispositivos (receptores, etc.), que se actualizan desde aquí mediante S.Port u OTA. Copie el nuevo firmware aquí mientras la emisora esté en <a href="../../getting-started/usb-connection-modes/">modo bootloader</a> y conectada por USB; al pulsar un archivo de firmware y elegir <strong>Flash</strong> se inicia la actualización:</p>
+<p><strong><code>Firmware/</code></strong> — archivos de firmware para el módulo interno de RF, los módulos externos y otros dispositivos (receptores, etc.), que se flashean desde aquí mediante S.Port u OTA. Copie el nuevo firmware aquí mientras la radio esté en <a href="../../getting-started/usb-connection-modes/">modo bootloader</a> y conectada por USB; al tocar un archivo de firmware y seleccionar <strong>Flash</strong> se inicia la actualización:</p>
 </li>
 </ul>
-<p><img alt="Actualizar el módulo de RF interno" src="../../assets/system-filemanager-flash.png" />
-  <img alt="Actualizar un receptor S8R por S.Port" src="../../assets/system-filemanager-flash-S8R.png" />
-  <img alt="Actualizar un receptor TD-R18 por OTA" src="../../assets/system-filemanager-flash-TD-ISRM.png" />
-  <img alt="Actualizar el bootloader" src="../../assets/system-filemanager-flash-bootloader.png" /></p>
+<p><img alt="Flashear el módulo interno de RF" src="../../assets/system-filemanager-flash.png" />
+  <img alt="Flashear un receptor S8R por S.Port" src="../../assets/system-filemanager-flash-S8R.png" />
+  <img alt="Flashear un receptor TD-R18 por OTA" src="../../assets/system-filemanager-flash-TD-ISRM.png" />
+  <img alt="Flashear el bootloader" src="../../assets/system-filemanager-flash-bootloader.png" /></p>
 <ul>
 <li>
-<p><strong><code>I18n/</code></strong> — archivos de traducción de idiomas.</p>
+<p><strong><code>I18n/</code></strong> — archivos de traducción de los idiomas.</p>
 </li>
 <li>
 <p><strong><code>Logs/</code></strong> — registros de datos.</p>
 </li>
 <li>
-<p><strong><code>models/</code></strong> — los propios archivos de modelo. Aquí no se pueden editar directamente, solo respaldar o compartir. Desde Ethos v1.2.11, un modelo se nombra a partir de su nombre de modelo en lugar de <code>model01.bin</code> y siguientes (p. ej., un modelo llamado «Extra» pasa a ser <code>Extra.bin</code>; un segundo «Extra» pasa a ser <code>Extra01.bin</code>). Cambiar el nombre de un modelo en <a href="../../model-setup/model-edit/">Model Edit</a> también cambia el nombre de su archivo — siempre en minúsculas (el nombre mostrado con mayúsculas y minúsculas se almacena dentro del archivo), y no todos los caracteres del nombre de un modelo se conservan en el nombre de archivo. Desde la v1.1.0 Alpha 17, cada categoría de modelo creada por el usuario tiene su propia subcarpeta.</p>
+<p><strong><code>models/</code></strong> — los propios archivos de los modelos. Aquí no se pueden editar directamente, solo hacer copias de seguridad o compartirlos. Desde Ethos v1.2.11, cada modelo se nombra a partir de su nombre de modelo en lugar de <code>model01.bin</code> y siguientes (p. ej., un modelo llamado «Extra» pasa a ser <code>Extra.bin</code>; un segundo «Extra» pasa a ser <code>Extra01.bin</code>). Al cambiar el nombre de un modelo en <a href="../../model-setup/model-edit/">Model Edit</a> también se cambia el nombre de su archivo — siempre en minúsculas (el nombre que se muestra, con mayúsculas y minúsculas, se guarda dentro del archivo), y no todos los caracteres del nombre de un modelo se conservan en el nombre del archivo. Desde la v1.1.0 Alpha 17, cada categoría de modelos creada por el usuario tiene su propia subcarpeta.</p>
 </li>
 <li>
-<p><strong><code>screenshots/</code></strong> — salida de la <a href="../../model-setup/special-functions/">función especial Screenshot</a>.</p>
+<p><strong><code>screenshots/</code></strong> — la salida de la <a href="../../model-setup/special-functions/">función especial Screenshot</a>.</p>
 </li>
 <li>
-<p><strong><code>scripts/</code></strong> — Scripts Lua, opcionalmente organizados en sus propias subcarpetas con archivos de apoyo. Los tipos de script son <strong>widgets</strong> (véase <a href="../../displays/">Pantallas</a>), <strong>tareas y fuentes</strong> (sensores personalizados o acciones posteriores al vuelo — instalados aquí, aparecen en el menú <a href="../../model-setup/lua-scripts/">Lua</a> del modelo) y <strong>herramientas</strong> (p. ej., las herramientas de configuración de receptores estabilizados de los menús del sistema). Cada módulo externo de terceros dispone de su propio script y carpeta, p. ej. <code>scripts/multi</code>, <code>scripts/elrs</code>, <code>scripts/ghost</code>, <code>scripts/crossfire</code>.</p>
+<p><strong><code>scripts/</code></strong> — scripts Lua, que opcionalmente se pueden organizar en sus propias subcarpetas con sus archivos de apoyo. Los tipos de script son <strong>widgets</strong> (vea <a href="../../displays/">Pantallas</a>), <strong>tareas y fuentes</strong> (sensores personalizados o acciones posteriores al vuelo — instalados aquí, aparecen en el menú <a href="../../model-setup/lua-scripts/">Lua</a> del modelo) y <strong>herramientas</strong> (p. ej., las herramientas de configuración de receptores estabilizados de los menús de Sistema). Cada módulo externo de terceros dispone de su propio script y carpeta, p. ej. <code>scripts/multi</code>, <code>scripts/elrs</code>, <code>scripts/ghost</code>, <code>scripts/crossfire</code>.</p>
 </li>
 </ul>
 <p>!!! warning
-      Los scripts Lua incrementan el tiempo de arranque de la emisora. El retardo de un script bien escrito es imperceptible — uno mal escrito puede retrasar el arranque casi indefinidamente.</p>
+      Los scripts Lua aumentan el tiempo de arranque de la radio. El retardo de un script bien escrito es imperceptible — uno mal escrito puede retrasar el arranque casi indefinidamente.</p>
 <ul>
 <li>
-<p><strong><code>radio.bin</code></strong> (carpeta raíz) — el archivo de ajustes del sistema, escrito por la propia emisora durante la inicialización. Respáldelo junto con <code>models/</code> antes de una actualización de firmware, para poder volver a una versión anterior si fuera necesario.</p>
+<p><strong><code>radio.bin</code></strong> (carpeta raíz) — el archivo de ajustes del sistema, que escribe la propia radio en su inicialización. Haga una copia de seguridad junto con <code>models/</code> antes de una actualización de firmware, para poder volver a una versión anterior si fuera necesario.</p>
 </li>
 <li>
-<p><strong><code>firmware.bin</code></strong> (carpeta raíz) — coloque aquí un nuevo archivo de firmware de la emisora para que se instale automáticamente la próxima vez que la emisora se desconecte del PC. Puede ser necesario actualizar en la misma pasada el contenido de la SD card/eMMC y de la unidad flash interna.</p>
+<p><strong><code>firmware.bin</code></strong> (carpeta raíz) — coloque aquí un nuevo archivo de firmware de la radio para que se flashee automáticamente la próxima vez que la radio se desconecte del PC. Puede que sea necesario actualizar en el mismo paso el contenido de la SD card/eMMC y el de la unidad flash interna.</p>
 </li>
 <li>
-<p><strong><code>sdcard.version</code></strong> (carpeta raíz) — la versión del contenido de la SD card, mantenida por Ethos Suite.</p>
+<p><strong><code>sdcard.version</code></strong> (carpeta raíz) — la versión del contenido de la SD card, que mantiene Ethos Suite.</p>
 </li>
 </ul>
 <h2 id="compartir-archivos-por-bluetooth">Compartir archivos por Bluetooth<a class="headerlink" href="#compartir-archivos-por-bluetooth" title="Permanent link">&para;</a></h2>
-<p>Ethos puede transferir archivos de emisora a emisora por Bluetooth. En la emisora <strong>receptora</strong>, navegue hasta la carpeta de destino en el Administrador de archivos, mantenga pulsado <code>ENT</code> y elija <strong>Receive file here</strong>:</p>
+<p>Ethos puede transferir archivos de radio a radio por Bluetooth. En la radio <strong>receptora</strong>, navegue hasta la carpeta de destino en el Administrador de Archivos, mantenga pulsada la tecla <code>ENT</code> y seleccione <strong>Receive file here</strong>:</p>
 <p><img alt="Recepción por Bluetooth" src="../../assets/system-filemanager-bluetooth-receive.png" /></p>
-<p>En la emisora <strong>emisora</strong>, pulse el archivo, elija <strong>Send file</strong> y siga las indicaciones en ambas emisoras:</p>
+<p>En la radio <strong>emisora</strong>, toque el archivo, seleccione <strong>Send file</strong> y siga las indicaciones en ambas radios:</p>
 <p><img alt="Envío por Bluetooth" src="../../assets/system-filemanager-bluetooth-send.png" /></p>
-<p>Si alguna de las dos emisoras ya tiene una conexión Bluetooth activa (telemetría, enlace de instructor o — en X20S/Pro — audio), se preguntará si se desea desconectar primero ese dispositivo.</p>
+<p>Si alguna de las dos radios ya tiene una conexión Bluetooth activa (telemetría, enlace de instructor o — en X20S/Pro — audio), se le preguntará si desea desconectar antes ese dispositivo.</p>
 
 
 

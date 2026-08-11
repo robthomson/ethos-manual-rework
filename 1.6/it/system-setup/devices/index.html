@@ -1211,10 +1211,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurazione-tramite-il-connettore-sport-della-trasmittente" class="md-nav__link">
+  <a href="#configurazione-tramite-il-connettore-sport-della-radio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurazione tramite il connettore S.Port della trasmittente
+        Configurazione tramite il connettore S.Port della radio
       
     </span>
   </a>
@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurazione-tramite-il-connettore-sport-della-trasmittente" class="md-nav__link">
+  <a href="#configurazione-tramite-il-connettore-sport-della-radio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurazione tramite il connettore S.Port della trasmittente
+        Configurazione tramite il connettore S.Port della radio
       
     </span>
   </a>
@@ -3404,82 +3404,82 @@
 
 <h1 id="dispositivi">Dispositivi<a class="headerlink" href="#dispositivi" title="Permanent link">&para;</a></h1>
 <p><img alt="Dispositivi" src="../../assets/system-devices.png" /></p>
-<p>Chiamato <strong>Device config</strong> nel menu — strumenti per la configurazione delle
+<p>Nel menu si chiama <strong>Device config</strong> — sono gli strumenti per configurare le
 periferiche collegate tramite S.Port/FBUS: sensori, ricevitori, la "gas
 suite", servi, VTX ed ESC. La voce <strong>DIY sensors</strong> compare automaticamente
-non appena viene rilevato un sensore DIY. Per i dettagli completi consultare
-il manuale specifico di ciascun dispositivo; questa pagina tratta gli aspetti
+non appena viene rilevato un sensore DIY. Per i dettagli completi consulta il
+manuale specifico di ciascun dispositivo; questa pagina tratta gli aspetti
 comuni a tutti.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Questo non ha nulla a che vedere con la scelta del modulo RF (interno o
-esterno) su cui trasmette un <em>modello</em> — quella è un'impostazione
+esterno) con cui trasmette un <em>modello</em>: quella è un'impostazione
 specifica del modello, descritta in
 <a href="../../model-setup/rf-system/">Sistema RF</a>.</p>
 </div>
-<p>Device Config è estensibile: sia gli utenti sia FrSky possono aggiungere
-pagine qui tramite Lua.</p>
+<p>Device config è estensibile: sia gli utenti sia FrSky possono aggiungere
+pagine tramite Lua.</p>
 <h2 id="riassegnazione-degli-id-dei-sensori">Riassegnazione degli ID dei sensori<a class="headerlink" href="#riassegnazione-degli-id-dei-sensori" title="Permanent link">&para;</a></h2>
-<p>Le schermate Device config di Ethos consentono di modificare direttamente il
-<strong>Physical ID</strong> e l'<strong>Application ID</strong> S.Port di un dispositivo. Se si
-possiede più di un dispositivo con la stessa funzione, collegarli <strong>uno alla
-volta</strong>: rilevare ciascuno in
-<a href="../../model-setup/telemetry/">Telemetria → Rileva nuovi sensori</a>, modificarne
-qui in Device config il Physical ID e l'Application ID, quindi tornare
-indietro e rilevarlo nuovamente con il nuovo ID.</p>
+<p>Le schermate Device config di Ethos permettono di modificare direttamente il
+<strong>Physical ID</strong> e l'<strong>Application ID</strong> S.Port di un dispositivo. Se hai più
+di un dispositivo con la stessa funzione, collegali <strong>uno alla volta</strong>:
+rileva ciascuno in
+<a href="../../model-setup/telemetry/">Telemetria → Rileva nuovi sensori</a>, modificane
+qui in Device config il Physical ID e l'Application ID, quindi torna indietro
+e rilevalo di nuovo con il nuovo ID.</p>
 <h2 id="esempio-ricevitori">Esempio: ricevitori<a class="headerlink" href="#esempio-ricevitori" title="Permanent link">&para;</a></h2>
 <p><img alt="Scelta del modulo" src="../../assets/system-devices-module-choice.png" /></p>
 <p>I ricevitori stabilizzati FrSky possono essere configurati qui una volta
 installato il relativo script Lua di configurazione (un clic, dalla Lua
-Library di Ethos Suite). Esistono due percorsi di configurazione a seconda
+Library di Ethos Suite). Ci sono due percorsi di configurazione, a seconda
 della generazione del ricevitore:</p>
 <ul>
-<li><strong>Stabilizer config</strong> — ricevitori più recenti dotati di
+<li><strong>Stabilizer config</strong> — i ricevitori più recenti dotati di
   "stabilizzazione avanzata" (controllo del guadagno sul canale 13). Vengono
-  esposti due gruppi di stabilizzazione indipendenti: il Gruppo 1 riguarda i
-  canali 1–6, il Gruppo 2 i canali 7–11 — disattivare il Gruppo 2 se i pin
-  7–11 non vengono utilizzati per la stabilizzazione. È integrata una
+  resi disponibili due gruppi di stabilizzazione indipendenti: il Gruppo 1
+  riguarda i canali 1–6, il Gruppo 2 i canali 7–11 — disattiva il Gruppo 2
+  se non utilizzi i pin 7–11 per la stabilizzazione. È integrata una
   calibrazione a 6 assi, che deve essere eseguita una volta su un ricevitore
-  nuovo e nuovamente dopo ogni aggiornamento al firmware v3.0.x (a seguito di
+  nuovo e ripetuta dopo ogni aggiornamento al firmware v3.0.x (a seguito di
   un ripristino delle impostazioni di fabbrica). Nella calibrazione di
   ciascun gruppo, il vecchio passaggio di "self-check" è stato sostituito
   dalla calibrazione indipendente dell'assetto orizzontale del modello, del
-  centro canale e dei fine corsa del canale, e ogni canale può essere
+  centro del canale e dei fine corsa del canale, e ogni canale può essere
   attivato/disattivato singolarmente. Le configurazioni (non i dati di
   calibrazione) possono essere salvate su PC e da lì ripristinate.</li>
-<li><strong>SxR</strong> — ricevitori più datati, comprese le unità legacy e
+<li><strong>SxR</strong> — i ricevitori più datati, comprese le unità legacy e
   Archer/Archer Pro, oltre a ricevitori come l'SR10 Pro che (nonostante il
   nome "SRx") hanno il Gain sul canale 9 anziché sul 13.</li>
 </ul>
 <p><img alt="Dispositivo corrente" src="../../assets/system-devices-current.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Dopo l'aggiornamento al firmware ricevitore v3.0.x</p>
-<p>Eseguire un ripristino delle impostazioni di fabbrica (disponibile in
-Options del ricevitore nella configurazione RF), quindi rifare il
-binding e riconfigurare completamente — in particolare le funzioni Stab e
-la calibrazione a 6 assi. Ciò è richiesto dalla nuova funzione di
-salvataggio dei dati di failsafe introdotta con la v3.0.x; verificare
-attentamente il funzionamento del failsafe al termine.</p>
+<p>Esegui un ripristino delle impostazioni di fabbrica (che si trova nelle
+opzioni del ricevitore, nella configurazione RF), quindi rifai il binding
+e riconfigura tutto da capo — in particolare le funzioni Stab e la
+calibrazione a 6 assi. Questo è necessario per la nuova funzione di
+salvataggio dei dati di failsafe introdotta con la v3.0.x; al termine
+verifica attentamente il funzionamento del failsafe.</p>
 </div>
 <p>FrSky North America pubblica una guida dettagliata alla configurazione dei
 ricevitori stabilizzati, ed è disponibile un video esplicativo del FrSky Team
 Pilot Juan Sanchez Garcia che tratta gli stessi argomenti.</p>
-<h2 id="configurazione-tramite-il-connettore-sport-della-trasmittente">Configurazione tramite il connettore S.Port della trasmittente<a class="headerlink" href="#configurazione-tramite-il-connettore-sport-della-trasmittente" title="Permanent link">&para;</a></h2>
+<h2 id="configurazione-tramite-il-connettore-sport-della-radio">Configurazione tramite il connettore S.Port della radio<a class="headerlink" href="#configurazione-tramite-il-connettore-sport-della-radio" title="Permanent link">&para;</a></h2>
 <p>I dispositivi S.Port e FBUS possono essere configurati anche direttamente
-tramite il connettore S.Port posto sulla parte superiore della trasmittente,
-senza passare da un ricevitore associato.</p>
+tramite il connettore S.Port posto sulla parte superiore della radio, senza
+passare da un ricevitore connesso.</p>
 <ol>
-<li>Collegare il dispositivo al connettore S.Port della trasmittente (cavo
+<li>Collega il dispositivo al connettore S.Port della radio (cavo
    bianco/giallo verso il lato con la tacca).</li>
-<li>Andare in <strong>System → Device config</strong>, scorrere fino al dispositivo (ad
-   esempio un sensore di corrente FAS40 ADV) e premere <code>ENT</code>.</li>
-<li>Nella pagina di configurazione, impostare <strong>Module</strong> su <strong>S.Port
+<li>Vai in <strong>System → Device config</strong>, scorri fino al dispositivo (ad
+   esempio un sensore di corrente FAS40 ADV) e premi <code>ENT</code>.</li>
+<li>Nella pagina di configurazione, imposta <strong>Module</strong> su <strong>S.Port
    connector</strong>.</li>
-<li>Apportare le modifiche desiderate — Physical ID e Application ID devono
-   essere entrambi univoci — quindi scorrere verso il basso e toccare <strong>Save
-   to flash</strong>.</li>
+<li>Apporta le modifiche desiderate — il Physical ID e l'Application ID
+   devono essere entrambi univoci — quindi scorri verso il basso e tocca
+   <strong>Save to flash</strong>.</li>
 </ol>
-<p>Questo vale sia per i dispositivi FBUS (vedere anche <a href="../../how-to/fbus-setup/">Guida pratica:
+<p>Questo vale sia per i dispositivi FBUS (vedi anche <a href="../../how-to/fbus-setup/">Guida pratica:
 configurare un sistema FBUS</a>) sia per i normali
 dispositivi S.Port come un variometro.</p>
 

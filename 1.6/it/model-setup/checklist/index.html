@@ -1755,10 +1755,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-degli-interruttori-funzione" class="md-nav__link">
+  <a href="#controllo-degli-interruttori-di-funzione" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo degli interruttori funzione
+        Controllo degli interruttori di funzione
       
     </span>
   </a>
@@ -1766,10 +1766,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-di-potenziometri-slider" class="md-nav__link">
+  <a href="#controllo-di-potenziometri-cursori" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo di potenziometri / slider
+        Controllo di potenziometri / cursori
       
     </span>
   </a>
@@ -2823,7 +2823,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3411,10 +3411,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-degli-interruttori-funzione" class="md-nav__link">
+  <a href="#controllo-degli-interruttori-di-funzione" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo degli interruttori funzione
+        Controllo degli interruttori di funzione
       
     </span>
   </a>
@@ -3422,10 +3422,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-di-potenziometri-slider" class="md-nav__link">
+  <a href="#controllo-di-potenziometri-cursori" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo di potenziometri / slider
+        Controllo di potenziometri / cursori
       
     </span>
   </a>
@@ -3478,7 +3478,7 @@
 </div>
 <h2 id="controllo-del-gas">Controllo del gas<a class="headerlink" href="#controllo-del-gas" title="Permanent link">&para;</a></h2>
 <p><img alt="Funzione di controllo" src="../../assets/model-checklist-check_function.png" /></p>
-<p>Attiva il controllo e scegli un operatore — <code>&lt;</code> (minore di), <code>~</code> (approssimativamente uguale) o <code>&gt;</code> (maggiore di) — rispetto a un valore; viene emesso un avviso se lo stick del gas si trova al di fuori di quanto consentito dal confronto.</p>
+<p>Attiva il controllo e scegli un operatore — <code>&lt;</code> (minore di), <code>~</code> (circa uguale) o <code>&gt;</code> (maggiore di) — rispetto a un valore; viene emesso un avviso se lo stick del gas si trova al di fuori di quanto consentito dal confronto.</p>
 <h2 id="controllo-del-failsafe">Controllo del failsafe<a class="headerlink" href="#controllo-del-failsafe" title="Permanent link">&para;</a></h2>
 <p>Avvisa se il <a href="../rf-system/#failsafe">failsafe</a> non è stato impostato per il modello corrente.</p>
 <div class="admonition tip">
@@ -3489,17 +3489,17 @@
 <p><img alt="Interruttori" src="../../assets/model-checklist-switches.png" />
 <img alt="Opzioni di controllo degli interruttori" src="../../assets/model-checklist-switches-options.png" /></p>
 <p>Per ciascun interruttore è possibile richiedere una posizione specifica all'avvio (gli interruttori con nomi personalizzati definiti in <a href="../../system-setup/hardware/#switches-settings">Configurazione di sistema → Hardware</a> vengono mostrati con tali nomi). <strong>Carica tutte le posizioni degli interruttori</strong> acquisisce le posizioni fisiche <em>attuali</em> come posizioni desiderate per ogni interruttore non contrassegnato come <strong>Nessun controllo</strong>.</p>
-<h2 id="controllo-degli-interruttori-funzione">Controllo degli interruttori funzione<a class="headerlink" href="#controllo-degli-interruttori-funzione" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruttori funzione" src="../../assets/model-checklist-function-switches.png" />
-<img alt="Opzioni di controllo degli interruttori funzione" src="../../assets/model-checklist-function-switches-options.png" /></p>
-<p>Stesso principio, applicato ai sei <a href="../model-edit/#function-switches">interruttori funzione</a>. <strong>Carica tutte le posizioni degli interruttori funzione</strong> funziona allo stesso modo di quanto descritto sopra.</p>
-<h2 id="controllo-di-potenziometri-slider">Controllo di potenziometri / slider<a class="headerlink" href="#controllo-di-potenziometri-slider" title="Permanent link">&para;</a></h2>
+<h2 id="controllo-degli-interruttori-di-funzione">Controllo degli interruttori di funzione<a class="headerlink" href="#controllo-degli-interruttori-di-funzione" title="Permanent link">&para;</a></h2>
+<p><img alt="Interruttori di funzione" src="../../assets/model-checklist-function-switches.png" />
+<img alt="Opzioni di controllo degli interruttori di funzione" src="../../assets/model-checklist-function-switches-options.png" /></p>
+<p>Stesso principio, applicato ai sei <a href="../model-edit/#function-switches">interruttori di funzione</a>. <strong>Carica tutte le posizioni degli interruttori di funzione</strong> funziona allo stesso modo di quanto descritto sopra.</p>
+<h2 id="controllo-di-potenziometri-cursori">Controllo di potenziometri / cursori<a class="headerlink" href="#controllo-di-potenziometri-cursori" title="Permanent link">&para;</a></h2>
 <p><img alt="Potenziometri" src="../../assets/model-checklist-pots.png" />
 <img alt="Opzioni di controllo dei potenziometri" src="../../assets/model-checklist-pots-options.png" /></p>
-<p>Richiede posizioni specifiche di potenziometri/slider all'avvio, individualmente per ciascun comando (<code>~</code>/<code>&lt;</code>/<code>&gt;</code>, come per il controllo del gas). <strong>Carica tutte le posizioni dei potenziometri</strong> acquisisce automaticamente le posizioni attuali — verifica poi con attenzione gli operatori selezionati automaticamente, poiché <code>~</code> rispetto a <code>&lt;</code>/<code>&gt;</code> potrebbe non corrispondere a quanto effettivamente desiderato.</p>
+<p>Richiede posizioni specifiche di potenziometri/cursori all'avvio, individualmente per ciascun comando (<code>~</code>/<code>&lt;</code>/<code>&gt;</code>, come per il controllo del gas). <strong>Carica tutte le posizioni dei potenziometri</strong> acquisisce automaticamente le posizioni attuali — verifica poi con attenzione gli operatori selezionati automaticamente, perché <code>~</code> rispetto a <code>&lt;</code>/<code>&gt;</code> potrebbe non corrispondere a quanto effettivamente desiderato.</p>
 <h2 id="testo-definito-dallutente">Testo definito dall'utente<a class="headerlink" href="#testo-definito-dallutente" title="Permanent link">&para;</a></h2>
 <p><img alt="Testo checklist utente" src="../../assets/model-checklist-user-checklist.png" /></p>
-<p>Visualizza un file di testo semplice o formattato come parte della checklist di avvio, una volta installato per il modello. Per la procedura completa vedi <a href="../../how-to/user-defined-checklist/">Guida pratica: checklist con testo definito dall'utente</a>.</p>
+<p>Visualizza un file di testo semplice o formattato come parte della checklist di avvio, una volta installato per il modello. Per la procedura completa consulta <a href="../../how-to/user-defined-checklist/">Guida pratica: checklist con testo definito dall'utente</a>.</p>
 
 
 

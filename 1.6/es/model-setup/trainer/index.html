@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trainer" class="md-skip">
+        <a href="#entrenador" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1666,15 +1666,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modo-master" class="md-nav__link">
+  <a href="#modo-maestro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo Master
+        Modo Maestro
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modo Master">
+    <nav class="md-nav" aria-label="Modo Maestro">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1700,10 +1700,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#canales-trainer" class="md-nav__link">
+  <a href="#canales-del-entrenador" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Canales trainer
+        Canales del entrenador
       
     </span>
   </a>
@@ -1716,10 +1716,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modo-slave" class="md-nav__link">
+  <a href="#modo-esclavo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo Slave
+        Modo Esclavo
       
     </span>
   </a>
@@ -2031,7 +2031,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2818,7 +2818,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3373,15 +3373,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modo-master" class="md-nav__link">
+  <a href="#modo-maestro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo Master
+        Modo Maestro
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modo Master">
+    <nav class="md-nav" aria-label="Modo Maestro">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3407,10 +3407,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#canales-trainer" class="md-nav__link">
+  <a href="#canales-del-entrenador" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Canales trainer
+        Canales del entrenador
       
     </span>
   </a>
@@ -3423,10 +3423,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modo-slave" class="md-nav__link">
+  <a href="#modo-esclavo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo Slave
+        Modo Esclavo
       
     </span>
   </a>
@@ -3458,95 +3458,99 @@
   
 
 
-<h1 id="trainer">Trainer<a class="headerlink" href="#trainer" title="Permanent link">&para;</a></h1>
-<p><img alt="Trainer" src="../../assets/model-trainer.png" /></p>
-<p>Desactivado por defecto. Configure la emisora como <strong>Master</strong> (la emisora del
-instructor, que recibe hasta 16 controles del alumno) o como <strong>Slave</strong> (la
-emisora del alumno, que envía un número configurable de canales al instructor).</p>
-<h2 id="modo-master">Modo Master<a class="headerlink" href="#modo-master" title="Permanent link">&para;</a></h2>
-<p><img alt="Modo Master" src="../../assets/model-trainer-master.png" />
-<img alt="Opciones de trainer" src="../../assets/model-trainer-options.png" /></p>
+<h1 id="entrenador">Entrenador<a class="headerlink" href="#entrenador" title="Permanent link">&para;</a></h1>
+<p><img alt="Entrenador" src="../../assets/model-trainer.png" /></p>
+<p>La función Entrenador está desactivada por defecto. La radio se puede configurar
+como <strong>Maestro</strong> (la radio del instructor, que recibe hasta 16 controles de la
+radio del alumno) o como <strong>Esclavo</strong> (la radio del alumno, que transfiere al
+maestro un número configurable de canales).</p>
+<h2 id="modo-maestro">Modo Maestro<a class="headerlink" href="#modo-maestro" title="Permanent link">&para;</a></h2>
+<p><img alt="Modo Maestro" src="../../assets/model-trainer-master.png" />
+<img alt="Opciones del entrenador" src="../../assets/model-trainer-options.png" /></p>
 <h3 id="modo-de-enlace">Modo de enlace<a class="headerlink" href="#modo-de-enlace" title="Permanent link">&para;</a></h3>
 <p><img alt="Opciones del modo de enlace" src="../../assets/model-trainer-link-mode-options.png" /></p>
 <ul>
-<li><strong>Cable trainer</strong> — un cable de audio mono de 3,5 mm entre ambas emisoras.</li>
+<li><strong>Cable de entrenamiento</strong> — un cable de audio mono de 3,5 mm entre las dos radios.</li>
 <li><strong>Bluetooth</strong> —</li>
 </ul>
 <p><img alt="Enlace Bluetooth" src="../../assets/model-trainer-link-mode-bt.png" /></p>
 <ul>
 <li>
-<p><strong>Modo</strong> — normal o alta velocidad; utilice alta velocidad para reducir la
-    latencia si ambas emisoras lo admiten.</p>
+<p><strong>Modo</strong> — velocidad normal o alta velocidad; para una latencia más baja,
+    utilice el ajuste de alta velocidad si ambas radios lo admiten.</p>
 <p><img alt="Modo Bluetooth" src="../../assets/model-trainer-link-mode-bt-mode.png" /></p>
 </li>
 <li>
-<p><strong>Nombre local</strong> — el nombre BT que ven los demás dispositivos (por
-    defecto <code>FrSkyBT</code>, editable).</p>
+<p><strong>Nombre local</strong> — el nombre BT local que se mostrará en los dispositivos
+    que se conecten (por defecto <code>FrSkyBT</code>, pero puede editarse).</p>
 </li>
-<li><strong>Dirección local</strong> — la dirección Bluetooth de esta emisora.</li>
-<li><strong>Dirección remota</strong> — la dirección de la emisora emparejada, una vez
-    enlazada.</li>
+<li><strong>Dirección local</strong> — la dirección Bluetooth local de la radio.</li>
+<li><strong>Dirección remota</strong> — la dirección Bluetooth del dispositivo remoto, una
+    vez encontrado y vinculado.</li>
 <li>
-<p><strong>Buscar dispositivos</strong> (solo en modo Master) — busca dispositivos
-    cercanos:</p>
+<p><strong>Buscar dispositivos</strong> (solo en modo Maestro) — pone la radio en modo de
+    búsqueda BT de los dispositivos cercanos:</p>
 <p><img alt="Buscando" src="../../assets/model-trainer-link-mode-bt-search.png" />
 <img alt="Esperando" src="../../assets/model-trainer-link-mode-bt-search-waiting.png" />
 <img alt="Seleccionar dispositivo" src="../../assets/model-trainer-link-mode-bt-select-device.png" />
 <img alt="Conectado" src="../../assets/model-trainer-link-mode-bt-device-connected.png" /></p>
 </li>
 <li>
-<p><strong>Conectar último dispositivo</strong> / <strong>Reiniciar módulo</strong> — vuelve a
-    conectarse al emparejamiento anterior, o borra por completo la
-    configuración del módulo Bluetooth.</p>
+<p><strong>Conectar el último dispositivo</strong> / <strong>Restablecer el módulo</strong> — conecta con
+    el último dispositivo configurado, o restablece el módulo y limpia todos los
+    ajustes de su configuración.</p>
 </li>
 <li>
-<p><strong>Módulo externo SBUS</strong> — una entrada SBUS en el pin PXX-IN de la bahía del
-  módulo externo, para instalar un receptor FrSky con salida SBUS (por ejemplo,
-  un Archer RS) como extremo receptor de un enlace inalámbrico, lo que permite
-  que <strong>cualquier</strong> emisora FrSky actúe como el lado del alumno (buddy box),
-  vinculada a ese receptor.</p>
+<p><strong>Módulo SBUS externo</strong> — proporciona una entrada SBUS al pin PXX-IN de la
+  bahía del módulo externo de la radio, para instalar un receptor FrSky dotado
+  de salida SBUS (por ejemplo, un Archer RS) que actúe como el extremo receptor
+  de un enlace inalámbrico de entrenamiento, de forma que <strong>cualquier</strong> radio
+  FrSky pueda hacer de radio del alumno (buddy box), emparejada con ese receptor.</p>
 </li>
-<li><strong>Módulo externo CPPM</strong> — la misma idea mediante una entrada CPPM, para un
-  receptor antiguo con salida CPPM.</li>
+<li><strong>Módulo externo CPPM</strong> — de forma similar, proporciona una entrada CPPM al
+  pin PXX-IN, para usarse con un receptor antiguo que tenga salida CPPM.</li>
 </ul>
 <h3 id="condicion-activa">Condición activa<a class="headerlink" href="#condicion-activa" title="Permanent link">&para;</a></h3>
 <p><img alt="Condición activa" src="../../assets/model-trainer-active-condition.png" /></p>
-<p>Un interruptor/botón, interruptor de función, interruptor lógico, posición de
-trim o fase de vuelo que cede el control al alumno mientras esté activo.</p>
-<h3 id="canales-trainer">Canales trainer<a class="headerlink" href="#canales-trainer" title="Permanent link">&para;</a></h3>
+<p>Un interruptor o botón, un interruptor de función, un interruptor lógico, la
+posición de compensado o el modo de vuelo que cede el control del modelo a la
+radio del alumno mientras esté activo.</p>
+<h3 id="canales-del-entrenador">Canales del entrenador<a class="headerlink" href="#canales-del-entrenador" title="Permanent link">&para;</a></h3>
 <p><img alt="Edición de la condición activa" src="../../../assets/model-trainer-active-condition-edit.png" /></p>
-<p>Se pueden transferir hasta 16 canales del alumno al master mientras la
-condición activa sea verdadera. Toque un canal para configurarlo
-individualmente:</p>
+<p>Se pueden transferir hasta 16 canales de la radio del alumno a la radio maestra
+mientras la 'Condición activa' esté activa. Pulse sobre cada canal para
+configurarlo individualmente:</p>
 <ul>
-<li><strong>Condición activa</strong> — una excepción por canal, por ejemplo para desactivar
-  únicamente la entrada de profundidad del alumno durante parte de una sesión.</li>
-<li><strong>Modo</strong> — <strong>OFF</strong> (desactivado para uso trainer), <strong>Sumar</strong> (las señales del
-  master y del alumno se suman, de modo que ambos pueden actuar sobre el
-  control a la vez) o <strong>Reemplazar</strong> (el modo normal: el alumno tiene el
-  control total de este canal mientras esté activo).</li>
-<li><strong>Porcentaje</strong> — escala la entrada del alumno, normalmente 100 %.</li>
-<li><strong>Destino</strong> — a qué función se asigna el canal del alumno.</li>
+<li><strong>Condición activa</strong> — una condición propia de cada canal; por ejemplo, para
+  desactivar únicamente la palanca de profundidad del alumno durante parte de
+  una sesión de entrenamiento.</li>
+<li><strong>Modo</strong> — <strong>OFF</strong> (desactiva el canal para uso del entrenador), <strong>Añadir</strong>
+  (modo aditivo, en el que se suman las señales del maestro y del alumno para
+  que ambos puedan actuar sobre la función a la vez) o <strong>Sustituir</strong> (el modo de
+  uso normal: el alumno tiene el control total de este canal mientras está
+  activada la condición).</li>
+<li><strong>Porcentaje</strong> — escala las entradas del alumno; normalmente se ajusta al 100 %.</li>
+<li><strong>Destino</strong> — asigna el canal del alumno a la función correspondiente.</li>
 </ul>
 <p>Consulte <a href="../../how-to/instant-takeback/">Guía práctica: recuperación instantánea del control</a>
 para ver un ejemplo práctico de cómo el instructor recupera el control al
-instante mediante un interruptor, e <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Ignorar entrada del trainer</a>
-para excluir el movimiento del stick del alumno de un interruptor lógico que
-vigila los sticks del propio instructor.</p>
-<h2 id="modo-slave">Modo Slave<a class="headerlink" href="#modo-slave" title="Permanent link">&para;</a></h2>
-<p><img alt="Modo Slave" src="../../assets/model-trainer-slave-mode.png" /></p>
+instante mediante un interruptor, y <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Ignorar la entrada del alumno</a>
+para evitar que el movimiento de las palancas del alumno active un interruptor
+lógico que vigila las palancas del propio instructor.</p>
+<h2 id="modo-esclavo">Modo Esclavo<a class="headerlink" href="#modo-esclavo" title="Permanent link">&para;</a></h2>
+<p><img alt="Modo Esclavo" src="../../assets/model-trainer-slave-mode.png" /></p>
 <ul>
-<li><strong>Modo de enlace</strong> — las mismas opciones de cable trainer, Bluetooth o módulo
-  externo SBUS/CPPM que en Master (con los mismos campos Bluetooth
+<li><strong>Modo de enlace</strong> — las mismas opciones de cable de entrenamiento, Bluetooth
+  o módulo externo SBUS/CPPM que en Maestro (con los mismos campos Bluetooth
   <strong>Modo</strong>/<strong>Nombre local</strong>/<strong>Dirección local</strong>/<strong>Dirección remota</strong>).</li>
 </ul>
-<p><img alt="Modo de enlace en Slave" src="../../assets/model-trainer-slave-link-mode.png" /></p>
+<p><img alt="Modo de enlace en Esclavo" src="../../assets/model-trainer-slave-link-mode.png" /></p>
 <ul>
-<li><strong>Rango de canales</strong> — qué rango de canales de esta emisora se envía al
-  master.</li>
+<li><strong>Número de canales</strong> — selecciona qué rango de canales de esta radio se
+  transfiere a la radio maestra.</li>
 </ul>
-<p><img alt="Canales en Slave" src="../../assets/model-trainer-slave-channels.png" />
-  <img alt="Edición de canal en Slave" src="../../assets/model-trainer-slave-channel-edit.png" /></p>
+<p><img alt="Canales en Esclavo" src="../../assets/model-trainer-slave-channels.png" />
+  <img alt="Edición de canal en Esclavo" src="../../assets/model-trainer-slave-channel-edit.png" /></p>
 
 
 

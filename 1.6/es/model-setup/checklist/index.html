@@ -1733,10 +1733,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-de-failsafe" class="md-nav__link">
+  <a href="#comprobacion-del-failsafe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación de failsafe
+        Comprobación del failsafe
       
     </span>
   </a>
@@ -2036,7 +2036,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2823,7 +2823,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3389,10 +3389,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-de-failsafe" class="md-nav__link">
+  <a href="#comprobacion-del-failsafe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación de failsafe
+        Comprobación del failsafe
       
     </span>
   </a>
@@ -3472,10 +3472,11 @@
 <p><img alt="Lista de verificación" src="../../assets/model-checklist.png" /></p>
 <p>Un conjunto de comprobaciones de seguridad previas al vuelo que se ejecutan
 al encender la emisora y/o al cargar un modelo. Las comprobaciones
-integradas incluyen modo silencioso, failsafe sin configurar, posiciones de
-interruptores/potenciómetros, batería de la emisora y batería RTC: la
-comprobación de interruptores muestra en qué dirección debe moverse cada
-interruptor, señalado con puntos rojos en la pantalla de advertencia:</p>
+integradas incluyen el modo silencioso, el failsafe sin configurar, las
+posiciones de los interruptores/potenciómetros y las baterías de la emisora
+y del RTC: la comprobación de interruptores indica en qué dirección debe
+moverse cada interruptor, señalado con puntos rojos en la pantalla de
+advertencia:</p>
 <p><img alt="Lista de verificación al arrancar" src="../../assets/model-checklist-at_start.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3485,9 +3486,9 @@ vuelo, independientemente de lo que sugiera la advertencia en pantalla.</p>
 <h2 id="comprobacion-del-acelerador">Comprobación del acelerador<a class="headerlink" href="#comprobacion-del-acelerador" title="Permanent link">&para;</a></h2>
 <p><img alt="Función de comprobación" src="../../assets/model-checklist-check_function.png" /></p>
 <p>Actívela y elija un operador — <code>&lt;</code> (menor que), <code>~</code> (aproximadamente igual)
-o <code>&gt;</code> (mayor que) — respecto a un valor; avisa si el stick del acelerador
+o <code>&gt;</code> (mayor que) — respecto a un valor; avisa si la palanca del acelerador
 está fuera de lo que permite esa comparación.</p>
-<h2 id="comprobacion-de-failsafe">Comprobación de failsafe<a class="headerlink" href="#comprobacion-de-failsafe" title="Permanent link">&para;</a></h2>
+<h2 id="comprobacion-del-failsafe">Comprobación del failsafe<a class="headerlink" href="#comprobacion-del-failsafe" title="Permanent link">&para;</a></h2>
 <p>Avisa si no se ha configurado el <a href="../rf-system/#failsafe">failsafe</a> para el
 modelo actual.</p>
 <div class="admonition tip">
@@ -3497,12 +3498,12 @@ modelo actual.</p>
 <h2 id="comprobacion-de-interruptores">Comprobación de interruptores<a class="headerlink" href="#comprobacion-de-interruptores" title="Permanent link">&para;</a></h2>
 <p><img alt="Interruptores" src="../../assets/model-checklist-switches.png" />
 <img alt="Opciones de comprobación de interruptores" src="../../assets/model-checklist-switches-options.png" /></p>
-<p>Por cada interruptor, permite exigir una posición concreta al arrancar (los
+<p>Permite exigir una posición concreta al arrancar para cada interruptor (los
 interruptores con nombres personalizados definidos en <a href="../../system-setup/hardware/#switches-settings">Configuración del
 sistema → Hardware</a> muestran
 esos nombres). <strong>Cargar todas las posiciones de los interruptores</strong> captura
-las posiciones físicas <em>actuales</em> como las posiciones deseadas para todos
-los interruptores que no estén marcados como <strong>Sin comprobación</strong>.</p>
+las posiciones físicas <em>actuales</em> como posiciones deseadas para todos los
+interruptores que no estén marcados como <strong>Sin comprobación</strong>.</p>
 <h2 id="comprobacion-de-interruptores-de-funcion">Comprobación de interruptores de función<a class="headerlink" href="#comprobacion-de-interruptores-de-funcion" title="Permanent link">&para;</a></h2>
 <p><img alt="Interruptores de función" src="../../assets/model-checklist-function-switches.png" />
 <img alt="Opciones de comprobación de interruptores de función" src="../../assets/model-checklist-function-switches-options.png" /></p>

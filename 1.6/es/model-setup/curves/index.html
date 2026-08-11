@@ -1992,7 +1992,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3395,8 +3395,8 @@ con <strong>+</strong>; toque una curva existente para
 <ul>
 <li><strong>Expo</strong> — valor por defecto 40; un valor positivo suaviza la respuesta en
   torno al centro, uno negativo la hace más agresiva. Suavizar la zona central
-  del stick ayuda a evitar el sobrecontrol, especialmente en pilotos con menos
-  experiencia.</li>
+  del recorrido de la palanca ayuda a evitar el sobrecontrol, especialmente en
+  pilotos con menos experiencia.</li>
 </ul>
 <p><img alt="Expo" src="../../assets/model-curves-expo.png" /></p>
 <ul>
@@ -3421,7 +3421,7 @@ con <strong>+</strong>; toque una curva existente para
 </li>
 <li>
 <p><strong>f &gt; 0</strong> — devuelve 100 % mientras la fuente es positiva, 0 mientras es
-    negativa (un conmutador brusco, no un paso directo).</p>
+    negativa (una conmutación brusca, no un paso directo).</p>
 <p><img alt="f &gt; 0" src="../../assets/model-curves-fn-fgt0.png" /></p>
 </li>
 <li>
@@ -3451,29 +3451,31 @@ con <strong>+</strong>; toque una curva existente para
 </li>
 <li>
 <p><strong>Modo fácil</strong> — <strong>On</strong> limita la edición a coordenadas Y con separación
-    uniforme (X queda fija); <strong>Off</strong> permite editar tanto X como Y en cada
-    punto, salvo los extremos de −100 %/+100 %, que están bloqueados porque la
-    curva debe cubrir siempre todo el rango de la señal.</p>
+    uniforme (la X queda fija); <strong>Off</strong> permite editar tanto la X como la Y de
+    cada punto, salvo los puntos extremos de −100 %/+100 %, que están
+    bloqueados porque la curva debe cubrir siempre todo el rango de la señal.</p>
 <p><img alt="Modo fácil desactivado" src="../../assets/model-curves-custom-easy-off.png" /></p>
 </li>
 </ul>
-<p><strong>Controles del editor</strong> (mismo esquema que el <a href="../outputs/#balance-channels">editor de curvas de
+<p><strong>Controles del editor</strong> (mismo esquema que el <a href="../outputs/#balance-channels">editor de la curva de
   equilibrado de Salidas</a>):</p>
 <ul>
-<li><strong>Fuente</strong> — por defecto, la(s) propia(s) fuente(s) de mezcla de la curva,
-    o <strong>Entrada analógica automática</strong> para capturar el primer
-    stick/deslizador/potenciómetro que se mueva.</li>
-<li>Ajuste al punto más cercano con el codificador rotatorio, y un conmutador
-    <strong>Bloquear</strong> para congelar las entradas mientras se observa el movimiento
-    resultante de la superficie de control.</li>
-<li>Un cursor en vivo muestra el valor de entrada actual que acciona la curva,
-    para ayudar a alinearlo con un punto antes de ajustarlo.</li>
+<li><strong>Fuente</strong> — por defecto, la/s fuente/s configuradas en las mezclas de la
+    propia curva, u opcionalmente <strong>Auto analog input</strong>: la primera palanca,
+    slider o pot que mueva se usará como fuente.</li>
+<li>El punto más cercano de la curva se selecciona automáticamente para su
+    ajuste con el selector rotatorio, y un icono de candado (<strong>Bloqueo</strong>)
+    permite bloquear todas las entradas para poder soltar la palanca y observar
+    el movimiento de las superficies de control mientras ajusta la curva.</li>
+<li>Un cursor en vivo muestra el valor de entrada actual que acciona la curva;
+    la entrada debe ajustarse para alinear ese valor con un punto de la curva
+    antes de realizar el ajuste.</li>
 </ul>
 <h2 id="accionar-una-curva-desde-una-var">Accionar una curva desde una Var<a class="headerlink" href="#accionar-una-curva-desde-una-var" title="Permanent link">&para;</a></h2>
 <p>Tanto el <strong>Offset</strong> de una curva de Función como un punto individual de una
 curva <strong>Personalizada</strong> pueden ser accionados por una <a href="../variables/">Var</a> en
 lugar de por un valor fijo — y esa Var, a su vez, puede ajustarse en vuelo
-mediante un trim reasignado:</p>
+mediante un compensador (trim) reasignado:</p>
 <p><img alt="Offset de función desde una Var" src="../../assets/model-curves-fn-offset-var.png" />
 <img alt="Punto de curva personalizada desde una Var" src="../../assets/model-curves-custom-with-var.png" /></p>
 <p>Consulte <a href="../variables/">Variables</a> y <a href="../../how-to/in-flight-compensation-curve/">Guía práctica: curva de compensación

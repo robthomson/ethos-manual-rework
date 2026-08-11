@@ -1397,10 +1397,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#condizione-di-attivazione" class="md-nav__link">
+  <a href="#condizione-attiva" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Condizione di attivazione
+        Condizione attiva
       
     </span>
   </a>
@@ -2801,7 +2801,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#condizione-di-attivazione" class="md-nav__link">
+  <a href="#condizione-attiva" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Condizione di attivazione
+        Condizione attiva
       
     </span>
   </a>
@@ -3426,55 +3426,55 @@
 
 <h1 id="fasi-di-volo">Fasi di volo<a class="headerlink" href="#fasi-di-volo" title="Permanent link">&para;</a></h1>
 <p><img alt="Fasi di volo" src="../../assets/model-fm.png" /></p>
-<p>Le fasi di volo (flight modes) permettono a un interruttore di selezionare
+<p>Le fasi di volo (modalità di volo) permettono a un interruttore di selezionare
 comportamenti distinti per lo stesso modello — un aliante potrebbe usare
 Lancio/Crociera/Velocità/Termica, un modello a motore Normale/Decollo/
 Atterraggio, un elicottero Normale (avviamento rotore, decollo/atterraggio) /
 Idle Up 1 (acrobazia) / Idle Up 2 (3D). Sollevano il pilota dalla maggior parte
 del lavoro di commutazione manuale e di ri-trimmaggio: una fase di volo può
-disporre di trim indipendenti propri e può abilitare sia le
+disporre di trim indipendenti propri e può condizionare sia le
 <a href="../variables/">Variabili</a> sia i <a href="../mixes/">Mix</a> — insieme, è sufficiente per
 gestire una complessità reale. Vedi <a href="../../tutorials/basic-fixed-wing/">Esempio base per ala
 fissa</a> per l'applicazione delle fasi di volo a
 un modello reale.</p>
 <p>Per impostazione predefinita non è definita alcuna fase di volo. Tocca la fase
-di volo predefinita e scegli <strong>Modifica</strong> per rinominarla, oppure <strong>Aggiungi</strong>
-per crearne una nuova — fino a un massimo di 20.</p>
+di volo predefinita e seleziona <strong>Modifica</strong> per rinominarla, oppure
+<strong>Aggiungi</strong> per crearne una nuova — fino a un massimo di 20.</p>
 <h2 id="nome">Nome<a class="headerlink" href="#nome" title="Permanent link">&para;</a></h2>
 <p>Un nome descrittivo — Crociera, Velocità, Termica, Decollo, Atterraggio o
 qualsiasi altro sia appropriato.</p>
-<h2 id="condizione-di-attivazione">Condizione di attivazione<a class="headerlink" href="#condizione-di-attivazione" title="Permanent link">&para;</a></h2>
+<h2 id="condizione-attiva">Condizione attiva<a class="headerlink" href="#condizione-attiva" title="Permanent link">&para;</a></h2>
 <p><img alt="Scheda della fase di volo" src="../../assets/model-fm-form.png" /></p>
 <p>Una nuova fase di volo è inizialmente inattiva (<code>---</code>). Una volta impostata, può
-essere comandata dalla posizione di un interruttore o di un pulsante, da un
-interruttore funzione, da un interruttore logico, da un evento di sistema (taglio
-gas/blocco gas) o dalla posizione di un trim.</p>
-<p>La fase di volo <strong>predefinita</strong> non ha alcuna condizione di attivazione — è
-quella attiva ogni volta che nessun'altra condizione di fase di volo risulta
-vera. È sempre attiva una sola fase di volo alla volta: la prima (in ordine di
-priorità) la cui condizione è vera in quel momento. La fase di volo attiva è
-indicata in grassetto.</p>
+essere condizionata scegliendo tra posizioni di interruttori o pulsanti,
+interruttori di funzione, interruttori logici, un evento di sistema come il
+taglio o il mantenimento del Gas - Throttle, oppure le posizioni dei trim.</p>
+<p>La fase di volo <strong>predefinita</strong> non ha alcuna condizione attiva — è quella
+attiva ogni volta che nessun'altra condizione di fase di volo risulta vera. È
+sempre attiva una sola fase di volo alla volta: la prima (in ordine di priorità)
+la cui condizione è vera in quel momento. La fase di volo attiva è indicata in
+grassetto.</p>
 <div class="admonition warning">
 <p class="admonition-title">Aggiungere una fase di volo a un modello esistente</p>
 <p>Una fase di volo appena aggiunta è, per impostazione predefinita, attiva in
 ogni mix che già dipende dalle fasi di volo — verifica che ciascuno di questi
-mix continui a comportarsi correttamente, in particolare un mix <strong>Lock</strong> che
-blocca un canale su una specifica fase di volo.</p>
+mix continui a comportarsi correttamente, in particolare un mix <strong>Blocco</strong>
+che blocca un canale su una specifica fase di volo.</p>
 </div>
 <h2 id="dissolvenza-in-ingresso-e-in-uscita">Dissolvenza in ingresso e in uscita<a class="headerlink" href="#dissolvenza-in-ingresso-e-in-uscita" title="Permanent link">&para;</a></h2>
-<p>Tempi di transizione per una fusione graduale tra le fasi di volo (ad esempio 1
-secondo in ciascuna direzione) — hanno effetto solo sui mix che dipendono a loro
-volta dalle fasi di volo.</p>
+<p>Tempi di transizione per passare in modo graduale da una fase di volo all'altra
+(ad esempio 1 secondo in ciascuna direzione) — hanno effetto solo sui mix che
+dipendono a loro volta dalle fasi di volo.</p>
 <h2 id="gestione-delle-fasi-di-volo">Gestione delle fasi di volo<a class="headerlink" href="#gestione-delle-fasi-di-volo" title="Permanent link">&para;</a></h2>
 <p><img alt="Sposta fase di volo" src="../../assets/model-fm-move.png" />
 <img alt="Selezione per lo spostamento" src="../../assets/model-fm-move-select.png" />
 <img alt="Fasi 0-3" src="../../assets/model-fm-0to3.png" /></p>
-<p>Tocca una fase di volo per <strong>Modifica</strong>, <strong>Aggiungi</strong>, <strong>Clona</strong> o <strong>Elimina</strong>.
+<p>Tocca una fase di volo per <strong>Modifica</strong>, <strong>Aggiungi</strong>, <strong>Clona</strong> o <strong>Cancella</strong>.
 Una fase di volo <strong>clonata</strong> eredita le impostazioni della fase di origine in
 ogni mix che utilizza le fasi di volo — stesso comportamento, stesso stato
 attivo/inattivo — per questo il clone viene aggiunto, per impostazione
 predefinita, come ultima fase di volo, in modo da non interferire con quelle
-esistenti. <strong>Sposta</strong> modifica la priorità di una fase di volo: la priorità segue
+esistenti. <strong>Muovi</strong> modifica la priorità di una fase di volo: la priorità segue
 l'ordine crescente e (come indicato sopra) la prima la cui condizione è vera è
 quella attiva.</p>
 

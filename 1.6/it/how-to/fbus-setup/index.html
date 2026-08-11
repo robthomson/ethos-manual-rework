@@ -2834,7 +2834,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3492,33 +3492,35 @@
 
 <h1 id="configurare-un-sistema-fbus">Configurare un sistema FBUS<a class="headerlink" href="#configurare-un-sistema-fbus" title="Permanent link">&para;</a></h1>
 <p><a href="../../model-setup/telemetry/#how-frsky-telemetry-works">FBUS</a> (in
-precedenza F.Port2) unisce controllo e telemetria su un'unica linea,
-permettendo a più dispositivi FBUS di condividere una sola connessione a
-catena (daisy-chain) con configurazione wireless completa. Questa guida
-collega due servi Xact ai canali degli alettoni (1 e 5) dell'<a href="../../tutorials/basic-fixed-wing/">esempio
-base per aeromodello ad ala fissa</a>.</p>
+precedenza F.Port2) porta comandi e telemetria su un'unica linea,
+consentendo a più dispositivi FBUS di condividere un solo collegamento in
+cascata (daisy-chain) con configurazione completamente wireless. Questa
+guida collega due servi Xact ai canali degli alettoni (1 e 5)
+dell'<a href="../../tutorials/basic-fixed-wing/">esempio di aereo ad ala fissa di
+base</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshot in arrivo</p>
 <p>Questa pagina non dispone ancora degli screenshot del simulatore —
-vedi <a href="../../contributing/screenshot-pipeline/">Screenshot
+consulta <a href="../../contributing/screenshot-pipeline/">Screenshot
 Pipeline</a>.</p>
 </div>
 <h2 id="1-scaricare-il-firmware-piu-recente">1. Scaricare il firmware più recente<a class="headerlink" href="#1-scaricare-il-firmware-piu-recente" title="Permanent link">&para;</a></h2>
-<p>FBUS richiede firmware aggiornato sia sul ricevitore sia sui dispositivi
-— ad esempio i servi Xact necessitano della v2.0.1 o successiva. Scarica
-gli aggiornamenti necessari dalla <a href="https://www.frsky-rc.com/download/">pagina download di
-FrSky</a>.</p>
+<p>FBUS richiede un firmware aggiornato sia sul ricevitore sia sui
+dispositivi — ad esempio i servi Xact necessitano della v2.0.1 o
+successiva. Scarica gli aggiornamenti necessari dalla <a href="https://www.frsky-rc.com/download/">pagina dei
+download FrSky</a>.</p>
 <h2 id="2-aggiornare-il-firmware">2. Aggiornare il firmware<a class="headerlink" href="#2-aggiornare-il-firmware" title="Permanent link">&para;</a></h2>
-<p>Copia i file del firmware nella cartella <code>Firmware/</code> della SD card/eMMC.
-In <a href="../../system-setup/file-manager/">File Manager</a>, collega il servo al
-connettore S.Port della radio (cavo bianco/giallo verso la tacca),
-seleziona il file del firmware e scegli <strong>Flash External Device</strong>.</p>
+<p>Copia i file del firmware nella cartella <code>Firmware/</code> della scheda SD o
+eMMC. In <a href="../../system-setup/file-manager/">File Manager</a>, collega il
+servo al connettore S.Port della radio (cavo bianco/giallo rivolto verso
+la tacca), seleziona il file del firmware e scegli <strong>Flash External
+Device</strong>.</p>
 <h2 id="3-5-configurare-i-physical-id">3 / 5. Configurare i Physical ID<a class="headerlink" href="#3-5-configurare-i-physical-id" title="Permanent link">&para;</a></h2>
-<p>Entrambi i servi hanno come impostazione predefinita Physical ID <code>0C</code> esadecimale
-/ Application ID <code>6800</code> esadecimale — entreranno in conflitto sul bus condiviso
-a meno che uno dei due non venga modificato. Ci sono due modi per procedere, a
-seconda del tipo di ricevitore:</p>
-<p><strong>Tramite il connettore S.Port della trasmittente</strong> (qualsiasi ricevitore):</p>
+<p>Entrambi i servi hanno come valori predefiniti Physical ID <code>0C</code>
+esadecimale / Application ID <code>6800</code> esadecimale: entreranno in conflitto
+sul bus condiviso a meno che uno dei due non venga modificato. Ci sono due
+modi per procedere, a seconda del tipo di ricevitore:</p>
+<p><strong>Tramite il connettore S.Port del trasmettitore</strong> (qualsiasi ricevitore):</p>
 <ol>
 <li>Collega il servo 1, vai in <strong>Device Config → XAct</strong> e imposta <strong>Module</strong>
    su <strong>S.Port connector</strong>. Lascia Physical ID <code>0C</code>/Application ID <code>6800</code> e
@@ -3526,7 +3528,7 @@ seconda del tipo di ricevitore:</p>
 <li>Collega al suo posto il servo 2, stesso menu. Cambia il <strong>Physical ID</strong> in
    <code>0D</code> esadecimale e l'<strong>Application ID</strong> in <code>6801</code> esadecimale (consulta la
    <a href="../../model-setup/telemetry/#how-frsky-telemetry-works">tabella dei Physical
-   ID</a> per verificare
+   ID</a> per sapere
    quali slot sono liberi), imposta <strong>Channel</strong> su <code>CH5</code> e <strong>Save to flash</strong>.</li>
 </ol>
 <p><strong>Direttamente tramite il ricevitore</strong> (ad esempio TD-R18 Tandem, con
@@ -3538,39 +3540,38 @@ entrambi i servi collegati contemporaneamente — vedi il <a href="#4-configure-
    valori predefiniti (<code>0C</code>/<code>6800</code>/<code>CH1</code>), <strong>Save to flash</strong>.</li>
 <li>Con il solo servo 2 collegato (Pin5), stesso menu (Device Config
    comunica con un servo alla volta) — imposta <code>0D</code>/<code>6801</code>/<code>CH5</code>, <strong>Save to
-   flash</strong>. Riseleziona successivamente Device Config per verificare che la
-   modifica sia stata applicata.</li>
+   flash</strong>. Riseleziona poi Device Config per verificare che la modifica sia
+   stata applicata.</li>
 </ol>
 <h2 id="4-configure-the-receiver-for-fbus">4. Configurare il ricevitore per FBUS<a class="headerlink" href="#4-configure-the-receiver-for-fbus" title="Permanent link">&para;</a></h2>
 <p><strong>SR10 Pro</strong>: <a href="../../model-setup/rf-system/">RF System</a> → pulsante del
 ricevitore → <strong>Options</strong> → imposta <strong>Telemetry Port</strong> su <strong>FBUS</strong>. I servi
-Xact vengono quindi collegati a catena su quella porta; poiché ogni servo
+Xact vengono quindi collegati in cascata su quella porta; poiché ogni servo
 dispone di un solo connettore, un extender multicanale F.Port2 (FP2CH4/6/8)
-permette di ripartirla su più dispositivi.</p>
+permette di distribuirla su più dispositivi.</p>
 <p><strong>TD-R18 Tandem</strong>: RF System → pulsante del ricevitore → <strong>Options</strong> →
-imposta i singoli pin (ad esempio <strong>Pin1</strong>, <strong>Pin5</strong>) su <strong>FBUS</strong> — è
-possibile riassegnare in questo modo tutti i pin necessari, evitando
-completamente gli extender; ogni pin assegnato a FBUS trasporta il medesimo
-segnale FBUS.</p>
+imposta i singoli pin (ad esempio <strong>Pin1</strong>, <strong>Pin5</strong>) su <strong>FBUS</strong>: in questo
+modo è possibile riassegnare tutti i pin necessari, evitando completamente
+gli extender; ogni pin assegnato a FBUS trasporta il medesimo segnale FBUS.</p>
 <h2 id="5-verificare-il-controllo-fbus-dei-servi">5. Verificare il controllo FBUS dei servi<a class="headerlink" href="#5-verificare-il-controllo-fbus-dei-servi" title="Permanent link">&para;</a></h2>
 <p>Collega il servo 1 al Pin1 e il servo 2 al Pin5 (i canali degli alettoni
 dell'esempio ad ala fissa), accendi e verifica che i canali 1 e 5 muovano i
 servi corretti.</p>
 <h2 id="6-verificare-la-telemetria-fbus">6. Verificare la telemetria FBUS<a class="headerlink" href="#6-verificare-la-telemetria-fbus" title="Permanent link">&para;</a></h2>
-<p>Con entrambi i servi collegati, elimina eventuali sensori <code>SRV</code> già presenti
-in <a href="../../model-setup/telemetry/">Telemetria</a> e avvia una nuova ricerca. Ogni
-servo riporta 4 sensori: corrente, tensione, temperatura e stato (<code>OK</code> in
-condizioni normali).</p>
+<p>Con entrambi i servi collegati, elimina gli eventuali sensori <code>SRV</code> già
+presenti in <a href="../../model-setup/telemetry/">Telemetria</a> e avvia una nuova
+ricerca. Ogni servo riporta 4 sensori: corrente, tensione, temperatura e
+stato (<code>OK</code> in condizioni normali).</p>
 <h2 id="7-modificare-la-configurazione-in-seguito">7. Modificare la configurazione in seguito<a class="headerlink" href="#7-modificare-la-configurazione-in-seguito" title="Permanent link">&para;</a></h2>
 <p>Una volta che il modello è completamente cablato, isolare un singolo servo
-per riconfigurarlo tramite Device Config non è pratico. In alternativa: vai
-in Telemetria, individua un sensore appartenente al servo desiderato (ad
+per riconfigurarlo tramite Device Config non è pratico. Procedi invece così:
+vai in Telemetria, individua un sensore appartenente al servo desiderato (ad
 esempio <code>SRV1 curr</code>) e scegli <strong>Configure</strong> — si aprirà direttamente la
 configurazione di quel servo. Esegui <strong>Save to flash</strong> dopo ogni modifica.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Fai attenzione a non modificare accidentalmente il Physical ID o
-l'Application ID da questa schermata — sono proprio questi valori a
+l'Application ID da questa schermata: sono proprio questi valori a
 mantenere ogni servo indirizzabile sul bus condiviso.</p>
 </div>
 

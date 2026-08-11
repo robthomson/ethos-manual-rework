@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3381,7 +3381,7 @@
 
 
 <h1 id="configurazione-modello-sr8sr10-e-riordino-dei-canali">Configurazione modello SR8/SR10 e riordino dei canali<a class="headerlink" href="#configurazione-modello-sr8sr10-e-riordino-dei-canali" title="Permanent link">&para;</a></h1>
-<p>I ricevitori stabilizzati SRx di FrSky richiedono un ordine dei canali specifico. Due
+<p>I ricevitori stabilizzati SRx di FrSky si aspettano un ordine dei canali ben preciso. Due
 scenari: creare da zero un nuovo modello per uno di essi, oppure convertire un
 modello esistente per adeguarlo.</p>
 <div class="admonition note">
@@ -3391,24 +3391,24 @@ Pipeline</a>.</p>
 </div>
 <h2 id="creazione-di-un-nuovo-modello">Creazione di un nuovo modello<a class="headerlink" href="#creazione-di-un-nuovo-modello" title="Permanent link">&para;</a></h2>
 <p>La procedura guidata di <a href="../../model-setup/model-select/">Selezione modello</a> raggruppa
-per impostazione predefinita le superfici con la stessa funzione (ad es. 2 alettoni → <code>AAETR</code>), ma i ricevitori
-SRx richiedono che i primi quattro canali siano fissi come <strong>AETRA</strong>.</p>
+per impostazione predefinita le superfici con la stessa funzione (ad es. 2 alettoni → <code>AAETR</code>), mentre i ricevitori
+SRx richiedono che i primi quattro canali siano fissi nell'ordine <strong>AETRA</strong>.</p>
 <ol>
 <li>In <a href="../../system-setup/controls/">Comandi</a>, verificare che <strong>Ordine canali</strong>
    sia <code>AETR</code>.</li>
 <li>Attivare <strong><a href="../../system-setup/controls/#first-four-channels-fixed">Primi quattro canali
    fissi</a></strong> — in questo modo
    la procedura guidata non raggruppa i primi quattro canali, mantenendoli
-   rigorosamente nell'ordine <code>AETRA…</code> indipendentemente dal numero di superfici di ciascun tipo presenti sulla
-   cellula.</li>
-<li>Eseguire normalmente la procedura guidata di creazione del modello — i primi 5 canali risultano
-   essere <code>AETRA</code>.</li>
+   rigorosamente nell'ordine <code>AETRA…</code> indipendentemente dal numero di superfici di ciascun tipo presenti sul
+   modello.</li>
+<li>Eseguire normalmente la procedura guidata di creazione del modello — i primi 5 canali
+   risultano <code>AETRA</code>.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Auto-test dei ricevitori Archer</p>
 <p>L'auto-test per i ricevitori Archer viene ora eseguito tramite <a href="../../system-setup/devices/">Configurazione dispositivo →
 SxR</a> (firmware v2.1.10+) anziché con una
-procedura di auto-test dedicata. Il canale del gas deve essere a
+procedura di auto-test dedicata. Il canale del Gas deve essere a
 −100%, altrimenti l'auto-test non si avvia.</p>
 </div>
 <h2 id="riordino-di-un-modello-esistente">Riordino di un modello esistente<a class="headerlink" href="#riordino-di-un-modello-esistente" title="Permanent link">&para;</a></h2>
@@ -3435,7 +3435,7 @@ in <a href="../../model-setup/outputs/#swap-channels">Uscite</a>.</p>
 </tr>
 <tr>
 <td>3</td>
-<td>Profondità</td>
+<td>Elevatore</td>
 </tr>
 <tr>
 <td>4</td>
@@ -3455,22 +3455,22 @@ in <a href="../../model-setup/outputs/#swap-channels">Uscite</a>.</p>
 </tr>
 <tr>
 <td>8</td>
-<td>Carrello retrattile</td>
+<td>Retrattili</td>
 </tr>
 </tbody>
 </table>
-<p>Ordine di destinazione: <code>AETRAE</code> — Can.1 Alettone1, Can.2 Profondità, Can.3 Gas,
-Can.4 Timone, Can.5 Alettone2, Can.6 Profondità2/AUX2 (quindi Gain/fasi di
+<p>Ordine di destinazione: <code>AETRAE</code> — Can.1 Alettone1, Can.2 Elevatore, Can.3 Gas,
+Can.4 Timone, Can.5 Alettone2, Can.6 Elevatore2/AUX2 (quindi Gain/fasi di
 volo/auto-test su 9–12).</p>
 <ol>
-<li><strong>Spostare prima Alettone2 fuori dal percorso</strong>: in Uscite, selezionare CH2
-   (Alettone2), toccare nuovamente, <strong>Scambia canali</strong> e scambiarlo con un canale
+<li><strong>Sposta prima Alettone2 fuori strada</strong>: in Uscite, seleziona CH2
+   (Alettone2), tocca di nuovo, <strong>Scambia canali</strong> e scambialo con un canale
    inutilizzato (ad es. CH9). Lo scambio è immediato — tutti i mix che fanno riferimento
    a uno dei due canali vengono aggiornati automaticamente.</li>
-<li><strong>Scambiare CH3 (Profondità) → CH2.</strong></li>
-<li><strong>Scambiare CH4 (Gas) → CH3.</strong></li>
-<li><strong>Scambiare CH5 (Timone) → CH4.</strong></li>
-<li><strong>Scambiare CH9 (Alettone2, parcheggiato al passo 1) → CH5.</strong></li>
+<li><strong>Scambia CH3 (Elevatore) → CH2.</strong></li>
+<li><strong>Scambia CH4 (Gas) → CH3.</strong></li>
+<li><strong>Scambia CH5 (Timone) → CH4.</strong></li>
+<li><strong>Scambia CH9 (Alettone2, parcheggiato al passo 1) → CH5.</strong></li>
 </ol>
 <p>Risultato:</p>
 <table>
@@ -3487,7 +3487,7 @@ volo/auto-test su 9–12).</p>
 </tr>
 <tr>
 <td>2</td>
-<td>Profondità</td>
+<td>Elevatore</td>
 </tr>
 <tr>
 <td>3</td>
@@ -3511,11 +3511,11 @@ volo/auto-test su 9–12).</p>
 </tr>
 <tr>
 <td>8</td>
-<td>Carrello retrattile</td>
+<td>Retrattili</td>
 </tr>
 </tbody>
 </table>
-<p>— ora nell'ordine richiesto dai ricevitori stabilizzati FrSky.</p>
+<p>— ora nell'ordine che si aspettano i ricevitori stabilizzati FrSky.</p>
 
 
 

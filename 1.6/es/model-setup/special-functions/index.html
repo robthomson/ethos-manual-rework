@@ -1992,7 +1992,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3382,151 +3382,157 @@
 
 <h1 id="funciones-especiales">Funciones especiales<a class="headerlink" href="#funciones-especiales" title="Permanent link">&para;</a></h1>
 <p><img alt="Menú de funciones especiales" src="../../assets/model-sf-menu.png" /></p>
-<p>Las funciones especiales activan una acción —reproducir audio, capturar la
-pantalla, escribir registros, respuesta háptica y más— cuando una condición
-se cumple. Se admiten hasta 100; por defecto no existe ninguna. Añada una
-con <strong>+</strong>; toque una existente para <strong>Editar</strong>/<strong>Mover</strong>/<strong>Copiar-pegar</strong>/
-<strong>Clonar</strong>/<strong>Eliminar</strong>.</p>
+<p>Las Funciones Especiales disparan una acción —reproducir audio, hacer una
+captura de pantalla, escribir registros, vibración háptica y más— cuando se
+cumple una condición. Se admiten hasta 100 y no hay ninguna por defecto.
+Pulse <strong>+</strong> para añadir una; toque una ya existente para
+<strong>Editar</strong>/<strong>Mover</strong>/<strong>Copiar-pegar</strong>/<strong>Clonar</strong>/<strong>Eliminar</strong>.</p>
 <p><img alt="Añadir función especial" src="../../assets/model-sf-add.png" />
 <img alt="Mover" src="../../assets/model-sf-move.png" /></p>
 <h2 id="campos-comunes-a-todas-las-acciones">Campos comunes a todas las acciones<a class="headerlink" href="#campos-comunes-a-todas-las-acciones" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Estado</strong> — activa/desactiva esta función sin eliminarla.</li>
-<li><strong>Condición activa</strong> — <strong>Siempre activa</strong>, o condicionada por posiciones
-  de interruptor/interruptor de función/interruptor lógico/trim o por fases
-  de vuelo. Mantenga pulsado <code>ENT</code> sobre un interruptor y marque
-  <strong>Negativo</strong> para invertirlo (por ejemplo, <code>SG-up</code> se convierte en
-  <code>!SG-up</code>, activo siempre que SG <em>no</em> esté arriba).</li>
-<li><strong>Global</strong> — añade esta función a <strong>todos</strong> los modelos, existentes y
-  futuros. Si un modelo ya tiene una función local configurada de forma
-  idéntica, Global la añade como una entrada adicional; al desactivar Global
-  de nuevo se elimina de todos los modelos excepto del actualmente
-  seleccionado. Las funciones globales residen en <code>radio.bin</code>; las locales
-  residen en el archivo del modelo.</li>
+<li><strong>Estado</strong> — activa o desactiva esta Función Especial sin eliminarla.</li>
+<li><strong>Condición activa</strong> — <strong>Siempre encendida</strong>, o activada por posiciones de
+  interruptores, interruptores de función, interruptores lógicos, posiciones
+  de compensado o modos de vuelo. Si mantiene pulsado <code>ENT</code> sobre el nombre
+  del interruptor y marca la casilla <strong>Negativa</strong>, el valor se invierte (por
+  ejemplo, <code>SG-up</code> pasa a <code>!SG-up</code>, activo siempre que SG <em>no</em> esté en la
+  posición arriba).</li>
+<li><strong>Global</strong> — añade esta función a <strong>todos</strong> los modelos existentes y a
+  cualquier modelo nuevo que se cree en el futuro. Si un modelo existente ya
+  tiene la función, la función Global se añade como una nueva entrada; al
+  desactivar Global en cualquier modelo, la función se elimina de todos los
+  modelos excepto del modelo actual seleccionado. Las funciones especiales
+  globales se almacenan en <code>radio.bin</code>, mientras que las normales se
+  almacenan en el archivo del modelo.</li>
 </ul>
 <h2 id="actions">Acciones<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
-<p><strong>Reiniciar</strong> — reinicia los <strong>Datos de vuelo</strong> (telemetría + temporizadores),
-<strong>Todos los temporizadores</strong> o <strong>Toda la telemetría</strong>.</p>
-<p><img alt="Reiniciar" src="../../assets/model-sf-reset.png" /></p>
-<p><strong>Captura de pantalla</strong> — guarda una captura de pantalla en <code>screenshots/</code>
-de la SD card/eMMC.</p>
+<p><strong>Restablecer</strong> — restablece los <strong>Datos de vuelo</strong> (telemetría +
+cronómetros), <strong>Todos los cronómetros</strong> o <strong>Toda la telemetría</strong>.</p>
+<p><img alt="Restablecer" src="../../assets/model-sf-reset.png" /></p>
+<p><strong>Captura de pantalla</strong> — guarda una captura de pantalla en la carpeta
+<code>screenshots/</code> de la SD card o de la eMMC.</p>
 <p><img alt="Captura de pantalla" src="../../assets/model-sf-screenshot.png" /></p>
-<p><strong>Establecer failsafe</strong> — captura las posiciones actuales de los canales
-como failsafe, a través del <strong>Módulo</strong> de RF interno o externo.</p>
-<p><img alt="Establecer failsafe" src="../../assets/model-sf-set-failsafe.png" /></p>
+<p><strong>Ajustar el failsafe</strong> — captura las posiciones actuales de los canales
+como failsafe, a través del <strong>Módulo</strong> de RF interno o externo de la radio.</p>
+<p><img alt="Ajustar el failsafe" src="../../assets/model-sf-set-failsafe.png" /></p>
 <p><strong>Reproducir audio</strong> — la acción más completa, que admite una secuencia
 entera:</p>
 <p><img alt="Reproducir audio" src="../../assets/model-sf-play-audio.png" /></p>
 <ul>
-<li><strong>Voz</strong> — cuál de las hasta 3 voces configuradas se utilizará (consulte
-  <a href="../../system-setup/general/#audio-settings">General</a>).</li>
-<li><strong>Repetir</strong> — reproducir una vez o repetir a un intervalo configurable
-  (hasta 10 minutos).</li>
-<li><strong>Omitir al arrancar</strong> — evita que esta función se dispare durante el
-  arranque.</li>
+<li><strong>Voz</strong> — cuál de las hasta 3 voces configuradas en Ethos se usará
+  (consulte <a href="../../system-setup/general/#audio-settings">General</a>).</li>
+<li><strong>Repetir</strong> — reproducir una vez, o repetirse con la frecuencia
+  introducida aquí, con una duración de hasta 10 minutos.</li>
+<li><strong>Saltar al inicio</strong> — si se activa, el audio no se reproducirá al
+  encender la radio.</li>
 <li>
-<p><strong>Secuencia</strong> — hasta 100 pasos, cada uno de ellos:</p>
+<p><strong>Secuencia</strong> — hasta 100 líneas, cada una de ellas:</p>
 </li>
 <li>
-<p><strong>Reproducir archivo</strong> — reproduce un archivo de audio elegido.</p>
-<p><img alt="Reproducir archivo" src="../../assets/model-sf-play-audio-add-play-file.png" /></p>
+<p><strong>Reproducir fichero</strong> — reproduce el archivo de audio seleccionado.</p>
+<p><img alt="Reproducir fichero" src="../../assets/model-sf-play-audio-add-play-file.png" /></p>
 </li>
 <li>
-<p><strong>Reproducir valor</strong> — enuncia el valor de una fuente: analógicos,
-    interruptores, interruptores lógicos, trims, canales, giróscopo, reloj
-    del sistema, entrenador, temporizadores o telemetría.</p>
+<p><strong>Reproducir valor</strong> — reproduce el valor de la fuente seleccionada:
+    analógicas (palancas, pots o sliders), interruptores, interruptores
+    lógicos, compensadores, canales, giróscopo, reloj del sistema,
+    entrenador, cronómetros o telemetría.</p>
 <p><img alt="Reproducir valor" src="../../assets/model-sf-play-audio-add-play-value.png" /></p>
 </li>
 <li>
-<p><strong>Esperar duración</strong> — una pausa fija, de hasta 10 minutos.</p>
+<p><strong>Tiempo de espera</strong> — un retraso fijo, de hasta 10 minutos.</p>
 </li>
-<li><strong>Esperar condición</strong> — pausa la secuencia hasta que se cumpla una
-    condición.</li>
+<li><strong>Condición de espera</strong> — pausa la secuencia hasta que se cumpla la
+    condición de espera.</li>
 </ul>
 <p><img alt="Añadir línea de secuencia" src="../../assets/model-sf-play-audio-add-line.png" />
   <img alt="Tipo de línea de secuencia" src="../../assets/model-sf-play-audio-add-line-type.png" /></p>
-<p>Por ejemplo: reproducir <code>vfrlow.wav</code> cuando el interruptor lógico
-  <code>VFRlow</code> se active, y a continuación enunciar el valor mínimo de VFR
-  registrado —</p>
-<p><img alt="Reproducir valor tras archivo" src="../../assets/model-sf-play-audio-add-play-value-add-line.png" /></p>
-<p>— o pausar una secuencia hasta que el interruptor SH se mueva hacia abajo
-  antes de continuar:</p>
+<p>Por ejemplo: reproducir <code>vfrlow.wav</code> cuando se active el interruptor
+  lógico <code>VFRlow</code> y, a continuación, reproducir el valor mínimo de VFR que
+  se ha grabado —</p>
+<p><img alt="Reproducir valor tras el fichero" src="../../assets/model-sf-play-audio-add-play-value-add-line.png" /></p>
+<p>— o pausar la secuencia hasta que el interruptor SH se mueva a la posición
+  más baja antes de continuar:</p>
 <p><img alt="Secuencia con condición de espera" src="../../assets/model-sf-play-audio-add-sequence.png" /></p>
-<p>Toque cualquier línea de la secuencia para editarla, añadir, reordenar o
-  eliminarla:</p>
-<p><img alt="Gestión de la secuencia" src="../../assets/model-sf-play-audio-add-sequence-management.png" /></p>
-<p><strong>Háptico</strong> — respuesta por vibración:</p>
-<p><img alt="Háptico" src="../../assets/model-sf-haptic.png" /></p>
+<p>Tocando en una línea de la secuencia podrá editarla, añadir una nueva,
+  moverla hacia arriba o abajo, o borrarla:</p>
+<p><img alt="Administración de secuencias" src="../../assets/model-sf-play-audio-add-sequence-management.png" /></p>
+<p><strong>Vibración (Haptic)</strong> — asigna vibración háptica a una acción:</p>
+<p><img alt="Vibración" src="../../assets/model-sf-haptic.png" /></p>
 <ul>
 <li><strong>Patrón</strong> — simple, doble, triple, quíntuple o muy breve.</li>
 </ul>
-<p><img alt="Patrón háptico" src="../../assets/model-sf-haptic-pattern.png" /></p>
+<p><img alt="Patrón de vibración" src="../../assets/model-sf-haptic-pattern.png" /></p>
 <ul>
-<li><strong>Intensidad</strong> — 1–10 (por defecto 5).</li>
-<li><strong>Repetir</strong> — una vez o a un intervalo determinado.</li>
-<li><strong>Seleccionar motores hápticos</strong> — en emisoras con motores hápticos en los
-  gimbals (X20 Pro AW, X20RS, o una X20 Pro/X20R mejorada con gimbals MC20R
-  — consulte
+<li><strong>Fuerza</strong> — entre 1 y 10 (el valor predeterminado es 5).</li>
+<li><strong>Repetir</strong> — una vez, o repetirse con la frecuencia introducida aquí.</li>
+<li><strong>Seleccionar motores de vibración</strong> — en las emisoras con motores de
+  vibración en las palancas (X20 Pro AW, X20RS, o una X20 Pro/X20R
+  actualizada con motores MC20R en las palancas — vaya a
   <a href="../../system-setup/hardware/#radio-specific-hardware-options">Hardware</a>):
-  <strong>Por defecto</strong> (háptico interno), <strong>Todos los motores</strong>, <strong>Stick
-  izquierdo</strong> o <strong>Stick derecho</strong>.</li>
+  <strong>Por defecto</strong> (vibración interna), <strong>Todos los motores</strong>, <strong>Vibración en
+  la palanca izquierda</strong> o <strong>Vibración en la palanca derecha</strong>.</li>
 </ul>
-<p><img alt="Háptico en X20 Pro AW" src="../../assets/model-sf-haptic-x20proaw.png" /></p>
-<p><strong>Escribir registros</strong> — escribe registros <code>.csv</code> en <code>Logs/</code> de la SD
-card/eMMC, con marca de tiempo del RTC (esencial para distinguir después
-unas sesiones de vuelo de otras):</p>
+<p><img alt="Vibración en la X20 Pro AW" src="../../assets/model-sf-haptic-x20proaw.png" /></p>
+<p><strong>Escribir registros</strong> — guarda los registros en formato <code>.csv</code> en la
+carpeta <code>Logs/</code> de la SD card o de la eMMC, con la hora y la fecha del RTC
+(imprescindible para separar después los datos de registro en sesiones):</p>
 <p><img alt="Escribir registros" src="../../assets/model-sf-write-logs.png" /></p>
 <ul>
-<li><strong>Intervalo de escritura</strong> — 100–500 ms.</li>
-<li><strong>Sticks/Potenciómetros/Deslizadores</strong>, <strong>Interruptores</strong>, <strong>Interruptores
-  lógicos</strong>, <strong>Canales</strong> — categorías de registro que se activan de forma
+<li><strong>Intervalo de escritura</strong> — de 100 a 500 ms.</li>
+<li><strong>Palancas/Pots/Sliders</strong>, <strong>Interruptores</strong>, <strong>Interruptores lógicos</strong>,
+  <strong>Canales</strong> — categorías de registro que se activan de forma
   independiente.</li>
 </ul>
-<p><strong>Visualización de los registros</strong>: abra un archivo de registro desde
-  <code>/Logs</code> en el Administrador de archivos. Elija qué canales representar
-  (RSSI está seleccionado por defecto); desplácese con el codificador
-  rotativo o con un deslizamiento del dedo, y haga zoom girando el
-  codificador mientras mantiene pulsado <code>PAGE</code>. <code>DISP</code> traslada el foco al
-  primer botón de la columna derecha.</p>
-<p><strong>Reproducir texto</strong> (solo X20 Pro) — síntesis de voz en el propio equipo en
-lugar de un archivo pregrabado:</p>
+<p><strong>Visor de registros</strong>: abra un archivo de registro de la carpeta <code>/Logs</code>
+  con el explorador de archivos. Seleccione los canales que se van a ver (la
+  RSSI se selecciona por defecto); desplace la pantalla con el selector
+  rotatorio o moviendo el dedo, y amplíe o aleje girando el selector
+  rotatorio mientras mantiene presionada la tecla <code>PAGE</code>. El botón <code>DISP</code>
+  mueve el foco al primer botón de la columna de la derecha.</p>
+<p><strong>Reproducir texto</strong> (sólo en X20 Pro) — utiliza el procesador interno TTS
+(Text-To-Speech) de la radio en lugar de un archivo pregrabado:</p>
 <p><img alt="Reproducir texto" src="../../assets/model-sf-x20pro-play-text.png" /></p>
 <ul>
-<li><strong>Texto</strong> — la cadena que se enunciará. TODO EN MAYÚSCULAS se deletrea
-  letra por letra (por ejemplo, "OFF" → "O-F-F"); en minúsculas se pronuncia
-  como palabra ("off").</li>
-<li><strong>Repetir</strong>, <strong>Omitir al arrancar</strong> — como arriba.</li>
+<li><strong>Texto</strong> — el texto que se va a convertir en audio y reproducir. Escrito
+  todo en mayúsculas se deletrea letra por letra (por ejemplo, "OFF" →
+  "O-F-F"); en minúsculas se pronuncia como palabra ("off").</li>
+<li><strong>Repetir</strong>, <strong>Saltar al inicio</strong> — como más arriba.</li>
 </ul>
-<p><strong>Ir a pantalla</strong> — cambia la visualización a una pantalla elegida, por
-ejemplo para saltar al registro de datos de vuelo de un receptor cuando se
-pulsa un botón:</p>
-<p><img alt="Ir a pantalla" src="../../assets/model-sf-go-to-screen.png" />
-<img alt="Opciones de pantalla" src="../../assets/model-sf-go-to-screen-options.png" /></p>
-<p><strong>Bloquear pantalla táctil</strong> — bloquea la pantalla táctil frente a entradas
-involuntarias (también accesible directamente manteniendo pulsados <code>ENT</code> +
-<code>PAGE</code> juntos durante 1 s desde la pantalla de inicio):</p>
+<p><strong>Ir a la página</strong> — cambia la pantalla a la página seleccionada, por
+ejemplo para mostrar la grabación de datos de vuelo de un receptor al
+presionar un botón:</p>
+<p><img alt="Ir a la página" src="../../assets/model-sf-go-to-screen.png" />
+<img alt="Opciones de página" src="../../assets/model-sf-go-to-screen-options.png" /></p>
+<p><strong>Bloquear pantalla táctil</strong> — bloquea la pantalla táctil de la radio para
+prevenir su operación inadvertida (también se puede activar presionando
+<code>ENT</code> y <code>PAGE</code> simultáneamente durante 1 segundo en la pantalla de inicio):</p>
 <p><img alt="Bloquear pantalla táctil" src="../../assets/model-sf-lock-touchscreen.png" /></p>
-<p><strong>Cargar modelo</strong> — carga un <strong>Modelo</strong> especificado cuando se activa, con
-un aviso de <strong>Confirmación</strong> opcional antes de realizar el cambio:</p>
+<p><strong>Cargar modelo</strong> — carga el <strong>Modelo</strong> especificado cuando se cumplan las
+condiciones determinadas, con una petición de <strong>Confirmación</strong> opcional
+antes de cambiar realmente de modelo:</p>
 <p><img alt="Cargar modelo" src="../../assets/model-sf-load-model.png" /></p>
-<p><strong>Reproducir vario</strong> — genera el audio del vario a partir de una fuente
-elegida (normalmente el sensor VSpeed de un vario FrSky, aunque funciona
-cualquier sensor con unidades m/s):</p>
+<p><strong>Reproducir vario</strong> — genera el audio del vario a partir de la fuente
+seleccionada (normalmente el sensor VSpeed de un vario FrSky, aunque sirve
+cualquier sensor que use m/s como unidad de medida):</p>
 <p><img alt="Reproducir vario" src="../../assets/model-sf-play-vario.png" />
 <img alt="Fuente del vario: VSpeed" src="../../assets/model-sf-play-vario-vspeed.png" /></p>
 <ul>
-<li><strong>Rango</strong> — tasa de ascenso/descenso asignada al tono, por defecto
-  ±10 m/s (hasta ±100 m/s). Por encima de <strong>Centro</strong>, el tono sube
-  linealmente con la tasa de ascenso hasta el valor máximo del Rango (el
-  tono de tasa máxima se ajusta en <a href="../../system-setup/general/#vario">General →
-  Vario</a>); al descender se emite un tono
-  continuo cuyo tono desciende hacia el valor mínimo del Rango.</li>
-<li><strong>Centro</strong> — la banda de "ascenso cero", por defecto ±0,3 m/s (hasta
-  ±2 m/s); dentro de ella el tono es constante (el tono de tasa cero también
-  se ajusta en General → Vario). Cambie <strong>Pitido</strong>→<strong>Silencio</strong> para silenciar
-  el tono por completo.</li>
+<li><strong>Rango</strong> — el régimen de subida o bajada asociado al tono; por defecto
+  ±10 m/s (hasta ±100 m/s). Cuando el régimen de subida está por encima del
+  valor de <strong>Centro</strong>, el tono de los pitidos se incrementa linealmente
+  hasta que se alcanza el máximo valor de Rango (el tono al máximo régimen
+  de subida se configura en <a href="../../system-setup/general/#vario">General →
+  Vario</a>); al bajar, el tono se hace
+  continuo y decrece linealmente hasta el mínimo régimen de bajada.</li>
+<li><strong>Centro</strong> — la banda que define un régimen cero de subida o bajada, por
+  defecto ±0,3 m/s (hasta ±2 m/s); dentro de ella el tono se mantiene
+  continuo (el tono a régimen cero también se configura en General → Vario).
+  Seleccione <strong>Silencio</strong> en lugar de <strong>Pitido</strong> para silenciar los pitidos
+  por completo.</li>
 </ul>
-<p><img alt="Opciones de rango/centro del vario" src="../../assets/model-sf-play-vario-options.png" /></p>
+<p><img alt="Opciones de rango y centro del vario" src="../../assets/model-sf-play-vario-options.png" /></p>
 
 
 

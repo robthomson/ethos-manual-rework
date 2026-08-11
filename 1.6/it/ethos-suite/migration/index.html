@@ -2705,7 +2705,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3294,15 +3294,15 @@
 <h1 id="migrazione">Migrazione<a class="headerlink" href="#migrazione" title="Permanent link">&para;</a></h1>
 <p>Passaggio di una radio dai vecchi strumenti di aggiornamento per PC separati a Ethos Suite, per la prima volta.</p>
 <ol>
-<li><strong>Verificare Ethos ≥ 1.1.4</strong> — la versione minima in grado di flashare direttamente il nuovo bootloader compatibile con Suite (formato FRSK) dal <a href="../../system-setup/file-manager/">File Manager</a>. Se necessario, aggiornare prima manualmente alla 1.1.4.</li>
-<li><strong>Eseguire il backup della SD card/eMMC</strong> — copiarne l'intero contenuto in una cartella su un PC.</li>
-<li><strong>Scaricare il bootloader più recente</strong> dalle <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">release di ETHOS-Feedback-Community</a> e decomprimerlo. Ogni release pubblica un file <code>components.json</code> che elenca la versione corrente di ogni componente — vedere <a href="../../how-to/find-latest-bootloader/">Guida pratica: trovare il bootloader più recente</a> per la sua lettura.</li>
-<li>Individuare la radio nella voce <code>targets</code> di quel file per conoscere l'esatta versione del bootloader da utilizzare, quindi cercare il file corrispondente tra gli asset di quella release.</li>
-<li>Avviare la radio in <a href="../../getting-started/usb-connection-modes/#bootloader-mode">modalità bootloader</a> (tenere premuto <code>ENT</code>, poi accendere) e collegarla via USB.</li>
-<li>Copiare il file del bootloader sulla SD card/eMMC (normalmente nella cartella <code>Firmware/</code>), quindi espellere le unità e scollegare il cavo.</li>
-<li>Avviare normalmente la radio, andare in <strong>System → File Manager</strong>, toccare il file <code>bootloader.frsk</code> appena copiato e selezionare <strong>Flash bootloader</strong>.</li>
-<li>Scaricare e installare Ethos Suite — <a href="../operation/">Funzionamento</a> illustra da qui in avanti l'aggiornamento di firmware/file e le restanti funzionalità di Suite.</li>
-<li>Se Ethos Suite non lo fa automaticamente, potrebbe essere necessario rinominare la cartella <code>bitmaps/user</code> presente sulla SD card/eMMC in <code>bitmaps/models</code> (è qui che risiedono le bitmap dei modelli dell'utente).</li>
+<li><strong>Verificare che Ethos sia ≥ 1.1.4</strong> — la versione minima in grado di eseguire il flash del nuovo bootloader compatibile con Suite (formato FRSK) direttamente dal <a href="../../system-setup/file-manager/">File Manager</a>. Se necessario, aggiorna prima manualmente alla 1.1.4.</li>
+<li><strong>Eseguire il backup della SD card/eMMC</strong> — copiarne l'intero contenuto in una cartella sul PC.</li>
+<li><strong>Scaricare l'ultimo bootloader</strong> dalle <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">release di ETHOS-Feedback-Community</a> e decomprimerlo. Ogni release pubblica un file <code>components.json</code> che elenca la versione corrente di ogni componente — vedi <a href="../../how-to/find-latest-bootloader/">Guida pratica: trovare l'ultimo bootloader</a> per sapere come leggerlo.</li>
+<li>Individua la radio nella voce <code>targets</code> di quel file per conoscere l'esatta versione del bootloader da utilizzare e cerca il file corrispondente tra gli asset di quella release.</li>
+<li>Avvia la radio in <a href="../../getting-started/usb-connection-modes/#bootloader-mode">modalità bootloader</a> (tieni premuto <code>ENT</code>, quindi accendi) e collegala via USB.</li>
+<li>Copia il file del bootloader sulla SD card/eMMC (normalmente nella cartella <code>Firmware/</code>), quindi espelli le unità e scollega il cavo.</li>
+<li>Avvia normalmente la radio, vai in <strong>System → File Manager</strong>, tocca il file <code>bootloader.frsk</code> appena copiato e seleziona <strong>Flash bootloader</strong>.</li>
+<li>Scarica e installa Ethos Suite — <a href="../operation/">Funzionamento</a> illustra da qui in avanti l'aggiornamento di firmware e file e le restanti funzionalità di Suite.</li>
+<li>Se Ethos Suite non lo fa automaticamente, potrebbe essere necessario rinominare la cartella <code>bitmaps/user</code> presente sulla SD card/eMMC in <code>bitmaps/models</code> (è qui che risiedono le bitmap utente dei modelli).</li>
 </ol>
 
 

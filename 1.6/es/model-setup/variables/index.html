@@ -2009,7 +2009,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2796,7 +2796,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3416,51 +3416,51 @@
 
 <h1 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h1>
 <p><img alt="Variables" src="../../assets/model-vars.png" /></p>
-<p>Las variables ("Vars") son contenedores con nombre para los valores de configuración propios de un modelo, referenciables desde cualquier otro punto de la programación, incluidas las <a href="../mixes/">mezclas</a>. Mantenerlas en su propia sección separa los <em>datos de configuración</em> del modelo de su <em>lógica de programación</em>: en lugar de rastrear docenas de mezclas para encontrar y ajustar un valor, todo reside en un único lugar con un nombre significativo. Hay 64 Vars disponibles; ninguna existe por defecto. Añada una con <strong>+</strong>; pulse sobre una Var existente para <strong>Editar</strong>/<strong>Mover</strong>/<strong>Copiar</strong>/<strong>Clonar</strong>/<strong>Borrar</strong>.</p>
+<p>Las variables ("Vars") son contenedores con nombre para los valores de configuración propios de un modelo, que pueden referenciarse desde cualquier otro punto de la programación, incluidas las <a href="../mixes/">mezclas</a>. Mantenerlas en su propia sección separa los <em>datos de configuración</em> del modelo de su <em>lógica de programación</em>: en lugar de rebuscar entre docenas de mezclas para encontrar y retocar un valor, todo reside en un único lugar y con un nombre significativo. Hay 64 Vars disponibles; por defecto no existe ninguna. Se añade una con <strong>+</strong>; tocando una Var existente aparecen las opciones <strong>Editar</strong>/<strong>Mover</strong>/<strong>Copiar</strong>/<strong>Clonar</strong>/<strong>Borrar</strong>.</p>
 <p><img alt="Añadir variable" src="../../assets/model-vars-add.png" /></p>
-<p>Una Var puede contener una constante fija, o ser ajustable dentro de límites definidos por el usuario (para evitar que valores erróneos provoquen un accidente), y puede contener un valor <em>distinto</em> por cada condición activa (por ejemplo, por fase de vuelo). Los valores son persistentes entre sesiones. Una Var sustituye a cualquier valor numérico ordinario en cualquier lugar donde esté disponible la <a href="../../getting-started/user-interface-and-navigation/#the-options-feature">función Opciones</a> (los campos con el icono de hamburguesa).</p>
+<p>Una Var puede contener una constante fija, o ser ajustable dentro de unos límites definidos por el usuario (para evitar que valores erróneos provoquen un accidente), y puede tomar un valor <em>distinto</em> en cada condición activa (por ejemplo, en cada fase de vuelo). Los valores se conservan entre sesiones. Una Var puede sustituir a cualquier valor numérico ordinario allí donde esté disponible la <a href="../../getting-started/user-interface-and-navigation/#the-options-feature">función Opciones</a> (los campos con el icono de hamburguesa).</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Un velero con alerones divididos (cuyas secciones interiores hacen también de flaps de aterrizaje) necesita un único valor compartido de diferencial de alerones utilizado en todos los casos en que las cuatro superficies actúan como alerones: una Var que contenga ese único valor, referenciada desde cada mezcla relevante, lo mantiene coherente y hace que solo haya que ajustarlo en un sitio.</p>
+<p>Un planeador con alerones divididos (cuyas secciones interiores hacen también de flaps de aterrizaje) necesita un único valor compartido de diferencial de alerones para todos los casos en que las cuatro superficies actúan como alerones: una Var que contenga ese único valor, referenciada desde cada mezcla implicada, lo mantiene coherente y hace que solo haya que ajustarlo en un sitio.</p>
 </div>
 <h2 id="anadir-una-var">Añadir una Var<a class="headerlink" href="#anadir-una-var" title="Permanent link">&para;</a></h2>
 <p><img alt="Nueva variable" src="../../assets/model-vars-new_var.png" /></p>
 <ul>
-<li><strong>Valor</strong> — valor actual (visualización de solo lectura).</li>
+<li><strong>Valor</strong> — valor actual (solo lectura).</li>
 <li><strong>Nombre</strong> — editable.</li>
-<li><strong>Comentario</strong> — texto libre que explica su propósito.</li>
-<li><strong>Rango</strong> — límites inferior/superior (un decimal, dentro de ±500 %) que el valor de la Var nunca podrá superar.</li>
+<li><strong>Comentario</strong> — texto libre que explica su finalidad.</li>
+<li><strong>Rango</strong> — límites inferior y superior (con un decimal, dentro de ±500 %) que el valor de la Var nunca podrá sobrepasar.</li>
 </ul>
 <h3 id="valores">Valores<a class="headerlink" href="#valores" title="Permanent link">&para;</a></h3>
 <p><img alt="Valores de la variable" src="../../assets/model-vars-values.png" /></p>
 <ul>
 <li><strong>Fijo</strong> — una única constante, con un decimal.</li>
-<li><strong>Múltiple/variable</strong> — <strong>Añadir nuevo valor</strong> asocia un valor a cada condición activa. Por ejemplo, <code>Var12</code> vale 9 % mientras la fase de vuelo Thermal (FM4) está activa, y −3 % mientras Speed (FM5) está activa, con su Rango limitado a −10 %…+15 % para que ninguno de los dos pueda exceder límites razonables:</li>
+<li><strong>Múltiple/variable</strong> — <strong>Añadir nuevo valor</strong> asocia un valor a cada condición activa. Por ejemplo, <code>Var12</code> vale 9 % mientras la fase de vuelo Thermal (FM4) está activa, y −3 % mientras Speed (FM5) está activa, con su Rango limitado a −10 %…+15 % para que ninguno de los dos pueda superar unos límites razonables:</li>
 </ul>
 <p><img alt="Valores dependientes de la fase de vuelo" src="../../assets/model-vars-fm-dependent.png" />
   <img alt="Añadir un valor" src="../../assets/model-vars-add-value.png" /></p>
 <h3 id="acciones">Acciones<a class="headerlink" href="#acciones" title="Permanent link">&para;</a></h3>
 <p><img alt="Acciones de la variable" src="../../assets/model-vars-actions.png" />
 <img alt="Añadir acción" src="../../assets/model-vars-add-action.png" /></p>
-<p>Las acciones modifican el valor de una Var a lo largo del tiempo, controladas por una entrada.</p>
-<p><strong>Trim reasignado</strong> — cede uno de los trims físicos al ajuste de esta Var en lugar de su función normal, normalmente restringido a una condición activa:</p>
+<p>Las acciones modifican el valor de una Var a lo largo del tiempo, gobernadas por una entrada.</p>
+<p><strong>Trim reasignado</strong> — cede uno de los trims físicos al ajuste de esta Var en lugar de su función normal, normalmente limitado a una condición activa:</p>
 <p><img alt="Reasignar un trim" src="../../assets/model-vars-functions-repurpose.png" />
 <img alt="Seleccionar el trim a reasignar" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Reasigne el trim del acelerador para ajustar una Var de compensación de curvatura, pero solo mientras la fase de vuelo Landing (FM3) esté activa, con un Rango de 0–25 % y un paso de 1,0 % por clic. Fuera de esa condición activa, el trim vuelve automáticamente a su función ordinaria.</p>
+<p>Reasigne el trim del acelerador para ajustar una Var de compensación de curvatura, pero solo mientras la fase de vuelo Landing (FM3) esté activa, con un Rango de 0–25 % y un paso de 1,0 % por clic. Fuera de esa condición activa, el trim recupera automáticamente su función habitual.</p>
 </div>
-<p><strong>Acciones aritméticas</strong> — controladas por cualquier entrada:</p>
+<p><strong>Acciones aritméticas</strong> — gobernadas por cualquier entrada:</p>
 <ul>
 <li><strong>Asignar</strong> — fija la Var a un valor concreto.</li>
 <li><strong>Sumar</strong> / <strong>Restar</strong> / <strong>Multiplicar</strong> / <strong>Dividir</strong> — operación aritmética sobre el valor actual.</li>
-<li><strong>Porcentaje</strong> — aplica un porcentaje de la entrada de control.</li>
-<li><strong>Mín</strong> / <strong>Máx</strong> — limita la Var frente a la entrada de control.</li>
+<li><strong>Porcentaje</strong> — aplica un porcentaje de la entrada que la gobierna.</li>
+<li><strong>Mín</strong> / <strong>Máx</strong> — limita la Var frente a la entrada que la gobierna.</li>
 </ul>
 <p><img alt="Acciones de función" src="../../assets/model-vars-functions.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><code>FS3(edge)</code> asigna directamente 40 % a una Var; <code>FS1(edge)</code> suma 2 en cada pulsación (limitado al máximo del Rango); <code>FS2(edge)</code> resta 2 en cada pulsación (limitado al mínimo del Rango). Aquí importa la opción <strong>Edge</strong> (pulsación larga sobre el interruptor de función): sin ella, la acción se repetiría continuamente mientras se mantuviese el interruptor accionado, en lugar de ejecutarse una vez por pulsación.</p>
+<p><code>FS3(edge)</code> asigna directamente 40 % a una Var; <code>FS1(edge)</code> suma 2 en cada pulsación (con tope en el máximo del Rango); <code>FS2(edge)</code> resta 2 en cada pulsación (con tope en el mínimo del Rango). Aquí es importante la opción <strong>Edge</strong> (pulsación larga sobre el interruptor de función): sin ella, la acción se repetiría continuamente mientras se mantuviera accionado el interruptor, en lugar de ejecutarse una sola vez por pulsación.</p>
 </div>
 <p><img alt="Ejemplo resuelto" src="../../assets/model-vars-calc-example.png" /></p>
 

@@ -2834,7 +2834,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3494,23 +3494,23 @@
 <h2 id="perche">Perché<a class="headerlink" href="#perche" title="Permanent link">&para;</a></h2>
 <p>L'estrazione dei flap modifica la curvatura alare — i modelli ad ala alta
 tendono a "cabrare" (ballooning), quelli ad ala bassa tendono ad
-affondare — richiedendo una correzione di profondità non lineare rispetto
-alla deflessione dei flap, quindi una curva anziché un semplice offset
-fisso. Questa guida utilizza le <a href="../../model-setup/variables/">Var</a> per
-rendere regolabili <strong>in volo</strong> i punti di una curva di compensazione,
-tramite un trim del gas riassegnato, condizionato dal punto della curva a
-cui lo stick dei flap si trova più vicino in quel momento — sviluppando
-il passaggio relativo alla compensazione di profondità della <a href="../butterfly-mixer/">Guida
-pratica: Mixer Butterfly</a>.</p>
+affondare — e richiede quindi una correzione di elevatore non lineare
+rispetto alla deflessione dei flap, cioè una curva anziché un semplice
+offset fisso. Questa guida utilizza le <a href="../../model-setup/variables/">Var</a>
+per rendere regolabili <strong>in volo</strong> i punti di una curva di compensazione,
+tramite un trim del Gas - Throttle riassegnato, condizionato dal punto
+della curva a cui lo stick dei flap si trova più vicino in quel momento —
+sviluppando il passaggio relativo alla compensazione di elevatore della
+<a href="../butterfly-mixer/">Guida pratica: Mixer Butterfly</a>.</p>
 <h2 id="1-scegliere-il-tipo-di-curva">1. Scegliere il tipo di curva<a class="headerlink" href="#1-scegliere-il-tipo-di-curva" title="Permanent link">&para;</a></h2>
 <p>Una <a href="../../model-setup/curves/">curva personalizzata</a> a 5 punti è
-sufficiente per una compensazione fluida senza complessità eccessiva. Il
+sufficiente per una compensazione morbida senza complessità eccessiva. Il
 punto 5 (all'estrema destra, stick dei flap tutto in alto / nessun flap)
-è sempre fissato a zero — non serve alcuna compensazione senza flap
-estratti. Gli altri 4 punti vengono resi regolabili tramite le Var.
-Poiché lo stick dei flap si troverà spesso tra due punti definiti,
-entrambi i punti ai lati devono poter essere regolati insieme in quella
-zona di sovrapposizione.</p>
+è sempre fissato a zero — senza flap estratti non serve alcuna
+compensazione. Gli altri 4 punti vengono resi regolabili tramite le Var.
+Poiché lo stick dei flap si troverà spesso tra due punti definiti, in
+quella zona di sovrapposizione entrambi i punti ai suoi lati devono poter
+essere regolati insieme.</p>
 <h2 id="2-calcolare-gli-intervalli-sovrapposti">2. Calcolare gli intervalli sovrapposti<a class="headerlink" href="#2-calcolare-gli-intervalli-sovrapposti" title="Permanent link">&para;</a></h2>
 <p>Intervalli punto per punto (adattati, con permesso, dal "Crow-aware
 adaptive elevator trim" di Mike Shellim per OpenTX su rc-soar.com —
@@ -3553,12 +3553,12 @@ la ragione spiegata nel <a href="#6-apply-the-curve">Passo 6</a>):</p>
 <h2 id="3-configurare-gli-interruttori-logici">3. Configurare gli interruttori logici<a class="headerlink" href="#3-configurare-gli-interruttori-logici" title="Permanent link">&para;</a></h2>
 <p><img alt="Interruttori logici dei punti adattivi" src="../../assets/how-in-flight-comp-lsws.png" /></p>
 <p>Quattro <a href="../../model-setup/logical-switches/">interruttori logici</a>,
-ciascuno con funzione <strong>Range</strong> sullo stick dei flap (gas), attivi mentre
-lo stick si trova nella zona di quel punto:</p>
+ciascuno con funzione <strong>Range</strong> sullo stick dei flap (Gas - Throttle),
+attivi mentre lo stick si trova nella zona di quel punto:</p>
 <ul>
 <li><code>AdaptivePt2</code> — intervallo da 20% a 100% (esteso fino a 100%
   appositamente affinché il Pt2 possa essere regolato anche senza flap
-  estratti — vedere il Passo 6).</li>
+  estratti — vedi il Passo 6).</li>
 </ul>
 <p><img alt="AdaptivePt2" src="../../assets/how-in-flight-comp-lsw-adaptivept2.png" /></p>
 <ul>
@@ -3577,7 +3577,7 @@ lo stick si trova nella zona di quel punto:</p>
 <p><img alt="Panoramica delle Var" src="../../assets/how-in-flight-comp-vars.png" /></p>
 <p>Quattro <a href="../../model-setup/variables/">Var</a>, da <code>VAdjPt2</code> a <code>VAdjPt5</code>,
 ciascuna con intervallo 0–50% (da ampliare se necessario) e un'azione
-<strong>trim del gas riassegnato</strong> — passo di 1,0%, condizione di attivazione
+<strong>trim del Gas - Throttle riassegnato</strong> — passo di 1,0%, con Attivazione
 data dal corrispondente interruttore logico:</p>
 <p><img alt="VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2.png" />
 <img alt="Azione VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2-2.png" />
@@ -3594,32 +3594,31 @@ sicuro Var diverse a seconda della posizione dei flap.</p>
 <p><img alt="Curva di compensazione" src="../../assets/how-in-flight-comp-var-comp-curve.png" />
 <img alt="Punti della curva di compensazione" src="../../assets/how-in-flight-comp-var-comp-curve-pts.png" /></p>
 <p>Una nuova curva personalizzata a 5 punti (ad esempio "EleComp") con
-<strong>Smooth</strong> attivo. Premere a lungo <code>ENT</code> sui punti da 1 a 4 e selezionare
-<strong>Usa una sorgente</strong> per assegnare rispettivamente da <code>VAdjPt5</code> a
-<code>VAdjPt2</code> (il punto 5 resta fisso a 0, come da Passo 1).</p>
+<strong>Morbido</strong> attivo. Premi a lungo il tasto <code>ENT</code> sui punti da 1 a 4 e
+seleziona <strong>Usa una sorgente</strong> per assegnare rispettivamente da
+<code>VAdjPt5</code> a <code>VAdjPt2</code> (il punto 5 resta fisso a 0, come da Passo 1).</p>
 <h2 id="6-apply-the-curve">6. Applicare la curva<a class="headerlink" href="#6-apply-the-curve" title="Permanent link">&para;</a></h2>
-<p>Utilizzare questa curva esattamente nel punto in cui la <a href="../butterfly-mixer/#7-add-the-elevator-compensation-curve-and-mix">Guida pratica:
+<p>Utilizza questa curva esattamente nel punto in cui la <a href="../butterfly-mixer/#7-add-the-elevator-compensation-curve-and-mix">Guida pratica:
 Mixer
 Butterfly</a>
-associa la propria curva EleComp al mix di compensazione della
-profondità.</p>
-<p>Ove possibile, partire da dati reali (indicazioni del produttore, post
-della community) sulla corsa di profondità necessaria per una data
+assegna la sua curva EleComp al mix di compensazione dell'elevatore.</p>
+<p>Ove possibile, parti da dati reali (indicazioni del produttore, post
+della community) sulla corsa di elevatore necessaria per una data
 deflessione dei flap; in alternativa, qualche millimetro di compensazione
 a flap tutti estratti è un ragionevole punto di partenza.</p>
 <div class="admonition tip">
 <p class="admonition-title">Approccio alla messa a punto</p>
-<p>Iniziare con piccole estrazioni di flap e piccole regolazioni di
-trim. <code>AdaptivePt2</code> può essere regolato <strong>senza alcun flap estratto</strong>
-— estrarre un po' di flap, richiuderlo e inserire un po' di
-compensazione alla volta, invece di combattere con un modello che
-cabra o affonda mentre si cerca di trimmare sotto pressione.
-Riapplicare un po' di flap per verificare e regolare nuovamente se
-necessario. Una volta che il Pt2 risulta corretto, passare al punto
-successivo attorno alla metà corsa dello stick — se il Pt2 ha
-richiesto una variazione di trim consistente, conviene atterrare e
-impostare i punti rimanenti ciascuno leggermente più grande del
-precedente, anziché procedere a caso.</p>
+<p>Inizia con piccole estrazioni di flap e piccole regolazioni di trim.
+<code>AdaptivePt2</code> può essere regolato <strong>senza alcun flap estratto</strong> —
+estrai un po' di flap, richiudilo e inserisci un po' di compensazione
+alla volta, invece di lottare con un modello che cabra o affonda
+mentre cerchi di trimmare sotto pressione. Riapplica un po' di flap
+per verificare e regola nuovamente se necessario. Una volta che il
+Pt2 risulta corretto, passa al punto successivo attorno alla metà
+corsa dello stick — se il Pt2 ha richiesto una variazione di trim
+consistente, conviene atterrare e impostare i punti rimanenti
+ciascuno leggermente più grande del precedente, anziché procedere a
+caso.</p>
 </div>
 
 

@@ -1391,10 +1391,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtro-analogici" class="md-nav__link">
+  <a href="#filtro-analogico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filtro analogici
+        Filtro analogico
       
     </span>
   </a>
@@ -1405,7 +1405,7 @@
   <a href="#function-switches" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interruttori funzione
+        Interruttori di funzione
       
     </span>
   </a>
@@ -2845,7 +2845,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3433,10 +3433,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtro-analogici" class="md-nav__link">
+  <a href="#filtro-analogico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filtro analogici
+        Filtro analogico
       
     </span>
   </a>
@@ -3447,7 +3447,7 @@
   <a href="#function-switches" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interruttori funzione
+        Interruttori di funzione
       
     </span>
   </a>
@@ -3515,8 +3515,8 @@
 <h1 id="modifica-modello">Modifica modello<a class="headerlink" href="#modifica-modello" title="Permanent link">&para;</a></h1>
 <p><img alt="Modifica modello" src="../../assets/model-editmodel.png" /></p>
 <p>Permette di modificare i parametri a livello di modello impostati inizialmente
-dalla procedura guidata — principalmente l'identità, ma anche alcune
-sovrascritture per singolo modello e alcune utilità.</p>
+dalla procedura guidata — principalmente i dati identificativi, ma anche alcune
+impostazioni specifiche del singolo modello e alcune utilità.</p>
 <h2 id="nome-immagine">Nome, Immagine<a class="headerlink" href="#nome-immagine" title="Permanent link">&para;</a></h2>
 <p>Consente di rinominare il modello o di cambiarne l'immagine; sfogliando le
 immagini viene mostrata un'anteprima in miniatura.</p>
@@ -3530,38 +3530,39 @@ immagini viene mostrata un'anteprima in miniatura.</p>
 <p>Anche la modifica del tipo di coda o (su un elicottero) del tipo di piatto
 ciclico azzera tutti i mix. Per gli altri canali è possibile modificare il
 numero di canali assegnati oppure annullarne l'assegnazione.</p>
-<h2 id="filtro-analogici">Filtro analogici<a class="headerlink" href="#filtro-analogici" title="Permanent link">&para;</a></h2>
-<p><img alt="Filtro analogici" src="../../assets/model-edit-analog-filter.png" /></p>
+<h2 id="filtro-analogico">Filtro analogico<a class="headerlink" href="#filtro-analogico" title="Permanent link">&para;</a></h2>
+<p><img alt="Filtro analogico" src="../../assets/model-edit-analog-filter.png" /></p>
 <p>In <a href="../../system-setup/hardware/">Configurazione di sistema → Hardware</a> è
-presente un filtro analogico-digitale globale che consente di ridurre il jitter
-attorno al centro degli stick; questa impostazione per singolo modello lo
-sovrascrive solo per il modello corrente.</p>
-<p><img alt="Opzioni del filtro analogici" src="../../assets/model-edit-analog-filter-select.png" /></p>
-<h2 id="function-switches">Interruttori funzione<a class="headerlink" href="#function-switches" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruttori funzione" src="../../assets/model-edit-fn-switches.png" /></p>
-<p>I sei interruttori funzione sono disponibili ovunque compaia un parametro
-<strong>Condizione di attivazione</strong> ma, a differenza degli interruttori ordinari, non
-possono essere usati come sorgente generica. Possono essere configurati in uno
-dei seguenti modi:</p>
+presente un filtro analogico-digitale globale che permette di ridurre il jitter
+attorno al centro degli stick; questa impostazione, valida per il singolo
+modello, ha la precedenza su quella globale solo per il modello corrente.</p>
+<p><img alt="Opzioni del filtro analogico" src="../../assets/model-edit-analog-filter-select.png" /></p>
+<h2 id="function-switches">Interruttori di funzione<a class="headerlink" href="#function-switches" title="Permanent link">&para;</a></h2>
+<p><img alt="Interruttori di funzione" src="../../assets/model-edit-fn-switches.png" /></p>
+<p>I sei interruttori di funzione sono disponibili ovunque compaia un parametro
+<strong>Condizione attiva</strong> ma, a differenza degli interruttori normali, non possono
+essere utilizzati come sorgente generica. Possono essere configurati in uno dei
+seguenti modi:</p>
 <ul>
-<li><strong>6 posizioni con OFF</strong> — premendo un interruttore funzione questo si attiva
-  in modo permanente; premendo nuovamente lo <em>stesso</em> interruttore tutti e sei
-  vengono disattivati.</li>
-<li><strong>6 posizioni</strong> — premendo un interruttore funzione questo resta attivo finché
-  non viene premuto un interruttore <em>diverso</em>, che ne prende il posto.</li>
+<li><strong>6 posizioni con OFF</strong> — premendo un interruttore di funzione questo resta
+  attivo; premendo nuovamente lo <em>stesso</em> interruttore tutti e sei vengono
+  disattivati.</li>
+<li><strong>6 posizioni</strong> — premendo un interruttore di funzione questo resta attivo
+  finché non viene premuto un interruttore <em>diverso</em>, che ne prende il posto.</li>
 <li><strong>2 × 3 posizioni</strong> — divide i sei interruttori in due gruppi di tre, con un
-  interruttore attivo per gruppo.</li>
+  interruttore attivo per ogni gruppo.</li>
 <li><strong>6 × 2 posizioni</strong> — sei interruttori on/off indipendenti con ritenuta.</li>
 <li><strong>Momentaneo</strong> — sei interruttori indipendenti, ciascuno attivo solo mentre
   viene mantenuto premuto.</li>
-<li><strong>Persistente</strong> — se abilitato, un interruttore funzione mantiene il proprio
-  stato dopo lo spegnimento o il ricaricamento del modello, anziché azzerarsi.</li>
+<li><strong>Persistente</strong> — se abilitato, un interruttore di funzione mantiene il
+  proprio stato dopo lo spegnimento o il ricaricamento del modello, anziché
+  azzerarsi.</li>
 </ul>
-<p><img alt="Opzioni degli interruttori funzione" src="../../assets/model-edit-fn-switches-select.png" /></p>
+<p><img alt="Opzioni degli interruttori di funzione" src="../../assets/model-edit-fn-switches-select.png" /></p>
 <h2 id="connettore-sport">Connettore SPort<a class="headerlink" href="#connettore-sport" title="Permanent link">&para;</a></h2>
 <p>Il pin 5V del connettore S.Port della trasmittente può essere attivato o
-disattivato per singolo modello — utile, ad esempio, per alimentare un
-ricevitore esterno in una configurazione da istruttore/allievo.</p>
+disattivato per ogni singolo modello — utile, ad esempio, per alimentare un
+ricevitore esterno in una configurazione maestro/allievo.</p>
 <h2 id="tempo-di-utilizzo-del-modello">Tempo di utilizzo del modello<a class="headerlink" href="#tempo-di-utilizzo-del-modello" title="Permanent link">&para;</a></h2>
 <p><img alt="Tempo di utilizzo del modello" src="../../assets/model-edit-model-runtime.png" /></p>
 <p>Registra il tempo totale di volo/utilizzo di questo modello.</p>

@@ -2720,7 +2720,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3315,17 +3315,19 @@ denominati:</p>
   attivare un ridisegno tramite <code>paint()</code>. Mantieni questo handler veloce —
   idealmente non deve fare assolutamente nulla nella maggior parte delle
   chiamate.</li>
-<li><strong><code>event</code></strong> <em>(funzione)</em> — chiamata quando il widget riceve un evento;
+<li><strong><code>event</code></strong> <em>(funzione)</em> — chiamata quando il widget riceve un evento:
   Ethos indirizza al widget eventi arbitrari attraverso questo handler.</li>
 <li><strong><code>paint</code></strong> <em>(funzione)</em> — disegna il widget; riceve la tabella del widget
   e non restituisce nulla. Viene chiamata automaticamente ogni volta che è
   stato invocato <code>lcd.invalidate()</code>. Può essere relativamente lenta, ma
   dovrebbe comunque ridisegnare effettivamente solo quando qualcosa è
   cambiato.</li>
-<li><strong><code>read</code></strong> <em>(funzione, opzionale)</em> — legge i dati persistenti del widget.</li>
-<li><strong><code>write</code></strong> <em>(funzione, opzionale)</em> — scrive i dati persistenti del widget.</li>
+<li><strong><code>read</code></strong> <em>(funzione, opzionale)</em> — legge i dati memorizzati in modo
+  persistente dal widget.</li>
+<li><strong><code>write</code></strong> <em>(funzione, opzionale)</em> — scrive i dati memorizzati in modo
+  persistente dal widget.</li>
 <li><strong><code>init</code></strong> <em>(funzione)</em> — registra il widget e le sue callback in Ethos.
-  Tipicamente è l'ultimo elemento dello script:</li>
+  Di norma è l'ultimo elemento dello script:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
 <span class="w">  </span><span class="nv">system</span><span class="p">.</span><span class="nf">registerWidget</span><span class="p">({</span>
@@ -3344,9 +3346,9 @@ denominati:</p>
 </code></pre></div>
 <p><code>key</code> deve essere univoco fra tutti i widget installati; gli altri campi si
 integrano nel ciclo di vita del widget come descritto sopra.</p>
-<p>Gli script risiedono nella cartella <code>scripts/</code> sulla SD card/eMMC,
+<p>Gli script risiedono nella cartella <code>scripts/</code> sulla SD card o eMMC,
 preferibilmente organizzati in cartelle separate per ciascun widget (vedi
-<a href="../../system-setup/file-manager/#top-level-folders">Gestione file</a> e
+<a href="../../system-setup/file-manager/#top-level-folders">File Manager</a> e
 <a href="../example-script-locations/">Esempi di posizione degli script</a>). Per
 ulteriori esempi pratici, consulta il thread <em>FrSky ETHOS Lua Script
 Programming</em> su rcgroups.</p>

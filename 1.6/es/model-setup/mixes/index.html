@@ -2014,7 +2014,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2801,7 +2801,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3427,126 +3427,128 @@
 <h1 id="mezclas">Mezclas<a class="headerlink" href="#mezclas" title="Permanent link">&para;</a></h1>
 <p><img alt="Icono de Mezclas" src="../../assets/model-icon-mixes.png" /></p>
 <p>Las mezclas son el núcleo de la programación de modelos en Ethos: aquí es donde
-las entradas (sticks, interruptores, sensores, cualquier cosa que una
-<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">fuente</a>
-pueda alcanzar) se enrutan, se moldean y se combinan sobre los canales de
-salida. Se pueden definir hasta 120 mezclas por modelo.</p>
+las entradas (palancas, interruptores, sensores, cualquier cosa que pueda
+alcanzar una <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">fuente</a>)
+se encaminan, se modelan y se combinan sobre los canales de salida. Se pueden
+definir hasta 120 mezclas por modelo.</p>
 <p><img alt="Tabla de mezclas" src="../../assets/model-mixes.png" /></p>
 <p>Si el modelo se creó con el asistente de <strong>Selección de modelo</strong>, sus mezclas
-básicas (alerones, profundidad, acelerador, dirección y cualquier otra que
-requiera la célula) ya están cargadas aquí. Al seleccionar una mezcla y pulsar
-<code>ENT</code> se abre un menú contextual para editarla, añadir una nueva mezcla, pasar
-a la <a href="#per-channel-view">vista por canal</a>, reordenarla, duplicarla o
-eliminarla. Las mezclas inactivas aparecen atenuadas, y al eliminar una siempre
-se solicita confirmación previa.</p>
+básicas (alerón, elevador, acelerador, timón y cualquier otra que necesite la
+célula) ya están definidas aquí. Al seleccionar una mezcla y pulsar <code>ENT</code> se
+abre un menú contextual para editarla, agregar una nueva mezcla, pasar a la
+<a href="#per-channel-view">vista por canal</a>, reordenarla, duplicarla o eliminarla. Las
+mezclas inactivas aparecen atenuadas y, al eliminar una, siempre se pide
+confirmación previa.</p>
 <h2 id="anatomy-of-a-mix">Anatomía de una mezcla<a class="headerlink" href="#anatomy-of-a-mix" title="Permanent link">&para;</a></h2>
-<p>Todas las mezclas comparten el mismo conjunto de campos, independientemente de
-la categoría de la que provengan. La mezcla de <strong>alerones</strong> es un ejemplo
-representativo: las mezclas de profundidad y dirección tienen una disposición
+<p>Todas las mezclas comparten el mismo conjunto de campos, sea cual sea la
+categoría de la que provengan. La mezcla de <strong>alerón</strong> es un ejemplo
+representativo: las mezclas de elevador y timón tienen una disposición
 idéntica.</p>
-<p><img alt="Mezcla de alerones" src="../../assets/model-mixes-ail-edit.png" /></p>
-<p><img alt="Editor de la mezcla de alerones" src="../../assets/model-mixes-ail.png" /></p>
-<p><strong>Nombre</strong>: por defecto es el tipo de mezcla, editable.</p>
-<p><strong>Condición</strong>: por defecto <em>Always</em>. Puede restringirse a la posición de un
-interruptor, un interruptor de función, un interruptor lógico, una fase de
-vuelo, un evento del sistema (corte de gas/retención de gas) o la posición de un
-trim, en cuyo caso la mezcla solo se aplica mientras la condición sea verdadera.</p>
-<p><strong>Fases de vuelo</strong>: si hay fases de vuelo definidas, la mezcla puede además
-restringirse a una o varias de ellas.</p>
-<p><strong>Curva</strong>: por defecto está disponible una curva <strong>Expo</strong> (0 = lineal; los
-valores positivos suavizan la respuesta en torno al centro, los negativos la
-hacen más agresiva):</p>
+<p><img alt="Mezcla de alerón" src="../../assets/model-mixes-ail-edit.png" /></p>
+<p><img alt="Editor de la mezcla de alerón" src="../../assets/model-mixes-ail.png" /></p>
+<p><strong>Nombre</strong>: por defecto es el tipo de mezcla; se puede editar.</p>
+<p><strong>Condición activa</strong>: por defecto es <em>Siempre encendido</em>. Puede hacerse
+condicional eligiendo una posición de interruptor, un interruptor de función,
+un interruptor lógico, un modo de vuelo, un evento del sistema (corte o
+retención del acelerador) o una posición de compensado; en ese caso la mezcla
+sólo se aplica mientras la condición sea verdadera.</p>
+<p><strong>Modos de vuelo</strong>: si se ha definido algún modo de vuelo, la mezcla puede
+además hacerse condicional a uno o más de ellos.</p>
+<p><strong>Curva</strong>: por defecto está disponible una curva <strong>Expo</strong>, cuyo valor 0
+significa que la respuesta es lineal; un valor positivo suavizará la respuesta
+en torno al centro, mientras que un valor negativo la agudizará:</p>
 <p><img alt="Curva Expo" src="../../assets/model-mixes-ail-expo.png" /></p>
 <p>En su lugar se puede seleccionar cualquier curva definida previamente en
-<a href="../curves/">Curvas</a>. Se pueden apilar hasta 6 curvas en una misma mezcla, cada
-una con su propia condición; si más de una condición es verdadera
-simultáneamente, prevalece la curva situada más arriba en la lista. Las curvas
-se aplican <strong>antes</strong> de los ratios.</p>
-<p><strong>Ratios</strong>: una o varias filas de peso, cada una condicionable opcionalmente
-por un interruptor, un interruptor de función, un interruptor lógico, la
-posición de un trim o una fase de vuelo. La primera fila es la predeterminada y
-está activa siempre que no se cumpla la condición de ninguna otra fila:</p>
-<p><img alt="Ratios de alerones" src="../../assets/model-mixes-ail-weight.png" /></p>
-<p>En lugar de un porcentaje fijo, un ratio puede gobernarse desde una
-<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">fuente</a>
-—por ejemplo un potenciómetro, para ajustar el ratio en vuelo:</p>
-<p><img alt="Ratio gobernado desde una fuente" src="../../assets/model-mixes-ail-diff.png" /></p>
-<p><strong>Diferencial</strong> (-100 a 100, por defecto 0): proporciona más recorrido en un
-sentido que en el otro. En los alerones se trata del recurso clásico de dar más
-recorrido hacia arriba que hacia abajo para reducir la guiñada adversa. Solo se
-muestra cuando la mezcla tiene más de un canal de salida; en concreto, el
-diferencial requiere una configuración de salidas tipo cola en V o doble alerón
-para tener sentido.</p>
-<p><strong>Número de canales / salidas</strong>: cuántos canales de salida gobierna esta mezcla
-y a qué salidas físicas se asignan:</p>
-<p><img alt="Número de canales" src="../../assets/model-mixes-ail-ch-count.png" /></p>
+<a href="../curves/">Curvas</a>. Pueden especificarse hasta 6 curvas en una misma mezcla,
+cada una con una condición diferente; si más de una condición se hace verdadera
+a la vez, prevalecerá la curva que está más arriba en la lista. Las curvas se
+aplican <strong>antes</strong> que los recorridos.</p>
+<p><strong>Recorridos</strong>: una o más líneas de peso, cada una condicionable opcionalmente
+por un interruptor, un interruptor de función, un interruptor lógico, una
+posición de compensado o un modo de vuelo. La primera línea es la que está por
+defecto y actúa siempre que no se cumpla la condición de ninguna otra:</p>
+<p><img alt="Recorridos de alerón" src="../../assets/model-mixes-ail-weight.png" /></p>
+<p>En lugar de un porcentaje fijo, un recorrido puede gobernarse desde una
+<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">fuente</a>,
+por ejemplo un pot, para ajustar el recorrido en vuelo:</p>
+<p><img alt="Recorrido gobernado desde una fuente" src="../../assets/model-mixes-ail-diff.png" /></p>
+<p><strong>Diferencial</strong> (de -100 a 100, por defecto 0): da más recorrido en un sentido
+que en el otro. En los alerones es el recurso clásico de dar más recorrido
+hacia arriba que hacia abajo para reducir la guiñada adversa. Sólo se muestra
+cuando la mezcla tiene más de un canal de salida; en concreto, el diferencial
+necesita una configuración de salidas de tipo cola en V o de doble alerón para
+tener sentido.</p>
+<p><strong>Recuento de canales / salidas</strong>: cuántos canales de salida gobierna esta
+mezcla y a qué salidas físicas se asignan:</p>
+<p><img alt="Recuento de canales" src="../../assets/model-mixes-ail-ch-count.png" /></p>
 <p>Una pulsación larga de <code>ENT</code> sobre un canal de salida en otra parte de la
 interfaz (por ejemplo en <a href="../outputs/">Salidas</a>) lleva directamente de vuelta a
 esta página.</p>
 <h2 id="la-mezcla-de-acelerador">La mezcla de acelerador<a class="headerlink" href="#la-mezcla-de-acelerador" title="Permanent link">&para;</a></h2>
-<p>La mezcla de acelerador es una mezcla de alerones/profundidad/dirección más
-opciones de seguridad específicas del motor.</p>
+<p>La mezcla del acelerador es una mezcla de alerón/elevador/timón a la que se
+añaden opciones de seguridad específicas para el control del motor.</p>
 <p><img alt="Mezcla de acelerador" src="../../assets/model-mixes-thr.png" /></p>
-<p><strong>Entrada</strong>: la fuente del acelerador, normalmente el stick de acelerador, pero
-puede sustituirse por un potenciómetro, un deslizador, un interruptor, un trim,
-un canal, un eje del giróscopo, un canal de escuela o cualquier otra fuente.</p>
-<p><strong>Trim de ralentí</strong>: para motores de combustión, permite que un trim dedicado
-ajuste el régimen de ralentí sin alterar la posición de máximo gas. Con el trim
-de ralentí activado, el canal de acelerador se sitúa al -75 % con el stick en
-ralentí bajo, y el trim de acelerador ajusta entonces el ralentí entre -100 % y
--50 %:</p>
-<p><img alt="Menú de trim de ralentí" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
-<p><img alt="Trim de ralentí en posición baja" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
-<p><strong>Corte de gas</strong>: un enclavamiento de seguridad estricto: el canal solo se
-activa una vez que el stick de acelerador ha pasado por ralentí, de modo que un
+<p><strong>Entrada</strong>: la fuente del acelerador, normalmente la palanca de motor, aunque
+puede sustituirse por un pot, un deslizador, un interruptor, un compensador, un
+canal, un eje giroscópico, un canal del entrenador, un cronómetro o cualquier
+otra fuente.</p>
+<p><strong>Compensador de ralentí</strong>: para motores de combustión, permite que un
+compensador específico ajuste el régimen de ralentí sin alterar la posición de
+motor a fondo. Con el compensador de ralentí activado, el canal del acelerador
+se sitúa en -75 % con la palanca en ralentí bajo, y el compensador del
+acelerador ajusta entonces el ralentí entre -100 % y -50 %:</p>
+<p><img alt="Menú del compensador de ralentí" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
+<p><img alt="Compensador de ralentí en la posición baja" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
+<p><strong>Corte del acelerador</strong>: un enclavamiento de seguridad estricto; el canal sólo
+se activa una vez que la palanca de motor ha pasado por ralentí, de modo que un
 accionamiento accidental de un interruptor no pueda arrancar el motor desde una
 posición de gas alto:</p>
-<p><img alt="Corte de gas" src="../../assets/model-mixes-thr-cut.png" /></p>
-<p><strong>Retención de gas</strong>: mantiene el canal en un valor fijo independientemente de
-la posición del stick, sin el enclavamiento de seguridad que aporta el corte de
-gas:</p>
-<p><img alt="Retención de gas" src="../../assets/model-mixes-thr-hold.png" /></p>
-<p>El acelerador también expone su propio número de canales de salida, igual que
-cualquier otra mezcla:</p>
-<p><img alt="Número de canales del acelerador" src="../../assets/model-mixes-thr-ch-count.png" /></p>
+<p><img alt="Corte del acelerador" src="../../assets/model-mixes-thr-cut.png" /></p>
+<p><strong>Retención del acelerador</strong>: mantiene el canal en un valor fijo
+independientemente de la posición de la palanca, sin el enclavamiento de
+seguridad que aporta el corte del acelerador:</p>
+<p><img alt="Retención del acelerador" src="../../assets/model-mixes-thr-hold.png" /></p>
+<p>El acelerador también dispone de su propio recuento de canales de salida, igual
+que cualquier otra mezcla:</p>
+<p><img alt="Recuento de canales del acelerador" src="../../assets/model-mixes-thr-ch-count.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Enclavamiento del acelerador</p>
-<p>Ethos requiere que la entrada de la mezcla de acelerador pase por -100 %
-antes de armar, independientemente de la configuración de corte/retención
-de gas; un modelo creado con el asistente de selección de modelo ya lo
-tiene en cuenta, pero las mezclas de acelerador construidas a mano también
-deberían hacerlo.</p>
+<p>Ethos exige que la entrada de la mezcla del acelerador pase por -100 %
+antes de armar, independientemente de la configuración de corte o
+retención del acelerador. Un modelo creado con el asistente de selección
+de modelo ya lo tiene en cuenta, pero las mezclas de acelerador hechas a
+mano también deberían hacerlo.</p>
 </div>
 <h2 id="mix-libraries">Bibliotecas de mezclas<a class="headerlink" href="#mix-libraries" title="Permanent link">&para;</a></h2>
-<p>La biblioteca de mezclas predefinidas del cuadro de diálogo <strong>Add mix</strong> se
-adapta a la categoría de modelo elegida al crearlo: avión, planeador,
-helicóptero y multirrotor exponen cada uno un conjunto diferente:</p>
-<p><img alt="Biblioteca de mezclas de avión" src="../../assets/model-mixes-library-airplane.png" /></p>
-<p><img alt="Biblioteca de mezclas de planeador" src="../../assets/model-mixes-library-glider.png" /></p>
-<p><img alt="Biblioteca de mezclas de helicóptero" src="../../assets/model-mixes-library-heli.png" /></p>
-<p><img alt="Biblioteca de mezclas de multirrotor" src="../../assets/model-mixes-library-multirotor.png" /></p>
-<p>Todas las bibliotecas incluyen además <strong>Free Mix</strong>: un tipo de mezcla de uso
-general sin entrada/salida predefinida, más flexible que las entradas
-especializadas pero que requiere más configuración para llegar al mismo
+<p>La biblioteca de mezclas predefinidas del cuadro de diálogo <strong>Agregar mezcla</strong>
+se adapta a la categoría de modelo elegida al crear el modelo: avión,
+planeador, helicóptero y multirrotor ofrecen cada uno un conjunto distinto:</p>
+<p><img alt="Biblioteca de mezclas para aviones" src="../../assets/model-mixes-library-airplane.png" /></p>
+<p><img alt="Biblioteca de mezclas para planeadores" src="../../assets/model-mixes-library-glider.png" /></p>
+<p><img alt="Biblioteca de mezclas para helicópteros" src="../../assets/model-mixes-library-heli.png" /></p>
+<p><img alt="Biblioteca de mezclas para multirrotores" src="../../assets/model-mixes-library-multirotor.png" /></p>
+<p>Todas las bibliotecas incluyen además la <strong>Mezcla libre</strong>: un tipo de mezcla de
+uso general, sin entrada ni salida predefinidas, más flexible que las mezclas
+especializadas pero que requiere más configuración para conseguir el mismo
 resultado.</p>
 <h2 id="per-channel-view">Vista por canal<a class="headerlink" href="#per-channel-view" title="Permanent link">&para;</a></h2>
-<p>Con suficientes mezclas apiladas sobre la misma salida, puede resultar difícil
-apreciar su efecto combinado en la tabla plana anterior. Al seleccionar una
-mezcla y elegir <strong>View by channel</strong> se agrupan en su lugar todas las mezclas que
-afectan a una misma salida:</p>
+<p>Cuando hay muchas mezclas acumuladas sobre la misma salida, puede resultar
+difícil apreciar su efecto combinado en la tabla anterior. Al seleccionar una
+mezcla y elegir <strong>Ver por canal</strong>, se agrupan todas las mezclas que afectan a
+una misma salida:</p>
 <p><img alt="Cambiar a la vista por canal" src="../../assets/model-mixes-chview-select.png" /></p>
 <p><img alt="Canal contraído" src="../../assets/model-mixes-chview-collapsed.png" /></p>
-<p><img alt="Canal de profundidad expandido" src="../../assets/model-mixes-chview-elevator.png" /></p>
-<p>Al expandir la fila de resumen de un canal se muestran todas las mezclas que
+<p><img alt="Canal de elevador expandido" src="../../assets/model-mixes-chview-elevator.png" /></p>
+<p>Al expandir la línea de resumen de un canal se muestran todas las mezclas que
 contribuyen a él, cada una con su salida numérica y gráfica en tiempo real:
-resulta útil para confirmar exactamente cuánto está aportando una mezcla
-secundaria (por ejemplo, la compensación de flaps a profundidad) por encima de
-la entrada principal del stick:</p>
-<p><img alt="Detalle de la vista del canal de profundidad" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
-<p><img alt="Canal de profundidad, mezcla resaltada" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
-<p>Seleccionar una submezcla en lugar de la fila de resumen abre el mismo menú
-contextual que en la tabla plana (editar, volver a la vista de tabla,
-eliminar):</p>
+resulta útil para comprobar exactamente cuánto está aportando una mezcla
+secundaria (por ejemplo, la mezcla de Flap a Elevador) por encima de la entrada
+principal de la palanca:</p>
+<p><img alt="Detalle de la vista del canal de elevador" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p><img alt="Canal de elevador con una mezcla resaltada" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
+<p>Si se selecciona una submezcla en lugar de la línea de resumen, se abre el
+mismo menú contextual que en la vista de tabla (editar, volver a la vista de
+tabla, eliminar):</p>
 <p><img alt="Seleccionar la vista de tabla desde la vista por canal" src="../../assets/model-mixes-chview-table-view-select.png" /></p>
 <p><img alt="De vuelta a la vista de tabla" src="../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
 

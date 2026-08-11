@@ -1529,7 +1529,7 @@
   <a href="#owner-registration-id" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Owner registration ID
+        ID di registrazione del proprietario
       
     </span>
   </a>
@@ -1562,7 +1562,7 @@
   <a href="#registering-and-binding-a-receiver-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Registrazione e associazione di un ricevitore (ACCESS)
+        Registrazione e binding di un ricevitore (ACCESS)
       
     </span>
   </a>
@@ -1584,7 +1584,7 @@
   <a href="#redundant-receivers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ricevitori ridondanti
+        Aggiunta di un ricevitore ridondante
       
     </span>
   </a>
@@ -1606,7 +1606,7 @@
   <a href="#range-check" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prova di portata
+        Controllo portata
       
     </span>
   </a>
@@ -2856,7 +2856,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3414,7 +3414,7 @@
   <a href="#owner-registration-id" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Owner registration ID
+        ID di registrazione del proprietario
       
     </span>
   </a>
@@ -3447,7 +3447,7 @@
   <a href="#registering-and-binding-a-receiver-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Registrazione e associazione di un ricevitore (ACCESS)
+        Registrazione e binding di un ricevitore (ACCESS)
       
     </span>
   </a>
@@ -3469,7 +3469,7 @@
   <a href="#redundant-receivers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ricevitori ridondanti
+        Aggiunta di un ricevitore ridondante
       
     </span>
   </a>
@@ -3491,7 +3491,7 @@
   <a href="#range-check" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prova di portata
+        Controllo portata
       
     </span>
   </a>
@@ -3535,183 +3535,194 @@
 
 
 <h1 id="sistema-rf">Sistema RF<a class="headerlink" href="#sistema-rf" title="Permanent link">&para;</a></h1>
-<p>Configura il modulo o i moduli RF interni e/o esterni del modello, l'Owner
-Registration ID, l'associazione del ricevitore e le opzioni del ricevitore. È anche
-qui che risiede la scelta tra modulo interno ed esterno per il modello — a differenza
-di quasi tutto il resto in <a href="../../system-setup/">Configurazione di sistema</a>, la selezione
-dell'hardware RF è <strong>per modello</strong>, non a livello di radio.</p>
+<p>Configura il modulo o i moduli RF interni e/o esterni del modello, l'ID di
+registrazione del proprietario, il binding del ricevitore e le opzioni del
+ricevitore. È anche qui che risiede la scelta tra modulo interno ed esterno per il
+modello — a differenza di quasi tutto il resto in
+<a href="../../system-setup/">Configurazione di sistema</a>, la selezione
+dell'hardware RF avviene <strong>per modello</strong>, non a livello di radio.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshot in attesa</p>
 <p>Il set di screenshot di questa sezione non è ancora stato acquisito (vedi
 <a href="../../contributing/screenshot-pipeline/">Screenshot Pipeline</a>) — il
 contenuto seguente è accurato ma per ora è solo testuale.</p>
 </div>
-<h2 id="owner-registration-id">Owner registration ID<a class="headerlink" href="#owner-registration-id" title="Permanent link">&para;</a></h2>
+<h2 id="owner-registration-id">ID di registrazione del proprietario<a class="headerlink" href="#owner-registration-id" title="Permanent link">&para;</a></h2>
 <p>Un codice univoco di 8 caratteri (combinazione di lettere maiuscole/minuscole e cifre, senza
-caratteri speciali) che diventa il <strong>Registration ID</strong> di un ricevitore quando questo viene
-registrato. Impostare lo <em>stesso</em> codice su più trasmettitori consente di usare
+caratteri speciali) che diventa l'<strong>ID di registrazione</strong> di un ricevitore quando questo viene
+registrato. Impostando lo <em>stesso</em> codice su più trasmettitori è possibile utilizzare
 <strong>Smart Share</strong> tra di essi — farlo prima di creare il modello che si desidera
 condividere. Compatibile con EdgeTX; solo parzialmente compatibile con OpenTX.</p>
 <h2 id="disattivare-luscita-rf">Disattivare l'uscita RF<a class="headerlink" href="#disattivare-luscita-rf" title="Permanent link">&para;</a></h2>
-<p>Tenere premuto <code>PAGE</code> durante l'accensione per disattivare l'uscita RF interna ed esterna
+<p>Tieni premuto <code>PAGE</code> durante l'accensione per disattivare l'uscita RF interna ed esterna
 per quella sessione (un avviso conferma che è disattivata). L'impostazione
 <strong>State</strong> del modulo rimane su ON — un normale riavvio ripristina la trasmissione normale.</p>
 <h2 id="modalita-del-modulo-interno">Modalità del modulo interno<a class="headerlink" href="#modalita-del-modulo-interno" title="Permanent link">&para;</a></h2>
 <p>Il modulo interno di X18/X20/X20S/X20HD (TD-ISRM) funziona in una di tre
 modalità — il modulo TD-ISRM Pro delle X20 Pro/R/RS è simile ma aggiunge varianti LoRa e
-tandem dual-band. La modalità selezionata <strong>deve corrispondere a ciò che il ricevitore
-supporta</strong>, altrimenti l'associazione fallirà; dopo aver cambiato modalità,
-verificare attentamente ogni canale e in particolare il comportamento del failsafe.</p>
+tandem dual band. La modalità selezionata <strong>deve corrispondere al tipo supportato dal
+ricevitore</strong>, altrimenti il modello non si collegherà; dopo il cambio di modalità,
+controlla attentamente il funzionamento di tutti i canali del ricevitore e soprattutto il
+comportamento del Failsafe.</p>
 <ul>
-<li><strong>ACCESS</strong> — percorsi a 2.4GHz e 900MHz che lavorano in tandem sotto un unico insieme di
+<li><strong>ACCESS</strong> — i percorsi RF 2.4GHz e 900MHz lavorano in tandem con un unico set di
   controlli ACCESS. Fino a tre ricevitori in totale, in qualsiasi combinazione di 2.4GHz
-  (24 canali) e 900MHz (16 canali); la telemetria di entrambe le bande è
-  attiva simultaneamente, contrassegnata per banda. Una sorgente di telemetria <strong>RX</strong>
-  indica quale ricevitore è attualmente la sorgente di telemetria attiva.</li>
-<li><strong>ACCST D16</strong> — un singolo percorso a 2.4GHz, per i ricevitori della serie "X" legacy.</li>
+  (24 canali) e 900MHz (16 canali); la telemetria di entrambi i collegamenti è
+  attiva contemporaneamente e i sensori sono identificati per banda. Una sorgente di
+  telemetria <strong>RX</strong> indica quale ricevitore è attualmente il ricevitore di telemetria attivo.</li>
+<li><strong>ACCST D16</strong> — un singolo percorso a 2.4GHz, per i ricevitori della serie "X".</li>
 <li><strong>TD mode</strong> — tandem 2.4GHz + 900MHz a bassa latenza e lunga portata per i ricevitori
-  Tandem, 24 canali su ciascuna banda.</li>
+  Tandem, 24 canali su entrambe le bande.</li>
 </ul>
 <p>Le build del <strong>firmware Flex</strong> aggiungono una seconda colonna Type per commutare tra la modulazione
 FLEX915M (915MHz in stile FCC) e FLEX868M (868MHz in stile LBT)
-sotto una qualsiasi delle tre modalità precedenti — devono essere montate le antenne corrispondenti
+in una qualsiasi delle tre modalità precedenti — è necessario montare le antenne corrispondenti
 a quella selezionata. Gli utenti UE possono usare 200/500mW sugli 868MHz; a 25mW
-la telemetria viaggia sugli 868MHz, a 200/500mW passa ai 2.4GHz per
+la telemetria viaggia via 868MHz, a 200/500mW passa ai 2.4GHz per
 conformità normativa.</p>
-<p>Ogni scelta di modalità/intervallo di canali comporta un compromesso sulla frequenza di aggiornamento — ad esempio con
-ACCESS, 8 canali si aggiornano ogni 7ms, 16 ogni 14ms, 24 ogni 21ms
-(a rotazione in blocchi di 8), ed è disponibile una <strong>Racing mode</strong> a 4ms sui
-canali 1-8 con ricevitori compatibili (serie RS, v2.1.7+).</p>
-<h2 id="registering-and-binding-a-receiver-access">Registrazione e associazione di un ricevitore (ACCESS)<a class="headerlink" href="#registering-and-binding-a-receiver-access" title="Permanent link">&para;</a></h2>
-<p>L'associazione di un ricevitore ACCESS avviene in due fasi — la <strong>registrazione</strong> deve
-avvenire una sola volta per ogni coppia ricevitore/trasmettitore; l'<strong>associazione</strong> può essere ripetuta
-successivamente in modalità wireless senza bisogno del pulsante bind.</p>
-<p><strong>Fase 1 — Registrazione</strong>:</p>
+<p>Ogni scelta di modalità e di gamma di canali comporta un compromesso sulla frequenza di
+aggiornamento — ad esempio con ACCESS 8 canali si aggiornano ogni 7ms, 16 ogni 14ms,
+24 ogni 21ms (inviati a rotazione in blocchi di 8), ed è disponibile una <strong>Modalità corsa</strong>
+a 4ms con Ch1-8 e ricevitori compatibili (serie RS, v2.1.7 o successiva).</p>
+<h2 id="registering-and-binding-a-receiver-access">Registrazione e binding di un ricevitore (ACCESS)<a class="headerlink" href="#registering-and-binding-a-receiver-access" title="Permanent link">&para;</a></h2>
+<p>Il binding di un ricevitore ACCESS si divide in due fasi — la <strong>registrazione</strong> deve
+essere eseguita una sola volta per ogni coppia ricevitore/trasmettitore; il <strong>binding</strong> può
+essere ripetuto successivamente in modalità wireless, senza utilizzare il pulsante di
+collegamento sul ricevitore.</p>
+<p><strong>Fase uno — Registrazione</strong>:</p>
 <ol>
-<li>Toccare <strong>Register</strong> (saltare completamente questo passaggio se il ricevitore è già
+<li>Tocca <strong>Register</strong> (salta completamente questo passaggio se il ricevitore è già
    registrato).</li>
-<li>Tenere premuto il pulsante bind del ricevitore mentre lo si alimenta; attendere che entrambi
-   i LED si accendano. La finestra di dialogo passa da "Waiting for receiver…" a
-   "Receiver connected" e compila automaticamente il nome del ricevitore.</li>
-<li>Confermare/modificare il <strong>Registration ID</strong> (per impostazione predefinita è l'Owner
-   Registration ID indicato sopra — sono gli ID corrispondenti tra i trasmettitori a far
-   funzionare Smart Share), il <strong>Rx name</strong> e lo <strong>UID</strong>. Lo UID distingue
-   più ricevitori usati insieme in un unico modello — lasciarlo a 0 per un
-   singolo ricevitore; con più ricevitori (ad es. uno per ogni blocco di 8 canali), è
-   convenzionale usare 0/1/2. Lo UID non può essere riletto dal ricevitore
-   in seguito, quindi conviene etichettarlo fisicamente.</li>
-<li>Toccare <strong>Register</strong>, confermare "Registration ok", quindi spegnere il ricevitore
-   — è registrato ma non ancora associato.</li>
+<li>Tenendo premuto il tasto bind, accendi il ricevitore e attendi che entrambi
+   i LED si attivino. Il messaggio "Waiting for receiver…" cambia in
+   "Receiver connected" e il campo con il nome del ricevitore viene compilato automaticamente.</li>
+<li>Conferma o modifica l'<strong>ID di registrazione</strong> (per impostazione predefinita è l'ID di
+   registrazione del proprietario indicato sopra — sono gli ID identici tra i trasmettitori a far
+   funzionare Smart Share), il <strong>Nome RX</strong> e l'<strong>UID</strong>. L'UID viene utilizzato per
+   distinguere tra più ricevitori utilizzati contemporaneamente in un unico modello — può
+   essere lasciato a 0 per un singolo ricevitore; con più ricevitori (ad es. uno per ogni
+   blocco di 8 canali) di solito si usano 0/1/2. Tieni presente che questo UID non può essere
+   letto dal ricevitore, quindi è bene etichettare il ricevitore.</li>
+<li>Premi <strong>Register</strong> per completare l'operazione, conferma "Registration ok", quindi spegni
+   il ricevitore — a questo punto è registrato, ma deve ancora essere collegato.</li>
 </ol>
-<p><strong>Fase 2 — Associazione</strong>:</p>
+<p><strong>Fase due — Binding</strong>:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Non eseguire mai l'associazione con un motore elettrico collegato o un motore a scoppio in funzione.</p>
+<p>Non eseguire mai l'operazione di binding con un motore elettrico collegato o un motore a combustione interna acceso.</p>
 </div>
 <ol>
-<li>Ricevitore spento; verificare di essere nella modalità del modulo corretta.</li>
-<li>Toccare <strong>RX1</strong> (o 2/3) → <strong>Bind</strong>. Un avviso vocale ripetuto "Bind"
-   conferma la modalità di associazione.</li>
-<li>Alimentare il ricevitore <strong>senza</strong> toccare il suo pulsante bind; selezionarlo
+<li>Ricevitore spento; conferma di essere nella modalità di modulo corretta.</li>
+<li>Tocca <strong>RX1</strong> (o 2/3) → <strong>Bind</strong>. Un avviso vocale annuncerà "Bind" ogni pochi secondi
+   per confermare che sei in modalità bind.</li>
+<li>Accendi il ricevitore <strong>senza</strong> toccare il pulsante di collegamento F/S; selezionalo
    dall'elenco "Select device" che compare.</li>
-<li>Confermare "Bind successful". Spegnere e riaccendere sia la radio sia il ricevitore —
-   LED verde del ricevitore acceso e rosso spento significa che il collegamento è attivo. Non è necessario ripetere
-   l'associazione a meno che uno dei due dispositivi non venga sostituito.</li>
-<li>Ripetere per eventuali ricevitori aggiuntivi (RX2, RX3).</li>
+<li>Conferma "Bind OK". Spegni e riaccendi sia la radio sia il ricevitore —
+   se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato
+   al trasmettitore. Il collegamento non dovrà essere ripetuto, a meno che uno dei due non
+   venga sostituito.</li>
+<li>Ripeti l'operazione per i ricevitori aggiuntivi (RX2, RX3), se applicabile.</li>
 </ol>
 <h2 id="opzioni-del-ricevitore">Opzioni del ricevitore<a class="headerlink" href="#opzioni-del-ricevitore" title="Permanent link">&para;</a></h2>
-<p>Con il ricevitore alimentato, toccare il relativo pulsante RX per accedere a:</p>
+<p>Con il ricevitore acceso, tocca il relativo pulsante RX per accedere a:</p>
 <ul>
-<li><strong>Options</strong> — <strong>Telemetry</strong> (attiva/disattiva per questo ricevitore), <strong>Reduced
-  telemetry power 25mW</strong> (rispetto ai normali 100mW — utile se i servi vicini
-  captano interferenze RF), <strong>High PWM Speed</strong> (aggiornamento servi a 7ms invece
-  di 18ms — verificare che i servi siano in grado di sostenerlo), <strong>Telemetry port</strong>
-  (S.Port/F.Port/FBUS), <strong>SBUS</strong> (16 o 24 canali — ogni dispositivo SBUS collegato
-  deve supportare SBUS-24 prima di abilitarlo) e <strong>Channel
-  Mapping</strong> per rimappare i canali su specifici pin del ricevitore.</li>
-<li><strong>Share</strong> — cede il ricevitore a un'altra radio ACCESS con un Owner Registration ID
-  <em>diverso</em>. Sulla radio sorgente, toccare Share (il suo
-  LED verde si spegne); sulla radio di destinazione, eseguire Bind normalmente — Share
-  salta la nuova registrazione poiché l'ID viene trasferito automaticamente. Uscire sulla
-  radio sorgente per terminare la condivisione; una nuova associazione lo riporta indietro. (Non è affatto necessario
-  se tutte le radio condividono già lo stesso Owner Registration ID — basta eseguire
-  l'associazione direttamente sulla radio che deve controllarlo.)</li>
-<li><strong>Reset bind</strong> — ripulisce dopo uno Share e ripristina la propria associazione;
-  spegnere e riaccendere il ricevitore in seguito.</li>
-<li><strong>Factory reset</strong> — resetta il ricevitore e ne cancella lo UID,
-  annullandone completamente la registrazione.</li>
+<li><strong>Options</strong> — <strong>Telemetria</strong> (può essere disabilitata per questo ricevitore), <strong>Potenza
+  telemetria ridotta 25mW</strong> (invece dei normali 100mW — utile se, ad esempio, i servi
+  subiscono interferenze a causa delle radiofrequenze inviate vicino a loro), <strong>Alta
+  velocità PWM</strong> (velocità di aggiornamento PWM di 7 ms invece dei 18 ms standard —
+  assicurati che i tuoi servi siano in grado di gestire questa velocità), <strong>Porta di
+  telemetria</strong> (S.Port/F.Port/FBUS), <strong>SBUS</strong> (modalità a 16 o 24 canali — tutti i
+  dispositivi SBUS collegati devono supportare la modalità SBUS-24 per poter attivare il
+  nuovo protocollo) e <strong>Mappatura dei canali</strong>, per riattribuire i canali ai pin del
+  ricevitore.</li>
+<li><strong>Share</strong> — permette di spostare il ricevitore su un'altra radio ACCESS con un
+  <em>diverso</em> ID di registrazione del proprietario. Sulla radio sorgente tocca Condividi (il
+  LED verde del ricevitore si spegne); sulla radio di destinazione esegui il Bind
+  normalmente — il processo di condivisione salta la fase di registrazione, perché l'ID di
+  registrazione del proprietario viene trasferito automaticamente. Premi EXIT sulla radio
+  sorgente per interrompere il processo di condivisione; un nuovo collegamento riporta il
+  ricevitore alla radio di partenza. (Non è necessario utilizzare questa funzione se tutte
+  le radio utilizzano lo stesso ID di registrazione del proprietario — basta eseguire il
+  binding direttamente sulla radio che deve controllare il ricevitore.)</li>
+<li><strong>Reset bind</strong> — ripulisce e ripristina il binding dopo una condivisione; spegni poi il
+  ricevitore e sarà collegato al tuo trasmettitore.</li>
+<li><strong>Factory reset</strong> — ripristina le impostazioni di fabbrica del ricevitore e ne cancella
+  l'UID, annullandone completamente la registrazione.</li>
 </ul>
-<p>Con il ricevitore <strong>spento</strong>, lo stesso pulsante RX offre <strong>Options</strong> (attende
-che il ricevitore si connetta), <strong>Bind</strong> (ad es. per riassociare un ricevitore
-precedentemente associato altrove) e <strong>Clear</strong> (equivalente a Reset bind).</p>
-<h2 id="redundant-receivers">Ricevitori ridondanti<a class="headerlink" href="#redundant-receivers" title="Permanent link">&para;</a></h2>
-<p>Un secondo ricevitore può essere associato a uno slot RX libero per ridondanza — 2.4G
-e 900M possono fare da backup l'uno all'altro. La ridondanza FrSky valuta
-<strong>frame per frame</strong>, utilizzando sempre il miglior frame disponibile (failover attivo/attivo),
-quindi il controllo può passare da un ricevitore all'altro frame dopo frame secondo necessità.</p>
+<p>Con il ricevitore <strong>spento</strong>, lo stesso pulsante RX offre <strong>Options</strong> (la radio tenterà di
+connettersi e attenderà il ricevitore), <strong>Bind</strong> (ad es. per ricollegare un ricevitore
+precedentemente legato a un altro trasmettitore) e <strong>Clear</strong> (equivalente a un Reset bind).</p>
+<h2 id="redundant-receivers">Aggiunta di un ricevitore ridondante<a class="headerlink" href="#redundant-receivers" title="Permanent link">&para;</a></h2>
+<p>Un secondo ricevitore può essere collegato a uno slot RX non utilizzato per garantire la
+ridondanza — un ricevitore 2.4G o 900M può essere il backup dell'altro. La ridondanza FrSky
+per il controllo viene sempre valutata <strong>per ogni frame</strong>, scegliendo il frame migliore
+disponibile (failover attivo/attivo), quindi il controllo può passare da un ricevitore
+all'altro a seconda delle necessità su ogni frame.</p>
 <ol>
-<li>Collegare l'uscita SBUS Out del ricevitore ridondante all'ingresso SBUS In del ricevitore principale.</li>
-<li>Abilitare il corrispondente modulo RF interno (ad es. 900M) e impostarne
-   antenna/potenza.</li>
-<li>Registrare il nuovo ricevitore (se non già fatto), quindi associarlo allo slot
-   RX libero come descritto sopra.</li>
-<li>Verificare che il suo LED verde sia acceso — ora è elencato come ricevitore
-   ridondante.</li>
+<li>Collega la porta SBUS Out del ricevitore ridondante alla porta SBUS IN del ricevitore principale.</li>
+<li>Abilita il corrispondente modulo RF interno (ad es. 900M) e configura l'antenna e le
+   opzioni di potenza RF.</li>
+<li>Registra il nuovo ricevitore (se non è ancora stato registrato), quindi eseguine il
+   binding sullo slot RX libero come descritto sopra.</li>
+<li>Assicurati che il LED verde sia acceso — il ricevitore ridondante sarà ora elencato.</li>
 </ol>
 <h2 id="failsafe">Failsafe<a class="headerlink" href="#failsafe" title="Permanent link">&para;</a></h2>
-<p>I dati di failsafe vengono ritrasmessi dal trasmettitore circa ogni 10 secondi; sui
-ricevitori TD/TW/AP/AP Plus vengono inoltre salvati lato ricevitore, così da sopravvivere
-a un riavvio del ricevitore. Ricontrollare attentamente il failsafe dopo qualsiasi
-aggiornamento del firmware del ricevitore che introduca questo comportamento.</p>
+<p>I dati di failsafe vengono inviati dal trasmettitore ogni 10 secondi circa; sui
+ricevitori TD, TW, AP e AP Plus sono ora salvati anche sul ricevitore, il che significa che
+le impostazioni sono immediatamente disponibili se il ricevitore si riavvia per qualsiasi
+motivo. La funzione Failsafe deve essere reimpostata e controllata attentamente dopo aver
+aggiornato i ricevitori con questa funzione.</p>
 <ul>
-<li><strong>Hold</strong> — mantiene le ultime posizioni dei canali ricevute.</li>
-<li><strong>Custom</strong> — per canale: <strong>Not Set</strong>, <strong>Hold</strong>, <strong>Custom</strong> (un valore
-  fisso — toccare l'icona a freccia per catturare il valore corrente, oppure inserirne uno
-  direttamente) o <strong>No Pulses</strong>.</li>
-<li><strong>No Pulses</strong> — interrompe del tutto gli impulsi, per flight controller dotati di
-  un proprio comportamento di return-to-home in caso di perdita di segnale.</li>
-<li><strong>Receiver</strong> — (ricevitori serie X o successivi) imposta invece il failsafe sul
-  ricevitore stesso.</li>
+<li><strong>Hold</strong> — mantiene le ultime posizioni ricevute.</li>
+<li><strong>Custom</strong> — per ogni canale: <strong>Not Set</strong>, <strong>Hold</strong>, <strong>Custom</strong> (un valore
+  fisso — tocca l'icona con la freccia per utilizzare il valore corrente del canale, oppure
+  inseriscine uno direttamente) o <strong>No Pulses</strong>.</li>
+<li><strong>No Pulses</strong> — disattiva gli impulsi, da utilizzare con i controllori di volo dotati di
+  ritorno a casa via GPS in caso di perdita del segnale.</li>
+<li><strong>Receiver</strong> — (ricevitori della serie X o successivi) permette di impostare il failsafe
+  nel ricevitore stesso.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Testare accuratamente l'impostazione di failsafe scelta prima di farvi
-affidamento.</p>
+<p>Assicurati di testare attentamente le impostazioni di Failsafe scelte prima di
+farvi affidamento.</p>
 </div>
-<h2 id="range-check">Prova di portata<a class="headerlink" href="#range-check" title="Permanent link">&para;</a></h2>
-<p>Eseguirla sul campo prima di ogni sessione di volo con una configurazione nuova o modificata.
-Selezionando <strong>Range Check</strong> si riduce deliberatamente la potenza di trasmissione (un
-avviso vocale ripetuto conferma la modalità) e vengono mostrati VFR%/RSSI in tempo reale per
-valutare la qualità del collegamento. Il livello di potenza in prova di portata di FrSky è di circa
-−10dB rispetto al normale livello operativo di +20dB; a 1m di altezza sia per
-la radio sia per il ricevitore, ci si aspetta un allarme critico intorno ai 30m — una distanza
+<h2 id="range-check">Controllo portata<a class="headerlink" href="#range-check" title="Permanent link">&para;</a></h2>
+<p>Un Controllo portata deve essere effettuato sul campo prima di ogni sessione di volo con una
+configurazione nuova o modificata. Selezionando <strong>Range Check</strong> si riduce deliberatamente la
+potenza del trasmettitore (un avviso vocale ripetuto conferma la modalità) e vengono
+visualizzati i valori VFR% e RSSI in tempo reale per valutare la qualità della ricezione. Il
+livello di controllo della portata FrSky è di circa −10 dB rispetto al normale livello
+operativo di +20 dB; in condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo,
+dovresti ricevere un allarme critico solo a circa 30 metri di distanza — una distanza
 inferiore in condizioni normali può indicare un problema.</p>
-<p>Con più ricevitori associati, i dati della prova di portata sono mostrati per un ricevitore attivo
-alla volta per banda — spegnendo quello attualmente attivo si consente al successivo
-(nell'ordine di priorità 0/1/2, indicato tramite il sensore <strong>RX</strong>) di subentrare, così da
-poter controllare ciascuno a turno.</p>
+<p>Con più ricevitori collegati, i dati di Controllo portata vengono forniti per un ricevitore
+alla volta su ciascun link — spegnendo il ricevitore attualmente attivo, il successivo
+(con priorità 0, 1 e poi 2, indicato dal sensore <strong>RX</strong>) diventerà il ricevitore di
+telemetria attivo, così da poter controllare ciascuno a turno.</p>
 <h2 id="moduli-rf-esterni-e-di-terze-parti">Moduli RF esterni e di terze parti<a class="headerlink" href="#moduli-rf-esterni-e-di-terze-parti" title="Permanent link">&para;</a></h2>
 <p>I moduli esterni FrSky (XJT Lite, R9M Lite, R9M Lite Pro, TWIN Lite Pro)
 seguono lo stesso schema Register/Bind del modulo interno, con
 numero di canali, livelli di potenza e requisiti di antenna specifici per protocollo
-— consultare il manuale del modulo specifico per i valori esatti.</p>
+— per i dettagli sulla configurazione, consulta il manuale del modulo in questione.</p>
 <p><strong>ELRS</strong> (ExpressLRS) è supportato sia tramite la modalità ELRS del modulo TWIN Lite Pro
-sia tramite moduli ELRS originali (che richiedono l'installazione dello script Lua ELRS
-in <code>scripts/elrs</code> prima di comparire come opzione di modulo). Dodici
-canali; le impostazioni principali sono <strong>Packet Rate</strong> (compromesso tra latenza e portata),
-<strong>Telemetry Ratio</strong> (frequenza di invio della telemetria, da 1:1 a 1:128),
-<strong>Switch Mode</strong> (<strong>Hybrid</strong> — la maggior parte dei canali ausiliari ridotta a 2–3 posizioni
-per una latenza inferiore — oppure <strong>Wide</strong> — risoluzione completa a 64–128 passi),
-<strong>Model Match</strong> e <strong>Tx Power</strong> (10mW–1000mW, con <strong>Dynamic Power</strong> opzionale per
-scalare automaticamente in base alla qualità del collegamento — richiede la telemetria abilitata).</p>
-<p>I <strong>moduli di terze parti</strong> (attualmente Ghost, Multi-protocol, Crossfire, oltre
-a ELRS) richiedono ciascuno il proprio script Lua installato dall'utente — vedere
+sia tramite moduli ELRS veri e propri (che richiedono l'installazione dello script ELRS Lua
+in <code>scripts/elrs</code> prima di ottenere l'opzione ELRS come modulo). Sono supportati dodici
+canali; le impostazioni principali sono <strong>Packet Rate</strong> (compromesso tra portata e latenza),
+<strong>Telemetry Ratio</strong> (frequenza di invio dei dati di telemetria, da 1:1 a 1:128),
+<strong>Switch Mode</strong> (<strong>Hybrid</strong> — la maggior parte dei canali ausiliari a 2 o 3 posizioni
+per ridurre la latenza — oppure <strong>Wide</strong> — risoluzione completa a 64–128 passi),
+<strong>Model Match</strong> e <strong>Tx Power</strong> (da 10mW a 1000mW, con <strong>Dynamic Power</strong> opzionale per
+regolare automaticamente la potenza in base alla qualità del collegamento — richiede la
+telemetria abilitata).</p>
+<p>I <strong>moduli di terze parti</strong> (attualmente Ghost, Multi-protocol e Crossfire, oltre
+a ELRS) richiedono ciascuno il proprio script Lua installato dall'utente — vedi
 le note su <code>scripts/</code> in <a href="../../contributing/screenshot-pipeline/">Screenshot Pipeline</a>
-e il thread <em>Third-Party External Modules</em> su rcgroups. La voce di un
-modulo compare nella schermata RF solo dopo che il relativo script è stato
-installato. Il modulo Multi-protocol (IRX4 Lite) può inoltre essere
+e il thread <em>Third-Party External Modules</em> su rcgroups. La selezione di un
+modulo appare nella schermata RF solo dopo l'installazione del relativo script.
+Il modulo Multi-protocol (IRX4 Lite) può inoltre essere
 aggiornato via firmware direttamente da <a href="../../system-setup/file-manager/">File Manager</a>:
-copiare il file del firmware in <code>Firmware/</code>, quindi selezionare <strong>Flash external
+copia il file del firmware nella cartella <code>Firmware/</code>, poi seleziona <strong>Flash external
 multimodule</strong>.</p>
 
 

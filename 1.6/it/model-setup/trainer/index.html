@@ -1689,10 +1689,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#condizione-di-attivazione" class="md-nav__link">
+  <a href="#condizione-attiva" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Condizione di attivazione
+        Condizione attiva
       
     </span>
   </a>
@@ -1700,10 +1700,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#canali-trainer" class="md-nav__link">
+  <a href="#canali-del-trainer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Canali trainer
+        Canali del trainer
       
     </span>
   </a>
@@ -2818,7 +2818,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3396,10 +3396,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#condizione-di-attivazione" class="md-nav__link">
+  <a href="#condizione-attiva" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Condizione di attivazione
+        Condizione attiva
       
     </span>
   </a>
@@ -3407,10 +3407,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#canali-trainer" class="md-nav__link">
+  <a href="#canali-del-trainer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Canali trainer
+        Canali del trainer
       
     </span>
   </a>
@@ -3460,98 +3460,102 @@
 
 <h1 id="trainer">Trainer<a class="headerlink" href="#trainer" title="Permanent link">&para;</a></h1>
 <p><img alt="Trainer" src="../../assets/model-trainer.png" /></p>
-<p>Disattivato per impostazione predefinita. Imposta la radio come <strong>Master</strong>
-(la radio dell'istruttore, che riceve fino a 16 comandi dall'allievo) o
-<strong>Slave</strong> (la radio dell'allievo, che invia un numero configurabile di
-canali all'istruttore).</p>
+<p>Disattivata per impostazione predefinita. Imposta la radio come <strong>Master</strong>
+(la radio dell'istruttore, che riceve fino a 16 comandi dalla radio
+studente) o <strong>Slave</strong> (la radio dell'allievo, che trasferisce al master un
+numero configurabile di canali).</p>
 <h2 id="modalita-master">Modalità Master<a class="headerlink" href="#modalita-master" title="Permanent link">&para;</a></h2>
 <p><img alt="Modalità Master" src="../../assets/model-trainer-master.png" />
-<img alt="Opzioni trainer" src="../../assets/model-trainer-options.png" /></p>
+<img alt="Opzioni Trainer" src="../../assets/model-trainer-options.png" /></p>
 <h3 id="modalita-di-collegamento">Modalità di collegamento<a class="headerlink" href="#modalita-di-collegamento" title="Permanent link">&para;</a></h3>
 <p><img alt="Opzioni modalità di collegamento" src="../../assets/model-trainer-link-mode-options.png" /></p>
 <ul>
-<li><strong>Cavo trainer</strong> — un cavo audio mono da 3,5 mm tra le due radio.</li>
+<li><strong>Cavo Trainer</strong> — un cavo audio mono da 3,5 mm tra le due radio.</li>
 <li><strong>Bluetooth</strong> —</li>
 </ul>
 <p><img alt="Collegamento Bluetooth" src="../../assets/model-trainer-link-mode-bt.png" /></p>
 <ul>
 <li>
-<p><strong>Modalità</strong> — normale o alta velocità; utilizza l'alta velocità per
-    una latenza inferiore, se entrambe le radio la supportano.</p>
+<p><strong>Modalità</strong> — velocità normale o alta velocità; per ottenere una
+    latenza inferiore è consigliabile l'alta velocità, se entrambe le
+    radio la supportano.</p>
 <p><img alt="Modalità Bluetooth" src="../../assets/model-trainer-link-mode-bt-mode.png" /></p>
 </li>
 <li>
-<p><strong>Nome locale</strong> — il nome BT mostrato agli altri dispositivi
-    (predefinito <code>FrSkyBT</code>, modificabile).</p>
+<p><strong>Nome locale</strong> — il nome del BT locale che verrà visualizzato negli
+    altri dispositivi (predefinito <code>FrSkyBT</code>, modificabile).</p>
 </li>
-<li><strong>Indirizzo locale</strong> — l'indirizzo Bluetooth di questa radio.</li>
-<li><strong>Indirizzo remoto</strong> — l'indirizzo della radio accoppiata, una volta
+<li><strong>Indirizzo locale</strong> — l'indirizzo Bluetooth locale della radio.</li>
+<li><strong>Indirizzo distante</strong> — l'indirizzo del dispositivo remoto, una volta
     stabilito il collegamento.</li>
 <li>
-<p><strong>Cerca dispositivi</strong> (solo in modalità Master) — esegue la scansione
-    dei dispositivi nelle vicinanze:</p>
+<p><strong>Cerca dispositivi</strong> (disponibile solo se la modalità Trainer è
+    Master) — mette la radio in modalità di ricerca BT:</p>
 <p><img alt="Ricerca in corso" src="../../assets/model-trainer-link-mode-bt-search.png" />
 <img alt="In attesa" src="../../assets/model-trainer-link-mode-bt-search-waiting.png" />
 <img alt="Selezione dispositivo" src="../../assets/model-trainer-link-mode-bt-select-device.png" />
 <img alt="Connesso" src="../../assets/model-trainer-link-mode-bt-device-connected.png" /></p>
 </li>
 <li>
-<p><strong>Connetti ultimo dispositivo</strong> / <strong>Reset modulo</strong> — riconnette
-    all'accoppiamento precedente, oppure cancella completamente la
-    configurazione del modulo Bluetooth.</p>
+<p><strong>Connetti ultimo dispositivo</strong> / <strong>Reset modulo</strong> — si collega
+    all'ultimo dispositivo configurato, oppure resetta il modulo e
+    cancella completamente le impostazioni di configurazione.</p>
 </li>
 <li>
-<p><strong>Modulo esterno SBUS</strong> — un ingresso SBUS sul pin PXX-IN del vano del
-  modulo esterno, per installare un ricevitore FrSky con uscita SBUS (ad
-  es. Archer RS) come estremità ricevente di un collegamento wireless,
-  consentendo a <strong>qualsiasi</strong> radio FrSky di fungere da lato allievo
-  (buddy box), collegata a tale ricevitore.</p>
+<p><strong>SBUS modulo esterno</strong> — fornisce un ingresso SBUS sul pin PXX IN
+  dell'alloggiamento del modulo esterno, per installare un ricevitore
+  FrSky con uscita SBUS (ad es. Archer RS) come estremità ricevente di un
+  collegamento trainer wireless, consentendo a <strong>qualsiasi</strong> radio FrSky
+  di fungere da lato allievo (buddy box), collegata a tale ricevitore.</p>
 </li>
-<li><strong>Modulo esterno CPPM</strong> — stessa idea tramite un ingresso CPPM, per un
-  ricevitore datato con uscita CPPM.</li>
+<li><strong>CPPM modulo esterno</strong> — allo stesso modo, tramite un ingresso CPPM,
+  da utilizzare con un ricevitore legacy dotato di uscita CPPM.</li>
 </ul>
-<h3 id="condizione-di-attivazione">Condizione di attivazione<a class="headerlink" href="#condizione-di-attivazione" title="Permanent link">&para;</a></h3>
-<p><img alt="Condizione di attivazione" src="../../assets/model-trainer-active-condition.png" /></p>
-<p>Un interruttore/pulsante, interruttore funzione, interruttore logico,
-posizione di trim o fase di volo che, quando attivo, cede il controllo
-all'allievo.</p>
-<h3 id="canali-trainer">Canali trainer<a class="headerlink" href="#canali-trainer" title="Permanent link">&para;</a></h3>
-<p><img alt="Modifica condizione di attivazione" src="../../../assets/model-trainer-active-condition-edit.png" /></p>
-<p>È possibile trasferire fino a 16 canali dall'allievo al master mentre la
-condizione di attivazione è vera. Tocca un canale per configurarlo
-singolarmente:</p>
+<h3 id="condizione-attiva">Condizione attiva<a class="headerlink" href="#condizione-attiva" title="Permanent link">&para;</a></h3>
+<p><img alt="Condizione attiva" src="../../assets/model-trainer-active-condition.png" /></p>
+<p>Un interruttore o un pulsante, un interruttore di funzione, un
+interruttore logico, la posizione del trim o la modalità di volo che,
+quando è attivo, trasferisce il controllo del modello alla radio dello
+studente.</p>
+<h3 id="canali-del-trainer">Canali del trainer<a class="headerlink" href="#canali-del-trainer" title="Permanent link">&para;</a></h3>
+<p><img alt="Modifica condizione attiva" src="../../../assets/model-trainer-active-condition-edit.png" /></p>
+<p>È possibile trasferire fino a 16 canali dalla radio studente alla radio
+master quando la condizione attiva è vera. Tocca ogni canale per
+configurarlo singolarmente:</p>
 <ul>
-<li><strong>Condizione di attivazione</strong> — un'esclusione specifica per canale, ad
-  esempio per disabilitare solo il comando di profondità dell'allievo
-  durante una parte della sessione.</li>
-<li><strong>Modalità</strong> — <strong>OFF</strong> (disabilitato per l'uso trainer), <strong>Add</strong> (i
-  segnali del master e dell'allievo si sommano, così entrambi possono
-  agire contemporaneamente sul comando) oppure <strong>Replace</strong> (la modalità
-  normale: l'allievo ha il pieno controllo di questo canale mentre è
-  attivo).</li>
-<li><strong>Percentuale</strong> — scala il comando dell'allievo, normalmente 100%.</li>
-<li><strong>Destinazione</strong> — a quale funzione viene assegnato il canale
-  dell'allievo.</li>
+<li><strong>Condizione attiva</strong> — ogni singolo canale slave può anche essere
+  controllato dalla sorgente selezionata, ad esempio per disattivare
+  l'ingresso dell'elevatore dello studente durante una parte della
+  sessione.</li>
+<li><strong>Modalità</strong> — <strong>OFF</strong> (disattiva il canale per l'uso del trainer),
+  <strong>Aggiungi</strong> (modalità additiva, in cui i segnali master e slave
+  vengono sommati, in modo che sia l'insegnante che lo studente possano
+  agire sulla funzione) oppure <strong>Sostituisci</strong> (la modalità di utilizzo
+  normale: l'allievo ha il pieno controllo di questo canale quando è
+  attiva).</li>
+<li><strong>Percentuale</strong> — scala l'ingresso Slave, normalmente impostata al 100%.</li>
+<li><strong>Destinazione</strong> — mappa il canale della radio slave alla funzione
+  corrispondente.</li>
 </ul>
 <p>Consulta <a href="../../how-to/instant-takeback/">Guida pratica: ripresa istantanea del
 controllo</a> per un esempio pratico in cui
 l'istruttore riprende immediatamente il controllo tramite un interruttore,
 e <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Ignora ingresso
 trainer</a>
-per escludere il movimento degli stick dell'allievo da un interruttore
-logico che monitora gli stick dell'istruttore.</p>
+per escludere il movimento degli stick dello studente da un interruttore
+logico che rileva gli stick dell'istruttore.</p>
 <h2 id="modalita-slave">Modalità Slave<a class="headerlink" href="#modalita-slave" title="Permanent link">&para;</a></h2>
 <p><img alt="Modalità Slave" src="../../assets/model-trainer-slave-mode.png" /></p>
 <ul>
 <li><strong>Modalità di collegamento</strong> — la stessa scelta tra cavo trainer,
-  Bluetooth o modulo esterno SBUS/CPPM disponibile in modalità Master
-  (con gli stessi campi Bluetooth <strong>Modalità</strong>/<strong>Nome
-  locale</strong>/<strong>Indirizzo locale</strong>/<strong>Indirizzo remoto</strong>).</li>
+  Bluetooth o modulo esterno SBUS/CPPM della modalità Master (con gli
+  stessi campi Bluetooth <strong>Modalità</strong>/<strong>Nome locale</strong>/<strong>Indirizzo
+  locale</strong>/<strong>Indirizzo distante</strong>).</li>
 </ul>
 <p><img alt="Modalità di collegamento Slave" src="../../assets/model-trainer-slave-link-mode.png" /></p>
 <ul>
-<li><strong>Intervallo canali</strong> — quale intervallo di canali di questa radio viene
-  inviato al master.</li>
+<li><strong>Intervallo canali</strong> — seleziona quale gamma di canali di questa radio
+  viene trasferita alla radio master.</li>
 </ul>
 <p><img alt="Canali Slave" src="../../assets/model-trainer-slave-channels.png" />
   <img alt="Modifica canale Slave" src="../../assets/model-trainer-slave-channel-edit.png" /></p>

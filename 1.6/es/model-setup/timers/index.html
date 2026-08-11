@@ -1992,7 +1992,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3385,8 +3385,8 @@
 <p>Ocho temporizadores totalmente programables, cada uno con cuenta ascendente o
 descendente. Añada uno con el <strong>+</strong> situado junto a los encabezados de columna,
 o mediante <strong>Añadir</strong> más abajo. Al tocar un temporizador se abren las opciones
-de reinicio/edición/añadir/mover/copiar-pegar.</p>
-<p><img alt="Edición de temporizador" src="../../assets/model-timer1-edit.png" /></p>
+de reiniciar/editar/añadir/mover/copiar-pegar.</p>
+<p><img alt="Edición del temporizador" src="../../assets/model-timer1-edit.png" /></p>
 <h2 id="campos-comunes-cuenta-descendente-y-ascendente">Campos comunes (cuenta descendente y ascendente)<a class="headerlink" href="#campos-comunes-cuenta-descendente-y-ascendente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Valor</strong> — la lectura actual del temporizador.</li>
@@ -3395,31 +3395,31 @@ de reinicio/edición/añadir/mover/copiar-pegar.</p>
 <li><strong>Valor inicial</strong> (solo cuenta descendente) — el valor desde el que se
   descuenta.</li>
 <li><strong>Valor de alarma</strong> (solo cuenta ascendente) — el valor a partir del cual se
-  considera que el temporizador ha transcurrido; sigue contando más allá de este
+  considera que el temporizador ha transcurrido; sigue contando más allá de ese
   valor, pero se muestra en rojo en los widgets de temporizador.</li>
 <li><strong>Condición de inicio</strong> — pone en marcha el temporizador. Si la <strong>condición de
-  parada</strong> se deja en su valor predeterminado, la condición de inicio controla
-  por sí sola el arranque <em>y</em> la parada. En caso contrario, el temporizador se
-  inicia la primera vez que la condición de inicio se cumple y continúa
+  parada</strong> se deja en su valor por defecto, la condición de inicio controla por
+  sí sola el arranque <em>y</em> la parada. En caso contrario, el temporizador se
+  inicia la primera vez que la condición de inicio se cumple y sigue
   funcionando a partir de ese momento.</li>
-<li><strong>Condición de parada</strong> — si no se deja en su valor predeterminado, controla el
+<li><strong>Condición de parada</strong> — si no se deja en su valor por defecto, controla el
   temporizador una vez en marcha: detenido mientras sea verdadera, en marcha
-  mientras sea falsa. En el ejemplo siguiente, un temporizador se inicia cuando
-  <code>ThrottleActive</code> pasa a ser verdadero y se detiene cuando la telemetría deja de
-  estar activa:</li>
+  mientras sea falsa. En el ejemplo siguiente, el temporizador se inicia cuando
+  <code>ThrottleActive</code> pasa a ser verdadero y se detiene cuando la telemetría deja
+  de estar activa:</li>
 </ul>
 <p><img alt="Condición de parada" src="../../assets/model-timer1-edit-stop.png" /></p>
 <ul>
-<li><strong>Fuente de temporización proporcional</strong> — <code>---</code> cuenta en tiempo real.
+<li><strong>Fuente de temporización proporcional</strong> — con <code>---</code> cuenta en tiempo real.
   Cualquier otra fuente (por ejemplo, el stick de acelerador o el canal de
   acelerador) escala la velocidad del temporizador: a −100 % el temporizador
-  está detenido, a +100 % funciona a velocidad de tiempo real, y escala
-  proporcionalmente entre ambos extremos.</li>
-<li><strong>Reinicio</strong> — un interruptor, interruptor de función, interruptor lógico o
-  posición de trim que reinicia el temporizador; se mantiene reiniciado mientras
-  la condición sea verdadera.</li>
-<li><strong>Persistente</strong> — conserva el valor del temporizador tras apagar la emisora o
-  cambiar de modelo, recuperándolo la próxima vez que se use el modelo.</li>
+  está parado, a +100 % funciona a velocidad real, y entre ambos extremos
+  escala proporcionalmente.</li>
+<li><strong>Reiniciar</strong> — un interruptor, interruptor de función, interruptor lógico o
+  posición de trim que reinicia el temporizador; se mantiene reiniciado
+  mientras la condición sea verdadera.</li>
+<li><strong>Persistente</strong> — conserva el valor del temporizador al apagar la emisora o
+  al cambiar de modelo, y lo recupera la próxima vez que se use ese modelo.</li>
 <li><strong>Voz</strong> — qué <a href="../../system-setup/general/#audio-settings">paquete de voz</a>
   anuncia este temporizador.</li>
 </ul>
@@ -3428,13 +3428,13 @@ de reinicio/edición/añadir/mover/copiar-pegar.</p>
 <img alt="Tipo de acción" src="../../assets/model-timer1-action-type-select.png" />
 <img alt="Acción de cuenta atrás" src="../../assets/model-timer1-action-countdown.png" /></p>
 <p>Configuración de avisos totalmente flexible para cada temporizador. Cada acción
-tiene un tipo — <strong>Countdown</strong> (cuenta atrás hablada), <strong>Beep countdown</strong> (pitidos
-en lugar de voz), <strong>Play file</strong> (reproducir archivo) o <strong>Play value</strong>
+tiene un tipo — <strong>Countdown</strong> (cuenta atrás hablada), <strong>Beep countdown</strong>
+(pitidos en lugar de voz), <strong>Play file</strong> (reproducir archivo) o <strong>Play value</strong>
 (reproducir valor) — además de:</p>
 <ul>
-<li><strong>Start</strong> — el valor desde el que comienza la cuenta atrás de esta acción.</li>
-<li><strong>Step</strong> — intervalo de anuncio, hasta 10 minutos (600 s).</li>
-<li><strong>Haptic</strong> — acompañar el anuncio con vibración.</li>
+<li><strong>Start</strong> — el valor desde el que empieza la cuenta atrás de esta acción.</li>
+<li><strong>Step</strong> — intervalo de aviso, hasta 10 minutos (600 s).</li>
+<li><strong>Haptic</strong> — acompañar el aviso con vibración.</li>
 </ul>
 <p>Un conjunto típico de tres acciones:</p>
 <p><img alt="Resumen de acciones" src="../../assets/model-timer1-actions-summary.png" />
@@ -3442,13 +3442,13 @@ en lugar de voz), <strong>Play file</strong> (reproducir archivo) o <strong>Play
 <ol>
 <li>Cuenta atrás hablada a partir de 2:00 restantes, cada 30 s, con vibración.</li>
 <li>Cuenta atrás con pitidos a partir de 0:10 restantes, cada 1 s, con vibración.</li>
-<li>Un archivo personalizado (por ejemplo, <code>timer-1-elapsed</code>) reproducido al
+<li>Un archivo personalizado (por ejemplo, <code>timer-1-elapsed</code>) que se reproduce al
    transcurrir el tiempo, con vibración.</li>
 </ol>
 <p>Añada más acciones con <strong>Añadir</strong>; la lista se ejecuta por orden de prioridad,
 con la <strong>prioridad más alta al final</strong>.</p>
-<p>Consulte también el <a href="../../displays/#widget-types">widget de pantalla Timer Log</a>
-para obtener un registro continuo de las ejecuciones anteriores del temporizador.</p>
+<p>Consulte también el <a href="../../displays/#widget-types">widget Registros de cronómetro</a>
+para disponer de un registro de los tiempos anteriores.</p>
 <p><img alt="Widget de temporizador" src="../../assets/model-timers-widget.png" /></p>
 
 

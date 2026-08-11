@@ -2579,7 +2579,7 @@
   <a href="#7-add-the-elevator-compensation-curve-and-mix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Aggiungere la curva e il mix di compensazione della profondità
+        7. Aggiungere la curva e il mix di compensazione dell'elevatore
       
     </span>
   </a>
@@ -2845,7 +2845,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3469,7 +3469,7 @@
   <a href="#7-add-the-elevator-compensation-curve-and-mix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Aggiungere la curva e il mix di compensazione della profondità
+        7. Aggiungere la curva e il mix di compensazione dell'elevatore
       
     </span>
   </a>
@@ -3513,53 +3513,53 @@
 
 
 <h1 id="mixer-butterfly-coccodrillo">Mixer Butterfly (Coccodrillo)<a class="headerlink" href="#mixer-butterfly-coccodrillo" title="Permanent link">&para;</a></h1>
-<p>La frenata butterfly (nota anche come crow) controlla la velocità di
+<p>La frenata butterfly (detta anche crow) controlla la velocità di
 discesa, principalmente sugli alianti: gli alettoni salgono di poco
 mentre i flap scendono molto, generando una resistenza notevole — ideale
-per controllare l'avvicinamento all'atterraggio. Questa procedura
+per controllare l'avvicinamento all'atterraggio. Questo esempio
 presuppone un aliante i cui canali Flap esistano già (creati dalla
-procedura guidata <a href="../../model-setup/model-select/">Selezione modello</a>),
-utilizzando lo stick del gas come ingresso del freno: nessun butterfly
-con lo stick in alto, progressivamente maggiore man mano che scende, con
-compensazione di profondità affinché l'aliante non tenda a cabrare
-quando il crow viene applicato.</p>
+procedura guidata <a href="../../model-setup/model-select/">Selezione del modello</a>),
+utilizzando lo stick del Gas - Throttle come ingresso del freno: nessun
+butterfly con lo stick in alto, progressivamente maggiore man mano che
+lo si abbassa, con compensazione dell'elevatore affinché l'aliante non
+tenda a cabrare quando si applica il crow.</p>
 <h2 id="1-disabilitare-il-mix-flap-predefinito">1. Disabilitare il mix Flap predefinito<a class="headerlink" href="#1-disabilitare-il-mix-flap-predefinito" title="Permanent link">&para;</a></h2>
 <p><img alt="Disabilitare il mix flap" src="../../assets/how-to-butterfly-flaps-disable.png" /></p>
-<p>Impostare la <strong>Condizione attiva</strong> del mix Flap creato dalla procedura
-guidata su <code>---</code> — non verrà utilizzato.</p>
+<p>Imposta l'<strong>Attivazione</strong> del mix Flap creato dalla procedura guidata su
+<code>---</code>: non verrà utilizzato.</p>
 <h2 id="2-creare-il-mix-butterfly">2. Creare il mix Butterfly<a class="headerlink" href="#2-creare-il-mix-butterfly" title="Permanent link">&para;</a></h2>
 <p><img alt="Mix butterfly aggiunto" src="../../assets/how-to-butterfly-mix-added.png" /></p>
-<p>Toccare un mix qualsiasi, <strong>Aggiungi mix</strong> → <strong>Butterfly</strong> dalla
-<a href="../../model-setup/mixes/#mix-libraries">libreria dei mix</a>, posizionandolo
-dopo il mix Flap (ora disabilitato).</p>
+<p>Tocca una linea qualsiasi del mixer, <strong>Aggiungi mix</strong> → <strong>Butterfly</strong>
+dalla <a href="../../model-setup/mixes/#mix-libraries">libreria dei mix</a>,
+inserendolo dopo il mix Flap (ora disabilitato).</p>
 <h2 id="3-configurare-lingresso">3. Configurare l'ingresso<a class="headerlink" href="#3-configurare-lingresso" title="Permanent link">&para;</a></h2>
 <p><img alt="Ingresso gas" src="../../assets/how-to-butterfly-mix-source-thr.png" /></p>
-<p>Impostare <strong>Ingresso</strong> su <strong>Gas</strong>. Poiché normalmente il gas legge il
-valore massimo con lo stick in alto, mentre il butterfly deve essere 0
-con lo stick in alto, premere a lungo <code>ENT</code> su Gas e selezionare
+<p>Imposta <strong>Ingressi</strong> su <strong>Gas</strong>. Poiché normalmente il Gas - Throttle
+legge il valore massimo con lo stick in alto, mentre il butterfly deve
+essere 0 con lo stick in alto, premi a lungo <code>ENT</code> su Gas e seleziona
 <strong>Inverti</strong>:</p>
 <p><img alt="Invertire il gas" src="../../assets/how-to-butterfly-mix-source-thr-neg-select.png" />
 <img alt="Gas invertito" src="../../assets/how-to-butterfly-mix-source-thr-neg.png" /></p>
 <p>L'ingresso ora legge 0 con lo stick completamente in alto e il campo
-mostra <code>-Throttle</code> a conferma dell'inversione. Impostare la <strong>Condizione
-attiva</strong> su una fase di volo di atterraggio (o un altro interruttore) se
-il butterfly non deve essere sempre disponibile.</p>
+mostra <code>-Throttle</code> a conferma dell'inversione. Imposta l'<strong>Attivazione</strong>
+su una fase di volo di atterraggio (o su un altro interruttore) se il
+butterfly non deve essere sempre disponibile.</p>
 <h2 id="4-aggiungere-una-curva-con-banda-morta">4. Aggiungere una curva con banda morta<a class="headerlink" href="#4-aggiungere-una-curva-con-banda-morta" title="Permanent link">&para;</a></h2>
 <p><img alt="Selezione curva" src="../../assets/how-to-butterfly-mix-curve-select.png" /></p>
 <p>Una piccola banda morta all'estremità zero dello stick evita
 l'attivazione accidentale dovuta a piccoli disturbi dello stick in
-prossimità del fine corsa. Aggiungere una curva personalizzata a 3 punti
-(ad esempio denominata "Crowdb") con la <strong>Modalità semplice</strong>
-disattivata, in modo da poter spostare i punti X:</p>
+prossimità del fine corsa. Aggiungi una curva personalizzata a 3 punti
+(ad esempio denominata "Crowdb") con <strong>Modo Facile</strong> disattivato, in modo
+da poter spostare i punti X:</p>
 <p><img alt="Curva a 3 punti" src="../../assets/how-to-butterfly-mix-curve-3pt.png" />
 <img alt="Punti della curva" src="../../assets/how-to-butterfly-mix-curve-3pt-points.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>L'aggiunta di una curva personalizzata al mix Butterfly ne elimina
-l'offset interno 0–100 (normalmente applicato automaticamente) — la
-curva stessa deve ora riprodurre tale trasformazione 0–100. In questo
-esempio l'uscita resta a 0% finché lo stick del gas non raggiunge
-−90%, quindi sale linearmente fino al 100%:</p>
+l'offset interno 0–100 (normalmente applicato automaticamente): ora è
+la curva stessa a dover riprodurre tale trasformazione 0–100. In
+questo esempio l'uscita resta a 0% finché lo stick del Gas - Throttle
+non raggiunge −90%, quindi sale linearmente fino al 100%:</p>
 <p><img alt="Curva aggiunta" src="../../assets/how-to-butterfly-mix-curve-added.png" /></p>
 </div>
 <h2 id="5-configurare-alettoni-e-flap">5. Configurare alettoni e flap<a class="headerlink" href="#5-configurare-alettoni-e-flap" title="Permanent link">&para;</a></h2>
@@ -3567,74 +3567,72 @@ esempio l'uscita resta a 0% finché lo stick del gas non raggiunge
 <p>La suddivisione abituale prevede una salita moderata degli alettoni (ad
 esempio 20%) abbinata a una grande deflessione dei flap. I flap
 richiedono in genere una corsa verso il basso molto maggiore di quella
-verso l'alto — risultato che si ottiene comunemente sfalsando di 20–30°
+verso l'alto: il risultato si ottiene comunemente sfalsando di 20–30°
 dalla posizione neutra le squadrette dei servi dei flap nel rinvio
 stesso, il che fa sì che i flap risultino circa a metà corsa verso il
 basso con il servo al neutro:</p>
 <p><img alt="Flap in alto" src="../../assets/how-to-butterfly-mix-flaps-up.png" />
 <img alt="Flap in basso" src="../../assets/how-to-butterfly-mix-flaps-down.png" /></p>
-<p>Impostare un peso elevato per il mix dei flap (ad esempio −180%) per
+<p>Imposta un'escursione elevata per il mix dei flap (ad esempio −180%) per
 ottenere la massima corsa; la corsa fisica effettiva è determinata dai
-valori Min/Max in <a href="../../model-setup/outputs/">Uscite</a>.</p>
+valori Min/Max nella pagina <a href="../../model-setup/outputs/">Uscite</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Per evitare di forzare i servi, iniziare con valori Min/Max delle
-Uscite conservativi (ad esempio ±30%) e allargarli con attenzione
-durante la messa a punto finale, verificando che non vi siano
-impuntamenti.</p>
+<p>Per evitare di forzare i servi, inizia con valori Min/Max delle
+Uscite prudenti (ad esempio ±30%) e allargali con attenzione durante
+la messa a punto finale, verificando che non vi siano impuntamenti.</p>
 </div>
 <h2 id="6-aggiungere-un-mix-di-offset-flap-neutri">6. Aggiungere un mix di offset "Flap neutri"<a class="headerlink" href="#6-aggiungere-un-mix-di-offset-flap-neutri" title="Permanent link">&para;</a></h2>
 <p><img alt="Mix di offset 80%" src="../../assets/how-to-butterfly-offset-mix-80.png" /></p>
 <p>Poiché lo sfalsamento delle squadrette dei servi lascia i flap deflessi
 di circa 20–30% con il servo al neutro, un <strong>Mix di offset</strong> li riporta
-alla reale posizione neutra dell'ala per il volo normale. Iniziare con un
-offset dell'80% (da regolare), con 2 canali di uscita mappati su entrambi
-i canali dei flap:</p>
+alla reale posizione neutra dell'ala per il volo normale. Inizia con un
+offset dell'80% (da mettere a punto) e 2 canali di uscita assegnati a
+entrambi i canali dei flap:</p>
 <p><img alt="Flap in alto con offset" src="../../assets/how-to-butterfly-offset-mix-flaps-up.png" />
 <img alt="Flap in basso con offset" src="../../assets/how-to-butterfly-offset-mix-flaps-down.png" /></p>
-<p>Con lo stick del gas completamente in alto (mix Butterfly disattivo),
-verificare che i valori del mixer dei flap si trovino sul valore di
-offset (80%); portando lo stick dei flap alla massima estensione,
-l'uscita del mixer deve spostarsi dell'intero peso (ad esempio dall'80%
-fino a −100%, un'escursione del 180%). Regolare con precisione i limiti
+<p>Con lo stick del Gas - Throttle completamente in alto (mix Butterfly
+disattivo), verifica che i valori del mixer dei flap si trovino sul
+valore di offset (80%); portando lo stick dei flap alla massima
+estensione, l'uscita del mixer deve spostarsi dell'intera escursione (ad
+esempio dall'80% fino a −100%, cioè 180%). Regola con precisione i limiti
 di corsa effettivi nelle Uscite tramite Min/Max o una curva.</p>
-<h2 id="7-add-the-elevator-compensation-curve-and-mix">7. Aggiungere la curva e il mix di compensazione della profondità<a class="headerlink" href="#7-add-the-elevator-compensation-curve-and-mix" title="Permanent link">&para;</a></h2>
+<h2 id="7-add-the-elevator-compensation-curve-and-mix">7. Aggiungere la curva e il mix di compensazione dell'elevatore<a class="headerlink" href="#7-add-the-elevator-compensation-curve-and-mix" title="Permanent link">&para;</a></h2>
 <p><img alt="Curva di compensazione" src="../../assets/how-to-butterfly-comp-curve.png" />
 <img alt="Punti della curva di compensazione" src="../../assets/how-to-butterfly-comp-curve-points.png" /></p>
-<p>Poiché la compensazione necessaria non è lineare, è preferibile usare una
-curva anziché un peso fisso. Definire una curva personalizzata a 5 punti
-(ad esempio "EleComp") — in questo esempio si parte con
+<p>Poiché la compensazione necessaria non è lineare, conviene usare una
+curva anziché un'escursione fissa. Definisci una curva personalizzata a 5
+punti (ad esempio "EleComp"): in questo esempio si parte con
 12%/10%/8%/5%/0% sui vari punti; in assenza di un punto di partenza noto
-per il proprio modello, questi valori vanno determinati empiricamente.</p>
-<p>Successivamente, occorre convertire tale curva in un valore utilizzabile
-come <strong>Peso</strong> di un mix: aggiungere un <a href="../../model-setup/mixes/#mix-libraries">Mix
-libero</a> ("EleCompx") con Gas come
+per il tuo modello, questi valori vanno determinati empiricamente.</p>
+<p>Occorre poi convertire tale curva in un valore utilizzabile come
+<strong>Escursione</strong> di un mix: aggiungi un <a href="../../model-setup/mixes/#mix-libraries">Free
+Mix</a> ("EleCompx") con Gas come
 sorgente e la curva EleComp associata, con uscita su un canale alto non
 utilizzato (ad esempio CH20):</p>
 <p><img alt="Mix di compensazione su CH20" src="../../assets/how-to-butterfly-comp-mix-ch20.png" /></p>
-<p>Tornando al mix Butterfly, premere a lungo <code>ENT</code> sul <strong>Peso</strong> dell'uscita
-Profondità, selezionare <strong>Usa una sorgente</strong>, quindi scegliere CH20
+<p>Tornando al mix Butterfly, premi a lungo <code>ENT</code> sull'<strong>Escursione</strong>
+dell'uscita Elevatore, seleziona <strong>Usa una sorgente</strong>, quindi scegli CH20
 (EleCompx) dalla categoria Canali:</p>
-<p><img alt="Profondità con CH20 come sorgente" src="../../assets/how-to-butterfly-mix-ele-use-ch20.png" />
+<p><img alt="Elevatore con CH20 come sorgente" src="../../assets/how-to-butterfly-mix-ele-use-ch20.png" />
 <img alt="Selezione sorgente" src="../../assets/how-to-butterfly-mix-ele-use-source.png" /></p>
 <p>Il mix Butterfly è ora completamente configurato:</p>
-<p><img alt="Compensazione della profondità configurata" src="../../assets/how-to-butterfly-mix-ele-comp.png" /></p>
+<p><img alt="Compensazione dell'elevatore configurata" src="../../assets/how-to-butterfly-mix-ele-comp.png" /></p>
 <h2 id="8-verificare-con-la-vista-per-canale">8. Verificare con la Vista per canale<a class="headerlink" href="#8-verificare-con-la-vista-per-canale" title="Permanent link">&para;</a></h2>
 <p><img alt="Vista per canale" src="../../assets/how-to-butterfly-mix-ele-comp-view-per-ch.png" /></p>
-<p>Passare alla <a href="../../model-setup/mixes/#per-channel-view">Vista per
-canale</a> sulla Profondità per
-osservare l'aggiornamento simultaneo di tutti i mix che vi contribuiscono
-(ingresso dello stick + compensazione Butterfly) mentre lo stick
-gas/freno si muove — molto più semplice da analizzare rispetto alla vista
-a tabella.</p>
+<p>Passa alla <a href="../../model-setup/mixes/#per-channel-view">Vista per canale</a>
+sull'Elevatore per osservare l'aggiornamento simultaneo di tutti i mix
+che vi contribuiscono (ingresso dello stick + compensazione Butterfly)
+mentre lo stick del gas/freno si muove: è molto più semplice da
+analizzare rispetto alla vista a tabella.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Prima di mettere a punto i valori iniziali della curva di
-compensazione è utile disporre di dati sulla corsa di profondità
+compensazione è utile disporre di dati sulla corsa dell'elevatore
 necessaria in rapporto alla deflessione dei flap (forniti dal
 costruttore del modello o da fonti della community). In mancanza di
-tali dati, partire da pochi millimetri di corsa della profondità per
-l'estensione completa dei flap e affinare da lì.</p>
+tali dati, parti da pochi millimetri di corsa dell'elevatore per
+l'estensione completa dei flap e affina da lì.</p>
 </div>
 
 

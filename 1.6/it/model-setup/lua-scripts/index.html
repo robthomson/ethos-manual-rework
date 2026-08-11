@@ -1750,10 +1750,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#task-lua" class="md-nav__link">
+  <a href="#compiti-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Task Lua
+        Compiti Lua
       
     </span>
   </a>
@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3345,10 +3345,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#task-lua" class="md-nav__link">
+  <a href="#compiti-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Task Lua
+        Compiti Lua
       
     </span>
   </a>
@@ -3404,38 +3404,40 @@
 
 <h1 id="script-lua-modello">Script Lua (modello)<a class="headerlink" href="#script-lua-modello" title="Permanent link">&para;</a></h1>
 <p><img alt="Configurazione Lua" src="../../assets/model-lua-config.png" /></p>
-<p>Questo menu compare solo dopo che uno script Lua di tipo <strong>source</strong> o
-<strong>task</strong> è stato installato nella cartella <code>scripts/</code> della SD card/eMMC
-(vedere <a href="../../system-setup/file-manager/#top-level-folders">Gestione
-file</a>) — serve per
-attivare e configurare tali script <strong>per singolo modello</strong>, non per
-installarli. Una volta installato, un source o un task è disponibile
-globalmente per tutti i modelli; questa pagina è il punto in cui ogni
-modello lo abilita e ne definisce la propria configurazione. Esempi di
-script source e task sono pubblicati sul sito Ethos-Feedback-Community
+<p>Il menu Lua appare solo se è stato installato uno script sorgente o di
+attività Lua nella cartella <code>scripts/</code> sulla SD card o eMMC (vedi
+<a href="../../system-setup/file-manager/#top-level-folders">Gestione file</a>) —
+serve per attivare e configurare selettivamente tali script <strong>per il
+modello attivo</strong>, non per installarli. Una volta installati, i sorgenti o
+le attività Lua sono disponibili globalmente per ogni modello; questa
+pagina è il punto in cui ogni modello li abilita e ne definisce la
+propria configurazione. Alcuni esempi di script sorgente e attività Lua
+sono pubblicati sulla pagina web Ethos-Feedback-Community
 (<code>/lua/examples/task</code>, <code>/lua/examples/source</code>).</p>
-<h2 id="task-lua">Task Lua<a class="headerlink" href="#task-lua" title="Permanent link">&para;</a></h2>
-<p>Ogni task installato è elencato con un interruttore di abilitazione per
-ciascun modello. Abilitandone uno viene mostrata la relativa maschera di
-configurazione (se prevista) — lo script del task fornisce le proprie
-funzioni di lettura/scrittura, così ogni modello può salvare le proprie
-impostazioni. Ad esempio, un task può esporre un intervallo numerico
-configurabile impostabile in modo indipendente per ciascun modello.</p>
+<h2 id="compiti-lua">Compiti Lua<a class="headerlink" href="#compiti-lua" title="Permanent link">&para;</a></h2>
+<p>Vengono elencate tutte le attività disponibili, ciascuna con un
+interruttore di abilitazione per il modello attivo. Se un'attività è
+abilitata, viene mostrato il modulo di configurazione Lua associato (se
+previsto) — lo script dell'attività fornisce una funzione di lettura e
+una di scrittura per consentire a ogni modello di salvare i propri
+parametri di configurazione. Ad esempio, un'attività può esporre un
+intervallo numerico configurabile, impostabile in modo indipendente per
+ciascun modello.</p>
 <h2 id="sorgenti-lua">Sorgenti Lua<a class="headerlink" href="#sorgenti-lua" title="Permanent link">&para;</a></h2>
-<p>Lo stesso schema vale per le sorgenti: abilitazione per modello, quindi
-configurazione tramite la maschera fornita dallo script della sorgente.
-Una sorgente registrata in questo modo diventa utilizzabile come una
-comune
+<p>Per le sorgenti vale lo stesso schema: abilitazione per il modello
+attivo, quindi configurazione tramite il modulo fornito dallo script
+della sorgente. Una sorgente registrata in questo modo diventa
+utilizzabile come una comune
 <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">sorgente</a>
 in qualsiasi altra parte di Ethos, esattamente come una sorgente
 integrata.</p>
 <h2 id="per-gli-autori-di-script">Per gli autori di script<a class="headerlink" href="#per-gli-autori-di-script" title="Permanent link">&para;</a></h2>
-<p>Le sorgenti e i task vengono registrati da Lua tramite
-<code>system.registerSource()</code> e <code>system.registerTask()</code> — consultare la
-Ethos Lua Reference Guide e la sezione <a href="../../lua-scripts/">Script
+<p>Le sorgenti e le attività vengono registrate da Lua tramite
+<code>system.registerSource()</code> e <code>system.registerTask()</code> — consulta la Ethos
+Lua Reference Guide e la sezione <a href="../../lua-scripts/">Script
 Lua</a> di questo manuale per l'ambiente di
 scripting generale (i widget sono un meccanismo separato ma correlato —
-vedere <a href="../../displays/custom-widgets/">Widget personalizzati</a>).</p>
+vedi <a href="../../displays/custom-widgets/">Widget personalizzati</a>).</p>
 
 
 

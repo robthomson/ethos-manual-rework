@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3382,8 +3382,8 @@
 
 <h1 id="configuracion-de-modelo-y-reordenacion-de-canales-para-sr8sr10">Configuración de modelo y reordenación de canales para SR8/SR10<a class="headerlink" href="#configuracion-de-modelo-y-reordenacion-de-canales-para-sr8sr10" title="Permanent link">&para;</a></h1>
 <p>Los receptores estabilizados SRx de FrSky esperan un orden de canales
-específico. Se dan dos escenarios: crear un modelo nuevo desde cero para uno de
-ellos, o convertir un modelo existente para que coincida.</p>
+concreto. Se dan dos casos: crear desde cero un modelo nuevo para uno de ellos,
+o convertir un modelo existente para que se adapte.</p>
 <div class="admonition note">
 <p class="admonition-title">Capturas de pantalla pendientes</p>
 <p>Esta página aún no tiene capturas de pantalla del simulador — consulte
@@ -3391,33 +3391,33 @@ ellos, o convertir un modelo existente para que coincida.</p>
 </div>
 <h2 id="creacion-de-un-modelo-nuevo">Creación de un modelo nuevo<a class="headerlink" href="#creacion-de-un-modelo-nuevo" title="Permanent link">&para;</a></h2>
 <p>El asistente de <a href="../../model-setup/model-select/">Selección de modelo</a> agrupa por
-defecto las superficies con la misma función (p. ej. 2 alerones → <code>AAETR</code>), pero
-los receptores SRx necesitan que los cuatro primeros canales queden fijados como
-<strong>AETRA</strong>.</p>
+defecto las superficies con la misma función (por ejemplo, 2 alerones →
+<code>AAETR</code>), pero los receptores SRx necesitan que los cuatro primeros canales
+queden fijos como <strong>AETRA</strong>.</p>
 <ol>
-<li>En <a href="../../system-setup/controls/">Controls</a>, confirme que el <strong>orden de
+<li>En <a href="../../system-setup/controls/">Palancas</a>, confirme que el <strong>Orden de los
    canales</strong> es <code>AETR</code>.</li>
 <li>Active <strong><a href="../../system-setup/controls/#first-four-channels-fixed">Primeros cuatro canales
-   fijos</a></strong> — esto impide
-   que el asistente agrupe los cuatro primeros canales, manteniéndolos
-   estrictamente en el orden <code>AETRA…</code> independientemente de cuántas superficies
-   de cada tipo tenga la célula.</li>
+   fijos</a></strong> — así se
+   impide que el asistente agrupe los cuatro primeros canales, manteniéndolos
+   estrictamente en el orden <code>AETRA…</code> sea cual sea el número de superficies de
+   cada tipo que tenga el modelo.</li>
 <li>Ejecute el asistente de creación de modelo con normalidad — los 5 primeros
-   canales resultan en <code>AETRA</code>.</li>
+   canales quedan como <code>AETRA</code>.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Autocomprobación de receptores Archer</p>
-<p>La autocomprobación de los receptores Archer se realiza ahora a través de
-<a href="../../system-setup/devices/">Device Config → SxR</a> (firmware v2.1.10+) en
-lugar de un procedimiento de autocomprobación dedicado. El canal del
+<p class="admonition-title">Autocomprobación de los receptores Archer</p>
+<p>La autocomprobación de los receptores Archer se realiza ahora desde
+<a href="../../system-setup/devices/">Device Config → SxR</a> (firmware v2.1.10+) y no
+mediante un procedimiento de autocomprobación específico. El canal del
 acelerador debe estar al −100% o la autocomprobación no se iniciará.</p>
 </div>
 <h2 id="reordenacion-de-un-modelo-existente">Reordenación de un modelo existente<a class="headerlink" href="#reordenacion-de-un-modelo-existente" title="Permanent link">&para;</a></h2>
-<p>Convertir un modelo existente (p. ej. actualmente <code>AAETRFF</code>) al orden del
-receptor estabilizado (<code>AETRAE</code>, y después el canal 9 para Gain, 10/11 para
-fases de vuelo y 12 para la autocomprobación en las unidades SxR más antiguas)
-consiste en una secuencia de intercambios de canales en
-<a href="../../model-setup/outputs/#swap-channels">Salidas</a>.</p>
+<p>Convertir un modelo existente (por ejemplo, actualmente <code>AAETRFF</code>) al orden que
+espera el receptor estabilizado (<code>AETRAE</code>, y después el canal 9 para la
+ganancia, 10/11 para las fases de vuelo y 12 para la autocomprobación en las
+unidades SxR más antiguas) consiste en una secuencia de intercambios de canales
+en <a href="../../model-setup/outputs/#swap-channels">Salidas</a>.</p>
 <p>Punto de partida:</p>
 <table>
 <thead>
@@ -3437,7 +3437,7 @@ consiste en una secuencia de intercambios de canales en
 </tr>
 <tr>
 <td>3</td>
-<td>Profundidad</td>
+<td>Elevador</td>
 </tr>
 <tr>
 <td>4</td>
@@ -3445,7 +3445,7 @@ consiste en una secuencia de intercambios de canales en
 </tr>
 <tr>
 <td>5</td>
-<td>Dirección</td>
+<td>Timón</td>
 </tr>
 <tr>
 <td>6</td>
@@ -3461,17 +3461,17 @@ consiste en una secuencia de intercambios de canales en
 </tr>
 </tbody>
 </table>
-<p>Orden objetivo: <code>AETRAE</code> — CH1 Alerón1, CH2 Profundidad, CH3 Acelerador,
-CH4 Dirección, CH5 Alerón2, CH6 Profundidad2/AUX2 (y después Gain/fases de
+<p>Orden objetivo: <code>AETRAE</code> — CH1 Alerón1, CH2 Elevador, CH3 Acelerador,
+CH4 Timón, CH5 Alerón2, CH6 Elevador2/AUX2 (y después ganancia/fases de
 vuelo/autocomprobación en 9–12).</p>
 <ol>
 <li><strong>Aparte primero el Alerón2</strong>: en Salidas, seleccione CH2 (Alerón2), pulse de
    nuevo, <strong>Intercambiar canales</strong>, e intercámbielo con un canal sin usar
-   (p. ej. CH9). El intercambio es inmediato — todas las mezclas que hagan
+   (por ejemplo, CH9). El intercambio es inmediato — todas las mezclas que hagan
    referencia a cualquiera de los dos canales se actualizan automáticamente.</li>
-<li><strong>Intercambie CH3 (Profundidad) → CH2.</strong></li>
+<li><strong>Intercambie CH3 (Elevador) → CH2.</strong></li>
 <li><strong>Intercambie CH4 (Acelerador) → CH3.</strong></li>
-<li><strong>Intercambie CH5 (Dirección) → CH4.</strong></li>
+<li><strong>Intercambie CH5 (Timón) → CH4.</strong></li>
 <li><strong>Intercambie CH9 (Alerón2, aparcado en el paso 1) → CH5.</strong></li>
 </ol>
 <p>Resultado:</p>
@@ -3489,7 +3489,7 @@ vuelo/autocomprobación en 9–12).</p>
 </tr>
 <tr>
 <td>2</td>
-<td>Profundidad</td>
+<td>Elevador</td>
 </tr>
 <tr>
 <td>3</td>
@@ -3497,7 +3497,7 @@ vuelo/autocomprobación en 9–12).</p>
 </tr>
 <tr>
 <td>4</td>
-<td>Dirección</td>
+<td>Timón</td>
 </tr>
 <tr>
 <td>5</td>

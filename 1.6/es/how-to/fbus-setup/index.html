@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2549,10 +2549,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-instalar-el-firmware" class="md-nav__link">
+  <a href="#2-actualizar-el-firmware" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Instalar el firmware
+        2. Actualizar el firmware
       
     </span>
   </a>
@@ -2560,10 +2560,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-5-configurar-los-physical-id" class="md-nav__link">
+  <a href="#3-5-configurar-las-ids-fisicas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3 / 5. Configurar los Physical ID
+        3 / 5. Configurar las IDs Físicas
       
     </span>
   </a>
@@ -2604,10 +2604,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-realizar-cambios-de-configuracion-mas-adelante" class="md-nav__link">
+  <a href="#7-hacer-cambios-de-configuracion-mas-adelante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Realizar cambios de configuración más adelante
+        7. Hacer cambios de configuración más adelante
       
     </span>
   </a>
@@ -2834,7 +2834,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3400,10 +3400,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-instalar-el-firmware" class="md-nav__link">
+  <a href="#2-actualizar-el-firmware" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Instalar el firmware
+        2. Actualizar el firmware
       
     </span>
   </a>
@@ -3411,10 +3411,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-5-configurar-los-physical-id" class="md-nav__link">
+  <a href="#3-5-configurar-las-ids-fisicas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3 / 5. Configurar los Physical ID
+        3 / 5. Configurar las IDs Físicas
       
     </span>
   </a>
@@ -3455,10 +3455,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-realizar-cambios-de-configuracion-mas-adelante" class="md-nav__link">
+  <a href="#7-hacer-cambios-de-configuracion-mas-adelante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Realizar cambios de configuración más adelante
+        7. Hacer cambios de configuración más adelante
       
     </span>
   </a>
@@ -3491,86 +3491,89 @@
 
 
 <h1 id="configurar-un-sistema-fbus">Configurar un sistema FBUS<a class="headerlink" href="#configurar-un-sistema-fbus" title="Permanent link">&para;</a></h1>
-<p><a href="../../model-setup/telemetry/#how-frsky-telemetry-works">FBUS</a> (antes
-F.Port2) reúne el control y la telemetría en una sola línea, lo que permite
-que varios dispositivos FBUS compartan una única conexión en cadena (daisy
-chain) con configuración inalámbrica completa. Este recorrido conecta dos
-servos Xact a los canales de alerones (1 y 5) del <a href="../../tutorials/basic-fixed-wing/">Ejemplo básico de ala
-fija</a>.</p>
+<p>El protocolo <a href="../../model-setup/telemetry/#how-frsky-telemetry-works">FBUS</a>
+(antes F.Port2) integra en una sola línea el control y la telemetría, lo que
+permite que varios dispositivos FBUS compartan una única conexión en cadena
+con configuración inalámbrica completa. En este ejemplo configuraremos dos
+servos Xact en los canales de los alerones (1 y 5) del <a href="../../tutorials/basic-fixed-wing/">Ejemplo básico de
+avión de ala fija</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Capturas de pantalla pendientes</p>
 <p>Esta página aún no tiene capturas del simulador — consulta <a href="../../contributing/screenshot-pipeline/">Proceso de
 capturas de pantalla</a>.</p>
 </div>
 <h2 id="1-descargar-el-firmware-mas-reciente">1. Descargar el firmware más reciente<a class="headerlink" href="#1-descargar-el-firmware-mas-reciente" title="Permanent link">&para;</a></h2>
-<p>FBUS requiere firmware actualizado tanto en el receptor como en los
-dispositivos — por ejemplo, los servos Xact necesitan la versión v2.0.1 o
-posterior. Obtén las actualizaciones correspondientes en la
-<a href="https://www.frsky-rc.com/download/">página de descargas de FrSky</a>.</p>
-<h2 id="2-instalar-el-firmware">2. Instalar el firmware<a class="headerlink" href="#2-instalar-el-firmware" title="Permanent link">&para;</a></h2>
-<p>Copia los archivos de firmware a la carpeta <code>Firmware/</code> de la SD card/eMMC.
-En el <a href="../../system-setup/file-manager/">Gestor de archivos</a>, conecta el
-servo al conector S.Port de la emisora (el cable blanco/amarillo hacia la
-muesca), selecciona el archivo de firmware y elige <strong>Flash External
-Device</strong>.</p>
-<h2 id="3-5-configurar-los-physical-id">3 / 5. Configurar los Physical ID<a class="headerlink" href="#3-5-configurar-los-physical-id" title="Permanent link">&para;</a></h2>
-<p>Ambos servos vienen de fábrica con el Physical ID <code>0C</code> hex / Application ID
-<code>6800</code> hex — entrarán en conflicto en el bus compartido a menos que se
-cambie uno de ellos. Hay dos formas de hacerlo, según el tipo de receptor:</p>
-<p><strong>Mediante el conector S.Port de la emisora</strong> (cualquier receptor):</p>
+<p>FBUS requiere el uso del firmware más reciente tanto en receptores como en
+dispositivos — por ejemplo, el firmware de los servos Xact debe ser al menos
+v2.0.1. Descargue las actualizaciones pertinentes de la
+<a href="https://www.frsky-rc.com/download/">sección de descargas de la web de FrSky</a>.</p>
+<h2 id="2-actualizar-el-firmware">2. Actualizar el firmware<a class="headerlink" href="#2-actualizar-el-firmware" title="Permanent link">&para;</a></h2>
+<p>Copie los archivos de firmware en la carpeta <code>Firmware/</code> de la SD card/eMMC.
+En el <a href="../../system-setup/file-manager/">Gestor de Archivos</a>, enchufe el cable
+del servo en la conexión S.Port de la parte superior de la radio (el cable
+blanco o amarillo va al lado que tiene una muesca), seleccione el archivo de
+firmware y elija <strong>Flashear dispositivo externo</strong>.</p>
+<h2 id="3-5-configurar-las-ids-fisicas">3 / 5. Configurar las IDs Físicas<a class="headerlink" href="#3-5-configurar-las-ids-fisicas" title="Permanent link">&para;</a></h2>
+<p>Ambos servos vienen por defecto con la ID Física <code>0C</code> hex y la ID de
+Aplicación <code>6800</code> hex — entrarán en conflicto en el bus compartido a menos que
+se cambie uno de ellos. Hay dos formas de hacerlo, según el tipo de receptor:</p>
+<p><strong>Mediante el conector S.Port de la radio</strong> (cualquier receptor):</p>
 <ol>
-<li>Conecta el servo 1, ve a <strong>Device Config → XAct</strong> y ajusta <strong>Module</strong> a
-   <strong>S.Port connector</strong>. Deja el Physical ID <code>0C</code>/Application ID <code>6800</code> y el
-   canal <code>CH1</code> con sus valores por defecto, y luego elige <strong>Save to flash</strong>.</li>
-<li>Conecta ahora el servo 2 en su lugar, en el mismo menú. Cambia el
-   <strong>Physical ID</strong> a <code>0D</code> hex y el <strong>Application ID</strong> a <code>6801</code> hex (consulta
-   la <a href="../../model-setup/telemetry/#how-frsky-telemetry-works">tabla de Physical ID</a>
-   para ver qué posiciones están libres), ajusta <strong>Channel</strong> a <code>CH5</code> y elige
-   <strong>Save to flash</strong>.</li>
+<li>Conecte el servo 1, vaya a <strong>Conf. Dispositivos → XAct</strong> y ajuste
+   <strong>Módulo</strong> al <strong>conector S.Port</strong>. Deje la ID Física <code>0C</code>/ID de Aplicación
+   <code>6800</code> y el canal <code>CH1</code> con sus valores por defecto, y después seleccione
+   el botón <strong>Guardar en flash</strong>.</li>
+<li>Conecte ahora el servo 2 en su lugar, en el mismo menú. Cambie la <strong>ID
+   Física</strong> a <code>0D</code> hex y la <strong>ID de Aplicación</strong> a <code>6801</code> hex (consulte la
+   <a href="../../model-setup/telemetry/#how-frsky-telemetry-works">Tabla de ID Física</a>
+   en la sección de Telemetría para ver qué opciones están libres), cambie el
+   <strong>Canal</strong> a <code>CH5</code> y seleccione <strong>Guardar en flash</strong>.</li>
 </ol>
 <p><strong>Directamente a través del receptor</strong> (por ejemplo, un TD-R18 Tandem, con
-ambos servos conectados simultáneamente — consulta el <a href="#4-configure-the-receiver-for-fbus">Paso
+ambos servos conectados a la vez — vea el <a href="#4-configure-the-receiver-for-fbus">Paso
 4</a>):</p>
 <ol>
-<li>Con solo el servo 1 conectado (por ejemplo, al Pin1 del receptor), entra
-   en <strong>Device Config → XAct</strong>, <strong>Module</strong> → <strong>Internal module</strong>. Confirma
-   los valores por defecto (<code>0C</code>/<code>6800</code>/<code>CH1</code>) y elige <strong>Save to flash</strong>.</li>
-<li>Con solo el servo 2 conectado (Pin5), en el mismo menú (Device Config se
-   comunica con un servo a la vez) — cambia a <code>0D</code>/<code>6801</code>/<code>CH5</code> y elige
-   <strong>Save to flash</strong>. Vuelve a seleccionar Device Config después para
-   confirmar que el cambio se ha guardado.</li>
+<li>Teniendo solamente el primer servo conectado (por ejemplo, al Pin1 del
+   receptor), vaya a <strong>Conf. Dispositivos → XAct</strong>, <strong>Módulo</strong> → <strong>Módulo
+   Interno</strong>. Confirme los valores por defecto (<code>0C</code>/<code>6800</code>/<code>CH1</code>) y
+   seleccione <strong>Guardar en flash</strong>.</li>
+<li>Con sólo el segundo servo conectado (Pin5), en el mismo menú (Conf.
+   Dispositivos sólo puede conectarse a un servo a la vez) — cambie a
+   <code>0D</code>/<code>6801</code>/<code>CH5</code> y seleccione <strong>Guardar en flash</strong>. Después, vuelva a
+   seleccionar Conf. Dispositivos para confirmar que el cambio se ha guardado.</li>
 </ol>
 <h2 id="4-configure-the-receiver-for-fbus">4. Configurar el receptor para FBUS<a class="headerlink" href="#4-configure-the-receiver-for-fbus" title="Permanent link">&para;</a></h2>
 <p><strong>SR10 Pro</strong>: <a href="../../model-setup/rf-system/">Sistema RF</a> → el botón del
-receptor → <strong>Options</strong> → ajusta <strong>Telemetry Port</strong> a <strong>FBUS</strong>. Los servos
-Xact se conectan entonces en cadena a ese puerto; como cada servo tiene un
-único conector, un extensor multicanal F.Port2 (FP2CH4/6/8) lo distribuye a
-varios servos.</p>
-<p><strong>TD-R18 Tandem</strong>: Sistema RF → el botón del receptor → <strong>Options</strong> →
-ajusta pines individuales (por ejemplo, <strong>Pin1</strong>, <strong>Pin5</strong>) a <strong>FBUS</strong> — se
-pueden reasignar de esta forma tantos pines como sean necesarios, evitando
-los extensores por completo; cada pin asignado como FBUS transporta la misma
-señal FBUS.</p>
+receptor → <strong>Opciones</strong> → ajuste el <strong>Puerto de Telemetría</strong> a <strong>FBUS</strong>. Los
+servos Xact pueden conectarse en cadena desde ese puerto; como cada servo
+sólo tiene un conector, un extensor multicanal F.Port 2.0 (FP2CH4/6/8)
+permite ampliar el circuito a varios servos.</p>
+<p><strong>TD-R18 Tandem</strong>: Sistema RF → el botón del receptor → <strong>Opciones</strong> →
+ajuste los pines individuales (por ejemplo, <strong>Pin1</strong> y <strong>Pin5</strong>) a <strong>FBUS</strong>
+— puede reasignar a FBUS tantos pines como requiera, con lo que se evita
+usar alargadores multicanales por completo; todos los pines programados
+como FBUS llevan exactamente la misma señal FBUS.</p>
 <h2 id="5-comprobar-el-control-fbus-de-los-servos">5. Comprobar el control FBUS de los servos<a class="headerlink" href="#5-comprobar-el-control-fbus-de-los-servos" title="Permanent link">&para;</a></h2>
-<p>Conecta el servo 1 al Pin1 y el servo 2 al Pin5 (los canales de alerones del
-ejemplo de ala fija), enciende el sistema y comprueba que los canales 1 y 5
-mueven los servos correctos.</p>
+<p>Conecte el servo 1 en la posición Pin1 y el servo 2 en la posición Pin5 (los
+canales de los alerones del ejemplo de ala fija), encienda el sistema y
+compruebe que los canales 1 y 5 operan los servos correctos.</p>
 <h2 id="6-comprobar-la-telemetria-fbus">6. Comprobar la telemetría FBUS<a class="headerlink" href="#6-comprobar-la-telemetria-fbus" title="Permanent link">&para;</a></h2>
-<p>Con ambos servos conectados, elimina cualquier sensor <code>SRV</code> existente en
-<a href="../../model-setup/telemetry/">Telemetría</a> y vuelve a descubrirlos. Cada
-servo informa de 4 sensores: corriente, tensión, temperatura y estado (<code>OK</code>
-cuando es normal).</p>
-<h2 id="7-realizar-cambios-de-configuracion-mas-adelante">7. Realizar cambios de configuración más adelante<a class="headerlink" href="#7-realizar-cambios-de-configuracion-mas-adelante" title="Permanent link">&para;</a></h2>
-<p>Una vez que un modelo está completamente cableado, aislar un servo para
-reconfigurarlo mediante Device Config no resulta práctico. En su lugar: ve a
-Telemetría, busca un sensor perteneciente al servo en cuestión (por ejemplo,
-<code>SRV1 curr</code>) y elige <strong>Configure</strong> — esto abre directamente la configuración
-de ese servo. Elige <strong>Save to flash</strong> después de cualquier cambio.</p>
+<p>Con ambos servos enchufados, borre todos los sensores <code>SRV</code> existentes en
+<a href="../../model-setup/telemetry/">Telemetría</a> y vuelva a descubrirlos. Cada servo
+informa de 4 sensores: amperaje, voltaje, temperatura y estado (<code>OK</code> con
+todo normal).</p>
+<h2 id="7-hacer-cambios-de-configuracion-mas-adelante">7. Hacer cambios de configuración más adelante<a class="headerlink" href="#7-hacer-cambios-de-configuracion-mas-adelante" title="Permanent link">&para;</a></h2>
+<p>En un modelo ya completamente cableado, no es práctico aislar un servo para
+reconfigurarlo a través de Conf. Dispositivos. En lugar de eso: vaya a
+Telemetría, busque un sensor correspondiente al servo que desea reconfigurar
+(por ejemplo, <code>SRV1 curr</code>) y seleccione <strong>Configurar</strong> — se abrirá
+directamente la pantalla de configuración de ese servo. Acuérdese de
+seleccionar <strong>Guardar en flash</strong> después de hacer cualquier cambio.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>No cambies por accidente el Physical ID ni el Application ID desde esta
-pantalla — son los que permiten que cada servo siga siendo direccionable
-en el bus compartido.</p>
+<p>Tenga cuidado de no cambiar por accidente la ID Física ni la ID de
+Aplicación desde esta pantalla — son las que permiten que cada servo
+siga siendo direccionable en el bus compartido.</p>
 </div>
 
 

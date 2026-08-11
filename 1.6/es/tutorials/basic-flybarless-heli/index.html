@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2358,10 +2358,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configurar-las-fases-de-vuelo" class="md-nav__link">
+  <a href="#configurar-los-modos-de-vuelo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurar las fases de vuelo
+        Configurar los modos de vuelo
       
     </span>
   </a>
@@ -2385,10 +2385,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-5-configuracion-de-la-unidad-fbl" class="md-nav__link">
+  <a href="#paso-5-configuracion-del-fbl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 5. Configuración de la unidad FBL
+        Paso 5. Configuración del FBL
       
     </span>
   </a>
@@ -2840,7 +2840,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3440,10 +3440,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configurar-las-fases-de-vuelo" class="md-nav__link">
+  <a href="#configurar-los-modos-de-vuelo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configurar las fases de vuelo
+        Configurar los modos de vuelo
       
     </span>
   </a>
@@ -3467,10 +3467,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-5-configuracion-de-la-unidad-fbl" class="md-nav__link">
+  <a href="#paso-5-configuracion-del-fbl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 5. Configuración de la unidad FBL
+        Paso 5. Configuración del FBL
       
     </span>
   </a>
@@ -3505,7 +3505,7 @@
 <h1 id="ejemplo-basico-de-helicoptero-flybarless">Ejemplo básico de helicóptero flybarless<a class="headerlink" href="#ejemplo-basico-de-helicoptero-flybarless" title="Permanent link">&para;</a></h1>
 <p>Una configuración básica de helicóptero flybarless (FBL), tomando como
 ejemplo una controladora como la Spirit. A diferencia de un modelo de ala
-fija, un helicóptero es intrínsecamente inestable: la controladora FBL
+fija, un helicóptero es intrínsecamente inestable: la unidad FBL
 utiliza giróscopos (velocidad de rotación) y acelerómetros
 (movimiento/orientación) para calcular las correcciones de
 guiñada/cabeceo/alabeo mediante un lazo de control PID
@@ -3537,7 +3537,7 @@ System</a>.</p>
 </thead>
 <tbody>
 <tr>
-<td>Alabeo (alerones)</td>
+<td>Alabeo (alerón)</td>
 <td>—</td>
 </tr>
 <tr>
@@ -3549,7 +3549,7 @@ System</a>.</p>
 <td>—</td>
 </tr>
 <tr>
-<td>Guiñada (dirección)</td>
+<td>Guiñada (timón)</td>
 <td>—</td>
 </tr>
 <tr>
@@ -3579,89 +3579,95 @@ una categoría Heli, inicie el asistente y elija <strong>Flybarless</strong>:</p
 <p>Asígnele un nombre y elija una imagen.</p>
 <h2 id="paso-4-revisar-y-configurar-las-mezclas">Paso 4. Revisar y configurar las mezclas<a class="headerlink" href="#paso-4-revisar-y-configurar-las-mezclas" title="Permanent link">&para;</a></h2>
 <p><img alt="Vista general de las mezclas" src="../../assets/tut-heli-eg-mixes.png" /></p>
-<p>El asistente crea Alerones/Profundidad/Acelerador/Dirección en orden AETR,
+<p>El asistente crea Alerones/Elevador/Acelerador/Timón en orden AETR,
 Paso en el canal 6 y Banco FBL en el canal 7:</p>
 <p><img alt="Mezcla de paso" src="../../assets/tut-heli-eg-mixes-pitch.png" /></p>
 <p>Compruebe que el canal 6 es el Paso colectivo. Es necesario añadir
 manualmente dos canales más como <a href="../../model-setup/mixes/#mix-libraries">mezclas
 libres</a>: <strong>Ganancia del giróscopo</strong>
-(canal 5) y <strong>Rescate/Stabi</strong> (canal 8).</p>
-<p><strong>Alerones/Profundidad/Dirección</strong>: no hay nada que añadir; las tasas y el
+(canal 5) y <strong>Rescate/Estabi</strong> (canal 8).</p>
+<p><strong>Alerón/Elevador/Timón</strong>: no hay nada que añadir; las tasas y el
 Expo son tarea de la unidad FBL, así que la emisora simplemente transmite
 una entrada lineal limpia.</p>
 <p><img alt="Mezcla de alerones" src="../../assets/tut-heli-eg-mixes-ail.png" /></p>
 <p><strong>Paso colectivo</strong>: una curva lineal recta; solo hay que confirmar el canal
 de salida (normalmente el 6). Como arriba, las tasas y el Expo los gestiona
 la unidad FBL, no la emisora.</p>
-<p><strong>Banco FBL</strong>: los tres bancos de ajustes de la Spirit (distintos estilos
-de vuelo, ganancias de sensor a distintas RPM, o Principiante/Acro/3D, o
-simplemente preajustes de tuning) asignados a un interruptor de 3
-posiciones, por ejemplo SE:</p>
+<p><strong>Banco FBL</strong>: la unidad FBL del Spirit dispone de tres bancos de ajustes
+(distintos estilos de vuelo, distintas ganancias del sensor para bajas o
+altas RPM, o Principiante, Acro o 3D, o simplemente para afinar la
+configuración) asignados a un interruptor de 3 posiciones, por ejemplo SE:</p>
 <p><img alt="Mezcla de banco" src="../../assets/tut-heli-eg-mixes-bank.png" /></p>
 <p><strong>Ganancia del giróscopo</strong>: añádala como mezcla libre después del último
 canal. La ganancia suele ser un valor fijo: ajuste la <strong>Fuente</strong> a Valor
 especial 0, introduzca la ganancia mediante el <strong>Offset</strong> (afinándola más
 tarde en vuelo) y envíe la salida al canal 5:</p>
 <p><img alt="Mezcla de ganancia del giróscopo" src="../../assets/tut-heli-eg-mixes-gyro-gain.png" /></p>
-<h3 id="configurar-las-fases-de-vuelo">Configurar las fases de vuelo<a class="headerlink" href="#configurar-las-fases-de-vuelo" title="Permanent link">&para;</a></h3>
-<p><img alt="Fases de vuelo" src="../../assets/tut-heli-eg-flight-modes.png" /></p>
-<p>Tres <a href="../../model-setup/flight-modes/">fases de vuelo</a>: renombre la
-predeterminada como <strong>Normal</strong> y añada <strong>Idle Up 1</strong>/<strong>Idle Up 2</strong> en el
+<h3 id="configurar-los-modos-de-vuelo">Configurar los modos de vuelo<a class="headerlink" href="#configurar-los-modos-de-vuelo" title="Permanent link">&para;</a></h3>
+<p><img alt="Modos de vuelo" src="../../assets/tut-heli-eg-flight-modes.png" /></p>
+<p>Tres <a href="../../model-setup/flight-modes/">modos de vuelo</a>: renombre el Modo de
+Vuelo por Defecto a <strong>Normal</strong> y añada <strong>Ralentí 1</strong>/<strong>Ralentí 2</strong> en el
 interruptor SD.</p>
 <h3 id="configurar-la-mezcla-del-acelerador">Configurar la mezcla del acelerador<a class="headerlink" href="#configurar-la-mezcla-del-acelerador" title="Permanent link">&para;</a></h3>
-<p>Tres curvas de acelerador, una por fase de vuelo, cada una como <a href="../../model-setup/curves/">curva
+<p>Tres curvas de aceleración, una por modo de vuelo, cada una como <a href="../../model-setup/curves/">curva
 personalizada</a>:</p>
 <ul>
-<li><strong>Normal</strong>: arranque/despegue: comienza en −100 % (motor parado) y sube
-  suavemente. Una curva de 7 puntos con <strong>Smooth</strong> activado funciona bien;
-  los valores exactos requieren ajuste en vuelo.</li>
+<li><strong>Normal</strong>: acelerado de la hélice (spool up) y despegue: la curva
+  comienza en −100 % (motor apagado) y luego aumenta suavemente. Una curva
+  de 7 puntos con <strong>Smooth</strong> activado funciona bien; los valores finales de
+  la curva pueden necesitar ser determinados en vuelo.</li>
 </ul>
-<p><img alt="Curva Normal" src="../../assets/tut-heli-eg-curves-normal.png" /></p>
+<p><img alt="Curva en modo normal" src="../../assets/tut-heli-eg-curves-normal.png" /></p>
 <ul>
-<li><strong>Idle Up 1</strong>: vuelo general: una curva en línea recta que mantiene un
-  ajuste de acelerador constante para conservar una velocidad de rotor
-  estable, obteniendo el movimiento mediante el Paso colectivo, los
-  Alerones (alabeo) y la Profundidad (cabeceo). Mantenga suave la
-  transición desde Normal, sin grandes saltos. (La mayoría de unidades FBL
-  ofrecen además una función <strong>Governor</strong> para mantener constante la
-  velocidad del rotor durante maniobras agresivas; consulte el manual
-  propio de la unidad FBL.)</li>
+<li><strong>Ralentí 1</strong>: la mayoría de los vuelos: una curva en línea recta
+  significa que tendremos un ajuste constante del acelerador para mantener
+  los rotores girando a un ritmo constante, mientras que el movimiento del
+  helicóptero será controlado por los mandos de Paso Colectivo, Alerón
+  (roll) y Profundidad (pitch). Tenga en cuenta que no debe haber un gran
+  salto entre Normal y Ralentí 1, para que la transición se produzca
+  suavemente. (La mayoría de las unidades FBL ofrecen además una función de
+  <strong>regulación</strong> (Governor) que garantiza que la velocidad del rotor se
+  mantenga constante incluso durante maniobras de vuelo agresivas; consulte
+  el manual del FBL para obtener más información.)</li>
 </ul>
-<p><img alt="Curva Idle Up 1" src="../../assets/tut-heli-eg-curves-iup1.png" /></p>
+<p><img alt="Curva de ralentí 1" src="../../assets/tut-heli-eg-curves-iup1.png" /></p>
 <ul>
-<li><strong>Idle Up 2</strong>: vuelo agresivo (acrobacia, 3D); de nuevo, se ajusta en
-  vuelo.</li>
+<li><strong>Ralentí 2</strong>: vuelos más agresivos (acrobacias aéreas y 3D); de nuevo,
+  puede ser necesario determinar el valor final del acelerador en vuelo.</li>
 </ul>
-<p><img alt="Curva Idle Up 2" src="../../assets/tut-heli-eg-curves-iup2.png" /></p>
-<p><img alt="Curvas de acelerador en las mezclas" src="../../assets/tut-heli-eg-mixes-thr-curves.png" /></p>
-<p><strong>Corte de gas</strong>: asigne, por ejemplo, el interruptor SG-arriba con
-<strong>Sticky</strong> activado: al subir SG se corta el acelerador de forma
-instantánea y (debido a Sticky) solo puede rearmarse tras devolver antes el
-stick de acelerador a mínimo/apagado.</p>
-<p><img alt="Corte de gas" src="../../assets/tut-heli-eg-mixes-thr-cut.png" /></p>
-<p><strong>Rescate/Stabi</strong>: asígnelo de forma similar, por ejemplo al interruptor SA
+<p><img alt="Curva de ralentí 2" src="../../assets/tut-heli-eg-curves-iup2.png" /></p>
+<p><img alt="Curvas del acelerador en las mezclas" src="../../assets/tut-heli-eg-mixes-thr-curves.png" /></p>
+<p><strong>Corte de motor (Throttle Cut)</strong>: asigne, por ejemplo, el interruptor
+SG-up con <strong>Sticky</strong> en ON: el motor se cortará tan pronto como ponga el
+interruptor en la posición 'Arriba' y, debido a la configuración Sticky, el
+acelerador sólo puede ser armado con la palanca del acelerador en la
+posición baja (off).</p>
+<p><img alt="Corte de motor" src="../../assets/tut-heli-eg-mixes-thr-cut.png" /></p>
+<p><strong>Rescate/Estabi</strong>: asígnelo de forma similar, por ejemplo al conmutador SA
 en el canal 8.</p>
 <p><img alt="Mezclas finales" src="../../assets/tut-heli-eg-mixes-final.png" /></p>
-<h2 id="paso-5-configuracion-de-la-unidad-fbl">Paso 5. Configuración de la unidad FBL<a class="headerlink" href="#paso-5-configuracion-de-la-unidad-fbl" title="Permanent link">&para;</a></h2>
+<h2 id="paso-5-configuracion-del-fbl">Paso 5. Configuración del FBL<a class="headerlink" href="#paso-5-configuracion-del-fbl" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Instale la herramienta de configuración del FBL</strong>: por ejemplo Spirit
-   Settings, en un PC.</li>
-<li><strong>Conecte el receptor a la unidad FBL</strong> según su esquema de conexionado:
-   normalmente la salida SBUS Out del receptor al puerto RUD de la unidad
-   FBL (algunos modelos Spirit requieren un adaptador SBUS), o bien
-   mediante F.Port1/FBUS.</li>
-<li><strong>Conecte la unidad FBL al PC</strong>: por cable o Bluetooth, según su manual.</li>
+<li><strong>Instale la herramienta de configuración del FBL</strong>: por ejemplo el
+   software Spirit Settings, en su PC.</li>
+<li><strong>Conecte el receptor a la unidad FBL</strong> de acuerdo con su sección de
+   cableado: normalmente la salida 'SBUS Out' del receptor al puerto 'RUD'
+   de la unidad FBL (tenga en cuenta que algunos modelos Spirit requieren
+   un adaptador SBUS), o bien mediante F.Port1/FBUS.</li>
+<li><strong>Conecte la unidad FBL con su PC</strong>: ya sea mediante cable o a través de
+   Bluetooth, según su manual.</li>
 </ol>
 <p>!!! danger
-       No conecte todavía ningún servo.</p>
+       ¡No conecte ningún servo todavía!</p>
 <ol>
 <li><strong>Actualice el firmware del FBL</strong> si es necesario, desde la pestaña
    Update de la herramienta.</li>
-<li><strong>Configuración general</strong> (pestaña General de Spirit Settings):</li>
+<li><strong>Configuración general</strong> (pestaña General del software Spirit
+   Settings):</li>
 <li>Tipo de receptor: <strong>Futaba SBUS</strong> o <strong>FrSky F.Port</strong>, según
-     corresponda, y luego reinicie.</li>
+     corresponda, y reinicie el sistema.</li>
 <li>
-<p>Asignación de canales (con AETR del asistente):</p>
+<p>Asignación de canales (con el orden AETR del asistente):</p>
 <table>
 <thead>
 <tr>
@@ -3675,15 +3681,15 @@ en el canal 8.</p>
 <td>1</td>
 </tr>
 <tr>
-<td>Alerones</td>
+<td>Alerón</td>
 <td>2</td>
 </tr>
 <tr>
-<td>Profundidad</td>
+<td>Elevador</td>
 <td>3</td>
 </tr>
 <tr>
-<td>Dirección</td>
+<td>Timón</td>
 <td>4</td>
 </tr>
 <tr>
@@ -3699,41 +3705,46 @@ en el canal 8.</p>
 <td>7</td>
 </tr>
 <tr>
-<td>Rescate/Stabi</td>
+<td>Rescate/Estabi</td>
 <td>8</td>
 </tr>
 </tbody>
 </table>
-<p>(Esta asignación se deriva de cómo interpreta la unidad Spirit las
- posiciones del flujo de datos SBUS.)</p>
+<p>(Este orden de los canales se debe a que la unidad Spirit hace
+ suposiciones sobre la posición de los canales en el flujo de datos
+ SBUS.)</p>
 </li>
 <li>
-<p><strong>Límites de canal</strong> (pestaña Diagnostic): la unidad FBL necesita
-   límites de canal de la emisora calibrados y centros verificados:</p>
+<p><strong>Límites de los canales</strong> (pestaña Diagnóstico): para que la unidad FBL
+   funcione correctamente, es necesario calibrar los límites de los canales
+   de radio y comprobar los centros:</p>
 </li>
 <li>
-<p>Ponga primero a cero todos los subtrims y trims de la emisora.</p>
+<p>En la radio, asegúrese de que todos los subtrims y trims están a cero.</p>
 </li>
-<li>Centre el stick de Paso colectivo para que marque exactamente 1500 µs
-     en <a href="../../model-setup/outputs/">Salidas</a>.</li>
-<li>Encienda la unidad FBL y compruebe que
-     alerones/profundidad/paso/dirección marcan todos 0 % en la pestaña
-     Diagnostic (la unidad FBL detecta automáticamente el neutro en cada
-     inicialización).</li>
-<li>Mueva cada mando a sus extremos y ajuste los valores <strong>Min</strong>/<strong>Max</strong>
-     correspondientes en Salidas hasta que la pestaña Diagnostic marque
-     exactamente +100 %/−100 %, confirmando también que la dirección de la
-     barra coincide con la del stick.</li>
+<li>Ajuste su paso colectivo a la posición central de la palanca para dar
+     una salida de 1500uS en <a href="../../model-setup/outputs/">Salidas</a>.</li>
+<li>Encienda la unidad FBL y compruebe que los canales de alerón,
+     profundidad, cabeceo y timón están centrados al 0 % en la pestaña
+     Diagnóstico (la unidad FBL detecta automáticamente la posición neutral
+     durante cada inicialización).</li>
+<li>Mueva los controles hasta sus límites y ajuste los valores de
+     recorridos <strong>Mínimo</strong>/<strong>Máximo</strong> correspondientes en Salidas para
+     conseguir una lectura de exactamente +100 %/−100 % en la pestaña
+     Diagnóstico, comprobando también que la dirección del movimiento de
+     las barras coincide con la de las palancas.</li>
 </ol>
 <p>!!! warning
-       Nunca utilice subtrim ni trim en estos canales: la unidad FBL Spirit
-       los interpreta como órdenes de entrada, no como calibración.</p>
+       No utilice las funciones subtrim o trim de su emisora para estos
+       canales, ya que la unidad Spirit FBL las considerará como un comando
+       de entrada, no como calibración.</p>
 <ol>
-<li>Ajuste el <strong>Offset</strong> de la mezcla de Ganancia del giróscopo para lograr
-   el Heading Lock.</li>
+<li>Ajuste el valor <strong>Offset</strong> en la mezcla Gyro Gain para asegurar que se
+   consigue el Heading Lock.</li>
 </ol>
-<p>Con esto, la parte de la emisora queda completamente configurada; continúe
-con el resto de la configuración según el manual propio de la unidad FBL.</p>
+<p>Después de estos ajustes, todo debería estar configurado con respecto a la
+emisora. Ahora puede continuar con el resto de la configuración del FBL
+según el manual del Spirit FBL.</p>
 
 
 

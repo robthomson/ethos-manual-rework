@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3404,25 +3404,25 @@
 
 <h1 id="gestione-file">Gestione file<a class="headerlink" href="#gestione-file" title="Permanent link">&para;</a></h1>
 <p><img alt="Gestione file - radio" src="../../assets/system-filemanager-radio.png" /></p>
-<p>Gestione file consente di esplorare la memoria della radio e di aggiornare il
+<p>Gestione file permette di esplorare la memoria della radio e di aggiornare il
 firmware del modulo RF interno, dei dispositivi collegati via S.Port, dei
 dispositivi OTA (Over-The-Air) e dei moduli esterni.</p>
 <h2 id="organizzazione-della-memoria">Organizzazione della memoria<a class="headerlink" href="#organizzazione-della-memoria" title="Permanent link">&para;</a></h2>
-<p>Toccare <strong>Flash</strong> (oppure premere <code>PAGE</code> per cambiare unità) per esplorare
-l'unità flash USB virtuale interna della radio, utilizzata per le bitmap e i
-font di sistema:</p>
+<p>Tocca <strong>Flash</strong> (oppure premi <code>PAGE</code> per cambiare unità) per esplorare l'unità
+flash USB virtuale interna della radio, utilizzata per le bitmap e i font di
+sistema:</p>
 <p><img alt="Memoria flash" src="../../assets/system-filemanager-flash.png" /></p>
 <ul>
 <li><code>bitmaps/system</code> — le bitmap utilizzate per le schermate e le icone</li>
 <li><code>fonts/</code> — i font per le diverse lingue selezionabili</li>
 </ul>
 <p>Sia il bootloader sia il firmware di sistema risiedono in questa memoria flash
-interna, in tutte le radio FrSky fino alla X9D originale.</p>
+interna, su tutte le radio FrSky fino alla X9D originale.</p>
 <p>La serie <strong>X20/X20S/X20HD</strong> utilizza una SD card formattata FAT32, di capacità
 pari o inferiore a 32GB (una SanDisk Ultra Micro SDHC Class 10 da 16GB è
 un'ottima scelta). Le <strong>X18</strong> e <strong>X20 Pro/R/RS</strong> utilizzano per impostazione
 predefinita una eMMC interna (a cui è possibile affiancare una SD card esterna)
-— toccare <strong>Radio</strong> per esplorarla. Ethos crea automaticamente le cartelle
+— tocca <strong>Radio</strong> per esplorarla. Ethos crea automaticamente le cartelle
 <code>Logs/</code>, <code>models/</code> e <code>screenshots/</code> se mancanti; <code>Firmware/</code> è invece una
 convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</p>
 <h2 id="top-level-folders">Cartelle di primo livello<a class="headerlink" href="#top-level-folders" title="Permanent link">&para;</a></h2>
@@ -3440,15 +3440,15 @@ convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</
 <p><img alt="Cartella audio" src="../../assets/system-filemanager-audio.png" /></p>
 <ul>
 <li><strong><code>bitmaps/</code></strong> — <code>bitmaps/models/</code> contiene le immagini dei modelli
-  dell'utente (impostate in <a href="../../model-setup/model-edit/">Model Edit</a> o nelle
-  procedure guidate di creazione di un nuovo modello); <code>bitmaps/user/</code> contiene
-  tutto il resto. Formato consigliato: BMP a 32 bit, 8 bit per colore, con
-  canale alpha, 300×280px — in questo modo la decodifica a bordo della radio
+  dell'utente (impostate in <a href="../../model-setup/model-edit/">Modifica modello</a> o
+  nelle procedure guidate di creazione di un nuovo modello); <code>bitmaps/user/</code>
+  contiene tutto il resto. Formato consigliato: BMP a 32 bit, 8 bit per colore,
+  con canale alpha, 300×280px — in questo modo la decodifica a bordo della radio
   resta poco onerosa. Ethos ridimensiona i file BMP al volo, ma non i PNG/JPEG.
   I nomi file possono contenere solo <code>A-Z a-z 0-9 ()!-_@#;[]+=</code> e spazi, e non
   devono superare gli 11 caratteri (più un'estensione di 4 caratteri) per essere
   visibili nel selettore delle immagini del modello — i nomi più lunghi
-  compaiono comunque in Gestione file, ma non risultano selezionabili lì. Gli
+  compaiono comunque in Gestione file, ma lì non risultano selezionabili. Gli
   strumenti di conversione immagini di Ethos Suite si occupano automaticamente
   della conversione di formato.</li>
 </ul>
@@ -3461,7 +3461,7 @@ convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</
 <li>
 <p><strong><code>Firmware/</code></strong> — file di firmware per il modulo RF interno, i moduli esterni
   e altri dispositivi (ricevitori, ecc.), aggiornabili da qui via S.Port o OTA.
-  Copiare qui il nuovo firmware mentre la radio è in <a href="../../getting-started/usb-connection-modes/">modalità
+  Copia qui il nuovo firmware mentre la radio è in <a href="../../getting-started/usb-connection-modes/">modalità
   bootloader</a> e collegata via USB;
   toccando un file di firmware e scegliendo <strong>Flash</strong> si avvia l'aggiornamento:</p>
 </li>
@@ -3482,10 +3482,10 @@ convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</
   modificati direttamente da qui, ma solo salvati come backup o condivisi. A
   partire da Ethos v1.2.11, un modello viene denominato in base al proprio nome
   anziché con la sequenza <code>model01.bin</code> (ad esempio un modello chiamato "Extra"
-  diventa <code>Extra.bin</code>; un secondo "Extra" diventa <code>Extra01.bin</code>). Rinominare un
-  modello in <a href="../../model-setup/model-edit/">Model Edit</a> rinomina anche il
-  relativo file — sempre in caratteri minuscoli (il nome visualizzato con
-  maiuscole e minuscole è memorizzato all'interno del file), e non tutti i
+  diventa <code>Extra.bin</code>; un secondo "Extra" diventa <code>Extra01.bin</code>). Rinominando un
+  modello in <a href="../../model-setup/model-edit/">Modifica modello</a> viene rinominato
+  anche il relativo file — sempre in caratteri minuscoli (il nome visualizzato
+  con maiuscole e minuscole è memorizzato all'interno del file) e non tutti i
   caratteri del nome del modello vengono riportati nel nome del file. Dalla
   versione v1.1.0 Alpha 17, ogni categoria di modelli creata dall'utente
   dispone di una propria sottocartella.</p>
@@ -3497,7 +3497,7 @@ convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</
 <li>
 <p><strong><code>scripts/</code></strong> — script Lua, eventualmente organizzati in sottocartelle
   proprie con i relativi file di supporto. I tipi di script sono i <strong>widget</strong>
-  (vedere <a href="../../displays/">Display</a>), i <strong>task e le sorgenti</strong> (sensori
+  (vedi <a href="../../displays/">Display</a>), i <strong>task e le sorgenti</strong> (sensori
   personalizzati o azioni post-volo — installati qui, compaiono nel menu
   <a href="../../model-setup/lua-scripts/">Lua</a> del modello) e i <strong>tool</strong> (ad esempio gli
   strumenti di configurazione dei ricevitori stabilizzati presenti nei menu di
@@ -3513,13 +3513,13 @@ convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</
 <ul>
 <li>
 <p><strong><code>radio.bin</code></strong> (cartella principale) — il file delle impostazioni di sistema,
-  scritto dalla radio stessa in fase di inizializzazione. Eseguirne il backup
+  scritto dalla radio stessa in fase di inizializzazione. Eseguine il backup
   insieme a <code>models/</code> prima di un aggiornamento del firmware, in modo da poter
   eventualmente tornare a una versione precedente.</p>
 </li>
 <li>
-<p><strong><code>firmware.bin</code></strong> (cartella principale) — copiare qui un nuovo file di
-  firmware della radio per farlo installare automaticamente alla successiva
+<p><strong><code>firmware.bin</code></strong> (cartella principale) — copia qui un nuovo file di firmware
+  della radio per farlo installare automaticamente alla successiva
   disconnessione della radio dal PC. Potrebbe essere necessario aggiornare nello
   stesso passaggio anche il contenuto della SD card/eMMC e dell'unità flash
   interna.</p>
@@ -3531,11 +3531,11 @@ convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.</
 </ul>
 <h2 id="condivisione-dei-file-via-bluetooth">Condivisione dei file via Bluetooth<a class="headerlink" href="#condivisione-dei-file-via-bluetooth" title="Permanent link">&para;</a></h2>
 <p>Ethos può trasferire file da radio a radio tramite Bluetooth. Sulla radio
-<strong>ricevente</strong>, spostarsi nella cartella di destinazione in Gestione file,
-premere a lungo <code>ENT</code> e scegliere <strong>Receive file here</strong>:</p>
+<strong>ricevente</strong>, spostati nella cartella di destinazione in Gestione file, premi a
+lungo <code>ENT</code> e scegli <strong>Receive file here</strong>:</p>
 <p><img alt="Ricezione Bluetooth" src="../../assets/system-filemanager-bluetooth-receive.png" /></p>
-<p>Sulla radio <strong>trasmittente</strong>, toccare il file, scegliere <strong>Send file</strong> e seguire
-le indicazioni su entrambe le radio:</p>
+<p>Sulla radio <strong>mittente</strong>, tocca il file, scegli <strong>Send file</strong> e segui le
+indicazioni su entrambe le radio:</p>
 <p><img alt="Invio Bluetooth" src="../../assets/system-filemanager-bluetooth-send.png" /></p>
 <p>Se una delle due radio ha già una connessione Bluetooth attiva (telemetria,
 collegamento maestro-allievo oppure, sulle X20S/Pro, audio), verrà chiesto se

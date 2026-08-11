@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#viste-principali" class="md-skip">
+        <a href="#visualizzazioni-principali" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -2818,7 +2818,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3458,53 +3458,55 @@
   
 
 
-<h1 id="viste-principali">Viste principali<a class="headerlink" href="#viste-principali" title="Permanent link">&para;</a></h1>
+<h1 id="visualizzazioni-principali">Visualizzazioni principali<a class="headerlink" href="#visualizzazioni-principali" title="Permanent link">&para;</a></h1>
 <h2 id="schermata-home">Schermata Home<a class="headerlink" href="#schermata-home" title="Permanent link">&para;</a></h2>
 <p><img alt="Schermata Home" src="../../assets/mainview.png" /></p>
-<p>La schermata Home è ciò che si vede quando nessun menu è aperto: una serie di
-fino a <strong>otto</strong> schermate di visualizzazione configurabili dall'utente (vedere
-<a href="../../displays/">Display</a>), tra le quali si scorre con il tasto <code>PAGE</code>
-o con uno swipe sul touch screen. Un modello appena creato parte con una sola
-schermata che mostra un'immagine del modello, tre widget timer e gli indicatori
-di trim/potenziometri; da lì tutti gli elementi sono configurabili dall'utente.</p>
-<p>Le schermate normalmente condividono la barra superiore e quella inferiore
-descritte di seguito, ma una schermata può anche essere impostata a schermo
-intero, nascondendo entrambe.</p>
+<p>La schermata Home è ciò che viene visualizzato quando nessun menu è aperto: una
+serie di massimo <strong>otto</strong> viste principali che l'utente configura a proprio
+piacimento (consulta <a href="../../displays/">Configurare le schermate</a>), tra le
+quali ci si sposta con il tasto <code>PAGE</code> o con un gesto di sfioramento. Un modello
+appena creato parte con una sola schermata, che mostra un'immagine del modello,
+tre widget per i timer e gli indicatori dei trim e dei potenziometri; da lì tutti
+gli elementi sono configurabili dall'utente.</p>
+<p>Le viste principali condividono normalmente le barre superiore e inferiore
+descritte di seguito, ma una vista può anche essere impostata a schermo intero,
+nascondendo entrambe.</p>
 <h2 id="la-barra-superiore">La barra superiore<a class="headerlink" href="#la-barra-superiore" title="Permanent link">&para;</a></h2>
-<p>La barra superiore mostra il nome del modello sulla sinistra (più la fase di
-volo attiva, se ne è configurata una) e una serie di icone di stato sulla
-destra:</p>
+<p>La barra superiore mostra il nome del modello sulla sinistra (e la modalità di
+volo attiva, se configurata) e, a destra, una serie di icone di stato:</p>
 <ul>
-<li>Registrazione dati attiva</li>
-<li>Stato trainer (master o slave, a seconda dei casi)</li>
-<li>RSSI — collegamento 2.4GHz</li>
-<li>RSSI — collegamento 900MHz (se è installato un modulo dual-band/long-range)</li>
-<li>Volume altoparlante</li>
+<li>Se la registrazione dei dati è attiva</li>
+<li>Icona del Trainer per il master o lo slave, a seconda dei casi</li>
+<li>RSSI — collegamento 2.4G</li>
+<li>RSSI — collegamento 900M (se è installato un modulo dual-band/long-range)</li>
+<li>Volume dell'altoparlante</li>
 <li>Stato della batteria della radio</li>
 </ul>
-<p>Toccando l'icona dell'altoparlante o della batteria si accede direttamente al
-relativo pannello di impostazioni <a href="../../system-setup/general/">Generale</a> (audio)
-o <a href="../../system-setup/battery/">Batteria</a>.</p>
+<p>Toccando le icone dell'altoparlante o della batteria si aprono direttamente i
+relativi pannelli di controllo <a href="../../system-setup/general/">Generale</a> (audio) e
+<a href="../../system-setup/battery/">Batteria</a>.</p>
 <h3 id="avviso-di-errore">Avviso di errore<a class="headerlink" href="#avviso-di-errore" title="Permanent link">&para;</a></h3>
-<p>Un triangolo rosso compare nella barra superiore ogni volta che Ethos rileva un
-errore: le cause più comuni sono un errore di uno script Lua, un errore di backup
-della RAM oppure l'utilizzo di una versione firmware nightly/instabile. Il
-dettaglio dell'avviso si trova sempre in <strong>System → Info</strong>, nella stessa pagina
-del tempo di funzionamento della radio e dei
-<a href="../../system-setup/information/">log degli errori</a>.</p>
+<p>Quando Ethos rileva un errore, nella barra superiore viene visualizzata un'icona
+di avvertimento con un triangolo rosso: le cause più comuni sono gli errori dello
+script Lua, un errore di backup della RAM oppure l'esecuzione di una build
+notturna (instabile) del firmware. Il dettaglio relativo all'avviso viene sempre
+visualizzato nella pagina <strong>Sistema → Info</strong>, la stessa in cui si trovano il tempo
+di funzionamento della radio e i <a href="../../system-setup/information/">log degli errori</a>.</p>
 <h2 id="la-barra-inferiore">La barra inferiore<a class="headerlink" href="#la-barra-inferiore" title="Permanent link">&para;</a></h2>
 <p><img alt="Barra inferiore" src="../../assets/bottombar.png" /></p>
-<p>Lungo il bordo inferiore sono presenti quattro schede corrispondenti alle sezioni
-principali — <strong>Home</strong>, <strong>Configurazione del modello</strong>, <strong>Configura schermate</strong>,
-<strong>Configurazione di sistema</strong> — con l'orologio di sistema sulla destra (toccandolo
-si accede direttamente a <a href="../../system-setup/date-and-time/">Data e ora</a>).</p>
+<p>La barra inferiore presenta quattro schede per accedere alle funzioni di livello
+superiore — <strong>Home</strong>, <strong>Configurazione del modello</strong>, <strong>Configurazione delle
+schermate</strong>, <strong>Configurazione del sistema</strong> — con l'ora del sistema sulla destra
+(toccando l'ora si accede direttamente a
+<a href="../../system-setup/date-and-time/">Data e ora</a>).</p>
 <h2 id="larea-dei-widget">L'area dei widget<a class="headerlink" href="#larea-dei-widget" title="Permanent link">&para;</a></h2>
-<p>La parte centrale di ogni schermata è occupata dai <strong>widget</strong>: immagine del
-modello, timer, letture di telemetria, barre di trim/potenziometri e altro
-ancora, tutti posizionati e configurati dall'utente. Vedere
-<a href="../../displays/">Display</a> per sapere come aggiungere, spostare e
-configurare i widget, e <a href="../../displays/additional-displays/">Display aggiuntivi</a>
-per aggiungere altre schermate oltre a quella singola predefinita.</p>
+<p>L'area centrale di ogni vista è costituita da <strong>widget</strong>: immagine del modello,
+timer, dati di telemetria, barre dei trim e dei potenziometri e altro ancora,
+tutti posizionati e configurati dall'utente. Consulta
+<a href="../../displays/">Configurare le schermate</a> per sapere come aggiungere,
+spostare e configurare i widget, e
+<a href="../../displays/additional-displays/">Schermate aggiuntive</a> per aggiungere altre
+schermate oltre a quella singola predefinita.</p>
 
 
 

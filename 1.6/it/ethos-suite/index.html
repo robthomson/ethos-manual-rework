@@ -2705,7 +2705,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3373,42 +3373,42 @@ screenshot</a>.</p>
 <li>Leggere il tipo di radio, l'ID e le versioni installate — firmware,
    bootloader, modulo RF interno, file della memoria flash e file della
    SD card/eMMC.</li>
-<li>Commutare la radio tra la modalità bootloader e l'esecuzione di Ethos, e viceversa.</li>
+<li>Passare la radio dalla modalità bootloader all'esecuzione di Ethos, e viceversa.</li>
 <li>Confrontare le versioni installate con quelle correnti e aggiornarle automaticamente —
-   solo i componenti obsoleti, tutto indipendentemente dallo stato, oppure i componenti
-   singolarmente.</li>
-<li>Eseguire il backup dei modelli su disco tramite <strong>Model Manager</strong>, o ripristinare un backup
-   precedente (necessario poiché i file dei modelli non sono retrocompatibili tra le
+   solo i componenti obsoleti, tutti i componenti indipendentemente dallo stato, oppure i
+   singoli componenti.</li>
+<li>Eseguire il backup dei modelli su disco tramite il <strong>Model Manager</strong>, oppure ripristinare un
+   backup precedente (necessario poiché i file dei modelli non sono retrocompatibili tra le
    versioni del firmware).</li>
-<li>Scaricare qualsiasi firmware dal sito di download FrSky tramite il <strong>Download
-   center</strong>, e utilizzare la radio come proxy per aggiornare direttamente un modulo, un sensore,
-   un servo o un ricevitore.</li>
+<li>Scaricare qualsiasi firmware dal sito di download di FrSky tramite la scheda <strong>Download
+   center</strong>, e utilizzare la radio come proxy per eseguire il flash direttamente di un modulo,
+   un sensore, un servo o un ricevitore.</li>
 <li>Convertire immagini e file audio nei formati nativi di Ethos.</li>
-<li>Fornire <strong>strumenti di sviluppo Lua</strong> — documentazione API, script dimostrativi e un
+<li>Fornire gli <strong>strumenti di sviluppo Lua</strong> — documentazione API, script dimostrativi e un
    terminale di debug.</li>
-<li>Aggiornare il bootloader della radio in modalità DFU (una connessione a radio spenta),
+<li>Eseguire il flash del bootloader della radio in modalità DFU (una connessione a radio spenta),
    indipendentemente dal fatto che il firmware della radio sia ancora funzionante.</li>
 <li>Riparare la memoria interna delle radio X18/S, TW Lite, XE e X20 Pro/R/RS
    tramite il <strong>Repair Tool</strong>, se la NAND non può essere letta o le impostazioni non vengono salvate.</li>
-<li>Espellere in modo sicuro le unità USB della radio.</li>
-<li>Notificare all'avvio la disponibilità di un aggiornamento della Suite stessa (installato
-    all'uscita).</li>
+<li>Espellere in modo corretto le unità USB della radio.</li>
+<li>Segnalare all'avvio la disponibilità di un aggiornamento della Suite stessa (che viene
+    installato all'uscita).</li>
 </ol>
 <h2 id="modalita-di-connessione">Modalità di connessione<a class="headerlink" href="#modalita-di-connessione" title="Permanent link">&para;</a></h2>
 <p>Oltre ai suoi strumenti, Suite opera in tre distinti stati di connessione della
 radio:</p>
 <ul>
 <li><strong>Radio in modalità Bootloader</strong> — la scheda <strong>Radio</strong> verifica/aggiorna il
-  firmware e i file della flash/SD card/eMMC; <strong>Model Manager</strong> esegue il backup
+  firmware e i file della memoria flash/scheda SD/eMMC; il <strong>Model Manager</strong> esegue il backup
   o il ripristino della radio.</li>
 <li><strong>Radio in modalità Ethos</strong> — Suite utilizza la radio come proxy (tramite gli
-  strumenti <strong>FRSK Flasher</strong>/Download center) per aggiornare direttamente il modulo interno,
-  o qualsiasi sensore/servo/ricevitore collegato.</li>
+  strumenti <strong>FRSK Flasher</strong>/Download center) per eseguire direttamente il flash del modulo interno,
+  o di qualsiasi sensore/servo/ricevitore collegato.</li>
 <li><strong>Radio in modalità DFU</strong> — connessione a radio spenta, utilizzata dal <strong>DFU
-  Flasher</strong> per aggiornare il bootloader stesso, ad esempio quando una corruzione del firmware
+  Flasher</strong> per eseguire il flash del bootloader stesso, ad esempio quando una corruzione del firmware
   impedisce alla radio di accendersi normalmente.</li>
 </ul>
-<p>Vedi <a href="migration/">Migrazione</a> per trasferire per la prima volta una radio esistente a Ethos
+<p>Consulta <a href="migration/">Migrazione</a> per trasferire per la prima volta una radio esistente a Ethos
 Suite, e <a href="operation/">Funzionamento</a> per l'interfaccia della Suite
 vera e propria.</p>
 

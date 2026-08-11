@@ -819,10 +819,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aviso-de-error" class="md-nav__link">
+  <a href="#alertas-de-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aviso de error
+        Alertas de error
       
     </span>
   </a>
@@ -2031,7 +2031,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2818,7 +2818,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3396,10 +3396,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aviso-de-error" class="md-nav__link">
+  <a href="#alertas-de-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aviso de error
+        Alertas de error
       
     </span>
   </a>
@@ -3462,46 +3462,47 @@
 <h2 id="pantalla-de-inicio">Pantalla de inicio<a class="headerlink" href="#pantalla-de-inicio" title="Permanent link">&para;</a></h2>
 <p><img alt="Pantalla de inicio" src="../../assets/mainview.png" /></p>
 <p>La pantalla de inicio es lo que se ve cuando no hay ningún menú abierto: un conjunto
-de hasta <strong>ocho</strong> pantallas de visualización que usted mismo configura (consulte
-<a href="../../displays/">Pantallas</a>), entre las que se navega deslizando el dedo o
-paginando con la tecla <code>PAGE</code>. Un modelo recién creado comienza con una sola pantalla
-que muestra una imagen del modelo, tres widgets de temporizador y los indicadores de
-trim/potenciómetros; a partir de ahí, todo lo que contiene es configurable por el usuario.</p>
-<p>Normalmente las pantallas comparten las barras superior e inferior descritas más abajo,
-pero también se puede configurar una pantalla como pantalla completa, ocultando ambas.</p>
+de hasta <strong>ocho</strong> pantallas que el propio usuario configura (consulte
+<a href="../../displays/">Pantallas</a>), entre las que se pasa mediante un gesto táctil o
+con la tecla <code>PAGE</code>. Un modelo recién creado empieza con una sola pantalla que muestra
+una imagen del modelo, tres widgets de cronómetro y los indicadores de los compensadores
+y los pots; a partir de ahí, todo lo que contiene puede configurarlo el usuario.</p>
+<p>Las pantallas normalmente comparten las barras superior e inferior descritas más abajo,
+pero también existe la opción de tener una pantalla completa, ocultando ambas barras.</p>
 <h2 id="la-barra-superior">La barra superior<a class="headerlink" href="#la-barra-superior" title="Permanent link">&para;</a></h2>
-<p>La barra superior muestra el nombre del modelo a la izquierda (además de la fase de vuelo
-activa, si hay alguna configurada) y una fila de iconos de estado a la derecha:</p>
+<p>La barra superior muestra el nombre del modelo a la izquierda, así como el Modo de Vuelo
+activo si está configurado, y a la derecha una fila de iconos de estado:</p>
 <ul>
-<li>Registro de datos activo</li>
-<li>Estado del modo entrenador (maestro o esclavo, según corresponda)</li>
-<li>RSSI — enlace de 2,4 GHz</li>
-<li>RSSI — enlace de 900 MHz (si está instalado un módulo de doble banda/largo alcance)</li>
+<li>Si el registro de datos está activo</li>
+<li>Icono de Entrenador (Maestro o Esclavo) según corresponda</li>
+<li>RSSI — enlace 2.4G</li>
+<li>RSSI — enlace 900MHz (si hay instalado un módulo de doble banda o de largo alcance)</li>
 <li>Volumen del altavoz</li>
-<li>Estado de la batería de la emisora</li>
+<li>Estado de la batería de la radio</li>
 </ul>
-<p>Al tocar el icono del altavoz o de la batería se accede directamente al panel de ajustes
-correspondiente: <a href="../../system-setup/general/">General</a> (audio) o
+<p>Al tocar los iconos del altavoz o de la batería, aparecerán directamente los paneles de
+control correspondientes: <a href="../../system-setup/general/">General</a> (Audio, etc.) o
 <a href="../../system-setup/battery/">Batería</a>.</p>
-<h3 id="aviso-de-error">Aviso de error<a class="headerlink" href="#aviso-de-error" title="Permanent link">&para;</a></h3>
-<p>Aparece un triángulo rojo en la barra superior siempre que Ethos detecta un error:
-un error en un script Lua, un error de copia de seguridad de la RAM o el uso de una
-versión de firmware nightly/inestable son las causas más habituales. El detalle que
-hay detrás del aviso siempre se encuentra en <strong>System → Info</strong>, en la misma página que
-el tiempo de uso de la emisora y los <a href="../../system-setup/information/">registros de errores</a>.</p>
+<h3 id="alertas-de-error">Alertas de error<a class="headerlink" href="#alertas-de-error" title="Permanent link">&para;</a></h3>
+<p>Cuando Ethos detecta un error, en la barra superior aparecerá un icono de alerta
+consistente en un triángulo rojo: las causas más habituales son los errores de los
+scripts Lua, un error en el backup de la RAM o que se haya cargado un firmware
+nightly/inestable. El detalle que hay detrás del aviso se muestra siempre en la página
+<strong>System → Info</strong>, en la misma página que el tiempo de uso de la radio y los
+<a href="../../system-setup/information/">registros de errores</a>.</p>
 <h2 id="la-barra-inferior">La barra inferior<a class="headerlink" href="#la-barra-inferior" title="Permanent link">&para;</a></h2>
 <p><img alt="Barra inferior" src="../../assets/bottombar.png" /></p>
-<p>En la parte inferior hay cuatro pestañas correspondientes a las secciones principales
-—<strong>Inicio</strong>, <strong>Configuración del modelo</strong>, <strong>Configurar pantallas</strong>, <strong>Configuración del
-sistema</strong>— con el reloj del sistema a la derecha (tóquelo para acceder directamente a
+<p>La barra inferior tiene cuatro pestañas para acceder a las funciones de nivel superior:
+<strong>Inicio</strong>, <strong>Configuración del Modelo</strong>, <strong>Configurar Pantallas</strong> y <strong>Configuración del
+sistema</strong>, con la hora del sistema a la derecha (tocando la hora se accede directamente a
 <a href="../../system-setup/date-and-time/">Fecha y hora</a>).</p>
 <h2 id="el-area-de-widgets">El área de widgets<a class="headerlink" href="#el-area-de-widgets" title="Permanent link">&para;</a></h2>
-<p>La parte central de cada pantalla se rellena con <strong>widgets</strong>: imagen del modelo,
-temporizadores, lecturas de telemetría, barras de trim/potenciómetros y más, todos
-colocados y configurados por usted. Consulte <a href="../../displays/">Pantallas</a> para saber
-cómo añadir, mover y configurar widgets, y
+<p>La zona central de cada pantalla está formada por <strong>widgets</strong>: imagen del modelo,
+cronómetros, datos de telemetría, barras de compensadores y pots, y mucho más, todos ellos
+colocados y configurados por el usuario. Consulte <a href="../../displays/">Pantallas</a> para
+saber cómo añadir, mover y configurar los widgets, y
 <a href="../../displays/additional-displays/">Pantallas adicionales</a> para añadir más pantallas
-además de la única predeterminada.</p>
+además de la única que hay por defecto.</p>
 
 
 

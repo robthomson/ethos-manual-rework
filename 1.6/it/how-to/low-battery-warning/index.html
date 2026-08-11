@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#avviso-di-tensione-batteria-bassa" class="md-skip">
+        <a href="#avviso-di-bassa-tensione-della-batteria" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3402,31 +3402,31 @@
   
 
 
-<h1 id="avviso-di-tensione-batteria-bassa">Avviso di tensione batteria bassa<a class="headerlink" href="#avviso-di-tensione-batteria-bassa" title="Permanent link">&para;</a></h1>
-<p>Monitorare la tensione del pacco di volo <strong>sotto carico</strong> e segnalare il superamento di una soglia è un approccio più affidabile rispetto all'uso di un timer fisso — un sensore come il FrSky FLVSS rende tutto ciò molto semplice.</p>
+<h1 id="avviso-di-bassa-tensione-della-batteria">Avviso di bassa tensione della batteria<a class="headerlink" href="#avviso-di-bassa-tensione-della-batteria" title="Permanent link">&para;</a></h1>
+<p>Monitorare la tensione del pacco di volo <strong>sotto carico</strong> e lanciare un allarme quando scende al di sotto di una soglia è un approccio più affidabile rispetto all'uso di un timer fisso — a tal fine è possibile utilizzare un sensore di tensione della batteria come FrSky FLVSS.</p>
 <h2 id="1-collegare-e-rilevare-il-sensore">1. Collegare e rilevare il sensore<a class="headerlink" href="#1-collegare-e-rilevare-il-sensore" title="Permanent link">&para;</a></h2>
-<p><img alt="Sensore telemetrico LiPo" src="../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
-<p>Impostare <a href="../../system-setup/devices/">Opzioni ricevitore → Porta telemetria</a> su <strong>S.Port</strong>, collegare il FLVSS al ricevitore tramite un cavo S.Port, quindi attivare <strong>Rileva nuovi sensori</strong> in <a href="../../model-setup/telemetry/">Telemetria</a> — il sensore LiPo compare insieme agli altri già rilevati.</p>
+<p><img alt="Sensore di telemetria LiPo" src="../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
+<p>Nelle <a href="../../system-setup/devices/">Opzioni del ricevitore → Porta di telemetria</a> imposta l'opzione <strong>S.Port</strong>, collega l'FLVSS al ricevitore tramite un cavo S.Port e attiva l'opzione <strong>Scopri nuovi sensori</strong> in <a href="../../model-setup/telemetry/">Telemetria</a> — il sensore LiPo compare insieme agli altri già rilevati.</p>
 <h2 id="2-aggiungere-un-interruttore-logico">2. Aggiungere un interruttore logico<a class="headerlink" href="#2-aggiungere-un-interruttore-logico" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruttore logico batteria bassa" src="../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
-<p>Aggiungere un nuovo <a href="../../model-setup/logical-switches/">interruttore logico</a> con il sensore Lipo come sorgente. Premere a lungo <code>ENT</code> sul sensore evidenziato per scegliere quale dei suoi valori utilizzare:</p>
-<p><img alt="Selezione della cella più bassa" src="../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
+<p><img alt="Interruttore logico batteria scarica" src="../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
+<p>Aggiungi un nuovo <a href="../../model-setup/logical-switches/">interruttore logico</a> e seleziona il sensore Lipo come sorgente. Con il sensore evidenziato, premi a lungo il tasto <code>ENT</code> per visualizzare la finestra di dialogo delle opzioni e scegliere quale dei suoi valori utilizzare:</p>
+<p><img alt="Selezione della tensione minima delle celle" src="../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
 <ul>
 <li>Tensione minima del pacco / Tensione massima del pacco</li>
-<li><strong>Tensione della cella più bassa</strong> / Tensione della cella più alta</li>
-<li>Numero di celle</li>
-<li>Tensioni delle singole celle (selezionabili solo quando il sensore è effettivamente collegato a un ricevitore associato con una LiPo connessa)</li>
+<li><strong>Tensione minima delle celle</strong> / Tensione massima delle celle</li>
+<li>Conteggio delle celle</li>
+<li>Tensioni delle singole celle (selezionabili come sorgenti solo quando il sensore è effettivamente collegato a un ricevitore connesso e ha una lipo collegata)</li>
 </ul>
-<p>Selezionare <strong>Lowest</strong> (tensione di cella) — il valore che conta per una protezione di tipo LVC.</p>
-<p><img alt="Cella più bassa selezionata" src="../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
-<p>Impostare il valore di confronto a circa <strong>3,4V</strong> e <strong>Ritardo prima dell'attivazione</strong> a <strong>4 secondi</strong> — l'interruttore diventa vero quando la cella più bassa rimane sotto i 3,4V per cella in modo continuativo per 4s o più. (3,4V <em>sotto carico</em> risalgono tipicamente a circa 3,7V una volta rimosso il carico, quindi questa soglia riflette un reale calo di tensione e non un semplice disturbo momentaneo.)</p>
+<p>Seleziona <strong>Inferiore</strong> (tensione minima di cella) — il valore che conta per una protezione di tipo LVC.</p>
+<p><img alt="Tensione minima delle celle selezionata" src="../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
+<p>Imposta il valore di confronto a qualcosa come <strong>3,4V</strong> e <strong>Ritardo prima di attivare</strong> a <strong>4 secondi</strong> — l'interruttore logico diventerà vero/attivo quando la tensione più bassa della cella rimarrà al di sotto di 3,4V per cella per almeno 4 secondi. (Una soglia di 3,4V <em>sotto carico</em> recupererà circa 3,7V quando non sarà più sotto carico, quindi questa soglia riflette un reale calo di tensione e non un semplice disturbo momentaneo.)</p>
 <p><img alt="Interruttore logico completato" src="../../assets/how-to-low-batt-lsw-summary.png" /></p>
 <h2 id="3-aggiungere-una-funzione-speciale">3. Aggiungere una funzione speciale<a class="headerlink" href="#3-aggiungere-una-funzione-speciale" title="Permanent link">&para;</a></h2>
 <p><img alt="Funzione speciale: BattLow" src="../../assets/how-to-low-batt-sf-battlow.png" /></p>
-<p>Aggiungere una <a href="../../model-setup/special-functions/">funzione speciale Riproduci audio</a>, con <strong>Condizione di attivazione</strong> impostata sull'interruttore logico <code>BattLow</code>, scegliere una voce e, in <strong>Sequenza</strong>, aggiungere un passo <strong>Riproduci valore</strong> per la tensione totale della LiPo:</p>
-<p><img alt="Riproduci valore: LiPo" src="../../assets/how-to-low-batt-sf-play-value-lipo.png" />
+<p>Aggiungi una <a href="../../model-setup/special-functions/">funzione speciale "Riproduci audio"</a>, imposta l'<strong>Attivazione</strong> sull'interruttore logico <code>BattLow</code>, seleziona la voce che desideri utilizzare e in <strong>Sequenza</strong> aggiungi un comando <strong>Riproduci Valore</strong> per la tensione totale della LiPo:</p>
+<p><img alt="Riproduci Valore: LiPo" src="../../assets/how-to-low-batt-sf-play-value-lipo.png" />
 <img alt="Riepilogo della sequenza" src="../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
-<p>Con <strong>Ripetizione</strong> impostata su 10 secondi, la tensione della LiPo viene annunciata ogni 10s per tutto il tempo in cui la cella più bassa rimane al di sotto della soglia di 3,4V/4s.</p>
+<p>Con <strong>Ripeti</strong> impostato su 10 secondi, la tensione della Lipo verrà riprodotta ogni 10 secondi finché la cella più bassa rimane al di sotto della soglia di 3,4V per cella per 4 secondi.</p>
 
 
 

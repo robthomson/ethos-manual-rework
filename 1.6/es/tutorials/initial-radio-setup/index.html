@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2251,10 +2251,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-realice-la-configuracion-del-sistema-de-la-emisora" class="md-nav__link">
+  <a href="#paso-3-realice-la-configuracion-del-sistema-de-radio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 3. Realice la configuración del sistema de la emisora
+        Paso 3. Realice la configuración del sistema de radio
       
     </span>
   </a>
@@ -2790,7 +2790,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-realice-la-configuracion-del-sistema-de-la-emisora" class="md-nav__link">
+  <a href="#paso-3-realice-la-configuracion-del-sistema-de-radio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Paso 3. Realice la configuración del sistema de la emisora
+        Paso 3. Realice la configuración del sistema de radio
       
     </span>
   </a>
@@ -3403,8 +3403,8 @@
 
 
 <h1 id="configuracion-inicial-de-la-emisora">Configuración inicial de la emisora<a class="headerlink" href="#configuracion-inicial-de-la-emisora" title="Permanent link">&para;</a></h1>
-<p>La configuración única que conviene realizar antes de programar cualquier modelo. Los
-<a href="../">Tutoriales</a> que siguen dan por hecho que esto se ha hecho primero.</p>
+<p>La configuración que solo hay que realizar una vez, antes de programar cualquier modelo. Los
+<a href="../">Tutoriales</a> que siguen dan por supuesto que ya se ha hecho.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Estos tutoriales no son un recetario estricto: dan por supuesto un
@@ -3422,10 +3422,11 @@ hardware</a>
 (se ejecuta automáticamente en el primer arranque), de modo que la emisora conozca el
 centro exacto y los límites de cada gimbal, potenciómetro y deslizador. Repítala en
 <strong>System → Hardware</strong> cada vez que se sustituya un gimbal, un potenciómetro o un deslizador.</p>
-<h2 id="paso-3-realice-la-configuracion-del-sistema-de-la-emisora">Paso 3. Realice la configuración del sistema de la emisora<a class="headerlink" href="#paso-3-realice-la-configuracion-del-sistema-de-la-emisora" title="Permanent link">&para;</a></h2>
-<p>La <a href="../../system-setup/">Configuración del sistema</a> abarca todo lo común a
-todos los modelos, a diferencia de los ajustes por modelo de la <a href="../../model-setup/">Configuración del modelo</a>.
-La mayoría de los valores por defecto son adecuados para empezar, pero revise:</p>
+<h2 id="paso-3-realice-la-configuracion-del-sistema-de-radio">Paso 3. Realice la configuración del sistema de radio<a class="headerlink" href="#paso-3-realice-la-configuracion-del-sistema-de-radio" title="Permanent link">&para;</a></h2>
+<p>La <a href="../../system-setup/">Configuración del sistema</a> abarca todo lo que es común a
+todos los modelos, a diferencia de los ajustes propios de cada modelo de la
+<a href="../../model-setup/">Configuración del modelo</a>.
+La mayoría de los valores por defecto son adecuados para empezar, pero conviene revisar:</p>
 <ul>
 <li><strong><a href="../../system-setup/date-and-time/">Fecha y hora</a></strong> — ajústelas correctamente.</li>
 <li><strong><a href="../../system-setup/general/#audio-settings">Audio → Elección de
@@ -3433,21 +3434,21 @@ La mayoría de los valores por defecto son adecuados para empezar, pero revise:<
   de voz, incluidos los archivos de audio personalizados.</li>
 <li><strong><a href="../../system-setup/controls/">Controles (Sticks)</a></strong>:</li>
 <li>
-<p><strong>Modo de sticks</strong> — Modo 1 (acelerador/alerones a la derecha, profundidad/dirección
-    a la izquierda) o Modo 2 (acelerador/dirección a la izquierda, alerones/profundidad a la derecha,
-    el valor por defecto de Ethos).</p>
+<p><strong>Modo de palancas</strong> — Modo 1 (acelerador/alerón a la derecha, profundidad/timón
+    a la izquierda) o Modo 2 (acelerador/timón a la izquierda, alerón/profundidad a la
+    derecha, el modo por defecto de Ethos).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Si un modelo está configurado para un modo de sticks mientras la
+<p>Si un modelo está configurado para un modo de palancas mientras la
 emisora está ajustada al otro, un motor eléctrico puede arrancar
-en el instante en que el receptor recibe alimentación.</p>
+en el instante en que se alimenta el receptor.</p>
 </div>
 </li>
 <li>
-<p><strong>Orden de canales</strong> — Ethos usa por defecto <strong>AETR</strong> (alerones, profundidad,
-    acelerador, dirección); la convención de Spektrum/JR es <strong>TAER</strong>, y la de Futaba/Hitec
-    es <strong>AETR</strong>. Esto establece el orden en que se asignan las entradas de los sticks al crear
-    un modelo nuevo; los modelos pueden ajustarse individualmente más adelante.</p>
+<p><strong>Orden de canales</strong> — Ethos usa por defecto <strong>AETR</strong> (Alerón, Elevador,
+    Acelerador, Timón); la convención de Spektrum/JR es <strong>TAER</strong>, y la de Futaba/Hitec
+    es <strong>AETR</strong>. Esto establece el orden en que se asignan las entradas de las palancas al
+    crear un modelo nuevo; después, cada modelo puede ajustarse individualmente.</p>
 <div class="admonition note">
 <p class="admonition-title">Receptores estabilizados FrSky</p>
 <p>Estos requieren específicamente <strong>AETR</strong>. Con más de una superficie
@@ -3466,15 +3467,15 @@ en cualquier caso.</p>
 </li>
 <li><strong><a href="../../model-setup/rf-system/#owner-registration-id">ID de registro del propietario</a></strong>
   — lo utilizan los receptores ACCESS, y se comparte entre emisoras para Smart
-  Share. Se configura en Configuración del modelo, pero en la práctica funciona como un ajuste
-  a nivel de sistema, ya que todo modelo nuevo lo utiliza (aún puede
-  cambiarse por receptor durante el registro si es necesario).</li>
+  Share. Se configura en la Configuración del modelo, pero en la práctica funciona como un
+  ajuste a nivel de sistema, ya que todo modelo nuevo lo utiliza (aún puede
+  cambiarse en cada receptor durante el registro si fuera necesario).</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Unidades</p>
 <p>Ethos no tiene un selector global entre sistema métrico e imperial: las <a href="../../model-setup/telemetry/#editing-a-sensor">unidades de los
 sensores de telemetría</a> se ajustan
-individualmente, para cada sensor.</p>
+individualmente, sensor por sensor.</p>
 </div>
 
 

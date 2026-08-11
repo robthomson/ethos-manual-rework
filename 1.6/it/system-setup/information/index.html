@@ -2801,7 +2801,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3427,25 +3427,25 @@
 <h1 id="informazioni">Informazioni<a class="headerlink" href="#informazioni" title="Permanent link">&para;</a></h1>
 <p><img alt="Informazioni di sistema" src="../../assets/system-info.png" /></p>
 <p>Dettagli sul firmware di sistema, tipo di gimbal, informazioni sui moduli RF interno/esterno,
-informazioni sul ricevitore associato, tempo di utilizzo della radio, registri degli errori e reset di fabbrica.</p>
+informazioni sul ricevitore connesso, tempo di utilizzo della radio, registro degli errori e reset di fabbrica.</p>
 <h2 id="informazioni-sulla-radio">Informazioni sulla radio<a class="headerlink" href="#informazioni-sulla-radio" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Serial number</strong> — il numero di serie della radio.</li>
-<li><strong>Firmware</strong> — versione di Ethos e tipo di radio (ad es. X20).</li>
-<li><strong>Firmware Version</strong> — variante di build, ad es. FCC, LBT o Flex.</li>
-<li><strong>Date</strong> — data/ora di compilazione del firmware.</li>
-<li><strong>RAM available</strong> — RAM di sistema libera, utile per individuare uno
-  script Lua che si comporta in modo anomalo; è disponibile anche come <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">sorgente</a> di sistema,
-  così da poter essere visualizzata in un widget.</li>
-<li><strong>Sticks</strong> — versione del sensore Hall dei gimbal installati (oppure "ADC" per gimbal
+<li><strong>Firmware</strong> — versione di Ethos e tipo di radio (ad esempio X20).</li>
+<li><strong>Firmware Version</strong> — variante della build, ad esempio FCC, LBT o Flex.</li>
+<li><strong>Date</strong> — data e ora di compilazione del firmware.</li>
+<li><strong>RAM available</strong> — RAM di sistema disponibile, utile per individuare uno
+  script Lua che non funziona correttamente; è disponibile anche come <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">sorgente</a> di sistema,
+  in modo da poter essere visualizzata in un widget.</li>
+<li><strong>Sticks</strong> — versione dei sensori Hall degli stick installati (oppure "ADC" per gli stick
   analogici).</li>
 <li><strong>Internal Module</strong> — versioni hardware e firmware del modulo RF
   interno.</li>
-<li><strong>Receiver</strong> — i dettagli del ricevitore attualmente associato, mostrati dopo il
+<li><strong>Receiver</strong> — i dettagli del ricevitore attualmente connesso, mostrati dopo il
   modulo interno. Se un ricevitore ridondante condivide lo stesso slot di
-  quello principale, i due si alternano sul display (ad es. un Archer SR10 Pro
-  mostrato insieme al suo ridondante R9MM-OTA sotto "Receiver1").</li>
-<li><strong>External Module</strong> — dettagli hardware/firmware di un modulo RF esterno
+  quello principale, i due si alternano sul display (ad esempio un Archer SR10 Pro
+  visualizzato insieme al suo ridondante R9MM-OTA sotto "Receiver1").</li>
+<li><strong>External Module</strong> — dettagli hardware e firmware di un modulo RF esterno
   FrSky installato che utilizza il protocollo ACCESS. I moduli Multi-protocol
   non vengono mostrati qui.</li>
 </ul>
@@ -3455,29 +3455,29 @@ informazioni sul ricevitore associato, tempo di utilizzo della radio, registri d
 <p>Tiene traccia del tempo totale di utilizzo della trasmittente; <strong>Reset</strong> lo azzera.</p>
 <h2 id="errori">Errori<a class="headerlink" href="#errori" title="Permanent link">&para;</a></h2>
 <p><img alt="Errori" src="../../assets/system-info-errors.png" /></p>
-<p>Un triangolo rosso nella barra superiore della vista principale indica che Ethos ha registrato un errore,
-mostrato qui in dettaglio. Le cause possono essere:</p>
+<p>Un triangolo rosso nella barra superiore della schermata principale indica che Ethos ha registrato un errore,
+qui mostrato in dettaglio. Le possibili cause sono:</p>
 <ul>
 <li><strong>Errori negli script Lua</strong> — un problema in uno script Lua in esecuzione.</li>
 <li><strong>RAM backup error</strong> — un modello troppo grande per la RAM di backup dei modelli. Ethos
   l'ha ampliata da 4K a 32K, quindi ora è improbabile che si verifichi, ma se accade
-  si tratta di un errore significativo: il modello viene caricato più lentamente dalla SD card
+  si tratta di un errore importante: il modello viene caricato più lentamente dalla SD card
   anziché dalla RAM di backup se viene attivata la <a href="../../getting-started/emergency-mode/">Modalità di
   emergenza</a>.</li>
-<li><strong>Utilizzo di una build nightly del firmware</strong> — un promemoria che le build nightly
+<li><strong>Utilizzo di una build nightly del firmware</strong> — un promemoria del fatto che le build nightly
   non sono destinate al volo.</li>
 </ul>
-<p><strong>Reset</strong> cancella gli errori registrati — utile durante una sessione di debug degli script Lua.</p>
+<p><strong>Reset</strong> cancella gli errori registrati — comodo durante una sessione di debug degli script Lua.</p>
 <h2 id="reset-di-fabbrica">Reset di fabbrica<a class="headerlink" href="#reset-di-fabbrica" title="Permanent link">&para;</a></h2>
 <p><img alt="Reset di fabbrica" src="../../assets/system-info-factory-reset.png" /></p>
-<p>Ripristina la radio alle impostazioni di fabbrica interamente sul dispositivo — non è necessaria
+<p>Ripristina le impostazioni di fabbrica della radio interamente dalla radio stessa: non è necessaria
 alcuna connessione al PC.</p>
 <p><img alt="Conferma del reset di fabbrica" src="../../assets/system-info-factory-reset-confirm.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>La conferma cancella <strong>tutti</strong> i modelli, i log, gli screenshot, i documenti,
-gli script, le bitmap e le impostazioni della radio. Una barra di avanzamento mostra la cancellazione,
-al termine della quale tutte le unità vengono smontate e la radio si riavvia.</p>
+gli script, le bitmap e le impostazioni della radio. Una barra di avanzamento mostra lo stato della
+cancellazione, al termine della quale tutte le unità vengono smontate e la radio si riavvia.</p>
 </div>
 <p>La pagina Info delle X20 Pro/R/RS mostra le informazioni equivalenti per quella
 famiglia di radio.</p>

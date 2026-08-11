@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2705,7 +2705,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3359,33 +3359,33 @@
 
 
 <h1 id="ethos-suite">Ethos Suite<a class="headerlink" href="#ethos-suite" title="Permanent link">&para;</a></h1>
-<p>Ethos Suite es la aplicación complementaria para Windows/Mac que permite gestionar una emisora con Ethos, conectada por USB.</p>
+<p>Ethos Suite es la aplicación complementaria para Windows/Mac que permite gestionar una radio con Ethos, conectada por USB.</p>
 <div class="admonition note">
 <p class="admonition-title">Capturas de pantalla pendientes</p>
-<p>Ethos Suite es una aplicación de PC independiente, no la emisora en sí, por lo que esta sección no utiliza las capturas de pantalla obtenidas del simulador que emplea el resto del manual — consulte <a href="../contributing/screenshot-pipeline/">Proceso de capturas de pantalla</a>.</p>
+<p>Ethos Suite es una aplicación de PC independiente, no la radio en sí, por lo que esta sección no utiliza las capturas de pantalla obtenidas del simulador que emplea el resto del manual — vea <a href="../contributing/screenshot-pipeline/">Proceso de capturas de pantalla</a>.</p>
 </div>
-<p>Una vez conectada, Ethos Suite puede:</p>
+<p>Una vez conectada, la Ethos Suite puede:</p>
 <ol>
-<li>Leer el tipo de emisora, su ID y las versiones instaladas: firmware, bootloader, módulo de RF interno, archivos de la memoria flash y archivos de la SD card/eMMC.</li>
-<li>Alternar la emisora entre el modo bootloader y la ejecución de Ethos, y volver atrás.</li>
-<li>Comparar las versiones instaladas con las actuales y actualizar automáticamente: solo los componentes desactualizados, todo sin excepción, o los componentes de forma individual.</li>
-<li>Respaldar los modelos en disco mediante el <strong>Model Manager</strong>, o restaurar una copia de seguridad anterior (necesario porque los archivos de modelo no son retrocompatibles entre versiones de firmware).</li>
-<li>Descargar cualquier firmware desde el sitio de descargas de FrSky a través del <strong>Download center</strong>, y usar la emisora como intermediario para actualizar directamente un módulo, sensor, servo o receptor.</li>
+<li>Leer el tipo de radio, su ID y las versiones instaladas: firmware, bootloader, módulo interno de RF, archivos de la memoria flash y archivos de la tarjeta SD o eMMC.</li>
+<li>Cambiar la radio del modo bootloader al modo Ethos, y volver a cambiar.</li>
+<li>Comparar las versiones instaladas con las actuales y actualizar de forma automática: sólo los componentes obsoletos, todos los componentes, o cada componente de forma individual.</li>
+<li>Guardar en disco una copia de seguridad de los modelos mediante el <strong>Gestor de Modelos</strong>, o restaurar una copia de seguridad anterior (necesario porque los archivos de modelos no son compatibles entre versiones de firmware).</li>
+<li>Descargar cualquier firmware desde el sitio de descargas de FrSky a través del <strong>Centro de descargas</strong>, y usar la radio como proxy para escribir directamente el firmware de un módulo, sensor, servo o receptor.</li>
 <li>Convertir imágenes y archivos de audio a los formatos nativos de Ethos.</li>
 <li>Ofrecer <strong>herramientas de desarrollo Lua</strong>: documentación de la API, scripts de demostración y un terminal de depuración.</li>
-<li>Actualizar el bootloader de la emisora en modo DFU (conexión con la emisora apagada), con independencia de que el firmware de la emisora siga funcionando.</li>
-<li>Reparar el almacenamiento interno en las emisoras X18/S, TW Lite, XE y X20 Pro/R/RS mediante el <strong>Repair Tool</strong>, si la NAND no se puede leer o los ajustes no se guardan.</li>
-<li>Expulsar de forma segura las unidades USB de la emisora.</li>
+<li>Escribir el bootloader de la radio en modo DFU (conexión con la radio apagada), independientemente de que el firmware de la radio siga funcionando.</li>
+<li>Reparar el almacenamiento interno de las radios X18/S, TW Lite, XE y X20 Pro/R/RS mediante la <strong>herramienta de reparación</strong>, si la NAND no se puede leer o los ajustes no se guardan.</li>
+<li>Expulsar de forma segura las unidades de disco de la radio.</li>
 <li>Avisar al inicio cuando hay disponible una actualización de la propia Suite (se instala al salir).</li>
 </ol>
 <h2 id="modos-de-conexion">Modos de conexión<a class="headerlink" href="#modos-de-conexion" title="Permanent link">&para;</a></h2>
-<p>Además de sus herramientas, Suite funciona con la emisora en tres estados de conexión distintos:</p>
+<p>Además de sus herramientas, la Suite funciona con la radio en tres estados de conexión distintos:</p>
 <ul>
-<li><strong>Emisora en modo bootloader</strong>: la pestaña <strong>Radio</strong> comprueba y actualiza el firmware y los archivos de la flash/SD card/eMMC; el <strong>Model Manager</strong> respalda o restaura la emisora.</li>
-<li><strong>Emisora en modo Ethos</strong>: Suite utiliza la emisora como intermediario (mediante las herramientas <strong>FRSK Flasher</strong>/Download center) para actualizar directamente el módulo interno o cualquier sensor, servo o receptor conectado.</li>
-<li><strong>Emisora en modo DFU</strong>: conexión con la emisora apagada, empleada por el <strong>DFU Flasher</strong> para actualizar el propio bootloader, por ejemplo cuando una corrupción del firmware impide que la emisora arranque con normalidad.</li>
+<li><strong>Radio en modo bootloader</strong>: la pestaña <strong>Radio</strong> comprueba y actualiza el firmware y los archivos de la memoria flash, de la tarjeta SD o eMMC; el <strong>Gestor de Modelos</strong> realiza o restaura la copia de seguridad de la radio.</li>
+<li><strong>Radio en modo Ethos</strong>: la Suite usa la radio como proxy (mediante las herramientas <strong>FRSK Flasher</strong>/Centro de descargas) para escribir directamente el firmware del módulo interno o de cualquier sensor, servo o receptor conectado.</li>
+<li><strong>Radio en modo DFU</strong>: conexión con la radio apagada, empleada por el <strong>DFU Flasher</strong> para escribir el propio bootloader, por ejemplo cuando una corrupción del firmware impide que la radio arranque con normalidad.</li>
 </ul>
-<p>Consulte <a href="migration/">Migración</a> para trasladar por primera vez una emisora existente a Ethos Suite, y <a href="operation/">Funcionamiento</a> para conocer la interfaz de Suite en sí.</p>
+<p>Vea <a href="migration/">Migración</a> para pasar por primera vez una radio existente a Ethos Suite, y <a href="operation/">Funcionamiento</a> para conocer la interfaz de la Suite en sí.</p>
 
 
 

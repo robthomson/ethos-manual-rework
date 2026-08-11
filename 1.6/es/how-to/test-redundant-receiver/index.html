@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#probar-una-configuracion-de-receptor-redundante" class="md-skip">
+        <a href="#como-probar-un-sistema-de-receptores-redundantes" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2566,10 +2566,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-prueba-en-condiciones-reales" class="md-nav__link">
+  <a href="#a-prueba-real" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A. Prueba en condiciones reales
+        A. Prueba real
       
     </span>
   </a>
@@ -2577,10 +2577,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-prueba-de-banco" class="md-nav__link">
+  <a href="#b-prueba-en-banco" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B. Prueba de banco
+        B. Prueba en banco
       
     </span>
   </a>
@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3334,10 +3334,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-prueba-en-condiciones-reales" class="md-nav__link">
+  <a href="#a-prueba-real" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A. Prueba en condiciones reales
+        A. Prueba real
       
     </span>
   </a>
@@ -3345,10 +3345,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-prueba-de-banco" class="md-nav__link">
+  <a href="#b-prueba-en-banco" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B. Prueba de banco
+        B. Prueba en banco
       
     </span>
   </a>
@@ -3380,35 +3380,36 @@
   
 
 
-<h1 id="probar-una-configuracion-de-receptor-redundante">Probar una configuración de receptor redundante<a class="headerlink" href="#probar-una-configuracion-de-receptor-redundante" title="Permanent link">&para;</a></h1>
-<p>La redundancia solo vale la pena si realmente se prueba antes de volar —
-esto supone que ya hay un <a href="../../model-setup/rf-system/#redundant-receivers">receptor redundante</a>
-configurado.</p>
+<h1 id="como-probar-un-sistema-de-receptores-redundantes">Cómo probar un sistema de receptores redundantes<a class="headerlink" href="#como-probar-un-sistema-de-receptores-redundantes" title="Permanent link">&para;</a></h1>
+<p>La redundancia solo sirve de algo si se comprueba de verdad antes de volar —
+para esta prueba se asume que ya ha configurado un <a href="../../model-setup/rf-system/#redundant-receivers">receptor redundante</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Capturas de pantalla pendientes</p>
 <p>Esta página aún no tiene capturas de pantalla del simulador — consulte <a href="../../contributing/screenshot-pipeline/">Flujo
 de capturas de pantalla</a>.</p>
 </div>
-<h2 id="a-prueba-en-condiciones-reales">A. Prueba en condiciones reales<a class="headerlink" href="#a-prueba-en-condiciones-reales" title="Permanent link">&para;</a></h2>
-<p>Con el receptor principal en 2,4 GHz y el redundante en 900 MHz, inicie una
-<a href="../../model-setup/rf-system/#range-check">Prueba de alcance</a> y aléjese del
-modelo hasta que la señal de 2,4 GHz se pierda (más allá de la alerta de RSSI
-crítico). En ese momento, el receptor redundante de 900 MHz debería asumir el
-control.</p>
-<h2 id="b-prueba-de-banco">B. Prueba de banco<a class="headerlink" href="#b-prueba-de-banco" title="Permanent link">&para;</a></h2>
+<h2 id="a-prueba-real">A. Prueba real<a class="headerlink" href="#a-prueba-real" title="Permanent link">&para;</a></h2>
+<p>Asumiendo que el receptor principal es 2.4G y el redundante 900M, active la
+<a href="../../model-setup/rf-system/#range-check">prueba de alcance</a> y simplemente
+aléjese caminando del modelo hasta que el receptor de 2.4G deje de funcionar
+(por ejemplo, después de obtener la alerta crítica de RSSI). En ese momento, el
+receptor redundante de 900M debería haber tomado el control del modelo.</p>
+<h2 id="b-prueba-en-banco">B. Prueba en banco<a class="headerlink" href="#b-prueba-en-banco" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Confirme la configuración normal</strong> — ambos receptores vinculados, ambos
-   LED verdes encendidos, los controles respondiendo con normalidad.</li>
-<li><strong>Vincule el receptor principal a otro Model ID</strong> — cree un modelo de prueba
-   desechable (por ejemplo, «TestRx») con un Model ID diferente y vincule a él
-   el receptor <em>principal</em>. Vuelva al modelo que está probando: el LED del
-   receptor principal debería estar ahora <strong>rojo</strong> (vinculado en otro lugar),
-   mientras que el LED del receptor redundante permanece <strong>verde</strong> — y los
-   controles deberían seguir funcionando, lo que demuestra que el receptor
-   redundante por sí solo mantiene el modelo en condiciones de vuelo.</li>
-<li><strong>Vuelva a vincular el receptor principal</strong> a su Model ID habitual. Confirme
-   que ambos LED vuelven a estar verdes y que los controles funcionan antes de
-   dar la prueba por finalizada.</li>
+<li><strong>Confirme el funcionamiento normal de la configuración</strong> — ambos receptores
+   vinculados, ambos con los LED verdes encendidos y los controles respondiendo
+   con normalidad.</li>
+<li><strong>Vincule el receptor principal a otra ID de modelo</strong> — cree un modelo
+   sencillo de pruebas (por ejemplo, «TestRx») con una ID de modelo distinta y
+   vincule a él el receptor <em>principal</em>. Cambie de nuevo al modelo que se quiere
+   probar: el LED del receptor principal debería estar ahora en <strong>rojo</strong> (por
+   estar vinculado con otro modelo), mientras que el LED del receptor redundante
+   debería seguir en <strong>verde</strong> — y los controles deberían funcionar
+   perfectamente, probando que el receptor redundante por sí solo mantiene el
+   modelo en condiciones de vuelo.</li>
+<li><strong>Vuelva a vincular el receptor principal</strong> a la ID normal del modelo.
+   Confirme que las luces LED de ambos receptores están de nuevo en verde y que
+   los controles funcionan normalmente antes de dar la prueba por finalizada.</li>
 </ol>
 
 

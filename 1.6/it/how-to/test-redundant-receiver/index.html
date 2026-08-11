@@ -2779,7 +2779,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulla radio
+    Note sulle radio
   
 
     
@@ -3386,28 +3386,28 @@ si presuppone che un <a href="../../model-setup/rf-system/#redundant-receivers">
 sia già configurato.</p>
 <div class="admonition note">
 <p class="admonition-title">Screenshot in arrivo</p>
-<p>Questa pagina non dispone ancora di screenshot del simulatore — vedere <a href="../../contributing/screenshot-pipeline/">Screenshot
+<p>Questa pagina non dispone ancora degli screenshot del simulatore — vedi <a href="../../contributing/screenshot-pipeline/">Screenshot
 Pipeline</a>.</p>
 </div>
 <h2 id="a-prova-sul-campo">A. Prova sul campo<a class="headerlink" href="#a-prova-sul-campo" title="Permanent link">&para;</a></h2>
-<p>Con il ricevitore principale a 2,4 GHz e quello ridondante a 900 MHz, avviare un
-<a href="../../model-setup/rf-system/#range-check">Range Check</a> e allontanarsi dal
+<p>Con il ricevitore principale a 2,4 GHz e quello ridondante a 900 MHz, avvia un
+<a href="../../model-setup/rf-system/#range-check">Range Check</a> e allontanati dal
 modello finché il collegamento a 2,4 GHz non viene perso (oltre l'allarme RSSI Critical).
 A quel punto il ricevitore ridondante a 900 MHz deve assumere il controllo.</p>
 <h2 id="b-prova-al-banco">B. Prova al banco<a class="headerlink" href="#b-prova-al-banco" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Verificare la configurazione normale</strong> — entrambi i ricevitori collegati (bind),
-   entrambi i LED verdi accesi, comandi che rispondono normalmente.</li>
-<li><strong>Eseguire il bind del ricevitore principale su un altro Model ID</strong> — creare un
+<li><strong>Conferma la configurazione normale</strong> — entrambi i ricevitori registrati e
+   collegati, entrambi i LED verdi accesi, comandi che rispondono normalmente.</li>
+<li><strong>Esegui il bind del ricevitore principale su un altro Model ID</strong> — crea un
    modello di prova temporaneo (ad esempio "TestRx") con un Model ID diverso ed
-   eseguire il bind del ricevitore <em>principale</em> su di esso. Tornare al modello in prova:
-   il LED del ricevitore principale deve ora essere <strong>rosso</strong> (associato altrove),
-   mentre il LED del ricevitore ridondante rimane <strong>verde</strong> — e i comandi devono
-   continuare a funzionare, dimostrando che il solo ricevitore ridondante mantiene
-   il modello pilotabile.</li>
-<li><strong>Rieseguire il bind del ricevitore principale</strong> sul suo Model ID normale.
-   Verificare che entrambi i LED siano nuovamente verdi e che i comandi funzionino
-   prima di considerare conclusa la prova.</li>
+   esegui il bind del ricevitore <em>principale</em> su di esso. Torna al modello sotto
+   test: il LED del ricevitore principale ora deve essere <strong>rosso</strong> (perché
+   associato altrove), mentre il LED del ricevitore ridondante rimane <strong>verde</strong> —
+   e i comandi devono continuare a funzionare, a dimostrazione che il solo
+   ricevitore ridondante mantiene il modello pilotabile.</li>
+<li><strong>Esegui di nuovo il bind del ricevitore principale</strong> sul suo Model ID normale.
+   Prima di considerare conclusa la prova, verifica che entrambi i LED siano
+   nuovamente verdi e che i comandi funzionino.</li>
 </ol>
 
 

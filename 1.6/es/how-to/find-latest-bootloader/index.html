@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Lua Scripts
   
 
     
@@ -2720,7 +2720,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de la emisora
+    Notas sobre las emisoras
   
 
     
@@ -3292,15 +3292,15 @@
 
 
 <h1 id="encontrar-el-bootloader-mas-reciente-u-otro-componente">Encontrar el bootloader más reciente u otro componente<a class="headerlink" href="#encontrar-el-bootloader-mas-reciente-u-otro-componente" title="Permanent link">&para;</a></h1>
-<p>Las versiones publicadas del firmware Ethos incluyen un archivo <code>components.json</code> que enumera la versión actual de cada componente para cada emisora, lo que resulta útil para confirmar si una determinada versión de bootloader/firmware/audio/archivos de sistema es realmente la actual antes de instalarla.</p>
+<p>Las versiones publicadas del firmware de Ethos incluyen un archivo <code>components.json</code> que indica la versión actual de cada componente para cada radio, lo que resulta útil para confirmar si una determinada versión del bootloader, del firmware, de los archivos de audio o de los archivos de sistema está realmente actualizada antes de escribirla en la radio.</p>
 <div class="admonition note">
 <p class="admonition-title">Capturas de pantalla pendientes</p>
-<p>Esta página aún no tiene capturas de pantalla del simulador; consulte <a href="../../contributing/screenshot-pipeline/">Flujo de trabajo de capturas de pantalla</a>.</p>
+<p>Esta página aún no tiene capturas de pantalla del simulador; vea <a href="../../contributing/screenshot-pipeline/">Flujo de trabajo de capturas de pantalla</a>.</p>
 </div>
 <ol>
-<li>Descargue <code>components.json</code> de la última versión de Ethos.</li>
+<li>Descargue el archivo <code>components.json</code> de la última versión de Ethos.</li>
 <li>Ábralo en un editor de texto (VS Code, Notepad, etc.).</li>
-<li>Localice la sección correspondiente a su emisora, por ejemplo <code>X20</code>:</li>
+<li>Busque la sección correspondiente a su radio, por ejemplo <code>X20</code>:</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;targets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;X20&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;X20S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;X18&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;X18S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;XE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;XE-S&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;X20 Pro&quot;</span><span class="p">],</span>
@@ -3312,11 +3312,11 @@
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>(Se trata de un ejemplo puntual: consulte siempre el archivo de la versión <em>actual</em> para obtener los números de versión reales).</p>
+<p>(Se trata de un ejemplo puntual: consulte siempre el archivo de la versión <em>actual</em> para conocer los números de versión reales).</p>
 <ol>
-<li>Consulte la versión del componente que necesite; en el ejemplo anterior, el último bootloader para la familia X20 es <code>1.4.15</code>.</li>
+<li>Lea la versión del componente que necesite; en el ejemplo anterior, el bootloader más reciente para la familia X20 es el <code>1.4.15</code>.</li>
 </ol>
-<p>Consulte <a href="../../system-setup/file-manager/#top-level-folders">Gestor de archivos</a> para saber dónde colocar el archivo de firmware descargado, y <a href="../../getting-started/usb-connection-modes/#bootloader-mode">Modos de conexión USB</a> para poner la emisora en modo bootloader e instalarlo; o bien utilice <a href="../../ethos-suite/">Ethos Suite</a>, que se encarga automáticamente de comprobar las versiones y realizar la instalación.</p>
+<p>Vea la sección <a href="../../system-setup/file-manager/#top-level-folders">Gestor de archivos</a> para saber dónde colocar el archivo de firmware descargado, y <a href="../../getting-started/usb-connection-modes/#bootloader-mode">Modos de conexión USB</a> para poner la radio en modo bootloader y actualizarla; o bien utilice <a href="../../ethos-suite/">Ethos Suite</a>, que se encarga automáticamente de comprobar las versiones y de escribir el firmware.</p>
 
 
 
@@ -3372,13 +3372,13 @@
         
         
           
-          <a href="../../radio-notes/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Notas de la emisora">
+          <a href="../../radio-notes/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Notas sobre las emisoras">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Notas de la emisora
+                Notas sobre las emisoras
               </div>
             </div>
             <div class="md-footer__button md-icon">
