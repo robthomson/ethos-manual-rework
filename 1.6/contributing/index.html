@@ -3183,6 +3183,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nav-labels-nav_translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nav labels (nav_translations)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3420,6 +3431,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nav-labels-nav_translations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nav labels (nav_translations)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3573,10 +3595,18 @@ repo's own <code>bin/i18n/auto-translate.py</code>. A glossary of terms establis
 during the French pilot is baked in for <code>fr</code>; extend
 <code>GLOSSARIES</code> in the script the same way once another locale has a few
 pages translated and reviewed.</p>
-<p>Nav tab labels (e.g. "Model Setup") stay in English until a locale sets
-<code>nav_translations</code> for them — deliberately not done yet while only a
-handful of pages are translated, since translating labels ahead of the
-content behind them would read oddly.</p>
+<h3 id="nav-labels-nav_translations">Nav labels (<code>nav_translations</code>)<a class="headerlink" href="#nav-labels-nav_translations" title="Permanent link">&para;</a></h3>
+<p>Tab and sidebar labels in <code>nav:</code> (e.g. "Model Setup") don't pick up a
+locale's translated page title automatically unless the nav entry has no
+explicit label at all (e.g. <code>- how-to/index.md</code> — MkDocs then uses that
+page's own H1). Everywhere <code>nav:</code> gives an explicit <code>Label: path.md</code>
+string, or names a section (<code>Model Setup:</code> as a dict key with children),
+that label stays in English until the locale's <code>nav_translations</code> map in
+<code>mkdocs.yml</code> covers it — added for a locale once its page coverage is
+substantial enough that translating the chrome ahead of most of the
+content wouldn't read oddly. <code>fr</code>'s map was filled in once French reached
+full page coverage; each leaf label was copied verbatim from that page's
+own translated H1, so the sidebar text matches the page heading exactly.</p>
 
 
 
