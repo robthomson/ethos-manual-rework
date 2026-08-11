@@ -102,10 +102,25 @@ Nothing to duplicate up front. [`mkdocs-static-i18n`](https://github.com/ultrabu
 falls back to the English file for *any* asset a locale doesn't have its
 own copy of — a translated page's `../assets/foo.png` just works,
 unmodified, showing the English screenshot, until a real localized one
-(captured once the [screenshot pipeline](screenshot-pipeline.md) is
-ported and run against that language's radio settings) is dropped in at
-the same filename under `docs/<locale>/assets/`, which silently
-overrides the fallback from then on.
+is dropped in at the same filename under `docs/<locale>/assets/`, which
+silently overrides the fallback from then on.
+
+**`de` and `fr` already have real localized screenshots** — not captured
+here, but bulk-imported from the old [`ethos-manual`](https://github.com/FrSkyRC/ethos-manual)
+repo, which turned out to have near-complete per-language screenshot sets
+FrSky's own team had already captured (`german/assets/` and, for French,
+`french_LT/assets/` — the more complete of its two French asset sets, not
+the smaller `french/assets/` its README describes as "half way"). Filenames
+match our own `docs/en/assets/` 1:1, so importing was a straight copy: 586
+of our 589 currently-referenced screenshots landed for both languages in
+one pass, no simulator involved. The handful that didn't match (2-3 files,
+mostly newer pages the old repo's macros never covered) still fall back to
+English as normal.
+
+For any locale beyond `de`/`fr`, or for closing that last few percent,
+capturing new screenshots means the [screenshot pipeline](screenshot-pipeline.md)
+— porting/running the real macro rig against the simulator — since that
+work wasn't already done upstream.
 
 ### Staleness tracking
 
