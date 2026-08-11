@@ -3136,6 +3136,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Translation plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addingupdating-a-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding/updating a translation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staleness-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Staleness tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3190,6 +3229,34 @@
     
   
     Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="translation-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation Status
   
 
     
@@ -3295,6 +3362,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Translation plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addingupdating-a-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding/updating a translation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staleness-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Staleness tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3373,30 +3479,55 @@ live in the same repo as separate branches, each deployed to its own
 <code>manual.rt-rc.com/&lt;version&gt;/</code> path with a version-select dropdown — see
 <a href="versioning/">Versioning</a> for the full scheme and how to cut a new one.</p>
 <h2 id="translation-plan">Translation plan<a class="headerlink" href="#translation-plan" title="Permanent link">&para;</a></h2>
-<p>Translation tooling is deliberately <strong>not</strong> built yet. Non-technical
-translators will need to learn enough git to branch, edit, and open a PR —
-a real barrier, but preferred over standing up and maintaining a separate
-translation app before there's a stable English source to translate from.
-Content is kept in plain Markdown specifically so that path stays open:</p>
-<ul>
-<li>In the near term, a translator (human or AI) works from the English
-  <code>docs/en/</code> tree directly, producing a sibling <code>docs/&lt;locale&gt;/</code> tree with
-  the same file structure.</li>
-<li><a href="https://github.com/ultrabug/mkdocs-static-i18n"><code>mkdocs-static-i18n</code></a> is
-  already wired up (<code>docs_structure: folder</code>, <code>en</code> as the default
-  language) — it understands exactly this folder-per-locale layout
-  (<code>docs/en/…</code>, <code>docs/fr/…</code>) and adds a language switcher automatically
-  the moment a second locale's folder exists; no further plugin
-  configuration is needed to add one.</li>
-<li>Screenshots are <strong>not</strong> shared across locales — the Ethos UI itself is
-  localized, so each locale's <code>assets/</code> folder needs its own screenshots
-  captured with that language's radio settings file (see <a href="screenshot-pipeline/">Screenshot
-  Pipeline</a>).</li>
-<li>Whether translation staleness (English pages that changed after they were
-  translated) needs its own tooling, versus being tracked by git history
-  alone, is an open question to revisit once there's a second language to
-  actually maintain.</li>
-</ul>
+<p>Translators (human or AI) work directly in git, same as any other
+change — no CMS, no separate translation app. A first French pilot
+(a handful of pages) proved the mechanics out end to end; here's how it
+actually works.</p>
+<h3 id="addingupdating-a-translation">Adding/updating a translation<a class="headerlink" href="#addingupdating-a-translation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Branch, create/edit <code>docs/&lt;locale&gt;/&lt;same path as the English page&gt;</code>,
+   translating the prose. Keep code-literal text (key names like <code>ENT</code>,
+   <code>RTN</code>, UI element names shown on screen) as-is.</li>
+<li>Stamp the page with which English commit it was translated from:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>---
+<span class="gu">translated_from: &lt;commit sha of docs/en/... at translation time&gt;</span>
+<span class="gu">---</span>
+</code></pre></div>
+<p>Find that sha with <code>git log -1 --format=%H -- docs/en/&lt;path&gt;</code>.
+3. <strong>If the English page has a heading that other pages link to by
+   anchor</strong> (check by searching for <code>#that-heading-slug</code> across
+   <code>docs/en/</code>), don't let the translated heading's own auto-generated
+   slug change the target — pin the same, locale-stable ID explicitly
+   with <code>attr_list</code> (already enabled):</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Choisir une source {: #choosing-a-source }</span>
+</code></pre></div>
+<p>Skipping this doesn't break the build, but it does silently break the
+   anchor scroll-to for any other, still-untranslated page linking into
+   that heading via fallback.
+4. Open a PR — <a href="#pr-previews">preview it</a> like any other change, including
+   the language switcher.</p>
+<h3 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h3>
+<p>Nothing to duplicate up front. <a href="https://github.com/ultrabug/mkdocs-static-i18n"><code>mkdocs-static-i18n</code></a>
+falls back to the English file for <em>any</em> asset a locale doesn't have its
+own copy of — a translated page's <code>../assets/foo.png</code> just works,
+unmodified, showing the English screenshot, until a real localized one
+(captured once the <a href="screenshot-pipeline/">screenshot pipeline</a> is
+ported and run against that language's radio settings) is dropped in at
+the same filename under <code>docs/&lt;locale&gt;/assets/</code>, which silently
+overrides the fallback from then on.</p>
+<h3 id="staleness-tracking">Staleness tracking<a class="headerlink" href="#staleness-tracking" title="Permanent link">&para;</a></h3>
+<p><a href="translation-status/">Translation Status</a> is generated automatically
+before every build (<code>hooks/i18n_status.py</code>, wired up via <code>mkdocs.yml</code>'s
+<code>hooks:</code> — runs locally, in PR previews, and in production alike, always
+current, never committed to git) and compares every locale's
+<code>translated_from</code> marker against each English page's actual last-changed
+commit: <strong>current</strong>, <strong>stale</strong> (English moved on), or <strong>missing</strong>. That
+page is the worklist — no GitHub Issues, no digging through Actions logs.</p>
+<p>Nav tab labels (e.g. "Model Setup") stay in English until a locale sets
+<code>nav_translations</code> for them — deliberately not done yet while only a
+handful of pages are translated, since translating labels ahead of the
+content behind them would read oddly.</p>
 
 
 
