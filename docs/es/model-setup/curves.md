@@ -21,8 +21,8 @@ con **+**; toque una curva existente para
 
 - **Expo** — valor por defecto 40; un valor positivo suaviza la respuesta en
   torno al centro, uno negativo la hace más agresiva. Suavizar la zona central
-  del stick ayuda a evitar el sobrecontrol, especialmente en pilotos con menos
-  experiencia.
+  del recorrido de la palanca ayuda a evitar el sobrecontrol, especialmente en
+  pilotos con menos experiencia.
 
   ![Expo](../assets/model-curves-expo.png)
 
@@ -46,7 +46,7 @@ con **+**; toque una curva existente para
     ![|x|](../assets/model-curves-fn-barx.png)
 
   - **f > 0** — devuelve 100 % mientras la fuente es positiva, 0 mientras es
-    negativa (un conmutador brusco, no un paso directo).
+    negativa (una conmutación brusca, no un paso directo).
 
     ![f > 0](../assets/model-curves-fn-fgt0.png)
 
@@ -76,30 +76,32 @@ con **+**; toque una curva existente para
     ![Curva suavizada](../assets/model-curves-custom5-2-smooth.png)
 
   - **Modo fácil** — **On** limita la edición a coordenadas Y con separación
-    uniforme (X queda fija); **Off** permite editar tanto X como Y en cada
-    punto, salvo los extremos de −100 %/+100 %, que están bloqueados porque la
-    curva debe cubrir siempre todo el rango de la señal.
+    uniforme (la X queda fija); **Off** permite editar tanto la X como la Y de
+    cada punto, salvo los puntos extremos de −100 %/+100 %, que están
+    bloqueados porque la curva debe cubrir siempre todo el rango de la señal.
 
     ![Modo fácil desactivado](../assets/model-curves-custom-easy-off.png)
 
-  **Controles del editor** (mismo esquema que el [editor de curvas de
+  **Controles del editor** (mismo esquema que el [editor de la curva de
   equilibrado de Salidas](outputs.md#balance-channels)):
 
-  - **Fuente** — por defecto, la(s) propia(s) fuente(s) de mezcla de la curva,
-    o **Entrada analógica automática** para capturar el primer
-    stick/deslizador/potenciómetro que se mueva.
-  - Ajuste al punto más cercano con el codificador rotatorio, y un conmutador
-    **Bloquear** para congelar las entradas mientras se observa el movimiento
-    resultante de la superficie de control.
-  - Un cursor en vivo muestra el valor de entrada actual que acciona la curva,
-    para ayudar a alinearlo con un punto antes de ajustarlo.
+  - **Fuente** — por defecto, la/s fuente/s configuradas en las mezclas de la
+    propia curva, u opcionalmente **Auto analog input**: la primera palanca,
+    slider o pot que mueva se usará como fuente.
+  - El punto más cercano de la curva se selecciona automáticamente para su
+    ajuste con el selector rotatorio, y un icono de candado (**Bloqueo**)
+    permite bloquear todas las entradas para poder soltar la palanca y observar
+    el movimiento de las superficies de control mientras ajusta la curva.
+  - Un cursor en vivo muestra el valor de entrada actual que acciona la curva;
+    la entrada debe ajustarse para alinear ese valor con un punto de la curva
+    antes de realizar el ajuste.
 
 ## Accionar una curva desde una Var
 
 Tanto el **Offset** de una curva de Función como un punto individual de una
 curva **Personalizada** pueden ser accionados por una [Var](variables.md) en
 lugar de por un valor fijo — y esa Var, a su vez, puede ajustarse en vuelo
-mediante un trim reasignado:
+mediante un compensador (trim) reasignado:
 
 ![Offset de función desde una Var](../assets/model-curves-fn-offset-var.png)
 ![Punto de curva personalizada desde una Var](../assets/model-curves-custom-with-var.png)

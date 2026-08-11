@@ -7,18 +7,18 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ![Texto de lista de verificación del usuario](../assets/model-checklist-user-checklist.png)
 
 La función [Lista de verificación](../model-setup/checklist.md) puede mostrar
-texto personalizado al inicio —texto plano o con formato Markdown— de forma
+texto personalizado al arrancar —texto plano o con formato Markdown— de forma
 automática, cada vez que se carga ese modelo.
 
-## 1. Crear el texto de la lista de verificación
+## 1. Cree el texto de la lista de verificación
 
-**Texto plano** — escríbelo en cualquier editor de texto (Notepad++, o incluso
-MS Word guardando como texto plano) y guárdalo como `<model name>.txt`.
+**Texto plano** — escríbalo en cualquier editor de texto (Notepad++, o incluso
+MS Word guardándolo como texto plano) y guárdelo como `<model name>.txt`.
 
-**Texto mejorado (Markdown)** — Ethos admite formato Markdown, por ejemplo
-`##` para un encabezado o `**negrita**` para texto en negrita. Utiliza cualquier
-editor de texto (incorporando la sintaxis Markdown manualmente) o un editor
-Markdown específico (Nextpad, MarkText, etc.), y guárdalo como `<model name>.md`.
+**Texto mejorado (Markdown)** — Ethos admite el formato Markdown, por ejemplo
+`##` para un encabezado o `**negrita**` para texto en negrita. Utilice cualquier
+editor de texto (introduciendo la sintaxis Markdown a mano) o un editor Markdown
+específico (Nextpad, MarkText, etc.), y guárdelo como `<model name>.md`.
 
 ```markdown
 ## Emphasis
@@ -26,15 +26,15 @@ Markdown específico (Nextpad, MarkText, etc.), y guárdalo como `<model name>.m
 *this is italic text*
 ```
 
-## 2. Copiarlo a la emisora
+## 2. Cópielo a la emisora
 
-Copia el archivo en la misma carpeta `models/` donde se encuentra el archivo
-`.bin` del propio modelo (consulta [Administrador de archivos](../system-setup/file-manager.md#top-level-folders)),
-y después expulsa de forma segura las unidades de la emisora antes de
+Copie el archivo en la misma carpeta `models/` en la que está el archivo `.bin`
+del propio modelo (consulte [Administrador de archivos](../system-setup/file-manager.md#top-level-folders)),
+y después expulse de forma segura las unidades de la emisora antes de
 desconectarla.
 
-## 3. Revisarlo
+## 3. Compruébelo
 
-Carga el modelo: el texto de la lista de verificación aparecerá ahora
-automáticamente como parte de las comprobaciones de inicio, con posibilidad de
-desplazamiento si ocupa más de una pantalla.
+Cargue el modelo: el texto de la lista de verificación aparecerá ahora
+automáticamente como parte de las comprobaciones de arranque, y podrá
+desplazarse por él si ocupa más de una pantalla.

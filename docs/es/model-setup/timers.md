@@ -9,9 +9,9 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Ocho temporizadores totalmente programables, cada uno con cuenta ascendente o
 descendente. Añada uno con el **+** situado junto a los encabezados de columna,
 o mediante **Añadir** más abajo. Al tocar un temporizador se abren las opciones
-de reinicio/edición/añadir/mover/copiar-pegar.
+de reiniciar/editar/añadir/mover/copiar-pegar.
 
-![Edición de temporizador](../assets/model-timer1-edit.png)
+![Edición del temporizador](../assets/model-timer1-edit.png)
 
 ## Campos comunes (cuenta descendente y ascendente)
 
@@ -21,31 +21,31 @@ de reinicio/edición/añadir/mover/copiar-pegar.
 - **Valor inicial** (solo cuenta descendente) — el valor desde el que se
   descuenta.
 - **Valor de alarma** (solo cuenta ascendente) — el valor a partir del cual se
-  considera que el temporizador ha transcurrido; sigue contando más allá de este
+  considera que el temporizador ha transcurrido; sigue contando más allá de ese
   valor, pero se muestra en rojo en los widgets de temporizador.
 - **Condición de inicio** — pone en marcha el temporizador. Si la **condición de
-  parada** se deja en su valor predeterminado, la condición de inicio controla
-  por sí sola el arranque *y* la parada. En caso contrario, el temporizador se
-  inicia la primera vez que la condición de inicio se cumple y continúa
+  parada** se deja en su valor por defecto, la condición de inicio controla por
+  sí sola el arranque *y* la parada. En caso contrario, el temporizador se
+  inicia la primera vez que la condición de inicio se cumple y sigue
   funcionando a partir de ese momento.
-- **Condición de parada** — si no se deja en su valor predeterminado, controla el
+- **Condición de parada** — si no se deja en su valor por defecto, controla el
   temporizador una vez en marcha: detenido mientras sea verdadera, en marcha
-  mientras sea falsa. En el ejemplo siguiente, un temporizador se inicia cuando
-  `ThrottleActive` pasa a ser verdadero y se detiene cuando la telemetría deja de
-  estar activa:
+  mientras sea falsa. En el ejemplo siguiente, el temporizador se inicia cuando
+  `ThrottleActive` pasa a ser verdadero y se detiene cuando la telemetría deja
+  de estar activa:
 
   ![Condición de parada](../assets/model-timer1-edit-stop.png)
 
-- **Fuente de temporización proporcional** — `---` cuenta en tiempo real.
+- **Fuente de temporización proporcional** — con `---` cuenta en tiempo real.
   Cualquier otra fuente (por ejemplo, el stick de acelerador o el canal de
   acelerador) escala la velocidad del temporizador: a −100 % el temporizador
-  está detenido, a +100 % funciona a velocidad de tiempo real, y escala
-  proporcionalmente entre ambos extremos.
-- **Reinicio** — un interruptor, interruptor de función, interruptor lógico o
-  posición de trim que reinicia el temporizador; se mantiene reiniciado mientras
-  la condición sea verdadera.
-- **Persistente** — conserva el valor del temporizador tras apagar la emisora o
-  cambiar de modelo, recuperándolo la próxima vez que se use el modelo.
+  está parado, a +100 % funciona a velocidad real, y entre ambos extremos
+  escala proporcionalmente.
+- **Reiniciar** — un interruptor, interruptor de función, interruptor lógico o
+  posición de trim que reinicia el temporizador; se mantiene reiniciado
+  mientras la condición sea verdadera.
+- **Persistente** — conserva el valor del temporizador al apagar la emisora o
+  al cambiar de modelo, y lo recupera la próxima vez que se use ese modelo.
 - **Voz** — qué [paquete de voz](../system-setup/general.md#audio-settings)
   anuncia este temporizador.
 
@@ -56,13 +56,13 @@ de reinicio/edición/añadir/mover/copiar-pegar.
 ![Acción de cuenta atrás](../assets/model-timer1-action-countdown.png)
 
 Configuración de avisos totalmente flexible para cada temporizador. Cada acción
-tiene un tipo — **Countdown** (cuenta atrás hablada), **Beep countdown** (pitidos
-en lugar de voz), **Play file** (reproducir archivo) o **Play value**
+tiene un tipo — **Countdown** (cuenta atrás hablada), **Beep countdown**
+(pitidos en lugar de voz), **Play file** (reproducir archivo) o **Play value**
 (reproducir valor) — además de:
 
-- **Start** — el valor desde el que comienza la cuenta atrás de esta acción.
-- **Step** — intervalo de anuncio, hasta 10 minutos (600 s).
-- **Haptic** — acompañar el anuncio con vibración.
+- **Start** — el valor desde el que empieza la cuenta atrás de esta acción.
+- **Step** — intervalo de aviso, hasta 10 minutos (600 s).
+- **Haptic** — acompañar el aviso con vibración.
 
 Un conjunto típico de tres acciones:
 
@@ -71,13 +71,13 @@ Un conjunto típico de tres acciones:
 
 1. Cuenta atrás hablada a partir de 2:00 restantes, cada 30 s, con vibración.
 2. Cuenta atrás con pitidos a partir de 0:10 restantes, cada 1 s, con vibración.
-3. Un archivo personalizado (por ejemplo, `timer-1-elapsed`) reproducido al
+3. Un archivo personalizado (por ejemplo, `timer-1-elapsed`) que se reproduce al
    transcurrir el tiempo, con vibración.
 
 Añada más acciones con **Añadir**; la lista se ejecuta por orden de prioridad,
 con la **prioridad más alta al final**.
 
-Consulte también el [widget de pantalla Timer Log](../displays/index.md#widget-types)
-para obtener un registro continuo de las ejecuciones anteriores del temporizador.
+Consulte también el [widget Registros de cronómetro](../displays/index.md#widget-types)
+para disponer de un registro de los tiempos anteriores.
 
 ![Widget de temporizador](../assets/model-timers-widget.png)

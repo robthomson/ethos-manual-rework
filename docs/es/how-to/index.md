@@ -8,13 +8,13 @@ Guías breves y centradas en tareas concretas que los pilotos suelen querer
 configurar, a diferencia de la referencia pestaña por pestaña de
 [Configuración del modelo](../model-setup/index.md).
 
-- [Aviso de batería baja](low-battery-warning.md)
+- [Aviso de tensión baja de batería](low-battery-warning.md)
 - [Aviso de capacidad de batería](battery-capacity-warning.md)
-- [Configuración de modelo SR8/SR10 y reordenación de canales](sr8-sr10-setup.md)
-- [Mezclador mariposa (cocodrilo)](butterfly-mixer.md)
-- [Configurar un sistema FBUS](fbus-setup.md)
-- [Probar una configuración de receptor redundante](test-redundant-receiver.md)
-- [Lista de verificación con texto definido por el usuario](user-defined-checklist.md)
+- [Configuración del modelo SR8/SR10 y reordenación de canales](sr8-sr10-setup.md)
+- [Mezcla Butterfly (Crocodile)](butterfly-mixer.md)
+- [Cómo configurar un sistema FBUS](fbus-setup.md)
+- [Cómo probar un sistema de receptores redundantes](test-redundant-receiver.md)
+- [Lista de comprobación con un texto personalizado](user-defined-checklist.md)
 - [Curva de compensación ajustable en vuelo](in-flight-compensation-curve.md)
-- [Recuperación instantánea del control para la función de instructor](instant-takeback.md)
-- [Encontrar el bootloader más reciente u otro componente](find-latest-bootloader.md)
+- [Recuperación instantánea del profesor para la función de entrenamiento](instant-takeback.md)
+- [Cómo encontrar el bootloader más reciente u otros componentes](find-latest-bootloader.md)

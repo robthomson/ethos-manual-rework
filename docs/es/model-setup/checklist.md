@@ -8,10 +8,11 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Un conjunto de comprobaciones de seguridad previas al vuelo que se ejecutan
 al encender la emisora y/o al cargar un modelo. Las comprobaciones
-integradas incluyen modo silencioso, failsafe sin configurar, posiciones de
-interruptores/potenciómetros, batería de la emisora y batería RTC: la
-comprobación de interruptores muestra en qué dirección debe moverse cada
-interruptor, señalado con puntos rojos en la pantalla de advertencia:
+integradas incluyen el modo silencioso, el failsafe sin configurar, las
+posiciones de los interruptores/potenciómetros y las baterías de la emisora
+y del RTC: la comprobación de interruptores indica en qué dirección debe
+moverse cada interruptor, señalado con puntos rojos en la pantalla de
+advertencia:
 
 ![Lista de verificación al arrancar](../assets/model-checklist-at_start.png)
 
@@ -24,10 +25,10 @@ interruptor, señalado con puntos rojos en la pantalla de advertencia:
 ![Función de comprobación](../assets/model-checklist-check_function.png)
 
 Actívela y elija un operador — `<` (menor que), `~` (aproximadamente igual)
-o `>` (mayor que) — respecto a un valor; avisa si el stick del acelerador
+o `>` (mayor que) — respecto a un valor; avisa si la palanca del acelerador
 está fuera de lo que permite esa comparación.
 
-## Comprobación de failsafe
+## Comprobación del failsafe
 
 Avisa si no se ha configurado el [failsafe](rf-system.md#failsafe) para el
 modelo actual.
@@ -40,12 +41,12 @@ modelo actual.
 ![Interruptores](../assets/model-checklist-switches.png)
 ![Opciones de comprobación de interruptores](../assets/model-checklist-switches-options.png)
 
-Por cada interruptor, permite exigir una posición concreta al arrancar (los
+Permite exigir una posición concreta al arrancar para cada interruptor (los
 interruptores con nombres personalizados definidos en [Configuración del
 sistema → Hardware](../system-setup/hardware.md#switches-settings) muestran
 esos nombres). **Cargar todas las posiciones de los interruptores** captura
-las posiciones físicas *actuales* como las posiciones deseadas para todos
-los interruptores que no estén marcados como **Sin comprobación**.
+las posiciones físicas *actuales* como posiciones deseadas para todos los
+interruptores que no estén marcados como **Sin comprobación**.
 
 ## Comprobación de interruptores de función
 
