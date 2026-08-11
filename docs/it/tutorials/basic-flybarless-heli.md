@@ -2,98 +2,100 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Esempio base di elicottero flybarless
+# Esempio di elicottero flybarless di base
 
-Una configurazione base di elicottero flybarless (FBL), prendendo come
+Configurazione di un elicottero flybarless (FBL) di base, prendendo come
 esempio un controller quale lo Spirit. A differenza di un modello ad ala
 fissa, un elicottero è intrinsecamente instabile: il controller FBL
-utilizza giroscopi (velocità di rotazione) e accelerometri
-(movimento/orientamento) per calcolare le correzioni di
-imbardata/beccheggio/rollio tramite un anello di controllo PID
-(Proporzionale-Integrale-Derivativo) opportunamente tarato, bilanciando
-stabilità, reattività e sovraelongazione in base alle caratteristiche
-fisiche ed elettriche del singolo elicottero.
+utilizza giroscopi (che misurano il tasso di rotazione attorno a un asse)
+e accelerometri (che rilevano movimento e orientamento) per calcolare le
+correzioni di imbardata, beccheggio e rollio tramite un anello di
+controllo PID (Proportional Integral Derivative) opportunamente regolato,
+bilanciando stabilità, reattività e overshoot in funzione delle
+caratteristiche fisiche ed elettriche del singolo elicottero.
 
-Questo tutorial tratta esclusivamente l'aspetto della **programmazione
-della radio**: per il resto fare riferimento alla documentazione della
-propria unità FBL, avendo già una solida conoscenza generale degli
-elicotteri.
+Questo tutorial si occupa solo della **programmazione radio**: per il
+resto della configurazione fare riferimento alla documentazione della
+propria unità FBL, presupponendo già una buona conoscenza del
+funzionamento degli elicotteri.
 
 !!! danger
-    Per sicurezza, rimuovere le pale del rotore prima di iniziare.
+    Prima di iniziare, per evitare lesioni, rimuovere le pale del rotore.
 
-## Passo 1. Verificare le impostazioni di sistema
+## Passo 1. Conferma le impostazioni del sistema
 
-Ordine dei canali **AETR**, **[Primi quattro canali
-fissi](../system-setup/controls.md#first-four-channels-fixed)** **OFF**:
-le unità FBL Spirit si aspettano i canali SBUS esattamente in questo
-ordine (pur utilizzando internamente TAER nella propria configurazione).
-Registrare (se ACCESS) e connettere il ricevitore tramite [RF
-System](../model-setup/rf-system.md).
+Ordine dei canali **AETR** e **[Primi quattro canali
+fissi](../system-setup/controls.md#first-four-channels-fixed)** su
+**OFF**: le unità Spirit FBL si aspettano i canali SBUS esattamente in
+questo ordine (nonostante l'unità utilizzi il TAER nella propria
+configurazione). Registrare (se il ricevitore è ACCESS) e collegare il
+ricevitore tramite [RF System](../model-setup/rf-system.md).
 
-## Passo 2. Individuare i servi/canali necessari
+## Passo 2. Identificare i servi/canali necessari
 
 | Funzione | Canale |
 |---|---|
-| Rollio (alettoni) | — |
-| Beccheggio (profondità) | — |
+| Rollio (alettone) | — |
+| Passo (elevatore) | — |
 | Gas | — |
 | Imbardata (timone) | — |
-| Guadagno giroscopio | 5 |
+| Guadagno del giroscopio | 5 |
 | Passo collettivo | 6 |
-| Banco impostazioni | 7 |
+| Banco di impostazioni | 7 |
 | Rescue | 8 |
 
-## Passo 3. Creare un nuovo modello
+## Passo 3. Crea un nuovo modello
 
-![Creazione del modello elicottero](../assets/tut-heli-eg-wiz-create-heli.png)
+![Creazione guidata del modello elicottero](../assets/tut-heli-eg-wiz-create-heli.png)
 
-Da [Selezione modello](../model-setup/model-select.md), creare/selezionare
-una categoria Heli, avviare la procedura guidata e scegliere
-**Flybarless**:
+Da [Selezione del modello](../model-setup/model-select.md),
+creare/selezionare una categoria Heli, avviare la procedura guidata e
+scegliere **Flybarless**:
 
 ![Selezione FBL](../assets/tut-heli-eg-wiz-fbl.png)
 ![Nome del modello](../assets/tut-heli-eg-wiz-name.png)
 
-Assegnare un nome e scegliere un'immagine.
+Definire un nome e un'immagine per il modello.
 
 ## Passo 4. Rivedere e configurare i mix
 
 ![Panoramica dei mix](../assets/tut-heli-eg-mixes.png)
 
-La procedura guidata crea Alettoni/Profondità/Gas/Timone nell'ordine
-AETR, il Passo sul canale 6 e il FBL Bank sul canale 7:
+La procedura guidata crea Alettoni, Elevatori, Motore e Timone nella
+sequenza AETR, il Pitch sul canale 6 e il Bank FBL sul canale 7:
 
-![Mix del passo](../assets/tut-heli-eg-mixes-pitch.png)
+![Mix del pitch](../assets/tut-heli-eg-mixes-pitch.png)
 
-Verificare che il canale 6 sia il Passo collettivo. Occorre aggiungere
-manualmente altri due canali come [Mix
-liberi](../model-setup/mixes.md#mix-libraries): **Guadagno giroscopio**
+Verificare che il canale 6 sia il Pitch collettivo. Occorre aggiungere
+manualmente altri due canali utilizzando i [Free
+Mix](../model-setup/mixes.md#mix-libraries): **Guadagno del giroscopio**
 (canale 5) e **Rescue/Stabi** (canale 8).
 
-**Alettoni/Profondità/Timone**: nulla da aggiungere; rate ed Expo sono
-compito dell'unità FBL, quindi la radio si limita a trasmettere un
-segnale lineare pulito.
+**Alettone/Elevatore/Timone**: non è necessario aggiungere nulla; i rates
+e l'expo sono gestiti dall'unità FBL, quindi la radio passa semplicemente
+gli ingressi di controllo lineare all'unità FBL.
 
 ![Mix degli alettoni](../assets/tut-heli-eg-mixes-ail.png)
 
-**Passo collettivo**: una curva lineare; basta verificare il canale di
-uscita (normalmente il 6). Come sopra, rate ed Expo sono gestiti
-dall'unità FBL e non qui.
+**Pitch collettivo**: è solo una curva lineare, quindi è sufficiente
+confermare il canale di uscita (normalmente il canale 6). Come sopra, i
+rates e l'expo sono gestiti dall'unità FBL e non qui.
 
-**FBL Bank**: i tre banchi di impostazioni dello Spirit (stili di volo
-differenti, guadagni dei sensori a regimi diversi, oppure
-Principiante/Acro/3D — o semplicemente preset di taratura) assegnati a un
+**Bank FBL**: i tre banchi di impostazioni dello Spirit (per passare da
+uno stile di volo all'altro, per ottenere un diverso guadagno del sensore
+a bassi o alti regimi, oppure per principianti, acro o 3D — o
+semplicemente per mettere a punto le impostazioni) assegnati a un
 interruttore a 3 posizioni, ad esempio SE:
 
 ![Mix del banco](../assets/tut-heli-eg-mixes-bank.png)
 
-**Guadagno giroscopio**: aggiungerlo come Mix libero dopo l'ultimo
-canale. Il guadagno è tipicamente un valore fisso: impostare **Sorgente**
-su Valore speciale 0, regolare il guadagno tramite **Offset**
-(perfezionandolo in volo successivamente) e portare l'uscita sul canale 5:
+**Guadagno del giroscopio**: aggiungerlo come Free Mix dopo l'ultimo
+canale. Il guadagno è in genere un valore fisso: impostare la
+**sorgente** su Valore speciale 0, comporre il valore di guadagno
+richiesto utilizzando l'**offset** (il valore finale può essere
+determinato in volo) e assegnare il canale di uscita 5:
 
-![Mix del guadagno giroscopio](../assets/tut-heli-eg-mixes-gyro-gain.png)
+![Mix del guadagno del giroscopio](../assets/tut-heli-eg-mixes-gyro-gain.png)
 
 ### Configurare le fasi di volo
 
@@ -108,99 +110,107 @@ sull'interruttore SD.
 Tre curve del gas, una per ciascuna fase di volo, ognuna una [curva
 personalizzata](../model-setup/curves.md):
 
-- **Normal**: avviamento/decollo, parte da −100% (motore spento) e sale
-  in modo graduale. Una curva a 7 punti con **Smooth** attivo funziona
-  bene; i valori esatti richiedono una taratura in volo.
+- **Normal**: viene utilizzata per lo spool up e il decollo, quindi la
+  curva inizia a −100% (motore spento) e poi aumenta dolcemente. Una
+  curva a 7 punti con **Smooth** attivo dà un buon risultato; i valori
+  finali possono essere determinati in volo.
 
   ![Curva Normal](../assets/tut-heli-eg-curves-normal.png)
 
-- **Idle Up 1**: volo generico, una curva rettilinea corrispondente a un
-  valore di gas costante che mantiene stabile la velocità del rotore, con
-  il movimento affidato invece a Passo collettivo, Alettoni (rollio) e
-  Profondità (beccheggio). Mantenere fluida la transizione da Normal,
-  senza salti bruschi. (La maggior parte delle unità FBL offre anche una
-  funzione **Governor** per mantenere costante la velocità del rotore
-  durante le manovre più aggressive: consultare il manuale dell'unità
+- **Idle Up 1**: viene utilizzata per la maggior parte dei voli; la curva
+  rettilinea significa un'impostazione costante del gas per far girare i
+  rotori a una velocità costante, mentre il movimento dell'elicottero è
+  controllato dal Pitch collettivo, dagli alettoni (rollio) e
+  dall'elevatore (beccheggio). Non ci deve essere un grande salto tra
+  Normal e Idle Up 1, in modo che la transizione avvenga senza problemi.
+  (La maggior parte delle unità FBL offre anche una funzione **Governor**,
+  che assicura che la velocità del rotore sia mantenuta costante anche
+  durante le manovre di volo aggressive: consultare il manuale dell'unità
   FBL.)
 
   ![Curva Idle Up 1](../assets/tut-heli-eg-curves-iup1.png)
 
-- **Idle Up 2**: volo aggressivo (acrobazia, 3D); anche in questo caso da
-  tarare in volo.
+- **Idle Up 2**: utilizzata per voli più aggressivi (acrobatici e 3D);
+  anche in questo caso il valore finale può essere determinato in volo.
 
   ![Curva Idle Up 2](../assets/tut-heli-eg-curves-iup2.png)
 
 ![Curve del gas nei mix](../assets/tut-heli-eg-mixes-thr-curves.png)
 
-**Taglio gas**: assegnare ad esempio l'interruttore SG in alto con
-**Sticky** attivo: portando SG in alto il gas viene tagliato
-istantaneamente e, grazie a Sticky, può essere riarmato solo dopo aver
-riportato lo stick del gas al minimo.
+**Taglio gas**: assegnare ad esempio l'interruttore SG-up con **Sticky**
+attivo: il gas verrà tagliato non appena si porta l'interruttore in
+posizione 'Up' e, a causa dell'impostazione Sticky, può essere riarmato
+solo con lo stick del gas in posizione bassa (off).
 
 ![Taglio gas](../assets/tut-heli-eg-mixes-thr-cut.png)
 
-**Rescue/Stabi**: assegnarlo in modo analogo, ad esempio
+**Rescue/Stabi**: in modo analogo, può essere assegnato ad esempio
 all'interruttore SA sul canale 8.
 
 ![Mix finali](../assets/tut-heli-eg-mixes-final.png)
 
-## Passo 5. Configurazione dell'unità FBL
+## Passo 5. Impostazione FBL
 
-1. **Installare il software di configurazione FBL**, ad esempio Spirit
-   Settings, su un PC.
-2. **Collegare il ricevitore all'unità FBL** secondo il relativo schema
-   di cablaggio: tipicamente l'uscita SBUS Out del ricevitore alla porta
-   RUD dell'unità FBL (alcuni modelli Spirit richiedono un adattatore
-   SBUS), oppure tramite F.Port1/FBUS.
-3. **Collegare l'unità FBL al PC**, via cavo o Bluetooth, secondo il
-   relativo manuale.
+1. **Installare lo strumento di configurazione FBL**, ad esempio il
+   software Spirit Settings, sul PC.
+2. **Collegare il ricevitore all'unità FBL** seguendo la sezione
+   Cablaggio del relativo manuale: tipicamente l'uscita SBUS del
+   ricevitore va collegata alla porta RUD dell'unità FBL (alcuni modelli
+   Spirit richiedono un adattatore SBUS), oppure si può utilizzare la
+   porta F.Port1/FBUS.
+3. **Collegare l'unità FBL al PC**, utilizzando il cavo in dotazione o
+   via Bluetooth, come indicato nel relativo manuale.
 
    !!! danger
-       Non collegare ancora alcun servo.
+       Non collegare ancora nessun servo!
 
-4. **Aggiornare il firmware FBL** se necessario, dalla scheda Update del
-   software.
-5. **Configurazione generale** (scheda General di Spirit Settings):
+4. **Aggiornare il firmware dell'FBL** alla versione più recente, se
+   necessario, dalla scheda Update dello strumento.
+5. **Configurazione generale** (scheda Generale di Spirit Settings):
    - Tipo di ricevitore: **Futaba SBUS** oppure **FrSky F.Port** a
-     seconda dei casi, quindi riavviare.
-   - Mappatura dei canali (con AETR impostato dalla procedura guidata):
+     seconda dei casi, quindi riavviare il sistema.
+   - Mappatura dei canali (con l'ordine AETR della procedura guidata):
 
      | Funzione | Canale |
      |---|---|
      | Gas | 1 |
-     | Alettoni | 2 |
-     | Profondità | 3 |
+     | Alettone | 2 |
+     | Elevatore | 3 |
      | Timone | 4 |
-     | Giroscopio | 5 |
-     | Passo | 6 |
+     | Gyro | 5 |
+     | Pitch | 6 |
      | Bank | 7 |
      | Rescue/Stabi | 8 |
 
-     (Questa mappatura deriva dal modo in cui l'unità Spirit interpreta
-     le posizioni all'interno del flusso dati SBUS.)
+     (Questo ordine dei canali è dovuto al fatto che l'unità Spirit fa
+     delle ipotesi sulla posizione dei canali nel flusso di dati SBUS.)
 
-6. **Limiti dei canali** (scheda Diagnostic): l'unità FBL necessita di
-   limiti dei canali della radio calibrati e di centri verificati.
+6. **Limiti del canale** (scheda Diagnostica): per un corretto
+   funzionamento dell'unità FBL è necessario calibrare i limiti dei
+   canali della radio e controllare i centri.
 
    - Azzerare innanzitutto tutti i subtrim e i trim sulla radio.
-   - Centrare lo stick del Passo collettivo in modo che indichi
-     esattamente 1500µs in [Uscite](../model-setup/outputs.md).
-   - Accendere l'unità FBL e verificare che alettoni/profondità/passo/
-     timone indichino tutti 0% nella scheda Diagnostic (l'unità FBL
-     rileva automaticamente il neutro a ogni inizializzazione).
-   - Portare ciascun comando ai propri estremi e regolare i
-     corrispondenti valori **Min**/**Max** in Uscite finché la scheda
-     Diagnostic non indica esattamente +100%/−100%, verificando anche che
-     la direzione della barra corrisponda a quella dello stick.
+   - Portare lo stick del Pitch collettivo in posizione centrale per
+     ottenere un'uscita di esattamente 1500µs nella pagina
+     [Uscite](../model-setup/outputs.md).
+   - Accendere l'unità FBL e controllare che i canali di alettoni,
+     elevatore, passo e timone siano centrati allo 0% nella scheda
+     Diagnostica (l'unità FBL rileva automaticamente la posizione neutra
+     durante ogni inizializzazione).
+   - Spostare ciascun comando fino ai suoi limiti e regolare le
+     corrispondenti impostazioni **Min**/**Max** nella pagina Uscite
+     finché la scheda Diagnostica non indica esattamente +100%/−100%,
+     verificando anche che la direzione del movimento delle barre
+     corrisponda a quella degli stick.
 
    !!! warning
-       Non utilizzare mai subtrim o trim su questi canali: l'unità FBL
-       Spirit li interpreta come comandi di ingresso, non come
-       calibrazione.
+       Non utilizzare mai le funzioni di subtrim o trim su questi canali:
+       l'unità Spirit FBL le considera come un comando di ingresso e non
+       come una calibrazione.
 
-7. Regolare l'**Offset** del mix del Guadagno giroscopio per ottenere
-   l'Heading Lock.
+7. Regolare il valore dell'**offset** nel mix del Guadagno del giroscopio
+   per garantire il blocco della direzione (Heading Lock).
 
-Fatto questo, il lato trasmittente è completamente configurato:
-proseguire con il resto della configurazione secondo il manuale
-dell'unità FBL.
+Dopo queste regolazioni, tutto è configurato per quanto riguarda il
+trasmettitore: si può continuare con il resto della configurazione
+dell'FBL come indicato nel manuale dell'unità FBL.

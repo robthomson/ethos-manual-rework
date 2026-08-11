@@ -6,297 +6,310 @@ translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 
 ![Sensori rilevati](../assets/model-telemetry-discovered-new-sensors.png)
 
-La telemetria trasmette le informazioni dal modello al pilota — qualità
-del collegamento (RSSI, VFR), tensioni e correnti, e qualsiasi altro dato
-riportato da un sensore collegato (posizione GPS, altitudine e così via).
-Sono supportati fino a 100 sensori per modello; il rilevamento e la
+La telemetria riporta le informazioni dal modello al pilota — qualità del
+collegamento (RSSI, VFR), tensioni e correnti e qualsiasi altro dato
+inviato da un sensore collegato (posizione GPS, altitudine e così via).
+Sono supportati fino a 100 sensori per modello; la scoperta e la
 configurazione avvengono qui, ma la telemetria viene effettivamente
-*visualizzata* tramite [widget delle schermate di
-display](../displays/index.md), configurati separatamente in Configura
-schermate.
+*visualizzata* tramite i [widget delle schermate di
+visualizzazione](../displays/index.md), configurati separatamente in
+Configura schermate.
 
 ## Come funziona la telemetria FrSky {: #how-frsky-telemetry-works }
 
-I sensori FrSky non richiedono un hub: **Smart Port (S.Port)** è un bus a
-3 fili (Gnd, V+, Segnale), collegabile a margherita in qualsiasi ordine
-alla connessione S.Port dei ricevitori serie X/S e successivi, che opera
-in half-duplex a 57.600 bps (F.Port e FBUS sono più veloci).
+La serie di sensori FrSky ha un design senza hub: la **Smart Port
+(S.Port)** è un bus fisico a tre fili (Gnd, V+ e Signal), collegabile in
+cascata in qualsiasi sequenza alla connessione S.Port dei ricevitori delle
+serie X e S e successive, e comunica in half duplex a 57.600 bps (F.Port e
+FBUS sono più veloci).
 
-- **Physical ID** — fino a 28 nodi (ricevitore incluso) condividono il
-  bus, ciascuno con la necessità di un Physical ID univoco (00–1B esa).
-  I dispositivi FrSky sono forniti con valori predefiniti sensati (es.
-  Vario = 00, FLVSS = 01, Current = 02, GPS = 03) — se si collegano due
-  dispositivi identici, il Physical ID del secondo deve essere modificato
-  tramite [Device Config](../system-setup/devices.md).
-- **Application ID** — indipendente dal Physical ID: un singolo sensore
-  può riportare più valori, ciascuno con il proprio Application ID. Un
-  Vario ha un solo Physical ID ma due Application ID (Altitudine,
-  Velocità verticale); un FLVSS ha un Physical ID e un Application ID
-  (Tensione). Monitorare due pacchi 6S con due sensori FLVSS significa
-  modificare **entrambi** gli ID sul secondo — il Physical ID per la
-  comunicazione esclusiva sul bus, l'Application ID affinché il
-  ricevitore possa distinguere Lipo 1 da Lipo 2 (es. `0300` → `0301`).
-  Normalmente si varia la 4ª cifra esadecimale, 0–F.
+- **ID fisico** — il bus supporta fino a 28 nodi (ricevitore compreso),
+  ciascuno dei quali deve avere un ID fisico univoco (da 00 a 1B hex). I
+  dispositivi FrSky escono di fabbrica con valori predefiniti sensati (ad
+  esempio Vario = 00, FLVSS = 01, Current = 02, GPS = 03) — se colleghi
+  due dispositivi uguali, l'ID fisico del secondo deve essere modificato
+  tramite [Configurazione dispositivo](../system-setup/devices.md).
+- **ID applicazione** — indipendente e non correlato all'ID fisico: un
+  singolo sensore può inviare più valori, ognuno con il proprio ID
+  applicazione. Un Vario ha un solo ID fisico ma due ID applicazione
+  (Altitudine, Velocità verticale); un FLVSS ha un ID fisico e un ID
+  applicazione (Tensione). Per monitorare due pacchi 6S con due sensori
+  FLVSS occorre cambiare **entrambi** gli ID sul secondo — l'ID fisico per
+  garantire una comunicazione esclusiva sul bus, l'ID applicazione per
+  consentire al ricevitore di distinguere i dati provenienti dalle Lipo 1
+  e 2 (ad esempio `0300` → `0301`). Normalmente si modifica la quarta
+  cifra esadecimale, da 0 a F.
 
   !!! note
-      Sensori che condividono un Application ID ma con Physical ID
-      differenti sono ammessi solo con il [rilevamento dei conflitti tra
-      sensori](../system-setup/alerts.md) disattivato — una
-      configurazione per usi particolari, non il caso predefinito.
+      Per applicazioni speciali è possibile avere sensori con lo stesso ID
+      applicazione e diversi ID fisici quando l'[avviso di conflitto tra
+      sensori](../system-setup/alerts.md) è disabilitato — si tratta di
+      una configurazione per usi particolari, non del caso predefinito.
 
-Ogni valore ricevuto viene gestito come sensore a sé stante: valore,
-Physical/Application ID, un nome modificabile, unità, precisione
-decimale, un flag opzionale di registrazione su SD card e i propri
-min/max progressivi. Una volta configurati, i sensori vengono rilevati
-automaticamente a ogni accensione, ma la prima volta il rilevamento deve
-essere **manuale**. Una volta rilevato, un sensore può essere annunciato
-vocalmente, utilizzato in [sensori calcolati](#calculated-sensors), in
-[interruttori logici](logical-switches.md), [Vars](variables.md) o
-[mix](mixes.md), mostrato su una schermata di telemetria personalizzata,
-oppure letto direttamente da questa pagina di configurazione senza
-realizzare alcuna schermata.
+Ogni valore ricevuto tramite la telemetria viene trattato come un sensore
+separato, con le sue proprietà: il valore, l'ID fisico e l'ID applicazione,
+un nome modificabile, l'unità di misura, la precisione decimale, l'opzione
+di registrazione su scheda SD e i propri valori minimo e massimo. I sensori
+FrSky, una volta impostati, vengono rilevati automaticamente a ogni
+accensione, ma la prima volta devono essere scoperti **manualmente**. Una
+volta scoperto, un sensore può essere riprodotto negli annunci vocali,
+utilizzato nei [sensori calcolati](#calculated-sensors), negli
+[interruttori logici](logical-switches.md), nelle [Vars](variables.md) o
+nei [mix](mixes.md), visualizzato in una schermata di telemetria
+personalizzata oppure letto direttamente da questa pagina di
+configurazione, senza dover creare alcuna schermata.
 
-**FBUS** (in precedenza F.Port2) rappresenta un ulteriore avanzamento,
-riunendo il controllo SBUS e la telemetria S.Port su un'unica linea a
-460.800 bps (contro i 115.200 di F.Port e i 57.600 di S.Port — le tre
-velocità sono reciprocamente incompatibili) e consentendo a un host di
-dialogare con più accessori slave su quella singola linea, tutti
-configurabili senza fili dalla radio.
+Il protocollo **FBUS** (precedentemente F.Port 2.0) fa un ulteriore passo
+avanti, integrando SBUS per il controllo e S.Port per la telemetria in
+un'unica linea a 460.800 bps (contro i 115.200 di F.Port e i 57.600 di
+S.Port — le tre velocità sono incompatibili tra loro) e consentendo a un
+dispositivo Host di comunicare su una sola linea con diversi accessori
+Slave, tutti configurabili in modalità wireless dalla radio.
 
-### Telemetria multi-ricevitore (ACCESS Trio)
+### Telemetria multi ricevitore (ACCESS Trio)
 
-Con un massimo di tre ricevitori registrati in [RF
-System](rf-system.md#registering-and-binding-a-receiver-access), ogni
-ricevitore connesso può essere configurato individualmente (pin delle
-porte, ecc.) tramite RX1/RX2/RX3. Normalmente esiste un solo percorso di
-telemetria in ingresso per collegamento RF — i sistemi Tandem/TD
-costituiscono l'eccezione, utilizzando 2.4GHz e 900MHz come due percorsi
-su un unico modulo. La sorgente di telemetria attiva può cambiare durante
-il volo a seconda delle condizioni RF; il sensore **RX** indica in tempo
-reale quale ricevitore sta inviando la telemetria (e lo registra).
+Con un massimo di tre ricevitori registrati in [Sistema
+RF](rf-system.md#registering-and-binding-a-receiver-access), ogni
+ricevitore vincolato può essere configurato individualmente (mappatura dei
+pin delle porte, ecc.) tramite RX1, RX2 e RX3. Normalmente ACCESS ha un
+percorso di telemetria in entrata per ogni link RF — i sistemi Tandem/TD
+fanno eccezione, con 2,4 GHz e 900 MHz come due percorsi su un unico
+modulo. Il ricevitore della sorgente telemetrica può cambiare durante il
+volo a seconda delle condizioni RF; il sensore **RX** visualizza in tempo
+reale quale ricevitore sta inviando la telemetria (e ne registra i dati).
 
-La configurazione tipica: collegare a margherita il bus sensori S.Port su
-tutti e tre i ricevitori, condividendo un'alimentazione comune, quindi
-registrare/connettere ciascun ricevitore e rilevare i sensori
-normalmente — la sorgente di telemetria commuta automaticamente al
-variare dell'RX attivo, e i dati dei sensori S.Port *esterni* seguono in
-modo trasparente. (I sensori interni al ricevitore — RSSI, VFR, RxBatt,
-ADC2, RX stesso — non si collegano in questo modo; vengono sempre
-riportati per il ricevitore che è attualmente la sorgente. La telemetria
-simultanea da tutti e tre è prevista ma non ancora disponibile.)
+L'applicazione più comune: collegare in cascata la catena di sensori
+S.Port a tutti e tre i ricevitori, che dovrebbero condividere
+un'alimentazione comune, quindi registrare e vincolare ogni ricevitore e
+scoprire i sensori come di consueto — la fonte di telemetria cambia
+automaticamente a seconda dell'RX attivo, e i dati dei sensori S.Port
+*esterni* proseguono in modo trasparente. (I sensori interni del
+ricevitore — RSSI, VFR, RxBatt, ADC2 e lo stesso RX — non vengono
+collegati in questo modo: vengono sempre inviati per il ricevitore che è
+attualmente la sorgente. La telemetria simultanea da tutti e tre i
+ricevitori è prevista ma non ancora disponibile.)
 
 ## Sensori di qualità del collegamento
 
-- **RSSI** (Receiver Signal Strength Indicator) — quanto è forte la
-  trasmissione del modello al ricevitore. Allarmi predefiniti:
-  **ACCESS**/**TD**/**TW** 35 (basso) / 32 (critico), perdita di
-  controllo attorno a 28; **ACCST** 45 / 42, perdita di controllo attorno
-  a 38. "Telemetria persa" viene segnalato quando il collegamento è del
-  tutto assente — a quel punto **non può suonare alcun ulteriore
-  allarme**, poiché la radio non dispone più di telemetria da valutare;
-  va interpretato come un invito a rientrare immediatamente. (A meno di
-  ~1 m di distanza, il ricevitore può saturarsi e produrre cicli spuri di
-  allarmi Persa/Ripristinata — non si tratta di un guasto reale.) L'RSSI
-  approssima bene la portata effettiva, ma il VFR è l'indicatore di
-  qualità del collegamento più affidabile.
+- **RSSI** (Indicatore di potenza del segnale del ricevitore) — indica
+  quanto è forte il segnale del modello ricevuto. Allarmi predefiniti:
+  **ACCESS**/**TD**/**TW** 35 ("RSSI basso") / 32 ("RSSI critico"), con
+  perdita di controllo intorno a 28; **ACCST** 45 / 42, con perdita di
+  controllo intorno a 38. La perdita completa della telemetria viene
+  annunciata come "Telemetria persa" — a quel punto **NON suonerà alcun
+  altro allarme**, perché il collegamento telemetrico è venuto meno e la
+  radio non ha più nulla da valutare; è consigliabile tornare indietro
+  immediatamente per indagare sul problema. (Quando radio e ricevitore
+  sono troppo vicini, meno di 1 m, il ricevitore può essere disturbato e
+  causare allarmi spuri, con il fastidioso ciclo "Telemetria persa" -
+  "Telemetria recuperata": non si tratta di un guasto reale.) L'RSSI si
+  avvicina bene alla portata effettiva del collegamento, ma il VFR è
+  l'indicatore più affidabile della qualità del collegamento.
 
   ![Sensore RSSI](../assets/model-telemetry-edit-rssi-sensor.png)
 
-  I ricevitori TD riportano un RSSI per banda (2.4G, 900M); anche i
-  ricevitori TW ne riportano uno per banda (2.4FSK, 2.4LoRa, 900M) —
-  attivare **Individual RSSI alert per band** per ottenere avvisi vocali
+  I ricevitori TD riportano un RSSI per ogni banda in uso (2.4G, 900M); i
+  ricevitori TW ne riportano uno per ogni banda (2.4FSK, 2.4LoRa, 900M) —
+  attiva **Allarme RSSI individuale per banda** per ricevere avvisi vocali
   separati per ciascuna banda anziché un unico avviso combinato:
 
   ![Avviso RSSI individuale](../assets/model-telemetry-rssi-individual-alert.png)
 
-- **VFR** (Valid Frame Rate) — pacchetti validi ogni 100 ricevuti; a
-  partire da ACCESS 2.1 sostituisce l'inclusione del tasso di frame persi
-  nell'RSSI. Il valore predefinito di **Low value warning** è 50%.
+- **VFR** (Valid Frame Rate) — il numero di fotogrammi validi ricevuti
+  nell'ultimo blocco di 100 fotogrammi; a partire da ACCESS 2.1 i
+  fotogrammi persi sono stati eliminati dal calcolo dell'RSSI e aggiunti
+  come nuovo sensore VFR. L'impostazione predefinita di **Avviso valore
+  basso** è 50%.
 
   ![Sensore VFR](../assets/model-telemetry-edit-vfr-sensor.png)
 
-  I ricevitori TD/TW riportano due flussi VFR (uno per banda); **Rx VFR**
-  (sui ricevitori TD/TW/AP/AP Plus) conta invece ogni frame valido
-  indipendentemente dalla banda su cui è arrivato — è quello da
-  monitorare se si vuole seguire un unico valore VFR.
+  I ricevitori TD/TW hanno due flussi VFR (uno per banda); **Rx VFR** (sui
+  ricevitori TD, TW, AP e AP Plus) conta invece tutti i fotogrammi validi
+  indipendentemente dalla banda da cui provengono — se intendi monitorare
+  un solo VFR, è quello giusto.
 
-- **RxBatt** — tensione della batteria del ricevitore.
-- **ADC2** — un secondo ingresso analogico di tensione, sui ricevitori
-  che lo supportano.
-- **SWR** — SWR d'antenna, quando si utilizza un'antenna esterna.
-- Sensori di assetto/movimento, dove supportati: **R.Angle**,
+- **RxBatt** — la tensione della batteria del ricevitore.
+- **ADC2** — un secondo ingresso analogico di tensione, sui ricevitori che
+  lo supportano.
+- **SWR** — il valore SWR quando si usa un'antenna esterna.
+- Sensori di assetto e movimento, dove supportati: **R.Angle**,
   **P.Angle**, **AccX/Y/Z**.
 
-Ogni sensore numerico dispone inoltre automaticamente di sensori min/max
-`<name>-`/`<name>+`, anche se non compaiono nell'elenco principale dei
-sensori.
+Per ogni sensore numerico vengono definiti automaticamente anche i valori
+minimo e massimo (`<nome>-` e `<nome>+`), anche se non vengono visualizzati
+nell'elenco principale dei sensori.
 
-## Rilevamento dei sensori {: #discovering-sensors }
+## Scoprire i sensori {: #discovering-sensors }
 
-![Rilevamento nuovi sensori: attivo](../assets/model-telemetry-discover-new-sensors-on.png)
+![Scopri nuovi sensori: on](../assets/model-telemetry-discover-new-sensors-on.png)
 
-Con tutto connesso e alimentato, attivare **Discover new sensors** — un
-punto lampeggiante (o un valore in rosso, se non ci sono ancora dati)
-contrassegna ciascun sensore man mano che viene individuato, e la
-schermata si popola automaticamente. L'operazione va ripetuta **per ogni
-modello**, e nuovamente ogni volta che si aggiunge un nuovo sensore.
+Una volta che tutto è vincolato e alimentato, attiva **Scopri nuovi
+sensori** — un punto lampeggiante (o un valore in rosso, se non vengono
+ancora ricevuti dati) contrassegna ogni sensore man mano che viene
+trovato, e la schermata si popola automaticamente. L'operazione deve
+essere effettuata **per ogni modello** e ogni volta che viene aggiunto un
+nuovo sensore.
 
-![Rilevamento nuovi sensori: disattivo](../assets/model-telemetry-discover-new-sensors-off.png)
+![Scopri nuovi sensori: off](../assets/model-telemetry-discover-new-sensors-off.png)
 
-- Riportare il rilevamento su **Off** una volta terminato.
-- **Delete all** cancella tutti i sensori per ricominciare da capo.
+- Riporta l'interruttore su **Off** una volta terminata la scoperta.
+- **Cancella tutto** cancella tutti i sensori e ti permette di
+  ricominciare.
 
   ![Sensori cancellati](../assets/model-telemetry-sensors-deleted.png)
 
-- **Competition mode** riduce la telemetria ai soli RSSI e RxBatt — per
-  le gare che ammettono solo sensori di stato del collegamento. La
-  disattivazione richiede un riavvio della radio prima di poter
-  rilevare nuovamente i sensori.
+- La modalità **Competizione (solo RSSI e batteria)** riduce la telemetria
+  ai soli RSSI e RxBatt — per le gare locali che consentono unicamente i
+  sensori di stato del collegamento. Per riscoprire i sensori dopo averla
+  disattivata, la radio deve essere spenta e riaccesa.
 
   ![Conferma modalità competizione](../assets/model-telemetry-comp-only-confirm.png)
 
-- La modalità di telemetria **Bluetooth** si accoppia con l'app per
-  smartphone FrSky FreeLink, che può visualizzare la telemetria in tempo
-  reale e configurare dispositivi FrSky come i ricevitori stabilizzati.
+- In modalità telemetria **Bluetooth** la radio può funzionare con
+  l'applicazione FrSky FreeLink per visualizzare i dati di telemetria sul
+  cellulare; l'app può essere utilizzata anche per configurare i
+  dispositivi FrSky, come i ricevitori stabilizzati.
 
   ![Telemetria Bluetooth](../assets/model-telemetry-bt-option.png)
 
 ## Modifica di un sensore {: #editing-a-sensor }
 
-![Selezione opzione di modifica](../assets/model-telemetry-edit-option-select.png)
+![Selezione dell'opzione di modifica](../assets/model-telemetry-edit-option-select.png)
 
-Toccare un sensore per **Edit**, **Move**, **Reset** o **Delete**. Campi
-comuni: **Value** (sola lettura), **ID** (Physical + Application ID e
-ricevitore che trasmette), **Name**, **Unit**, **Decimals**, **Range**
-(limiti di scala fissi — rilevanti soprattutto quando il sensore è
-utilizzato come sorgente di canale), **Write logs**, **Reset** (una
-sorgente che azzera questo sensore) e **Sensor lost warning delay**
-(disattivabile del tutto, oppure 1–30 s, predefinito 10 s, per filtrare
-brevi interruzioni — occorre comprendere il rischio di impostarlo troppo
-alto; il messaggio "sensore perso" viene riprodotto una sola volta anche
-se molti sensori vengono persi contemporaneamente; disattivato per
-impostazione predefinita per i sensori interni al ricevitore, dato che
-raramente vengono a mancare).
+Tocca un sensore per **Modifica**, **Muovi**, **Reset** o **Cancella**.
+Campi comuni: **Valore** (sola lettura), **ID** (ID fisico e ID
+applicazione, oltre all'ID del ricevitore mittente), **Nome**, **Unità**,
+**Decimali**, **Intervallo** (limiti di scala fissi — utili soprattutto
+quando il sensore viene usato come sorgente per un canale), **Scrivi
+logs**, **Reset** (una sorgente che azzera il sensore) e **Avviso sensore
+perso** (disattivabile del tutto, oppure da 1 a 30 secondi, predefinito 10
+secondi, per filtrare le perdite di breve durata — è necessario
+comprenderne i rischi; il messaggio audio "sensore perso" viene riprodotto
+una sola volta quando vengono persi più sensori contemporaneamente; sui
+sensori interni al ricevitore è disattivato per impostazione predefinita,
+perché è improbabile che vengano persi).
 
 Alcuni sensori aggiungono campi propri:
 
-- **ADC2** — **Ratio** e **Offset**, per correggere la scala.
+- **ADC2** — **Rapporto** e **Offset**, per correggere la scala.
 
-  ![Modifica sensore ADC2](../assets/model-telemetry-edit-adc2-sensor.png)
+  ![Modifica del sensore ADC2](../assets/model-telemetry-edit-adc2-sensor.png)
 
-- **RSSI** — soglie **Critical value** e **Low value warning**.
-- **VFR** — **Low value warning** (predefinito 50%).
-- **VSpeed** (velocità verticale del vario) — **Range** fino a ±100 m/s
-  (predefinito ±10 m/s). Il comportamento audio del vario si configura
-  ora nella [funzione speciale Play Vario](special-functions.md), non
-  qui.
+- **RSSI** — le soglie **Valore critico** e **Avviso valore basso**.
+- **VFR** — **Avviso valore basso** (predefinito 50%).
+- **VSpeed** (velocità verticale misurata dal vario) — **Intervallo** fino
+  a ±100 m/s (predefinito ±10 m/s). Le impostazioni audio del vario si
+  trovano ora nella [funzione speciale "Riproduci
+  vario"](special-functions.md), non qui.
 
-  ![Modifica sensore VSpeed](../assets/model-telemetry-edit-vspeed-sensor.png)
+  ![Modifica del sensore VSpeed](../assets/model-telemetry-edit-vspeed-sensor.png)
 
-## Sensori DIY / di terze parti
+## Sensori fai da te / di terze parti
 
-![Creazione sensore DIY](../assets/model-telemetry-diy-sensor-select.png)
+![Crea sensore DIY](../assets/model-telemetry-diy-sensor-select.png)
 
-**Create DIY Sensor** consente di aggiungere manualmente un sensore non
-FrSky: **Auto detect** (compila automaticamente Physical ID, Application
-ID e Module, se possibile), oppure impostarli manualmente, insieme a
-**Protocol decimals/unit** (precisione in ingresso, 0–3 decimali, e
-relativa unità nativa) e **Display decimals/unit** (indipendenti da
-quelle del protocollo), oltre agli stessi campi **Range**/**Ratio**/
-**Offset**/**Write logs**/**Reset**/**Sensor lost warning delay** di
-qualsiasi altro sensore.
+**Crea Sensore DIY** permette di aggiungere manualmente un sensore fai da
+te o di terze parti: **Rilevamento automatico** (popola automaticamente ID
+fisico, ID applicazione e Modulo, se possibile), oppure imposta i campi a
+mano, con in più **Precisione del protocollo / unità** (la precisione in
+entrata, da 0 a 3 decimali, e la relativa unità) e **Precisione del
+display / unità** (indipendente da quella del protocollo), oltre agli
+stessi campi **Intervallo**/**Rapporto**/**Offset**/**Scrivi
+logs**/**Reset**/**Avviso sensore perso** di qualsiasi altro sensore.
 
-![Rilevamento automatico sensore DIY](../assets/model-telemetry-diy-sensor-auto-detect.png)
+![Rilevamento automatico del sensore DIY](../assets/model-telemetry-diy-sensor-auto-detect.png)
 
 ## Sensori calcolati {: #calculated-sensors }
 
-![Creazione sensore calcolato](../assets/model-telemetry-calculated-sensor-select.png)
+![Crea sensore calcolato](../assets/model-telemetry-calculated-sensor-select.png)
 
 Permettono di derivare un nuovo sensore da uno o più sensori esistenti:
 
-- **Consumption** — energia consumata, integrata da un sensore di
-  corrente (es. serie FAS). Unità mAh/Ah, portata fino a 1000 Ah.
+- **Consumo** — l'energia consumata, calcolata a partire da un sensore di
+  corrente (ad esempio la serie FAS). Unità mAh o Ah, intervallo fino a
+  1000 Ah.
 
   ![Sensore di consumo](../assets/model-telemetry-calculated-sensor-consumption.png)
 
-- **Distance** — da una sorgente GPS (più una sorgente di altitudine, per
-  la distanza 3D). Unità cm/m/km/ft, fino a 20 km.
+- **Distanza** — da una fonte GPS (più una fonte di altitudine, per la
+  distanza 3D). Unità cm, m, km o piedi, fino a 20 km.
 
   ![Sensore di distanza](../assets/model-telemetry-calculated-sensor-distance.png)
 
-- **Trip** — distanza accumulata tra rilevamenti GPS successivi. Stesse
-  unità, fino a 1000 km.
+- **Viaggio** — la distanza accumulata tra coordinate GPS successive.
+  Stesse unità, fino a 1000 km.
 
-  ![Sensore di percorso](../assets/model-telemetry-calculated-sensor-trip.png)
+  ![Sensore di viaggio](../assets/model-telemetry-calculated-sensor-trip.png)
 
-- **Multi Lipo** — mette in cascata due o più sensori di tensione Lipo
-  per monitorare pacchi superiori a 6S (fino a 67,2 V/8S). Selezionare
-  ciascun sensore di cella dal più basso al più alto; ogni sensore Lipo
-  aggiuntivo richiede la modifica preventiva del Physical **e**
-  dell'Application ID in [Device
-  Config](../system-setup/devices.md) (lo strumento Lipo Voltage presente
-  lì è d'aiuto), il rilevamento uno alla volta e la rinomina in modo che
-  siano distinguibili.
+- **Multi Lipo** — collega in cascata due o più sensori di tensione lipo
+  per monitorare pacchi superiori a 6S (fino a 67,2 V / 8S). Seleziona i
+  sensori nell'ordine corretto, da cella bassa a cella alta; per evitare
+  conflitti con la porta S.Port, ogni sensore lipo aggiuntivo deve essere
+  modificato sia nell'ID fisico sia in quello dell'applicazione tramite
+  [Configurazione dispositivo](../system-setup/devices.md) (lo strumento
+  di configurazione della tensione lipo è d'aiuto), scoperto uno alla
+  volta e rinominato in modo da poterli distinguere.
 
   ![Sensore Multi Lipo](../assets/model-telemetry-calculated-sensor-multi-lipo.png)
 
-- **Percent** — riscala un sensore su 0–100%, con un'opzione **Invert**
-  (ad esempio per mostrare la percentuale *residua* anziché quella
-  consumata).
+- **Percentuale** — converte i valori di un sensore in una percentuale da
+  0% a 100%, con l'opzione **Invertire** (ad esempio per mostrare la
+  percentuale *rimanente* anziché quella consumata).
 
   ![Sensore percentuale](../assets/model-telemetry-calculated-sensor-percent.png)
 
-- **Power** — potenza in watt da una coppia di sorgenti **Current** e
-  **Voltage**, fino a 1.000.000 W.
+- **Potenza** — il wattaggio calcolato da una coppia di sorgenti
+  **Corrente** e **Tensione**, fino a 1.000.000 W.
 
   ![Sensore di potenza](../assets/model-telemetry-calculated-sensor-power.png)
 
-- **Custom** — una formula arbitraria concatenata a partire da una o più
-  sorgenti.
+- **Personalizzato** (Ad hoc) — una formula libera concatenata a partire
+  da una o più fonti.
 
-Ogni sensore calcolato dispone inoltre dell'opzione **Persistent**
-(sopravvive allo spegnimento/cambio di modello e viene ricaricato
-all'uso successivo) e di un pulsante **Reset** direttamente nella
-schermata di modifica.
+Ogni sensore calcolato dispone inoltre dell'opzione **Persistente** (il
+valore viene memorizzato quando la radio viene spenta o il modello viene
+cambiato, e ricaricato la volta successiva che il modello viene
+utilizzato) e di un pulsante **Azzera** direttamente nella schermata di
+modifica.
 
 ### Sensori personalizzati
 
 ![Sensore personalizzato](../assets/model-telemetry-edit-custom-sensor.png)
 
-Si parte da una sorgente, quindi **Add** concatena ulteriori operazioni:
-**Add(+)**, **Minus(-)**, **Multiply(×)**, **Divide(/)**, **Min**,
-**Max**, **Sqrt**. Le unità sono selezionabili da un lungo elenco che
-comprende tensione, corrente, capacità, potenza, distanza, velocità,
-tempo, temperatura, percentuale, angoli, pressione e altro ancora;
-portata da −1.000.000 a 1.000.000, 0–4 decimali.
+Si parte da una fonte, poi con **Aggiungi** si concatenano altre linee di
+calcolo: **Addiziona(+)**, **Sottrai(-)**, **Moltiplica(×)**,
+**Dividi(/)**, **Min**, **Max**, **Sqrt** (radice quadrata). Le unità di
+misura sono selezionabili da un lungo elenco che comprende tensione,
+corrente, capacità, potenza, distanza, velocità, tempo, temperatura,
+percentuale, angoli, pressione e altro ancora; l'intervallo può essere
+compreso tra −1.000.000 e 1.000.000, con 0–4 decimali.
 
-![Aggiunta di una riga di calcolo](../assets/model-telemetry-edit-custom-sensor-add-action.png)
+![Aggiunta di una linea di calcolo](../assets/model-telemetry-edit-custom-sensor-add-action.png)
 
 !!! example "Potenza di picco"
-    Moltiplicare un sensore di tensione (`VFAS`) per un sensore di
-    corrente (`Current`), quindi aggiungere un passaggio **Max** che
-    faccia riferimento al valore corrente del sensore stesso
-    (`MaxPower`) per tracciare la lettura più alta rilevata — 288 W in
-    questo esempio:
+    Moltiplica un sensore di tensione (`VFAS`) per un sensore di corrente
+    (`Current`), quindi aggiungi una funzione **Max** che fa riferimento
+    al valore corrente del sensore stesso (`MaxPower`) per calcolare il
+    valore massimo raggiunto — 288 W in questo esempio:
 
     ![Esempio MaxPower](../assets/model-telemetry-edit-custom-sensor-maxpower.png)
 
-!!! example "Operazione aritmetica con una costante"
-    Sorgente impostata su `RSSI 2.4G` (lettura 64 dB), quindi un'azione
-    **Subtract** la cui sorgente viene selezionata con pressione
-    prolungata applicando **Convert to value**, trasformandola in una
-    costante modificabile (20) anziché in una sorgente dal vivo — il
-    risultato è un valore stabile di 44 dB (64 − 20):
+!!! example "Aritmetica con una costante"
+    Fonte impostata su `RSSI 2.4G` (lettura 64 dB), poi un'azione
+    **Sottrai(-)**: premi a lungo sul parametro Sorgente di quella riga e
+    seleziona **Converti in valore**, trasformandola in una costante
+    modificabile (20) anziché in una sorgente dal vivo — il risultato è un
+    valore stabile di 44 dB (64 − 20):
 
     ![Esempio di sottrazione](../assets/model-telemetry-edit-custom-sensor-subtrexample.png)
-    ![Conversione in valore](../assets/model-telemetry-edit-custom-sensor-subtrexample-conv2val.png)
+    ![Converti in valore](../assets/model-telemetry-edit-custom-sensor-subtrexample-conv2val.png)
 
 !!! note "Il valore interno di una sorgente"
     Ogni [sorgente](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-    ha un intervallo interno intero di ±1024 corrispondente al suo
-    intervallo visualizzato di ±100% — visibile direttamente puntando un
-    sensore Custom, ad esempio, su Gas: il gas al massimo legge
-    internamente **+1024**, il gas al minimo legge **−1024**.
+    ha un intervallo interno di ±1024 corrispondente all'intervallo
+    visualizzato di ±100% — lo si può vedere direttamente puntando un
+    sensore calcolato personalizzato, ad esempio, sul Gas: con il Gas al
+    100% il valore interno è **+1024**, con il Gas a −100% è **−1024**.
 
     ![Valore interno al massimo](../assets/model-telemetry-edit-custom-sensor-internal-value-max.png)
     ![Valore interno al minimo](../assets/model-telemetry-edit-custom-sensor-internal-value-min.png)

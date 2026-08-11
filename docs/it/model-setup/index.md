@@ -4,13 +4,13 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 # Configurazione del modello
 
-Tutto ciò che è contenuto in questa sezione viene memorizzato **per singolo
-modello**: cambiando modello, cambia anche tutto quanto segue. È qui che un
-modello viene effettivamente programmato, dalla scelta di un modello di
-cellula fino ai suoi mix, alle uscite e agli interruttori di sicurezza. Vi si
-accede tramite la scheda **Aeroplano** nella barra inferiore (o con il tasto
-`MDL`), a differenza della [Configurazione di sistema](../system-setup/index.md),
-che riguarda tutto ciò che è comune a ogni modello.
+Tutto ciò che si trova in questa sezione viene memorizzato **per singolo
+modello**: cambiando modello cambia anche tutto quanto segue. È qui che un
+modello viene effettivamente programmato, dalla scelta di un modello di cellula
+fino ai suoi mix, alle uscite e agli interruttori di sicurezza. Vi si accede
+tramite la scheda **Aeroplano** nella barra inferiore (o con il tasto `MDL`), a
+differenza della [Configurazione di sistema](../system-setup/index.md), che
+riguarda tutto ciò che è comune a tutti i modelli.
 
 - [Selezione modello](model-select.md) — creazione, scelta e organizzazione
   dei modelli.
@@ -31,6 +31,6 @@ che riguarda tutto ciò che è comune a ogni modello.
 - [Checklist](checklist.md)
 - [Script Lua](lua-scripts.md) — script e funzioni Lua per singolo modello.
 
-Per esempi completi di programmazione di un modello, dall'inizio alla fine,
-consultare i [Tutorial](../tutorials/index.md); per procedure orientate a
-compiti specifici, le [Guide pratiche](../how-to/index.md).
+Per esempi completi di programmazione di un modello, dall'inizio alla fine, fai
+riferimento ai [Tutorial](../tutorials/index.md); per procedure orientate a
+compiti specifici, alle [Guide pratiche](../how-to/index.md).

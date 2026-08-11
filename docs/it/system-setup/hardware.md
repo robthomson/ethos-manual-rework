@@ -4,129 +4,134 @@ translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 
 # Hardware
 
-![Verifica hardware](../assets/system-hardware-check-x20s.png)
+![Controllo hardware](../assets/system-hardware-check-x20s.png)
 
 Test e calibrazione dei comandi fisici della radio, definizione dei tipi di
-interruttore e mappatura dei tasti home.
+interruttore e mappa del "tasto home".
 
-## Verifica hardware {: #hardware-check }
+## Controllo dell'hardware {: #hardware-check }
 
-Consente di sollecitare ogni ingresso fisico per verificare che ciascuno
-venga rilevato correttamente.
+Consente di verificare il funzionamento di tutti gli ingressi, controllando
+che ciascuno venga rilevato correttamente.
 
-![Verifica hardware X20 Pro](../assets/system-hardware-check-x20pro.png)
-![Verifica hardware X18S](../assets/system-hardware-check-x18s.png)
+![Controllo hardware X20 Pro](../assets/system-hardware-check-x20pro.png)
+![Controllo hardware X18S](../assets/system-hardware-check-x18s.png)
 
-- **X20 Pro/R/RS** — verifica anche i due pulsanti a ritenuta **K** e **L**
-  sulle spalle posteriori, oltre ai trim aggiuntivi **T5**/**T6**.
-- **X18** — verifica anche i trim aggiuntivi **T5**/**T6**.
+- **X20 Pro/R/RS** — comprende anche i due interruttori a pulsante **K** e
+  **L** sulle spalle posteriori, nonché i trim aggiuntivi **T5**/**T6**.
+- **X18** — comprende anche i trim aggiuntivi **T5**/**T6**.
 
-## Calibrazione degli analogici {: #analogs-calibration }
+## Calibrazione analogica {: #analogs-calibration }
 
-![Calibrazione analogici](../assets/system-hardware-analogs-calibration.png)
+![Calibrazione analogica](../assets/system-hardware-analogs-calibration.png)
 
-Indica alla radio l'esatta posizione del centro e dei fine corsa di ogni
-stick, potenziometro e slider. Viene eseguita automaticamente al primo
-avvio; ripeterla dopo la sostituzione di uno stick, di un potenziometro o
-di uno slider.
+Viene eseguita in modo che la radio sappia esattamente dove si trovano i
+centri e i limiti di ogni cardano, potenziometro e cursore. Viene eseguita
+automaticamente all'avvio iniziale; deve essere ripetuta dopo la
+sostituzione di un giunto cardanico, di un potenziometro o di un cursore.
 
 ## Calibrazione del giroscopio
 
-![Calibrazione giroscopio](../assets/system-hardware-gyro-calibration.png)
+![Calibrazione del giroscopio](../assets/system-hardware-gyro-calibration.png)
 
-Calibra il giroscopio integrato affinché gli ingressi basati
-sull'inclinazione rispondano correttamente all'inclinazione della radio: la
-posizione "in piano" diventa quella in cui normalmente si tiene la radio.
-Anche questa procedura viene eseguita automaticamente al primo avvio.
+Calibra il giroscopio integrato in modo che le uscite del sensore rispondano
+correttamente all'inclinazione della radio: la posizione "livellata" diventa
+l'angolo in cui normalmente si tiene la radio. Anche questa viene eseguita
+automaticamente all'avvio iniziale.
 
-## Filtro analogici
+## Filtro analogico
 
-Un filtro ADC on/off per gli stick, attivo per impostazione predefinita:
-riduce le oscillazioni attorno al centro stick. Questa è l'impostazione
-**globale**; esiste anche una sovrascrittura del filtro analogici
-**per modello** in [Modifica modello](../model-setup/model-edit.md).
+Il filtro del convertitore analogico-digitale per gli stick può essere
+attivato/disattivato; il valore predefinito è ON e può migliorare il jitter
+intorno al centro degli stick. Questa è l'impostazione **globale**; è
+disponibile anche un'opzione specifica **per il modello** alla voce Filtro
+analogico in [Modifica modello](../model-setup/model-edit.md).
 
-## Impostazioni potenziometri/slider {: #potssliders-settings }
+## Impostazioni dei potenziometri e dei cursori {: #potssliders-settings }
 
-Consente di rinominare i potenziometri e gli slider. La **X20 Pro/R/RS**
-supporta inoltre due potenziometri aggiuntivi, **Ext1**/**Ext2**,
-tipicamente utilizzati per gli stick a 3 assi.
+I potenziometri e i cursori possono avere nomi personalizzati. L'**X20
+Pro/R/RS** dispone inoltre di due potenziometri aggiuntivi,
+**Ext1**/**Ext2**, utilizzati in genere quando si installano dei giunti
+cardanici a 3 assi.
 
 ![Valori ADC, potenziometri](../assets/system-hardware-pots-x20s.png)
 ![Valori ADC, potenziometri (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
 
-## Impostazioni interruttori {: #switches-settings }
+## Impostazioni degli interruttori {: #switches-settings }
 
 ![Interruttori](../assets/system-hardware-switches.png)
 
-- **Ritardo rilevamento posizione centrale** — impedisce che una commutazione
-  rapida alto→basso (o basso→alto) di un interruttore a 3 posizioni registri
-  momentaneamente la posizione centrale; la posizione centrale dovrebbe
-  essere rilevata solo quando l'interruttore vi si ferma effettivamente. Il
-  valore predefinito è 0 ms, scelto per adattarsi al rilevamento di
-  "auto-verifica" dei ricevitori stabilizzati FrSky sul CH12.
-- **Tipo di interruttore** — ciascuno degli interruttori SA–SJ può essere
-  definito come **None**, **Momentary**, **2 POS** o **3 POS**, consentendo di
-  scambiare le funzionalità tra gli interruttori fisici (ad esempio
-  assegnando all'interruttore momentaneo SH il ruolo normalmente svolto dal
-  bipolare SF), compatibilmente con quanto il cablaggio della radio supporta
-  effettivamente (un ruolo a 3 posizioni generalmente non può essere
-  assegnato a un hardware non cablato per tale scopo).
+- **Ritardo nel rilevamento del centro dell'interruttore** — garantisce che
+  la posizione centrale degli interruttori a tre vie non venga rilevata
+  quando l'interruttore passa dalla posizione alta a quella bassa con un
+  unico movimento e viceversa; dovrebbe essere rilevata solo quando
+  l'interruttore si ferma effettivamente nella posizione centrale.
+  L'impostazione predefinita è 0ms, per adattarsi ai ricevitori stabilizzati
+  FrSky quando rilevano il "Self check" su CH12.
+- **Tipo di interruttore** — gli interruttori da SA a SJ possono essere
+  definiti come **Nessuno**, **Momentaneo**, **2 POS** o **3 POS**, il che
+  permette di scambiare gli interruttori (ad esempio assegnare
+  all'interruttore momentaneo SH il ruolo normalmente svolto
+  dall'interruttore a 2 posizioni SF), compatibilmente con quanto consente
+  il cablaggio della radio (un ruolo a 3 posizioni generalmente non può
+  essere assegnato a un hardware non cablato per tale scopo).
 
   ![Opzioni interruttore](../assets/system-hardware-switches-options.png)
   ![Interruttori aggiuntivi](../assets/system-hardware-switches-2.png)
 
-- **Rinomina** — gli interruttori possono essere rinominati da SA–SJ a nomi
-  personalizzati; i nomi sono globali per tutti i modelli.
-- **X20 Pro** — aggiunge i pulsanti **K**/**L** sulle spalle posteriori,
-  oltre alle posizioni **M**/**N** se cablate (tipicamente per interruttori
-  in testa agli stick).
+- **Rinomina** — gli interruttori possono essere rinominati dai nomi
+  predefiniti SA–SJ a nomi personalizzati; questi nomi saranno globali per
+  tutti i modelli.
+- **X20 Pro** — dispone in più degli interruttori a pulsante **K**/**L**
+  sulle spalle posteriori; inoltre le posizioni **M**/**N** possono essere
+  cablate alla scheda di circuito, tipicamente utilizzate per gli
+  interruttori di fine corsa.
 
-## Mappatura tasti home
+## Mappa dei tasti della Home
 
-Riassegna la destinazione dei tasti home `SYS`, `MDL` e `DISP` (`TELE` sulle
-radio meno recenti).
+Consente di riassegnare la destinazione dei tasti home `SYS`, `MDL` e
+`DISP` (`TELE` sui modelli più vecchi).
 
-- **`DISP`** — sia la pressione breve sia quella prolungata possono essere
-  riassegnate a qualsiasi pagina Modello, pagina Sistema, Configura
-  schermate, Home o al Registro dati di volo. Per coerenza con la serie X10,
-  la pressione prolungata di `DISP` è convenzionalmente impostata su
-  Configura schermate.
-- **`SYS`/`MDL`** — solo la pressione prolungata è riassegnabile (allo stesso
-  insieme di destinazioni); una pressione breve apre sempre rispettivamente
-  la sezione Sistema o Modello.
+- **`DISP`** — le opzioni di pressione breve e lunga possono essere
+  riassegnate a qualsiasi pagina del Modello, del Sistema, a Configura
+  schermate, alla pagina iniziale o alla Registrazione dei dati di volo. Per
+  coerenza con la serie X10, la pressione lunga di `DISP` viene assegnata
+  convenzionalmente alla pagina "Configura schermate".
+- **`SYS`/`MDL`** — solo la pressione lunga può essere riassegnata (allo
+  stesso insieme di destinazioni); una pressione breve richiama
+  rispettivamente la sezione Sistema o Modello.
 
 ## Opzioni hardware specifiche per radio {: #radio-specific-hardware-options }
 
-- **Attivazione degli upgrade haptic degli stick** (X20 Pro, X20R) — le X20
-  Pro AW e X20RS sono equipaggiate con stick MC20R dotati di motori haptic
-  per la vibrazione degli stick; se gli stick MC20R sono stati installati in
-  retrofit su una X20 Pro o X20R, occorre abilitarli qui (vedere
+- **Attivazione dei gimbal aptici** (X20 Pro, X20R) — l'X20 Pro AW e X20RS
+  sono dotati di gimbals MC20R con motori a feedback tattile (stick shaker);
+  se i gimbals MC20R sono stati adattati a X20 Pro o X20R come opzione, è
+  possibile abilitare qui i motori dei giunti cardanici (fare riferimento a
   [Funzioni speciali](../model-setup/special-functions.md) per la
-  configurazione dei pattern haptic veri e propri).
+  configurazione dei pattern aptici veri e propri).
 
-  ![Haptic (X20 Pro)](../assets/system-hardware-haptic-x20pro.png)
-  ![Haptic (X20 Pro AW)](../assets/system-hardware-haptic-x20proaw.png)
+  ![Aptico (X20 Pro)](../assets/system-hardware-haptic-x20pro.png)
+  ![Aptico (X20 Pro AW)](../assets/system-hardware-haptic-x20proaw.png)
 
-- **Opzione encoder** (X20 Pro AW, X20R/RS) — queste radio dispongono di un
-  encoder rotativo più sensibile; abilitare i **mezzi passi** per attenuarne
-  la reattività.
+- **Opzione encoder** (X20 Pro AW, X20R/RS) — questi modelli hanno un
+  encoder rotativo più sensibile; l'opzione **mezzi passi** può essere
+  attivata per ridurne la sensibilità.
 
   ![Opzione encoder (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
 
-## Ispettore dei valori ADC {: #adc-value-inspector }
+## Ispettore del valore ADC {: #adc-value-inspector }
 
-Mostra i valori grezzi della conversione analogico-digitale letti dalla CPU
-per ogni ingresso analogico:
+Mostra i valori grezzi di conversione analogico-digitale (ADC) degli
+ingressi analogici letti dalla CPU:
 
-![Verifica ADC (X20S)](../assets/system-hardware-adc-check-x20s.png)
-![Verifica ADC (X20 Pro)](../assets/system-hardware-adc-check-x20pro.png)
+![Controllo ADC (X20S)](../assets/system-hardware-adc-check-x20s.png)
+![Controllo ADC (X20 Pro)](../assets/system-hardware-adc-check-x20pro.png)
 
 **X20S**: 1 stick sinistro orizzontale, 2 stick sinistro verticale, 3 stick
-destro verticale, 4 stick destro orizzontale, 5 Pot 1, 6 Pot 2, 7 slider
-centrale, 8 slider sinistro, 9 slider destro.
+destro verticale, 4 stick destro orizzontale, 5 Potenziometro 1, 6
+Potenziometro 2, 7 cursore centrale, 8 cursore sinistro, 9 cursore destro.
 
-**X20 Pro**: come sopra, ma con due canali aggiuntivi per potenziometri
-esterni (7 Ext1, 8 Ext2 — ad esempio potenziometri montati sugli stick)
-inseriti prima degli slider, che diventano quindi 9 slider centrale,
-10 slider sinistro, 11 slider destro.
+**X20 Pro**: come sopra, ma con due canali aggiuntivi per i potenziometri
+esterni (7 Ext1, 8 Ext2 — ad esempio potenziometri montati su stick)
+inseriti prima dei cursori, che diventano quindi 9 cursore centrale,
+10 cursore sinistro, 11 cursore destro.

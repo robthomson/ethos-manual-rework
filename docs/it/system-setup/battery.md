@@ -6,35 +6,38 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Impostazioni della batteria della radio](../assets/system-battery.png)
 
-Calibra la lettura della batteria interna della radio e imposta le soglie
-di allarme — funzione distinta dalle impostazioni del pacco batteria del
-modello (vedere [Guida pratica: avviso di tensione batteria bassa](../how-to/low-battery-warning.md)).
+Serve per calibrare la lettura della batteria interna della radio e impostare
+le soglie di allarme — funzione distinta dalle impostazioni del pacco batteria
+del modello (vedi [Guida pratica: avviso di tensione batteria bassa](../how-to/low-battery-warning.md)).
 
-- **Tensione principale** — mostra la lettura corrente e funge anche da
-  regolazione di calibrazione: inserire la tensione effettiva misurata con
-  un multimetro. Il valore predefinito è 8.4V (un pacco Li-ion 2S
-  completamente carico).
-- **Tensione bassa** — la soglia di allarme, predefinita 7.2V (7.4V offre
-  un margine maggiore). Quando l'[avviso di tensione principale](alerts.md)
-  è attivo, scendere sotto questo valore genera una finestra di avviso e un
-  messaggio vocale "Batteria della radio scarica" ogni minuto, che la
-  finestra sia aperta o meno.
+- **Tensione principale** — visualizza la tensione attuale della batteria, ma
+  è anche la regolazione della calibrazione: puoi inserire la tensione
+  effettiva della batteria misurata con un multimetro. Il valore predefinito è
+  8,4V per una batteria al litio a 2 celle carica.
+- **Bassa tensione** — è la tensione di soglia dell'allarme, con valore
+  predefinito 7,2V (un valore di 7,4V offre un ulteriore margine di
+  sicurezza). Quando l'opzione [Tensione principale](alerts.md) è attivata,
+  se la tensione scende al di sotto di questa soglia verrà visualizzata una
+  finestra di dialogo di avviso e ogni minuto verrà emesso un messaggio vocale
+  "Batteria radio scarica", anche se la finestra di avviso è aperta.
 
   !!! warning
-      Atterrare e ricaricare la batteria della radio non appena questo
-      avviso viene emesso — si ripete ogni minuto in ogni caso. A 6.0V la
-      radio si spegne incondizionatamente per proteggere le celle Li-ion
-      2×3.0V.
+      Quando viene dato questo allarme, è prudente atterrare e ricaricare la
+      batteria della radio! L'avviso viene ripetuto ogni minuto in ogni caso.
+      Quando la tensione scende a 6,0V, la radio si spegne comunque per
+      proteggere le celle agli ioni di litio (2 x 3,0V).
 
-- **Intervallo di tensione visualizzato** — i valori min/max per
-  l'indicatore grafico della batteria nell'angolo in alto a destra: MIN è
-  il punto in cui il primo segmento si spegne, MAX quello in cui si
-  accende il quarto. I valori predefiniti sono 6.4–8.4V per il pacco
-  Li-ion integrato; molti piloti alzano il limite inferiore per ottenere
-  un avviso di bassa tensione anticipato ed evitare la scarica eccessiva.
-  Impostare questi valori in base al tipo di batteria effettivamente
-  installata.
+- **Intervallo di tensione del display** — i valori min/max della
+  visualizzazione grafica della batteria in alto a destra dello schermo: il
+  valore MIN corrisponde al punto in cui si spegne la prima barra, MAX è il
+  valore in cui si accende la quarta. I limiti predefiniti per la batteria
+  agli ioni di litio integrata sono 6,4–8,4V; molti piloti aumentano la
+  tensione di rilevamento inferiore per far scattare prima l'avviso di bassa
+  tensione ed evitare di scaricare eccessivamente la batteria. Se la batteria
+  viene sostituita con una di tipo diverso, i limiti devono essere impostati
+  in modo appropriato.
 - **Tensione RTC** — la tensione della batteria a bottone dell'orologio in
-  tempo reale. 3.0V quando è nuova; sostituirla al di sotto di 2.7V per
-  mantenere l'orologio preciso, e aspettarsi l'[avviso di tensione RTC](alerts.md)
-  al di sotto di 2.5V.
+  tempo reale (Real Time Clock). È di 3,0V per una batteria nuova; se la
+  tensione è inferiore a 2,7V sostituisci la batteria per garantire il
+  corretto funzionamento dell'orologio, e al di sotto di 2,5V verrà emesso
+  l'[avviso di tensione RTC](alerts.md).

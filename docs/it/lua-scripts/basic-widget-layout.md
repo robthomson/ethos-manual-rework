@@ -27,17 +27,19 @@ denominati:
   attivare un ridisegno tramite `paint()`. Mantieni questo handler veloce —
   idealmente non deve fare assolutamente nulla nella maggior parte delle
   chiamate.
-- **`event`** *(funzione)* — chiamata quando il widget riceve un evento;
+- **`event`** *(funzione)* — chiamata quando il widget riceve un evento:
   Ethos indirizza al widget eventi arbitrari attraverso questo handler.
 - **`paint`** *(funzione)* — disegna il widget; riceve la tabella del widget
   e non restituisce nulla. Viene chiamata automaticamente ogni volta che è
   stato invocato `lcd.invalidate()`. Può essere relativamente lenta, ma
   dovrebbe comunque ridisegnare effettivamente solo quando qualcosa è
   cambiato.
-- **`read`** *(funzione, opzionale)* — legge i dati persistenti del widget.
-- **`write`** *(funzione, opzionale)* — scrive i dati persistenti del widget.
+- **`read`** *(funzione, opzionale)* — legge i dati memorizzati in modo
+  persistente dal widget.
+- **`write`** *(funzione, opzionale)* — scrive i dati memorizzati in modo
+  persistente dal widget.
 - **`init`** *(funzione)* — registra il widget e le sue callback in Ethos.
-  Tipicamente è l'ultimo elemento dello script:
+  Di norma è l'ultimo elemento dello script:
 
 ```lua
 local function init()
@@ -59,9 +61,9 @@ return { init = init }
 `key` deve essere univoco fra tutti i widget installati; gli altri campi si
 integrano nel ciclo di vita del widget come descritto sopra.
 
-Gli script risiedono nella cartella `scripts/` sulla SD card/eMMC,
+Gli script risiedono nella cartella `scripts/` sulla SD card o eMMC,
 preferibilmente organizzati in cartelle separate per ciascun widget (vedi
-[Gestione file](../system-setup/file-manager.md#top-level-folders) e
+[File Manager](../system-setup/file-manager.md#top-level-folders) e
 [Esempi di posizione degli script](example-script-locations.md)). Per
 ulteriori esempi pratici, consulta il thread *FrSky ETHOS Lua Script
 Programming* su rcgroups.

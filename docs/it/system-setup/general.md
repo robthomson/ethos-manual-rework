@@ -6,83 +6,90 @@ translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 
 ![Impostazioni generali](../assets/system-general.png)
 
-Riguarda gli attributi del display, l'audio, il vario, il feedback aptico e la barra degli strumenti superiore.
+Riguarda gli attributi del display, le impostazioni audio, il vario, il feedback aptico e la barra degli strumenti superiore.
 
 ## Attributi del display
 
 - **Lingua** — la lingua dei menu del display (English, 中文, Česky, Deutsch,
   Español, Français, עברית, Italiano, Nederlands, Norsk, Português
-  Brasileiro, Polish, Português e altre).
-- **Tastiera** — disposizione della tastiera virtuale QWERTY, QWERTZ o AZERTY.
-- **Luminosità** — uno slider per la luminosità della retroilluminazione;
-  premere a lungo `ENT` per pilotarla invece da una sorgente (ad esempio uno
-  slider, come nell'esempio seguente), oppure forzarla al minimo/massimo.
+  Brasileiro, Polacco, Português e altre).
+- **Tastiera** — permette di selezionare i layout delle tastiere virtuali
+  QWERTY, QWERTZ e AZERTY.
+- **Luminosità** — un cursore per la luminosità della retroilluminazione;
+  premendo a lungo `ENT` si accede alle opzioni per utilizzare una sorgente
+  (ad esempio un cursore, come nell'esempio seguente) oppure per impostarla al
+  minimo o al massimo.
 
   ![Menu luminosità](../assets/system-general-brightness-menu.png)
-  ![Slider luminosità](../assets/system-general-brightness-slider.png)
+  ![Cursore luminosità](../assets/system-general-brightness-slider.png)
 
   !!! note
-      Se **Luminosità** è uguale a **Luminosità in modalità riposo**, il
-      touchscreen resta attivo anche durante il "riposo".
+      Tieni presente che se **Luminosità** (per la retroilluminazione ON) =
+      **Luminosità modalità Sleep** (per la retroilluminazione OFF), il
+      touchscreen rimane attivo.
 
-- **Risveglio** — quali eventi risvegliano la retroilluminazione dal riposo
-  (se ne può abilitare più di uno): **Sempre acceso** (non va mai in riposo),
-  **Stick**, **Interruttori**, **Giroscopio** (inclinando la radio). I tasti
-  la risvegliano sempre, indipendentemente da queste impostazioni.
-- **Riposo** — tempo di inattività prima dello spegnimento della
-  retroilluminazione (disattivato se Risveglio è impostato su Sempre acceso).
-- **Luminosità in modalità riposo** — luminosità della retroilluminazione
-  durante il riposo.
-- **Modalità scura** — tema chiaro o scuro del display.
-- **Colore di evidenziazione** — il colore d'accento dell'interfaccia
-  (predefinito `#F8B038`).
+- **Attivazione schermo** — quali di queste opzioni risvegliano la
+  retroilluminazione dallo stato di sospensione (possono essere attivate più
+  opzioni): **Sempre acceso** (la retroilluminazione rimane accesa in modo
+  permanente), **Stick**, **Interruttori**, **Gyro** (inclinando la radio). I
+  tasti la risvegliano sempre, indipendentemente da queste impostazioni.
+- **Stand-by** — il tempo di inattività prima che la retroilluminazione si
+  spenga (disattivato quando si seleziona "Sempre acceso" come opzione di
+  attivazione dello schermo).
+- **Luminosità della modalità Sleep** — la luminosità della retroilluminazione
+  durante la modalità di sospensione.
+- **Modalità scura** — seleziona la modalità chiara o scura del display.
+- **Colore di evidenziazione** — il colore di evidenziazione utilizzato
+  nell'interfaccia (predefinito `#F8B038`).
 
 ## Impostazioni audio {: #audio-settings }
 
 ![Impostazioni audio](../assets/system-general-audio.png)
 
-- **Lingua audio** — lingua degli annunci vocali.
+- **Lingua audio** — permette di selezionare la lingua degli annunci vocali.
 - **Scelta delle voci** — Ethos supporta più pacchetti vocali simultanei:
 
-  - **Voce 1 (principale)** — usata per tutti gli annunci di sistema
-    integrati. Per l'inglese, la scelta predefinita è tra i pacchetti
-    americano (`us`) e britannico (`gb`), letti da `audio/en/us/system` e
-    `audio/en/gb/system`. I file audio utente per la [funzione speciale Play
-    Audio](../model-setup/special-functions.md) vanno rispettivamente in
+  - **Voce 1 (principale)** — viene utilizzata per tutti gli annunci di
+    sistema che fanno parte del sistema operativo Ethos. Per l'inglese è
+    possibile scegliere tra il pacchetto americano (`us`) e quello inglese
+    (`gb`), letti da `audio/en/us/system` e `audio/en/gb/system`. I file audio
+    dell'utente per la [funzione speciale Riproduci
+    audio](../model-setup/special-functions.md) vanno rispettivamente in
     `audio/en/us/` o `audio/en/gb/`.
-  - **Voce 2 / Voce 3** — pacchetti aggiuntivi, ad esempio una voce TTS
-    personalizzata. Ognuna richiede la stessa struttura di cartelle della
-    Voce 1 — ad esempio una voce chiamata "Susan" richiede `audio/en/Susan/`
-    per i suoni utente e `audio/en/Susan/system` per i suoi suoni di sistema
-    (ogni voce necessita di una cartella `/system`, poiché è da lì che
-    attingono **Play Value** e gli annunci dei timer; a ogni release audio è
-    allegato un elenco `.csv` dei file audio di sistema standard). Una volta
-    installata, una voce può essere assegnata per singolo timer e per singola
-    funzione Play Audio — o addirittura impostata come Voce 1 per sostituire
+  - **Voce 2 / Voce 3** — pacchetti vocali alternativi, ad esempio una voce
+    TTS personalizzata. Ognuna richiede una struttura di cartelle simile a
+    quella della Voce 1 — ad esempio una voce chiamata "Susan" richiede
+    `audio/en/Susan/` per i file audio dell'utente e `audio/en/Susan/system`
+    per i suoi file audio di sistema (ogni voce deve avere una cartella
+    `/system`, poiché è da lì che attingono **Riproduci valore** e gli annunci
+    dei timer; l'elenco dei file audio di sistema forniti di serie è incluso
+    in un file `.csv` in ogni versione audio). Una volta installata, puoi
+    scegliere la voce da utilizzare per ogni timer e per ogni funzione
+    Riproduci audio — oppure assegnarla come Voce 1 se desideri sostituire
     completamente gli annunci di sistema.
-  - **Voce "default"** — installata automaticamente come ripiego sicuro (e
-    usata per evitare problemi di conversione dalle installazioni 1.4.x): se
-    la Voce 1 non è già impostata durante un'installazione/aggiornamento,
-    viene impostata su `default`, leggendo da `audio/en/default/system`. I
-    file audio personalizzati più richiesti per Play Audio si trovano in
-    `audio/en/default/`.
+  - **Voce "default"** — viene installata automaticamente come ripiego sicuro
+    (e per evitare problemi di conversione dalle installazioni 1.4.X): se
+    durante l'installazione/aggiornamento la Voce 1 non è già stata impostata,
+    viene impostata su `default`, che legge da `audio/en/default/system`.
+    Alcuni file audio personalizzati comunemente richiesti per Riproduci audio
+    si trovano in `audio/en/default/`.
 
-- **Volume principale** — uno slider per il volume audio generale (premere a
-  lungo `ENT` per pilotarlo da un potenziometro); durante la regolazione
-  vengono riprodotti dei bip per valutare il livello a orecchio.
+- **Volume principale** — un cursore per controllare il volume audio
+  (premendo a lungo `ENT` è possibile utilizzare un potenziometro); i segnali
+  acustici durante la regolazione aiutano a valutare il volume.
 - **Modalità audio**:
-  - **Silenzioso** — nessun audio (attiva comunque l'[avviso di modalità
-    silenziosa](alerts.md) all'avvio, se abilitato).
-  - **Solo allarmi** — sono udibili solo gli allarmi.
-  - **Predefinito** — suoni normali.
-  - **Frequente** — aggiunge bip di errore quando un valore viene spinto
-    oltre il proprio minimo/massimo.
-  - **Sempre** — aggiunge bip per la normale navigazione nei menu, oltre a
-    quanto previsto da Frequente.
-  - **Bluetooth** (solo X20S/HD/Pro/R/RS) — inoltra l'audio a un dispositivo
-    Bluetooth accoppiato (auricolare, ecc.). Scegliere **Cerca dispositivi**,
-    mettere il dispositivo di destinazione in modalità accoppiamento, quindi
-    selezionarlo una volta trovato:
+  - **Silenzioso** — nessun audio (all'avvio verrà comunque emesso l'[avviso
+    di modalità silenziosa](alerts.md), se attivo).
+  - **Solo allarmi** — solo gli allarmi saranno emessi in audio.
+  - **Predefinito** — i suoni sono abilitati.
+  - **Spesso** — vengono inoltre emessi dei segnali acustici di errore quando
+    si cerca di superare il valore massimo o minimo dei numeri modificabili.
+  - **Sempre** — oltre ai suoni di "Spesso", vengono emessi anche dei segnali
+    acustici quando si naviga nel menu.
+  - **Bluetooth** (solo X20S/HD/Pro/R/RS) — trasmette l'audio a un dispositivo
+    Bluetooth accoppiato (ad esempio delle cuffie). Tocca **Cerca
+    dispositivi**, metti il dispositivo di destinazione in modalità di
+    accoppiamento, quindi selezionalo una volta trovato:
 
     ![Accoppiamento Bluetooth](../assets/system-general-audio-bluetooth.png)
     ![Ricerca Bluetooth](../assets/system-general-audio-bluetooth-searching.png)
@@ -90,39 +97,39 @@ Riguarda gli attributi del display, l'audio, il vario, il feedback aptico e la b
     ![Connessione Bluetooth](../assets/system-general-audio-bluetooth-connecting.png)
     ![Bluetooth connesso](../assets/system-general-audio-bluetooth-connected-ok.png)
 
-    **Silenzia altoparlante** controlla quindi l'altoparlante integrato —
-    sempre attivo, solo mentre la telemetria è attiva, oppure pilotato da una
-    sorgente (ad esempio un interruttore). La radio ricorda il dispositivo
-    accoppiato; per un funzionamento normale accendere la radio prima del
-    dispositivo Bluetooth e attendere qualche secondo dopo la connessione
-    affinché la funzione di silenziamento dell'altoparlante si riattivi.
+    **Disattivazione dell'altoparlante** controlla quindi l'altoparlante
+    integrato: sempre attivo, solo quando la telemetria è attiva, oppure
+    controllato da una sorgente come un interruttore. Il sistema ricorda il
+    dispositivo Bluetooth; per un funzionamento normale accendi la radio e poi
+    il dispositivo Bluetooth, e attendi alcuni secondi dopo la connessione
+    prima che il silenziamento dell'altoparlante si attivi di nuovo.
 
 ## Vario {: #vario }
 
 ![Audio del vario](../assets/system-general-audio-vario.png)
 
-- **Volume** — volume relativo del tono del vario.
-- **Tono a zero** — altezza del tono a velocità di salita nulla.
-- **Tono massimo** — altezza del tono alla massima velocità di salita.
-- **Ripetizione** — intervallo tra i bip in corrispondenza del tono a zero.
+- **Volume** — il volume relativo del tono vario.
+- **Passo zero** — l'intonazione del tono quando il tasso di salita è pari a zero.
+- **Passo massimo** — l'intonazione del tono alla massima velocità di salita.
+- **Ripetere** — il ritardo tra i bip al passo zero.
 
-Vedere anche il sensore VSpeed in [Telemetria](../model-setup/telemetry.md) e
-la [funzione speciale Play Vario](../model-setup/special-functions.md) per
-ulteriori comportamenti del vario.
+Consulta anche il sensore VSpeed in [Telemetria](../model-setup/telemetry.md) e
+la [funzione speciale Esegui vario](../model-setup/special-functions.md) per
+gli altri parametri Vario.
 
 ## Aptico
 
-- **Intensità** — uno slider per l'intensità della vibrazione.
-- **Modalità** — le stesse opzioni della Modalità audio descritta sopra.
+- **Forza** — un cursore per controllare l'intensità della vibrazione aptica.
+- **Modalità** — le stesse opzioni della Modalità audio di cui sopra.
 
 ## Posizione di archiviazione (X18 e X20 Pro/R/RS) {: #storage-location-x18-and-x20-prorrs }
 
-Queste radio dispongono di una eMMC interna da 8 GB. Per impostazione
-predefinita Ethos la utilizza, rendendo la SD card opzionale — ma è possibile
-selezionare la eMMC, una SD card o una combinazione di entrambe. Se si
-spostano il sistema e i modelli su una SD card, copiare le cartelle/i file
-pertinenti (inclusi audio e bitmap) **prima** di cambiare la posizione di
-archiviazione.
+Queste radio sono dotate di una eMMC interna da 8 GB. Il sistema Ethos
+seleziona di default l'archiviazione eMMC, rendendo facoltativo l'uso della SD
+card — tuttavia puoi scegliere di utilizzare la eMMC, una SD card opzionale o
+una combinazione di entrambe. Se il sistema e i modelli vengono spostati sulla
+SD card, le cartelle e i file (audio e bitmap compresi) devono essere copiati
+sulla SD card **prima** di effettuare la selezione.
 
 ![Posizione di archiviazione](../assets/system-general-storage.png)
 
@@ -130,27 +137,29 @@ archiviazione.
 
 ![Impostazioni della barra superiore](../assets/system-general-topbar.png)
 
-- **Tensione digitale** — mostra la tensione della batteria della radio come
-  valore numerico anziché come barra nella barra degli strumenti superiore.
-- **RSSI digitale** — idem, per l'RSSI a 2,4 GHz e 900 MHz.
-- **Seleziona modello all'accensione** — mostra la schermata di selezione del
-  modello all'avvio, prima che compaiano gli avvisi della checklist del
-  modello precedente, così da poter cambiare modello senza doverli prima
-  chiudere. L'ultimo modello utilizzato è evidenziato per impostazione
-  predefinita.
+- **Tensione digitale** — visualizza la tensione della batteria della radio
+  come valore digitale anziché come barra nella barra degli strumenti superiore.
+- **RSSI digitale** — allo stesso modo, per l'RSSI a 2.4G e 900M.
+- **Seleziona il modello all'accensione** — la schermata di selezione del
+  modello viene visualizzata all'accensione, prima che vengano visualizzati
+  gli avvisi della lista di controllo del modello precedentemente selezionato,
+  in modo da poter cambiare modello senza doverli prima cancellare. Per
+  impostazione predefinita viene evidenziato l'ultimo modello utilizzato.
 
   ![Seleziona modello all'avvio](../assets/system-general-model-start.png)
 
-## Preselezione modalità USB
+## Preselezione della modalità USB
 
 ![Modalità USB](../assets/system-general-usb.png)
 
 Cosa accade automaticamente quando la radio viene collegata a un PC tramite USB:
 
-- **Non impostato** — richiede una scelta al momento della connessione.
-- **Joystick** — entra immediatamente in modalità joystick per un simulatore RC.
-- **Ethos Suite** — entra immediatamente in modalità Ethos per [Ethos
-  Suite](../ethos-suite/index.md).
-- **Seriale** — entra immediatamente in modalità Seriale, instradando le
-  tracce di debug Lua su USB-Serial a 115200 bps (potrebbe essere necessario
-  un driver per porta COM virtuale su Windows).
+- **Non impostato** — al momento della connessione verrà visualizzata una
+  finestra di dialogo per effettuare una selezione.
+- **Joystick** — la radio entra automaticamente in modalità joystick per
+  essere utilizzata con un simulatore RC.
+- **Ethos Suite** — la radio entra automaticamente in modalità Ethos per
+  comunicare con [Ethos Suite](../ethos-suite/index.md).
+- **Seriale** — la radio entra automaticamente in modalità seriale, in cui le
+  tracce di debug Lua vengono inviate all'USB-Serial a 115200 bps (potrebbe
+  essere necessario un driver per la porta COM virtuale di Windows).

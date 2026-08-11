@@ -12,6 +12,6 @@ Ethos integra un interprete basato su **Lua 5.4.3**, fornito con:
 - la libreria os
 - la libreria math
 
-Gli script vengono eseguiti in questo ambiente sia che implementino un
+Gli script vengono eseguiti in questo ambiente, sia che implementino un
 [widget di visualizzazione](../displays/custom-widgets.md) sia una
 [sorgente/attività](../model-setup/lua-scripts.md) specifica del modello.

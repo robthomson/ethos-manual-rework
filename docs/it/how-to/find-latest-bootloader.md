@@ -6,15 +6,15 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Le release del firmware Ethos pubblicano un file `components.json` che elenca
 la versione corrente di ogni componente per ciascuna radio, utile per verificare
-se una determinata versione di bootloader/firmware/audio/file di sistema sia
-effettivamente aggiornata prima di installarla.
+se una determinata versione di bootloader/firmware/file audio/file di sistema sia
+effettivamente aggiornata prima di eseguirne il flash.
 
 !!! note "Screenshot in arrivo"
     Questa pagina non dispone ancora di screenshot del simulatore — vedi [Screenshot
     Pipeline](../contributing/screenshot-pipeline.md).
 
 1. Scarica il file `components.json` dall'ultima release di Ethos.
-2. Aprilo in un editor di testo (VS Code, Blocco note, ecc.).
+2. Aprilo con un editor di testo (VS Code, Blocco note, ecc.).
 3. Individua la sezione relativa alla tua radio — ad esempio `X20`:
 
    ```json
@@ -38,6 +38,6 @@ effettivamente aggiornata prima di installarla.
 Consulta [Gestione file](../system-setup/file-manager.md#top-level-folders) per
 sapere dove collocare il file del firmware scaricato, e [Modalità di connessione
 USB](../getting-started/usb-connection-modes.md#bootloader-mode) per
-mettere la radio in modalità bootloader ed eseguire il flash — oppure usa [Ethos
+mettere la radio in modalità Bootloader ed eseguirne il flash — oppure usa [Ethos
 Suite](../ethos-suite/index.md), che gestisce automaticamente il controllo delle versioni
 e il flashing.
