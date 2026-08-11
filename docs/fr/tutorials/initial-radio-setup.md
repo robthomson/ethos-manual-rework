@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Configuration initiale de la radio
 
 La configuration à effectuer une seule fois, avant de programmer un quelconque modèle. Les [Tutoriels](index.md) qui suivent supposent tous que cette étape a été réalisée au préalable.

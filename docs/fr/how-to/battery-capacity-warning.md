@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Alerte de capacité de batterie
 
 Alerte basée sur la **capacité consommée** (mAh) plutôt que sur la tension — une mesure plus directe de la part de la batterie réellement utilisée. Deux méthodes sont possibles, selon le matériel installé.

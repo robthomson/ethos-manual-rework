@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Exemple d'hélicoptère flybarless basique
 
 Configuration de base d'un hélicoptère flybarless (FBL), en prenant comme

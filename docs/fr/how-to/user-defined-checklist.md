@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Liste de contrôle de texte définie par l'utilisateur
 
 ![Texte de liste de contrôle utilisateur](../assets/model-checklist-user-checklist.png)

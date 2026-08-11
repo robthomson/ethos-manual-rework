@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Emplacement des scripts d'exemple
 
 Les scripts d'exemple officiels sont publiés sur

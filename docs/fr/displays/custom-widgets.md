@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Widgets personnalisés
 
 Au-delà des [types de widgets intégrés](index.md), des scripts Lua peuvent implémenter

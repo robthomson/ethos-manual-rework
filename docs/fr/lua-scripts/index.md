@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Scripts Lua
 
 Les scripts Lua vous permettent de créer des [widgets d'affichage](../displays/custom-widgets.md)

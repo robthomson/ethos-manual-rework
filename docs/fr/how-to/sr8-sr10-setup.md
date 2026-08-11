@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Configuration du modèle SR8/SR10 et réorganisation des voies
 
 Les récepteurs stabilisés SRx de FrSky s'attendent à un ordre des voies

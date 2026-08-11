@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Configuration du système
 
 La Configuration du système règle les paramètres de la radio communs à tous les modèles — accessible via l'onglet **Engrenage** de la barre inférieure de l'écran (ou la touche `SYS`). Toute la configuration spécifique à un seul modèle est effectuée dans [Configuration du modèle](../model-setup/index.md) (onglet **Avion** / touche `MDL`) — notamment, le module RF utilisé par un modèle (interne ou externe) est un réglage propre à chaque modèle, à définir dans [Système RF](../model-setup/rf-system.md), et non ici.

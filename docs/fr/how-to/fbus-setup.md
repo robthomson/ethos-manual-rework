@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Configurer un système FBUS
 
 Le protocole [FBUS](../model-setup/telemetry.md#how-frsky-telemetry-works)

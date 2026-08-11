@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Exemple de base pour avion à voilure fixe
 
 Un déroulé complet pour un avion moteur + 2 ailerons + 2 volets +

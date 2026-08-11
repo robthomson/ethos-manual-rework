@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Migration
 
 Passage d'une radio des anciens outils de mise à jour PC séparés vers Ethos Suite,

@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Documentation d'Ethos Lua
 
 La référence complète de l'API Lua d'Ethos est fournie avec **Ethos Suite**,

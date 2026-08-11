@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Ethos Suite
 
 Ethos Suite est l'application PC compagnon, pour Windows ou Mac, qui permet de gérer une radio exécutant Ethos, connectée par un câble USB.

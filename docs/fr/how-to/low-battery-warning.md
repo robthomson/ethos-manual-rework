@@ -2,10 +2,6 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Avertissement de tension de batterie faible
 
 Surveiller la tension du pack de propulsion **sous charge** et déclencher une alerte lorsqu'elle tombe en dessous d'un seuil est une approche plus fiable que de se fier à un chronomètre fixe — un capteur tel que le FrSky FLVSS rend cela très simple.

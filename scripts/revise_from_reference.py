@@ -236,6 +236,18 @@ def _clean_output(text: str) -> str:
     return text + "\n"
 
 
+def _strip_leading_frontmatter(text: str) -> str:
+    """Remove a leading ---...--- block, if the model echoed one despite
+    being told to output only the Markdown body."""
+    stripped = text.lstrip()
+    if not stripped.startswith("---"):
+        return text
+    end = stripped.find("\n---", 3)
+    if end == -1:
+        return text
+    return stripped[end + 4:].lstrip("\n")
+
+
 def revise_page(client: anthropic.Anthropic, model: str, locale: str, rel_path: str,
                  en_text: str, current_translation: str, reference_text: str) -> str:
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
@@ -329,6 +341,12 @@ def main(argv: list[str] | None = None) -> int:
             frontmatter = existing[: end + 4] if end != -1 else ""
         else:
             frontmatter = ""
+        # Claude's output sometimes echoes a frontmatter-like block despite
+        # being told to output only the Markdown body (it saw one in the
+        # "current translation" it was revising) -- strip any leading
+        # ---...--- block from its output before prepending our own, or
+        # the file ends up with the same translated_from block twice.
+        revised_text = _strip_leading_frontmatter(revised_text)
         fr_path.write_text(f"{frontmatter}\n\n{revised_text}" if frontmatter else revised_text, encoding="utf-8")
         print("done")
         revised += 1
