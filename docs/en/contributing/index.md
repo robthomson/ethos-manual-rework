@@ -117,6 +117,39 @@ current, never committed to git) and compares every locale's
 commit: **current**, **stale** (English moved on), or **missing**. That
 page is the worklist — no GitHub Issues, no digging through Actions logs.
 
+### Automated translation (optional)
+
+`scripts/translate.py` is a standalone local script (not part of the site
+build or CI) that drives the same missing/stale worklist through the
+Claude API to produce a first-draft translation for each page, stamped
+with the correct `translated_from:` frontmatter automatically:
+
+```bash
+pip install anthropic pyyaml   # if not already installed
+export ANTHROPIC_API_KEY=...   # or use `ant auth login`
+
+python scripts/translate.py --dry-run       # see what's queued, no API calls
+python scripts/translate.py --only fr       # translate everything missing/stale for French
+python scripts/translate.py --pages model-setup/mixes.md   # just one page
+```
+
+It reads every locale from `mkdocs.yml`'s `i18n` plugin config by default
+(`--only` restricts to specific ones), skips anything already current
+unless `--force` is passed, and never commits or pushes — it only writes
+files under `docs/<locale>/`, same as if you'd hand-edited them. Review the
+diff, do the [anchor-pinning](#addingupdating-a-translation) check for any
+newly-translated heading, then open a PR as usual.
+
+The system prompt pre-seeds Claude with the manual's domain (FrSky Ethos
+radio firmware, RC hobbyist audience) and a list of terms that must never
+be translated (physical key names, protocol names, brand names), the same
+technique used by the sister
+[`rotorflight-lua-ethos-suite`](https://github.com/rotorflight/rotorflight-lua-ethos-suite)
+repo's own `bin/i18n/auto-translate.py`. A glossary of terms established
+during the French pilot is baked in for `fr`; extend
+`GLOSSARIES` in the script the same way once another locale has a few
+pages translated and reviewed.
+
 Nav tab labels (e.g. "Model Setup") stay in English until a locale sets
 `nav_translations` for them — deliberately not done yet while only a
 handful of pages are translated, since translating labels ahead of the

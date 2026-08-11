@@ -1,17 +1,18 @@
 ---
-translated_from: f9f31073c0e8b5352770d12703868b7972365db6
+translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
 ---
 
 # Interface utilisateur et navigation
 
-Ethos peut être entièrement piloté avec la **molette rotative** de droite
-(tourner pour déplacer la surbrillance, appuyer pour `ENT`) et la touche
-`RTN` pour revenir en arrière — l'écran tactile, lorsqu'il est présent,
-n'est qu'un raccourci pour les mêmes actions, pas une autre façon de
-travailler. `MDL`, `DISP` et `SYS` ouvrent directement Configuration du
-modèle, Configurer les écrans et Configuration du système (les trois
-mêmes cases que la barre inférieure) ; un appui long sur `RTN` depuis
-n'importe où ramène directement à l'écran d'accueil.
+Ethos peut être piloté entièrement à l'aide de l'**encodeur rotatif** de
+droite (tourner pour déplacer la sélection, appuyer pour `ENT`) et de la
+touche `RTN` pour quitter un menu — l'écran tactile, lorsqu'il est présent,
+n'est qu'un raccourci pour les mêmes actions, et non une manière de
+travailler distincte. `MDL`, `DISP` et `SYS` conduisent directement à la
+Configuration du modèle, à Configurer les écrans et à la Configuration du
+système respectivement (les trois mêmes tuiles que celles de la barre
+inférieure) ; un appui long sur `RTN` depuis n'importe quel endroit ramène
+directement à l'écran d'accueil.
 
 ## Le menu de réinitialisation
 
@@ -20,162 +21,162 @@ n'importe où ramène directement à l'écran d'accueil.
 Un appui long sur `ENT` depuis l'écran d'accueil ouvre un menu de
 réinitialisation :
 
-- **Réinitialiser le vol** — réinitialise la télémétrie, les chronomètres
-  et les interrupteurs de fonction, et relance la [checklist](../model-setup/checklist.md)
-  de pré-vol.
+- **Réinitialiser le vol** — réinitialise la télémétrie, les chronos et les
+  interrupteurs de fonction, et relance la [liste de
+  vérification](../model-setup/checklist.md) d'avant vol.
 - **Réinitialiser la télémétrie** — réinitialise uniquement la télémétrie.
-- **Réinitialiser les chronomètres** — réinitialise uniquement les
-  chronomètres.
+- **Réinitialiser les chronos** — réinitialise uniquement les chronos.
 - **Verrouiller l'écran tactile** — également accessible en appuyant
-  simultanément sur `ENT` et `PAGE` pendant une seconde depuis l'écran
-  d'accueil, ou via une [fonction
+  simultanément sur `ENT` + `PAGE` pendant une seconde depuis l'écran
+  d'accueil, ou comme déclencheur d'une [fonction
   spéciale](../model-setup/special-functions.md).
 
-## Modifier les réglages
+## Commandes d'édition
 
-**Ajouter un élément fonctionnel** — un chronomètre, un interrupteur
+**Ajout d'éléments fonctionnels** — un chronomètre, un interrupteur
 logique, une fonction spéciale, une courbe ou une variable se crée en
-touchant le **+** à côté des en-têtes de colonnes dans le menu concerné.
-Sur une radio sans écran tactile, mettez en surbrillance un élément
-existant, appuyez sur `ENT`, puis choisissez **Ajouter** dans le menu —
-la même option est également disponible sur les radios tactiles.
+touchant le **+** situé à côté des en-têtes de colonnes du menu concerné.
+Sur une radio sans écran tactile, sélectionnez un élément existant, appuyez
+sur `ENT` et choisissez **Ajouter** dans le menu — cette option est
+également disponible sur les radios tactiles.
 
 ### Clavier virtuel
 
-![Clavier texte](../assets/keyboard-text-azerty.png)
+![Clavier alphabétique](../assets/keyboard-text-azerty.png)
 
-Toucher un champ de texte (ou appuyer sur `ENT` dessus) ouvre le clavier
-à l'écran. La touche de retour arrière efface à gauche du curseur ;
-`PAGE` supprime à droite, et une fois le curseur arrivé en fin de texte,
-continue à supprimer depuis la gauche. Toucher le champ déplace le
-curseur à cet endroit — ou utilisez `SYS`/`DISP` pour le déplacer à
-gauche/droite sans le tactile. La touche **?123**/**abc** bascule vers
-le clavier numérique (qui comporte aussi les caractères spéciaux) :
+Toucher un champ de texte (ou appuyer sur `ENT` lorsqu'il est sélectionné)
+ouvre le clavier à l'écran. La touche retour arrière efface à gauche du
+curseur ; `PAGE` supprime à droite et, une fois le curseur arrivé à la fin
+du texte, poursuit la suppression à partir de la gauche. Toucher le champ
+lui-même déplace le curseur à cette position — ou utilisez `SYS`/`DISP`
+pour le déplacer vers la gauche/la droite sans le tactile. La touche
+**?123**/**abc** active le pavé numérique (qui contient également les
+caractères spéciaux) :
 
 ![Clavier numérique](../assets/keyboard-text-numbers.png)
 
-Sur une **radio sans écran tactile**, appuyer sur `ENT` sur un champ de
-texte entre directement en mode édition : tournez la molette pour faire
-défiler les minuscules, majuscules, chiffres, puis caractères spéciaux,
-en appuyant sur `ENT` pour insérer chacun d'eux. `MDL` bascule la casse
-du caractère immédiatement à droite du curseur (et chaque caractère
-saisi ensuite conserve cette casse jusqu'au prochain basculement).
-`PAGE` supprime à droite du curseur ; `SYS`/`DISP` le déplacent à
-gauche/droite.
+Sur une **radio sans écran tactile**, un appui sur `ENT` dans un champ de
+texte active directement le mode édition : tournez l'encodeur pour faire
+défiler les minuscules, les majuscules, les chiffres, puis les caractères
+spéciaux, en appuyant sur `ENT` pour insérer chacun d'eux. `MDL` bascule la
+casse du caractère situé immédiatement à droite du curseur (et tous les
+caractères saisis ensuite conservent cette casse jusqu'à une nouvelle
+bascule). `PAGE` supprime à droite du curseur ; `SYS`/`DISP` le déplacent
+vers la gauche/la droite.
 
-## Réglage des valeurs numériques
+## Commandes de saisie des valeurs numériques
 
-![Saisie de nombre](../assets/keyboard-numbers.png)
+![Saisie numérique](../assets/keyboard-numbers.png)
 
-Toucher un champ numérique ouvre une barre de contrôle en bas de
-l'écran : **`<`**/**`>`** changent le pas d'incrémentation (en tournant
-entre les décades — par ex. 0,01/0,1/1,0/10,0), **`-`**/**`+`** (ou la
-molette rotative) ajustent la valeur de ce pas, et **Plus** ouvre
-d'autres options :
+Toucher un champ numérique ouvre une barre de commandes en bas de l'écran :
+**`<`**/**`>`** modifient le pas d'incrémentation (en passant d'une décade
+à l'autre — par exemple 0,01/0,1/1,0/10,0), **`-`**/**`+`** (ou l'encodeur
+rotatif) ajustent la valeur de ce pas, et **Plus** ouvre d'autres options :
 
 ![Options de saisie numérique](../assets/keyboard-numbers-options.png)
 
 - Revenir à la valeur par défaut du champ
-- Mettre au minimum / au maximum
-- Remplacer les boutons +/- par un **curseur**
+- Régler au minimum / régler au maximum
+- Remplacer l'incrémenteur par un **curseur**
 
 ![Saisie par curseur](../assets/keyboard-numbers-slider.png)
 
-Le curseur (également ajustable avec la molette rotative) est plus
-rapide pour les grands changements ; **Désactiver le curseur** revient
-aux boutons +/-. Les plages de valeurs de télémétrie se modifient de la
-même manière :
+Le curseur (également réglable avec l'encodeur rotatif) est plus rapide
+pour les modifications grossières ; **Désactiver le curseur** rétablit
+l'incrémenteur. Les valeurs de plage de télémétrie se modifient de la même
+manière :
 
 ![Curseur désactivé](../assets/keyboard-numbers-options-disable-slider.png)
 
-## La fonctionnalité Options {: #the-options-feature }
+## La fonction Options {: #the-options-feature }
 
 Presque partout où une valeur ou une [source](#choosing-a-source) est
-attendue, un appui long sur `ENT` ouvre une boîte de dialogue
-**Options** — repérable par la petite icône de menu (« hamburger ») dans
-le coin supérieur gauche du champ.
+attendue, un appui long sur `ENT` ouvre une boîte de dialogue **Options** —
+la présence d'une petite icône de menu (« hamburger ») dans le coin
+supérieur gauche d'un champ indique qu'elle est disponible.
 
 ### Options de valeur
 
 ![Options de source](../assets/source-with-options.png)
 
 La boîte de dialogue des options de valeur indique le paramètre en cours
-de modification et propose de choisir entre un minimum/maximum fixe ou
-de le piloter par une **source** (par ex. un potentiomètre, pour ajuster
-la valeur en vol). Si le champ utilise déjà une source, le même appui
-long propose plutôt de convertir la valeur actuelle de cette source en
+d'édition et propose de choisir entre un minimum/maximum fixe ou son
+pilotage par une **source** (par exemple un potentiomètre, afin d'ajuster
+la valeur en vol). Si le champ utilise déjà une source, le même appui long
+propose à la place de convertir la valeur actuelle de cette source en
 valeur fixe :
 
 ![Convertir la source en valeur](../assets/source-convert-to-value.png)
 
-### Choisir une source {: #choosing-a-source }
+### Choix d'une source {: #choosing-a-source }
 
 Sélectionner **Choisir une source** ouvre un sélecteur à deux colonnes —
 d'abord une **catégorie** (analogiques, interrupteurs, interrupteurs
-logiques, trims, voies, un axe gyroscopique, une voie élève, un
-chronomètre, un capteur de télémétrie, ou quelques valeurs spéciales),
-puis le membre précis de cette catégorie :
+logiques, trims, voies, un axe gyroscopique, une voie d'écolage, un
+chronomètre, un capteur de télémétrie ou quelques valeurs spéciales), puis
+l'élément précis de celle-ci :
 
-![Menu source](../assets/source-menu.png)
+![Menu des sources](../assets/source-menu.png)
 
-Une fois la source définie, le même appui long ouvre des options
-propres au type de source :
+Une fois la source définie, le même appui long ouvre des options propres au
+type de source concerné :
 
 **Toute source** —
 
-- **Inverser** — inverse la source (par ex. active quand un interrupteur
-  n'est *pas* en position haute, plutôt que quand il l'est).
-- **Front** (Edge) — se déclenche une seule fois lors d'une transition
-  (faux→vrai ou vrai→faux) au lieu de rester actif pendant tout l'état ;
-  affiché avec un préfixe `†` sur la source. Disponible sur les
-  interrupteurs en général, et spécifiquement sur la condition de
+- **Inverser** — inverse la source (par exemple active lorsqu'un
+  interrupteur n'est *pas* en position haute, au lieu de l'être lorsqu'il
+  l'est).
+- **Front** — se déclenche une seule fois lors d'une transition
+  (faux→vrai ou vrai→faux) plutôt que de rester actif pendant tout l'état ;
+  signalé par un préfixe `†` sur la source. Disponible sur les
+  interrupteurs en général, et plus particulièrement sur la condition de
   déclenchement de l'[interrupteur logique
   Sticky](../model-setup/logical-switches.md).
 
-**Sources manche** — options de type calibration/subtrim :
+**Sources de type manche** — options de type calibration/subtrim :
 
-![Options source manche](../assets/source-stick-options.png)
+![Options des sources de manche](../assets/source-stick-options.png)
 
-**Sources interrupteur** —
+**Sources de type interrupteur** —
 
-![Options interrupteur 2 positions](../assets/source-2pos-options.png)
-![Options interrupteur](../assets/switch-options.png)
+![Options d'un interrupteur à 2 positions](../assets/source-2pos-options.png)
+![Options d'interrupteur](../assets/switch-options.png)
 
 - **Négatif** — inverse l'action de l'interrupteur.
-- **DemiPlage** (HalfRange) — pour un interrupteur 2 positions ou un
-  interrupteur logique, change sa plage de sortie de ±100 % à 0–100 %.
+- **HalfRange** — pour un interrupteur à 2 positions ou un interrupteur
+  logique, modifie sa plage de sortie de ±100 % à 0–100 %.
 
-**Sources trim** —
+**Sources de type trim** —
 
-![Options source trim](../assets/source-trim-options.png)
+![Options des sources de trim](../assets/source-trim-options.png)
 
 - **Négatif** — inverse l'action du trim (utile dans les Actions d'un
   mixage libre).
-- **Pleine plage** — les trims valent par défaut ±25 % ; en tant que
+- **Plage complète** — les trims sont par défaut de ±25 % ; en tant que
   source, cette plage peut être élargie à ±100 %.
-- **Ignorer l'entrée formateur** — sur un [interrupteur
+- **Ignorer l'entrée écolage** — sur un [interrupteur
   logique](../model-setup/logical-switches.md), exclut les mouvements
-  provenant de l'entrée formateur du déclenchement de l'interrupteur.
-  Usage typique : détecter le mouvement des manches du formateur
-  **maître** lui-même (par ex. pour intervenir instantanément si l'élève
-  fait une erreur) sans que les entrées manche de l'élève ne déclenchent
-  aussi l'interrupteur.
+  provenant de l'entrée écolage du déclenchement de l'interrupteur.
+  Utilisation typique : détecter le mouvement des manches du *maître*
+  d'écolage (par exemple pour intervenir instantanément si l'élève fait une
+  erreur) sans que les commandes de l'élève le déclenchent également.
 
-**Sources variable** —
+**Sources de type variable** —
 
-![Options source variable](../assets/source-var-options.png)
+![Options des sources de variable](../assets/source-var-options.png)
 
 - **Négatif** — inverse la valeur de la variable pour cet usage.
-- **Ignorer la plage** — certains champs ont des plages asymétriques
-  (par ex. Min/Max des Sorties, qui vont de −150 à 0 % et de 0 à 150 %
-  respectivement). À moins qu'une [variable](../model-setup/variables.md)
-  utilisée comme source de ce champ n'ait une plage identique, activez
-  cette option pour éviter la conversion de plage automatique d'Ethos et
-  des valeurs inattendues.
+- **Ignorer la plage** — certains champs ont des plages asymétriques (par
+  exemple Min/Max des Sorties, qui vont respectivement de −150 à 0 % et de
+  0 à 150 %). À moins qu'une [variable](../model-setup/variables.md)
+  utilisée comme source de ce champ ait une plage identique, activez cette
+  option pour contourner la conversion automatique de plage d'Ethos et
+  éviter des valeurs inattendues.
 
-**Sources capteur de télémétrie** — réduisent la source à son minimum ou
-maximum en direct plutôt qu'à la valeur instantanée (certains capteurs
-ajoutent des options supplémentaires propres au capteur) :
+**Sources de type capteur de télémétrie** — réduire la source à son
+minimum ou son maximum en cours d'utilisation au lieu de la lecture
+instantanée (certains capteurs proposent en outre des options qui leur sont
+propres) :
 
-![Options min/max capteur](../assets/source-sensor-options.png)
+![Options min/max du capteur](../assets/source-sensor-options.png)
 ![Maximum du capteur sélectionné](../assets/source-sensor-maxi.png)
