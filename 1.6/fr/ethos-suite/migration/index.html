@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migration" class="md-skip">
+        <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-skip">
           Aller au contenu
         </a>
       
@@ -907,7 +907,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration du système
+    Index
   
 
     
@@ -1777,7 +1777,7 @@
   <span class="md-ellipsis">
     
   
-    Écrans
+    Index
   
 
     
@@ -1918,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Index
   
 
     
@@ -2851,7 +2851,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Index
   
 
     
@@ -2878,8 +2878,24 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2897,6 +2913,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3265,8 +3320,36 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3291,35 +3374,42 @@
   
 
 
+<hr />
+<h2 id="translated_from-827e532e2b0324591f0fdbb61a39e61180642b24">translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24<a class="headerlink" href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" title="Permanent link">&para;</a></h2>
 <h1 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h1>
 <p>Passage d'une radio des anciens outils de mise à jour PC séparés vers Ethos Suite,
 pour la première fois.</p>
 <ol>
-<li><strong>Vérifiez que la version Ethos est ≥ 1.1.4</strong> — la version minimale capable de flasher le nouveau
-   bootloader compatible Suite (format FRSK) directement depuis le <a href="../../system-setup/file-manager/">Gestionnaire
-   de fichiers</a>. Mettez d'abord à jour manuellement vers la version 1.1.4
-   si nécessaire.</li>
-<li><strong>Sauvegardez la carte SD/eMMC</strong> — copiez l'intégralité du contenu dans un dossier sur un
-   PC.</li>
-<li><strong>Téléchargez le bootloader le plus récent</strong> depuis les
-   <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">publications ETHOS-Feedback-Community</a>
-   et décompressez l'archive. Chaque publication comporte un fichier <code>components.json</code> listant la version
-   actuelle de chaque composant — voir <a href="../../how-to/find-latest-bootloader/">Guide pratique : trouver le bootloader
-   le plus récent</a> pour savoir comment le lire.</li>
-<li>Recherchez la radio dans l'entrée <code>targets</code> de ce fichier afin de connaître la version exacte
-   du bootloader à utiliser, puis repérez le fichier correspondant parmi les ressources de cette
-   publication.</li>
-<li>Démarrez la radio en <a href="../../getting-started/usb-connection-modes/#bootloader-mode">mode bootloader</a>
-   (maintenez <code>ENT</code>, puis mettez sous tension) et connectez-la en USB.</li>
-<li>Copiez le fichier du bootloader sur la carte SD/eMMC (normalement dans
-   <code>Firmware/</code>), puis éjectez les lecteurs et déconnectez la radio.</li>
-<li>Démarrez la radio normalement, allez dans <strong>System → File Manager</strong>, appuyez sur le
-   fichier <code>bootloader.frsk</code> qui vient d'être copié, puis sur <strong>Flash bootloader</strong>.</li>
+<li><strong>Assurez-vous d'utiliser au moins la version 1.1.4 d'Ethos</strong> — la version minimale
+   nécessaire pour flasher le nouveau chargeur de démarrage compatible Ethos Suite
+   (format FRSK) directement à partir du <a href="../../system-setup/file-manager/">gestionnaire de
+   fichiers</a>. Si ce n'est pas le cas, effectuez d'abord
+   manuellement la mise à jour vers la version 1.1.4.</li>
+<li><strong>Faites une sauvegarde de votre carte SD ou eMMC</strong> — copiez l'intégralité du contenu
+   dans un dossier de votre ordinateur.</li>
+<li><strong>Téléchargez le dernier chargeur de démarrage</strong> depuis les
+   <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">versions ETHOS-Feedback-Community</a>
+   et décompressez l'archive. Chaque version est publiée avec un fichier <code>components.json</code>
+   qui répertorie la version actuelle de tous les composants — voir <a href="../../how-to/find-latest-bootloader/">Guide pratique :
+   trouver le dernier chargeur de démarrage</a> pour
+   savoir comment le lire.</li>
+<li>Recherchez votre radio sous la rubrique <code>targets</code> de ce fichier pour connaître la
+   version exacte du chargeur de démarrage à utiliser, puis repérez le fichier
+   correspondant parmi les actifs de cette version.</li>
+<li>Allumez la radio en <a href="../../getting-started/usb-connection-modes/#bootloader-mode">mode chargeur de démarrage</a>
+   (maintenez la touche <code>ENT</code> enfoncée, puis mettez sous tension) et connectez-la au PC
+   à l'aide d'un câble USB.</li>
+<li>Copiez le fichier du chargeur de démarrage sur la carte SD ou eMMC (normalement dans
+   le dossier <code>Firmware/</code>), puis éjectez les lecteurs et déconnectez la radio.</li>
+<li>Démarrez la radio normalement, allez dans <strong>Système → Gestionnaire de fichiers</strong>,
+   appuyez sur le fichier <code>bootloader.frsk</code> que vous venez de copier et sélectionnez
+   l'option <strong>Flash bootloader</strong>.</li>
 <li>Téléchargez et installez Ethos Suite — la page <a href="../operation/">Utilisation</a> décrit la
-   mise à jour du firmware et des fichiers ainsi que les autres fonctionnalités de Suite à partir de ce point.</li>
-<li>Si Ethos Suite ne le fait pas automatiquement, il peut être nécessaire de renommer le dossier
-   <code>bitmaps/user</code> de la carte SD/eMMC en <code>bitmaps/models</code> (c'est là que
-   se trouvent les images de modèles de l'utilisateur).</li>
+   mise à jour du micrologiciel et des fichiers ainsi que les autres fonctionnalités
+   d'Ethos Suite à partir de ce point.</li>
+<li>Si Ethos Suite ne le fait pas pour vous, il peut être nécessaire de renommer le
+   dossier <code>bitmaps/user</code> de la carte SD ou eMMC en <code>bitmaps/models</code> (il s'agit du
+   dossier dans lequel les bitmaps de modèles de l'utilisateur sont stockés).</li>
 </ol>
 
 
@@ -3359,7 +3449,7 @@ pour la première fois.</p>
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Ethos Suite">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Index">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3369,7 +3459,7 @@ pour la première fois.</p>
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Ethos Suite
+                Index
               </div>
             </div>
           </a>

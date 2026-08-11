@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structure-de-base-dun-widget" class="md-skip">
+        <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-skip">
           Aller au contenu
         </a>
       
@@ -907,7 +907,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration du système
+    Index
   
 
     
@@ -1777,7 +1777,7 @@
   <span class="md-ellipsis">
     
   
-    Écrans
+    Index
   
 
     
@@ -1923,7 +1923,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Index
   
 
     
@@ -2062,8 +2062,24 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structure de base d'un widget
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2081,6 +2097,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mise-en-page-de-base-dun-widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise en page de base d'un widget
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2861,7 +2916,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Index
   
 
     
@@ -3265,8 +3320,36 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mise-en-page-de-base-dun-widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise en page de base d'un widget
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3291,40 +3374,48 @@
   
 
 
-<h1 id="structure-de-base-dun-widget">Structure de base d'un widget<a class="headerlink" href="#structure-de-base-dun-widget" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="translated_from-827e532e2b0324591f0fdbb61a39e61180642b24">translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24<a class="headerlink" href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" title="Permanent link">&para;</a></h2>
+<h1 id="mise-en-page-de-base-dun-widget">Mise en page de base d'un widget<a class="headerlink" href="#mise-en-page-de-base-dun-widget" title="Permanent link">&para;</a></h1>
 <p>Un widget Lua personnalisé (voir <a href="../../displays/custom-widgets/">Widgets personnalisés</a>
 pour la procédure d'installation) est construit à partir d'un petit ensemble de
 champs et de gestionnaires nommés :</p>
 <ul>
-<li><strong><code>key</code></strong> <em>(chaîne)</em> — un identifiant unique pour le widget.</li>
-<li><strong><code>name</code></strong> <em>(chaîne ou fonction)</em> — le nom affiché du widget. Soit une
-  simple chaîne, soit une fonction sans argument renvoyant une chaîne —
-  utile pour un nom qui varie selon la langue.</li>
-<li><strong><code>create</code></strong> <em>(fonction)</em> — appelée une seule fois lors de la création du
-  widget, sans argument. Renvoie une <strong>table du widget</strong>, qui est ensuite
-  transmise à tous les autres gestionnaires ci-dessous — initialisez votre
-  état ici et stockez-le dans cette table.</li>
-<li><strong><code>configure</code></strong> <em>(fonction)</em> — appelée lorsque l'utilisateur ouvre l'écran
-  de configuration du widget, prenant comme unique argument la table du
-  widget issue de <code>create()</code> et ne renvoyant rien. Construisez ici le
-  formulaire de configuration et utilisez-le pour mettre à jour les valeurs
-  de la table du widget.</li>
-<li><strong><code>wakeup</code></strong> <em>(fonction)</em> — appelée à chaque boucle (environ toutes les
-  50 ms), prenant la table du widget et ne renvoyant rien. Vérifiez ici si
-  quelque chose a changé ; si c'est le cas, appelez <code>invalidateWindow()</code>
-  pour déclencher un rafraîchissement via <code>paint()</code>. Ce gestionnaire doit
-  rester rapide — idéalement, il ne fait rien du tout la plupart du temps.</li>
-<li><strong><code>event</code></strong> <em>(fonction)</em> — appelée lorsque le widget reçoit un événement ;
-  Ethos transmet des événements quelconques au widget par ce gestionnaire.</li>
-<li><strong><code>paint</code></strong> <em>(fonction)</em> — dessine le widget, prenant la table du widget et
-  ne renvoyant rien. Appelée automatiquement chaque fois que
-  <code>lcd.invalidate()</code> a été déclenché. Elle peut être relativement lente,
-  mais ne devrait néanmoins redessiner effectivement que lorsque quelque
-  chose a changé.</li>
-<li><strong><code>read</code></strong> <em>(fonction, facultative)</em> — lit les données persistantes du widget.</li>
-<li><strong><code>write</code></strong> <em>(fonction, facultative)</em> — écrit les données persistantes du widget.</li>
-<li><strong><code>init</code></strong> <em>(fonction)</em> — enregistre le widget et ses fonctions de rappel
-  auprès d'Ethos. Il s'agit généralement du dernier élément du script :</li>
+<li><strong><code>key</code></strong> <em>(string)</em> — une clé unique identifiant le widget.</li>
+<li><strong><code>name</code></strong> <em>(string ou function)</em> — le nom affiché du widget. Il peut
+  s'agir simplement d'une chaîne de caractères, ou d'une fonction sans
+  argument qui renvoie le nom du widget sous forme de chaîne — pratique
+  lorsque le nom varie en fonction des paramètres régionaux.</li>
+<li><strong><code>create</code></strong> <em>(function)</em> — appelée lors de la création du widget, sans
+  argument. Elle renvoie la <strong>table du widget</strong>, qui sera ensuite passée à
+  tous les autres gestionnaires ci-dessous — initialisez vos variables ici et
+  stockez l'état dans cette table.</li>
+<li><strong><code>configure</code></strong> <em>(function)</em> — appelée lorsque l'utilisateur entre dans la
+  configuration du widget. Elle prend la table du widget renvoyée par
+  <code>create()</code> comme seul argument et ne retourne rien. Vous pouvez créer ici
+  le formulaire de configuration et l'utiliser pour modifier les valeurs dans
+  la table du widget.</li>
+<li><strong><code>wakeup</code></strong> <em>(function)</em> — appelée pendant chaque boucle, c'est-à-dire
+  toutes les 50 ms environ. Elle prend la table du widget comme seul argument
+  et ne renvoie rien. Elle doit vérifier si quelque chose a changé ; si oui,
+  un rafraîchissement est nécessaire, et la fonction <code>invalidateWindow()</code>
+  doit être appelée, ce qui provoquera l'appel de <code>paint()</code>. Vous devez vous
+  assurer que ce gestionnaire est très rapide — idéalement en ne faisant rien
+  du tout la plupart du temps.</li>
+<li><strong><code>event</code></strong> <em>(function)</em> — appelée lorsqu'un événement est reçu ; Ethos
+  offre la possibilité d'attraper n'importe quel événement dans un widget
+  grâce à cette fonction.</li>
+<li><strong><code>paint</code></strong> <em>(function)</em> — « dessine » le widget. Elle prend la table du
+  widget comme seul argument et ne renvoie rien. Elle est appelée
+  automatiquement chaque fois que <code>lcd.invalidate()</code> a été appelée. Elle peut
+  être relativement lente, aussi ne redessinez que si quelque chose a changé.</li>
+<li><strong><code>read</code></strong> <em>(function, en option)</em> — gestionnaire de lecture du stockage
+  persistant du widget.</li>
+<li><strong><code>write</code></strong> <em>(function, en option)</em> — gestionnaire d'écriture du stockage
+  persistant du widget.</li>
+<li><strong><code>init</code></strong> <em>(function)</em> — enregistre le widget et ses divers callbacks
+  auprès d'Ethos. Vous pourriez avoir quelque chose comme ceci au bas de
+  votre script :</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
 <span class="w">  </span><span class="nv">system</span><span class="p">.</span><span class="nf">registerWidget</span><span class="p">({</span>
@@ -3341,14 +3432,15 @@ champs et de gestionnaires nommés :</p>
 
 <span class="kr">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-<p><code>key</code> doit être unique parmi tous les widgets installés ; les autres champs
-s'intègrent au cycle de vie du widget comme décrit ci-dessus.</p>
-<p>Les scripts se trouvent dans <code>scripts/</code> sur la SD card ou l'eMMC, idéalement
-organisés en dossiers distincts par widget (voir <a href="../../system-setup/file-manager/#top-level-folders">Gestionnaire de
-fichiers</a> et <a href="../example-script-locations/">Exemples
-d'emplacements de scripts</a>). Consultez le fil de
-discussion <em>FrSky ETHOS Lua Script Programming</em> sur rcgroups pour d'autres
-exemples concrets.</p>
+<p>Notez que <code>key</code> doit être un identifiant unique parmi tous les widgets
+installés ; les différentes fonctions répertoriées sont utilisées dans le
+cycle de vie du widget, comme décrit ci-dessus.</p>
+<p>Les scripts Lua sont stockés dans le dossier <code>scripts/</code> de la SD card ou de
+l'eMMC, de préférence organisés en dossiers distincts par widget (voir
+<a href="../../system-setup/file-manager/#top-level-folders">Gestionnaire de fichiers</a>
+et <a href="../example-script-locations/">Exemples d'emplacements de scripts</a>). Pour
+plus d'exemples concrets, veuillez vous référer au fil de discussion <em>FrSky
+ETHOS Lua Script Programming</em> sur rcgroups.</p>
 
 
 

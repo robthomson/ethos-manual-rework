@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#alertes" class="md-skip">
+        <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-skip">
           Aller au contenu
         </a>
       
@@ -912,7 +912,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration du système
+    Index
   
 
     
@@ -967,8 +967,24 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alertes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -986,6 +1002,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alertes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1792,7 +1847,7 @@
   <span class="md-ellipsis">
     
   
-    Écrans
+    Index
   
 
     
@@ -1933,7 +1988,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Index
   
 
     
@@ -2861,7 +2916,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Index
   
 
     
@@ -3265,8 +3320,36 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alertes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3291,6 +3374,8 @@
   
 
 
+<hr />
+<h2 id="translated_from-827e532e2b0324591f0fdbb61a39e61180642b24">translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24<a class="headerlink" href="#translated_from-827e532e2b0324591f0fdbb61a39e61180642b24" title="Permanent link">&para;</a></h2>
 <h1 id="alertes">Alertes<a class="headerlink" href="#alertes" title="Permanent link">&para;</a></h1>
 <p><img alt="Alertes" src="../../assets/system-alerts.png" /></p>
 <p>Quatre alertes valables pour l'ensemble de la radio, chacune activable
@@ -3298,26 +3383,25 @@ indépendamment — distinctes des <a href="../../model-setup/special-functions/
 et des <a href="../../model-setup/logical-switches/">interrupteurs logiques</a>
 propres à chaque modèle que vous créez vous-même.</p>
 <ul>
-<li><strong>Mode silencieux</strong> — une alerte vocale au démarrage lorsque ce contrôle
-  est activé et que <a href="../general/">Général → Mode audio</a> est réglé sur
-  Silencieux, afin de rappeler que la radio est muette.</li>
-<li><strong>Tension principale</strong> — « La batterie de la radio est faible » lorsque
-  la batterie principale de la radio descend sous le seuil de <strong>Tension
-  basse</strong> défini dans <a href="../battery/">Batterie</a>.</li>
-<li><strong>Tension RTC</strong> — « La batterie RTC est faible » lorsque la pile bouton
-  RTC descend sous 2,5 V (le seuil par défaut). L'enregistrement des
-  données repose sur l'horloge temps réel ; une heure invalide rend les
-  journaux difficiles à exploiter, notamment pour distinguer les sessions
-  de vol. Cette alerte peut être désactivée temporairement en attendant de
-  remplacer la pile, mais elle ne devrait pas rester désactivée
-  indéfiniment.</li>
-<li><strong>Alerte de conflit de capteurs</strong> — détecte les identifiants de capteurs
-  de télémétrie en conflit. Il n'est utile de la désactiver que si vous
-  utilisez des capteurs non conformes à la spécification S.Port.</li>
-<li><strong>Inactivité</strong> — une alerte vocale « Inactivité prolongée » (accompagnée
-  d'une vibration, au cas où le volume serait baissé) après que la radio
-  soit restée inutilisée plus longtemps que la durée configurée —
-  10 minutes par défaut.</li>
+<li><strong>Mode silencieux</strong> — une annonce vocale est émise au démarrage lorsque
+  cette vérification est activée et que le <a href="../general/">Général → Mode audio</a>
+  est réglé sur Silencieux, pour rappeler que la radio est muette.</li>
+<li><strong>Tension radio</strong> — « Batterie radio faible » lorsque la batterie
+  principale de la radio descend sous le seuil d'<strong>Alerte tension basse</strong>
+  défini dans <a href="../battery/">Batterie</a>.</li>
+<li><strong>Tension pile RTC</strong> — « Batterie RTC faible » lorsque la pile bouton RTC
+  descend sous 2,5 V (le seuil par défaut). L'enregistrement des données
+  s'appuie sur l'horloge temps réel ; une heure invalide rend l'analyse des
+  journaux difficile, notamment pour distinguer les sessions de vol.
+  L'alerte peut être désactivée temporairement en attendant de changer la
+  pile, mais il ne faut pas la laisser désactivée indéfiniment.</li>
+<li><strong>Alerte conflit capteurs</strong> — détecte les identifiants de capteurs de
+  télémétrie en conflit. Il n'est utile de la désactiver que si vous avez
+  des capteurs qui ne répondent pas à la spécification S.Port.</li>
+<li><strong>Inactivité</strong> — une annonce vocale « Inactivité prolongée » (ainsi
+  qu'une vibration, au cas où le volume de la radio serait baissé) est
+  émise lorsque la radio n'a pas été utilisée au-delà de la durée
+  configurée — 10 minutes par défaut.</li>
 </ul>
 
 

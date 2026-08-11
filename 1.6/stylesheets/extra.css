@@ -19,15 +19,19 @@
   --md-accent-fg-color--transparent: rgba(120, 214, 66, 0.1);
   --md-accent-bg-color:              #ffffff;
   --md-accent-bg-color--light:       rgba(255, 255, 255, 0.7);
-}
 
-/* Material derives typeset link color -- and, via that, the current-page
-   highlight in the left nav -- from --md-typeset-a-color, which defaults
-   to var(--md-primary-fg-color). Our primary is #141414 (near-black),
-   deliberately dark for the header bar. That's unremarkable dark text in
-   light mode, but against dark mode's dark sidebar it's nearly invisible.
-   Point it at the accent green instead, dark mode only. */
-[data-md-color-scheme="slate"] {
+  /* Material derives typeset link color -- and, via that, the current-page
+     highlight in the left nav -- from --md-typeset-a-color, which defaults
+     to var(--md-primary-fg-color). Our primary is #141414 (near-black),
+     deliberately dark for the header bar only. Left wired that way it made
+     the active-page nav item invisible against dark mode's dark sidebar
+     (found first) -- but the same root cause breaks light mode too, just
+     less obviously: near-black is still *readable* there, so it doesn't
+     look "broken", it's just indistinguishable from the inactive items'
+     own text color, so the active-page indicator does nothing. This
+     comment already documented the intent ("links, active nav, search
+     highlight") -- this line just makes the wiring match it, in both
+     themes, not dark-mode-only as the first pass did. */
   --md-typeset-a-color: var(--md-accent-fg-color);
 }
 

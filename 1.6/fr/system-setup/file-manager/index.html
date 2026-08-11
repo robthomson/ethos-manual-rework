@@ -912,7 +912,7 @@
   <span class="md-ellipsis">
     
   
-    Configuration du système
+    Index
   
 
     
@@ -993,10 +993,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#organisation-de-la-memoire" class="md-nav__link">
+  <a href="#organisation-du-stockage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisation de la mémoire
+        Organisation du stockage
       
     </span>
   </a>
@@ -1007,7 +1007,7 @@
   <a href="#top-level-folders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dossiers de premier niveau
+        Répertoires de premier niveau
       
     </span>
   </a>
@@ -1015,10 +1015,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partage-de-fichiers-par-bluetooth" class="md-nav__link">
+  <a href="#partage-de-fichiers-via-bluetooth" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partage de fichiers par Bluetooth
+        Partage de fichiers via Bluetooth
       
     </span>
   </a>
@@ -1862,7 +1862,7 @@
   <span class="md-ellipsis">
     
   
-    Écrans
+    Index
   
 
     
@@ -2003,7 +2003,7 @@
   <span class="md-ellipsis">
     
   
-    Scripts Lua
+    Index
   
 
     
@@ -2931,7 +2931,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Index
   
 
     
@@ -3345,10 +3345,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#organisation-de-la-memoire" class="md-nav__link">
+  <a href="#organisation-du-stockage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisation de la mémoire
+        Organisation du stockage
       
     </span>
   </a>
@@ -3359,7 +3359,7 @@
   <a href="#top-level-folders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dossiers de premier niveau
+        Répertoires de premier niveau
       
     </span>
   </a>
@@ -3367,10 +3367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partage-de-fichiers-par-bluetooth" class="md-nav__link">
+  <a href="#partage-de-fichiers-via-bluetooth" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partage de fichiers par Bluetooth
+        Partage de fichiers via Bluetooth
       
     </span>
   </a>
@@ -3404,141 +3404,130 @@
 
 <h1 id="gestionnaire-de-fichiers">Gestionnaire de fichiers<a class="headerlink" href="#gestionnaire-de-fichiers" title="Permanent link">&para;</a></h1>
 <p><img alt="Gestionnaire de fichiers - radio" src="../../assets/system-filemanager-radio.png" /></p>
-<p>Le gestionnaire de fichiers permet de parcourir la mémoire de la radio et de flasher
-le firmware du module RF interne, des périphériques connectés en S.Port, des
-périphériques OTA (Over-The-Air) et des modules externes.</p>
-<h2 id="organisation-de-la-memoire">Organisation de la mémoire<a class="headerlink" href="#organisation-de-la-memoire" title="Permanent link">&para;</a></h2>
-<p>Appuyez sur <strong>Flash</strong> (ou sur <code>PAGE</code> pour changer de lecteur) pour parcourir
-le lecteur flash USB virtuel interne de la radio, utilisé pour les images
-système et les polices :</p>
-<p><img alt="Mémoire flash" src="../../assets/system-filemanager-flash.png" /></p>
+<p>Le gestionnaire de fichiers permet d'explorer les différents espaces de stockage de la radio et de flasher le firmware du module RF interne, des périphériques connectés en S.Port, des périphériques OTA (Over-The-Air) et des modules externes.</p>
+<h2 id="organisation-du-stockage">Organisation du stockage<a class="headerlink" href="#organisation-du-stockage" title="Permanent link">&para;</a></h2>
+<p>Appuyez sur <strong>Flash</strong> (ou sur <code>PAGE</code> pour changer de disque) pour explorer le disque flash USB virtuel interne de la radio, utilisé pour les bitmaps et les polices du système :</p>
+<p><img alt="Disque &quot;Flash&quot;" src="../../assets/system-filemanager-flash.png" /></p>
 <ul>
-<li><code>bitmaps/system</code> — les images utilisées pour les affichages écran et les icônes</li>
-<li><code>fonts/</code> — les polices correspondant aux différentes langues sélectionnables</li>
+<li><code>bitmaps/system</code> — les bitmaps / icônes utilisées pour les affichages écran et les icônes</li>
+<li><code>fonts/</code> — les fontes correspondant aux différentes langues sélectionnables</li>
 </ul>
-<p>Le bootloader et le firmware système lui-même résident tous deux dans cette
-mémoire flash interne, sur toutes les radios FrSky depuis la X9D d'origine.</p>
-<p>La série <strong>X20/X20S/X20HD</strong> accepte une carte SD formatée en FAT32, de 32 Go
-ou moins (une SanDisk Ultra Micro SDHC Classe 10 de 16 Go est un choix sûr).
-Les <strong>X18</strong> et <strong>X20 Pro/R/RS</strong> utilisent par défaut une mémoire eMMC interne
-(une carte SD externe peut être ajoutée en complément) — appuyez sur <strong>Radio</strong>
-pour la parcourir. Ethos crée automatiquement <code>Logs/</code>, <code>models/</code> et
-<code>screenshots/</code> s'ils sont absents ; <code>Firmware/</code> est une convention manuelle
-destinée aux fichiers de firmware des périphériques, tels que les récepteurs.</p>
-<h2 id="top-level-folders">Dossiers de premier niveau<a class="headerlink" href="#top-level-folders" title="Permanent link">&para;</a></h2>
+<p>Le bootloader et le firmware système lui-même résident tous deux dans cette mémoire flash interne, sur toutes les radios FrSky depuis la X9D d'origine.</p>
+<p>La série <strong>X20/X20S/X20HD</strong> nécessite une carte SD formatée en FAT32, de 32 Go ou moins (une SanDisk Ultra Micro SDHC classe 10 de 16 Go est un choix sûr). Les radios <strong>X18</strong> et <strong>X20 Pro/R/RS</strong> utilisent par défaut une mémoire eMMC interne pour le stockage des fichiers (mais une carte SD externe peut être ajoutée en complément) — appuyez sur l'onglet <strong>Radio</strong> pour l'explorer. Ethos créera automatiquement les répertoires <code>Logs/</code>, <code>models/</code> et <code>screenshots/</code> s'ils sont absents ; <code>Firmware/</code> est une convention manuelle destinée à conserver les fichiers de firmware des périphériques, tels que les récepteurs.</p>
+<h2 id="top-level-folders">Répertoires de premier niveau<a class="headerlink" href="#top-level-folders" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><code>audio/</code></strong> — fichiers sonores utilisateur et système, répartis par voix
+<li><strong><code>audio/</code></strong> — fichiers audio utilisateur et système, répartis par voix
   (<code>audio/en/gb</code>, <code>audio/en/us</code>, <code>audio/en/default</code>). Les fichiers utilisateur
-  sont lus par la <a href="../../model-setup/special-functions/">fonction spéciale Play Audio</a> ;
+  sont lus par la <a href="../../model-setup/special-functions/">fonction spéciale Lire audio</a> ;
   les fichiers système comprennent <code>hello.wav</code> (le message d'accueil
-  « Welcome to Ethos » — un <code>bye.wav</code> peut être ajouté mais n'est pas fourni).
-  Format : PCM 16 kHz ou 32 kHz, linéaire 16 bits, ou A-law (EU)/µ-law (US)
-  8 bits ; noms de fichiers jusqu'à 31 caractères plus l'extension. Les trois
-  dossiers de voix sont maintenus synchronisés par Ethos Suite, quel que soit
-  celui réellement sélectionné.</li>
+  « Bienvenue dans Ethos ! » — un <code>bye.wav</code> peut être ajouté mais n'est pas
+  fourni par Ethos). Le format doit être 16 kHz ou 32 kHz PCM linéaire 16 bits,
+  ou alaw (EU) / mulaw (US) 8 bits ; les noms de fichiers peuvent comporter
+  jusqu'à 31 caractères plus l'extension. Les trois dossiers de voix sont
+  maintenus à jour par Ethos Suite, quel que soit celui réellement sélectionné.</li>
 </ul>
-<p><img alt="Dossier audio" src="../../assets/system-filemanager-audio.png" /></p>
+<p><img alt="Menu contextuel pour un fichier Wav" src="../../assets/system-filemanager-audio.png" /></p>
 <ul>
-<li><strong><code>bitmaps/</code></strong> — <code>bitmaps/models/</code> contient les images de modèles de
-  l'utilisateur (définies dans <a href="../../model-setup/model-edit/">Model Edit</a> ou
-  dans les assistants de création de modèle) ; <code>bitmaps/user/</code> contient tout
-  le reste. Format recommandé : BMP 32 bits, 8 bits par couleur, avec canal
-  alpha, 300×280 px — cela limite le coût du décodage embarqué dans la radio.
-  Ethos redimensionne les BMP à la volée, mais pas les PNG/JPEG. Les noms de
-  fichiers ne peuvent utiliser que <code>A-Z a-z 0-9 ()!-_@#;[]+=</code> et l'espace, et
-  doivent comporter 11 caractères ou moins (plus une extension de 4 caractères)
-  pour apparaître dans le sélecteur d'image de modèle — les noms plus longs
-  restent visibles dans le gestionnaire de fichiers mais ne pourront pas y être
-  sélectionnés. Les outils de conversion d'images d'Ethos Suite se chargent de
-  la conversion de format pour vous.</li>
+<li><strong><code>bitmaps/</code></strong> — le dossier <code>bitmaps/models/</code> est destiné aux images de
+  modèles de l'utilisateur (utilisables dans <a href="../../model-setup/model-edit/">Editer modèle</a>
+  ou dans les assistants de nouveau modèle) ; <code>bitmaps/user/</code> est destiné à
+  tout le reste. Format recommandé : BMP 32 bits, 8 bits par couleur, avec
+  canal alpha, 300×280 px — ce format réduit la charge de calcul sur le
+  microcontrôleur embarqué de la radio. Ethos redimensionne les BMP à la
+  volée, contrairement aux formats PNG ou JPEG. Les noms de fichiers ne
+  peuvent utiliser que les caractères <code>A-Z a-z 0-9 ()!-_@#;[]+=</code> et l'espace,
+  et ne doivent pas comporter plus de 11 caractères (plus 4 pour l'extension)
+  pour apparaître dans l'interface de sélection d'image de modèle — les noms
+  plus longs s'affichent toujours dans le gestionnaire de fichiers, mais ne
+  pourront pas y être sélectionnés. Ethos Suite possède un module de conversion
+  des images qui se charge du changement de format pour vous.</li>
 </ul>
-<p><img alt="Dossier bitmaps" src="../../assets/system-filemanager-bitmaps.png" /></p>
-<ul>
-<li>
-<p><strong><code>documents/user/</code></strong> — documents texte de l'utilisateur, rappelés depuis le
-  widget d'affichage <strong>Text</strong>.</p>
-</li>
-<li>
-<p><strong><code>Firmware/</code></strong> — fichiers de firmware pour le module RF interne, les modules
-  externes et les autres périphériques (récepteurs, etc.), flashés depuis cet
-  emplacement via S.Port ou OTA. Copiez le nouveau firmware ici pendant que la
-  radio est en <a href="../../getting-started/usb-connection-modes/">mode bootloader</a> et
-  connectée par USB ; appuyer sur un fichier de firmware et choisir <strong>Flash</strong>
-  lance la mise à jour :</p>
-</li>
-</ul>
-<p><img alt="Flasher le module RF interne" src="../../assets/system-filemanager-flash.png" />
-  <img alt="Flasher un récepteur S8R via S.Port" src="../../assets/system-filemanager-flash-S8R.png" />
-  <img alt="Flasher un récepteur TD-R18 en OTA" src="../../assets/system-filemanager-flash-TD-ISRM.png" />
-  <img alt="Flasher le bootloader" src="../../assets/system-filemanager-flash-bootloader.png" /></p>
+<p><img alt="Répertoire /bitmaps/models" src="../../assets/system-filemanager-bitmaps.png" /></p>
 <ul>
 <li>
-<p><strong><code>I18n/</code></strong> — fichiers de traduction des langues.</p>
+<p><strong><code>documents/user/</code></strong> — documents texte de l'utilisateur, qui peuvent être
+  appelés depuis le widget d'affichage <strong>Texte</strong>.</p>
 </li>
 <li>
-<p><strong><code>Logs/</code></strong> — journaux de données.</p>
+<p><strong><code>Firmware/</code></strong> — fichiers de mise à jour pour le module RF interne, les
+  modules externes et les autres périphériques (récepteurs, etc.), flashés
+  depuis ce répertoire via le S.Port ou en OTA. Le nouveau firmware doit être
+  copié ici pendant que la radio est en <a href="../../getting-started/usb-connection-modes/">mode bootloader</a>
+  et connectée par USB ; sélectionner un fichier de firmware et choisir
+  <strong>Flash</strong> lance la mise à jour :</p>
+</li>
+</ul>
+<p><img alt="Mise à jour module interne" src="../../assets/system-filemanager-flash.png" />
+  <img alt="Mise à jour récepteur S8R via S.Port" src="../../assets/system-filemanager-flash-S8R.png" />
+  <img alt="Mise à jour récepteur TD-R18 par OTA" src="../../assets/system-filemanager-flash-TD-ISRM.png" />
+  <img alt="Mise à jour bootloader" src="../../assets/system-filemanager-flash-bootloader.png" /></p>
+<ul>
+<li>
+<p><strong><code>I18n/</code></strong> — les fichiers de traduction de la langue.</p>
+</li>
+<li>
+<p><strong><code>Logs/</code></strong> — les journaux de logs.</p>
 </li>
 <li>
 <p><strong><code>models/</code></strong> — les fichiers de modèles eux-mêmes. Ils ne peuvent pas être
-  modifiés directement ici, seulement sauvegardés ou partagés. Depuis Ethos
-  v1.2.11, un modèle est nommé d'après son nom de modèle plutôt que
-  <code>model01.bin</code> et suivants (par exemple, un modèle appelé « Extra » devient
-  <code>Extra.bin</code> ; un second « Extra » devient <code>Extra01.bin</code>). Renommer un modèle
-  dans <a href="../../model-setup/model-edit/">Model Edit</a> renomme également son fichier
-  — toujours en minuscules (le nom affiché, en casse mixte, est stocké à
-  l'intérieur du fichier), et tous les caractères d'un nom de modèle ne se
-  retrouvent pas dans le nom de fichier. Depuis la v1.1.0 Alpha 17, chaque
-  catégorie de modèles créée par l'utilisateur reçoit son propre sous-dossier.</p>
+  modifiés directement ici, mais peuvent être sauvegardés ou partagés. Depuis
+  Ethos v1.2.11, le nom du modèle est utilisé comme nom de fichier plutôt que
+  <code>model01.bin</code> et suivants (par exemple, un modèle nommé « Extra » aura comme
+  nom de fichier <code>Extra.bin</code> ; s'il y a un second « Extra », il sera nommé
+  <code>Extra01.bin</code>). Lors de la modification du nom d'un modèle dans
+  <a href="../../model-setup/model-edit/">Editer modèle</a>, le nom de son fichier est
+  également modifié — toujours en minuscules (le nom réel du modèle, avec ses
+  majuscules et minuscules, est enregistré à l'intérieur du fichier), et tous
+  les caractères ne sont pas pris en charge dans le nom de fichier. Depuis la
+  v1.1.0 Alpha 17, chaque catégorie de modèles créée par l'utilisateur possède
+  son propre sous-dossier.</p>
 </li>
 <li>
-<p><strong><code>screenshots/</code></strong> — sortie de la <a href="../../model-setup/special-functions/">fonction spéciale
-  Screenshot</a>.</p>
+<p><strong><code>screenshots/</code></strong> — les captures d'écran créées par la <a href="../../model-setup/special-functions/">fonction spéciale
+  Capture écran</a>.</p>
 </li>
 <li>
-<p><strong><code>scripts/</code></strong> — scripts Lua, éventuellement organisés dans leurs propres
-  sous-dossiers avec leurs fichiers annexes. Les types de scripts sont les
+<p><strong><code>scripts/</code></strong> — les scripts Lua, éventuellement organisés dans des dossiers
+  individuels avec leurs fichiers annexes. Les types de scripts sont les
   <strong>widgets</strong> (voir <a href="../../displays/">Écrans</a>), les <strong>tâches et sources</strong>
   (capteurs personnalisés ou actions après le vol — installés ici, ils
   apparaissent dans le menu <a href="../../model-setup/lua-scripts/">Lua</a> du modèle) et
   les <strong>outils</strong> (par exemple les outils de configuration des récepteurs
-  stabilisés dans les menus System). Chaque module externe tiers reçoit son
+  stabilisés dans les menus System). Chaque module externe tiers possède son
   propre script et son propre dossier, par exemple <code>scripts/multi</code>,
   <code>scripts/elrs</code>, <code>scripts/ghost</code>, <code>scripts/crossfire</code>.</p>
 </li>
 </ul>
 <p>!!! warning
-      Les scripts Lua allongent le temps de démarrage de la radio. Le délai
-      induit par un script bien écrit est imperceptible — un script mal écrit
-      peut retarder le démarrage de façon quasi indéfinie.</p>
+      Les scripts Lua augmentent le temps de démarrage de la radio. S'ils sont
+      correctement mis en œuvre, le retard ne devrait pas être perceptible —
+      mais un script mal écrit peut retarder le démarrage de façon quasi
+      indéfinie.</p>
 <ul>
 <li>
-<p><strong><code>radio.bin</code></strong> (dossier racine) — le fichier des réglages système, écrit par
-  la radio elle-même à l'initialisation. Sauvegardez-le en même temps que
-  <code>models/</code> avant une mise à jour du firmware, afin de pouvoir revenir à une
-  version antérieure si nécessaire.</p>
+<p><strong><code>radio.bin</code></strong> (dossier racine) — le fichier des paramètres système, créé
+  par la radio elle-même lors de son initialisation. Il doit être sauvegardé
+  avec le dossier <code>models/</code> avant de mettre à jour le firmware, pour permettre
+  un retour vers la version antérieure si nécessaire.</p>
 </li>
 <li>
 <p><strong><code>firmware.bin</code></strong> (dossier racine) — déposez ici un nouveau fichier de
   firmware de radio pour qu'il soit flashé automatiquement lors de la prochaine
-  déconnexion de la radio du PC. Le contenu de la carte SD/eMMC et celui du
-  lecteur flash interne peuvent devoir être mis à jour dans la même opération.</p>
+  déconnexion de la radio de l'ordinateur. Le contenu de la carte SD/eMMC et
+  celui du disque flash interne peuvent devoir être mis à jour dans la même
+  opération.</p>
 </li>
 <li>
 <p><strong><code>sdcard.version</code></strong> (dossier racine) — la version du contenu de la carte SD,
   maintenue par Ethos Suite.</p>
 </li>
 </ul>
-<h2 id="partage-de-fichiers-par-bluetooth">Partage de fichiers par Bluetooth<a class="headerlink" href="#partage-de-fichiers-par-bluetooth" title="Permanent link">&para;</a></h2>
-<p>Ethos peut transférer des fichiers de radio à radio par Bluetooth. Sur la radio
-<strong>réceptrice</strong>, placez-vous dans le dossier de destination du gestionnaire de
-fichiers, faites un appui long sur <code>ENT</code>, puis choisissez <strong>Receive file here</strong> :</p>
-<p><img alt="Réception Bluetooth" src="../../assets/system-filemanager-bluetooth-receive.png" /></p>
-<p>Sur la radio <strong>émettrice</strong>, appuyez sur le fichier, choisissez <strong>Send file</strong>, et
-suivez les instructions affichées sur les deux radios :</p>
-<p><img alt="Envoi Bluetooth" src="../../assets/system-filemanager-bluetooth-send.png" /></p>
-<p>Si l'une des deux radios possède déjà une connexion Bluetooth active
-(télémétrie, liaison écolage ou — sur X20S/Pro — audio), elle demandera s'il
-faut d'abord déconnecter ce périphérique.</p>
+<h2 id="partage-de-fichiers-via-bluetooth">Partage de fichiers via Bluetooth<a class="headerlink" href="#partage-de-fichiers-via-bluetooth" title="Permanent link">&para;</a></h2>
+<p>Ethos dispose d'une fonction de transfert de fichiers Bluetooth radio-radio. Sur la radio <strong>de réception</strong>, à l'aide du gestionnaire de fichiers, accédez au dossier dans lequel vous souhaitez recevoir le fichier, appuyez longuement sur <code>ENT</code> et sélectionnez <strong>Recevoir le fichier ici</strong> :</p>
+<p><img alt="Transfert bluetooth (réception)" src="../../assets/system-filemanager-bluetooth-receive.png" /></p>
+<p>Sur la radio <strong>qui envoie</strong>, accédez au fichier que vous souhaitez envoyer et appuyez dessus, sélectionnez <strong>Envoyer le fichier</strong>, puis suivez les instructions sur les deux radios :</p>
+<p><img alt="Transfert bluetooth (envoi)" src="../../assets/system-filemanager-bluetooth-send.png" /></p>
+<p>Si l'une des deux radios est déjà connectée à un autre appareil Bluetooth (télémétrie, liaison écolage ou — sur X20S/Pro — audio), il vous sera demandé si vous souhaitez déconnecter cet appareil.</p>
 
 
 
@@ -3577,7 +3566,7 @@ faut d'abord déconnecter ce périphérique.</p>
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Configuration du système">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Index">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3587,7 +3576,7 @@ faut d'abord déconnecter ce périphérique.</p>
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Configuration du système
+                Index
               </div>
             </div>
           </a>
