@@ -8,7 +8,7 @@ docs_dir: docs
 
 theme:
   name: material
-  logo: assets/ethos-logo-white.png
+  logo: assets/ethos-logo-reversed.png
   favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github

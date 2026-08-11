@@ -1,13 +1,15 @@
 /* =============================================================================
    Ethos Manual — Brand Colors
-   Sourced directly from the FrSky Ethos logo (#8ec31f) and the interactive
-   accent green used on ethos.frsky-rc.com (#78d642).
+   Sourced directly from ethos.frsky-rc.com: a near-black header (their
+   persistent top bar) with the brand green (#8ec31f, sampled from the logo)
+   and interactive accent green (#78d642) used as accents, not as the header
+   fill -- matching the real site rather than an all-green header.
    ============================================================================= */
 
 [data-md-color-primary="custom"] {
-  --md-primary-fg-color:         #8ec31f; /* Ethos brand green — header background */
-  --md-primary-fg-color--light:  #b0d562;
-  --md-primary-fg-color--dark:   #668c16;
+  --md-primary-fg-color:         #141414; /* header/top-bar background */
+  --md-primary-fg-color--light:  #2b2b2b;
+  --md-primary-fg-color--dark:   #000000;
   --md-primary-bg-color:         #ffffff;
   --md-primary-bg-color--light:  rgba(255, 255, 255, 0.7);
 }
