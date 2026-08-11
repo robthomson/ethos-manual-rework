@@ -2839,6 +2839,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr-previews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR previews
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2942,6 +2959,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr-previews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR previews
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3002,16 +3036,29 @@ deployed to GitHub Pages on every push to <code>main</code>.</p>
 translators work directly in git, the same as any other change to this
 repo:</p>
 <ol>
-<li>Branch off <code>main</code>.</li>
+<li>Branch off <code>main</code> (in this repo directly — see the fork note below).</li>
 <li>Edit the relevant <code>.md</code> file(s) under <code>docs/en/</code>.</li>
 <li>Preview locally with <code>mkdocs serve</code> (see the root
-   <a href="https://github.com/robthomson/ethos-manual-rework">README</a>) or rely on
-   the PR preview once one is wired up.</li>
+   <a href="https://github.com/robthomson/ethos-manual-rework">README</a>), or just open
+   the pull request and use the automatic PR preview below.</li>
 <li>Open a pull request.</li>
 </ol>
 <p>Screenshots referenced from a page live next to it in <code>docs/en/assets/</code> and
 are just Markdown image links — no special syntax. See
 <a href="screenshot-pipeline/">Screenshot Pipeline</a> for how they're generated.</p>
+<h3 id="pr-previews">PR previews<a class="headerlink" href="#pr-previews" title="Permanent link">&para;</a></h3>
+<p>Every pull request against <code>main</code> gets its own live preview, built and
+deployed automatically by <code>.github/workflows/pr-preview.yml</code>: at
+<code>manual.rt-rc.com/pr-preview/&lt;PR number&gt;/</code>, linked in a bot comment on the
+PR and updated on every push. It's removed automatically when the PR closes.
+The main site itself (<code>manual.rt-rc.com</code>) is unaffected — previews live
+alongside it in a <code>pr-preview/</code> folder on the <code>gh-pages</code> branch that survives
+every production deploy.</p>
+<p>This only runs for branches pushed directly to this repo, not forks — a PR
+from a fork won't get a live preview (GitHub withholds write access to
+<code>GITHUB_TOKEN</code> for fork-triggered <code>pull_request</code> workflows, deliberately, so
+a fork can't use CI to push arbitrary content to <code>gh-pages</code>). Fork
+contributors can still preview locally with <code>mkdocs serve</code>.</p>
 <h2 id="translation-plan">Translation plan<a class="headerlink" href="#translation-plan" title="Permanent link">&para;</a></h2>
 <p>Translation tooling is deliberately <strong>not</strong> built yet. Non-technical
 translators will need to learn enough git to branch, edit, and open a PR —
