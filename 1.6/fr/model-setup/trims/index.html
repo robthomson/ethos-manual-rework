@@ -3403,12 +3403,12 @@
 
 
 <h1 id="trims">Trims<a class="headerlink" href="#trims" title="Permanent link">&para;</a></h1>
-<p><img alt="Trims" src="../../../assets/model-trims.png" /></p>
+<p><img alt="Trims" src="../../assets/model-trims.png" /></p>
 <p>Configure pour chaque manche la plage de trim, le pas et le comportement,
 ainsi que les trims croisés et le trim instantané. Les <strong>X20 Pro/R/RS</strong> et
 <strong>X18</strong> ajoutent deux commandes de trim supplémentaires, <strong>T5</strong>/<strong>T6</strong>,
 utiles pour des ajustements en vol au-delà des quatre manches principaux :</p>
-<p><img alt="Trims T5/T6" src="../../../assets/model-trims-pro-t5-t6.png" /></p>
+<p><img alt="Trims T5/T6" src="../../assets/model-trims-pro-t5-t6.png" /></p>
 <p>Chaque manche possède son propre jeu de réglages de trim indépendant.</p>
 <h2 id="trim-settings">Réglages de trim<a class="headerlink" href="#trim-settings" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3426,7 +3426,7 @@ utiles pour des ajustements en vol au-delà des quatre manches principaux :</p>
   <strong>Moyen</strong>, <strong>Grossier</strong>, <strong>Exponentiel</strong> (fin près du centre, grossier
   en s'éloignant) ou <strong>Personnalisé</strong> (un pourcentage précis par cran).</li>
 </ul>
-<p><img alt="Options de pas" src="../../../assets/model-trims-step-options.png" /></p>
+<p><img alt="Options de pas" src="../../assets/model-trims-step-options.png" /></p>
 <table>
 <thead>
 <tr>
@@ -3461,13 +3461,13 @@ utiles pour des ajustements en vol au-delà des quatre manches principaux :</p>
   100 % = 128 µs/cran. Avec une plage de 100 % : pas de 1 % = 5 µs/cran,
   pas de 100 % = 512 µs/cran.</p>
 <h2 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link">&para;</a></h2>
-<p><img alt="Mode du trim de profondeur" src="../../../assets/model-trims-mode-elevator.png" /></p>
+<p><img alt="Mode du trim de profondeur" src="../../assets/model-trims-mode-elevator.png" /></p>
 <p>Par défaut, un trim est toujours actif, mais <strong>Mode</strong> modifie ce
 comportement. Changer de mode remet le trim à 0.</p>
 <ul>
 <li><strong>OFF</strong> — désactive complètement le trim.</li>
 </ul>
-<p><img alt="Mode : off" src="../../../assets/model-trims-mode-option-off.png" /></p>
+<p><img alt="Mode : off" src="../../assets/model-trims-mode-option-off.png" /></p>
 <p>Utile, par exemple, sur un modèle électrique n'ayant pas besoin de trim
   de gaz — la commande de trim ainsi libérée peut alors être
   <a href="../variables/">réaffectée au réglage d'une variable</a>.</p>
@@ -3476,7 +3476,7 @@ comportement. Changer de mode remet le trim à 0.</p>
   vol. C'est le choix habituel pour les ailerons et la dérive, puisque
   ceux-ci ont rarement besoin de varier selon la phase de vol.</li>
 </ul>
-<p><img alt="Mode : easy" src="../../../assets/model-trims-mode-option-easy.png" /></p>
+<p><img alt="Mode : easy" src="../../assets/model-trims-mode-option-easy.png" /></p>
 <ul>
 <li><strong>Indépendant par phase de vol</strong> — le trim n'affecte que la phase de vol
   active. C'est le choix habituel pour le trim de profondeur, car celui-ci
@@ -3484,37 +3484,37 @@ comportement. Changer de mode remet le trim à 0.</p>
   changements de courbure de l'aile) — c'est même souvent la raison
   principale de mettre en place des phases de vol.</li>
 </ul>
-<p><img alt="Mode : indépendant par phase de vol" src="../../../assets/model-trims-mode-option-fm.png" /></p>
+<p><img alt="Mode : indépendant par phase de vol" src="../../assets/model-trims-mode-option-fm.png" /></p>
 <ul>
 <li><strong>Personnalisé</strong> — comportement entièrement personnalisé, construit à
   partir de <strong>comportements</strong> que vous ajoutez vous-même.</li>
 </ul>
 <h3 id="comportements-de-trim-personnalises">Comportements de trim personnalisés<a class="headerlink" href="#comportements-de-trim-personnalises" title="Permanent link">&para;</a></h3>
-<p><img alt="Ajouter un comportement" src="../../../assets/model-trims-mode-elevator-add-behaviour.png" />
-<img alt="Options de comportement" src="../../../assets/model-trims-mode-elevator-edit-behaviour.png" /></p>
+<p><img alt="Ajouter un comportement" src="../../assets/model-trims-mode-elevator-add-behaviour.png" />
+<img alt="Options de comportement" src="../../assets/model-trims-mode-elevator-edit-behaviour.png" /></p>
 <p>Chaque ligne de comportement comporte une condition et l'une des options
 suivantes :</p>
 <ul>
 <li><strong>Débranché</strong> — désactive le trim de manière sélective sous cette
   condition (plutôt que de le désactiver totalement avec Mode = OFF).</li>
 </ul>
-<p><img alt="Débranché" src="../../../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png" />
-  <img alt="Condition de débranchement" src="../../../assets/model-trims-mode-unplugged-select.png" /></p>
+<p><img alt="Débranché" src="../../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png" />
+  <img alt="Condition de débranchement" src="../../assets/model-trims-mode-unplugged-select.png" /></p>
 <ul>
 <li><strong>Normal</strong> (par défaut) — comportement de trim ordinaire.</li>
 <li><strong>Égal (à un autre trim)</strong> — ce trim suit exactement la valeur de trim
   d'une autre condition.</li>
 </ul>
-<p><img alt="Égal" src="../../../assets/model-trims-mode-elevator-edit-behaviour-equal.png" /></p>
+<p><img alt="Égal" src="../../assets/model-trims-mode-elevator-edit-behaviour-equal.png" /></p>
 <ul>
 <li><strong>Offset + (un autre trim)</strong> — ce trim s'ajoute à la valeur de trim
   d'une autre condition.</li>
 </ul>
-<p><img alt="Offset" src="../../../assets/model-trims-mode-elevator-edit-behaviour-offset.png" /></p>
+<p><img alt="Offset" src="../../assets/model-trims-mode-elevator-edit-behaviour-offset.png" /></p>
 <p><strong>Exemple détaillé</strong> — un planeur avec un trim de profondeur de base
 <strong>Cruise</strong>, et des trims dépendants pour <strong>Speed</strong> et <strong>Thermal</strong> :</p>
-<p><img alt="Sélection de FM5 Speed" src="../../../assets/model-trims-mode-elevator-custom-select.png" />
-<img alt="Sélection de FM4 Thermal" src="../../../assets/model-trims-mode-elevator-custom-select-2.png" /></p>
+<p><img alt="Sélection de FM5 Speed" src="../../assets/model-trims-mode-elevator-custom-select.png" />
+<img alt="Sélection de FM4 Thermal" src="../../assets/model-trims-mode-elevator-custom-select-2.png" /></p>
 <ol>
 <li>Trimmez pour un vol en palier dans la phase de vol par défaut (Cruise).</li>
 <li>Ajoutez un comportement : <strong>Offset + Default</strong>, condition <code>FM5(Speed)</code>.
@@ -3522,7 +3522,7 @@ suivantes :</p>
    comme un décalage venant s'ajouter à la valeur de base Cruise —
    distinct, mais toujours dépendant de celle-ci.</li>
 </ol>
-<p><img alt="Offset pour Speed" src="../../../assets/model-trims-mode-elevator-custom-speed.png" /></p>
+<p><img alt="Offset pour Speed" src="../../assets/model-trims-mode-elevator-custom-speed.png" /></p>
 <ol>
 <li>Ajoutez un deuxième comportement : <strong>Offset + Default</strong>, condition
    <code>FM4(Thermal)</code>, de la même manière. (Une fois le premier comportement
@@ -3530,7 +3530,7 @@ suivantes :</p>
    <code>Offset + FM5(Thermal)</code> comme options, puisqu'elle peut maintenant faire
    référence à ce comportement aussi.)</li>
 </ol>
-<p><img alt="Offset pour Speed et Thermal" src="../../../assets/model-trims-mode-elevator-custom-speed-thermal.png" /></p>
+<p><img alt="Offset pour Speed et Thermal" src="../../assets/model-trims-mode-elevator-custom-speed-thermal.png" /></p>
 <p>Avec cette configuration, un réglage ultérieur du trim de base Cruise
 (par exemple après un changement de centre de gravité) décale
 automatiquement les trims de Speed et de Thermal de la même valeur,
@@ -3541,21 +3541,21 @@ indépendantes.</p>
   réaffecté lorsqu'il n'est plus pertinent de l'entendre.</li>
 </ul>
 <h2 id="trims-supplementaires">Trims supplémentaires<a class="headerlink" href="#trims-supplementaires" title="Permanent link">&para;</a></h2>
-<p><img alt="Ajouter un trim supplémentaire" src="../../../assets/model-trims-add-trim-select.png" />
-<img alt="Réglages du trim supplémentaire" src="../../../assets/model-trims-add-trim-edit.png" /></p>
+<p><img alt="Ajouter un trim supplémentaire" src="../../assets/model-trims-add-trim-select.png" />
+<img alt="Réglages du trim supplémentaire" src="../../assets/model-trims-add-trim-edit.png" /></p>
 <p><strong>Ajouter un trim supplémentaire</strong> crée un trim au-delà des quatre manches
 standard (et de T5/T6) : <strong>Nom</strong>, sources <strong>Haut</strong>/<strong>Bas</strong> pour le piloter,
 plus les mêmes options <strong>Plage</strong>, <strong>Pas</strong>, <strong>Mode</strong> et <strong>Audio</strong> que
 ci-dessus.</p>
 <h2 id="trims-croises">Trims croisés<a class="headerlink" href="#trims-croises" title="Permanent link">&para;</a></h2>
-<p><img alt="Trims croisés" src="../../../assets/model-trims-cross.png" />
-<img alt="Modification des trims croisés" src="../../../assets/model-trims-cross-edit.png" /></p>
+<p><img alt="Trims croisés" src="../../assets/model-trims-cross.png" />
+<img alt="Modification des trims croisés" src="../../assets/model-trims-cross-edit.png" /></p>
 <p>Désigne quelle commande de trim ajuste réellement chaque manche — autrement
 dit, permet que le trim d'un manche soit piloté par une commande de trim
 physique différente de celle habituelle. (T5/T6 ne sont disponibles que sur
 les X20 Pro et X18.)</p>
 <h2 id="instant-trim">Trim instantané<a class="headerlink" href="#instant-trim" title="Permanent link">&para;</a></h2>
-<p><img alt="Trim instantané" src="../../../assets/model-trims-instant-trim.png" /></p>
+<p><img alt="Trim instantané" src="../../assets/model-trims-instant-trim.png" /></p>
 <p>Tant qu'il est actif, il ajoute les positions actuelles des manches aux
 trims par défaut correspondants (et aux trims croisés). À affecter de
 préférence à un interrupteur accessible sans lâcher les manches —
@@ -3570,7 +3570,7 @@ la suite.</p>
 est affichée.</p>
 </div>
 <h2 id="transferer-les-trims-vers-les-subtrims">Transférer les trims vers les subtrims<a class="headerlink" href="#transferer-les-trims-vers-les-subtrims" title="Permanent link">&para;</a></h2>
-<p><img alt="Transférer les trims vers les subtrims" src="../../../assets/model-trims-move-trims-to-subtrims.png" /></p>
+<p><img alt="Transférer les trims vers les subtrims" src="../../assets/model-trims-move-trims-to-subtrims.png" /></p>
 <p>Après avoir trimmé pour un vol en palier, cette fonction transfère la
 valeur de trim d'une voie (par ex. la profondeur) dans son réglage
 <a href="../outputs/">Subtrim</a> et remet le trim affiché à zéro — une manière propre

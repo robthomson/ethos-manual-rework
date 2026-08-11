@@ -3484,46 +3484,46 @@ combinent les commandes d'ailerons et de profondeur sur les deux
 surfaces physiques — soit seulement 2 voies au total, chacune étant un
 mélange des deux commandes.</p>
 <h2 id="etape-3-creer-un-nouveau-modele">Étape 3. Créer un nouveau modèle<a class="headerlink" href="#etape-3-creer-un-nouveau-modele" title="Permanent link">&para;</a></h2>
-<p><img alt="Créer un modèle d'avion" src="../../../assets/tut-wing-eg-wiz-create-airplane.png" /></p>
+<p><img alt="Créer un modèle d'avion" src="../../assets/tut-wing-eg-wiz-create-airplane.png" /></p>
 <p>Depuis <a href="../../model-setup/model-select/">Choix du modèle</a>, lancez
 l'assistant <strong>Avion</strong> et choisissez <strong>Récepteur non stabilisé</strong>.</p>
-<p><img alt="Sans moteur" src="../../../assets/tut-wing-eg-wiz-no-engine.png" /></p>
+<p><img alt="Sans moteur" src="../../assets/tut-wing-eg-wiz-no-engine.png" /></p>
 <p>Sélectionnez <strong>Sans moteur</strong>, acceptez les 2 voies d'ailerons proposées
 par défaut, puis sélectionnez <strong>Sans volets</strong>.</p>
-<p><img alt="Sans empennage" src="../../../assets/tut-wing-eg-wiz-no-tail.png" /></p>
+<p><img alt="Sans empennage" src="../../assets/tut-wing-eg-wiz-no-tail.png" /></p>
 <p>Sélectionnez <strong>Aucun</strong> comme type d'empennage — c'est ce qui amène Ethos
 à construire automatiquement le mixage elevons (commandes ailerons +
 profondeur, toutes deux sur les mêmes deux voies). Nommez le modèle (par
 exemple « Weasel »), choisissez une image, puis terminez — il devient le
 modèle actif dans la catégorie Avion.</p>
 <h2 id="etape-4-verifier-et-configurer-les-mixages">Étape 4. Vérifier et configurer les mixages<a class="headerlink" href="#etape-4-verifier-et-configurer-les-mixages" title="Permanent link">&para;</a></h2>
-<p><img alt="Vue d'ensemble des mixages" src="../../../assets/tut-wing-eg-mixes.png" /></p>
+<p><img alt="Vue d'ensemble des mixages" src="../../assets/tut-wing-eg-mixes.png" /></p>
 <p>L'assistant crée un mixage Ailerons sur les voies 1+2, suivi d'un mixage
 Profondeur <em>également</em> sur les voies 1+2 — les deux commandes agissent
 sur les deux voies d'elevons, ce qui constitue tout l'art du mixage
 elevons.</p>
 <h3 id="ailerons">Ailerons<a class="headerlink" href="#ailerons" title="Permanent link">&para;</a></h3>
-<p><img alt="Mixage ailerons" src="../../../assets/tut-wing-eg-mixes-ail-mix.png" /></p>
+<p><img alt="Mixage ailerons" src="../../assets/tut-wing-eg-mixes-ail-mix.png" /></p>
 <p><strong>Poids/Débattements</strong> — d'après le manuel de la Weasel, le débattement
 des ailerons doit valoir environ 3× celui de la profondeur, et les deux
 doivent totaliser 100 % : <strong>75 %</strong> ailerons, <strong>25 %</strong> profondeur. Les
 petits débattements représentent environ la moitié des grands : <strong>36 %</strong>
 ailerons en petit débattement, <strong>12 %</strong> profondeur en petit débattement.</p>
-<p><img alt="Poids du mixage ailerons" src="../../../assets/tut-wing-eg-mixes-ail-mix-weight.png" /></p>
+<p><img alt="Poids du mixage ailerons" src="../../assets/tut-wing-eg-mixes-ail-mix-weight.png" /></p>
 <p><strong>Expo</strong> — valeurs recommandées pour la Weasel : 35 % en grand
 débattement / 20 % en petit, actives interrupteur SB en bas, ce qui
 adoucit la réponse autour du neutre du manche.</p>
 <p><strong>Différentiel</strong> — faible sur cette cellule, environ <strong>4 %</strong> :</p>
-<p><img alt="Différentiel d'ailerons" src="../../../assets/tut-wing-eg-mixes-ail-diff-04.png" /></p>
+<p><img alt="Différentiel d'ailerons" src="../../assets/tut-wing-eg-mixes-ail-diff-04.png" /></p>
 <p>(Voir l'<a href="../basic-fixed-wing/#ailerons">exemple de base pour aile
 fixe</a> pour comprendre l'utilité du
 différentiel — le même raisonnement sur le lacet inverse s'applique ici.)</p>
 <h3 id="profondeur">Profondeur<a class="headerlink" href="#profondeur" title="Permanent link">&para;</a></h3>
-<p><img alt="Mixage profondeur" src="../../../assets/tut-wing-eg-mixes-ele-mix.png" /></p>
+<p><img alt="Mixage profondeur" src="../../assets/tut-wing-eg-mixes-ele-mix.png" /></p>
 <p>Même principe : débattements <strong>25 %</strong>/<strong>12 %</strong> grand/petit, avec les
 mêmes valeurs d'Expo que pour les ailerons.</p>
 <h3 id="derive">Dérive<a class="headerlink" href="#derive" title="Permanent link">&para;</a></h3>
-<p><img alt="Mixage dérive" src="../../../assets/tut-wing-eg-mixes-rud-mix.png" /></p>
+<p><img alt="Mixage dérive" src="../../assets/tut-wing-eg-mixes-rud-mix.png" /></p>
 <p>La Weasel n'en a pas — les ailes volantes n'en nécessitent généralement
 pas. Lorsqu'une dérive <em>est</em> nécessaire sur un modèle à elevons,
 ajoutez-la comme <a href="../../model-setup/mixes/#mix-libraries">mixage libre</a>
@@ -3541,8 +3541,8 @@ d'écart <em>sont</em> l'effet du différentiel. Ajoutez par-dessus la profondeu
 à piquer à fond et la voie 1 devient 75+25 = 100 %, la voie 2 devient
 72−25 = 47 %.</p>
 <h2 id="etape-7-configurer-les-debattements-maximaux-des-servos">Étape 7. Configurer les débattements maximaux des servos<a class="headerlink" href="#etape-7-configurer-les-debattements-maximaux-des-servos" title="Permanent link">&para;</a></h2>
-<p><img alt="Ailerons à fond" src="../../../assets/tut-wing-eg-outputs-full-ail.png" />
-<img alt="Ailerons à fond + profondeur à fond" src="../../../assets/tut-wing-eg-outputs-full-ail-full-ele.png" /></p>
+<p><img alt="Ailerons à fond" src="../../assets/tut-wing-eg-outputs-full-ail.png" />
+<img alt="Ailerons à fond + profondeur à fond" src="../../assets/tut-wing-eg-outputs-full-ail-full-ele.png" /></p>
 <p>Centrez d'abord chaque servo avec <strong>PWM center</strong>. Le débattement maximal
 recommandé pour la Weasel est de 25 mm d'ailerons + 10 mm de profondeur,
 soit 35 mm cumulés — appliquez les commandes ailerons/profondeur à fond

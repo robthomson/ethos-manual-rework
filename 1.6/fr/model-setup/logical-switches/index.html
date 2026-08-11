@@ -3403,7 +3403,7 @@
 
 
 <h1 id="interrupteurs-logiques">Interrupteurs logiques<a class="headerlink" href="#interrupteurs-logiques" title="Permanent link">&para;</a></h1>
-<p><img alt="Menu des interrupteurs logiques" src="../../../assets/model-lsw-menu.png" /></p>
+<p><img alt="Menu des interrupteurs logiques" src="../../assets/model-lsw-menu.png" /></p>
 <p>Les interrupteurs logiques sont des interrupteurs <em>virtuels</em> programmés par
 l'utilisateur — ce ne sont pas des commandes physiques, mais ils s'utilisent
 partout où un interrupteur physique peut l'être, comme déclencheur de
@@ -3414,7 +3414,7 @@ sont pris en charge ; aucun n'existe par défaut. Ajoutez-en un avec <strong>+</
 libellé de menu d'un interrupteur défini s'affiche en vert lorsqu'il est Vrai,
 en rouge lorsqu'il est Faux. Appuyez sur un interrupteur existant pour
 <strong>Modifier</strong>/<strong>Déplacer</strong>/<strong>Copier-coller</strong>/<strong>Dupliquer</strong>/<strong>Supprimer</strong>.</p>
-<p><img alt="Ajouter un interrupteur logique" src="../../../assets/model-lsw-add.png" /></p>
+<p><img alt="Ajouter un interrupteur logique" src="../../assets/model-lsw-add.png" /></p>
 <h2 id="fonction">Fonction<a class="headerlink" href="#fonction" title="Permanent link">&para;</a></h2>
 <p>Chaque fonction accepte une sortie normale ou inversée.</p>
 <ul>
@@ -3422,7 +3422,7 @@ en rouge lorsqu'il est Faux. Appuyez sur un interrupteur existant pour
   ~10 % près) à une valeur fixe <code>X</code>. Généralement préférable à l'égalité
   stricte —</li>
 </ul>
-<p><img alt="A ~ X" src="../../../assets/model-lsw-A~X.png" /></p>
+<p><img alt="A ~ X" src="../../assets/model-lsw-A~X.png" /></p>
 <p>— car avec <code>A = X</code>, une valeur de télémétrie qui fluctue par exemple entre
   8,5 V et 8,35 V autour d'une cible de 8,4 V risque de ne jamais atteindre
   exactement 8,4 V, et l'interrupteur ne se déclencherait donc jamais.
@@ -3433,39 +3433,39 @@ en rouge lorsqu'il est Faux. Appuyez sur un interrupteur existant pour
 - <strong>Δ &gt; X</strong> — vrai lorsque la variation de <code>A</code> (delta) sur l'<strong>intervalle de
   vérification</strong> atteint au moins <code>X</code>. Un intervalle réglé sur <code>---</code> signifie
   une fenêtre infinie.</p>
-<p><img alt="Delta supérieur à X" src="../../../assets/model-lsw-delta-gtX.png" />
-  <img alt="Delta absolu supérieur à X" src="../../../assets/model-lsw-delta-AgtX.png" /></p>
+<p><img alt="Delta supérieur à X" src="../../assets/model-lsw-delta-gtX.png" />
+  <img alt="Delta absolu supérieur à X" src="../../assets/model-lsw-delta-AgtX.png" /></p>
 <ul>
 <li><strong>|Δ| &gt; X</strong> — comme ci-dessus, en utilisant la valeur absolue de la
   variation.</li>
 <li><strong>Range</strong> (plage) — vrai lorsque <code>A</code> se situe dans une plage spécifiée.</li>
 </ul>
-<p><img alt="Plage" src="../../../assets/model-lsw-range.png" /></p>
+<p><img alt="Plage" src="../../assets/model-lsw-range.png" /></p>
 <ul>
 <li><strong>AND</strong> (ET) — vrai uniquement si toutes les sources listées (Valeur 1…N)
   sont vraies.</li>
 </ul>
-<p><img alt="AND" src="../../../assets/model-lsw-AND.png" /></p>
+<p><img alt="AND" src="../../assets/model-lsw-AND.png" /></p>
 <ul>
 <li><strong>OR</strong> (OU) — vrai si au moins une des sources listées est vraie.</li>
 </ul>
-<p><img alt="OR" src="../../../assets/model-lsw-OR.png" /></p>
+<p><img alt="OR" src="../../assets/model-lsw-OR.png" /></p>
 <ul>
 <li><strong>XOR</strong> (OU exclusif) — vrai si <em>exactement une</em> des sources listées est
   vraie.</li>
 </ul>
-<p><img alt="XOR" src="../../../assets/model-lsw-XOR.png" /></p>
+<p><img alt="XOR" src="../../assets/model-lsw-XOR.png" /></p>
 <ul>
 <li><strong>Timer generator</strong> (générateur périodique) — oscille librement en continu :
   actif pendant <strong>Durée active</strong>, inactif pendant <strong>Durée inactive</strong>.</li>
 </ul>
-<p><img alt="Générateur périodique" src="../../../assets/model-lsw-timer-generator.png" /></p>
+<p><img alt="Générateur périodique" src="../../assets/model-lsw-timer-generator.png" /></p>
 <ul>
 <li><strong>Sticky</strong> — un verrou (bascule SR) ; voir <a href="#sticky">ci-dessous</a>.</li>
 <li><strong>Edge</strong> — une impulsion momentanée ; voir <a href="#edge">ci-dessous</a>.</li>
 </ul>
 <h3 id="sticky">Sticky<a class="headerlink" href="#sticky" title="Permanent link">&para;</a></h3>
-<p><img alt="Sticky" src="../../../assets/model-lsw-sticky.png" /></p>
+<p><img alt="Sticky" src="../../assets/model-lsw-sticky.png" /></p>
 <p>Se verrouille sur <strong>Vrai</strong> dès que sa condition <strong>Trigger ON</strong> est remplie, et
 reste Vrai jusqu'à ce que <strong>Trigger OFF</strong> soit remplie — le tout conditionné,
 en option, par la <strong>Condition d'activation</strong> (tant que celle-ci est Fausse, la
@@ -3475,8 +3475,8 @@ dès que la Condition d'activation redevient Vraie, sous réserve des délais).<
 <p>Depuis Ethos 1.6.2, les deux déclencheurs acceptent un modificateur <strong>Edge</strong>
 (appui long sur <code>ENT</code> sur la condition de déclenchement, puis sélection de
 Edge — signalé par le préfixe <code>†</code>) pour un contrôle beaucoup plus fin :</p>
-<p><img alt="Sticky avec Edge" src="../../../assets/model-lsw-sticky-with-edge.png" />
-<img alt="Sélection de l'option Edge" src="../../../assets/model-lsw-sticky-edge-select.png" /></p>
+<p><img alt="Sticky avec Edge" src="../../assets/model-lsw-sticky-with-edge.png" />
+<img alt="Sélection de l'option Edge" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
 <ul>
 <li><strong>Trigger ON <code>SA</code> (aucun délai)</strong> — se verrouille sur Vrai à l'instant où SA
   passe à l'état haut.</li>
@@ -3495,7 +3495,7 @@ verrouillée n'atteigne à nouveau la sortie. Faire basculer simultanément les
 deux déclencheurs de Faux→Vrai <strong>inverse</strong> une fois la sortie du Sticky. Voir
 également <a href="#shared-parameters">Paramètres communs</a> ci-dessous.</p>
 <h3 id="edge">Edge<a class="headerlink" href="#edge" title="Permanent link">&para;</a></h3>
-<p><img alt="Edge" src="../../../assets/model-lsw-edge.png" /></p>
+<p><img alt="Edge" src="../../assets/model-lsw-edge.png" /></p>
 <p>Une impulsion momentanée : Vrai pendant la <strong>Durée</strong> définie, dès que sa
 condition de déclenchement est satisfaite. <strong>Pendant</strong> est un couple <code>[t1:t2]</code>
 qui contrôle précisément le moment :</p>
@@ -3503,15 +3503,15 @@ qui contrôle précisément le moment :</p>
 <li><strong>Front montant, Pendant = 0,0 s</strong> — se déclenche à l'instant où Trigger ON
   passe de Faux à Vrai.</li>
 </ul>
-<p><img alt="Front montant" src="../../../assets/model-lsw-edge-rising-edge.png" />
-  <img alt="Pendant = 0" src="../../../assets/model-lsw-edge-during-eq0.png" /></p>
+<p><img alt="Front montant" src="../../assets/model-lsw-edge-rising-edge.png" />
+  <img alt="Pendant = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
 <ul>
 <li><strong>Front montant, Pendant ≥ 0,0 s (p. ex. 5,0 s)</strong> — se déclenche 5 s après
   que Trigger ON est passé à Vrai, en ignorant les « pics » plus courts
   survenant durant cette fenêtre de 5 s.</li>
 </ul>
-<p><img alt="Pendant &gt; 0, front montant" src="../../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
-  <img alt="Pendant &gt; 0" src="../../../assets/model-lsw-edge-during-gt0.png" /></p>
+<p><img alt="Pendant &gt; 0, front montant" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
+  <img alt="Pendant &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
 <ul>
 <li><strong>Front descendant, Pendant = 0,0 s</strong> — se déclenche à l'instant où
   Trigger ON passe de Vrai à Faux.</li>
@@ -3523,7 +3523,7 @@ qui contrôle précisément le moment :</p>
   fenêtre (p. ex. entre 2 s et 5 s plus tard).</li>
 </ul>
 <h2 id="shared-parameters">Paramètres communs<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
-<p><img alt="Paramètres communs" src="../../../assets/model-lsw-common-parameters.png" /></p>
+<p><img alt="Paramètres communs" src="../../assets/model-lsw-common-parameters.png" /></p>
 <ul>
 <li><strong>Condition d'activation</strong> — conditionne la sortie de l'interrupteur de la
   même manière que pour Sticky, ci-dessus. Options : Toujours actif, positions
@@ -3543,8 +3543,8 @@ qui contrôle précisément le moment :</p>
   utile) — pratique pour conditionner une action risquée, par exemple confirmer
   avant de couper l'alimentation d'un véhicule terrestre à distance.</li>
 </ul>
-<p><img alt="Confirmation vrai" src="../../../assets/model-lsw-confirm-lsw-true.png" />
-  <img alt="Confirmation faux" src="../../../assets/model-lsw-confirm-lsw-false.png" /></p>
+<p><img alt="Confirmation vrai" src="../../assets/model-lsw-confirm-lsw-true.png" />
+  <img alt="Confirmation faux" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
 <ul>
 <li><strong>Durée min.</strong> — une fois Vrai, reste Vrai au moins pendant cette durée.
   Laissée sur <code>---</code>, la sortie peut n'être Vraie que pendant un seul cycle du
@@ -3577,7 +3577,7 @@ en une seule action.</p>
 <em>même</em> type peuvent aussi être comparées directement — par exemple deux
 chronomètres, deux tensions ou deux capteurs de régime.</p>
 <h2 id="ignorer-lentree-ecolage-de-leleve">Ignorer l'entrée écolage de l'élève<a class="headerlink" href="#ignorer-lentree-ecolage-de-leleve" title="Permanent link">&para;</a></h2>
-<p><img alt="Ignorer l'entrée écolage" src="../../../assets/model-lsw-ignore-trainer-input.png" /></p>
+<p><img alt="Ignorer l'entrée écolage" src="../../assets/model-lsw-ignore-trainer-input.png" /></p>
 <p>Les <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">options</a>
 d'une source permettent d'exclure l'entrée écolage provenant d'une radio élève
 (esclave) connectée — cela s'utilise typiquement sur un interrupteur logique

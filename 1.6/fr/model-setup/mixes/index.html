@@ -3325,13 +3325,13 @@
 
 
 <h1 id="mixages">Mixages<a class="headerlink" href="#mixages" title="Permanent link">&para;</a></h1>
-<p><img alt="Icône Mixages" src="../../../assets/model-icon-mixes.png" /></p>
+<p><img alt="Icône Mixages" src="../../assets/model-icon-mixes.png" /></p>
 <p>Les mixages sont le cœur de la programmation d'un modèle dans Ethos — c'est
 ici que les entrées (manches, interrupteurs, capteurs, tout ce qu'une
 <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">source</a>
 peut atteindre) sont acheminées, mises en forme et combinées vers les voies
 de sortie. Jusqu'à 120 mixages peuvent être définis par modèle.</p>
-<p><img alt="Tableau des mixages" src="../../../assets/model-mixes.png" /></p>
+<p><img alt="Tableau des mixages" src="../../assets/model-mixes.png" /></p>
 <p>Si un modèle a été créé avec l'assistant <strong>Choix du modèle</strong>, ses mixages de
 base (ailerons, profondeur, gaz, dérive et tout ce que la cellule requiert)
 sont déjà présents ici. Sélectionner un mixage et appuyer sur <code>ENT</code> ouvre un
@@ -3344,8 +3344,8 @@ suppression demande d'abord une confirmation.</p>
 catégorie dont il provient. Le mixage <strong>ailerons</strong> en est un exemple
 représentatif — les mixages de profondeur et de dérive sont organisés de
 façon identique.</p>
-<p><img alt="Mixage ailerons" src="../../../assets/model-mixes-ail-edit.png" /></p>
-<p><img alt="Éditeur du mixage ailerons" src="../../../assets/model-mixes-ail.png" /></p>
+<p><img alt="Mixage ailerons" src="../../assets/model-mixes-ail-edit.png" /></p>
+<p><img alt="Éditeur du mixage ailerons" src="../../assets/model-mixes-ail.png" /></p>
 <p><strong>Nom</strong> — reprend par défaut le type de mixage, modifiable.</p>
 <p><strong>Condition</strong> — <em>Toujours</em> par défaut. Peut être limitée à une position
 d'interrupteur, un interrupteur de fonction, un interrupteur logique, une
@@ -3357,7 +3357,7 @@ outre être limité à une ou plusieurs d'entre elles.</p>
 <p><strong>Courbe</strong> — une courbe <strong>Expo</strong> est disponible par défaut (0 = linéaire ;
 une valeur positive adoucit la réponse autour du neutre, une valeur négative
 la rend plus vive) :</p>
-<p><img alt="Courbe Expo" src="../../../assets/model-mixes-ail-expo.png" /></p>
+<p><img alt="Courbe Expo" src="../../assets/model-mixes-ail-expo.png" /></p>
 <p>Toute courbe préalablement définie dans <a href="../curves/">Courbes</a> peut être
 choisie à la place. Jusqu'à 6 courbes peuvent être empilées sur un même
 mixage, chacune avec sa propre condition — si plusieurs conditions sont
@@ -3368,11 +3368,11 @@ courbes sont appliquées <strong>avant</strong> les débattements.</p>
 interrupteur logique, une position de trim ou une phase de vol. La première
 ligne est la valeur par défaut, active dès lors qu'aucune autre condition
 n'est remplie :</p>
-<p><img alt="Débattements ailerons" src="../../../assets/model-mixes-ail-weight.png" /></p>
+<p><img alt="Débattements ailerons" src="../../assets/model-mixes-ail-weight.png" /></p>
 <p>Plutôt qu'un pourcentage fixe, un débattement peut être piloté par une
 <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">source</a>
 — par exemple un potentiomètre, afin de l'ajuster en vol :</p>
-<p><img alt="Débattement piloté par une source" src="../../../assets/model-mixes-ail-diff.png" /></p>
+<p><img alt="Débattement piloté par une source" src="../../assets/model-mixes-ail-diff.png" /></p>
 <p><strong>Différentiel</strong> (-100 à 100, 0 par défaut) — donne plus de débattement dans
 un sens que dans l'autre. Pour les ailerons, c'est l'astuce classique
 consistant à débattre davantage vers le haut que vers le bas afin de réduire
@@ -3381,13 +3381,13 @@ voie de sortie ; le différentiel n'a de sens qu'avec une configuration de
 sortie de type empennage en V ou double aileron.</p>
 <p><strong>Nombre de voies / sorties</strong> — combien de voies de sortie ce mixage pilote
 et à quelles sorties physiques elles correspondent :</p>
-<p><img alt="Nombre de voies" src="../../../assets/model-mixes-ail-ch-count.png" /></p>
+<p><img alt="Nombre de voies" src="../../assets/model-mixes-ail-ch-count.png" /></p>
 <p>Un appui long sur <code>ENT</code> sur une voie de sortie ailleurs dans l'interface
 (par exemple dans <a href="../outputs/">Sorties</a>) ramène directement à cette page.</p>
 <h2 id="le-mixage-des-gaz">Le mixage des gaz<a class="headerlink" href="#le-mixage-des-gaz" title="Permanent link">&para;</a></h2>
 <p>Le mixage des gaz est un mixage de type ailerons/profondeur/dérive auquel
 s'ajoutent des options de sécurité propres au moteur.</p>
-<p><img alt="Mixage des gaz" src="../../../assets/model-mixes-thr.png" /></p>
+<p><img alt="Mixage des gaz" src="../../assets/model-mixes-thr.png" /></p>
 <p><strong>Entrée</strong> — la source des gaz, normalement le manche des gaz, mais
 remplaçable par un potentiomètre, un curseur, un interrupteur, un trim, une
 voie, un axe de gyroscope, une voie d'écolage, un chronomètre ou toute autre
@@ -3397,20 +3397,20 @@ d'ajuster le régime de ralenti sans modifier la position plein gaz. Avec le
 trim de ralenti activé, la voie des gaz se situe à -75 % lorsque le manche
 est au ralenti bas, et le trim des gaz ajuste alors le ralenti entre -100 %
 et -50 % :</p>
-<p><img alt="Menu du trim de ralenti" src="../../../assets/model-mixes-thr-trim-menu.png" /></p>
-<p><img alt="Trim de ralenti en position basse" src="../../../assets/model-mixes-thr-trim-low-position.png" /></p>
+<p><img alt="Menu du trim de ralenti" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
+<p><img alt="Trim de ralenti en position basse" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
 <p><strong>Coupure gaz</strong> — un verrouillage de sécurité strict : la voie n'est active
 qu'une fois que le manche des gaz est passé par le ralenti, de sorte qu'une
 manipulation accidentelle d'un interrupteur ne puisse pas lancer le moteur
 depuis une position plein gaz :</p>
-<p><img alt="Coupure gaz" src="../../../assets/model-mixes-thr-cut.png" /></p>
+<p><img alt="Coupure gaz" src="../../assets/model-mixes-thr-cut.png" /></p>
 <p><strong>Maintien gaz</strong> — maintient la voie à une valeur fixe indépendamment de la
 position du manche, sans le verrouillage de sécurité offert par la coupure
 gaz :</p>
-<p><img alt="Maintien gaz" src="../../../assets/model-mixes-thr-hold.png" /></p>
+<p><img alt="Maintien gaz" src="../../assets/model-mixes-thr-hold.png" /></p>
 <p>Le mixage des gaz expose également son propre nombre de voies de sortie,
 comme n'importe quel autre mixage :</p>
-<p><img alt="Nombre de voies des gaz" src="../../../assets/model-mixes-thr-ch-count.png" /></p>
+<p><img alt="Nombre de voies des gaz" src="../../assets/model-mixes-thr-ch-count.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Verrouillage des gaz</p>
 <p>Ethos exige que l'entrée du mixage des gaz passe par -100 % avant
@@ -3424,10 +3424,10 @@ tient déjà compte, mais un mixage des gaz construit manuellement devrait
 mixage</strong> est adaptée à la catégorie de modèle choisie lors de la création du
 modèle — avion, planeur, hélicoptère et multirotor exposent chacun un
 ensemble différent :</p>
-<p><img alt="Bibliothèque de mixages avion" src="../../../assets/model-mixes-library-airplane.png" /></p>
-<p><img alt="Bibliothèque de mixages planeur" src="../../../assets/model-mixes-library-glider.png" /></p>
-<p><img alt="Bibliothèque de mixages hélicoptère" src="../../../assets/model-mixes-library-heli.png" /></p>
-<p><img alt="Bibliothèque de mixages multirotor" src="../../../assets/model-mixes-library-multirotor.png" /></p>
+<p><img alt="Bibliothèque de mixages avion" src="../../assets/model-mixes-library-airplane.png" /></p>
+<p><img alt="Bibliothèque de mixages planeur" src="../../assets/model-mixes-library-glider.png" /></p>
+<p><img alt="Bibliothèque de mixages hélicoptère" src="../../assets/model-mixes-library-heli.png" /></p>
+<p><img alt="Bibliothèque de mixages multirotor" src="../../assets/model-mixes-library-multirotor.png" /></p>
 <p>Chaque bibliothèque inclut également le <strong>Mixage libre</strong> — un type de mixage
 polyvalent sans entrée/sortie prédéfinie, plus souple que les entrées
 spécialisées mais nécessitant davantage de réglages pour parvenir au même
@@ -3437,21 +3437,21 @@ résultat.</p>
 difficile d'appréhender leur effet combiné depuis le tableau à plat
 ci-dessus. Sélectionner un mixage et choisir <strong>Vue par voie</strong> regroupe au
 contraire tous les mixages agissant sur une même sortie :</p>
-<p><img alt="Passage à la vue par voie" src="../../../assets/model-mixes-chview-select.png" /></p>
-<p><img alt="Voie replisée" src="../../../assets/model-mixes-chview-collapsed.png" /></p>
-<p><img alt="Voie de profondeur développée" src="../../../assets/model-mixes-chview-elevator.png" /></p>
+<p><img alt="Passage à la vue par voie" src="../../assets/model-mixes-chview-select.png" /></p>
+<p><img alt="Voie replisée" src="../../assets/model-mixes-chview-collapsed.png" /></p>
+<p><img alt="Voie de profondeur développée" src="../../assets/model-mixes-chview-elevator.png" /></p>
 <p>Développer la ligne de résumé d'une voie affiche chaque mixage y
 contribuant, avec sa sortie numérique et graphique en temps réel — utile
 pour vérifier précisément ce qu'un mixage secondaire (par exemple une
 compensation volets vers profondeur) ajoute par-dessus l'action principale
 du manche :</p>
-<p><img alt="Détail de la vue par voie de la profondeur" src="../../../assets/model-mixes-chview-elevator-channel.png" /></p>
-<p><img alt="Voie de profondeur, mixage mis en évidence" src="../../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
+<p><img alt="Détail de la vue par voie de la profondeur" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p><img alt="Voie de profondeur, mixage mis en évidence" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
 <p>Sélectionner un sous-mixage au lieu de la ligne de résumé ouvre le même menu
 contextuel que dans le tableau à plat (modifier, revenir à la vue tableau,
 supprimer) :</p>
-<p><img alt="Sélection de la vue tableau depuis la vue par voie" src="../../../assets/model-mixes-chview-table-view-select.png" /></p>
-<p><img alt="Retour à la vue tableau" src="../../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
+<p><img alt="Sélection de la vue tableau depuis la vue par voie" src="../../assets/model-mixes-chview-table-view-select.png" /></p>
+<p><img alt="Retour à la vue tableau" src="../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
 
 
 

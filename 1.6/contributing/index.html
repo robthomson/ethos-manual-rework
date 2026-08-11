@@ -3564,10 +3564,23 @@ actually works.</p>
 falls back to the English file for <em>any</em> asset a locale doesn't have its
 own copy of — a translated page's <code>../assets/foo.png</code> just works,
 unmodified, showing the English screenshot, until a real localized one
-(captured once the <a href="screenshot-pipeline/">screenshot pipeline</a> is
-ported and run against that language's radio settings) is dropped in at
-the same filename under <code>docs/&lt;locale&gt;/assets/</code>, which silently
-overrides the fallback from then on.</p>
+is dropped in at the same filename under <code>docs/&lt;locale&gt;/assets/</code>, which
+silently overrides the fallback from then on.</p>
+<p><strong><code>de</code> and <code>fr</code> already have real localized screenshots</strong> — not captured
+here, but bulk-imported from the old <a href="https://github.com/FrSkyRC/ethos-manual"><code>ethos-manual</code></a>
+repo, which turned out to have near-complete per-language screenshot sets
+FrSky's own team had already captured (<code>german/assets/</code> and, for French,
+<code>french_LT/assets/</code> — the more complete of its two French asset sets, not
+the smaller <code>french/assets/</code> its README describes as "half way"). Filenames
+match our own <code>docs/en/assets/</code> 1:1, so importing was a straight copy: 586
+of our 589 currently-referenced screenshots landed for both languages in
+one pass, no simulator involved. The handful that didn't match (2-3 files,
+mostly newer pages the old repo's macros never covered) still fall back to
+English as normal.</p>
+<p>For any locale beyond <code>de</code>/<code>fr</code>, or for closing that last few percent,
+capturing new screenshots means the <a href="screenshot-pipeline/">screenshot pipeline</a>
+— porting/running the real macro rig against the simulator — since that
+work wasn't already done upstream.</p>
 <h3 id="staleness-tracking">Staleness tracking<a class="headerlink" href="#staleness-tracking" title="Permanent link">&para;</a></h3>
 <p><a href="translation-status/">Translation Status</a> is generated automatically
 before every build (<code>hooks/i18n_status.py</code>, wired up via <code>mkdocs.yml</code>'s

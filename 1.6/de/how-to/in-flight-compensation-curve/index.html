@@ -3451,7 +3451,7 @@ Begründung dafür steht in <a href="#6-apply-the-curve">Schritt 6</a>):</p>
 </tbody>
 </table>
 <h2 id="3-logische-schalter-konfigurieren">3. Logische Schalter konfigurieren<a class="headerlink" href="#3-logische-schalter-konfigurieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Logische Schalter für adaptive Punkte" src="../../../assets/how-in-flight-comp-lsws.png" /></p>
+<p><img alt="Logische Schalter für adaptive Punkte" src="../../assets/how-in-flight-comp-lsws.png" /></p>
 <p>Vier <a href="../../model-setup/logical-switches/">logische Schalter</a>, die jeweils
 die Funktion <strong>Bereich</strong> auf dem Klappenknüppel (Gasknüppel) verwenden und
 aktiv sind, solange sich der Knüppel in der Zone des jeweiligen Punktes
@@ -3461,39 +3461,39 @@ befindet:</p>
   damit Pt2 auch ohne ausgefahrene Klappen eingestellt werden kann —
   siehe Schritt 6).</li>
 </ul>
-<p><img alt="AdaptivePt2" src="../../../assets/how-in-flight-comp-lsw-adaptivept2.png" /></p>
+<p><img alt="AdaptivePt2" src="../../assets/how-in-flight-comp-lsw-adaptivept2.png" /></p>
 <ul>
 <li><code>AdaptivePt3</code> — Bereich −45 % bis 45 %.</li>
 </ul>
-<p><img alt="AdaptivePt3" src="../../../assets/how-in-flight-comp-lsw-adaptivept3.png" /></p>
+<p><img alt="AdaptivePt3" src="../../assets/how-in-flight-comp-lsw-adaptivept3.png" /></p>
 <ul>
 <li><code>AdaptivePt4</code> — Bereich −90 % bis −20 %.</li>
 </ul>
-<p><img alt="AdaptivePt4" src="../../../assets/how-in-flight-comp-lsw-adaptivept4.png" /></p>
+<p><img alt="AdaptivePt4" src="../../assets/how-in-flight-comp-lsw-adaptivept4.png" /></p>
 <ul>
 <li><code>AdaptivePt5</code> — Bereich −100 % bis −90 %.</li>
 </ul>
-<p><img alt="AdaptivePt5" src="../../../assets/how-in-flight-comp-lsw-adaptivept5.png" /></p>
+<p><img alt="AdaptivePt5" src="../../assets/how-in-flight-comp-lsw-adaptivept5.png" /></p>
 <h2 id="4-vars-fur-die-einstellung-anlegen">4. Vars für die Einstellung anlegen<a class="headerlink" href="#4-vars-fur-die-einstellung-anlegen" title="Permanent link">&para;</a></h2>
-<p><img alt="Übersicht der Vars" src="../../../assets/how-in-flight-comp-vars.png" /></p>
+<p><img alt="Übersicht der Vars" src="../../assets/how-in-flight-comp-vars.png" /></p>
 <p>Vier <a href="../../model-setup/variables/">Vars</a>, <code>VAdjPt2</code>–<code>VAdjPt5</code>, jeweils mit
 dem Bereich 0–50 % (bei Bedarf erweitern) und einer Aktion mit
 <strong>umgewidmeter Gastrimmung</strong> — Schrittweite 1,0 %, als Aktivierungsbedingung
 der jeweils passende logische Schalter:</p>
-<p><img alt="VAdjPt2" src="../../../assets/how-in-flight-comp-var-vadjpt2.png" />
-<img alt="Aktion VAdjPt2" src="../../../assets/how-in-flight-comp-var-vadjpt2-2.png" />
-<img alt="VAdjPt3" src="../../../assets/how-in-flight-comp-var-vadjpt3.png" />
-<img alt="Aktion VAdjPt3" src="../../../assets/how-in-flight-comp-var-vadjpt3-2.png" />
-<img alt="VAdjPt4" src="../../../assets/how-in-flight-comp-var-vadjpt4.png" />
-<img alt="Aktion VAdjPt4" src="../../../assets/how-in-flight-comp-var-vadjpt4-2.png" />
-<img alt="VAdjPt5" src="../../../assets/how-in-flight-comp-var-vadjpt5.png" />
-<img alt="Aktion VAdjPt5" src="../../../assets/how-in-flight-comp-var-vadjpt5-2.png" /></p>
+<p><img alt="VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2.png" />
+<img alt="Aktion VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2-2.png" />
+<img alt="VAdjPt3" src="../../assets/how-in-flight-comp-var-vadjpt3.png" />
+<img alt="Aktion VAdjPt3" src="../../assets/how-in-flight-comp-var-vadjpt3-2.png" />
+<img alt="VAdjPt4" src="../../assets/how-in-flight-comp-var-vadjpt4.png" />
+<img alt="Aktion VAdjPt4" src="../../assets/how-in-flight-comp-var-vadjpt4-2.png" />
+<img alt="VAdjPt5" src="../../assets/how-in-flight-comp-var-vadjpt5.png" />
+<img alt="Aktion VAdjPt5" src="../../assets/how-in-flight-comp-var-vadjpt5-2.png" /></p>
 <p>Da immer nur ein logischer Schalter aktiv ist (in den Überlappungszonen
 höchstens zwei), stellt dieselbe physische Trimmung je nach Klappenstellung
 gefahrlos unterschiedliche Vars ein.</p>
 <h2 id="5-kompensationskurve-definieren">5. Kompensationskurve definieren<a class="headerlink" href="#5-kompensationskurve-definieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Kompensationskurve" src="../../../assets/how-in-flight-comp-var-comp-curve.png" />
-<img alt="Punkte der Kompensationskurve" src="../../../assets/how-in-flight-comp-var-comp-curve-pts.png" /></p>
+<p><img alt="Kompensationskurve" src="../../assets/how-in-flight-comp-var-comp-curve.png" />
+<img alt="Punkte der Kompensationskurve" src="../../assets/how-in-flight-comp-var-comp-curve-pts.png" /></p>
 <p>Eine neue benutzerdefinierte Kurve mit 5 Punkten (z. B. "EleComp") mit
 aktivierter Option <strong>Smooth</strong>. Auf den Punkten 1–4 jeweils <code>ENT</code> lang
 drücken und über <strong>Quelle verwenden</strong> <code>VAdjPt5</code>…<code>VAdjPt2</code> zuweisen

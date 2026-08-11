@@ -3325,12 +3325,12 @@
 
 
 <h1 id="mischer">Mischer<a class="headerlink" href="#mischer" title="Permanent link">&para;</a></h1>
-<p><img alt="Mischer-Symbol" src="../../../assets/model-icon-mixes.png" /></p>
+<p><img alt="Mischer-Symbol" src="../../assets/model-icon-mixes.png" /></p>
 <p>Mischer sind der Kern der Modellprogrammierung in Ethos – hier werden Eingänge
 (Steuerknüppel, Schalter, Sensoren, alles, was eine <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
 erreichen kann) auf Ausgangskanäle geleitet, geformt und kombiniert. Pro Modell
 können bis zu 120 Mischer definiert werden.</p>
-<p><img alt="Mischertabelle" src="../../../assets/model-mixes.png" /></p>
+<p><img alt="Mischertabelle" src="../../assets/model-mixes.png" /></p>
 <p>Wurde ein Modell mit dem Assistenten der <strong>Modellauswahl</strong> erstellt, sind die
 grundlegenden Mischer (Querruder, Höhenruder, Gas, Seitenruder und was die
 Zelle sonst noch benötigt) hier bereits angelegt. Das Auswählen eines Mischers
@@ -3344,8 +3344,8 @@ verlangt.</p>
 welcher Kategorie er stammt. Der <strong>Querruder</strong>-Mischer dient hier als
 repräsentatives Beispiel – Höhenruder- und Seitenruder-Mischer sind identisch
 aufgebaut.</p>
-<p><img alt="Querruder-Mischer" src="../../../assets/model-mixes-ail-edit.png" /></p>
-<p><img alt="Querruder-Mischer-Editor" src="../../../assets/model-mixes-ail.png" /></p>
+<p><img alt="Querruder-Mischer" src="../../assets/model-mixes-ail-edit.png" /></p>
+<p><img alt="Querruder-Mischer-Editor" src="../../assets/model-mixes-ail.png" /></p>
 <p><strong>Name</strong> – standardmäßig der Mischertyp, editierbar.</p>
 <p><strong>Bedingung</strong> – standardmäßig <em>Immer</em>. Kann auf eine Schalterstellung, einen
 Funktionsschalter, einen logischen Schalter, eine Flugphase, ein Systemereignis
@@ -3356,7 +3356,7 @@ oder mehrere davon eingeschränkt werden.</p>
 <p><strong>Kurve</strong> – standardmäßig steht eine <strong>Expo</strong>-Kurve zur Verfügung (0 = linear;
 positive Werte machen die Reaktion um die Mittelstellung weicher, negative
 schärfer):</p>
-<p><img alt="Expo-Kurve" src="../../../assets/model-mixes-ail-expo.png" /></p>
+<p><img alt="Expo-Kurve" src="../../assets/model-mixes-ail-expo.png" /></p>
 <p>Alternativ kann jede zuvor unter <a href="../curves/">Kurven</a> definierte Kurve gewählt
 werden. Bis zu 6 Kurven lassen sich auf einem Mischer stapeln, jede mit eigener
 Bedingung – sind mehrere Bedingungen gleichzeitig erfüllt, gewinnt die in der
@@ -3365,12 +3365,12 @@ Liste weiter oben stehende Kurve. Kurven werden <strong>vor</strong> den Raten a
 Schalter, Funktionsschalter, logischen Schalter, eine Trimmungsposition oder
 eine Flugphase freigeschaltet. Die erste Zeile ist der Standard und immer dann
 aktiv, wenn die Bedingung keiner anderen Zeile erfüllt ist:</p>
-<p><img alt="Querruder-Raten" src="../../../assets/model-mixes-ail-weight.png" /></p>
+<p><img alt="Querruder-Raten" src="../../assets/model-mixes-ail-weight.png" /></p>
 <p>Statt eines festen Prozentwerts kann eine Rate auch von einer
 <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
 gesteuert werden – beispielsweise von einem Potentiometer, um die Rate im Flug
 anzupassen:</p>
-<p><img alt="Von einer Quelle gesteuerte Rate" src="../../../assets/model-mixes-ail-diff.png" /></p>
+<p><img alt="Von einer Quelle gesteuerte Rate" src="../../assets/model-mixes-ail-diff.png" /></p>
 <p><strong>Differential</strong> (-100 bis 100, Standard 0) – bewirkt mehr Ausschlag in eine
 Richtung als in die andere. Bei Querrudern ist dies der klassische Kniff, mehr
 Ausschlag nach oben als nach unten zu geben, um das negative Wendemoment zu
@@ -3379,14 +3379,14 @@ besitzt; Differential ist zudem nur bei einer Ausgangskonfiguration im Stil
 eines V-Leitwerks oder zweier getrennter Querruder sinnvoll.</p>
 <p><strong>Anzahl der Kanäle / Ausgänge</strong> – wie viele Ausgangskanäle dieser Mischer
 ansteuert und auf welche physischen Ausgänge sie abgebildet werden:</p>
-<p><img alt="Kanalanzahl" src="../../../assets/model-mixes-ail-ch-count.png" /></p>
+<p><img alt="Kanalanzahl" src="../../assets/model-mixes-ail-ch-count.png" /></p>
 <p>Ein langer Druck auf <code>ENT</code> bei einem Ausgangskanal an anderer Stelle in der
 Oberfläche (z. B. unter <a href="../outputs/">Ausgänge</a>) springt direkt auf diese Seite
 zurück.</p>
 <h2 id="der-gas-mischer">Der Gas-Mischer<a class="headerlink" href="#der-gas-mischer" title="Permanent link">&para;</a></h2>
 <p>Der Gas-Mischer entspricht einem Querruder-/Höhenruder-/Seitenruder-Mischer
 zuzüglich motorspezifischer Sicherheitsoptionen.</p>
-<p><img alt="Gas-Mischer" src="../../../assets/model-mixes-thr.png" /></p>
+<p><img alt="Gas-Mischer" src="../../assets/model-mixes-thr.png" /></p>
 <p><strong>Eingang</strong> – die Gasquelle, normalerweise der Gasknüppel, aber austauschbar
 gegen ein Potentiometer, einen Schieberegler, Schalter, eine Trimmung, einen
 Kanal, eine Gyro-Achse, einen Lehrer/Schüler-Kanal, einen Timer oder jede
@@ -3396,19 +3396,19 @@ andere Quelle.</p>
 Bei aktivierter Leerlauftrimmung liegt der Gaskanal bei -75 %, wenn der Knüppel
 im unteren Leerlauf steht; die Gastrimmung stellt den Leerlauf dann zwischen
 -100 % und -50 % ein:</p>
-<p><img alt="Menü Leerlauftrimmung" src="../../../assets/model-mixes-thr-trim-menu.png" /></p>
-<p><img alt="Leerlauftrimmung in unterer Position" src="../../../assets/model-mixes-thr-trim-low-position.png" /></p>
+<p><img alt="Menü Leerlauftrimmung" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
+<p><img alt="Leerlauftrimmung in unterer Position" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
 <p><strong>Gas-Abschaltung</strong> – eine harte Sicherheitsverriegelung: Der Kanal wird erst
 aktiv, nachdem der Gasknüppel den Leerlauf durchlaufen hat, sodass ein
 versehentliches Umlegen eines Schalters den Motor nicht aus einer
 Vollgasstellung heraus anlaufen lassen kann:</p>
-<p><img alt="Gas-Abschaltung" src="../../../assets/model-mixes-thr-cut.png" /></p>
+<p><img alt="Gas-Abschaltung" src="../../assets/model-mixes-thr-cut.png" /></p>
 <p><strong>Leerlaufsperre</strong> – hält den Kanal unabhängig von der Knüppelstellung auf einem
 festen Wert, allerdings ohne die Sicherheitsverriegelung der Gas-Abschaltung:</p>
-<p><img alt="Leerlaufsperre" src="../../../assets/model-mixes-thr-hold.png" /></p>
+<p><img alt="Leerlaufsperre" src="../../assets/model-mixes-thr-hold.png" /></p>
 <p>Auch der Gas-Mischer bietet eine eigene Angabe zur Anzahl der Ausgangskanäle,
 genau wie jeder andere Mischer:</p>
-<p><img alt="Kanalanzahl Gas" src="../../../assets/model-mixes-thr-ch-count.png" /></p>
+<p><img alt="Kanalanzahl Gas" src="../../assets/model-mixes-thr-ch-count.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Gas-Verriegelung</p>
 <p>Ethos verlangt, dass der Eingang des Gas-Mischers unabhängig von den
@@ -3422,10 +3422,10 @@ Gas-Mischer sollten es ebenfalls tun.</p>
 sich nach der Modellkategorie, die bei der Modellerstellung gewählt wurde –
 Flächenmodell, Segler, Hubschrauber und Multicopter bieten jeweils einen
 eigenen Satz:</p>
-<p><img alt="Mischerbibliothek Flächenmodell" src="../../../assets/model-mixes-library-airplane.png" /></p>
-<p><img alt="Mischerbibliothek Segler" src="../../../assets/model-mixes-library-glider.png" /></p>
-<p><img alt="Mischerbibliothek Hubschrauber" src="../../../assets/model-mixes-library-heli.png" /></p>
-<p><img alt="Mischerbibliothek Multicopter" src="../../../assets/model-mixes-library-multirotor.png" /></p>
+<p><img alt="Mischerbibliothek Flächenmodell" src="../../assets/model-mixes-library-airplane.png" /></p>
+<p><img alt="Mischerbibliothek Segler" src="../../assets/model-mixes-library-glider.png" /></p>
+<p><img alt="Mischerbibliothek Hubschrauber" src="../../assets/model-mixes-library-heli.png" /></p>
+<p><img alt="Mischerbibliothek Multicopter" src="../../assets/model-mixes-library-multirotor.png" /></p>
 <p>Jede Bibliothek enthält außerdem den <strong>Freien Mischer</strong> – einen
 Allzweck-Mischertyp ohne vorgegebenen Ein-/Ausgang, flexibler als die
 spezialisierten Einträge, aber mit mehr Einrichtungsaufwand verbunden, um
@@ -3435,21 +3435,21 @@ dasselbe Ergebnis zu erzielen.</p>
 Gesamtwirkung in der flachen Tabelle oben nur schwer erkennen. Wählt man einen
 Mischer aus und ruft <strong>Nach Kanal anzeigen</strong> auf, werden stattdessen alle
 Mischer, die einen Ausgang beeinflussen, gemeinsam gruppiert:</p>
-<p><img alt="Zur Kanalansicht wechseln" src="../../../assets/model-mixes-chview-select.png" /></p>
-<p><img alt="Eingeklappter Kanal" src="../../../assets/model-mixes-chview-collapsed.png" /></p>
-<p><img alt="Höhenruderkanal aufgeklappt" src="../../../assets/model-mixes-chview-elevator.png" /></p>
+<p><img alt="Zur Kanalansicht wechseln" src="../../assets/model-mixes-chview-select.png" /></p>
+<p><img alt="Eingeklappter Kanal" src="../../assets/model-mixes-chview-collapsed.png" /></p>
+<p><img alt="Höhenruderkanal aufgeklappt" src="../../assets/model-mixes-chview-elevator.png" /></p>
 <p>Das Aufklappen der Übersichtszeile eines Kanals zeigt jeden daran beteiligten
 Mischer mit seinem aktuellen numerischen und grafischen Ausgangswert – nützlich,
 um genau zu prüfen, wie viel ein sekundärer Mischer (z. B. eine
 Klappen-Höhenruder-Kompensation) zusätzlich zum primären Knüppeleingang
 beisteuert:</p>
-<p><img alt="Detail der Höhenruder-Kanalansicht" src="../../../assets/model-mixes-chview-elevator-channel.png" /></p>
-<p><img alt="Höhenruderkanal, Mischer hervorgehoben" src="../../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
+<p><img alt="Detail der Höhenruder-Kanalansicht" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p><img alt="Höhenruderkanal, Mischer hervorgehoben" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
 <p>Das Auswählen eines Untermischers anstelle der Übersichtszeile öffnet dasselbe
 Kontextmenü wie in der flachen Tabelle (Bearbeiten, zurück zur Tabellenansicht
 wechseln, Löschen):</p>
-<p><img alt="Tabellenansicht aus der Kanalansicht wählen" src="../../../assets/model-mixes-chview-table-view-select.png" /></p>
-<p><img alt="Zurück zur Tabellenansicht" src="../../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
+<p><img alt="Tabellenansicht aus der Kanalansicht wählen" src="../../assets/model-mixes-chview-table-view-select.png" /></p>
+<p><img alt="Zurück zur Tabellenansicht" src="../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
 
 
 

@@ -3281,7 +3281,7 @@
 
 
 <h1 id="kurven">Kurven<a class="headerlink" href="#kurven" title="Permanent link">&para;</a></h1>
-<p><img alt="Kurventypen" src="../../../assets/model-curves-type.png" /></p>
+<p><img alt="Kurventypen" src="../../assets/model-curves-type.png" /></p>
 <p>Wiederverwendbare Übertragungskurven für <a href="../mixes/#anatomy-of-a-mix">Mischer</a> oder
 <a href="../outputs/#editing-a-channel">Ausgänge</a> — das integrierte Expo steht in beiden
 direkt zur Verfügung, alles Weiterführende wird hier definiert (oder über
@@ -3290,7 +3290,7 @@ ist). Bis zu 50 Kurven sind verfügbar; standardmäßig existiert keine davon (E
 ist unabhängig davon immer integriert). Mit <strong>+</strong> wird eine Kurve hinzugefügt;
 durch Antippen einer vorhandenen Kurve erscheinen
 <strong>Bearbeiten</strong>/<strong>Verschieben</strong>/<strong>Kopieren-Einfügen</strong>/<strong>Klonen</strong>/<strong>Löschen</strong>.</p>
-<p><img alt="Kurve hinzufügen" src="../../../assets/model-curves-add.png" /></p>
+<p><img alt="Kurve hinzufügen" src="../../assets/model-curves-add.png" /></p>
 <h2 id="kurventypen">Kurventypen<a class="headerlink" href="#kurventypen" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Expo</strong> — Standardwert 40; positive Werte machen die Reaktion um die
@@ -3298,62 +3298,62 @@ durch Antippen einer vorhandenen Kurve erscheinen
   Reaktion um die Knüppelmitte hilft, Übersteuerung zu vermeiden, insbesondere
   bei weniger erfahrenen Piloten.</li>
 </ul>
-<p><img alt="Expo" src="../../../assets/model-curves-expo.png" /></p>
+<p><img alt="Expo" src="../../assets/model-curves-expo.png" /></p>
 <ul>
 <li><strong>Funktion</strong> — ein kleiner Satz fester mathematischer Formen:</li>
 </ul>
-<p><img alt="Funktionstypen" src="../../../assets/model-curves-fn-types.png" /></p>
+<p><img alt="Funktionstypen" src="../../assets/model-curves-fn-types.png" /></p>
 <ul>
 <li>
 <p><strong>x &gt; 0</strong> — gibt die Quelle im positiven Bereich unverändert weiter; im
     negativen Bereich wird 0 ausgegeben.</p>
-<p><img alt="x &gt; 0" src="../../../assets/model-curves-fn-xgt0.png" /></p>
+<p><img alt="x &gt; 0" src="../../assets/model-curves-fn-xgt0.png" /></p>
 </li>
 <li>
 <p><strong>x &lt; 0</strong> — das Spiegelbild: gibt im negativen Bereich weiter, im positiven
     Bereich 0.</p>
-<p><img alt="x &lt; 0" src="../../../assets/model-curves-fn-xlt0.png" /></p>
+<p><img alt="x &lt; 0" src="../../assets/model-curves-fn-xlt0.png" /></p>
 </li>
 <li>
 <p><strong>|x|</strong> — gibt die Quelle als Absolutwert weiter (immer positiv).</p>
-<p><img alt="|x|" src="../../../assets/model-curves-fn-barx.png" /></p>
+<p><img alt="|x|" src="../../assets/model-curves-fn-barx.png" /></p>
 </li>
 <li>
 <p><strong>f &gt; 0</strong> — gibt 100 % aus, solange die Quelle positiv ist, und 0, solange
     sie negativ ist (ein harter Umschalter, keine Durchleitung).</p>
-<p><img alt="f &gt; 0" src="../../../assets/model-curves-fn-fgt0.png" /></p>
+<p><img alt="f &gt; 0" src="../../assets/model-curves-fn-fgt0.png" /></p>
 </li>
 <li>
 <p><strong>f &lt; 0</strong> — gibt −100 % aus, solange die Quelle negativ ist, und 0, solange
     sie positiv ist.</p>
-<p><img alt="f &lt; 0" src="../../../assets/model-curves-fn-flt0.png" /></p>
+<p><img alt="f &lt; 0" src="../../assets/model-curves-fn-flt0.png" /></p>
 </li>
 <li>
 <p><strong>|f|</strong> — gibt −100 % im negativen und +100 % im positiven Bereich aus.</p>
-<p><img alt="|f|" src="../../../assets/model-curves-fn-barf.png" /></p>
+<p><img alt="|f|" src="../../assets/model-curves-fn-barf.png" /></p>
 </li>
 </ul>
 <p>Jeder Kurventyp — auch Funktion — besitzt zudem einen <strong>Offset</strong>, der die Kurve
   auf der Y-Achse nach oben oder unten verschiebt (eine Nachkommastelle
   Genauigkeit, wie bei Y-Werten generell):</p>
-<p><img alt="Funktions-Offset" src="../../../assets/model-curves-fn-xgt0-offset.png" /></p>
+<p><img alt="Funktions-Offset" src="../../assets/model-curves-fn-xgt0-offset.png" /></p>
 <ul>
 <li><strong>Benutzerdefiniert</strong> — eine punktbasierte Kurve, standardmäßig mit 5 Punkten,
   maximal 21.</li>
 </ul>
-<p><img alt="Benutzerdefinierte Kurve mit 5 Punkten" src="../../../assets/model-curves-custom5.png" /></p>
+<p><img alt="Benutzerdefinierte Kurve mit 5 Punkten" src="../../assets/model-curves-custom5.png" /></p>
 <ul>
 <li>
 <p><strong>Glätten</strong> — legt eine glatte Kurve durch alle Punkte statt gerader
     Teilstrecken zwischen ihnen.</p>
-<p><img alt="Geglättete Kurve" src="../../../assets/model-curves-custom5-2-smooth.png" /></p>
+<p><img alt="Geglättete Kurve" src="../../assets/model-curves-custom5-2-smooth.png" /></p>
 </li>
 <li>
 <p><strong>Einfacher Modus</strong> — <strong>Ein</strong> beschränkt die Bearbeitung auf gleichmäßig
     verteilte Y-Koordinaten (X ist fest); <strong>Aus</strong> erlaubt die Bearbeitung von X
     und Y je Punkt, ausgenommen die Endpunkte bei −100 %/+100 %, die gesperrt
     sind, da die Kurve stets den gesamten Signalbereich abdecken muss.</p>
-<p><img alt="Einfacher Modus aus" src="../../../assets/model-curves-custom-easy-off.png" /></p>
+<p><img alt="Einfacher Modus aus" src="../../assets/model-curves-custom-easy-off.png" /></p>
 </li>
 </ul>
 <p><strong>Bedienelemente des Editors</strong> (gleiches Schema wie beim <a href="../outputs/#balance-channels">Editor für
@@ -3373,8 +3373,8 @@ durch Antippen einer vorhandenen Kurve erscheinen
 <strong>benutzerdefinierten</strong> Kurve können anstelle eines festen Werts von einer
 <a href="../variables/">Var</a> angesteuert werden — und diese Var lässt sich wiederum über
 eine umgewidmete Trimmung im Flug verstellen:</p>
-<p><img alt="Funktions-Offset über eine Var" src="../../../assets/model-curves-fn-offset-var.png" />
-<img alt="Punkt einer benutzerdefinierten Kurve über eine Var" src="../../../assets/model-curves-custom-with-var.png" /></p>
+<p><img alt="Funktions-Offset über eine Var" src="../../assets/model-curves-fn-offset-var.png" />
+<img alt="Punkt einer benutzerdefinierten Kurve über eine Var" src="../../assets/model-curves-custom-with-var.png" /></p>
 <p>Siehe <a href="../variables/">Variablen</a> und <a href="../../how-to/in-flight-compensation-curve/">Anleitung: Im Flug verstellbare
 Kompensationskurve</a> für ein
 vollständig durchgearbeitetes Beispiel dieses Musters.</p>

@@ -3412,26 +3412,26 @@ FrSky FASxxx) in Kombination mit einem <a href="../../model-setup/telemetry/#cal
 <strong>Consumption</strong></a> dieselbe
 Aufgabe.</p>
 <h3 id="1-anschlieen-und-sensoren-suchen">1. Anschließen und Sensoren suchen<a class="headerlink" href="#1-anschlieen-und-sensoren-suchen" title="Permanent link">&para;</a></h3>
-<p><img alt="Stromsensor" src="../../../assets/how-to-consumption-telemetry-current-sensor.png" /></p>
+<p><img alt="Stromsensor" src="../../assets/how-to-consumption-telemetry-current-sensor.png" /></p>
 <p>Schließen Sie die S.Port-Leitung des Stromsensors an und starten Sie die
 Sensorsuche – er erscheint als <strong>Current</strong>. Stellen Sie dessen <strong>Range</strong>
 passend zum Sensor ein (z. B. 0–100 A bei einem FAS100):</p>
-<p><img alt="Stromsensor bearbeiten" src="../../../assets/how-to-consumption-telemetry-current-sensor-edit.png" /></p>
+<p><img alt="Stromsensor bearbeiten" src="../../assets/how-to-consumption-telemetry-current-sensor-edit.png" /></p>
 <h3 id="2-den-berechneten-sensor-consumption-anlegen">2. Den berechneten Sensor „Consumption“ anlegen<a class="headerlink" href="#2-den-berechneten-sensor-consumption-anlegen" title="Permanent link">&para;</a></h3>
-<p><img alt="Berechneten Sensor anlegen" src="../../../assets/how-to-consumption-create-calc-select.png" />
-<img alt="Consumption-Sensor" src="../../../assets/how-to-consumption-create-calc-sensor.png" /></p>
+<p><img alt="Berechneten Sensor anlegen" src="../../assets/how-to-consumption-create-calc-select.png" />
+<img alt="Consumption-Sensor" src="../../assets/how-to-consumption-create-calc-sensor.png" /></p>
 <p>Wählen Sie in der Telemetrie <strong>Create Calculated Sensor</strong> →
 <strong>Consumption</strong>. Setzen Sie die Einheit auf <code>mAh</code> und <strong>Range</strong> auf die
 Kapazität des Akkus (z. B. 2800 mAh); <strong>Source</strong> auf <code>Current</code>.</p>
-<p><img alt="Sensor bearbeiten" src="../../../assets/how-to-consumption-sensor-edit.png" />
-<img alt="Sensor bearbeiten 2" src="../../../assets/how-to-consumption-sensor-edit2.png" /></p>
+<p><img alt="Sensor bearbeiten" src="../../assets/how-to-consumption-sensor-edit.png" />
+<img alt="Sensor bearbeiten 2" src="../../assets/how-to-consumption-sensor-edit2.png" /></p>
 <p>Stellen Sie <strong>Reset</strong> auf das Systemereignis <code>!Telemetry Active</code> – wählen
 Sie <strong>Telemetry Active</strong>, drücken Sie lange auf <code>ENT</code> und wählen Sie
 <strong>Invert</strong> – damit der laufende Gesamtwert automatisch zurückgesetzt
 wird, sobald die Telemetrie abreißt (das Modell also ausgeschaltet
 wird).</p>
 <h3 id="3-ansagen-bei-zwischenschritten">3. Ansagen bei Zwischenschritten<a class="headerlink" href="#3-ansagen-bei-zwischenschritten" title="Permanent link">&para;</a></h3>
-<p><img alt="Logischer Schalter Delta 200 mAh" src="../../../assets/how-to-consumption-lsw-delta200mAh.png" /></p>
+<p><img alt="Logischer Schalter Delta 200 mAh" src="../../assets/how-to-consumption-lsw-delta200mAh.png" /></p>
 <p>Legen Sie einen logischen Schalter mit der Funktion <strong>Δ &gt; X</strong> auf
 <code>Consumption</code> an, der bei jedem festen Zuwachs auslöst – zum Beispiel
 alle 200 mAh, ein praktischer Teilbetrag eines 2800-mAh-Akkus.</p>
@@ -3445,16 +3445,16 @@ nach einem festen Zeitfenster zurückgesetzt zu werden. Geben Sie
 </div>
 <p>Fügen Sie eine „Play Audio“-Funktion mit diesem Schalter als aktiver
 Bedingung hinzu, mit einem Schritt „Wert ansagen“ für <code>Consumption</code>:</p>
-<p><img alt="Delta-Ansage abspielen" src="../../../assets/how-to-consumption-sf-play-delta200mAh.png" />
-<img alt="Wert ansagen: Consumption" src="../../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
+<p><img alt="Delta-Ansage abspielen" src="../../assets/how-to-consumption-sf-play-delta200mAh.png" />
+<img alt="Wert ansagen: Consumption" src="../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
 <h3 id="4-warnung-bei-geringer-restkapazitat">4. Warnung bei geringer Restkapazität<a class="headerlink" href="#4-warnung-bei-geringer-restkapazitat" title="Permanent link">&para;</a></h3>
-<p><img alt="Zweiter logischer Schalter" src="../../../assets/how-to-consumption-lsw2-play-battlow.png" /></p>
+<p><img alt="Zweiter logischer Schalter" src="../../assets/how-to-consumption-lsw2-play-battlow.png" /></p>
 <p>Ein zweiter logischer Schalter löst einmalig aus, sobald eine feste
 Schwelle für geringe Restkapazität überschritten wird – z. B. 2000 mAh
 von einem 2800-mAh-Akku – kombiniert mit einer „Play Audio“-Funktion,
 die sich alle 10 Sekunden wiederholt, bis das Modell zurückgesetzt wird:</p>
-<p><img alt="Wert ansagen bei niedrigem Akkustand" src="../../../assets/how-to-consumption-sf2-play-battlow.png" />
-<img alt="Wert ansagen: Consumption bei niedrigem Akkustand" src="../../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
+<p><img alt="Wert ansagen bei niedrigem Akkustand" src="../../assets/how-to-consumption-sf2-play-battlow.png" />
+<img alt="Wert ansagen: Consumption bei niedrigem Akkustand" src="../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
 
 
 

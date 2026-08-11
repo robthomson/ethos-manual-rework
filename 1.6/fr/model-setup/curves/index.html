@@ -3281,7 +3281,7 @@
 
 
 <h1 id="courbes">Courbes<a class="headerlink" href="#courbes" title="Permanent link">&para;</a></h1>
-<p><img alt="Types de courbes" src="../../../assets/model-curves-type.png" /></p>
+<p><img alt="Types de courbes" src="../../assets/model-curves-type.png" /></p>
 <p>Courbes de réponse réutilisables pour les <a href="../mixes/#anatomy-of-a-mix">Mixages</a> ou
 les <a href="../outputs/#editing-a-channel">Sorties</a> — l'Expo intégré est disponible
 directement dans les deux, mais tout ce qui est plus élaboré se définit ici (ou via
@@ -3289,7 +3289,7 @@ directement dans les deux, mais tout ce qui est plus élaboré se définit ici (
 Jusqu'à 50 courbes sont disponibles ; aucune n'existe par défaut (l'Expo reste de
 toute façon toujours intégré). Ajoutez-en une avec <strong>+</strong> ; touchez une courbe
 existante pour <strong>Modifier</strong>/<strong>Déplacer</strong>/<strong>Copier-coller</strong>/<strong>Cloner</strong>/<strong>Supprimer</strong>.</p>
-<p><img alt="Ajouter une courbe" src="../../../assets/model-curves-add.png" /></p>
+<p><img alt="Ajouter une courbe" src="../../assets/model-curves-add.png" /></p>
 <h2 id="types-de-courbes">Types de courbes<a class="headerlink" href="#types-de-courbes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Expo</strong> — valeur par défaut 40 ; une valeur positive adoucit la réponse autour
@@ -3297,63 +3297,63 @@ existante pour <strong>Modifier</strong>/<strong>Déplacer</strong>/<strong>Copi
   manche aide à éviter de surpiloter, en particulier pour les pilotes les moins
   expérimentés.</li>
 </ul>
-<p><img alt="Expo" src="../../../assets/model-curves-expo.png" /></p>
+<p><img alt="Expo" src="../../assets/model-curves-expo.png" /></p>
 <ul>
 <li><strong>Fonction</strong> — un petit ensemble de formes mathématiques fixes :</li>
 </ul>
-<p><img alt="Types de fonctions" src="../../../assets/model-curves-fn-types.png" /></p>
+<p><img alt="Types de fonctions" src="../../assets/model-curves-fn-types.png" /></p>
 <ul>
 <li>
 <p><strong>x &gt; 0</strong> — transmet la source inchangée lorsqu'elle est positive ;
     sort 0 lorsqu'elle est négative.</p>
-<p><img alt="x &gt; 0" src="../../../assets/model-curves-fn-xgt0.png" /></p>
+<p><img alt="x &gt; 0" src="../../assets/model-curves-fn-xgt0.png" /></p>
 </li>
 <li>
 <p><strong>x &lt; 0</strong> — l'inverse : transmet la source lorsqu'elle est négative, 0
     lorsqu'elle est positive.</p>
-<p><img alt="x &lt; 0" src="../../../assets/model-curves-fn-xlt0.png" /></p>
+<p><img alt="x &lt; 0" src="../../assets/model-curves-fn-xlt0.png" /></p>
 </li>
 <li>
 <p><strong>|x|</strong> — transmet la source sous forme de valeur absolue (toujours
     positive).</p>
-<p><img alt="|x|" src="../../../assets/model-curves-fn-barx.png" /></p>
+<p><img alt="|x|" src="../../assets/model-curves-fn-barx.png" /></p>
 </li>
 <li>
 <p><strong>f &gt; 0</strong> — sort 100 % lorsque la source est positive, 0 lorsqu'elle est
     négative (un interrupteur franc, pas une transmission directe).</p>
-<p><img alt="f &gt; 0" src="../../../assets/model-curves-fn-fgt0.png" /></p>
+<p><img alt="f &gt; 0" src="../../assets/model-curves-fn-fgt0.png" /></p>
 </li>
 <li>
 <p><strong>f &lt; 0</strong> — sort −100 % lorsque la source est négative, 0 lorsqu'elle est
     positive.</p>
-<p><img alt="f &lt; 0" src="../../../assets/model-curves-fn-flt0.png" /></p>
+<p><img alt="f &lt; 0" src="../../assets/model-curves-fn-flt0.png" /></p>
 </li>
 <li>
 <p><strong>|f|</strong> — sort −100 % lorsque la source est négative, +100 % lorsqu'elle est
     positive.</p>
-<p><img alt="|f|" src="../../../assets/model-curves-fn-barf.png" /></p>
+<p><img alt="|f|" src="../../assets/model-curves-fn-barf.png" /></p>
 </li>
 </ul>
 <p>Tous les types de courbes — y compris Fonction — disposent également d'un
   <strong>Décalage</strong>, qui les déplace vers le haut ou vers le bas sur l'axe Y (précision
   à une décimale, comme pour les valeurs Y en général) :</p>
-<p><img alt="Décalage de fonction" src="../../../assets/model-curves-fn-xgt0-offset.png" /></p>
+<p><img alt="Décalage de fonction" src="../../assets/model-curves-fn-xgt0-offset.png" /></p>
 <ul>
 <li><strong>Personnalisée</strong> — une courbe définie par points, 5 points par défaut, jusqu'à 21.</li>
 </ul>
-<p><img alt="Courbe personnalisée à 5 points" src="../../../assets/model-curves-custom5.png" /></p>
+<p><img alt="Courbe personnalisée à 5 points" src="../../assets/model-curves-custom5.png" /></p>
 <ul>
 <li>
 <p><strong>Lissage</strong> — fait passer une courbe lisse par tous les points au lieu de
     segments droits entre eux.</p>
-<p><img alt="Courbe lissée" src="../../../assets/model-curves-custom5-2-smooth.png" /></p>
+<p><img alt="Courbe lissée" src="../../assets/model-curves-custom5-2-smooth.png" /></p>
 </li>
 <li>
 <p><strong>Mode simple</strong> — <strong>Activé</strong> limite l'édition aux seules coordonnées Y
     régulièrement espacées (X est fixe) ; <strong>Désactivé</strong> permet de modifier X et Y
     pour chaque point, à l'exception des extrémités −100 %/+100 %, qui sont
     verrouillées puisque la courbe doit toujours couvrir toute la plage du signal.</p>
-<p><img alt="Mode simple désactivé" src="../../../assets/model-curves-custom-easy-off.png" /></p>
+<p><img alt="Mode simple désactivé" src="../../assets/model-curves-custom-easy-off.png" /></p>
 </li>
 </ul>
 <p><strong>Commandes de l'éditeur</strong> (même principe que l'<a href="../outputs/#balance-channels">éditeur de courbe d'équilibrage
@@ -3373,8 +3373,8 @@ existante pour <strong>Modifier</strong>/<strong>Déplacer</strong>/<strong>Copi
 <strong>Personnalisée</strong> peuvent être pilotés par une <a href="../variables/">Var</a> au lieu d'une
 valeur fixe — et cette Var peut à son tour être ajustée en vol grâce à un trim
 réaffecté :</p>
-<p><img alt="Décalage de fonction depuis une Var" src="../../../assets/model-curves-fn-offset-var.png" />
-<img alt="Point de courbe personnalisée depuis une Var" src="../../../assets/model-curves-custom-with-var.png" /></p>
+<p><img alt="Décalage de fonction depuis une Var" src="../../assets/model-curves-fn-offset-var.png" />
+<img alt="Point de courbe personnalisée depuis une Var" src="../../assets/model-curves-custom-with-var.png" /></p>
 <p>Voir <a href="../variables/">Variables</a> et <a href="../../how-to/in-flight-compensation-curve/">Guide pratique : courbe de compensation
 ajustable en vol</a> pour un exemple
 complet et détaillé de ce principe.</p>

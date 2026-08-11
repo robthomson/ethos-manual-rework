@@ -3315,7 +3315,7 @@
 
 
 <h1 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h1>
-<p><img alt="Variables" src="../../../assets/model-vars.png" /></p>
+<p><img alt="Variables" src="../../assets/model-vars.png" /></p>
 <p>Les variables (« Vars ») sont des conteneurs nommés destinés aux valeurs
 de réglage propres à un modèle, référençables partout ailleurs dans la
 programmation — y compris dans les <a href="../mixes/">mixages</a>. Le fait de les
@@ -3325,7 +3325,7 @@ dizaines de mixages pour retrouver et ajuster une valeur, tout se trouve
 au même endroit avec un nom explicite. 64 Vars sont disponibles ; aucune
 n'existe par défaut. Ajoutez-en une avec <strong>+</strong> ; touchez une Var
 existante pour <strong>Éditer</strong>/<strong>Déplacer</strong>/<strong>Copier</strong>/<strong>Cloner</strong>/<strong>Supprimer</strong>.</p>
-<p><img alt="Ajouter une variable" src="../../../assets/model-vars-add.png" /></p>
+<p><img alt="Ajouter une variable" src="../../assets/model-vars-add.png" /></p>
 <p>Une Var peut contenir une constante fixe, ou être réglable dans des
 limites définies par l'utilisateur (afin d'éviter que de mauvaises
 valeurs ne provoquent un crash), et peut contenir une valeur
@@ -3345,7 +3345,7 @@ référencée depuis chaque mixage concerné, garantit sa cohérence et
 fait qu'il n'y a qu'un seul endroit à ajuster.</p>
 </div>
 <h2 id="ajouter-une-var">Ajouter une Var<a class="headerlink" href="#ajouter-une-var" title="Permanent link">&para;</a></h2>
-<p><img alt="Nouvelle variable" src="../../../assets/model-vars-new_var.png" /></p>
+<p><img alt="Nouvelle variable" src="../../assets/model-vars-new_var.png" /></p>
 <ul>
 <li><strong>Valeur</strong> — valeur actuelle (affichage en lecture seule).</li>
 <li><strong>Nom</strong> — modifiable.</li>
@@ -3354,7 +3354,7 @@ fait qu'il n'y a qu'un seul endroit à ajuster.</p>
   valeur de la Var ne peut jamais dépasser.</li>
 </ul>
 <h3 id="valeurs">Valeurs<a class="headerlink" href="#valeurs" title="Permanent link">&para;</a></h3>
-<p><img alt="Valeurs de la variable" src="../../../assets/model-vars-values.png" /></p>
+<p><img alt="Valeurs de la variable" src="../../assets/model-vars-values.png" /></p>
 <ul>
 <li><strong>Fixe</strong> — une constante unique, avec une décimale.</li>
 <li><strong>Multiple/variable</strong> — <strong>Ajouter une nouvelle valeur</strong> associe une
@@ -3363,18 +3363,18 @@ fait qu'il n'y a qu'un seul endroit à ajuster.</p>
   (FM5) est active, sa Plage étant limitée à −10 %…+15 % afin qu'aucune
   des deux ne puisse dépasser des limites raisonnables :</li>
 </ul>
-<p><img alt="Valeurs dépendantes de la phase de vol" src="../../../assets/model-vars-fm-dependent.png" />
-  <img alt="Ajouter une valeur" src="../../../assets/model-vars-add-value.png" /></p>
+<p><img alt="Valeurs dépendantes de la phase de vol" src="../../assets/model-vars-fm-dependent.png" />
+  <img alt="Ajouter une valeur" src="../../assets/model-vars-add-value.png" /></p>
 <h3 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h3>
-<p><img alt="Actions de la variable" src="../../../assets/model-vars-actions.png" />
-<img alt="Ajouter une action" src="../../../assets/model-vars-add-action.png" /></p>
+<p><img alt="Actions de la variable" src="../../assets/model-vars-actions.png" />
+<img alt="Ajouter une action" src="../../assets/model-vars-add-action.png" /></p>
 <p>Les actions modifient la valeur d'une Var au fil du temps, pilotées par
 une entrée.</p>
 <p><strong>Trim réaffecté</strong> — confie l'un des trims physiques au réglage de cette
 Var au lieu de sa fonction normale, généralement conditionné à une seule
 condition active :</p>
-<p><img alt="Réaffecter un trim" src="../../../assets/model-vars-functions-repurpose.png" />
-<img alt="Sélectionner le trim à réaffecter" src="../../../assets/model-vars-functions-repurpose-select.png" /></p>
+<p><img alt="Réaffecter un trim" src="../../assets/model-vars-functions-repurpose.png" />
+<img alt="Sélectionner le trim à réaffecter" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Réaffectez le trim de gaz au réglage d'une Var de compensation de
@@ -3391,7 +3391,7 @@ automatiquement sa fonction ordinaire.</p>
 <li><strong>Pourcentage</strong> — applique un pourcentage de l'entrée pilote.</li>
 <li><strong>Min</strong> / <strong>Max</strong> — borne la Var par rapport à l'entrée pilote.</li>
 </ul>
-<p><img alt="Actions de fonction" src="../../../assets/model-vars-functions.png" /></p>
+<p><img alt="Actions de fonction" src="../../assets/model-vars-functions.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><code>FS3(edge)</code> assigne directement 40 % à une Var ; <code>FS1(edge)</code> ajoute 2
@@ -3402,7 +3402,7 @@ importante — sans elle, l'action se répéterait continuellement aussi
 longtemps que l'interrupteur est maintenu, au lieu de ne s'exécuter
 qu'une fois par appui.</p>
 </div>
-<p><img alt="Exemple détaillé" src="../../../assets/model-vars-calc-example.png" /></p>
+<p><img alt="Exemple détaillé" src="../../assets/model-vars-calc-example.png" /></p>
 
 
 

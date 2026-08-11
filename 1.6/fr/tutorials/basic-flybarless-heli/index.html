@@ -3470,17 +3470,17 @@ System</a>.</p>
 </tbody>
 </table>
 <h2 id="step-3-creer-un-nouveau-modele">Step 3. Créer un nouveau modèle<a class="headerlink" href="#step-3-creer-un-nouveau-modele" title="Permanent link">&para;</a></h2>
-<p><img alt="Créer un modèle d'hélicoptère" src="../../../assets/tut-heli-eg-wiz-create-heli.png" /></p>
+<p><img alt="Créer un modèle d'hélicoptère" src="../../assets/tut-heli-eg-wiz-create-heli.png" /></p>
 <p>Depuis <a href="../../model-setup/model-select/">Choix du modèle</a>, créez/sélectionnez
 une catégorie Heli, lancez l'assistant et choisissez <strong>Flybarless</strong> :</p>
-<p><img alt="Sélection FBL" src="../../../assets/tut-heli-eg-wiz-fbl.png" />
-<img alt="Nom du modèle" src="../../../assets/tut-heli-eg-wiz-name.png" /></p>
+<p><img alt="Sélection FBL" src="../../assets/tut-heli-eg-wiz-fbl.png" />
+<img alt="Nom du modèle" src="../../assets/tut-heli-eg-wiz-name.png" /></p>
 <p>Nommez-le et choisissez une image.</p>
 <h2 id="step-4-verifier-et-configurer-les-mixages">Step 4. Vérifier et configurer les mixages<a class="headerlink" href="#step-4-verifier-et-configurer-les-mixages" title="Permanent link">&para;</a></h2>
-<p><img alt="Vue d'ensemble des mixages" src="../../../assets/tut-heli-eg-mixes.png" /></p>
+<p><img alt="Vue d'ensemble des mixages" src="../../assets/tut-heli-eg-mixes.png" /></p>
 <p>L'assistant crée Ailerons/Profondeur/Gaz/Dérive dans l'ordre AETR, le Pas
 sur la voie 6 et la banque FBL sur la voie 7 :</p>
-<p><img alt="Mixage du pas" src="../../../assets/tut-heli-eg-mixes-pitch.png" /></p>
+<p><img alt="Mixage du pas" src="../../assets/tut-heli-eg-mixes-pitch.png" /></p>
 <p>Vérifiez que la voie 6 correspond bien au pas collectif. Deux voies
 supplémentaires doivent être ajoutées manuellement en tant que <a href="../../model-setup/mixes/#mix-libraries">mixages
 libres</a> : <strong>Gain gyro</strong> (voie 5) et
@@ -3488,7 +3488,7 @@ libres</a> : <strong>Gain gyro</strong> (voie 5) et
 <p><strong>Aileron/Profondeur/Dérive</strong> — rien à ajouter ; les rates et l'Expo sont
 du ressort de l'unité FBL, la radio se contente donc de transmettre une
 entrée linéaire propre.</p>
-<p><img alt="Mixage d'aileron" src="../../../assets/tut-heli-eg-mixes-ail.png" /></p>
+<p><img alt="Mixage d'aileron" src="../../assets/tut-heli-eg-mixes-ail.png" /></p>
 <p><strong>Pas collectif</strong> — une courbe strictement linéaire ; vérifiez simplement
 la voie de sortie (normalement 6). Comme ci-dessus, les rates et l'Expo
 sont gérés par l'unité FBL, pas ici.</p>
@@ -3496,14 +3496,14 @@ sont gérés par l'unité FBL, pas ici.</p>
 différents, gains de capteurs à différents régimes, ou Débutant/Acro/3D —
 ou simplement des préréglages de tuning) affectées à un interrupteur
 3 positions, par exemple SE :</p>
-<p><img alt="Mixage de banque" src="../../../assets/tut-heli-eg-mixes-bank.png" /></p>
+<p><img alt="Mixage de banque" src="../../assets/tut-heli-eg-mixes-bank.png" /></p>
 <p><strong>Gain gyro</strong> — à ajouter comme mixage libre après la dernière voie. Le
 gain est généralement une valeur fixe : réglez la <strong>Source</strong> sur Valeur
 spéciale 0, ajustez le gain via l'<strong>Offset</strong> (affiné plus tard en vol) et
 sortez sur la voie 5 :</p>
-<p><img alt="Mixage de gain gyro" src="../../../assets/tut-heli-eg-mixes-gyro-gain.png" /></p>
+<p><img alt="Mixage de gain gyro" src="../../assets/tut-heli-eg-mixes-gyro-gain.png" /></p>
 <h3 id="configurer-les-phases-de-vol">Configurer les phases de vol<a class="headerlink" href="#configurer-les-phases-de-vol" title="Permanent link">&para;</a></h3>
-<p><img alt="Phases de vol" src="../../../assets/tut-heli-eg-flight-modes.png" /></p>
+<p><img alt="Phases de vol" src="../../assets/tut-heli-eg-flight-modes.png" /></p>
 <p>Trois <a href="../../model-setup/flight-modes/">phases de vol</a> : renommez celle par
 défaut en <strong>Normal</strong>, et ajoutez <strong>Idle Up 1</strong>/<strong>Idle Up 2</strong> sur
 l'interrupteur SD.</p>
@@ -3516,7 +3516,7 @@ personnalisée</a> :</p>
   <strong>Smooth</strong> activé fonctionne bien ; les valeurs exactes doivent être
   affinées en vol.</li>
 </ul>
-<p><img alt="Courbe Normal" src="../../../assets/tut-heli-eg-curves-normal.png" /></p>
+<p><img alt="Courbe Normal" src="../../assets/tut-heli-eg-curves-normal.png" /></p>
 <ul>
 <li><strong>Idle Up 1</strong> — vol général : une courbe en ligne droite correspondant à
   une valeur de gaz constante maintenant un régime rotor stable, le
@@ -3526,20 +3526,20 @@ personnalisée</a> :</p>
   une fonction <strong>Governor</strong> pour maintenir un régime rotor constant lors de
   manœuvres agressives — voir le manuel de l'unité FBL.)</li>
 </ul>
-<p><img alt="Courbe Idle Up 1" src="../../../assets/tut-heli-eg-curves-iup1.png" /></p>
+<p><img alt="Courbe Idle Up 1" src="../../assets/tut-heli-eg-curves-iup1.png" /></p>
 <ul>
 <li><strong>Idle Up 2</strong> — vol agressif (voltige, 3D) ; à affiner également en vol.</li>
 </ul>
-<p><img alt="Courbe Idle Up 2" src="../../../assets/tut-heli-eg-curves-iup2.png" /></p>
-<p><img alt="Courbes de gaz dans les mixages" src="../../../assets/tut-heli-eg-mixes-thr-curves.png" /></p>
+<p><img alt="Courbe Idle Up 2" src="../../assets/tut-heli-eg-curves-iup2.png" /></p>
+<p><img alt="Courbes de gaz dans les mixages" src="../../assets/tut-heli-eg-mixes-thr-curves.png" /></p>
 <p><strong>Coupure gaz</strong> — affectez par exemple l'interrupteur SG en position haute
 avec l'option <strong>Sticky</strong> activée : basculer SG vers le haut coupe les gaz
 instantanément et, du fait de l'option Sticky, le réarmement n'est possible
 qu'après avoir ramené le manche des gaz au ralenti/arrêt.</p>
-<p><img alt="Coupure gaz" src="../../../assets/tut-heli-eg-mixes-thr-cut.png" /></p>
+<p><img alt="Coupure gaz" src="../../assets/tut-heli-eg-mixes-thr-cut.png" /></p>
 <p><strong>Rescue/Stabi</strong> — à affecter de la même manière, par exemple à
 l'interrupteur SA sur la voie 8.</p>
-<p><img alt="Mixages finaux" src="../../../assets/tut-heli-eg-mixes-final.png" /></p>
+<p><img alt="Mixages finaux" src="../../assets/tut-heli-eg-mixes-final.png" /></p>
 <h2 id="step-5-configuration-du-fbl">Step 5. Configuration du FBL<a class="headerlink" href="#step-5-configuration-du-fbl" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Installez l'outil de configuration du FBL</strong> — par exemple Spirit

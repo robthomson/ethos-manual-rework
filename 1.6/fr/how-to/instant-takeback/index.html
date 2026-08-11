@@ -3357,18 +3357,18 @@ d'écolage en cas de problème.</p>
 qui pilote la fonction Écolage elle-même, annulé soit par le passage de
 l'interrupteur à l'état inactif, <strong>soit</strong> par la détection d'un mouvement
 des manches de l'instructeur.</p>
-<p><img alt="Écolage actif" src="../../../assets/trainer-take-back-trainer-active.png" /></p>
+<p><img alt="Écolage actif" src="../../assets/trainer-take-back-trainer-active.png" /></p>
 <h2 id="1-interrupteur-logique-de-detection-des-ailerons">1. Interrupteur logique de détection des ailerons<a class="headerlink" href="#1-interrupteur-logique-de-detection-des-ailerons" title="Permanent link">&para;</a></h2>
-<p><img alt="Détection de l'entrée ailerons" src="../../../assets/trainer-take-back-ailinput.png" /></p>
+<p><img alt="Détection de l'entrée ailerons" src="../../assets/trainer-take-back-ailinput.png" /></p>
 <p>Un interrupteur logique utilisant <strong>|A| &gt; X</strong> sur le manche d'ailerons,
 vrai lorsque celui-ci s'écarte de plus de 10 % du neutre dans un sens ou
 dans l'autre. Effectuez un appui long sur la source ailerons et
 sélectionnez <strong>Ignore trainer input</strong>, afin que le mouvement d'ailerons de
 l'<em>élève</em> (transmis par la liaison d'écolage) ne le déclenche pas
 également :</p>
-<p><img alt="Ignorer l'entrée d'écolage" src="../../../assets/trainer-take-back-ailinput-ignore.png" /></p>
+<p><img alt="Ignorer l'entrée d'écolage" src="../../assets/trainer-take-back-ailinput-ignore.png" /></p>
 <h2 id="2-interrupteur-logique-de-detection-de-la-profondeur">2. Interrupteur logique de détection de la profondeur<a class="headerlink" href="#2-interrupteur-logique-de-detection-de-la-profondeur" title="Permanent link">&para;</a></h2>
-<p><img alt="Détection de l'entrée profondeur" src="../../../assets/trainer-take-back-eleinput.png" /></p>
+<p><img alt="Détection de l'entrée profondeur" src="../../assets/trainer-take-back-eleinput.png" /></p>
 <p>Le même principe, appliqué au manche de profondeur.</p>
 <h2 id="3-interrupteur-logique-dannulation">3. Interrupteur logique d'annulation<a class="headerlink" href="#3-interrupteur-logique-dannulation" title="Permanent link">&para;</a></h2>
 <p>Un interrupteur logique <strong>OR</strong>, vrai lorsque l'interrupteur de détection
@@ -3377,7 +3377,7 @@ l'interrupteur d'écolage (par ex. SD) n'est pas en position basse —
 autrement dit, « l'instructeur a bougé un manche » ou « l'interrupteur
 d'écolage a été coupé » met fin à la session.</p>
 <h2 id="4-interrupteur-logique-sticky-dactivation-de-lecolage">4. Interrupteur logique Sticky d'activation de l'écolage<a class="headerlink" href="#4-interrupteur-logique-sticky-dactivation-de-lecolage" title="Permanent link">&para;</a></h2>
-<p><img alt="Désactiver l'écolage" src="../../../assets/trainer-take-back-disable-trainer.png" /></p>
+<p><img alt="Désactiver l'écolage" src="../../assets/trainer-take-back-disable-trainer.png" /></p>
 <p>Un interrupteur logique de type <strong>Sticky</strong> : <strong>Trigger ON</strong> correspond à
 l'interrupteur d'écolage (SD en position basse), <strong>Trigger OFF</strong> à
 l'interrupteur d'annulation de l'étape 3. Utilisez cet interrupteur Sticky

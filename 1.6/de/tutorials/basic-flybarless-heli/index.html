@@ -3470,18 +3470,18 @@ verwenden). Registrieren Sie den Empfänger (bei ACCESS) und binden Sie ihn
 </tbody>
 </table>
 <h2 id="schritt-3-neues-modell-anlegen">Schritt 3. Neues Modell anlegen<a class="headerlink" href="#schritt-3-neues-modell-anlegen" title="Permanent link">&para;</a></h2>
-<p><img alt="Heli-Modell anlegen" src="../../../assets/tut-heli-eg-wiz-create-heli.png" /></p>
+<p><img alt="Heli-Modell anlegen" src="../../assets/tut-heli-eg-wiz-create-heli.png" /></p>
 <p>Legen Sie in der <a href="../../model-setup/model-select/">Modellauswahl</a> eine
 Heli-Kategorie an bzw. wählen Sie eine aus, starten Sie den Assistenten und
 wählen Sie <strong>Flybarless</strong>:</p>
-<p><img alt="FBL-Auswahl" src="../../../assets/tut-heli-eg-wiz-fbl.png" />
-<img alt="Modellname" src="../../../assets/tut-heli-eg-wiz-name.png" /></p>
+<p><img alt="FBL-Auswahl" src="../../assets/tut-heli-eg-wiz-fbl.png" />
+<img alt="Modellname" src="../../assets/tut-heli-eg-wiz-name.png" /></p>
 <p>Vergeben Sie einen Namen und wählen Sie ein Bild.</p>
 <h2 id="schritt-4-mischer-prufen-und-konfigurieren">Schritt 4. Mischer prüfen und konfigurieren<a class="headerlink" href="#schritt-4-mischer-prufen-und-konfigurieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Mischer-Übersicht" src="../../../assets/tut-heli-eg-mixes.png" /></p>
+<p><img alt="Mischer-Übersicht" src="../../assets/tut-heli-eg-mixes.png" /></p>
 <p>Der Assistent erstellt Querruder/Höhenruder/Gas/Seitenruder in
 AETR-Reihenfolge, Pitch auf Kanal 6 und FBL-Bank auf Kanal 7:</p>
-<p><img alt="Pitch-Mischer" src="../../../assets/tut-heli-eg-mixes-pitch.png" /></p>
+<p><img alt="Pitch-Mischer" src="../../assets/tut-heli-eg-mixes-pitch.png" /></p>
 <p>Prüfen Sie, ob Kanal 6 dem Kollektivpitch zugeordnet ist. Zwei weitere
 Kanäle müssen manuell als <a href="../../model-setup/mixes/#mix-libraries">Freie
 Mischer</a> hinzugefügt werden:
@@ -3489,7 +3489,7 @@ Mischer</a> hinzugefügt werden:
 <p><strong>Querruder/Höhenruder/Seitenruder</strong> — hier ist nichts zu ergänzen; Raten
 und Expo sind Aufgabe der FBL-Einheit, der Sender gibt lediglich ein
 sauberes lineares Signal weiter.</p>
-<p><img alt="Querruder-Mischer" src="../../../assets/tut-heli-eg-mixes-ail.png" /></p>
+<p><img alt="Querruder-Mischer" src="../../assets/tut-heli-eg-mixes-ail.png" /></p>
 <p><strong>Kollektivpitch</strong> — eine gerade lineare Kurve; prüfen Sie lediglich den
 Ausgangskanal (normalerweise 6). Wie oben werden Raten/Expo von der
 FBL-Einheit verarbeitet, nicht hier.</p>
@@ -3497,14 +3497,14 @@ FBL-Einheit verarbeitet, nicht hier.</p>
 Flugstile, Sensor-Gains bei verschiedenen Drehzahlen oder
 Beginner/Acro/3D — oder schlicht Tuning-Presets), zugewiesen auf einen
 3-Stufen-Schalter, z. B. SE:</p>
-<p><img alt="Bank-Mischer" src="../../../assets/tut-heli-eg-mixes-bank.png" /></p>
+<p><img alt="Bank-Mischer" src="../../assets/tut-heli-eg-mixes-bank.png" /></p>
 <p><strong>Gyro-Gain</strong> — als Freien Mischer nach dem letzten Kanal hinzufügen. Der
 Gain ist typischerweise ein fester Wert: Setzen Sie die <strong>Quelle</strong> auf
 Spezialwert 0, stellen Sie den Gain über den <strong>Offset</strong> ein (Feinabstimmung
 später im Flug) und geben Sie ihn auf Kanal 5 aus:</p>
-<p><img alt="Gyro-Gain-Mischer" src="../../../assets/tut-heli-eg-mixes-gyro-gain.png" /></p>
+<p><img alt="Gyro-Gain-Mischer" src="../../assets/tut-heli-eg-mixes-gyro-gain.png" /></p>
 <h3 id="flugphasen-konfigurieren">Flugphasen konfigurieren<a class="headerlink" href="#flugphasen-konfigurieren" title="Permanent link">&para;</a></h3>
-<p><img alt="Flugphasen" src="../../../assets/tut-heli-eg-flight-modes.png" /></p>
+<p><img alt="Flugphasen" src="../../assets/tut-heli-eg-flight-modes.png" /></p>
 <p>Drei <a href="../../model-setup/flight-modes/">Flugphasen</a>: Benennen Sie die
 Standardphase in <strong>Normal</strong> um und fügen Sie <strong>Idle Up 1</strong>/<strong>Idle Up 2</strong>
 auf Schalter SD hinzu.</p>
@@ -3516,7 +3516,7 @@ Kurve</a>:</p>
   gleichmäßig an. Eine 7-Punkt-Kurve mit aktiviertem <strong>Smooth</strong> funktioniert
   gut; die genauen Werte müssen im Flug abgestimmt werden.</li>
 </ul>
-<p><img alt="Normal-Kurve" src="../../../assets/tut-heli-eg-curves-normal.png" /></p>
+<p><img alt="Normal-Kurve" src="../../assets/tut-heli-eg-curves-normal.png" /></p>
 <ul>
 <li><strong>Idle Up 1</strong> — allgemeines Fliegen: eine geradlinige Kurve für eine
   konstante Gasstellung, die die Rotordrehzahl konstant hält; die Bewegung
@@ -3526,20 +3526,20 @@ Kurve</a>:</p>
   die Rotordrehzahl auch bei aggressiven Manövern konstant hält — siehe das
   Handbuch der FBL-Einheit.)</li>
 </ul>
-<p><img alt="Idle-Up-1-Kurve" src="../../../assets/tut-heli-eg-curves-iup1.png" /></p>
+<p><img alt="Idle-Up-1-Kurve" src="../../assets/tut-heli-eg-curves-iup1.png" /></p>
 <ul>
 <li><strong>Idle Up 2</strong> — aggressives Fliegen (Kunstflug, 3D); ebenfalls im Flug
   abzustimmen.</li>
 </ul>
-<p><img alt="Idle-Up-2-Kurve" src="../../../assets/tut-heli-eg-curves-iup2.png" /></p>
-<p><img alt="Gaskurven in den Mischern" src="../../../assets/tut-heli-eg-mixes-thr-curves.png" /></p>
+<p><img alt="Idle-Up-2-Kurve" src="../../assets/tut-heli-eg-curves-iup2.png" /></p>
+<p><img alt="Gaskurven in den Mischern" src="../../assets/tut-heli-eg-mixes-thr-curves.png" /></p>
 <p><strong>Gas-Abschaltung</strong> — weisen Sie z. B. Schalter SG-oben mit aktiviertem
 <strong>Sticky</strong> zu: Das Umlegen von SG nach oben schaltet das Gas sofort ab, und
 (wegen Sticky) kann es erst wieder scharfgeschaltet werden, wenn der
 Gasknüppel zuvor auf niedrig/aus steht.</p>
-<p><img alt="Gas-Abschaltung" src="../../../assets/tut-heli-eg-mixes-thr-cut.png" /></p>
+<p><img alt="Gas-Abschaltung" src="../../assets/tut-heli-eg-mixes-thr-cut.png" /></p>
 <p><strong>Rescue/Stabi</strong> — analog zuweisen, z. B. auf Schalter SA und Kanal 8.</p>
-<p><img alt="Fertige Mischer" src="../../../assets/tut-heli-eg-mixes-final.png" /></p>
+<p><img alt="Fertige Mischer" src="../../assets/tut-heli-eg-mixes-final.png" /></p>
 <h2 id="schritt-5-fbl-einrichtung">Schritt 5. FBL-Einrichtung<a class="headerlink" href="#schritt-5-fbl-einrichtung" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Konfigurationssoftware der FBL-Einheit installieren</strong> — z. B. Spirit

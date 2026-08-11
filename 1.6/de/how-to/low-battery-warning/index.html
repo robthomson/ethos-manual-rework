@@ -3305,12 +3305,12 @@
 <h1 id="warnung-bei-niedriger-akkuspannung">Warnung bei niedriger Akkuspannung<a class="headerlink" href="#warnung-bei-niedriger-akkuspannung" title="Permanent link">&para;</a></h1>
 <p>Die Überwachung der Flugakkuspannung <strong>unter Last</strong> mit einer Warnung beim Unterschreiten eines Schwellwerts ist zuverlässiger als das Vertrauen auf einen festen Timer — ein Sensor wie der FrSky FLVSS macht dies unkompliziert.</p>
 <h2 id="1-sensor-anschlieen-und-erkennen">1. Sensor anschließen und erkennen<a class="headerlink" href="#1-sensor-anschlieen-und-erkennen" title="Permanent link">&para;</a></h2>
-<p><img alt="LiPo-Telemetriesensor" src="../../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
+<p><img alt="LiPo-Telemetriesensor" src="../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
 <p>Stellen Sie <a href="../../system-setup/devices/">Empfängeroptionen → Telemetrieport</a> auf <strong>S.Port</strong>, verbinden Sie den FLVSS über ein S.Port-Kabel mit dem Empfänger und aktivieren Sie anschließend <strong>Neue Sensoren suchen</strong> unter <a href="../../model-setup/telemetry/">Telemetrie</a> — der LiPo-Sensor erscheint zusammen mit den bereits erkannten Sensoren.</p>
 <h2 id="2-logischen-schalter-hinzufugen">2. Logischen Schalter hinzufügen<a class="headerlink" href="#2-logischen-schalter-hinzufugen" title="Permanent link">&para;</a></h2>
-<p><img alt="Logischer Schalter für niedrigen Akkustand" src="../../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
+<p><img alt="Logischer Schalter für niedrigen Akkustand" src="../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
 <p>Fügen Sie einen neuen <a href="../../model-setup/logical-switches/">logischen Schalter</a> mit dem LiPo-Sensor als Quelle hinzu. Ein langer Druck auf <code>ENT</code> beim markierten Sensor öffnet die Auswahl, welcher seiner Werte verwendet werden soll:</p>
-<p><img alt="Niedrigste Zelle auswählen" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
+<p><img alt="Niedrigste Zelle auswählen" src="../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
 <ul>
 <li>Minimale Packspannung / Maximale Packspannung</li>
 <li><strong>Niedrigste Zellenspannung</strong> / Höchste Zellenspannung</li>
@@ -3318,14 +3318,14 @@
 <li>Einzelne Zellenspannungen (nur auswählbar, solange der Sensor tatsächlich mit einem gebundenen Empfänger verbunden und ein LiPo angeschlossen ist)</li>
 </ul>
 <p>Wählen Sie <strong>Lowest</strong> (niedrigste Zellenspannung) — der Wert, auf den es bei einem LVC-artigen Schutz ankommt.</p>
-<p><img alt="Niedrigste Zelle ausgewählt" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
+<p><img alt="Niedrigste Zelle ausgewählt" src="../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
 <p>Setzen Sie den Vergleichswert auf etwa <strong>3,4 V</strong> und <strong>Verzögerung vor Aktivierung</strong> auf <strong>4 Sekunden</strong> — der Schalter wird wahr, sobald die niedrigste Zelle durchgehend 4 s oder länger unter 3,4 V pro Zelle liegt. (3,4 V <em>unter Last</em> erholen sich nach dem Wegfall der Last typischerweise auf etwa 3,7 V, dieser Schwellwert spiegelt also einen echten Spannungseinbruch wider und nicht nur kurzzeitige Störungen.)</p>
-<p><img alt="Fertiggestellter logischer Schalter" src="../../../assets/how-to-low-batt-lsw-summary.png" /></p>
+<p><img alt="Fertiggestellter logischer Schalter" src="../../assets/how-to-low-batt-lsw-summary.png" /></p>
 <h2 id="3-sonderfunktion-hinzufugen">3. Sonderfunktion hinzufügen<a class="headerlink" href="#3-sonderfunktion-hinzufugen" title="Permanent link">&para;</a></h2>
-<p><img alt="Sonderfunktion: BattLow" src="../../../assets/how-to-low-batt-sf-battlow.png" /></p>
+<p><img alt="Sonderfunktion: BattLow" src="../../assets/how-to-low-batt-sf-battlow.png" /></p>
 <p>Fügen Sie eine <a href="../../model-setup/special-functions/">Sonderfunktion „Audio abspielen“</a> hinzu, setzen Sie die <strong>Aktivierungsbedingung</strong> auf den logischen Schalter <code>BattLow</code>, wählen Sie eine Stimme und fügen Sie unter <strong>Sequenz</strong> einen Schritt <strong>Wert ansagen</strong> für die LiPo-Gesamtspannung hinzu:</p>
-<p><img alt="Wert ansagen: LiPo" src="../../../assets/how-to-low-batt-sf-play-value-lipo.png" />
-<img alt="Übersicht der Sequenz" src="../../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
+<p><img alt="Wert ansagen: LiPo" src="../../assets/how-to-low-batt-sf-play-value-lipo.png" />
+<img alt="Übersicht der Sequenz" src="../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
 <p>Mit <strong>Wiederholung</strong> auf 10 Sekunden wird die LiPo-Spannung alle 10 s angesagt, solange die niedrigste Zelle unterhalb des Schwellwerts von 3,4 V/4 s bleibt.</p>
 
 

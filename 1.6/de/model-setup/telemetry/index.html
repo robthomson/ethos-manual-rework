@@ -3437,7 +3437,7 @@
 
 
 <h1 id="telemetrie">Telemetrie<a class="headerlink" href="#telemetrie" title="Permanent link">&para;</a></h1>
-<p><img alt="Erkannte Sensoren" src="../../../assets/model-telemetry-discovered-new-sensors.png" /></p>
+<p><img alt="Erkannte Sensoren" src="../../assets/model-telemetry-discovered-new-sensors.png" /></p>
 <p>Telemetrie überträgt Informationen vom Modell zurück zum Piloten —
 Verbindungsqualität (RSSI, VFR), Spannungen und Ströme sowie alles, was ein
 angeschlossener Sensor sonst meldet (GPS-Position, Höhe und so weiter). Pro
@@ -3521,18 +3521,18 @@ verfügbar.)</p>
   echter Fehler.) RSSI bildet die effektive Reichweite gut ab, VFR ist jedoch
   der zuverlässigere Indikator für die Verbindungsqualität.</li>
 </ul>
-<p><img alt="RSSI-Sensor" src="../../../assets/model-telemetry-edit-rssi-sensor.png" /></p>
+<p><img alt="RSSI-Sensor" src="../../assets/model-telemetry-edit-rssi-sensor.png" /></p>
 <p>TD-Empfänger melden ein RSSI pro Band (2.4G, 900M); TW-Empfänger ebenfalls
   eines pro Band (2.4FSK, 2.4LoRa, 900M) — aktivieren Sie <strong>Individual RSSI
   alert per band</strong>, um für jedes Band eine eigene Sprachwarnung statt einer
   kombinierten Warnung zu erhalten:</p>
-<p><img alt="Individuelle RSSI-Warnung" src="../../../assets/model-telemetry-rssi-individual-alert.png" /></p>
+<p><img alt="Individuelle RSSI-Warnung" src="../../assets/model-telemetry-rssi-individual-alert.png" /></p>
 <ul>
 <li><strong>VFR</strong> (Valid Frame Rate) — gültige Pakete pro 100 empfangene; ab ACCESS 2.1
   der Ersatz dafür, die Verlustrate in den RSSI-Wert einzurechnen. Die
   Standard-<strong>Low value warning</strong> liegt bei 50 %.</li>
 </ul>
-<p><img alt="VFR-Sensor" src="../../../assets/model-telemetry-edit-vfr-sensor.png" /></p>
+<p><img alt="VFR-Sensor" src="../../assets/model-telemetry-edit-vfr-sensor.png" /></p>
 <p>TD-/TW-Empfänger melden zwei VFR-Ströme (einen pro Band); <strong>Rx VFR</strong> (bei
   TD-/TW-/AP-/AP-Plus-Empfängern) zählt stattdessen jeden gültigen Frame
   unabhängig davon, über welches Band er eintraf — der Wert, den man im Auge
@@ -3549,33 +3549,33 @@ verfügbar.)</p>
 <code>&lt;name&gt;-</code>/<code>&lt;name&gt;+</code> angelegt, auch wenn sie in der Hauptsensorliste nicht
 aufgeführt werden.</p>
 <h2 id="discovering-sensors">Sensoren erkennen<a class="headerlink" href="#discovering-sensors" title="Permanent link">&para;</a></h2>
-<p><img alt="Neue Sensoren erkennen: ein" src="../../../assets/model-telemetry-discover-new-sensors-on.png" /></p>
+<p><img alt="Neue Sensoren erkennen: ein" src="../../assets/model-telemetry-discover-new-sensors-on.png" /></p>
 <p>Wenn alles gebunden und eingeschaltet ist, aktivieren Sie <strong>Discover new
 sensors</strong> — ein blinkender Punkt (oder ein roter Wert, falls noch keine Daten
 vorliegen) markiert jeden Sensor, sobald er gefunden wird, und der Bildschirm
 füllt sich automatisch. Dies muss <strong>pro Modell</strong> wiederholt werden und
 außerdem jedes Mal, wenn ein neuer Sensor hinzukommt.</p>
-<p><img alt="Neue Sensoren erkennen: aus" src="../../../assets/model-telemetry-discover-new-sensors-off.png" /></p>
+<p><img alt="Neue Sensoren erkennen: aus" src="../../assets/model-telemetry-discover-new-sensors-off.png" /></p>
 <ul>
 <li>Schalten Sie die Erkennung anschließend wieder <strong>Aus</strong>.</li>
 <li><strong>Delete all</strong> löscht alle Sensoren, um neu zu beginnen.</li>
 </ul>
-<p><img alt="Sensoren gelöscht" src="../../../assets/model-telemetry-sensors-deleted.png" /></p>
+<p><img alt="Sensoren gelöscht" src="../../assets/model-telemetry-sensors-deleted.png" /></p>
 <ul>
 <li><strong>Competition mode</strong> reduziert die Telemetrie auf RSSI und RxBatt — für
   Wettbewerbe, die nur Sensoren zum Verbindungsstatus zulassen. Nach dem
   Deaktivieren ist ein Neustart erforderlich, bevor Sensoren erneut erkannt
   werden können.</li>
 </ul>
-<p><img alt="Bestätigung Wettbewerbsmodus" src="../../../assets/model-telemetry-comp-only-confirm.png" /></p>
+<p><img alt="Bestätigung Wettbewerbsmodus" src="../../assets/model-telemetry-comp-only-confirm.png" /></p>
 <ul>
 <li>Der Telemetriemodus <strong>Bluetooth</strong> koppelt mit der FrSky-Handy-App FreeLink,
   die Telemetrie live anzeigen und außerdem FrSky-Geräte wie stabilisierte
   Empfänger konfigurieren kann.</li>
 </ul>
-<p><img alt="Bluetooth-Telemetrie" src="../../../assets/model-telemetry-bt-option.png" /></p>
+<p><img alt="Bluetooth-Telemetrie" src="../../assets/model-telemetry-bt-option.png" /></p>
 <h2 id="editing-a-sensor">Sensor bearbeiten<a class="headerlink" href="#editing-a-sensor" title="Permanent link">&para;</a></h2>
-<p><img alt="Auswahl der Bearbeitungsoptionen" src="../../../assets/model-telemetry-edit-option-select.png" /></p>
+<p><img alt="Auswahl der Bearbeitungsoptionen" src="../../assets/model-telemetry-edit-option-select.png" /></p>
 <p>Tippen Sie auf einen Sensor für <strong>Edit</strong>, <strong>Move</strong>, <strong>Reset</strong> oder <strong>Delete</strong>.
 Übliche Felder: <strong>Value</strong> (schreibgeschützt), <strong>ID</strong> (Physical + Application ID
 sowie sendender Empfänger), <strong>Name</strong>, <strong>Unit</strong>, <strong>Decimals</strong>, <strong>Range</strong> (feste
@@ -3591,7 +3591,7 @@ ausfallen).</p>
 <ul>
 <li><strong>ADC2</strong> — <strong>Ratio</strong> und <strong>Offset</strong> zur Korrektur der Skalierung.</li>
 </ul>
-<p><img alt="ADC2-Sensor bearbeiten" src="../../../assets/model-telemetry-edit-adc2-sensor.png" /></p>
+<p><img alt="ADC2-Sensor bearbeiten" src="../../assets/model-telemetry-edit-adc2-sensor.png" /></p>
 <ul>
 <li><strong>RSSI</strong> — Schwellenwerte <strong>Critical value</strong> und <strong>Low value warning</strong>.</li>
 <li><strong>VFR</strong> — <strong>Low value warning</strong> (Standard 50 %).</li>
@@ -3599,9 +3599,9 @@ ausfallen).</p>
   (Standard ±10 m/s). Das Audioverhalten des Varios selbst befindet sich jetzt
   unter der <a href="../special-functions/">Sonderfunktion Play Vario</a>, nicht mehr hier.</li>
 </ul>
-<p><img alt="VSpeed-Sensor bearbeiten" src="../../../assets/model-telemetry-edit-vspeed-sensor.png" /></p>
+<p><img alt="VSpeed-Sensor bearbeiten" src="../../assets/model-telemetry-edit-vspeed-sensor.png" /></p>
 <h2 id="diy-fremdsensoren">DIY-/Fremdsensoren<a class="headerlink" href="#diy-fremdsensoren" title="Permanent link">&para;</a></h2>
-<p><img alt="DIY-Sensor anlegen" src="../../../assets/model-telemetry-diy-sensor-select.png" /></p>
+<p><img alt="DIY-Sensor anlegen" src="../../assets/model-telemetry-diy-sensor-select.png" /></p>
 <p><strong>Create DIY Sensor</strong> fügt einen Nicht-FrSky-Sensor manuell hinzu: <strong>Auto
 detect</strong> (füllt Physical ID, Application ID und Modul nach Möglichkeit
 automatisch aus) oder manuelle Eingabe, dazu <strong>Protocol decimals/unit</strong>
@@ -3609,25 +3609,25 @@ automatisch aus) oder manuelle Eingabe, dazu <strong>Protocol decimals/unit</str
 <strong>Display decimals/unit</strong> (unabhängig von denen des Protokolls) neben denselben
 Feldern <strong>Range</strong>/<strong>Ratio</strong>/<strong>Offset</strong>/<strong>Write logs</strong>/<strong>Reset</strong>/<strong>Sensor lost
 warning delay</strong> wie bei jedem anderen Sensor.</p>
-<p><img alt="DIY-Sensor automatisch erkennen" src="../../../assets/model-telemetry-diy-sensor-auto-detect.png" /></p>
+<p><img alt="DIY-Sensor automatisch erkennen" src="../../assets/model-telemetry-diy-sensor-auto-detect.png" /></p>
 <h2 id="calculated-sensors">Berechnete Sensoren<a class="headerlink" href="#calculated-sensors" title="Permanent link">&para;</a></h2>
-<p><img alt="Berechneten Sensor anlegen" src="../../../assets/model-telemetry-calculated-sensor-select.png" /></p>
+<p><img alt="Berechneten Sensor anlegen" src="../../assets/model-telemetry-calculated-sensor-select.png" /></p>
 <p>Leiten Sie einen neuen Sensor aus einem oder mehreren vorhandenen ab:</p>
 <ul>
 <li><strong>Consumption</strong> — verbrauchte Energie, integriert aus einem Stromsensor
   (z. B. der FAS-Serie). Einheit mAh/Ah, Bereich bis 1000 Ah.</li>
 </ul>
-<p><img alt="Verbrauchssensor" src="../../../assets/model-telemetry-calculated-sensor-consumption.png" /></p>
+<p><img alt="Verbrauchssensor" src="../../assets/model-telemetry-calculated-sensor-consumption.png" /></p>
 <ul>
 <li><strong>Distance</strong> — aus einer GPS-Quelle (plus einer Höhenquelle für die
   3D-Entfernung). Einheiten cm/m/km/ft, bis 20 km.</li>
 </ul>
-<p><img alt="Entfernungssensor" src="../../../assets/model-telemetry-calculated-sensor-distance.png" /></p>
+<p><img alt="Entfernungssensor" src="../../assets/model-telemetry-calculated-sensor-distance.png" /></p>
 <ul>
 <li><strong>Trip</strong> — aufsummierte Entfernung zwischen aufeinanderfolgenden GPS-Fixes.
   Gleiche Einheiten, bis 1000 km.</li>
 </ul>
-<p><img alt="Trip-Sensor" src="../../../assets/model-telemetry-calculated-sensor-trip.png" /></p>
+<p><img alt="Trip-Sensor" src="../../assets/model-telemetry-calculated-sensor-trip.png" /></p>
 <ul>
 <li><strong>Multi Lipo</strong> — kaskadiert zwei oder mehr Lipo-Spannungssensoren, um Akkus
   größer als 6S zu überwachen (bis 67,2 V/8S). Wählen Sie jeden Zellensensor
@@ -3637,18 +3637,18 @@ warning delay</strong> wie bei jedem anderen Sensor.</p>
   Werkzeug zur Lipo-Spannungseinrichtung hilft dabei), die Sensoren einzeln
   nacheinander erkannt und so umbenannt werden, dass sie unterscheidbar sind.</li>
 </ul>
-<p><img alt="Multi-Lipo-Sensor" src="../../../assets/model-telemetry-calculated-sensor-multi-lipo.png" /></p>
+<p><img alt="Multi-Lipo-Sensor" src="../../assets/model-telemetry-calculated-sensor-multi-lipo.png" /></p>
 <ul>
 <li><strong>Percent</strong> — skaliert einen Sensor auf 0–100 % um, mit einer Option
   <strong>Invert</strong> (z. B. um die <em>verbleibende</em> statt der verbrauchten Menge in
   Prozent anzuzeigen).</li>
 </ul>
-<p><img alt="Prozentsensor" src="../../../assets/model-telemetry-calculated-sensor-percent.png" /></p>
+<p><img alt="Prozentsensor" src="../../assets/model-telemetry-calculated-sensor-percent.png" /></p>
 <ul>
 <li><strong>Power</strong> — Leistung aus einem Paar aus <strong>Current</strong>- und <strong>Voltage</strong>-Quelle,
   bis 1.000.000 W.</li>
 </ul>
-<p><img alt="Leistungssensor" src="../../../assets/model-telemetry-calculated-sensor-power.png" /></p>
+<p><img alt="Leistungssensor" src="../../assets/model-telemetry-calculated-sensor-power.png" /></p>
 <ul>
 <li><strong>Custom</strong> — eine beliebige Formel, verkettet aus einer oder mehreren Quellen.</li>
 </ul>
@@ -3656,14 +3656,14 @@ warning delay</strong> wie bei jedem anderen Sensor.</p>
 Ausschalten/Modellwechsel und wird bei der nächsten Verwendung wieder geladen)
 sowie eine Schaltfläche <strong>Reset</strong> direkt im Bearbeitungsbildschirm.</p>
 <h3 id="benutzerdefinierte-sensoren">Benutzerdefinierte Sensoren<a class="headerlink" href="#benutzerdefinierte-sensoren" title="Permanent link">&para;</a></h3>
-<p><img alt="Benutzerdefinierter Sensor" src="../../../assets/model-telemetry-edit-custom-sensor.png" /></p>
+<p><img alt="Benutzerdefinierter Sensor" src="../../assets/model-telemetry-edit-custom-sensor.png" /></p>
 <p>Ausgehend von einer Quelle verkettet <strong>Add</strong> weitere Rechenoperationen:
 <strong>Add(+)</strong>, <strong>Minus(-)</strong>, <strong>Multiply(×)</strong>, <strong>Divide(/)</strong>, <strong>Min</strong>,
 <strong>Max</strong>, <strong>Sqrt</strong>. Die Einheiten sind aus einer langen Liste wählbar, die
 Spannung, Strom, Kapazität, Leistung, Entfernung, Geschwindigkeit, Zeit,
 Temperatur, Prozent, Winkel, Druck und mehr umfasst; Bereich −1.000.000 bis
 1.000.000, 0–4 Nachkommastellen.</p>
-<p><img alt="Rechenzeile hinzufügen" src="../../../assets/model-telemetry-edit-custom-sensor-add-action.png" /></p>
+<p><img alt="Rechenzeile hinzufügen" src="../../assets/model-telemetry-edit-custom-sensor-add-action.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Spitzenleistung</p>
 <p>Multiplizieren Sie einen Spannungssensor (<code>VFAS</code>) mit einem Stromsensor
@@ -3671,7 +3671,7 @@ Temperatur, Prozent, Winkel, Druck und mehr umfasst; Bereich −1.000.000 bis
 aktuellen Wert des Sensors selbst (<code>MaxPower</code>) referenziert, um den
 höchsten aufgetretenen Messwert festzuhalten — 288 W in diesem
 Beispieldurchlauf:</p>
-<p><img alt="MaxPower-Beispiel" src="../../../assets/model-telemetry-edit-custom-sensor-maxpower.png" /></p>
+<p><img alt="MaxPower-Beispiel" src="../../assets/model-telemetry-edit-custom-sensor-maxpower.png" /></p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Rechnen mit einer Konstante</p>
@@ -3679,8 +3679,8 @@ Beispieldurchlauf:</p>
 <strong>Subtract</strong>-Aktion, deren eigene Quelle per langem Druck ausgewählt und
 mit <strong>Convert to value</strong> in eine editierbare Konstante (20) statt einer
 Live-Quelle umgewandelt wurde — das Ergebnis ist konstant 44 dB (64 − 20):</p>
-<p><img alt="Subtraktionsbeispiel" src="../../../assets/model-telemetry-edit-custom-sensor-subtrexample.png" />
-<img alt="In Wert umwandeln" src="../../../assets/model-telemetry-edit-custom-sensor-subtrexample-conv2val.png" /></p>
+<p><img alt="Subtraktionsbeispiel" src="../../assets/model-telemetry-edit-custom-sensor-subtrexample.png" />
+<img alt="In Wert umwandeln" src="../../assets/model-telemetry-edit-custom-sensor-subtrexample-conv2val.png" /></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Der interne Wert einer Quelle</p>
@@ -3689,8 +3689,8 @@ besitzt einen internen Ganzzahlbereich von ±1024, der ihrem angezeigten
 Bereich von ±100 % entspricht — direkt sichtbar, wenn man einen
 benutzerdefinierten Sensor beispielsweise auf Gas richtet: Vollgas ergibt
 intern <strong>+1024</strong>, Vollausschlag in die Gegenrichtung <strong>−1024</strong>.</p>
-<p><img alt="Interner Wert bei Maximum" src="../../../assets/model-telemetry-edit-custom-sensor-internal-value-max.png" />
-<img alt="Interner Wert bei Minimum" src="../../../assets/model-telemetry-edit-custom-sensor-internal-value-min.png" /></p>
+<p><img alt="Interner Wert bei Maximum" src="../../assets/model-telemetry-edit-custom-sensor-internal-value-max.png" />
+<img alt="Interner Wert bei Minimum" src="../../assets/model-telemetry-edit-custom-sensor-internal-value-min.png" /></p>
 </div>
 
 

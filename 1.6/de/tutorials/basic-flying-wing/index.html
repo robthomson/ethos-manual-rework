@@ -3483,46 +3483,46 @@ fixiert</a></strong> auf
 Querruder- und Höhenrudereingaben auf beide physischen Ruderflächen — insgesamt
 also nur 2 Kanäle, von denen jeder eine Mischung beider Eingaben darstellt.</p>
 <h2 id="schritt-3-neues-modell-anlegen">Schritt 3. Neues Modell anlegen<a class="headerlink" href="#schritt-3-neues-modell-anlegen" title="Permanent link">&para;</a></h2>
-<p><img alt="Flugzeugmodell anlegen" src="../../../assets/tut-wing-eg-wiz-create-airplane.png" /></p>
+<p><img alt="Flugzeugmodell anlegen" src="../../assets/tut-wing-eg-wiz-create-airplane.png" /></p>
 <p>Starten Sie aus der <a href="../../model-setup/model-select/">Modellauswahl</a> heraus den
 Assistenten <strong>Flugzeug</strong> und wählen Sie <strong>Nicht stabilisierter Empfänger</strong>.</p>
-<p><img alt="Kein Motor" src="../../../assets/tut-wing-eg-wiz-no-engine.png" /></p>
+<p><img alt="Kein Motor" src="../../assets/tut-wing-eg-wiz-no-engine.png" /></p>
 <p>Wählen Sie <strong>Kein Motor</strong>, übernehmen Sie die voreingestellten 2
 Querruderkanäle und wählen Sie <strong>Keine Klappen</strong>.</p>
-<p><img alt="Kein Leitwerk" src="../../../assets/tut-wing-eg-wiz-no-tail.png" /></p>
+<p><img alt="Kein Leitwerk" src="../../assets/tut-wing-eg-wiz-no-tail.png" /></p>
 <p>Wählen Sie als Leitwerkstyp <strong>Keines</strong> — genau dadurch erzeugt Ethos
 automatisch die Elevon-Mischung (Querruder- und Höhenrudereingaben, beide auf
 dieselben zwei Kanäle). Benennen Sie das Modell (z. B. „Weasel"), wählen Sie
 eine Bitmap und schließen Sie den Assistenten ab — das Modell wird zum aktiven
 Modell in der Kategorie Flugzeug.</p>
 <h2 id="schritt-4-mischer-prufen-und-konfigurieren">Schritt 4. Mischer prüfen und konfigurieren<a class="headerlink" href="#schritt-4-mischer-prufen-und-konfigurieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Übersicht der Mischer" src="../../../assets/tut-wing-eg-mixes.png" /></p>
+<p><img alt="Übersicht der Mischer" src="../../assets/tut-wing-eg-mixes.png" /></p>
 <p>Der Assistent legt einen Querruder-Mischer auf den Kanälen 1+2 an, gefolgt von
 einem Höhenruder-Mischer <em>ebenfalls</em> auf den Kanälen 1+2 — beide Eingaben
 wirken auf beide Elevon-Kanäle, und genau darin besteht der Trick der
 Elevon-Mischung.</p>
 <h3 id="querruder">Querruder<a class="headerlink" href="#querruder" title="Permanent link">&para;</a></h3>
-<p><img alt="Querruder-Mischer" src="../../../assets/tut-wing-eg-mixes-ail-mix.png" /></p>
+<p><img alt="Querruder-Mischer" src="../../assets/tut-wing-eg-mixes-ail-mix.png" /></p>
 <p><strong>Gewichtung/Rates</strong> — laut Anleitung des Weasel sollte der Querruderausschlag
 etwa 3× so groß sein wie der des Höhenruders, und beide zusammen sollten 100 %
 ergeben: <strong>75 %</strong> Querruder, <strong>25 %</strong> Höhenruder. Die niedrigen Rates
 entsprechen etwa der Hälfte der hohen: <strong>36 %</strong> Querruder niedrig, <strong>12 %</strong>
 Höhenruder niedrig.</p>
-<p><img alt="Gewichtung des Querruder-Mischers" src="../../../assets/tut-wing-eg-mixes-ail-mix-weight.png" /></p>
+<p><img alt="Gewichtung des Querruder-Mischers" src="../../assets/tut-wing-eg-mixes-ail-mix-weight.png" /></p>
 <p><strong>Expo</strong> — vom Weasel empfohlen sind 35 % hoch / 20 % niedrig, aktiv bei
 Schalter SB unten; dadurch wird die Reaktion um die Knüppelmitte herum
 abgeflacht.</p>
 <p><strong>Differential</strong> — bei dieser Zelle gering, etwa <strong>4 %</strong>:</p>
-<p><img alt="Querruder-Differential" src="../../../assets/tut-wing-eg-mixes-ail-diff-04.png" /></p>
+<p><img alt="Querruder-Differential" src="../../assets/tut-wing-eg-mixes-ail-diff-04.png" /></p>
 <p>(Warum Differential wichtig ist, erläutert das <a href="../basic-fixed-wing/#ailerons">Beispiel: Einfaches
 Flächenmodell</a> — die Überlegungen zum negativen
 Wendemoment gelten hier ebenso.)</p>
 <h3 id="hohenruder">Höhenruder<a class="headerlink" href="#hohenruder" title="Permanent link">&para;</a></h3>
-<p><img alt="Höhenruder-Mischer" src="../../../assets/tut-wing-eg-mixes-ele-mix.png" /></p>
+<p><img alt="Höhenruder-Mischer" src="../../assets/tut-wing-eg-mixes-ele-mix.png" /></p>
 <p>Dasselbe Schema: <strong>25 %</strong>/<strong>12 %</strong> für hohe/niedrige Rates, dieselben
 Expo-Werte wie beim Querruder.</p>
 <h3 id="seitenruder">Seitenruder<a class="headerlink" href="#seitenruder" title="Permanent link">&para;</a></h3>
-<p><img alt="Seitenruder-Mischer" src="../../../assets/tut-wing-eg-mixes-rud-mix.png" /></p>
+<p><img alt="Seitenruder-Mischer" src="../../assets/tut-wing-eg-mixes-rud-mix.png" /></p>
 <p>Der Weasel hat keines — Nurflügler benötigen in der Regel kein Seitenruder.
 Wird bei einem Elevon-Modell <em>doch</em> eines benötigt, fügen Sie es als <a href="../../model-setup/mixes/#mix-libraries">Freien
 Mischer</a> auf Kanal 3 hinzu.</p>
@@ -3538,8 +3538,8 @@ an, Kanal 2 (links, nach unten) dagegen 72 % — die Differenz von 3 % <em>ist</
 wirkende Differential. Kommt zusätzlich voller Höhenruderausschlag nach unten
 hinzu, ergibt sich für Kanal 1 75+25 = 100 % und für Kanal 2 72−25 = 47 %.</p>
 <h2 id="schritt-7-maximale-servowege-einstellen">Schritt 7. Maximale Servowege einstellen<a class="headerlink" href="#schritt-7-maximale-servowege-einstellen" title="Permanent link">&para;</a></h2>
-<p><img alt="Voller Querruderausschlag" src="../../../assets/tut-wing-eg-outputs-full-ail.png" />
-<img alt="Voller Querruder- + voller Höhenruderausschlag" src="../../../assets/tut-wing-eg-outputs-full-ail-full-ele.png" /></p>
+<p><img alt="Voller Querruderausschlag" src="../../assets/tut-wing-eg-outputs-full-ail.png" />
+<img alt="Voller Querruder- + voller Höhenruderausschlag" src="../../assets/tut-wing-eg-outputs-full-ail-full-ele.png" /></p>
 <p>Zentrieren Sie zunächst jedes Servo mit <strong>PWM-Mitte</strong>. Der vom Weasel
 empfohlene Maximalausschlag beträgt 25 mm Querruder + 10 mm Höhenruder =
 35 mm gesamt — geben Sie sowohl volle gleichsinnige <em>als auch</em> volle

@@ -3305,12 +3305,12 @@
 <h1 id="alerte-de-tension-batterie-basse">Alerte de tension batterie basse<a class="headerlink" href="#alerte-de-tension-batterie-basse" title="Permanent link">&para;</a></h1>
 <p>La surveillance de la tension du pack de propulsion <strong>en charge</strong>, avec une alerte lorsque la tension descend sous un seuil, est une approche plus fiable que de se fier à un chronomètre fixe — un capteur tel qu'un FrSky FLVSS rend cela très simple.</p>
 <h2 id="1-connecter-et-detecter-le-capteur">1. Connecter et détecter le capteur<a class="headerlink" href="#1-connecter-et-detecter-le-capteur" title="Permanent link">&para;</a></h2>
-<p><img alt="Capteur de télémétrie LiPo" src="../../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
+<p><img alt="Capteur de télémétrie LiPo" src="../../assets/how-to-low-batt-telemetry-lipo-sensor.png" /></p>
 <p>Réglez <a href="../../system-setup/devices/">Options du récepteur → Port de télémétrie</a> sur <strong>S.Port</strong>, connectez le FLVSS au récepteur à l'aide d'un câble S.Port, puis activez <strong>Découvrir de nouveaux capteurs</strong> dans <a href="../../model-setup/telemetry/">Télémétrie</a> — le capteur LiPo apparaît aux côtés des autres capteurs déjà détectés.</p>
 <h2 id="2-ajouter-un-interrupteur-logique">2. Ajouter un interrupteur logique<a class="headerlink" href="#2-ajouter-un-interrupteur-logique" title="Permanent link">&para;</a></h2>
-<p><img alt="Interrupteur logique batterie basse" src="../../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
+<p><img alt="Interrupteur logique batterie basse" src="../../assets/how-to-low-batt-lsw-battlow-lipo.png" /></p>
 <p>Ajoutez un nouvel <a href="../../model-setup/logical-switches/">interrupteur logique</a> en prenant le capteur LiPo comme source. Effectuez un appui long sur <code>ENT</code> sur le capteur mis en surbrillance pour choisir laquelle de ses valeurs utiliser :</p>
-<p><img alt="Sélection de la cellule la plus basse" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
+<p><img alt="Sélection de la cellule la plus basse" src="../../assets/how-to-low-batt-lsw-battlow-lipo-select-lowest.png" /></p>
 <ul>
 <li>Tension mini du pack / Tension maxi du pack</li>
 <li><strong>Tension de la cellule la plus basse</strong> / Tension de la cellule la plus haute</li>
@@ -3318,14 +3318,14 @@
 <li>Tensions individuelles des cellules (sélectionnables uniquement lorsque le capteur est effectivement connecté à un récepteur appairé, avec une LiPo raccordée)</li>
 </ul>
 <p>Sélectionnez <strong>Lowest</strong> (tension de cellule) — la valeur qui compte pour une protection de type LVC.</p>
-<p><img alt="Cellule la plus basse sélectionnée" src="../../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
+<p><img alt="Cellule la plus basse sélectionnée" src="../../assets/how-to-low-batt-lsw-battlow-lipo-lowest.png" /></p>
 <p>Réglez la valeur de comparaison sur environ <strong>3,4 V</strong> et le <strong>Délai avant activation</strong> sur <strong>4 secondes</strong> — l'interrupteur passe à l'état vrai dès que la cellule la plus basse est mesurée en dessous de 3,4 V par cellule de façon continue pendant 4 s ou plus. (3,4 V <em>en charge</em> remonte généralement autour de 3,7 V une fois la charge supprimée ; ce seuil traduit donc une véritable chute de tension, et non un simple parasite momentané.)</p>
-<p><img alt="Interrupteur logique terminé" src="../../../assets/how-to-low-batt-lsw-summary.png" /></p>
+<p><img alt="Interrupteur logique terminé" src="../../assets/how-to-low-batt-lsw-summary.png" /></p>
 <h2 id="3-ajouter-une-fonction-speciale">3. Ajouter une fonction spéciale<a class="headerlink" href="#3-ajouter-une-fonction-speciale" title="Permanent link">&para;</a></h2>
-<p><img alt="Fonction spéciale : BattLow" src="../../../assets/how-to-low-batt-sf-battlow.png" /></p>
+<p><img alt="Fonction spéciale : BattLow" src="../../assets/how-to-low-batt-sf-battlow.png" /></p>
 <p>Ajoutez une <a href="../../model-setup/special-functions/">fonction spéciale Jouer un son</a>, avec la <strong>Condition d'activation</strong> réglée sur l'interrupteur logique <code>BattLow</code>, choisissez une voix, puis, sous <strong>Séquence</strong>, ajoutez une étape <strong>Annoncer une valeur</strong> pour la tension totale de la LiPo :</p>
-<p><img alt="Annoncer une valeur : LiPo" src="../../../assets/how-to-low-batt-sf-play-value-lipo.png" />
-<img alt="Résumé de la séquence" src="../../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
+<p><img alt="Annoncer une valeur : LiPo" src="../../assets/how-to-low-batt-sf-play-value-lipo.png" />
+<img alt="Résumé de la séquence" src="../../assets/how-to-low-batt-sf-play-value-lipo-summary.png" /></p>
 <p>Avec <strong>Répétition</strong> réglée sur 10 secondes, la tension de la LiPo est annoncée toutes les 10 s tant que la cellule la plus basse reste sous le seuil de 3,4 V pendant 4 s.</p>
 
 

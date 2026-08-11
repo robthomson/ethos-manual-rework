@@ -3452,7 +3452,7 @@ raison expliquée à l'<a href="#6-apply-the-curve">Étape 6</a>) :</p>
 </tbody>
 </table>
 <h2 id="3-configurer-les-interrupteurs-logiques">3. Configurer les interrupteurs logiques<a class="headerlink" href="#3-configurer-les-interrupteurs-logiques" title="Permanent link">&para;</a></h2>
-<p><img alt="Interrupteurs logiques des points adaptatifs" src="../../../assets/how-in-flight-comp-lsws.png" /></p>
+<p><img alt="Interrupteurs logiques des points adaptatifs" src="../../assets/how-in-flight-comp-lsws.png" /></p>
 <p>Quatre <a href="../../model-setup/logical-switches/">interrupteurs logiques</a>,
 chacun utilisant <strong>Range</strong> sur le manche de volets (gaz), actif lorsque
 le manche se trouve dans la zone du point concerné :</p>
@@ -3461,39 +3461,39 @@ le manche se trouve dans la zone du point concerné :</p>
   spécifiquement pour que le Pt2 puisse être ajusté même sans volets
   déployés — voir l'Étape 6).</li>
 </ul>
-<p><img alt="AdaptivePt2" src="../../../assets/how-in-flight-comp-lsw-adaptivept2.png" /></p>
+<p><img alt="AdaptivePt2" src="../../assets/how-in-flight-comp-lsw-adaptivept2.png" /></p>
 <ul>
 <li><code>AdaptivePt3</code> — plage de −45 % à 45 %.</li>
 </ul>
-<p><img alt="AdaptivePt3" src="../../../assets/how-in-flight-comp-lsw-adaptivept3.png" /></p>
+<p><img alt="AdaptivePt3" src="../../assets/how-in-flight-comp-lsw-adaptivept3.png" /></p>
 <ul>
 <li><code>AdaptivePt4</code> — plage de −90 % à −20 %.</li>
 </ul>
-<p><img alt="AdaptivePt4" src="../../../assets/how-in-flight-comp-lsw-adaptivept4.png" /></p>
+<p><img alt="AdaptivePt4" src="../../assets/how-in-flight-comp-lsw-adaptivept4.png" /></p>
 <ul>
 <li><code>AdaptivePt5</code> — plage de −100 % à −90 %.</li>
 </ul>
-<p><img alt="AdaptivePt5" src="../../../assets/how-in-flight-comp-lsw-adaptivept5.png" /></p>
+<p><img alt="AdaptivePt5" src="../../assets/how-in-flight-comp-lsw-adaptivept5.png" /></p>
 <h2 id="4-definir-les-vars-dajustement">4. Définir les Vars d'ajustement<a class="headerlink" href="#4-definir-les-vars-dajustement" title="Permanent link">&para;</a></h2>
-<p><img alt="Vue d'ensemble des Vars" src="../../../assets/how-in-flight-comp-vars.png" /></p>
+<p><img alt="Vue d'ensemble des Vars" src="../../assets/how-in-flight-comp-vars.png" /></p>
 <p>Quatre <a href="../../model-setup/variables/">Vars</a>, <code>VAdjPt2</code>–<code>VAdjPt5</code>, chacune
 avec une plage de 0 à 50 % (à élargir si nécessaire) et une action de
 <strong>trim de gaz détourné</strong> — pas de 1,0 %, condition d'activation
 correspondant à l'interrupteur logique associé :</p>
-<p><img alt="VAdjPt2" src="../../../assets/how-in-flight-comp-var-vadjpt2.png" />
-<img alt="Action VAdjPt2" src="../../../assets/how-in-flight-comp-var-vadjpt2-2.png" />
-<img alt="VAdjPt3" src="../../../assets/how-in-flight-comp-var-vadjpt3.png" />
-<img alt="Action VAdjPt3" src="../../../assets/how-in-flight-comp-var-vadjpt3-2.png" />
-<img alt="VAdjPt4" src="../../../assets/how-in-flight-comp-var-vadjpt4.png" />
-<img alt="Action VAdjPt4" src="../../../assets/how-in-flight-comp-var-vadjpt4-2.png" />
-<img alt="VAdjPt5" src="../../../assets/how-in-flight-comp-var-vadjpt5.png" />
-<img alt="Action VAdjPt5" src="../../../assets/how-in-flight-comp-var-vadjpt5-2.png" /></p>
+<p><img alt="VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2.png" />
+<img alt="Action VAdjPt2" src="../../assets/how-in-flight-comp-var-vadjpt2-2.png" />
+<img alt="VAdjPt3" src="../../assets/how-in-flight-comp-var-vadjpt3.png" />
+<img alt="Action VAdjPt3" src="../../assets/how-in-flight-comp-var-vadjpt3-2.png" />
+<img alt="VAdjPt4" src="../../assets/how-in-flight-comp-var-vadjpt4.png" />
+<img alt="Action VAdjPt4" src="../../assets/how-in-flight-comp-var-vadjpt4-2.png" />
+<img alt="VAdjPt5" src="../../assets/how-in-flight-comp-var-vadjpt5.png" />
+<img alt="Action VAdjPt5" src="../../assets/how-in-flight-comp-var-vadjpt5-2.png" /></p>
 <p>Comme un seul interrupteur logique (deux au maximum, dans les zones de
 recouvrement) est actif à la fois, le même trim physique ajuste sans
 risque différentes Vars selon la position des volets.</p>
 <h2 id="5-definir-la-courbe-de-compensation">5. Définir la courbe de compensation<a class="headerlink" href="#5-definir-la-courbe-de-compensation" title="Permanent link">&para;</a></h2>
-<p><img alt="Courbe de compensation" src="../../../assets/how-in-flight-comp-var-comp-curve.png" />
-<img alt="Points de la courbe de compensation" src="../../../assets/how-in-flight-comp-var-comp-curve-pts.png" /></p>
+<p><img alt="Courbe de compensation" src="../../assets/how-in-flight-comp-var-comp-curve.png" />
+<img alt="Points de la courbe de compensation" src="../../assets/how-in-flight-comp-var-comp-curve-pts.png" /></p>
 <p>Créez une nouvelle courbe personnalisée à 5 points (par ex. « EleComp »)
 avec <strong>Smooth</strong> activé. Faites un appui long sur <code>ENT</code> sur les points 1 à
 4 et choisissez <strong>Use a source</strong> pour affecter respectivement

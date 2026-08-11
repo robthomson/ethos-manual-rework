@@ -3403,7 +3403,7 @@
 
 
 <h1 id="logische-schalter">Logische Schalter<a class="headerlink" href="#logische-schalter" title="Permanent link">&para;</a></h1>
-<p><img alt="Menü der logischen Schalter" src="../../../assets/model-lsw-menu.png" /></p>
+<p><img alt="Menü der logischen Schalter" src="../../assets/model-lsw-menu.png" /></p>
 <p>Logische Schalter sind benutzerprogrammierte <em>virtuelle</em> Schalter — keine
 physischen Bedienelemente, aber überall dort einsetzbar, wo auch ein
 physischer Schalter als Auslöser für eine Funktion verwendet werden kann.
@@ -3414,7 +3414,7 @@ Gyro-/Trainerkanäle und weitere) und wird dadurch Wahr oder Falsch. Bis zu
 einen hinzu; die Menübezeichnung eines definierten Schalters wird grün
 dargestellt, wenn er Wahr ist, und rot, wenn er Falsch ist. Tippen Sie einen
 vorhandenen Schalter an für <strong>Bearbeiten</strong>/<strong>Verschieben</strong>/<strong>Kopieren-Einfügen</strong>/<strong>Duplizieren</strong>/<strong>Löschen</strong>.</p>
-<p><img alt="Logischen Schalter hinzufügen" src="../../../assets/model-lsw-add.png" /></p>
+<p><img alt="Logischen Schalter hinzufügen" src="../../assets/model-lsw-add.png" /></p>
 <h2 id="funktion">Funktion<a class="headerlink" href="#funktion" title="Permanent link">&para;</a></h2>
 <p>Jede Funktion unterstützt einen normalen oder invertierten Ausgang.</p>
 <ul>
@@ -3422,7 +3422,7 @@ vorhandenen Schalter an für <strong>Bearbeiten</strong>/<strong>Verschieben</st
   ca. 10 %) einem festen Wert <code>X</code> entspricht. Grundsätzlich der exakten
   Gleichheit vorzuziehen —</li>
 </ul>
-<p><img alt="A ~ X" src="../../../assets/model-lsw-A~X.png" /></p>
+<p><img alt="A ~ X" src="../../assets/model-lsw-A~X.png" /></p>
 <p>— denn bei <code>A = X</code> kann ein Telemetriewert, der etwa zwischen 8,5 V und
   8,35 V um einen Zielwert von 8,4 V schwankt, schlicht nie exakt 8,4 V
   erreichen, sodass der Schalter niemals auslösen würde.
@@ -3433,38 +3433,38 @@ vorhandenen Schalter an für <strong>Bearbeiten</strong>/<strong>Verschieben</st
 - <strong>Δ &gt; X</strong> — wahr, wenn die Änderung von <code>A</code> (Delta) über das
   <strong>Prüfintervall</strong> mindestens <code>X</code> erreicht. Ein Intervall von <code>---</code>
   bedeutet ein unendliches Zeitfenster.</p>
-<p><img alt="Delta größer als X" src="../../../assets/model-lsw-delta-gtX.png" />
-  <img alt="Absolutes Delta größer als X" src="../../../assets/model-lsw-delta-AgtX.png" /></p>
+<p><img alt="Delta größer als X" src="../../assets/model-lsw-delta-gtX.png" />
+  <img alt="Absolutes Delta größer als X" src="../../assets/model-lsw-delta-AgtX.png" /></p>
 <ul>
 <li><strong>|Δ| &gt; X</strong> — wie oben, jedoch mit dem Absolutwert der Änderung.</li>
 <li><strong>Range</strong> — wahr, wenn <code>A</code> innerhalb eines angegebenen Bereichs liegt.</li>
 </ul>
-<p><img alt="Range" src="../../../assets/model-lsw-range.png" /></p>
+<p><img alt="Range" src="../../assets/model-lsw-range.png" /></p>
 <ul>
 <li><strong>AND</strong> — wahr nur dann, wenn jede aufgeführte Quelle (Wert 1…N) wahr ist.</li>
 </ul>
-<p><img alt="AND" src="../../../assets/model-lsw-AND.png" /></p>
+<p><img alt="AND" src="../../assets/model-lsw-AND.png" /></p>
 <ul>
 <li><strong>OR</strong> — wahr, wenn mindestens eine der aufgeführten Quellen wahr ist.</li>
 </ul>
-<p><img alt="OR" src="../../../assets/model-lsw-OR.png" /></p>
+<p><img alt="OR" src="../../assets/model-lsw-OR.png" /></p>
 <ul>
 <li><strong>XOR</strong> (exklusives ODER) — wahr, wenn <em>genau eine</em> der aufgeführten
   Quellen wahr ist.</li>
 </ul>
-<p><img alt="XOR" src="../../../assets/model-lsw-XOR.png" /></p>
+<p><img alt="XOR" src="../../assets/model-lsw-XOR.png" /></p>
 <ul>
 <li><strong>Timer generator</strong> — läuft frei und schaltet fortlaufend ein und aus:
   eingeschaltet für <strong>Duration active</strong>, ausgeschaltet für <strong>Duration
   inactive</strong>.</li>
 </ul>
-<p><img alt="Timer generator" src="../../../assets/model-lsw-timer-generator.png" /></p>
+<p><img alt="Timer generator" src="../../assets/model-lsw-timer-generator.png" /></p>
 <ul>
 <li><strong>Sticky</strong> — eine Verriegelung (SR-Flipflop); siehe <a href="#sticky">unten</a>.</li>
 <li><strong>Edge</strong> — ein kurzzeitiger Impuls; siehe <a href="#edge">unten</a>.</li>
 </ul>
 <h3 id="sticky">Sticky<a class="headerlink" href="#sticky" title="Permanent link">&para;</a></h3>
-<p><img alt="Sticky" src="../../../assets/model-lsw-sticky.png" /></p>
+<p><img alt="Sticky" src="../../assets/model-lsw-sticky.png" /></p>
 <p>Verriegelt auf <strong>Wahr</strong>, sobald die Bedingung <strong>Trigger ON</strong> erfüllt ist,
 und bleibt Wahr, bis <strong>Trigger OFF</strong> erfüllt ist — optional freigegeben
 durch die <strong>Active condition</strong> (solange diese Falsch ist, wird der Ausgang
@@ -3476,8 +3476,8 @@ vorbehaltlich der Verzögerungen).</p>
 (langer Druck auf <code>ENT</code> bei der Trigger-Bedingung, dann Edge auswählen —
 angezeigt mit einem vorangestellten <code>†</code>) für eine deutlich feinere
 Steuerung:</p>
-<p><img alt="Sticky mit Edge" src="../../../assets/model-lsw-sticky-with-edge.png" />
-<img alt="Auswahl der Edge-Option" src="../../../assets/model-lsw-sticky-edge-select.png" /></p>
+<p><img alt="Sticky mit Edge" src="../../assets/model-lsw-sticky-with-edge.png" />
+<img alt="Auswahl der Edge-Option" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
 <ul>
 <li><strong>Trigger ON <code>SA</code> (keine Verzögerung)</strong> — verriegelt in dem Moment auf
   Wahr, in dem SA auf High geht.</li>
@@ -3496,7 +3496,7 @@ wieder den Ausgang erreicht. Wechseln beide Trigger gleichzeitig von
 Falsch→Wahr, so wird der Ausgang von Sticky einmal <strong>umgeschaltet</strong>. Siehe
 auch <a href="#shared-parameters">Gemeinsame Parameter</a> weiter unten.</p>
 <h3 id="edge">Edge<a class="headerlink" href="#edge" title="Permanent link">&para;</a></h3>
-<p><img alt="Edge" src="../../../assets/model-lsw-edge.png" /></p>
+<p><img alt="Edge" src="../../assets/model-lsw-edge.png" /></p>
 <p>Ein kurzzeitiger Impuls: Wahr für die Dauer <strong>Duration</strong>, sobald die
 Trigger-Bedingung erfüllt ist. <strong>During</strong> ist ein Wertepaar <code>[t1:t2]</code>, das
 genau festlegt, wann dies geschieht:</p>
@@ -3504,15 +3504,15 @@ genau festlegt, wann dies geschieht:</p>
 <li><strong>Steigende Flanke, During = 0,0 s</strong> — löst in dem Moment aus, in dem
   Trigger ON von Falsch→Wahr wechselt.</li>
 </ul>
-<p><img alt="Steigende Flanke" src="../../../assets/model-lsw-edge-rising-edge.png" />
-  <img alt="During = 0" src="../../../assets/model-lsw-edge-during-eq0.png" /></p>
+<p><img alt="Steigende Flanke" src="../../assets/model-lsw-edge-rising-edge.png" />
+  <img alt="During = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
 <ul>
 <li><strong>Steigende Flanke, During ≥ 0,0 s (z. B. 5,0 s)</strong> — löst 5 s nach dem
   Wechsel von Trigger ON auf Wahr aus und ignoriert kürzere „Spitzen“
   innerhalb dieses 5-s-Fensters.</li>
 </ul>
-<p><img alt="During &gt; 0, steigende Flanke" src="../../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
-  <img alt="During &gt; 0" src="../../../assets/model-lsw-edge-during-gt0.png" /></p>
+<p><img alt="During &gt; 0, steigende Flanke" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
+  <img alt="During &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
 <ul>
 <li><strong>Fallende Flanke, During = 0,0 s</strong> — löst in dem Moment aus, in dem
   Trigger ON von Wahr→Falsch wechselt.</li>
@@ -3524,7 +3524,7 @@ genau festlegt, wann dies geschieht:</p>
   zwischen 2 s und 5 s später).</li>
 </ul>
 <h2 id="shared-parameters">Gemeinsame Parameter<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
-<p><img alt="Gemeinsame Parameter" src="../../../assets/model-lsw-common-parameters.png" /></p>
+<p><img alt="Gemeinsame Parameter" src="../../assets/model-lsw-common-parameters.png" /></p>
 <ul>
 <li><strong>Active condition</strong> — gibt den Ausgang des Schalters auf dieselbe Weise
   frei wie oben bei Sticky beschrieben. Optionen: Immer ein,
@@ -3543,8 +3543,8 @@ genau festlegt, wann dies geschieht:</p>
   z. B. zur Bestätigung, bevor ein Landfahrzeug per Fernsteuerung
   abgeschaltet wird.</li>
 </ul>
-<p><img alt="Bestätigung Wahr" src="../../../assets/model-lsw-confirm-lsw-true.png" />
-  <img alt="Bestätigung Falsch" src="../../../assets/model-lsw-confirm-lsw-false.png" /></p>
+<p><img alt="Bestätigung Wahr" src="../../assets/model-lsw-confirm-lsw-true.png" />
+  <img alt="Bestätigung Falsch" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
 <ul>
 <li><strong>Min Duration</strong> — bleibt nach dem Wechsel auf Wahr mindestens für diese
   Zeit Wahr. Bleibt der Wert auf <code>---</code>, kann der Ausgang unter Umständen
@@ -3579,7 +3579,7 @@ in einer einzigen Aktion ab.</p>
 aber auch zwei Quellen <em>desselben</em> Typs direkt miteinander verglichen
 werden — z. B. zwei Timer, zwei Spannungen oder zwei Drehzahlsensoren.</p>
 <h2 id="trainer-eingaben-vom-slave-ignorieren">Trainer-Eingaben vom Slave ignorieren<a class="headerlink" href="#trainer-eingaben-vom-slave-ignorieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Trainer-Eingabe ignorieren" src="../../../assets/model-lsw-ignore-trainer-input.png" /></p>
+<p><img alt="Trainer-Eingabe ignorieren" src="../../assets/model-lsw-ignore-trainer-input.png" /></p>
 <p>Die <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Optionen</a>
 einer Quelle können Trainer-Eingaben von einem angeschlossenen
 Schüler-Sender (Slave) ausschließen — dies wird typischerweise bei einem

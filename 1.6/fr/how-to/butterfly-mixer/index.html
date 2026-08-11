@@ -3424,37 +3424,37 @@ manche en haut, de plus en plus à mesure qu'il descend, avec une
 compensation à la profondeur pour éviter que le planeur ne remonte
 lorsque le crow est appliqué.</p>
 <h2 id="1-desactiver-le-mixage-volets-par-defaut">1. Désactiver le mixage Volets par défaut<a class="headerlink" href="#1-desactiver-le-mixage-volets-par-defaut" title="Permanent link">&para;</a></h2>
-<p><img alt="Désactivation du mixage volets" src="../../../assets/how-to-butterfly-flaps-disable.png" /></p>
+<p><img alt="Désactivation du mixage volets" src="../../assets/how-to-butterfly-flaps-disable.png" /></p>
 <p>Réglez la <strong>Condition d'activation</strong> du mixage Volets créé par
 l'assistant sur <code>---</code> — il ne sera pas utilisé.</p>
 <h2 id="2-creer-le-mixage-butterfly">2. Créer le mixage Butterfly<a class="headerlink" href="#2-creer-le-mixage-butterfly" title="Permanent link">&para;</a></h2>
-<p><img alt="Mixage Butterfly ajouté" src="../../../assets/how-to-butterfly-mix-added.png" /></p>
+<p><img alt="Mixage Butterfly ajouté" src="../../assets/how-to-butterfly-mix-added.png" /></p>
 <p>Appuyez sur n'importe quel mixage, <strong>Ajouter un mixage</strong> → <strong>Butterfly</strong>
 depuis la <a href="../../model-setup/mixes/#mix-libraries">bibliothèque de
 mixages</a>, placé après le mixage
 Volets (désormais désactivé).</p>
 <h2 id="3-configurer-lentree">3. Configurer l'entrée<a class="headerlink" href="#3-configurer-lentree" title="Permanent link">&para;</a></h2>
-<p><img alt="Entrée Gaz" src="../../../assets/how-to-butterfly-mix-source-thr.png" /></p>
+<p><img alt="Entrée Gaz" src="../../assets/how-to-butterfly-mix-source-thr.png" /></p>
 <p>Réglez <strong>Entrée</strong> sur <strong>Gaz</strong>. Comme les gaz indiquent normalement le
 maximum manche en haut, alors que le butterfly doit être à 0 manche en
 haut, faites un appui long sur <code>ENT</code> sur Gaz et sélectionnez
 <strong>Inverser</strong> :</p>
-<p><img alt="Inverser les gaz" src="../../../assets/how-to-butterfly-mix-source-thr-neg-select.png" />
-<img alt="Gaz inversés" src="../../../assets/how-to-butterfly-mix-source-thr-neg.png" /></p>
+<p><img alt="Inverser les gaz" src="../../assets/how-to-butterfly-mix-source-thr-neg-select.png" />
+<img alt="Gaz inversés" src="../../assets/how-to-butterfly-mix-source-thr-neg.png" /></p>
 <p>L'entrée indique maintenant 0 lorsque le manche est complètement en
 haut, et le champ affiche <code>-Throttle</code> pour confirmer l'inversion. Réglez
 la <strong>Condition d'activation</strong> sur une phase de vol d'atterrissage (ou un
 autre interrupteur) si le butterfly ne doit pas être disponible en
 permanence.</p>
 <h2 id="4-ajouter-une-courbe-avec-zone-neutre">4. Ajouter une courbe avec zone neutre<a class="headerlink" href="#4-ajouter-une-courbe-avec-zone-neutre" title="Permanent link">&para;</a></h2>
-<p><img alt="Sélection de la courbe" src="../../../assets/how-to-butterfly-mix-curve-select.png" /></p>
+<p><img alt="Sélection de la courbe" src="../../assets/how-to-butterfly-mix-curve-select.png" /></p>
 <p>Une petite zone neutre à l'extrémité zéro du manche évite un
 déploiement accidentel dû à de faibles variations près de la butée.
 Ajoutez une courbe personnalisée à 3 points (nommée par exemple
 « Crowdb ») avec le <strong>Mode simple</strong> désactivé, afin de pouvoir déplacer
 les points X :</p>
-<p><img alt="Courbe à 3 points" src="../../../assets/how-to-butterfly-mix-curve-3pt.png" />
-<img alt="Points de la courbe" src="../../../assets/how-to-butterfly-mix-curve-3pt-points.png" /></p>
+<p><img alt="Courbe à 3 points" src="../../assets/how-to-butterfly-mix-curve-3pt.png" />
+<img alt="Points de la courbe" src="../../assets/how-to-butterfly-mix-curve-3pt-points.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>L'ajout d'une courbe personnalisée au mixage Butterfly supprime son
@@ -3463,10 +3463,10 @@ courbe elle-même doit désormais reproduire cette transformation
 0–100. Dans cet exemple, la sortie reste à 0 % jusqu'à ce que le
 manche des gaz atteigne −90 %, puis augmente linéairement jusqu'à
 100 % :</p>
-<p><img alt="Courbe ajoutée" src="../../../assets/how-to-butterfly-mix-curve-added.png" /></p>
+<p><img alt="Courbe ajoutée" src="../../assets/how-to-butterfly-mix-curve-added.png" /></p>
 </div>
 <h2 id="5-configurer-les-ailerons-et-les-volets">5. Configurer les ailerons et les volets<a class="headerlink" href="#5-configurer-les-ailerons-et-les-volets" title="Permanent link">&para;</a></h2>
-<p><img alt="Sortie ailerons" src="../../../assets/how-to-butterfly-mix-ailerons.png" /></p>
+<p><img alt="Sortie ailerons" src="../../assets/how-to-butterfly-mix-ailerons.png" /></p>
 <p>Une remontée modérée des ailerons (par exemple 20 %) associée à un fort
 débattement des volets constitue la répartition habituelle. Les volets
 nécessitent généralement beaucoup plus de course vers le bas que vers le
@@ -3474,8 +3474,8 @@ haut — ce qui est couramment obtenu en décalant les palonniers des
 servos de volets de 20 à 30° par rapport au neutre dans la timonerie
 elle-même, ce qui laisse les volets à peu près à mi-course vers le bas
 au neutre du servo :</p>
-<p><img alt="Volets en haut" src="../../../assets/how-to-butterfly-mix-flaps-up.png" />
-<img alt="Volets en bas" src="../../../assets/how-to-butterfly-mix-flaps-down.png" /></p>
+<p><img alt="Volets en haut" src="../../assets/how-to-butterfly-mix-flaps-up.png" />
+<img alt="Volets en bas" src="../../assets/how-to-butterfly-mix-flaps-down.png" /></p>
 <p>Réglez le poids du mixage des volets à une valeur élevée (par exemple
 −180 %) pour un débattement maximal ; la course physique réelle est
 déterminée par les valeurs Min/Max des
@@ -3488,14 +3488,14 @@ avec précaution lors du réglage final, en surveillant les points de
 blocage.</p>
 </div>
 <h2 id="6-ajouter-un-mixage-de-decalage-volets-neutres">6. Ajouter un mixage de décalage « Volets neutres »<a class="headerlink" href="#6-ajouter-un-mixage-de-decalage-volets-neutres" title="Permanent link">&para;</a></h2>
-<p><img alt="Mixage de décalage à 80 %" src="../../../assets/how-to-butterfly-offset-mix-80.png" /></p>
+<p><img alt="Mixage de décalage à 80 %" src="../../assets/how-to-butterfly-offset-mix-80.png" /></p>
 <p>Comme le décalage des palonniers laisse les volets déviés d'environ 20 à
 30 % au neutre du servo, un <strong>mixage Offset</strong> les ramène à la véritable
 position neutre de l'aile pour le vol normal. Commencez avec un décalage
 de 80 % (à affiner), avec 2 voies de sortie affectées aux deux voies de
 volets :</p>
-<p><img alt="Volets en haut avec décalage" src="../../../assets/how-to-butterfly-offset-mix-flaps-up.png" />
-<img alt="Volets en bas avec décalage" src="../../../assets/how-to-butterfly-offset-mix-flaps-down.png" /></p>
+<p><img alt="Volets en haut avec décalage" src="../../assets/how-to-butterfly-offset-mix-flaps-up.png" />
+<img alt="Volets en bas avec décalage" src="../../assets/how-to-butterfly-offset-mix-flaps-down.png" /></p>
 <p>Avec le manche des gaz complètement en haut (mixage Butterfly inactif),
 vérifiez que les valeurs du mixage des volets se situent au niveau du
 décalage (80 %) ; en amenant le manche des volets en position
@@ -3504,8 +3504,8 @@ totalité du poids (par exemple de 80 % à −100 %, soit une amplitude de
 180 %). Affinez les limites de course réelles dans les Sorties à l'aide
 des valeurs Min/Max ou d'une courbe.</p>
 <h2 id="7-add-the-elevator-compensation-curve-and-mix">7. Ajouter la courbe et le mixage de compensation de profondeur<a class="headerlink" href="#7-add-the-elevator-compensation-curve-and-mix" title="Permanent link">&para;</a></h2>
-<p><img alt="Courbe de compensation" src="../../../assets/how-to-butterfly-comp-curve.png" />
-<img alt="Points de la courbe de compensation" src="../../../assets/how-to-butterfly-comp-curve-points.png" /></p>
+<p><img alt="Courbe de compensation" src="../../assets/how-to-butterfly-comp-curve.png" />
+<img alt="Points de la courbe de compensation" src="../../assets/how-to-butterfly-comp-curve-points.png" /></p>
 <p>Comme la compensation nécessaire n'est pas linéaire, utilisez une courbe
 plutôt qu'un poids fixe. Définissez une courbe personnalisée à 5 points
 (par exemple « EleComp ») — cet exemple part de 12 %/10 %/8 %/5 %/0 % sur
@@ -3516,16 +3516,16 @@ votre cellule, celles-ci doivent être déterminées empiriquement.</p>
 libre</a> (« EleCompx ») avec Gaz
 comme source et la courbe EleComp associée, avec une sortie sur une voie
 élevée non utilisée (par exemple CH20) :</p>
-<p><img alt="Mixage de compensation sur CH20" src="../../../assets/how-to-butterfly-comp-mix-ch20.png" /></p>
+<p><img alt="Mixage de compensation sur CH20" src="../../assets/how-to-butterfly-comp-mix-ch20.png" /></p>
 <p>De retour dans le mixage Butterfly, faites un appui long sur <code>ENT</code> sur le
 <strong>Poids</strong> de la sortie Profondeur, <strong>Utiliser une source</strong>, puis
 sélectionnez CH20 (EleCompx) dans la catégorie Voies :</p>
-<p><img alt="Profondeur utilisant CH20 comme source" src="../../../assets/how-to-butterfly-mix-ele-use-ch20.png" />
-<img alt="Sélection de la source" src="../../../assets/how-to-butterfly-mix-ele-use-source.png" /></p>
+<p><img alt="Profondeur utilisant CH20 comme source" src="../../assets/how-to-butterfly-mix-ele-use-ch20.png" />
+<img alt="Sélection de la source" src="../../assets/how-to-butterfly-mix-ele-use-source.png" /></p>
 <p>Le mixage Butterfly est maintenant entièrement configuré :</p>
-<p><img alt="Compensation de profondeur configurée" src="../../../assets/how-to-butterfly-mix-ele-comp.png" /></p>
+<p><img alt="Compensation de profondeur configurée" src="../../assets/how-to-butterfly-mix-ele-comp.png" /></p>
 <h2 id="8-verifier-avec-la-vue-par-voie">8. Vérifier avec la vue par voie<a class="headerlink" href="#8-verifier-avec-la-vue-par-voie" title="Permanent link">&para;</a></h2>
-<p><img alt="Vue par voie" src="../../../assets/how-to-butterfly-mix-ele-comp-view-per-ch.png" /></p>
+<p><img alt="Vue par voie" src="../../assets/how-to-butterfly-mix-ele-comp-view-per-ch.png" /></p>
 <p>Passez en <a href="../../model-setup/mixes/#per-channel-view">vue par voie</a> sur la
 Profondeur pour observer la mise à jour simultanée de tous les mixages
 contributeurs (entrée manche + compensation Butterfly) lorsque le manche

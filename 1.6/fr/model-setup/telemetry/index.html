@@ -3437,7 +3437,7 @@
 
 
 <h1 id="telemetrie">Télémétrie<a class="headerlink" href="#telemetrie" title="Permanent link">&para;</a></h1>
-<p><img alt="Capteurs détectés" src="../../../assets/model-telemetry-discovered-new-sensors.png" /></p>
+<p><img alt="Capteurs détectés" src="../../assets/model-telemetry-discovered-new-sensors.png" /></p>
 <p>La télémétrie renvoie des informations du modèle vers le pilote — qualité
 de liaison (RSSI, VFR), tensions et courants, ainsi que toute autre donnée
 transmise par un capteur connecté (position GPS, altitude, etc.). Jusqu'à
@@ -3527,18 +3527,18 @@ les trois récepteurs est prévue mais pas encore disponible.)</p>
   RSSI approxime bien la portée effective, mais le VFR est l'indicateur de
   qualité de liaison le plus fiable.</li>
 </ul>
-<p><img alt="Capteur RSSI" src="../../../assets/model-telemetry-edit-rssi-sensor.png" /></p>
+<p><img alt="Capteur RSSI" src="../../assets/model-telemetry-edit-rssi-sensor.png" /></p>
 <p>Les récepteurs TD rapportent un RSSI par bande (2.4G, 900M) ; les
   récepteurs TW en rapportent également un par bande (2.4FSK, 2.4LoRa,
   900M) — activez <strong>Alerte RSSI individuelle par bande</strong> pour obtenir des
   alertes vocales distinctes pour chacune plutôt qu'une alerte combinée :</p>
-<p><img alt="Alerte RSSI individuelle" src="../../../assets/model-telemetry-rssi-individual-alert.png" /></p>
+<p><img alt="Alerte RSSI individuelle" src="../../assets/model-telemetry-rssi-individual-alert.png" /></p>
 <ul>
 <li><strong>VFR</strong> (Valid Frame Rate) — nombre de trames valides sur 100 reçues ;
   remplace, depuis ACCESS 2.1, l'intégration du taux de trames perdues dans
   le RSSI. L'<strong>alerte de valeur basse</strong> par défaut est de 50 %.</li>
 </ul>
-<p><img alt="Capteur VFR" src="../../../assets/model-telemetry-edit-vfr-sensor.png" /></p>
+<p><img alt="Capteur VFR" src="../../assets/model-telemetry-edit-vfr-sensor.png" /></p>
 <p>Les récepteurs TD/TW rapportent deux flux VFR (un par bande) ; <strong>Rx VFR</strong>
   (sur les récepteurs TD/TW/AP/AP Plus) compte à la place chaque trame
   valide indépendamment de la bande de réception — c'est celui à surveiller
@@ -3555,34 +3555,34 @@ les trois récepteurs est prévue mais pas encore disponible.)</p>
 automatiques <code>&lt;name&gt;-</code>/<code>&lt;name&gt;+</code>, même s'ils n'apparaissent pas dans la
 liste principale des capteurs.</p>
 <h2 id="discovering-sensors">Détection des capteurs<a class="headerlink" href="#discovering-sensors" title="Permanent link">&para;</a></h2>
-<p><img alt="Découvrir de nouveaux capteurs : activé" src="../../../assets/model-telemetry-discover-new-sensors-on.png" /></p>
+<p><img alt="Découvrir de nouveaux capteurs : activé" src="../../assets/model-telemetry-discover-new-sensors-on.png" /></p>
 <p>Une fois tout appairé et sous tension, activez <strong>Découvrir de nouveaux
 capteurs</strong> — un point clignotant (ou une valeur en rouge, si aucune donnée
 n'est encore disponible) marque chaque capteur au fur et à mesure de sa
 détection, et l'écran se remplit automatiquement. Cette opération doit être
 répétée <strong>pour chaque modèle</strong>, et à nouveau chaque fois qu'un nouveau
 capteur est ajouté.</p>
-<p><img alt="Découvrir de nouveaux capteurs : désactivé" src="../../../assets/model-telemetry-discover-new-sensors-off.png" /></p>
+<p><img alt="Découvrir de nouveaux capteurs : désactivé" src="../../assets/model-telemetry-discover-new-sensors-off.png" /></p>
 <ul>
 <li>Remettez la détection sur <strong>Off</strong> une fois terminé.</li>
 <li><strong>Tout supprimer</strong> effacer tous les capteurs pour recommencer à zéro.</li>
 </ul>
-<p><img alt="Capteurs supprimés" src="../../../assets/model-telemetry-sensors-deleted.png" /></p>
+<p><img alt="Capteurs supprimés" src="../../assets/model-telemetry-sensors-deleted.png" /></p>
 <ul>
 <li>Le <strong>mode compétition</strong> réduit la télémétrie au seul RSSI et RxBatt —
   pour les concours qui n'autorisent que les capteurs d'état de liaison. Sa
   désactivation nécessite un redémarrage de la radio avant que les capteurs
   puissent être redétectés.</li>
 </ul>
-<p><img alt="Confirmation du mode compétition" src="../../../assets/model-telemetry-comp-only-confirm.png" /></p>
+<p><img alt="Confirmation du mode compétition" src="../../assets/model-telemetry-comp-only-confirm.png" /></p>
 <ul>
 <li>Le mode de télémétrie <strong>Bluetooth</strong> s'appaire avec l'application
   téléphone FrSky FreeLink, qui peut afficher la télémétrie en direct et
   également configurer des appareils FrSky comme les récepteurs stabilisés.</li>
 </ul>
-<p><img alt="Télémétrie Bluetooth" src="../../../assets/model-telemetry-bt-option.png" /></p>
+<p><img alt="Télémétrie Bluetooth" src="../../assets/model-telemetry-bt-option.png" /></p>
 <h2 id="editing-a-sensor">Modification d'un capteur<a class="headerlink" href="#editing-a-sensor" title="Permanent link">&para;</a></h2>
-<p><img alt="Sélection de l'option d'édition" src="../../../assets/model-telemetry-edit-option-select.png" /></p>
+<p><img alt="Sélection de l'option d'édition" src="../../assets/model-telemetry-edit-option-select.png" /></p>
 <p>Appuyez sur un capteur pour <strong>Éditer</strong>, <strong>Déplacer</strong>, <strong>Réinitialiser</strong> ou
 <strong>Supprimer</strong>. Champs communs : <strong>Valeur</strong> (lecture seule), <strong>ID</strong>
 (Physical + Application ID, et récepteur émetteur), <strong>Nom</strong>, <strong>Unité</strong>,
@@ -3599,7 +3599,7 @@ internes au récepteur, ceux-ci disparaissant rarement).</p>
 <ul>
 <li><strong>ADC2</strong> — <strong>Ratio</strong> et <strong>Offset</strong>, pour corriger la mise à l'échelle.</li>
 </ul>
-<p><img alt="Édition du capteur ADC2" src="../../../assets/model-telemetry-edit-adc2-sensor.png" /></p>
+<p><img alt="Édition du capteur ADC2" src="../../assets/model-telemetry-edit-adc2-sensor.png" /></p>
 <ul>
 <li><strong>RSSI</strong> — seuils <strong>Valeur critique</strong> et <strong>Alerte de valeur basse</strong>.</li>
 <li><strong>VFR</strong> — <strong>Alerte de valeur basse</strong> (50 % par défaut).</li>
@@ -3608,9 +3608,9 @@ internes au récepteur, ceux-ci disparaissant rarement).</p>
   configure désormais dans la <a href="../special-functions/">fonction spéciale Play
   Vario</a>, et non ici.</li>
 </ul>
-<p><img alt="Édition du capteur VSpeed" src="../../../assets/model-telemetry-edit-vspeed-sensor.png" /></p>
+<p><img alt="Édition du capteur VSpeed" src="../../assets/model-telemetry-edit-vspeed-sensor.png" /></p>
 <h2 id="capteurs-diy-tiers">Capteurs DIY / tiers<a class="headerlink" href="#capteurs-diy-tiers" title="Permanent link">&para;</a></h2>
-<p><img alt="Créer un capteur DIY" src="../../../assets/model-telemetry-diy-sensor-select.png" /></p>
+<p><img alt="Créer un capteur DIY" src="../../assets/model-telemetry-diy-sensor-select.png" /></p>
 <p><strong>Créer un capteur DIY</strong> ajoute manuellement un capteur non FrSky :
 <strong>Détection automatique</strong> (remplit automatiquement le Physical ID,
 l'Application ID et le module, si possible), ou saisie manuelle, avec en
@@ -3619,25 +3619,25 @@ et unité native) et <strong>Décimales/unité d'affichage</strong> (indépendan
 celles du protocole), à côté des mêmes champs <strong>Plage</strong>/<strong>Ratio</strong>/
 <strong>Offset</strong>/<strong>Enregistrer les logs</strong>/<strong>Réinitialiser</strong>/<strong>Délai d'alerte de
 perte de capteur</strong> que pour tout autre capteur.</p>
-<p><img alt="Détection automatique du capteur DIY" src="../../../assets/model-telemetry-diy-sensor-auto-detect.png" /></p>
+<p><img alt="Détection automatique du capteur DIY" src="../../assets/model-telemetry-diy-sensor-auto-detect.png" /></p>
 <h2 id="calculated-sensors">Capteurs calculés<a class="headerlink" href="#calculated-sensors" title="Permanent link">&para;</a></h2>
-<p><img alt="Créer un capteur calculé" src="../../../assets/model-telemetry-calculated-sensor-select.png" /></p>
+<p><img alt="Créer un capteur calculé" src="../../assets/model-telemetry-calculated-sensor-select.png" /></p>
 <p>Dérivez un nouveau capteur à partir d'un ou plusieurs capteurs existants :</p>
 <ul>
 <li><strong>Consommation</strong> — énergie consommée, intégrée à partir d'un capteur de
   courant (p. ex. la série FAS). Unité mAh/Ah, plage jusqu'à 1000 Ah.</li>
 </ul>
-<p><img alt="Capteur de consommation" src="../../../assets/model-telemetry-calculated-sensor-consumption.png" /></p>
+<p><img alt="Capteur de consommation" src="../../assets/model-telemetry-calculated-sensor-consumption.png" /></p>
 <ul>
 <li><strong>Distance</strong> — à partir d'une source GPS (plus une source d'altitude,
   pour la distance 3D). Unités cm/m/km/ft, jusqu'à 20 km.</li>
 </ul>
-<p><img alt="Capteur de distance" src="../../../assets/model-telemetry-calculated-sensor-distance.png" /></p>
+<p><img alt="Capteur de distance" src="../../assets/model-telemetry-calculated-sensor-distance.png" /></p>
 <ul>
 <li><strong>Trajet</strong> — distance cumulée entre les positions GPS successives. Mêmes
   unités, jusqu'à 1000 km.</li>
 </ul>
-<p><img alt="Capteur de trajet" src="../../../assets/model-telemetry-calculated-sensor-trip.png" /></p>
+<p><img alt="Capteur de trajet" src="../../assets/model-telemetry-calculated-sensor-trip.png" /></p>
 <ul>
 <li><strong>Multi Lipo</strong> — met en cascade deux capteurs de tension Lipo ou plus
   pour surveiller des packs de plus de 6S (jusqu'à 67,2 V/8S).
@@ -3648,18 +3648,18 @@ perte de capteur</strong> que pour tout autre capteur.</p>
   Voltage y est utile), être détecté un à la fois, puis renommé afin de
   pouvoir les distinguer.</li>
 </ul>
-<p><img alt="Capteur Multi Lipo" src="../../../assets/model-telemetry-calculated-sensor-multi-lipo.png" /></p>
+<p><img alt="Capteur Multi Lipo" src="../../assets/model-telemetry-calculated-sensor-multi-lipo.png" /></p>
 <ul>
 <li><strong>Pourcentage</strong> — remet un capteur à l'échelle 0–100 %, avec une option
   <strong>Inverser</strong> (p. ex. pour afficher le pourcentage <em>restant</em> au lieu du
   pourcentage consommé).</li>
 </ul>
-<p><img alt="Capteur de pourcentage" src="../../../assets/model-telemetry-calculated-sensor-percent.png" /></p>
+<p><img alt="Capteur de pourcentage" src="../../assets/model-telemetry-calculated-sensor-percent.png" /></p>
 <ul>
 <li><strong>Puissance</strong> — puissance en watts à partir d'un couple de sources
   <strong>Courant</strong> et <strong>Tension</strong>, jusqu'à 1 000 000 W.</li>
 </ul>
-<p><img alt="Capteur de puissance" src="../../../assets/model-telemetry-calculated-sensor-power.png" /></p>
+<p><img alt="Capteur de puissance" src="../../assets/model-telemetry-calculated-sensor-power.png" /></p>
 <ul>
 <li><strong>Personnalisé</strong> — une formule arbitraire chaînée à partir d'une ou
   plusieurs sources.</li>
@@ -3669,21 +3669,21 @@ perte de capteur</strong> que pour tout autre capteur.</p>
 prochaine utilisation) et d'un bouton <strong>Réinitialiser</strong> directement sur
 l'écran d'édition.</p>
 <h3 id="capteurs-personnalises">Capteurs personnalisés<a class="headerlink" href="#capteurs-personnalises" title="Permanent link">&para;</a></h3>
-<p><img alt="Capteur personnalisé" src="../../../assets/model-telemetry-edit-custom-sensor.png" /></p>
+<p><img alt="Capteur personnalisé" src="../../assets/model-telemetry-edit-custom-sensor.png" /></p>
 <p>Part d'une source, puis <strong>Ajouter</strong> chaîne d'autres opérations :
 <strong>Add(+)</strong>, <strong>Minus(-)</strong>, <strong>Multiply(×)</strong>, <strong>Divide(/)</strong>, <strong>Min</strong>,
 <strong>Max</strong>, <strong>Sqrt</strong>. Les unités sont sélectionnables dans une longue liste
 couvrant tension, courant, capacité, puissance, distance, vitesse, temps,
 température, pourcentage, angles, pression, et plus encore ; plage de
 −1 000 000 à 1 000 000, 0–4 décimales.</p>
-<p><img alt="Ajouter une ligne de calcul" src="../../../assets/model-telemetry-edit-custom-sensor-add-action.png" /></p>
+<p><img alt="Ajouter une ligne de calcul" src="../../assets/model-telemetry-edit-custom-sensor-add-action.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Puissance de crête</p>
 <p>Multipliez un capteur de tension (<code>VFAS</code>) par un capteur de courant
 (<code>Current</code>), puis ajoutez une étape <strong>Max</strong> référençant la valeur
 actuelle du capteur lui-même (<code>MaxPower</code>) afin de suivre la valeur la
 plus élevée observée — 288 W lors de cet exemple :</p>
-<p><img alt="Exemple MaxPower" src="../../../assets/model-telemetry-edit-custom-sensor-maxpower.png" /></p>
+<p><img alt="Exemple MaxPower" src="../../assets/model-telemetry-edit-custom-sensor-maxpower.png" /></p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Arithmétique avec une constante</p>
@@ -3692,8 +3692,8 @@ plus élevée observée — 288 W lors de cet exemple :</p>
 <strong>Convertir en valeur</strong> appliqué, la transformant en constante
 modifiable (20) plutôt qu'en source live — le résultat est un 44 dB
 stable (64 − 20) :</p>
-<p><img alt="Exemple de soustraction" src="../../../assets/model-telemetry-edit-custom-sensor-subtrexample.png" />
-<img alt="Convertir en valeur" src="../../../assets/model-telemetry-edit-custom-sensor-subtrexample-conv2val.png" /></p>
+<p><img alt="Exemple de soustraction" src="../../assets/model-telemetry-edit-custom-sensor-subtrexample.png" />
+<img alt="Convertir en valeur" src="../../assets/model-telemetry-edit-custom-sensor-subtrexample-conv2val.png" /></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Valeur interne d'une source</p>
@@ -3702,8 +3702,8 @@ possède une plage entière interne de ±1024 correspondant à sa plage
 affichée de ±100 % — visible directement en pointant un capteur
 personnalisé sur, par exemple, les gaz : plein gaz affiche <strong>+1024</strong> en
 interne, l'inverse total affiche <strong>−1024</strong>.</p>
-<p><img alt="Valeur interne au maximum" src="../../../assets/model-telemetry-edit-custom-sensor-internal-value-max.png" />
-<img alt="Valeur interne au minimum" src="../../../assets/model-telemetry-edit-custom-sensor-internal-value-min.png" /></p>
+<p><img alt="Valeur interne au maximum" src="../../assets/model-telemetry-edit-custom-sensor-internal-value-max.png" />
+<img alt="Valeur interne au minimum" src="../../assets/model-telemetry-edit-custom-sensor-internal-value-min.png" /></p>
 </div>
 
 

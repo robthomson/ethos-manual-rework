@@ -3315,7 +3315,7 @@
 
 
 <h1 id="variablen">Variablen<a class="headerlink" href="#variablen" title="Permanent link">&para;</a></h1>
-<p><img alt="Variablen" src="../../../assets/model-vars.png" /></p>
+<p><img alt="Variablen" src="../../assets/model-vars.png" /></p>
 <p>Variablen („Vars") sind benannte Container für modelleigene
 Einstellungswerte, die an jeder anderen Stelle der Programmierung
 referenziert werden können – einschließlich <a href="../mixes/">Mischer</a>. Indem
@@ -3326,7 +3326,7 @@ anzupassen, befindet sich alles an einer Stelle mit einem aussagekräftigen
 Namen. Es stehen 64 Vars zur Verfügung; standardmäßig existiert keine.
 Mit <strong>+</strong> wird eine hinzugefügt; durch Antippen einer vorhandenen Var
 erhält man <strong>Bearbeiten</strong>/<strong>Verschieben</strong>/<strong>Kopieren</strong>/<strong>Klonen</strong>/<strong>Löschen</strong>.</p>
-<p><img alt="Variable hinzufügen" src="../../../assets/model-vars-add.png" /></p>
+<p><img alt="Variable hinzufügen" src="../../assets/model-vars-add.png" /></p>
 <p>Eine Var kann eine feste Konstante enthalten oder innerhalb
 benutzerdefinierter Grenzen verstellbar sein (damit unsinnige Werte keinen
 Absturz verursachen) und kann pro aktiver Bedingung (z. B. pro Flugphase)
@@ -3344,7 +3344,7 @@ enthält und aus jedem betroffenen Mischer referenziert wird, hält ihn
 konsistent und muss nur an einer Stelle abgestimmt werden.</p>
 </div>
 <h2 id="eine-var-hinzufugen">Eine Var hinzufügen<a class="headerlink" href="#eine-var-hinzufugen" title="Permanent link">&para;</a></h2>
-<p><img alt="Neue Variable" src="../../../assets/model-vars-new_var.png" /></p>
+<p><img alt="Neue Variable" src="../../assets/model-vars-new_var.png" /></p>
 <ul>
 <li><strong>Wert</strong> — aktueller Wert (nur Anzeige, nicht editierbar).</li>
 <li><strong>Name</strong> — editierbar.</li>
@@ -3353,7 +3353,7 @@ konsistent und muss nur an einer Stelle abgestimmt werden.</p>
   ±500 %), die der Wert der Var niemals überschreiten kann.</li>
 </ul>
 <h3 id="werte">Werte<a class="headerlink" href="#werte" title="Permanent link">&para;</a></h3>
-<p><img alt="Variablenwerte" src="../../../assets/model-vars-values.png" /></p>
+<p><img alt="Variablenwerte" src="../../assets/model-vars-values.png" /></p>
 <ul>
 <li><strong>Fest</strong> — eine einzelne Konstante mit einer Nachkommastelle.</li>
 <li><strong>Mehrfach/variabel</strong> — <strong>Neuen Wert hinzufügen</strong> hängt pro aktiver
@@ -3362,18 +3362,18 @@ konsistent und muss nur an einer Stelle abgestimmt werden.</p>
   ist, wobei der Bereich auf −10 %…+15 % begrenzt ist, sodass keiner der
   Werte sinnvolle Grenzen überschreiten kann:</li>
 </ul>
-<p><img alt="Flugphasenabhängige Werte" src="../../../assets/model-vars-fm-dependent.png" />
-  <img alt="Einen Wert hinzufügen" src="../../../assets/model-vars-add-value.png" /></p>
+<p><img alt="Flugphasenabhängige Werte" src="../../assets/model-vars-fm-dependent.png" />
+  <img alt="Einen Wert hinzufügen" src="../../assets/model-vars-add-value.png" /></p>
 <h3 id="aktionen">Aktionen<a class="headerlink" href="#aktionen" title="Permanent link">&para;</a></h3>
-<p><img alt="Variablenaktionen" src="../../../assets/model-vars-actions.png" />
-<img alt="Aktion hinzufügen" src="../../../assets/model-vars-add-action.png" /></p>
+<p><img alt="Variablenaktionen" src="../../assets/model-vars-actions.png" />
+<img alt="Aktion hinzufügen" src="../../assets/model-vars-add-action.png" /></p>
 <p>Aktionen verändern den Wert einer Var im Zeitverlauf, gesteuert durch eine
 Eingangsgröße.</p>
 <p><strong>Umgewidmete Trimmung</strong> — übergibt eine der physischen Trimmungen der
 Verstellung dieser Var anstelle ihrer normalen Funktion, üblicherweise
 beschränkt auf eine aktive Bedingung:</p>
-<p><img alt="Eine Trimmung umwidmen" src="../../../assets/model-vars-functions-repurpose.png" />
-<img alt="Umzuwidmende Trimmung auswählen" src="../../../assets/model-vars-functions-repurpose-select.png" /></p>
+<p><img alt="Eine Trimmung umwidmen" src="../../assets/model-vars-functions-repurpose.png" />
+<img alt="Umzuwidmende Trimmung auswählen" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Die Gas-Trimmung wird zur Verstellung einer Var für die
@@ -3391,7 +3391,7 @@ kehrt die Trimmung automatisch zu ihrer gewöhnlichen Funktion zurück.</p>
 <li><strong>Min</strong> / <strong>Max</strong> — begrenzt die Var gegenüber der steuernden
   Eingangsgröße.</li>
 </ul>
-<p><img alt="Funktionsaktionen" src="../../../assets/model-vars-functions.png" /></p>
+<p><img alt="Funktionsaktionen" src="../../assets/model-vars-functions.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><code>FS3(edge)</code> weist einer Var direkt 40 % zu; <code>FS1(edge)</code> addiert bei
@@ -3401,7 +3401,7 @@ Die Option <strong>Edge</strong> (langer Druck auf den Funktionsschalter) ist hi
 entscheidend – ohne sie würde die Aktion kontinuierlich ausgelöst,
 solange der Schalter gehalten wird, statt einmal pro Betätigung.</p>
 </div>
-<p><img alt="Durchgerechnetes Beispiel" src="../../../assets/model-vars-calc-example.png" /></p>
+<p><img alt="Durchgerechnetes Beispiel" src="../../assets/model-vars-calc-example.png" /></p>
 
 
 

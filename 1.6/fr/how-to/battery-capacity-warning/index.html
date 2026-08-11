@@ -3392,31 +3392,31 @@
 <h2 id="option-b-un-capteur-de-courant-un-capteur-calcule">Option B : un capteur de courant + un capteur calculé<a class="headerlink" href="#option-b-un-capteur-de-courant-un-capteur-calcule" title="Permanent link">&para;</a></h2>
 <p>Si l'ESC ne transmet pas la consommation, un capteur de courant (par exemple FrSky FASxxx) associé à un <a href="../../model-setup/telemetry/#calculated-sensors">capteur calculé <strong>Consumption</strong></a> remplit la même fonction.</p>
 <h3 id="1-connecter-et-decouvrir">1. Connecter et découvrir<a class="headerlink" href="#1-connecter-et-decouvrir" title="Permanent link">&para;</a></h3>
-<p><img alt="Capteur de courant" src="../../../assets/how-to-consumption-telemetry-current-sensor.png" /></p>
+<p><img alt="Capteur de courant" src="../../assets/how-to-consumption-telemetry-current-sensor.png" /></p>
 <p>Connectez le fil S.Port du capteur de courant et lancez la découverte — il apparaît sous le nom <strong>Current</strong>. Réglez sa <strong>Plage</strong> pour correspondre au capteur (par exemple 0–100 A pour un FAS100) :</p>
-<p><img alt="Édition du capteur de courant" src="../../../assets/how-to-consumption-telemetry-current-sensor-edit.png" /></p>
+<p><img alt="Édition du capteur de courant" src="../../assets/how-to-consumption-telemetry-current-sensor-edit.png" /></p>
 <h3 id="2-creer-le-capteur-calcule-consumption">2. Créer le capteur calculé Consumption<a class="headerlink" href="#2-creer-le-capteur-calcule-consumption" title="Permanent link">&para;</a></h3>
-<p><img alt="Créer un capteur calculé" src="../../../assets/how-to-consumption-create-calc-select.png" />
-<img alt="Capteur Consumption" src="../../../assets/how-to-consumption-create-calc-sensor.png" /></p>
+<p><img alt="Créer un capteur calculé" src="../../assets/how-to-consumption-create-calc-select.png" />
+<img alt="Capteur Consumption" src="../../assets/how-to-consumption-create-calc-sensor.png" /></p>
 <p>Dans Télémétrie, <strong>Créer un capteur calculé</strong> → <strong>Consumption</strong>. Réglez l'unité sur <code>mAh</code> et la <strong>Plage</strong> sur la capacité du pack (par exemple 2800 mAh) ; la <strong>Source</strong> sur <code>Current</code>.</p>
-<p><img alt="Édition du capteur" src="../../../assets/how-to-consumption-sensor-edit.png" />
-<img alt="Édition du capteur 2" src="../../../assets/how-to-consumption-sensor-edit2.png" /></p>
+<p><img alt="Édition du capteur" src="../../assets/how-to-consumption-sensor-edit.png" />
+<img alt="Édition du capteur 2" src="../../assets/how-to-consumption-sensor-edit2.png" /></p>
 <p>Réglez <strong>Reset</strong> sur l'événement système <code>!Telemetry Active</code> — sélectionnez <strong>Telemetry Active</strong>, faites un appui long sur <code>ENT</code>, puis choisissez <strong>Inverser</strong> — afin que le total cumulé soit remis à zéro automatiquement dès que la télémétrie est perdue (c'est-à-dire lorsque le modèle est mis hors tension).</p>
 <h3 id="3-annonces-par-palier">3. Annonces par palier<a class="headerlink" href="#3-annonces-par-palier" title="Permanent link">&para;</a></h3>
-<p><img alt="Interrupteur logique Δ 200 mAh" src="../../../assets/how-to-consumption-lsw-delta200mAh.png" /></p>
+<p><img alt="Interrupteur logique Δ 200 mAh" src="../../assets/how-to-consumption-lsw-delta200mAh.png" /></p>
 <p>Ajoutez un interrupteur logique utilisant la fonction <strong>Δ &gt; X</strong> sur <code>Consumption</code>, qui se déclenche chaque fois que la valeur augmente d'un pas fixe — par exemple tous les 200 mAh, une fraction commode d'un pack de 2800 mAh.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Réglez <strong>Intervalle de vérification</strong> sur <code>---</code> (infini) afin que le cumul se poursuive indéfiniment vers le seuil suivant plutôt que d'être réinitialisé après une fenêtre fixe. Donnez à <strong>Durée minimale</strong> une petite valeur non nulle pendant la mise au point — à 0,0 le déclenchement est trop bref pour être visible à l'écran.</p>
 </div>
 <p>Ajoutez une fonction Play audio, avec cet interrupteur comme condition d'activation, et une étape Play value pour <code>Consumption</code> :</p>
-<p><img alt="Annonce du delta" src="../../../assets/how-to-consumption-sf-play-delta200mAh.png" />
-<img alt="Play value : consumption" src="../../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
+<p><img alt="Annonce du delta" src="../../assets/how-to-consumption-sf-play-delta200mAh.png" />
+<img alt="Play value : consumption" src="../../assets/how-to-consumption-sf-play-value-consumption.png" /></p>
 <h3 id="4-alerte-de-capacite-basse">4. Alerte de capacité basse<a class="headerlink" href="#4-alerte-de-capacite-basse" title="Permanent link">&para;</a></h3>
-<p><img alt="Second interrupteur logique" src="../../../assets/how-to-consumption-lsw2-play-battlow.png" /></p>
+<p><img alt="Second interrupteur logique" src="../../assets/how-to-consumption-lsw2-play-battlow.png" /></p>
 <p>Un second interrupteur logique se déclenche une seule fois, au-delà d'un seuil bas strict de capacité — par exemple 2000 mAh sur un pack de 2800 mAh — associé à une fonction Play audio répétée toutes les 10 secondes jusqu'à la réinitialisation du modèle :</p>
-<p><img alt="Play value sur batterie basse" src="../../../assets/how-to-consumption-sf2-play-battlow.png" />
-<img alt="Play value : consumption sur batterie basse" src="../../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
+<p><img alt="Play value sur batterie basse" src="../../assets/how-to-consumption-sf2-play-battlow.png" />
+<img alt="Play value : consumption sur batterie basse" src="../../assets/how-to-consumption-sf2-play-value-consumption.png" /></p>
 
 
 

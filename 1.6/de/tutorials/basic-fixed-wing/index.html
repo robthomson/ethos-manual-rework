@@ -3600,94 +3600,94 @@ SBUS. Unser Modell:</p>
 </table>
 <p>(Das Einziehfahrwerk wird später ergänzt, in <a href="#step-10-add-a-mix-for-retracts">Schritt 10</a>.)</p>
 <h2 id="schritt-3-neues-modell-anlegen">Schritt 3. Neues Modell anlegen<a class="headerlink" href="#schritt-3-neues-modell-anlegen" title="Permanent link">&para;</a></h2>
-<p><img alt="Flugzeugmodell anlegen" src="../../../assets/tut-fw-eg-wiz-create-airplane.png" /></p>
+<p><img alt="Flugzeugmodell anlegen" src="../../assets/tut-fw-eg-wiz-create-airplane.png" /></p>
 <p>Wählen Sie in der <a href="../../model-setup/model-select/">Modellauswahl</a> eine Kategorie,
 tippen Sie auf <strong>+</strong> und starten Sie den Assistenten <strong>Airplane</strong>. Wählen Sie für dieses Beispiel <strong>Non stabilized
 receiver</strong>.</p>
-<p><img alt="Motorkanäle" src="../../../assets/tut-fw-eg-wiz-engine.png" />
-<img alt="Querruder-/Klappenkanäle" src="../../../assets/tut-fw-eg-wiz-ail-flaps.png" /></p>
+<p><img alt="Motorkanäle" src="../../assets/tut-fw-eg-wiz-engine.png" />
+<img alt="Querruder-/Klappenkanäle" src="../../assets/tut-fw-eg-wiz-ail-flaps.png" /></p>
 <p>Übernehmen Sie 1 Motorkanal, danach 2 Querruderkanäle und wählen Sie 2 Klappenkanäle.</p>
-<p><img alt="Leitwerkstyp" src="../../../assets/tut-fw-eg-wiz-tail.png" />
-<img alt="Höhen-/Seitenruderkanäle" src="../../../assets/tut-fw-eg-wiz-ele-rudd.png" /></p>
+<p><img alt="Leitwerkstyp" src="../../assets/tut-fw-eg-wiz-tail.png" />
+<img alt="Höhen-/Seitenruderkanäle" src="../../assets/tut-fw-eg-wiz-ele-rudd.png" /></p>
 <p>Übernehmen Sie das voreingestellte <strong>Traditional Tail</strong> mit je 1 Höhenruder- und 1 Seitenruderkanal.</p>
-<p><img alt="Modellname" src="../../../assets/tut-fw-eg-wiz-name.png" />
-<img alt="Empfänger" src="../../../assets/tut-fw-eg-wiz-rx.png" /></p>
+<p><img alt="Modellname" src="../../assets/tut-fw-eg-wiz-name.png" />
+<img alt="Empfänger" src="../../assets/tut-fw-eg-wiz-rx.png" /></p>
 <p>Vergeben Sie einen Namen (z. B. "FWexample" — bis zu 15 Zeichen), schließen Sie den Assistenten ab, und
 das Modell wird als aktives Modell in der Kategorie Airplane angelegt.</p>
 <h2 id="schritt-4-mischer-prufen-und-konfigurieren">Schritt 4. Mischer prüfen und konfigurieren<a class="headerlink" href="#schritt-4-mischer-prufen-und-konfigurieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Mischerübersicht" src="../../../assets/tut-fw-eg-mixes.png" /></p>
+<p><img alt="Mischerübersicht" src="../../assets/tut-fw-eg-mixes.png" /></p>
 <p>Der Assistent hat bereits Mischer für Querruder (Kanäle 1 und 5), Höhenruder,
 Gas, Seitenruder und Klappen angelegt (die Klappen zeigen <code>---</code> — es ist noch keine Quelle zugewiesen).</p>
 <h3 id="ailerons">Querruder<a class="headerlink" href="#ailerons" title="Permanent link">&para;</a></h3>
-<p><img alt="Querrudermischer" src="../../../assets/tut-fw-eg-mixes-ail-mix.png" />
-<img alt="Querrudermischer bearbeiten" src="../../../assets/tut-fw-eg-mixes-ail-edit.png" /></p>
+<p><img alt="Querrudermischer" src="../../assets/tut-fw-eg-mixes-ail-mix.png" />
+<img alt="Querrudermischer bearbeiten" src="../../assets/tut-fw-eg-mixes-ail-edit.png" /></p>
 <p><strong>Weight/Rates</strong> — legen Sie die Ruderausschläge fest, bevor Sie etwas Neues fliegen: moderate Ausschläge
 (z. B. 30 %) eignen sich für den Sportflug, volle 100 % für 3D. Fügen Sie einen Wert von 60 % für
 Schalter SB Mitte und 30 % für SB unten hinzu — der Standardwert (SB oben) bleibt
 bei 100 %:</p>
-<p><img alt="Weight-Werte" src="../../../assets/tut-fw-eg-mixes-ail-weight-rates.png" /></p>
+<p><img alt="Weight-Werte" src="../../assets/tut-fw-eg-mixes-ail-weight-rates.png" /></p>
 <p><strong>Expo</strong> — eine lineare Kennlinie kann um die Mittelstellung herum nervös wirken; fügen Sie Expo-Werte
 hinzu (z. B. 60 %/40 %/20 % für dieselben SB-Positionen), um die Kennlinie nahe der Mitte abzuflachen,
 ohne den maximalen Ausschlag zu verringern:</p>
-<p><img alt="Expo-Werte" src="../../../assets/tut-fw-eg-mixes-ail-expo-rates.png" /></p>
+<p><img alt="Expo-Werte" src="../../assets/tut-fw-eg-mixes-ail-expo-rates.png" /></p>
 <p><strong>Differential</strong> — gleich große Ausschläge nach oben und unten erzeugen am nach unten
 ausschlagenden Querruder mehr Widerstand als am nach oben ausschlagenden, wodurch das Modell aus der Kurve
 herausgiert ("negatives Wendemoment"). Ein positives Differential (50 % ist üblich) verringert
 den Ausschlag nach unten gegenüber dem nach oben und wirkt dem entgegen:</p>
-<p><img alt="50 % Differential" src="../../../assets/tut-fw-eg-mixes-ail-diff-50.png" /></p>
+<p><img alt="50 % Differential" src="../../assets/tut-fw-eg-mixes-ail-diff-50.png" /></p>
 <p>Um das Differential im Flug abzustimmen, drücken Sie lange <code>ENT</code> auf dem Wert, wählen <strong>Use a
 source</strong> und dann Pot1:</p>
-<p><img alt="Use a source" src="../../../assets/tut-fw-eg-mixes-ail-diff-use-source.png" />
-<img alt="Pot1 ausgewählt" src="../../../assets/tut-fw-eg-mixes-ail-diff-use-pot1.png" /></p>
+<p><img alt="Use a source" src="../../assets/tut-fw-eg-mixes-ail-diff-use-source.png" />
+<img alt="Pot1 ausgewählt" src="../../assets/tut-fw-eg-mixes-ail-diff-use-pot1.png" /></p>
 <p>Wenn der im Flug ermittelte Wert passt, drücken Sie erneut lange und wählen <strong>Convert to
 value</strong>, um ihn dauerhaft festzuschreiben:</p>
-<p><img alt="Convert to value" src="../../../assets/tut-fw-eg-mixes-ail-diff-convert-to-value.png" /></p>
+<p><img alt="Convert to value" src="../../assets/tut-fw-eg-mixes-ail-diff-convert-to-value.png" /></p>
 <p><strong>Trim</strong> — hiermit lässt sich dieser Mischer von der zugehörigen Trimmung trennen, ohne die Trimmung
 selbst zu deaktivieren, sodass diese für einen anderen Zweck frei wird:</p>
-<p><img alt="Querrudertrimmung" src="../../../assets/tut-fw-eg-mixes-ail-trim.png" /></p>
+<p><img alt="Querrudertrimmung" src="../../assets/tut-fw-eg-mixes-ail-trim.png" /></p>
 <h3 id="hohen-und-seitenruder">Höhen- und Seitenruder<a class="headerlink" href="#hohen-und-seitenruder" title="Permanent link">&para;</a></h3>
 <p>Dasselbe Schema mit drei Ausschlagstufen + Expo, hier auf Schalter SC:</p>
-<p><img alt="Höhenruder-Expo-Werte" src="../../../assets/tut-fw-eg-mixes-ele-expo-rates.png" /></p>
+<p><img alt="Höhenruder-Expo-Werte" src="../../assets/tut-fw-eg-mixes-ele-expo-rates.png" /></p>
 <h3 id="gas">Gas<a class="headerlink" href="#gas" title="Permanent link">&para;</a></h3>
-<p><img alt="Gasmischer" src="../../../assets/tut-fw-eg-mixes-thr-edit.png" /></p>
+<p><img alt="Gasmischer" src="../../assets/tut-fw-eg-mixes-thr-edit.png" /></p>
 <p>Belassen Sie die Eingabe auf dem Gasknüppel — Ausschlagstufen/Expo sind nicht nötig —, aber ein
 Sicherheitsschalter ist unverzichtbar; ein unerwartet anlaufender Verbrennungsmotor oder Elektromotor
 kann schwere Verletzungen verursachen.</p>
 <p><strong>Low position trim</strong> (Verbrenner) — regelt die Leerlaufdrehzahl
 unabhängig vom Vollgas:</p>
-<p><img alt="Low position trim" src="../../../assets/tut-fw-eg-mixes-thr-low-pos-trim.png" /></p>
+<p><img alt="Low position trim" src="../../assets/tut-fw-eg-mixes-thr-low-pos-trim.png" /></p>
 <p>Ist diese Option aktiviert, liegt der Gaskanal bei Knüppelstellung Leerlauf bei −75 %;
 der Gas-Trimmhebel verstellt den Leerlauf dann zwischen −100 % und −50 %.</p>
 <p><strong>Gas-Abschaltung</strong> — eine Sicherheitsverriegelung. Mit Schalter SA unten als aktiver
 Bedingung (bei Aktivität fett dargestellt) bleibt der Gasausgang auf −100 %, sobald
 der Knüppel unter −85 % fällt:</p>
-<p><img alt="Gas-Abschaltung" src="../../../assets/tut-fw-eg-mixes-thr-cut.png" /></p>
+<p><img alt="Gas-Abschaltung" src="../../assets/tut-fw-eg-mixes-thr-cut.png" /></p>
 <p>Ist stattdessen <strong>Sticky</strong> aktiviert, wird das Gas <strong>sofort</strong> abgeschaltet, wenn SA nach unten
 geschaltet wird, unabhängig von der Knüppelstellung:</p>
-<p><img alt="Sticky Gas-Abschaltung" src="../../../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png" /></p>
+<p><img alt="Sticky Gas-Abschaltung" src="../../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png" /></p>
 <p>In beiden Fällen muss der Knüppel nach Wegfall der aktiven Bedingung erst wieder unter
 −85 % gebracht werden, bevor das Gas erhöht werden kann — so springt der Motor nicht
 in dem Moment auf hohe Drehzahl, in dem der Abschaltschalter gelöst wird.</p>
 <p><strong>Leerlaufsperre</strong> — eine Notabschaltung aus <em>jeder</em> Knüppelstellung heraus, die den Ausgang
 sofort auf −100 % (oder einen konfigurierten Wert) setzt, sobald ihre Bedingung erfüllt ist:</p>
-<p><img alt="Leerlaufsperre" src="../../../assets/tut-fw-eg-mixes-thr-hold.png" /></p>
+<p><img alt="Leerlaufsperre" src="../../assets/tut-fw-eg-mixes-thr-hold.png" /></p>
 <h3 id="klappen">Klappen<a class="headerlink" href="#klappen" title="Permanent link">&para;</a></h3>
-<p><img alt="Klappeneingang" src="../../../assets/tut-fw-eg-mixes-flaps-input.png" /></p>
+<p><img alt="Klappeneingang" src="../../assets/tut-fw-eg-mixes-flaps-input.png" /></p>
 <p>Weisen Sie die Klappen dem Schalter SE zu und setzen Sie beide Ausgangskanal-Gewichtungen auf 100 %:</p>
-<p><img alt="Klappengewichtungen" src="../../../assets/tut-fw-eg-mixes-flaps-weights.png" /></p>
+<p><img alt="Klappengewichtungen" src="../../assets/tut-fw-eg-mixes-flaps-weights.png" /></p>
 <h2 id="schritt-5-empfanger-binden">Schritt 5. Empfänger binden<a class="headerlink" href="#schritt-5-empfanger-binden" title="Permanent link">&para;</a></h2>
 <p>Registrieren (bei ACCESS) und binden Sie über <a href="../../model-setup/rf-system/">RF System</a>.
 Bevor Sie zu den Ausgängen weitergehen, sollten Sie in Erwägung ziehen, die Servoanlenkungen zu lösen oder
 den Servoweg vorübergehend zu reduzieren, um beim Einstellen der Min-/Max-Grenzen nichts zu überlasten.</p>
 <h2 id="schritt-6-ausgange-konfigurieren">Schritt 6. Ausgänge konfigurieren<a class="headerlink" href="#schritt-6-ausgange-konfigurieren" title="Permanent link">&para;</a></h2>
-<p><img alt="Ausgänge" src="../../../assets/tut-fw-eg-outputs.png" /></p>
+<p><img alt="Ausgänge" src="../../assets/tut-fw-eg-outputs.png" /></p>
 <p><a href="../../model-setup/outputs/">Ausgänge</a> passen die Logik des Mischers an die tatsächliche
 Mechanik des Modells an.</p>
 <p><strong>Querruder 1</strong> — zentrieren Sie das Servo mit <strong>PWM center</strong>, nachdem Sie die
 mechanische Anlenkung optimiert haben, und stellen Sie dann <strong>Min</strong>/<strong>Max</strong> ein. Ein vorübergehend
 Min (und danach Max, genau wie im Differential-Beispiel oben) zugewiesenes Potentiometer
 beschleunigt das Einstellen:</p>
-<p><img alt="Querruderausgang bearbeiten" src="../../../assets/tut-fw-eg-outputs-edit-ail.png" /></p>
+<p><img alt="Querruderausgang bearbeiten" src="../../assets/tut-fw-eg-outputs-edit-ail.png" /></p>
 <p><strong>Klappen</strong> — Klappen benötigen für eine wirksame Bremswirkung meist einen großen Ausschlag nach unten;
 dafür opfert man in der Anlenkung etwas Weg nach oben, sodass die Klappe bei Servomittelstellung
 halb ausgefahren steht, und legt anschließend mit Min/Max die tatsächlichen Positionen "eingefahren"
@@ -3716,28 +3716,28 @@ Klappen-Flugphase als Offset darübergelegt wird:</p>
    die Trimmung von Flaps Half ergibt sich dann aus der Basistrimmung plus dem Offset, der
    bei aktiver Flugphase eingestellt wird:</li>
 </ol>
-<p><img alt="Verhalten hinzufügen" src="../../../assets/tut-fw-eg-trims-ele-add-behavior.png" />
-   <img alt="Offset + Default, FM1" src="../../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png" /></p>
+<p><img alt="Verhalten hinzufügen" src="../../assets/tut-fw-eg-trims-ele-add-behavior.png" />
+   <img alt="Offset + Default, FM1" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png" /></p>
 <ol>
 <li>Wiederholen Sie dies für <code>FM2(Flaps Full)</code>:</li>
 </ol>
-<p><img alt="Flugphase auswählen" src="../../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png" />
-   <img alt="Offset + Default, FM2" src="../../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png" /></p>
+<p><img alt="Flugphase auswählen" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png" />
+   <img alt="Offset + Default, FM2" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png" /></p>
 <p>Jede Klappen-Flugphase lässt sich nun unabhängig trimmen, doch eine spätere Änderung der
 Basistrimmung in Default (z. B. zum Ausgleich thermischer Servodrift) verschiebt automatisch beide
 Klappen-Flugphasentrimmungen um denselben Betrag.</p>
-<p><img alt="Auswahl der benutzerdefinierten Trimmung" src="../../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png" /></p>
+<p><img alt="Auswahl der benutzerdefinierten Trimmung" src="../../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png" /></p>
 <h2 id="schritt-9-timer-fur-den-flugakku-einrichten">Schritt 9. Timer für den Flugakku einrichten<a class="headerlink" href="#schritt-9-timer-fur-den-flugakku-einrichten" title="Permanent link">&para;</a></h2>
 <p>Bearbeiten Sie unter <a href="../../model-setup/timers/">Timer</a> den Timer 1: Modus <strong>Down</strong>, Startwert 5
 Minuten, laufend, solange <strong>Throttle active</strong> wahr ist (und der Timer nicht im Reset gehalten wird).
 Optional können Sie eine proportionale Zeitquelle zuweisen (z. B. den Gasknüppel), sodass der Timer bei
 Vollgas in Echtzeit läuft und bei zurückgenommenem Gas langsamer.</p>
 <h2 id="step-10-add-a-mix-for-retracts">Schritt 10. Mischer für das Einziehfahrwerk hinzufügen<a class="headerlink" href="#step-10-add-a-mix-for-retracts" title="Permanent link">&para;</a></h2>
-<p><img alt="Quelle des Fahrwerksmischers" src="../../../assets/tut-fw-eg-retracts-source.png" /></p>
+<p><img alt="Quelle des Fahrwerksmischers" src="../../assets/tut-fw-eg-retracts-source.png" /></p>
 <p>Tippen Sie auf einen Mischer, wählen Sie <strong>Add Mix</strong> → <strong>Free Mix</strong>, benennen Sie ihn "Retracts", setzen Sie die
 Bedingung auf Always und die Quelle auf Schalter SF. Die Standardaktion mit Weight = 100 % ist
 in Ordnung — damit wird dem Einziehfahrwerk z. B. Kanal 8 zugewiesen:</p>
-<p><img alt="Fahrwerksausgang" src="../../../assets/tut-fw-eg-retracts-outputs.png" /></p>
+<p><img alt="Fahrwerksausgang" src="../../assets/tut-fw-eg-retracts-outputs.png" /></p>
 
 
 
