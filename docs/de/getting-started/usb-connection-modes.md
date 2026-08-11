@@ -2,40 +2,42 @@
 translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
 ---
 
-# USB-Verbindungsmodi
+# Modi für USB-Verbindung zum PC
 
 ![USB-Menü](../assets/usbmenu.png)
 
-Was eine USB-Verbindung zu einem PC bewirkt, hängt davon ab, wie der Sender
-beim Einstecken mit Strom versorgt wurde.
+Was eine USB-Verbindung zum PC bewirkt, hängt davon ab, wie der Sender beim
+Einstecken mit Strom versorgt war.
 
-## Modus bei ausgeschaltetem Sender
+## Modus „Ausgeschaltet“
 
-Wird der Sender **im ausgeschalteten Zustand** per USB mit einem PC
-verbunden, wechselt er in den DFU-Modus, der zum Flashen des Bootloaders
-selbst dient.
+Schließen Sie den Sender **im ausgeschalteten Zustand** über USB an einen PC
+an, so wechselt er in den DFU-Modus, der zum Flashen des Bootloaders selbst
+dient.
 
 ## Bootloader-Modus {: #bootloader-mode }
 
-Schalten Sie den Sender **mit gedrückter `ENT`-Taste** ein, um in den
-Bootloader-Modus zu starten (auf dem Bildschirm erscheint „Bootloader“).
-Wird nun USB angeschlossen, wechselt der Status auf „USB Plugged“, und der
-PC bindet **zwei** Laufwerke ein: den internen Flash-Speicher des Senders
-sowie den Inhalt der SD card/eMMC. Dies ist der Modus zum direkten Lesen
-und Schreiben von Dateien in beiden Speicherbereichen, und auf diese Weise
-aktualisiert auch [Ethos Suite](../ethos-suite/index.md) die Firmware des
-Senders — siehe den Abschnitt „Bootloader-Modus“ von Ethos Suite.
+Der Sender wird in den Bootloader-Modus versetzt, indem er **mit gedrückter
+`ENT`-Taste** eingeschaltet wird (auf dem Bildschirm erscheint die
+Statusmeldung „Bootloader“). Wird nun USB angeschlossen, ändert sich die
+Statusmeldung in „USB Plugged“, und der PC zeigt **zwei** externe Laufwerke
+an: den Flash-Speicher des Senders sowie den Inhalt der SD card/eMMC. Dieser
+Modus wird zum direkten Lesen und Schreiben von Dateien auf beide
+Speicherbereiche verwendet, und über ihn aktualisiert auch [Ethos
+Suite](../ethos-suite/index.md) die Firmware des Senders — siehe den
+Abschnitt „Bootloader-Modus“ im Abschnitt Ethos Suite.
 
-## Modus bei eingeschaltetem Sender
+## Modus „Eingeschaltet“
 
-Wird USB angeschlossen, während der Sender **normal eingeschaltet** ist,
-erscheint eine Modus-Auswahl:
+Wird der Sender im eingeschalteten Zustand über USB mit einem PC verbunden,
+erscheint der folgende Auswahldialog:
 
-- **Joystick** — meldet den Sender als USB-HID-Joystick an, zur Steuerung
-  von PC-Flugsimulatoren.
-- **FrSky Suite** — versetzt den Sender in den „Ethos-Modus“ zur
+- **Joystick** — meldet den Sender als USB-HID-Joystick an und kann so für
+  die Steuerung von RC-Simulatoren am PC verwendet werden.
+- **FrSky Suite** — versetzt den Sender in den „Ethos-Modus“ für die
   Kommunikation mit [Ethos Suite](../ethos-suite/index.md).
-- **Serial** — leitet Lua-Debug-Ausgaben über USB-Seriell (115200 bps)
-  weiter. Der Reiter „Lua Development Tools“ von Ethos Suite verfügt über
-  ein integriertes Terminal zur Anzeige; unter Windows kann ein Treiber für
-  einen virtuellen COM-Port erforderlich sein.
+- **Serial** — im seriellen Modus werden Lua-Fehlersuch-Spuren an
+  USB-Serial gesendet (115200 bps). Die Registerkarte „Lua Development
+  Tools“ in der Ethos Suite verfügt über ein integriertes Terminalfenster
+  zur Anzeige; unter Umständen wird ein Windows Virtual COM Port Treiber
+  benötigt.

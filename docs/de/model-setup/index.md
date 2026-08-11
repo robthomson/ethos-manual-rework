@@ -6,7 +6,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Alles in diesem Abschnitt wird **pro Modell** gespeichert — beim Wechsel des
 Modells wechselt all dies mit. Hier wird ein Modell tatsächlich programmiert,
-von der Auswahl einer Zellenvorlage bis hin zu seinen Mischern, Ausgängen und
+von der Auswahl einer Modellvorlage bis hin zu seinen Mischern, Ausgängen und
 Sicherheitsschaltern. Erreichbar über den Reiter **Flugzeug** in der unteren
 Leiste (oder die Taste `MDL`) — im Unterschied zu den
 [Systemeinstellungen](../system-setup/index.md), die alles abdecken, was für
@@ -16,13 +16,13 @@ sämtliche Modelle gemeinsam gilt.
   organisieren.
 - [Modell bearbeiten](model-edit.md) — Name, Typ und Symbol des Modells.
 - [Flugphasen](flight-modes.md)
-- [Mischer](mixes.md) — der Kern der Modellprogrammierung.
+- [Mischer](mixes.md) — das Herzstück der Modellprogrammierung.
 - [Ausgänge](outputs.md) — Servo-/Motor-Endpunkte, Subtrimmung und Umkehr.
-- [Timer](timers.md)
+- [Stoppuhren](timers.md)
 - [Trimmungen](trims.md)
-- [RF-System](rf-system.md) — Empfängerbindung und Einrichtung des HF-Moduls.
+- [HF-System](rf-system.md) — Empfängerbindung und Einrichtung des HF-Moduls.
 - [Kurven](curves.md)
-- [Logische Schalter](logical-switches.md)
+- [Logikschalter](logical-switches.md)
 - [Sonderfunktionen](special-functions.md)
 - [Variablen](variables.md)
 - [Lehrer/Schüler](trainer.md)

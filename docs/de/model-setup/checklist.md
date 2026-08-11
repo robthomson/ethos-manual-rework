@@ -9,7 +9,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Eine Reihe von Sicherheitsprüfungen vor dem Flug, die beim Einschalten des
 Senders und/oder beim Laden eines Modells ausgeführt werden. Zu den
 integrierten Prüfungen gehören Stummschaltung, nicht gesetztes Failsafe,
-Schalter-/Potentiometerstellungen sowie Sender- und RTC-Batterie — die
+Schalter- und Geberstellungen sowie Sender- und RTC-Batterie — die
 Schalterprüfung zeigt an, in welche Richtung jeder Schalter bewegt werden
 muss, gekennzeichnet durch rote Punkte auf dem Warnbildschirm:
 
@@ -24,10 +24,10 @@ muss, gekennzeichnet durch rote Punkte auf dem Warnbildschirm:
 
 ![Prüffunktion](../assets/model-checklist-check_function.png)
 
-Aktivieren und einen Operator wählen — `<` (kleiner als), `~` (ungefähr
-gleich) oder `>` (größer als) — im Vergleich zu einem Wert; warnt, wenn
-sich der Gasknüppel außerhalb des von diesem Vergleich zugelassenen
-Bereichs befindet.
+Aktivieren Sie die Prüfung und wählen Sie einen Operator — `<` (kleiner
+als), `~` (ungefähr gleich) oder `>` (größer als) — im Vergleich zu einem
+Wert; es wird gewarnt, wenn sich der Gasknüppel außerhalb des von diesem
+Vergleich zugelassenen Bereichs befindet.
 
 ## Failsafe-Prüfung
 
@@ -54,28 +54,28 @@ der nicht mit **Keine Prüfung** gekennzeichnet ist.
 ![Funktionsschalter](../assets/model-checklist-function-switches.png)
 ![Optionen der Funktionsschalterprüfung](../assets/model-checklist-function-switches-options.png)
 
-Dasselbe Prinzip für die sechs
+Dasselbe Prinzip gilt für die sechs
 [Funktionsschalter](model-edit.md#function-switches). **Alle
 Funktionsschalterstellungen laden** funktioniert genauso wie oben
 beschrieben.
 
-## Prüfung der Potentiometer / Schieberegler
+## Prüfung der Potis / Schieberegler
 
-![Potentiometer](../assets/model-checklist-pots.png)
-![Optionen der Potentiometerprüfung](../assets/model-checklist-pots-options.png)
+![Potis](../assets/model-checklist-pots.png)
+![Optionen der Potiprüfung](../assets/model-checklist-pots-options.png)
 
-Verlangt beim Start bestimmte Stellungen der Potentiometer/Schieberegler,
-individuell für jedes Bedienelement (`~`/`<`/`>`, wie bei der Gasprüfung).
-**Alle Potentiometerstellungen laden** übernimmt die aktuellen Stellungen
-automatisch — prüfen Sie anschließend die automatisch gewählten Operatoren
-sorgfältig, da `~` gegenüber `<`/`>` möglicherweise nicht dem entspricht,
-was Sie tatsächlich beabsichtigt haben.
+Verlangt beim Start bestimmte Stellungen der Potis bzw. Schieberegler,
+und zwar einzeln für jedes Bedienelement (`~`/`<`/`>`, wie bei der
+Gasprüfung). **Alle Potistellungen laden** übernimmt die aktuellen
+Stellungen automatisch — prüfen Sie anschließend die automatisch
+gewählten Operatoren sorgfältig, da `~` gegenüber `<`/`>` möglicherweise
+nicht dem entspricht, was Sie tatsächlich beabsichtigt haben.
 
 ## Benutzerdefinierter Text
 
 ![Benutzerdefinierter Checklistentext](../assets/model-checklist-user-checklist.png)
 
 Zeigt eine Datei mit einfachem oder erweitertem Text als Teil der
-Startcheckliste an, sobald sie für das Modell installiert ist. Die
+Startcheckliste an, sobald sie für das Modell eingerichtet ist. Die
 vollständige Einrichtung finden Sie unter [Anleitung: Benutzerdefinierte
 Text-Checkliste](../how-to/user-defined-checklist.md).

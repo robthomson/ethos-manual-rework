@@ -2,81 +2,88 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Timer
+# Stoppuhren
 
-![Timer](../assets/model-timers.png)
+![Stoppuhren](../assets/model-timers.png)
 
-Acht vollständig programmierbare Timer, die jeweils aufwärts oder abwärts
-zählen. Ein Timer wird mit dem **+** neben den Spaltenüberschriften oder über
-**Hinzufügen** darunter angelegt. Ein Tippen auf einen Timer öffnet die
-Optionen zum Zurücksetzen, Bearbeiten, Hinzufügen, Verschieben und
-Kopieren/Einfügen.
+Es gibt acht vollständig programmierbare Timer, die entweder vorwärts oder
+rückwärts zählen können. Eine neue Stoppuhr wird über das Symbol **+** neben
+den Spaltenüberschriften oder darunter über **Hinzufügen** angelegt. Durch
+Berühren einer beliebigen Stoppuhr wird ein Popup-Fenster mit Optionen zum
+Zurücksetzen oder Bearbeiten dieser Stoppuhr, zum Hinzufügen einer neuen oder
+zum Verschieben oder Kopieren/Einfügen angezeigt.
 
-![Timer bearbeiten](../assets/model-timer1-edit.png)
+![Stoppuhr bearbeiten](../assets/model-timer1-edit.png)
 
-## Gemeinsame Felder (abwärts und aufwärts zählend)
+## Gemeinsame Felder (rückwärts und vorwärts zählend)
 
-- **Wert** — der aktuelle Stand des Timers.
-- **Name** — editierbar.
-- **Modus** — **Aufwärts** oder **Abwärts**.
-- **Startwert** (nur abwärts zählend) — der Wert, von dem heruntergezählt wird.
-- **Alarmwert** (nur aufwärts zählend) — der Wert, ab dem der Timer als
-  abgelaufen gilt; er zählt darüber hinaus weiter, wird in Timer-Widgets
-  jedoch rot dargestellt.
-- **Startbedingung** — startet den Timer. Bleibt die **Stoppbedingung** auf
-  dem Standardwert, steuert die Startbedingung allein Start *und* Stopp.
-  Andernfalls startet der Timer, sobald die Startbedingung zum ersten Mal
-  wahr wird, und läuft von da an weiter.
-- **Stoppbedingung** — sofern nicht auf dem Standardwert belassen, steuert
-  sie den laufenden Timer: gestoppt, solange sie wahr ist, laufend, solange
-  sie falsch ist. Im folgenden Beispiel startet ein Timer, wenn
-  `ThrottleActive` wahr wird, und stoppt, sobald die Telemetrie nicht mehr
-  aktiv ist:
+- **Wert** — zeigt den aktuellen Wert des Timers an.
+- **Name** — ermöglicht die Benennung des Timers.
+- **Mode** — **aufwärts** oder **abwärts** zählen.
+- **Start Wert** (nur beim Rückwärtszählen) — der Wert, von dem aus der Timer
+  auf Null herunterzählt.
+- **Alarmwert** (nur beim Hochzählen) — der Wert, bei dem die Stoppuhr abläuft;
+  sie zählt weiter, der Wert wird in den Uhren-Widgets jedoch rot angezeigt.
+- **Zustand starten** — die Startbedingung startet den Timer. Wenn die
+  **Stoppbedingung** auf der Standardeinstellung bleibt, startet und stoppt der
+  Timer nur mit der Startbedingung. Andernfalls startet der Timer, wenn die
+  Start-Bedingung zuerst WAHR wird, und läuft dann weiter.
+- **Zustand anhalten** — wenn diese Bedingung nicht „Standard“ ist, steuert sie
+  die Stoppuhr, sobald diese läuft: Die Stoppuhr wird angehalten, wenn die
+  Stopp-Bedingung WAHR ist, läuft aber weiter, wenn sie FALSCH ist. Im
+  folgenden Beispiel wird die Stoppuhr gestartet, wenn `ThrottleActive` WAHR
+  wird, und angehalten, wenn die Telemetrie nicht mehr aktiv ist:
 
-  ![Stoppbedingung](../assets/model-timer1-edit-stop.png)
+  ![Zustand anhalten](../assets/model-timer1-edit-stop.png)
 
-- **Proportionale Zeitquelle** — `---` zählt in Echtzeit. Jede andere Quelle
-  (z. B. der Gasknüppel oder der Gaskanal) skaliert die Geschwindigkeit des
-  Timers: bei −100 % steht der Timer, bei +100 % läuft er in
-  Echtzeitgeschwindigkeit, dazwischen wird proportional skaliert.
-- **Reset** — ein Schalter, Funktionsschalter, logischer Schalter oder eine
-  Trimmposition, die den Timer zurücksetzt; er bleibt zurückgesetzt, solange
-  die Bedingung wahr ist.
-- **Persistent** — erhält den Wert des Timers über das Ausschalten oder einen
-  Modellwechsel hinaus und lädt ihn beim nächsten Einsatz des Modells wieder.
-- **Stimme** — welches
-  [Sprachpaket](../system-setup/general.md#audio-settings) diesen Timer
+- **Proportionale Zeitquelle** — bei der Einstellung `---` zählt der Timer in
+  Echtzeit. Jede andere Quelle (z. B. der Gasknüppel oder sogar der Gaskanal)
+  steuert die Geschwindigkeit des Timers: Bei −100 % wird die Stoppuhr
+  angehalten, bei +100 % zählt sie in Echtzeit, bei Zwischenwerten zählt sie
+  proportional.
+- **Zurücksetzen** — die Stoppuhr kann durch die Stellung von Schaltern,
+  Funktionsschaltern, Logikschaltern oder Trimmschaltern zurückgesetzt werden;
+  sie bleibt so lange zurückgesetzt, wie die Rücksetzbedingung gültig ist.
+- **Wert speichern, wenn TX AUS?** — die Stoppuhr wird im Speicher gehalten,
+  wenn der Sender ausgeschaltet oder das Modell gewechselt wird. Der Wert wird
+  bei der nächsten Verwendung des Modells wieder geladen.
+- **Stimme** — legt fest, welches
+  [Sprachpaket](../system-setup/general.md#audio-settings) diese Stoppuhr
   ansagt.
 
 ## Audio-Aktionen
 
-![Audio-Aktion hinzufügen](../assets/model-timer1-add-action.png)
-![Aktionstyp](../assets/model-timer1-action-type-select.png)
+![Neue Audio-Aktion hinzufügen](../assets/model-timer1-add-action.png)
+![Typ](../assets/model-timer1-action-type-select.png)
 ![Countdown-Aktion](../assets/model-timer1-action-countdown.png)
 
-Vollständig flexible, timerspezifische Konfiguration der Warnmeldungen. Jede
-Aktion besitzt einen Typ — **Countdown** (gesprochen), **Piep-Countdown**
-(Pieptöne statt Sprache), **Datei abspielen** oder **Wert ansagen** — sowie:
+Audio-Aktionen sind sehr leistungsfähig und flexibel, so dass der
+Stoppuhr-Alarm genau nach den Anforderungen des Benutzers konfiguriert werden
+kann. Jede Aktion hat einen Typ — **Countdown** (per Stimme), **Signalton
+Countdown** (mit Pieptönen anstelle der Stimme), **Datei abspielen** oder
+**Wert ansagen** — sowie:
 
-- **Start** — der Wert, ab dem der Countdown dieser Aktion beginnt.
-- **Schritt** — Ansageintervall, bis zu 10 Minuten (600 s).
-- **Haptik** — die Ansage mit Vibration begleiten.
+- **Start** — der Wert, ab dem diese Countdown-Aktion beginnt.
+- **Schritt** — die Intervalle, in denen der Timerwert angesagt wird, bis zu
+  10 Minuten (600 s).
+- **Haptik** — die Ansagen werden durch haptisches Feedback begleitet.
 
-Eine typische Kombination aus drei Aktionen:
+Eine typische Kombination aus drei Audio-Aktionen:
 
-![Übersicht der Aktionen](../assets/model-timer1-actions-summary.png)
-![Aktionen von Timer 2](../assets/model-timer2-actions-summary.png)
+![Übersicht der Audio-Aktionen](../assets/model-timer1-actions-summary.png)
+![Audio-Aktionen der Stoppuhr 2](../assets/model-timer2-actions-summary.png)
 
-1. Gesprochener Countdown ab 2:00 Restzeit, alle 30 s, mit Haptik.
-2. Piep-Countdown ab 0:10 Restzeit, jede Sekunde, mit Haptik.
-3. Eine eigene Datei (z. B. `timer-1-elapsed`), die beim Ablauf abgespielt
-   wird, mit Haptik.
+1. Countdown per Sprache ab 2:00 Restzeit, alle 30 s, mit haptischem Feedback.
+2. Signalton-Countdown ab 0:10 Restzeit, jede Sekunde, mit haptischem Feedback.
+3. Eine benutzerdefinierte Audiodatei (z. B. `timer-1-elapsed`), die beim
+   Ablauf abgespielt wird, mit haptischem Feedback.
 
-Weitere Aktionen werden über **Hinzufügen** ergänzt; die Liste wird in der
-Reihenfolge der Priorität abgearbeitet, wobei die **höchste Priorität zuletzt**
-steht.
+Weitere Audio-Aktionen können über **Hinzufügen** ergänzt werden. Bitte
+beachten Sie, dass die Liste nach Prioritäten geordnet sein sollte, wobei die
+**höchste Priorität am Ende der Liste** steht.
 
-Siehe auch das [Anzeige-Widget Timer-Log](../displays/index.md#widget-types)
-für ein laufendes Protokoll vergangener Timerläufe.
+Siehe auch das
+[Anzeige-Widget Timer-Log](../displays/index.md#widget-types) für ein
+laufendes Protokoll vergangener Stoppuhrläufe.
 
-![Timer-Widget](../assets/model-timers-widget.png)
+![Stoppuhr-Widget](../assets/model-timers-widget.png)

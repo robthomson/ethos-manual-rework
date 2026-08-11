@@ -6,8 +6,8 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Modellassistent – Flugzeug](../assets/model-modelselect-model-wizard-airplane.png)
 
-Erstellt, wählt, klont und löscht Modelle und verwaltet die
-benutzerdefinierten Kategorieordner, in denen sie organisiert sind.
+Hier werden Modelle erstellt, ausgewählt, geklont und gelöscht sowie die
+benutzerdefinierten Kategorieordner verwaltet, in denen sie abgelegt sind.
 
 ## Modellordner verwalten
 
@@ -15,10 +15,10 @@ benutzerdefinierten Kategorieordner, in denen sie organisiert sind.
 
 Ethos ermöglicht es, Modelle in eigenen Ordnern zu gruppieren – typischerweise
 etwa Flugzeug, Segler, Heli, Quad, Warbird, Boot, Auto, Vorlage oder Archiv.
-Solange kein Ordner angelegt ist, liegen die Modelle in einem automatischen
-Ordner **Uncategorized** (wird beim Upgrade auf Ethos 1.1.0 alpha 17+ oder
-beim Kopieren einer Modelldatei aus anderer Quelle nach `\Models` erstellt);
-Ethos löscht ihn wieder, sobald er leer ist.
+Solange kein Ordner angelegt ist, liegen die Modelle in einem automatisch
+erzeugten Ordner **Uncategorized** (er wird beim Upgrade auf Ethos 1.1.0
+alpha 17+ angelegt oder wenn eine Modelldatei aus einer anderen Quelle nach
+`\Models` kopiert wird); Ethos löscht ihn wieder, sobald er leer ist.
 
 Um einen Ordner zu erstellen, tippen Sie auf **+** neben „Uncategorized“ (oder
 halten Sie `PAGE` auf/ab gedrückt), vergeben einen Namen (bis zu 15 Zeichen)
@@ -42,11 +42,11 @@ wechseln** und tippen anschließend auf das Ziel:
 Wählen Sie die Kategorie, in der das Modell erstellt werden soll, tippen Sie
 auf **+** und dann auf **Modell erstellen**, um den Assistenten zu starten
 (legen Sie die Kategorie zuvor an, falls sie noch nicht existiert). Assistenten
-gibt es für **Flugzeug**, **Segler**, **Hubschrauber**, **Multirotor** und
-**Sonstiges**; jeder führt durch die Grundeinstellungen des jeweiligen
-Modelltyps, einschließlich optionaler vorbereiteter Mischer für stabilisierte
-FrSky-Empfänger (Gain, Stabilisierungsmodus). Modellnamen dürfen bis zu 15
-Zeichen lang sein.
+zur Modellerstellung gibt es für **Flugzeug**, **Segler**, **Hubschrauber**,
+**Multirotor** und **Andere**; jeder führt durch die Grundeinstellungen des
+jeweiligen Modelltyps, einschließlich optionaler vordefinierter Mischer für
+stabilisierte FrSky-Empfänger (Gain, Stabilisierungsmodus). Modellnamen dürfen
+bis zu 15 Zeichen lang sein.
 
 ### Stabilisierte Empfänger und Kanalreihenfolge
 
@@ -54,8 +54,9 @@ Zeichen lang sein.
 
 Stabilisierte FrSky-Empfänger benötigen zwingend die Kanalreihenfolge
 **AETR** – belassen Sie [Steuerknüppel → Kanalreihenfolge](../system-setup/controls.md)
-auf der Vorgabe AETR mit aktivierter Option **Erste vier Kanäle fest**, damit
-die Ausgabe des Assistenten dem entspricht, was der Empfänger erwartet.
+auf der Standardeinstellung AETR mit aktivierter Option **Erste vier Kanäle
+fest**, damit die Ausgabe des Assistenten dem entspricht, was der Empfänger
+erwartet.
 
 Der Assistent vergibt die Kanäle von rechts nach links. Für 2 Querruder + 1
 Höhenruder + 1 Seitenruder + 1 Motor ergibt sich:
@@ -68,21 +69,21 @@ Höhenruder + 1 Seitenruder + 1 Motor ergibt sich:
 | 4 | Seitenruder |
 | 5 | Querruder 2 (linkes Querruder) |
 
-Mit dieser Zuordnung ist das Querruder-Differential im Normalfall **positiv**
+Mit dieser Zuordnung ist die Querruder-Differenzierung im Normalfall **positiv**
 (mehr Ausschlag nach oben als nach unten). Die FrSky-Empfängeranleitungen
 dokumentieren derzeit die *umgekehrte* Konvention (von links nach rechts, also
 Kanal 1 = linkes Querruder, Kanal 5 = rechtes Querruder) – in diesem Fall
-müsste das Differential für denselben physikalischen Effekt **negativ** sein.
+müsste die Differenzierung für denselben physikalischen Effekt **negativ** sein.
 
 !!! tip
     Es wird empfohlen, durchgängig die Ethos-Konvention zu verwenden – alle
     Stabilisierungsfunktionen arbeiten in beiden Fällen korrekt, da die
-    Kompensationsrichtung bei der Stabilisierungseinrichtung festgelegt wird.
-    Falls Sie die Konvention der Empfängeranleitung dennoch übernehmen müssen,
-    ist der einfachste Weg, das Modell wie gewohnt mit dem Assistenten zu
-    erstellen und anschließend über **Kanäle tauschen** in den
+    Kompensationsrichtung bei der Einrichtung der Stabilisierung festgelegt
+    wird. Falls Sie die Konvention der Empfängeranleitung dennoch übernehmen
+    müssen, ist der einfachste Weg, das Modell wie gewohnt mit dem Assistenten
+    zu erstellen und anschließend über **Kanäle tauschen** in den
     [Ausgängen](outputs.md) die beiden Querruderkanäle zu vertauschen – so
-    bleibt das Vorzeichen des Differentials im Querrudermischer positiv.
+    bleibt das Vorzeichen der Differenzierung im Querrudermischer positiv.
 
 ### Schritte des Assistenten
 
@@ -94,23 +95,23 @@ müsste das Differential für denselben physikalischen Effekt **negativ** sein.
 ![Assistent: Name](../assets/model-modelselect-model-wizard-name.png)
 ![Assistent: Empfänger](../assets/model-modelselect-model-wizard-rx.png)
 
-Bei einem **Flugzeug** folgen nach Leitwerkstyp und Ruderanzahl die Anzahl der
+Bei einem **Flugzeug** folgen nach Leitwerks-Typ und Ruderanzahl die Anzahl der
 Motorkanäle und danach die Anzahl der Querruder-/Klappenkanäle.
 
-Bei der **Leitwerkskonfiguration** stehen klassisches Kreuzleitwerk, V-Leitwerk
-oder kein Leitwerk (Delta/Nurflügel) zur Auswahl:
+Bei der **Leitwerkskonfiguration** stehen klassisches Kreuz-Leitwerk,
+V-Leitwerk oder kein Leitwerk (Delta/Nurflügel) zur Auswahl:
 
 - **Delta/Nurflügel** – wird ein Flugzeugmodell mit 2 Querrudern und ohne
-  Leitwerksflächen erstellt, richtet Ethos automatisch die Elevon-Mischung ein,
-  mit Standardgewichtungen von 50 %, sodass volle gleichzeitige Querruder- und
+  Leitwerksflächen erstellt, wird automatisch ein Elevon-Mischer angelegt, mit
+  Standardgewichtungen von 50 %, sodass volle gleichzeitige Querruder- und
   Höhenruderbefehle weiterhin insgesamt 100 % ergeben.
 - **Delta mit einem stabilisierten Empfänger, der die Mischung übernimmt** –
   wählen Sie stattdessen 1 Querruder und 1 Höhenruder; die Elevon-Mischung
-  erfolgt gemäß der Empfängeranleitung im Empfänger.
+  erfolgt gemäß der zugehörigen Anleitung im Empfänger.
 - **Delta mit separaten Querruder- und Höhenruderflächen** – lassen Sie den
   Assistenten so laufen, als hätte das Modell ein Leitwerk; er konfiguriert die
   benötigten Querruder- und Höhenruderkanäle (mit oder ohne Seitenruder), und
-  es wird keine Elevon-Mischung angelegt.
+  es wird kein Elevon-Mischer angelegt.
 
 Im Schritt **Kanalneuzuordnung** können Sie die Standardzuordnung des
 Assistenten überschreiben – beachten Sie dabei, dass stabilisierte Empfänger
@@ -128,10 +129,10 @@ Flächenmodell – Beispiel](../tutorials/basic-fixed-wing.md).
 ![Modell empfangen](../assets/model-modelselect-model-receive.png)
 
 Wählen Sie die Zielkategorie, tippen Sie auf **+** und dann auf **Modell
-empfangen** – der Sender wartet und zeigt seine Bluetooth-Adresse an, damit der
-sendende Sender ihn finden kann. Tippen Sie auf dem sendenden Sender auf das
-Modell und wählen Sie **Modell senden**; der empfangende Sender bestätigt den
-eingehenden Dateinamen, bevor er ihn annimmt.
+empfangen** – der Sender wartet und zeigt seine Bluetooth-Adresse an, damit ihn
+der sendende Sender finden kann. Tippen Sie auf dem sendenden Sender auf das
+Modell und wählen Sie **Modell senden**; der empfangende Sender lässt den
+eingehenden Dateinamen bestätigen, bevor er ihn annimmt.
 
 ## Ein Modell auswählen
 
@@ -139,19 +140,19 @@ Tippen Sie auf **Modellauswahl**, um die Modellliste zu öffnen.
 
 !!! note "Modellkonvertierung nach einem Ethos-Upgrade"
     Ethos konvertiert jedes Modell einzeln, wenn es nach einem
-    Versionsupgrade erstmals *ausgewählt* wird, nicht alle Modelle auf einmal
-    beim Upgrade – dabei entsteht keine spürbare Verzögerung, und die
+    Versionsupgrade erstmals *ausgewählt* wird, und nicht alle Modelle auf
+    einmal beim Upgrade – dabei entsteht keine spürbare Verzögerung, und die
     Konvertierung kann problemlos zu einem späteren Zeitpunkt erfolgen, auch
     unter einer noch neueren Ethos-Version. Das Datum **Letzte Änderung** am
     unteren Rand des Auswahlbildschirms wird aktualisiert, wenn eine
     Konvertierung stattfindet (oder wenn Sie das Modell bearbeiten –
     andernfalls bleibt es unverändert).
 
-**Schnellauswahl** – ein langer Fingerdruck oder langes `ENT` auf einem
+**Schnellauswahl** – ein langer Fingerdruck oder ein langes `ENT` auf einem
 Modellsymbol wechselt sofort zu diesem Modell.
 
 **Modellverwaltungsmenü** – tippen Sie auf ein Modell, um es zu markieren, und
-tippen Sie erneut, um das Menü zu öffnen:
+tippen Sie erneut, um das Menü aufzurufen:
 
 - **Als aktuelles Modell setzen**
 - **Klonen** – dupliziert das Modell. Ein Klon erhält automatisch eine neue

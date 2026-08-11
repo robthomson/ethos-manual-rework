@@ -7,9 +7,9 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ![Datum & Uhrzeit](../assets/system-date.png)
 
 - **24-Stunden-Format** — schaltet die Uhr zwischen 12- und 24-Stunden-Anzeige um.
-- **Sekunden anzeigen** — ergänzt die Uhranzeige um Sekunden.
-- **Datum** / **Uhrzeit** — Einstellung des aktuellen Datums bzw. der aktuellen
-  Uhrzeit; beide werden auch für die Datenaufzeichnung verwendet.
+- **Sekunden anzeigen** — ergänzt die Uhrzeitanzeige um die Sekunden.
+- **Datum** / **Uhrzeit** — stellt das aktuelle Datum bzw. die aktuelle
+  Uhrzeit ein; beide werden auch für die Datenaufzeichnung verwendet.
 - **Zeitzone** — Ihre lokale Zeitzone.
 - **RTC-Geschwindigkeit anpassen** — gleicht die Gangabweichung der
   Echtzeituhr aus, bis zu 41 Sekunden pro Tag. Ermitteln Sie, wie viele
@@ -17,7 +17,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
   Sie den Kalibrierwert auf das **12-fache dieser Sekundenzahl** — negativ,
   wenn die Uhr vorgeht, positiv, wenn sie nachgeht (Bereich −500 bis +500).
   Überprüfen Sie das Ergebnis nach ein bis zwei Tagen erneut und justieren Sie
-  nach.
-- **Automatisch per GPS anpassen** — sofern aktiviert, werden Datum und
-  Uhrzeit stattdessen automatisch aus den Daten eines externen GPS-Sensors
-  übernommen.
+  bei Bedarf nach.
+- **Automatisch per GPS anpassen** — wenn diese Option aktiviert ist, werden
+  Datum und Uhrzeit stattdessen automatisch aus den Daten eines externen
+  GPS-Sensors übernommen.

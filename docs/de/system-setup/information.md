@@ -6,68 +6,75 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Systeminformationen](../assets/system-info.png)
 
-Angaben zur System-Firmware, Gimbal-Typ, Informationen zum internen/externen HF-Modul,
-Informationen zum gebundenen Empfänger, Betriebszeit des Senders, Fehlerprotokolle und Werksreset.
+Auf der Info-Seite werden Angaben zur System-Firmware, zum Steuerknüppel-Typ, zum
+internen/externen HF-Modul, zum gebundenen Empfänger, zur Sender-Laufzeit sowie
+Fehlermeldungen und das Zurücksetzen auf die Werkseinstellungen angezeigt.
 
 ## Senderinformationen
 
-- **Seriennummer** — die Seriennummer des Senders.
-- **Firmware** — Ethos-Version und Sendertyp (z. B. X20).
-- **Firmware-Version** — Build-Variante, z. B. FCC, LBT oder Flex.
-- **Datum** — Erstellungsdatum/-zeit der Firmware.
-- **Verfügbarer RAM** — freier System-RAM, nützlich zum Aufspüren eines fehlerhaften
-  Lua-Skripts; auch als System-[Quelle](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-  verfügbar, sodass der Wert in einem Widget angezeigt werden kann.
-- **Steuerknüppel** — Version der verbauten Gimbal-Hallsensoren (oder „ADC" bei analogen
-  Gimbals).
-- **Internes Modul** — Hardware- und Firmware-Versionen des internen HF-Moduls.
-- **Empfänger** — Details des aktuell gebundenen Empfängers, angezeigt nach dem
-  internen Modul. Teilt sich ein redundanter Empfänger denselben Slot mit dem
-  Hauptempfänger, wechseln sich beide in der Anzeige ab (z. B. ein Archer SR10 Pro
-  zusammen mit dem redundanten R9MM-OTA unter „Receiver1").
-- **Externes Modul** — Hardware-/Firmware-Details eines eingesetzten externen
-  FrSky-HF-Moduls, das das ACCESS-Protokoll verwendet. Multi-protocol-Module
-  werden hier nicht angezeigt.
+- **Seriennummer** — Seriennummer des Senders.
+- **Firmware** — Ethos-Version und Typ des Senders (z. B. X20).
+- **Version (Firmware)** — Build-Variante, z. B. FCC, LBT oder Flex.
+- **Datum** — Datum und Uhrzeit der Firmware-Version.
+- **Verfügbarer RAM** — zeigt das verfügbare System-RAM an. Dies ist nützlich, um nach
+  fehlerhaften Lua-Skripten zu suchen; der Wert ist auch als System-[Quelle](../getting-started/user-interface-and-navigation.md#choosing-a-source)
+  verfügbar, so dass er z. B. in einem Widget angezeigt werden kann.
+- **Knüppel Mode** — die installierte Knüppel-Hall-Sensor-Version (bzw. „ADC“ bei
+  analogen Knüppeln).
+- **Internes Modul** — Angaben zum internen HF-Modul, einschließlich Hardware- und
+  Firmware-Versionen.
+- **Empfänger** — die Angaben zum aktuell gebundenen Empfänger werden nach dem
+  internen Modul angezeigt. Wenn ein redundanter Empfänger an denselben Steckplatz wie
+  der Hauptempfänger gebunden ist, werden die Empfängerdetails abwechselnd auf dem
+  Display angezeigt (z. B. ein Archer SR10 Pro neben seinem redundanten R9MM-OTA unter
+  „Empfänger1“).
+- **Externes Modul** — Angaben zu einem externen FrSky-HF-Modul (falls vorhanden),
+  einschließlich Hardware- und Firmware-Versionen, falls ACCESS-Protokoll.
+  Multi-protocol-Module werden hier nicht angezeigt.
 
 ![X20 Pro Informationen](../assets/system-info-x20pro.png)
 
-## Betriebszeit des Senders
+## Sender-Laufzeit
 
-![Betriebszeit des Senders](../assets/system-info-radio-runtime.png)
+![Sender-Laufzeit](../assets/system-info-radio-runtime.png)
 
-Erfasst die gesamte Nutzungsdauer des Senders; **Reset** setzt sie auf null zurück.
+Diese Uhr für die Laufzeit des Senders zeigt die Gesamtnutzung des Senders an; mit
+**zurücksetz.** kann sie auf Null zurückgesetzt werden.
 
-## Fehler
+## Fehlermeldungen
 
-![Fehler](../assets/system-info-errors.png)
+![Fehlermeldungen](../assets/system-info-errors.png)
 
-Ein rotes Dreieck in der oberen Leiste der Hauptansicht bedeutet, dass Ethos einen Fehler
-protokolliert hat, der hier im Detail angezeigt wird. Mögliche Ursachen:
+Ein rotes dreieckiges Fehlerwarnsymbol in der oberen Leiste der Hauptansicht bedeutet,
+dass Ethos einen Fehler festgestellt hat; die Fehlertafel zeigt die Fehler im Detail an.
+Fehler können verursacht werden durch:
 
-- **Lua-Skriptfehler** — ein Problem in einem laufenden Lua-Skript.
-- **RAM-Backup-Fehler** — ein Modell, das zu groß für den Modell-Backup-RAM ist. Ethos
-  hat diesen von 4 K auf 32 K erweitert, sodass der Fall inzwischen unwahrscheinlich ist;
-  tritt er dennoch auf, ist es ein bedeutender Fehler: Das Modell wird bei ausgelöstem
+- **Lua-Skript-Fehler** — ein Problem in einem laufenden Lua-Skript.
+- **Fehler bei der RAM-Sicherung** — ein Modell kann so groß sein, dass es den
+  Sicherungsspeicher übersteigt. Ethos hat den RAM-Speicherplatz für die Modellsicherung
+  von 4k auf 32k erweitert, so dass eine Überschreitung unwahrscheinlich ist; tritt sie
+  dennoch auf, ist dies ein schwerwiegender Fehler: Das Modell wird bei ausgelöstem
   [Notfallmodus](../getting-started/emergency-mode.md) langsamer von der SD card statt aus
   dem Backup-RAM geladen.
-- **Verwendung eines Nightly-Firmware-Builds** — ein Hinweis darauf, dass Nightly-Builds
-  nicht zum Fliegen vorgesehen sind.
+- **Ausführen einer nächtlichen Firmware-Version** — ein Hinweis darauf, dass
+  Nightly-Builds nicht zum Fliegen geeignet sind.
 
-**Reset** löscht die protokollierten Fehler — praktisch während einer Lua-Debugging-Sitzung.
+**Reset** ermöglicht das Löschen der protokollierten Fehler — praktisch zum Beispiel
+während Lua-Debug-Sitzungen.
 
-## Werksreset
+## Auf Werkseinstellungen zurücksetzen
 
-![Werksreset](../assets/system-info-factory-reset.png)
+![Auf Werkseinstellungen zurücksetzen](../assets/system-info-factory-reset.png)
 
-Setzt den Sender vollständig direkt am Gerät auf die Werkseinstellungen zurück — es ist
-keine PC-Verbindung erforderlich.
+Ermöglicht das Zurücksetzen des Senders auf die Werkseinstellungen. Es ist keine
+PC-Verbindung erforderlich, alles wird im Sender durchgeführt.
 
-![Bestätigung des Werksresets](../assets/system-info-factory-reset-confirm.png)
+![Bestätigung des Zurücksetzens auf Werkseinstellungen](../assets/system-info-factory-reset-confirm.png)
 
 !!! danger
-    Beim Bestätigen werden **alle** Modelle, Logs, Screenshots, Dokumente,
-    Skripte, Bitmaps und Sendereinstellungen gelöscht. Ein Fortschrittsbalken zeigt
-    den Löschvorgang an; danach werden alle Laufwerke ausgehängt und der Sender startet neu.
+    Wenn Sie bestätigen, löscht der Sender **alle** Modelle, Protokolldateien,
+    Screenshots, Dokumente, Skripte, Bitmaps und die Grundeinstellungen des Senders.
+    Während des Löschvorgangs ist ein Fortschrittsbalken zu sehen. Danach werden alle
+    Laufwerke getrennt und der Sender neu gestartet.
 
-Die Info-Seite des X20 Pro/R/RS zeigt die entsprechenden Informationen für diese
-Senderfamilie an.
+Die Info-Seite des X20 Pro/R/RS zeigt ähnliche Informationen für diese Senderfamilie an.

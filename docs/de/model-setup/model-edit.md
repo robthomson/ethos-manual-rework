@@ -20,22 +20,22 @@ wird eine Vorschau-Miniatur angezeigt.
 ![Modelltyp](../assets/model-edit-modeltype.png)
 
 !!! warning
-    Das Ändern des Modelltyps setzt **alle** Mischungen zurück.
+    Das Ändern des Modelltyps setzt **alle** Mischer zurück.
 
 ## Kanalzuweisungen
 
 Das Ändern des Leitwerkstyps oder (bei einem Heli) des Taumelscheibentyps
-setzt ebenfalls alle Mischungen zurück. Bei anderen Kanälen kann die Anzahl
-der zugewiesenen Kanäle geändert werden, oder die Zuweisung wird aufgehoben.
+setzt ebenfalls alle Mischer zurück. Bei anderen Kanälen kann die Anzahl der
+zugewiesenen Kanäle geändert oder die Zuweisung aufgehoben werden.
 
 ## Analogfilter
 
 ![Analogfilter](../assets/model-edit-analog-filter.png)
 
 In [Systemeinstellungen → Hardware](../system-setup/hardware.md) gibt es einen
-globalen Analog-Digital-Filter, der Zittern um die Steuerknüppelmitte
-reduzieren kann; diese modellspezifische Einstellung überschreibt ihn nur für
-dieses Modell.
+globalen Analog-Digital-Filter, der ein Zittern um die Knüppelmitte reduzieren
+kann; diese modellspezifische Einstellung überschreibt ihn nur für dieses
+Modell.
 
 ![Optionen des Analogfilters](../assets/model-edit-analog-filter-select.png)
 
@@ -44,9 +44,9 @@ dieses Modell.
 ![Funktionsschalter](../assets/model-edit-fn-switches.png)
 
 Die sechs Funktionsschalter stehen überall dort zur Verfügung, wo ein
-Parameter **Aktivierungsbedingung** erscheint, können aber — anders als
-gewöhnliche Schalter — nicht als allgemeine Quelle verwendet werden. Sie
-werden als eine der folgenden Varianten konfiguriert:
+Parameter **Aktive Bedingung** erscheint, können aber — anders als gewöhnliche
+Schalter — nicht als allgemeine Quelle verwendet werden. Sie werden als eine
+der folgenden Varianten konfiguriert:
 
 - **6-Pos mit OFF** — das Drücken eines Funktionsschalters rastet ihn ein;
   erneutes Drücken *desselben* Schalters schaltet alle sechs aus.
@@ -75,8 +75,8 @@ in einer Lehrer/Schüler-Konfiguration.
 
 Erfasst die Gesamtzeit, die dieses Modell geflogen bzw. betrieben wurde.
 
-## Alle Mischungen zurücksetzen
+## Alle Mischer zurücksetzen
 
-![Alle Mischungen zurücksetzen](../assets/model-edit-model-reset_all_mixes.png)
+![Alle Mischer zurücksetzen](../assets/model-edit-model-reset_all_mixes.png)
 
-Setzt jede Mischung des Modells auf ihren Standardzustand zurück.
+Setzt sämtliche Mischer des Modells auf ihren Standardzustand zurück.

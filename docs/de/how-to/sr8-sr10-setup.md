@@ -2,33 +2,32 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# SR8/SR10 – Modellkonfiguration und Kanalreihenfolge ändern
+# SR8/SR10 – Modell-Setup und Ändern der Kanalreihenfolge
 
-Die stabilisierten Empfänger der SRx-Serie von FrSky erwarten eine bestimmte
-Kanalreihenfolge. Es gibt zwei Szenarien: ein neues Modell von Grund auf für
-einen solchen Empfänger anlegen oder ein bestehendes Modell entsprechend
-umstellen.
+Die stabilisierten SRx-Empfänger von FrSky erwarten eine bestimmte
+Kanalreihenfolge. Es gibt zwei Fälle: ein neues Modell von Grund auf für einen
+solchen Empfänger anlegen oder ein bestehendes Modell entsprechend umstellen.
 
 !!! note "Screenshots folgen"
     Für diese Seite liegen noch keine Simulator-Screenshots vor — siehe [Screenshot
     Pipeline](../contributing/screenshot-pipeline.md).
 
-## Ein neues Modell anlegen
+## Ein neues Modell erstellen
 
-Der Assistent unter [Modellauswahl](../model-setup/model-select.md) fasst
-Ruderflächen gleicher Funktion standardmäßig zusammen (z. B. 2 Querruder →
-`AAETR`), SRx-Empfänger benötigen jedoch die ersten vier Kanäle fest in der
-Reihenfolge **AETRA**.
+Der Wizard unter [Modellauswahl](../model-setup/model-select.md) fasst Flächen
+mit gleicher Funktion normalerweise zusammen (z. B. 2 Querruder → `AAETR`), die
+SRx-Empfänger benötigen jedoch die ersten vier Kanäle fest in der Reihenfolge
+**AETRA**.
 
-1. Prüfen Sie unter [Bedienelemente](../system-setup/controls.md), dass die
-   **Kanalreihenfolge** auf `AETR` steht.
+1. Vergewissern Sie sich unter [Steuerknüppel](../system-setup/controls.md), dass
+   die **Reihenfolge der Kanäle** auf `AETR` steht.
 2. Aktivieren Sie **[Erste vier Kanäle
-   fest](../system-setup/controls.md#first-four-channels-fixed)** — dadurch
-   fasst der Assistent die ersten vier Kanäle nicht mehr zusammen und behält
-   strikt die Reihenfolge `AETRA…` bei, unabhängig davon, wie viele Flächen
-   der jeweiligen Funktion die Zelle besitzt.
-3. Führen Sie den Assistenten zum Anlegen des Modells wie gewohnt aus — die
-   ersten 5 Kanäle ergeben sich als `AETRA`.
+   fest](../system-setup/controls.md#first-four-channels-fixed)** — dadurch fasst
+   der Wizard die ersten vier Kanäle nicht mehr zusammen und behält strikt die
+   Reihenfolge `AETRA…` bei, unabhängig davon, wie viele Flächen der jeweiligen
+   Funktion das Modell besitzt.
+3. Durchlaufen Sie den Wizard zur Modellerstellung wie gewohnt — die ersten
+   5 Kanäle ergeben sich dann als `AETRA`.
 
 !!! note "Selbsttest bei Archer-Empfängern"
     Der Selbsttest für Archer-Empfänger läuft inzwischen über [Gerätekonfiguration →
@@ -39,8 +38,8 @@ Reihenfolge **AETRA**.
 ## Ein bestehendes Modell umsortieren
 
 Die Umstellung eines bestehenden Modells (z. B. aktuell `AAETRFF`) auf die
-Reihenfolge für stabilisierte Empfänger (`AETRAE`, anschließend Kanal 9 Gain,
-10/11 Flugphasen, 12 Selbsttest bei älteren SxR-Einheiten) erfolgt über eine
+Reihenfolge für stabilisierte Empfänger (`AETRAE`, danach Kanal 9 Gain,
+10/11 Flugphasen, 12 Selbsttest bei älteren SxR-Empfängern) erfolgt über eine
 Reihe von Kanaltauschen in den [Ausgängen](../model-setup/outputs.md#swap-channels).
 
 Ausgangslage:
@@ -64,7 +63,7 @@ Gain/Flugphasen/Selbsttest auf 9–12).
    (Querruder2), tippen Sie erneut darauf, wählen Sie **Kanäle tauschen** und
    tauschen Sie ihn mit einem freien Kanal (z. B. CH9). Der Tausch wirkt sofort —
    alle Mischer, die einen der beiden Kanäle verwenden, werden automatisch
-   aktualisiert.
+   angepasst.
 2. **CH3 (Höhenruder) → CH2 tauschen.**
 3. **CH4 (Gas) → CH3 tauschen.**
 4. **CH5 (Seitenruder) → CH4 tauschen.**

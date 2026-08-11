@@ -7,7 +7,7 @@ translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
 ![Mischer-Symbol](../assets/model-icon-mixes.png)
 
 Mischer sind der Kern der Modellprogrammierung in Ethos – hier werden Eingänge
-(Steuerknüppel, Schalter, Sensoren, alles, was eine [Quelle](../getting-started/user-interface-and-navigation.md#choosing-a-source)
+(Knüppel, Schalter, Sensoren, alles, was eine [Quelle](../getting-started/user-interface-and-navigation.md#choosing-a-source)
 erreichen kann) auf Ausgangskanäle geleitet, geformt und kombiniert. Pro Modell
 können bis zu 120 Mischer definiert werden.
 
@@ -15,10 +15,10 @@ können bis zu 120 Mischer definiert werden.
 
 Wurde ein Modell mit dem Assistenten der **Modellauswahl** erstellt, sind die
 grundlegenden Mischer (Querruder, Höhenruder, Gas, Seitenruder und was die
-Zelle sonst noch benötigt) hier bereits angelegt. Das Auswählen eines Mischers
-und Drücken von `ENT` öffnet ein Kontextmenü, um ihn zu bearbeiten, einen neuen
-Mischer hinzuzufügen, in die [kanalweise Ansicht](#per-channel-view) zu
-wechseln, ihn umzusortieren, zu duplizieren oder zu löschen. Inaktive Mischer
+Zelle sonst noch benötigt) hier bereits angelegt. Wenn Sie einen Mischer
+auswählen und `ENT` drücken, öffnet sich ein Kontextmenü, um ihn zu bearbeiten,
+einen neuen Mischer hinzuzufügen, in die [kanalweise Ansicht](#per-channel-view)
+zu wechseln, ihn zu verschieben, zu klonen oder zu löschen. Inaktive Mischer
 werden ausgegraut dargestellt, und vor dem Löschen wird stets eine Bestätigung
 verlangt.
 
@@ -33,50 +33,55 @@ aufgebaut.
 
 ![Querruder-Mischer-Editor](../assets/model-mixes-ail.png)
 
-**Name** – standardmäßig der Mischertyp, editierbar.
+**Name** – standardmäßig der Mischertyp; es kann ein beschreibender Name
+eingegeben werden.
 
-**Bedingung** – standardmäßig *Immer*. Kann auf eine Schalterstellung, einen
-Funktionsschalter, einen logischen Schalter, eine Flugphase, ein Systemereignis
-(Gas-Abschaltung/Leerlaufsperre) oder eine Trimmungsposition eingeschränkt
-werden; der Mischer wirkt dann nur, solange die Bedingung erfüllt ist.
+**aktiviert** – die standardmäßig aktive Bedingung ist *Immer an*. Sie kann
+durch die Auswahl von Schalter- oder Tastenpositionen, Funktionsschaltern,
+Logikschaltern, Flugmodi, einem Systemereignis wie Gasabschaltung oder -haltung
+oder Trimmpositionen bedingt werden; der Mischer wirkt dann nur, solange die
+Bedingung erfüllt ist.
 
-**Flugphasen** – sind Flugphasen definiert, kann der Mischer zusätzlich auf eine
-oder mehrere davon eingeschränkt werden.
+**Flugphasen** – wenn Flugmodi definiert wurden, kann der Mischer zusätzlich von
+einem oder mehreren Flugmodi abhängig gemacht werden.
 
 **Kurve** – standardmäßig steht eine **Expo**-Kurve zur Verfügung (0 = linear;
-positive Werte machen die Reaktion um die Mittelstellung weicher, negative
-schärfer):
+ein positiver Wert macht die Reaktion um 0 herum weicher, ein negativer Wert
+macht sie schärfer):
 
 ![Expo-Kurve](../assets/model-mixes-ail-expo.png)
 
-Alternativ kann jede zuvor unter [Kurven](curves.md) definierte Kurve gewählt
-werden. Bis zu 6 Kurven lassen sich auf einem Mischer stapeln, jede mit eigener
-Bedingung – sind mehrere Bedingungen gleichzeitig erfüllt, gewinnt die in der
-Liste weiter oben stehende Kurve. Kurven werden **vor** den Raten angewendet.
+Anstelle der Expo-Kurve kann auch jede zuvor unter [Kurven](curves.md)
+definierte Kurve ausgewählt werden. Sie können bis zu 6 Kurven mit jeweils einer
+Bedingung festlegen – wenn mehrere Bedingungen zutreffen, hat die Kurve mit der
+höheren Position in der Liste Vorrang. Kurven werden **vor** den Gewichtungen
+angewendet.
 
-**Raten** – eine oder mehrere Gewichtungszeilen, jede optional über einen
-Schalter, Funktionsschalter, logischen Schalter, eine Trimmungsposition oder
-eine Flugphase freigeschaltet. Die erste Zeile ist der Standard und immer dann
-aktiv, wenn die Bedingung keiner anderen Zeile erfüllt ist:
+**Gewichtung / Anteile** – eine oder mehrere Gewichtungszeilen, die jeweils
+optional durch einen Schalter, einen Funktionsschalter, einen Logikschalter,
+eine Trimmposition oder einen Flugmodus bedingt sind. Die erste Zeile ist der
+Standardwert und immer dann aktiv, wenn die Bedingung keiner anderen Zeile
+zutrifft:
 
-![Querruder-Raten](../assets/model-mixes-ail-weight.png)
+![Querruder-Gewichtungen](../assets/model-mixes-ail-weight.png)
 
-Statt eines festen Prozentwerts kann eine Rate auch von einer
+Statt eines festen Prozentwerts kann eine Gewichtung auch von einer
 [Quelle](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-gesteuert werden – beispielsweise von einem Potentiometer, um die Rate im Flug
+gesteuert werden – beispielsweise von einem Poti, um die Gewichtung im Flug
 anzupassen:
 
-![Von einer Quelle gesteuerte Rate](../assets/model-mixes-ail-diff.png)
+![Von einer Quelle gesteuerte Gewichtung](../assets/model-mixes-ail-diff.png)
 
-**Differential** (-100 bis 100, Standard 0) – bewirkt mehr Ausschlag in eine
-Richtung als in die andere. Bei Querrudern ist dies der klassische Kniff, mehr
-Ausschlag nach oben als nach unten zu geben, um das negative Wendemoment zu
+**Differenzierung** (-100 bis 100, Standardwert 0) – ergibt in der einen
+Richtung mehr Hub als in der anderen. Bei Querrudern ist dies der klassische
+Kniff, mehr Aufwärtshub als Abwärtshub zu geben, um das negative Wendemoment zu
 verringern. Wird erst angezeigt, wenn der Mischer mehr als einen Ausgangskanal
-besitzt; Differential ist zudem nur bei einer Ausgangskonfiguration im Stil
-eines V-Leitwerks oder zweier getrennter Querruder sinnvoll.
+besitzt; sinnvoll ist die Differenzierung nur bei einer Ausgangskonfiguration im
+Stil eines V-Leitwerks oder zweier getrennter Querruder.
 
-**Anzahl der Kanäle / Ausgänge** – wie viele Ausgangskanäle dieser Mischer
-ansteuert und auf welche physischen Ausgänge sie abgebildet werden:
+**Anzahl der Kanäle / Ausgänge** – die Kanalanzahl legt fest, wie viele
+Ausgangskanäle dieser Mischer ansteuert und welchen physischen Ausgängen sie
+zugewiesen werden:
 
 ![Kanalanzahl](../assets/model-mixes-ail-ch-count.png)
 
@@ -91,10 +96,9 @@ zuzüglich motorspezifischer Sicherheitsoptionen.
 
 ![Gas-Mischer](../assets/model-mixes-thr.png)
 
-**Eingang** – die Gasquelle, normalerweise der Gasknüppel, aber austauschbar
-gegen ein Potentiometer, einen Schieberegler, Schalter, eine Trimmung, einen
-Kanal, eine Gyro-Achse, einen Lehrer/Schüler-Kanal, einen Timer oder jede
-andere Quelle.
+**Eingang** – die Gasquelle, normalerweise der Gasknüppel, austauschbar gegen
+ein Poti, einen Schieberegler, einen Schalter, einen Trimmtaster, einen Kanal,
+eine Kreiselachse, einen Trainerkanal, einen Zeitgeber oder jede andere Quelle.
 
 **Leerlauftrimmung** – erlaubt bei Verbrennungsmotoren, die Leerlaufdrehzahl
 über eine eigene Trimmung einzustellen, ohne die Vollgasstellung zu verändern.
@@ -106,26 +110,26 @@ im unteren Leerlauf steht; die Gastrimmung stellt den Leerlauf dann zwischen
 
 ![Leerlauftrimmung in unterer Position](../assets/model-mixes-thr-trim-low-position.png)
 
-**Gas-Abschaltung** – eine harte Sicherheitsverriegelung: Der Kanal wird erst
+**Gasabschaltung** – eine harte Sicherheitsverriegelung: Der Kanal wird erst
 aktiv, nachdem der Gasknüppel den Leerlauf durchlaufen hat, sodass ein
 versehentliches Umlegen eines Schalters den Motor nicht aus einer
 Vollgasstellung heraus anlaufen lassen kann:
 
-![Gas-Abschaltung](../assets/model-mixes-thr-cut.png)
+![Gasabschaltung](../assets/model-mixes-thr-cut.png)
 
-**Leerlaufsperre** – hält den Kanal unabhängig von der Knüppelstellung auf einem
-festen Wert, allerdings ohne die Sicherheitsverriegelung der Gas-Abschaltung:
+**Gashaltung** – hält den Kanal unabhängig von der Knüppelstellung auf einem
+festen Wert, allerdings ohne die Sicherheitsverriegelung der Gasabschaltung:
 
-![Leerlaufsperre](../assets/model-mixes-thr-hold.png)
+![Gashaltung](../assets/model-mixes-thr-hold.png)
 
-Auch der Gas-Mischer bietet eine eigene Angabe zur Anzahl der Ausgangskanäle,
-genau wie jeder andere Mischer:
+Auch der Gas-Mischer verfügt über eine eigene Kanalanzahl, genau wie jeder
+andere Mischer:
 
 ![Kanalanzahl Gas](../assets/model-mixes-thr-ch-count.png)
 
 !!! note "Gas-Verriegelung"
     Ethos verlangt, dass der Eingang des Gas-Mischers unabhängig von den
-    Einstellungen für Gas-Abschaltung/Leerlaufsperre einmal -100 % durchläuft,
+    Einstellungen für Gasabschaltung bzw. -haltung einmal -100 % durchläuft,
     bevor scharfgeschaltet wird – ein über den Modellauswahl-Assistenten
     erstelltes Modell berücksichtigt dies bereits, von Hand erstellte
     Gas-Mischer sollten es ebenfalls tun.
@@ -152,10 +156,10 @@ dasselbe Ergebnis zu erzielen.
 
 ## Kanalweise Ansicht {: #per-channel-view }
 
-Sind viele Mischer auf denselben Ausgang gestapelt, lässt sich ihre
-Gesamtwirkung in der flachen Tabelle oben nur schwer erkennen. Wählt man einen
-Mischer aus und ruft **Nach Kanal anzeigen** auf, werden stattdessen alle
-Mischer, die einen Ausgang beeinflussen, gemeinsam gruppiert:
+Sind viele Mischer auf denselben Ausgang gelegt, lässt sich ihre Gesamtwirkung
+in der einfachen Tabelle oben nur schwer erkennen. Wählen Sie einen Mischer aus
+und rufen Sie **Nach Kanal anzeigen** auf, so werden stattdessen alle Mischer,
+die einen Ausgang beeinflussen, gemeinsam gruppiert:
 
 ![Zur Kanalansicht wechseln](../assets/model-mixes-chview-select.png)
 
@@ -164,17 +168,17 @@ Mischer, die einen Ausgang beeinflussen, gemeinsam gruppiert:
 ![Höhenruderkanal aufgeklappt](../assets/model-mixes-chview-elevator.png)
 
 Das Aufklappen der Übersichtszeile eines Kanals zeigt jeden daran beteiligten
-Mischer mit seinem aktuellen numerischen und grafischen Ausgangswert – nützlich,
-um genau zu prüfen, wie viel ein sekundärer Mischer (z. B. eine
-Klappen-Höhenruder-Kompensation) zusätzlich zum primären Knüppeleingang
+Mischer mit seiner aktuellen numerischen und grafischen Ausgabe – nützlich, um
+genau zu prüfen, wie viel ein zusätzlicher Mischer (z. B. eine
+Klappen-Höhenruder-Kompensation) über den primären Knüppeleingang hinaus
 beisteuert:
 
 ![Detail der Höhenruder-Kanalansicht](../assets/model-mixes-chview-elevator-channel.png)
 
 ![Höhenruderkanal, Mischer hervorgehoben](../assets/model-mixes-chview-elevator-channel-view.png)
 
-Das Auswählen eines Untermischers anstelle der Übersichtszeile öffnet dasselbe
-Kontextmenü wie in der flachen Tabelle (Bearbeiten, zurück zur Tabellenansicht
+Wählen Sie einen Untermischer anstelle der Übersichtszeile aus, so öffnet sich
+dasselbe Kontextmenü wie in der Tabelle (Bearbeiten, zurück zur Tabellenansicht
 wechseln, Löschen):
 
 ![Tabellenansicht aus der Kanalansicht wählen](../assets/model-mixes-chview-table-view-select.png)

@@ -2,165 +2,174 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Beispiel: Einfacher Flybarless-Heli
+# Beispiel für einen einfachen Flybarless Helikopter
 
-Eine grundlegende Konfiguration für einen Flybarless-Helikopter (FBL), am
-Beispiel eines Reglers wie dem Spirit. Anders als ein Flächenmodell ist ein
-Helikopter von Natur aus instabil — die FBL-Einheit verwendet Gyros
-(Drehrate) und Beschleunigungssensoren (Bewegung/Lage), um Korrekturen für
-Gier, Nick und Roll über einen abgestimmten PID-Regelkreis (Proportional-
-Integral-Differential) zu berechnen. Dabei werden Stabilität, Reaktions-
-freudigkeit und Überschwingen anhand der konkreten physikalischen und
-elektrischen Eigenschaften des jeweiligen Helikopters ausbalanciert.
+Grundlegende Konfiguration eines Flybarless-Hubschraubers (FBL), am
+Beispiel eines FBL-Reglers wie dem Spirit. Anders als ein Flächenmodell ist
+ein Hubschrauber von Natur aus instabil — die FBL-Einheit nutzt Kreisel
+(Drehrate um eine Achse) und Beschleunigungsmesser (Bewegung/Orientierung),
+um über einen abgestimmten PID-Regelkreis (Proportional Integral
+Derivative) die Korrekturen für Gieren, Nicken und Rollen zu berechnen.
+Dabei werden Stabilität, Reaktionsfähigkeit und Überschwingen anhand der
+physikalischen und elektrischen Eigenschaften des jeweiligen Hubschraubers
+gegeneinander abgewogen.
 
-Dieses Tutorial behandelt ausschließlich die Seite der
-**Senderprogrammierung** — für alles Weitere ziehen Sie die Dokumentation
-Ihrer FBL-Einheit heran; solide allgemeine Helikopterkenntnisse werden
-vorausgesetzt.
+Dieses Beispiel behandelt nur die **Funkprogrammierung** — den Rest des
+Setups entnehmen Sie bitte der Dokumentation Ihrer FBL-Einheit. Gute
+Kenntnisse der Hubschraubertechnik und -bedienung werden vorausgesetzt.
 
 !!! danger
-    Entfernen Sie aus Sicherheitsgründen vor Beginn die Rotorblätter.
+    Um Verletzungen zu vermeiden, entfernen Sie vor Beginn die Rotorblätter.
 
-## Schritt 1. Systemeinstellungen prüfen
+## Schritt 1. Bestätigen Sie die Systemeinstellungen
 
 Kanalreihenfolge **AETR**, **[Erste vier Kanäle
-fest](../system-setup/controls.md#first-four-channels-fixed)** **AUS**
-— Spirit-FBL-Einheiten erwarten die SBUS-Kanäle genau in dieser
-Reihenfolge (obwohl sie intern in ihrer eigenen Konfiguration TAER
-verwenden). Registrieren Sie den Empfänger (bei ACCESS) und binden Sie ihn
-über [RF System](../model-setup/rf-system.md).
+fest](../system-setup/controls.md#first-four-channels-fixed)** auf **AUS**
+— die Spirit FBL-Einheiten erwarten, dass die SBUS-Kanäle genau in dieser
+Reihenfolge angeordnet sind, obwohl sie bei der eigenen Einrichtung
+intern TAER verwenden. Registrieren Sie den Empfänger (wenn Ihr Empfänger
+ACCESS ist) und binden Sie ihn über die Funktion
+[HF-System](../model-setup/rf-system.md).
 
-## Schritt 2. Benötigte Servos/Kanäle ermitteln
+## Schritt 2. Identifizieren Sie die benötigten Servos/Kanäle
 
 | Funktion | Kanal |
 |---|---|
 | Roll (Querruder) | — |
-| Nick (Höhenruder) | — |
+| Pitch (Höhenruder) | — |
 | Gas | — |
-| Gier (Seitenruder) | — |
-| Gyro-Gain | 5 |
-| Kollektivpitch | 6 |
-| Einstellungsbank | 7 |
-| Rescue | 8 |
+| Gieren (Seitenruder) | — |
+| Kreiselverstärkung | 5 |
+| Kollektiver Pitch | 6 |
+| Einstellungen Bank | 7 |
+| Rettung | 8 |
 
-## Schritt 3. Neues Modell anlegen
+## Schritt 3. Erstellen Sie ein neues Modell
 
-![Heli-Modell anlegen](../assets/tut-heli-eg-wiz-create-heli.png)
+![Heli-Modell erstellen](../assets/tut-heli-eg-wiz-create-heli.png)
 
 Legen Sie in der [Modellauswahl](../model-setup/model-select.md) eine
-Heli-Kategorie an bzw. wählen Sie eine aus, starten Sie den Assistenten und
-wählen Sie **Flybarless**:
+Kategorie „Heli“ an bzw. wählen Sie sie aus, starten Sie den Assistenten
+zur Modellerstellung und wählen Sie **Flybarless**:
 
 ![FBL-Auswahl](../assets/tut-heli-eg-wiz-fbl.png)
 ![Modellname](../assets/tut-heli-eg-wiz-name.png)
 
-Vergeben Sie einen Namen und wählen Sie ein Bild.
+Definieren Sie einen Namen und ein Modellbild für Ihr Modell.
 
-## Schritt 4. Mischer prüfen und konfigurieren
+## Schritt 4. Überprüfung und Konfiguration der Mischer
 
 ![Mischer-Übersicht](../assets/tut-heli-eg-mixes.png)
 
-Der Assistent erstellt Querruder/Höhenruder/Gas/Seitenruder in
-AETR-Reihenfolge, Pitch auf Kanal 6 und FBL-Bank auf Kanal 7:
+Der Assistent erstellt Querruder, Höhenruder, Gas und Seitenruder in der
+AETR-Sequenz, Pitch auf Kanal 6 und FBL Bank auf Kanal 7:
 
 ![Pitch-Mischer](../assets/tut-heli-eg-mixes-pitch.png)
 
-Prüfen Sie, ob Kanal 6 dem Kollektivpitch zugeordnet ist. Zwei weitere
-Kanäle müssen manuell als [Freie
-Mischer](../model-setup/mixes.md#mix-libraries) hinzugefügt werden:
-**Gyro-Gain** (Kanal 5) und **Rescue/Stabi** (Kanal 8).
+Bestätigen Sie, dass auf Kanal 6 der kollektive Pitch liegt. Zwei weitere
+Kanäle müssen manuell mit [Freien
+Mischern](../model-setup/mixes.md#mix-libraries) hinzugefügt werden:
+**Kreiselverstärkung** (Kanal 5) und **Rettung/Stabi** (Kanal 8).
 
-**Querruder/Höhenruder/Seitenruder** — hier ist nichts zu ergänzen; Raten
-und Expo sind Aufgabe der FBL-Einheit, der Sender gibt lediglich ein
-sauberes lineares Signal weiter.
+**Querruder / Höhenruder / Seitenruder** — auf diesen Kanälen muss nichts
+hinzugefügt werden; Gewichtungen und Expo werden von der FBL-Einheit
+gehandhabt, so dass der Sender nur die linearen Steuereingänge weitergibt.
 
 ![Querruder-Mischer](../assets/tut-heli-eg-mixes-ail.png)
 
-**Kollektivpitch** — eine gerade lineare Kurve; prüfen Sie lediglich den
-Ausgangskanal (normalerweise 6). Wie oben werden Raten/Expo von der
-FBL-Einheit verarbeitet, nicht hier.
+**Kollektiver Pitch** — einfach eine lineare Kurve; Sie müssen nur den
+Ausgangskanal (normalerweise Kanal 6) bestätigen. Wie oben werden
+Gewichtung und Expo von der FBL-Einheit übernommen, nicht hier.
 
-**FBL-Bank** — die drei Einstellungsbänke des Spirit (unterschiedliche
-Flugstile, Sensor-Gains bei verschiedenen Drehzahlen oder
-Beginner/Acro/3D — oder schlicht Tuning-Presets), zugewiesen auf einen
-3-Stufen-Schalter, z. B. SE:
+**FBL Bank** — die drei Einstellungsbänke des Spirit (verschiedene
+Flugstile, unterschiedliche Sensorverstärkungen für niedrige oder hohe
+Drehzahlen oder für Anfänger, Acro und 3D — alternativ auch nur zum
+Abstimmen Ihrer Einstellungen), zugewiesen auf einen 3-Positionen-Schalter,
+z. B. SE:
 
 ![Bank-Mischer](../assets/tut-heli-eg-mixes-bank.png)
 
-**Gyro-Gain** — als Freien Mischer nach dem letzten Kanal hinzufügen. Der
-Gain ist typischerweise ein fester Wert: Setzen Sie die **Quelle** auf
-Spezialwert 0, stellen Sie den Gain über den **Offset** ein (Feinabstimmung
-später im Flug) und geben Sie ihn auf Kanal 5 aus:
+**Kreiselverstärkung** — als freien Mischer nach dem letzten Kanal
+hinzufügen. Die Kreiselverstärkung ist in der Regel ein fester Wert: Setzen
+Sie die **Quelle** auf Spezial > Wert = 0 und wählen Sie dann den
+gewünschten Verstärkungswert mit **Offset** (der endgültige Wert muss
+eventuell im Flug ermittelt werden). Weisen Sie als Ausgangskanal 5 zu:
 
-![Gyro-Gain-Mischer](../assets/tut-heli-eg-mixes-gyro-gain.png)
+![Kreiselverstärkungs-Mischer](../assets/tut-heli-eg-mixes-gyro-gain.png)
 
 ### Flugphasen konfigurieren
 
 ![Flugphasen](../assets/tut-heli-eg-flight-modes.png)
 
-Drei [Flugphasen](../model-setup/flight-modes.md): Benennen Sie die
-Standardphase in **Normal** um und fügen Sie **Idle Up 1**/**Idle Up 2**
-auf Schalter SD hinzu.
+Drei [Flugphasen](../model-setup/flight-modes.md): Benennen Sie den
+Standard-Flugmodus in **Normal** um und fügen Sie **Idle Up 1** und
+**Idle Up 2** am Schalter SD hinzu.
 
-### Gasmischer konfigurieren
+### Konfigurieren Sie den Gasmischer
 
 Drei Gaskurven, eine je Flugphase, jeweils als [benutzerdefinierte
 Kurve](../model-setup/curves.md):
 
-- **Normal** — Hochlauf/Abheben: beginnt bei −100 % (Motor aus) und steigt
-  gleichmäßig an. Eine 7-Punkt-Kurve mit aktiviertem **Smooth** funktioniert
-  gut; die genauen Werte müssen im Flug abgestimmt werden.
+- **Normal** — für das Hochfahren und den Start: Die Kurve beginnt bei
+  −100 % (Motor aus) und steigt dann gleichmäßig an. Eine 7-Punkte-Kurve
+  mit „Glätten ein“ hat sich bewährt; die endgültigen Kurvenwerte müssen
+  möglicherweise im Flug ermittelt werden.
 
-  ![Normal-Kurve](../assets/tut-heli-eg-curves-normal.png)
+  ![Normalmodus-Kurve](../assets/tut-heli-eg-curves-normal.png)
 
-- **Idle Up 1** — allgemeines Fliegen: eine geradlinige Kurve für eine
-  konstante Gasstellung, die die Rotordrehzahl konstant hält; die Bewegung
-  entsteht stattdessen über Kollektivpitch, Querruder (Roll) und Höhenruder
-  (Nick). Halten Sie den Übergang von Normal weich — kein großer Sprung.
-  (Die meisten FBL-Einheiten bieten zudem eine **Governor**-Funktion, die
-  die Rotordrehzahl auch bei aggressiven Manövern konstant hält — siehe das
-  Handbuch der FBL-Einheit.)
+- **Idle Up 1** — für die meisten Flüge: Die geradlinige Kurve bedeutet
+  eine konstante Gaseinstellung, um die Rotoren mit gleichmäßiger Drehzahl
+  drehen zu lassen; die Bewegung des Hubschraubers wird stattdessen durch
+  den kollektiven Pitch, das Querruder (Roll) und das Höhenruder (Nick)
+  gesteuert. Achten Sie darauf, dass es keinen großen Sprung zwischen
+  Normal und Drehzahl 1 gibt, damit der Übergang fließend erfolgt. (Die
+  meisten FBL-Geräte verfügen zudem über eine **Governor**-Funktion, die
+  die Rotordrehzahl auch bei aggressiven Flugmanövern konstant hält —
+  Einzelheiten dazu finden Sie im Handbuch der FBL-Einheit.)
 
-  ![Idle-Up-1-Kurve](../assets/tut-heli-eg-curves-iup1.png)
+  ![Kurve Drehzahl 1](../assets/tut-heli-eg-curves-iup1.png)
 
-- **Idle Up 2** — aggressives Fliegen (Kunstflug, 3D); ebenfalls im Flug
-  abzustimmen.
+- **Idle Up 2** — für aggressivere Flüge (Kunstflug und 3D); der endgültige
+  Wert muss ebenfalls im Flug ermittelt werden.
 
-  ![Idle-Up-2-Kurve](../assets/tut-heli-eg-curves-iup2.png)
+  ![Kurve Drehzahl 2](../assets/tut-heli-eg-curves-iup2.png)
 
-![Gaskurven in den Mischern](../assets/tut-heli-eg-mixes-thr-curves.png)
+![Gaskurven im Mischer](../assets/tut-heli-eg-mixes-thr-curves.png)
 
-**Gas-Abschaltung** — weisen Sie z. B. Schalter SG-oben mit aktiviertem
-**Sticky** zu: Das Umlegen von SG nach oben schaltet das Gas sofort ab, und
-(wegen Sticky) kann es erst wieder scharfgeschaltet werden, wenn der
-Gasknüppel zuvor auf niedrig/aus steht.
+**Gasabschaltung** — weisen Sie z. B. den Schalter SG↑ zu und schalten Sie
+**FlipFlop** ein: Sobald Sie den Schalter nach oben bringen, wird der
+Gashebel abgeschaltet, und aufgrund der FlipFlop-Einstellung kann er nur
+neu aktiviert werden, wenn sich der Gasknüppel zuvor in der unteren
+Position (aus) befindet.
 
-![Gas-Abschaltung](../assets/tut-heli-eg-mixes-thr-cut.png)
+![Gasabschaltung](../assets/tut-heli-eg-mixes-thr-cut.png)
 
-**Rescue/Stabi** — analog zuweisen, z. B. auf Schalter SA und Kanal 8.
+**Rettung/Stabi** — in ähnlicher Weise zuweisen, z. B. dem Schalter SA auf
+Kanal 8.
 
 ![Fertige Mischer](../assets/tut-heli-eg-mixes-final.png)
 
 ## Schritt 5. FBL-Einrichtung
 
-1. **Konfigurationssoftware der FBL-Einheit installieren** — z. B. Spirit
-   Settings auf einem PC.
-2. **Empfänger gemäß Anschlussplan mit der FBL-Einheit verbinden** —
-   typischerweise SBUS Out des Empfängers an den RUD-Port der FBL-Einheit
-   (einige Spirit-Modelle benötigen einen SBUS-Adapter) oder alternativ über
-   F.Port1/FBUS.
-3. **FBL-Einheit mit dem PC verbinden** — per Kabel oder Bluetooth, gemäß
-   deren Handbuch.
+1. **Installieren Sie das FBL-Konfigurationsprogramm** — z. B. die Spirit
+   Settings-Software auf Ihrem PC.
+2. **Verbinden Sie Ihren Empfänger mit dem FBL-Gerät** gemäß dessen
+   Verkabelungsplan — üblicherweise den SBUS-Ausgang des Empfängers mit dem
+   RUD-Anschluss der FBL-Einheit (beachten Sie, dass einige Spirit-Modelle
+   einen SBUS-Adapter benötigen), alternativ über F.Port1 oder FBUS.
+3. **Verbinden Sie das FBL-Gerät mit Ihrem PC** — entweder mit Kabel oder
+   über Bluetooth, gemäß dessen Handbuch.
 
    !!! danger
-       Schließen Sie noch keine Servos an.
+       Schließen Sie noch keine Servos an!
 
-4. **FBL-Firmware aktualisieren**, falls erforderlich, über den Update-Tab
-   der Software.
-5. **Allgemeine Einrichtung** (Tab „General“ in Spirit Settings):
-   - Empfängertyp: **Futaba SBUS** oder **FrSky F.Port**, je nach Bedarf,
-     anschließend neu starten.
-   - Kanalzuordnung (mit AETR aus dem Assistenten):
+4. **Aktualisieren Sie ggf. die FBL-Firmware** auf die neueste Version
+   (siehe Registerkarte „Update“ im Einstellungstool).
+5. **Allgemeine Einstellungen** (Registerkarte „Allgemein“ in der
+   Spirit-Einstellungssoftware):
+   - Empfängertyp: **Futaba SBUS** oder **FrSky F.Port** (je nach Bedarf),
+     anschließend das System neu starten.
+   - Kanalzuordnung (bei AETR aus dem Assistenten):
 
      | Funktion | Kanal |
      |---|---|
@@ -168,37 +177,40 @@ Gasknüppel zuvor auf niedrig/aus steht.
      | Querruder | 2 |
      | Höhenruder | 3 |
      | Seitenruder | 4 |
-     | Gyro | 5 |
+     | Kreisel | 5 |
      | Pitch | 6 |
      | Bank | 7 |
-     | Rescue/Stabi | 8 |
+     | Rettung/Stabi | 8 |
 
-     (Diese Zuordnung ergibt sich daraus, wie die Spirit-Einheit die
-     Positionen im SBUS-Datenstrom interpretiert.)
+     (Diese Reihenfolge ergibt sich daraus, dass die Spirit-Einheit
+     Annahmen über die Position der Kanäle im SBUS-Datenstrom macht.)
 
-6. **Kanalgrenzen** (Tab „Diagnostic“) — die FBL-Einheit benötigt
-   kalibrierte Kanalgrenzen des Senders sowie überprüfte Mittelstellungen:
+6. **Kanal-Grenzwerte** (Registerkarte „Diagnose“) — für den
+   ordnungsgemäßen Betrieb der FBL-Einheit müssen die Senderkanalgrenzen
+   kalibriert und die Mitten überprüft werden:
 
-   - Setzen Sie zunächst sämtliche Subtrimmungen und Trimmungen am Sender
-     auf null.
-   - Zentrieren Sie den Kollektivpitch-Knüppel so, dass er in den
-     [Ausgängen](../model-setup/outputs.md) exakt 1500 µs anzeigt.
-   - Schalten Sie die FBL-Einheit ein und prüfen Sie, ob
-     Querruder/Höhenruder/Pitch/Seitenruder im Tab „Diagnostic“ jeweils 0 %
-     anzeigen (die FBL-Einheit erkennt die Neutralstellung bei jeder
-     Initialisierung automatisch).
-   - Bewegen Sie jedes Steuerorgan bis an seine Endpunkte und passen Sie die
-     zugehörigen Werte **Min**/**Max** in den Ausgängen so an, dass der Tab
-     „Diagnostic“ exakt +100 %/−100 % anzeigt; prüfen Sie dabei auch, ob die
-     Balkenrichtung mit der Knüppelrichtung übereinstimmt.
+   - Stellen Sie zunächst am Sender sicher, dass alle Subtrimmungen und
+     Trimmungen auf Null gestellt sind.
+   - Stellen Sie den kollektiven Pitch auf die mittlere Knüppelposition
+     ein, um in den [Ausgängen](../model-setup/outputs.md) exakt 1500 µs zu
+     erhalten.
+   - Schalten Sie die FBL-Einheit ein und überprüfen Sie, ob die Quer-,
+     Höhen-, Nick- und Seitenruderkanäle auf der Registerkarte „Diagnose“
+     jeweils auf 0 % zentriert sind (das FBL-Gerät erkennt die
+     Neutralstellung automatisch bei jeder Initialisierung).
+   - Bewegen Sie die Knüppel an ihre Grenzen und passen Sie die
+     entsprechenden Werte **Min**/**Max** auf der Seite „Ausgänge“ für jeden
+     Kanal so an, dass die Registerkarte „Diagnose“ exakt +100 % bzw.
+     −100 % anzeigt. Die Bewegungsrichtung der Balken muss ebenfalls mit
+     den Knüppeln übereinstimmen.
 
    !!! warning
-       Verwenden Sie auf diesen Kanälen niemals Subtrimmung oder Trimmung —
-       die Spirit-FBL-Einheit interpretiert diese als Steuerbefehle, nicht
-       als Kalibrierung.
+       Verwenden Sie für diese Kanäle niemals Subtrim- oder Trimmfunktionen
+       Ihres Senders — die Spirit FBL-Einheit betrachtet diese als
+       Eingangsbefehl und nicht als Kalibrierung.
 
-7. Passen Sie den **Offset** des Gyro-Gain-Mischers an, um Heading Lock zu
-   erreichen.
+7. Passen Sie den **Offset**-Wert im Kreiselverstärkungs-Mischer an, um
+   sicherzustellen, dass Heading Lock erreicht wird.
 
-Damit ist die Senderseite vollständig konfiguriert — fahren Sie mit der
-weiteren Einrichtung gemäß dem Handbuch der FBL-Einheit fort.
+Danach sollte alles in Bezug auf den Sender konfiguriert sein — fahren Sie
+mit dem Rest des Setups gemäß dem Handbuch der FBL-Einheit fort.

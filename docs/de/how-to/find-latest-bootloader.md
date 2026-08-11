@@ -4,10 +4,10 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 # Aktuellen Bootloader oder andere Komponenten finden
 
-Ethos-Firmware-Releases enthalten eine Datei `components.json`, die die
-aktuelle Version jeder Komponente je Sender auflistet. Damit lässt sich
-vor dem Flashen prüfen, ob eine bestimmte Bootloader-/Firmware-/Audio-/
-System-Dateien-Version tatsächlich aktuell ist.
+Zu jedem Ethos-Firmware-Release wird eine Datei `components.json`
+veröffentlicht, die die aktuelle Version jeder Komponente je Sender auflistet.
+Damit lässt sich vor dem Flashen prüfen, ob eine bestimmte Version von
+Bootloader, Firmware, Audiodateien oder Systemdateien tatsächlich aktuell ist.
 
 !!! note "Screenshots ausstehend"
     Für diese Seite liegen noch keine Simulator-Screenshots vor — siehe [Screenshot
@@ -29,15 +29,15 @@ System-Dateien-Version tatsächlich aktuell ist.
    }
    ```
 
-   (Nur ein Momentaufnahme-Beispiel — prüfen Sie für die tatsächlichen
+   (Nur eine Momentaufnahme als Beispiel — prüfen Sie für die tatsächlichen
    Versionsnummern immer die Datei des *aktuellen* Releases.)
 
 4. Lesen Sie die Version der benötigten Komponente ab — im obigen
    Beispiel ist der neueste Bootloader für die X20-Familie `1.4.15`.
 
-Unter [Dateimanager](../system-setup/file-manager.md#top-level-folders) ist
-beschrieben, wo die heruntergeladene Firmware-Datei abgelegt wird, und unter [USB-Verbindungsmodi](../getting-started/usb-connection-modes.md#bootloader-mode),
-wie der Sender zum Flashen in den Bootloader-Modus versetzt wird — oder
-verwenden Sie [Ethos
-Suite](../ethos-suite/index.md), das Versionsprüfung und Flashen
+Im Abschnitt [Dateimanager](../system-setup/file-manager.md#top-level-folders)
+ist beschrieben, wo die heruntergeladene Firmware-Datei abgelegt wird, und unter [USB-Verbindungsmodi](../getting-started/usb-connection-modes.md#bootloader-mode),
+wie Sie den Sender zum Flashen in den Bootloader-Modus schalten — oder
+verwenden Sie die [Ethos
+Suite](../ethos-suite/index.md), die die Versionsprüfung und das Flashen
 automatisch übernimmt.
