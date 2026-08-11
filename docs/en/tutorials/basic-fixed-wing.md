@@ -61,7 +61,7 @@ The wizard has already built ailerons (channels 1 and 5), elevator,
 throttle, rudder, and flap mixes (flaps show `---` — no source assigned
 yet).
 
-### Ailerons
+### Ailerons {: #ailerons }
 
 ![Aileron mix](../assets/tut-fw-eg-mixes-ail-mix.png)
 ![Edit aileron mix](../assets/tut-fw-eg-mixes-ail-edit.png)

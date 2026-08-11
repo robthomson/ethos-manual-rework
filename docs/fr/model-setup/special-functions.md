@@ -31,7 +31,7 @@ existante pour **Modifier**/**Déplacer**/**Copier-coller**/**Cloner**/
   sélectionné. Les fonctions globales sont enregistrées dans `radio.bin`,
   les fonctions locales dans le fichier du modèle.
 
-## Actions
+## Actions {: #actions }
 
 **Réinitialisation** — réinitialise les **Données de vol** (télémétrie +
 chronos), **Tous les chronos**, ou **Toute la télémétrie**.

@@ -158,6 +158,46 @@ GLOSSARIES: dict[str, str] = {
 - Throttle hold -> Maintien gaz
 - Idle -> Ralenti
 """.strip(),
+    "de": """
+- Getting Started -> Erste Schritte
+- Model Setup -> Modellkonfiguration
+- System Setup -> Systemeinstellungen
+- Displays -> Anzeigen
+- Tutorials -> Tutorials (kept)
+- How-To Guides -> Anleitungen
+- Lua Scripts -> Lua-Skripte
+- Radio Notes -> Senderhinweise
+- Home -> Start
+- Model Select -> Modellauswahl
+- Configure Screens -> Bildschirme konfigurieren
+- Checklist -> Checkliste
+- Ailerons -> Querruder
+- Elevator -> Höhenruder
+- Rudder -> Seitenruder
+- Throttle -> Gas
+- Mix / Mixes -> Mischer / Mischungen
+- Free mix -> Freier Mischer
+- Outputs -> Ausgänge
+- Timers -> Timer (kept)
+- Trim / Trims -> Trimmung
+- Flight mode -> Flugphase
+- Logical switch -> Logischer Schalter
+- Special function -> Sonderfunktion
+- Switch -> Schalter
+- Source -> Quelle
+- Sensor -> Sensor (kept)
+- Receiver -> Empfänger
+- Widget -> Widget (kept)
+- Screen -> Bildschirm
+- Stick -> Steuerknüppel
+- Potentiometer / pot -> Potentiometer
+- Slider -> Schieberegler
+- Channel -> Kanal
+- Differential -> Differential (kept)
+- Throttle cut -> Gas-Abschaltung
+- Throttle hold -> Leerlaufsperre
+- Idle -> Leerlauf
+""".strip(),
 }
 
 

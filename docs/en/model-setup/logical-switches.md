@@ -118,7 +118,7 @@ satisfied. **During** is a `[t1:t2]` pair controlling exactly when:
 - **Pulse (both t1 and t2 set)** — fires only if Trigger ON goes
   False→True→False within that window (e.g. between 2s and 5s later).
 
-## Shared parameters
+## Shared parameters {: #shared-parameters }
 
 ![Common parameters](../assets/model-lsw-common-parameters.png)
 

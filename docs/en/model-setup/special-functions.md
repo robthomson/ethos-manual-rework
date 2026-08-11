@@ -24,7 +24,7 @@ with **+**; tap an existing one for **Edit**/**Move**/**Copy-paste**/
   from every model except the one currently selected. Global functions
   live in `radio.bin`; local ones live in the model file.
 
-## Actions
+## Actions {: #actions }
 
 **Reset** — resets **Flight data** (telemetry + timers), **All timers**,
 or **Whole telemetry**.

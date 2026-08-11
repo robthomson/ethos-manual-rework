@@ -67,7 +67,7 @@ L'assistant a déjà créé les mixages d'ailerons (voies 1 et 5), de
 profondeur, de gaz, de dérive et de volets (les volets affichent `---` —
 aucune source attribuée pour l'instant).
 
-### Ailerons
+### Ailerons {: #ailerons }
 
 ![Mixage ailerons](../assets/tut-fw-eg-mixes-ail-mix.png)
 ![Modifier le mixage ailerons](../assets/tut-fw-eg-mixes-ail-edit.png)
