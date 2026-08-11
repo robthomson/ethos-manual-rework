@@ -1,0 +1,122 @@
+site_name: Ethos Manual
+site_description: User manual for the FrSky Ethos radio firmware
+repo_url: https://github.com/robthomson/ethos-manual-rework
+repo_name: ethos-manual-rework
+edit_uri: edit/main/docs/
+docs_dir: docs
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: en/index.md
+  - Getting Started:
+      - en/getting-started/index.md
+      - Main Views: en/getting-started/main-views.md
+      - User Interface & Navigation: en/getting-started/user-interface-and-navigation.md
+      - USB Connection Modes: en/getting-started/usb-connection-modes.md
+  - System Setup:
+      - en/system-setup/index.md
+      - File Manager: en/system-setup/file-manager.md
+      - Alerts: en/system-setup/alerts.md
+      - Date & Time: en/system-setup/date-and-time.md
+      - General: en/system-setup/general.md
+      - Battery: en/system-setup/battery.md
+      - Hardware: en/system-setup/hardware.md
+      - Controls: en/system-setup/controls.md
+      - Devices: en/system-setup/devices.md
+      - Information: en/system-setup/information.md
+  - Model Setup:
+      - en/model-setup/index.md
+      - Model Select: en/model-setup/model-select.md
+      - Model Edit: en/model-setup/model-edit.md
+      - Flight Modes: en/model-setup/flight-modes.md
+      - Mixes: en/model-setup/mixes.md
+      - Outputs: en/model-setup/outputs.md
+      - Timers: en/model-setup/timers.md
+      - Trims: en/model-setup/trims.md
+      - Curves: en/model-setup/curves.md
+      - Logical Switches: en/model-setup/logical-switches.md
+      - Special Functions: en/model-setup/special-functions.md
+      - Variables: en/model-setup/variables.md
+      - Trainer: en/model-setup/trainer.md
+      - Telemetry: en/model-setup/telemetry.md
+      - Checklist: en/model-setup/checklist.md
+      - Lua Scripts (Model): en/model-setup/lua-scripts.md
+  - Displays:
+      - en/displays/index.md
+      - Additional Displays: en/displays/additional-displays.md
+      - Custom Widgets: en/displays/custom-widgets.md
+  - Lua Scripts:
+      - en/lua-scripts/index.md
+      - Lua Interpreter: en/lua-scripts/lua-interpreter.md
+      - Ethos Lua Documentation: en/lua-scripts/ethos-lua-documentation.md
+      - Example Script Locations: en/lua-scripts/example-script-locations.md
+      - Configuration Limits: en/lua-scripts/configuration-limits.md
+      - Basic Widget Layout: en/lua-scripts/basic-widget-layout.md
+  - Tutorials:
+      - en/tutorials/index.md
+      - Initial Radio Setup: en/tutorials/initial-radio-setup.md
+      - Basic Fixed-Wing Example: en/tutorials/basic-fixed-wing.md
+      - Basic Flying-Wing (Elevon) Example: en/tutorials/basic-flying-wing.md
+      - Basic Flybarless Heli Example: en/tutorials/basic-flybarless-heli.md
+  - How-To Guides:
+      - en/how-to/index.md
+      - Low Battery Voltage Warning: en/how-to/low-battery-warning.md
+      - Battery Capacity Warning: en/how-to/battery-capacity-warning.md
+      - Butterfly (Crocodile) Mixer: en/how-to/butterfly-mixer.md
+      - In-Flight Adjustable Compensation Curve: en/how-to/in-flight-compensation-curve.md
+  - Radio Notes:
+      - en/radio-notes/index.md
+      - X18S: en/radio-notes/x18s.md
+      - X20 Pro / X20 Pro AW: en/radio-notes/x20-pro-and-aw.md
+  - Ethos Suite:
+      - en/ethos-suite/index.md
+      - Migration: en/ethos-suite/migration.md
+      - Operation: en/ethos-suite/operation.md
+  - Reference:
+      - en/reference/index.md
+      - Toolbars: en/reference/toolbars.md
+  - Contributing:
+      - en/contributing/index.md
+      - Screenshot Pipeline: en/contributing/screenshot-pipeline.md
