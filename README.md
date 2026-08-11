@@ -35,5 +35,7 @@ simulator.
 ## Deployment
 
 Pushing to `main` builds the site and publishes it to the `gh-pages` branch
-via `.github/workflows/deploy.yml`. No custom domain is configured yet, so the
-site is served from GitHub Pages' default URL for this repo.
+via `.github/workflows/deploy.yml`, served at
+[manual.rt-rc.com](https://manual.rt-rc.com) — a placeholder domain used
+until this project moves to the official FrSky repo, at which point it'll
+be repointed.

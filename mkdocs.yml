@@ -1,5 +1,6 @@
 site_name: Ethos Manual
 site_description: User manual for the FrSky Ethos radio firmware
+site_url: https://manual.rt-rc.com/
 repo_url: https://github.com/robthomson/ethos-manual-rework
 repo_name: ethos-manual-rework
 edit_uri: edit/main/docs/
