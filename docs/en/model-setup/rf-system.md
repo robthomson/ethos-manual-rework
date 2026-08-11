@@ -135,7 +135,7 @@ failover), so control can hop between receivers frame to frame as needed.
 4. Confirm its green LED is on — it's now listed as the redundant
    receiver.
 
-## Failsafe
+## Failsafe {: #failsafe }
 
 Failsafe data is resent from the transmitter roughly every 10 seconds; on
 TD/TW/AP/AP Plus receivers it's also saved receiver-side, so it survives

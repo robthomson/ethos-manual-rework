@@ -37,6 +37,15 @@ import sys
 import time
 from pathlib import Path
 
+# Locale names/glossaries include non-Latin scripts (e.g. Chinese) that
+# don't exist in the Windows console's default codepage (cp1252) --
+# without this, printing them crashes with UnicodeEncodeError partway
+# through a run. Safe on non-Windows too (reconfigure is a no-op there
+# since stdout is already UTF-8).
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 try:
     import anthropic
 except ImportError:
@@ -197,6 +206,170 @@ GLOSSARIES: dict[str, str] = {
 - Throttle cut -> Gas-Abschaltung
 - Throttle hold -> Leerlaufsperre
 - Idle -> Leerlauf
+""".strip(),
+    "es": """
+- Getting Started -> Primeros pasos
+- Model Setup -> Configuración del modelo
+- System Setup -> Configuración del sistema
+- Displays -> Pantallas
+- Tutorials -> Tutoriales
+- How-To Guides -> Guías prácticas
+- Lua Scripts -> Scripts Lua
+- Radio Notes -> Notas de la emisora
+- Home -> Inicio
+- Model Select -> Selección de modelo
+- Configure Screens -> Configurar pantallas
+- Checklist -> Lista de verificación
+- Ailerons -> Alerones
+- Elevator -> Profundidad
+- Rudder -> Dirección
+- Throttle -> Acelerador
+- Mix / Mixes -> Mezcla / Mezclas
+- Free mix -> Mezcla libre
+- Outputs -> Salidas
+- Timers -> Temporizadores
+- Timer -> Temporizador
+- Trim / Trims -> Trim (kept)
+- Flight mode -> Fase de vuelo
+- Logical switch -> Interruptor lógico
+- Special function -> Función especial
+- Switch -> Interruptor
+- Source -> Fuente
+- Sensor -> Sensor (kept)
+- Receiver -> Receptor
+- Widget -> Widget (kept)
+- Screen -> Pantalla
+- Stick -> Stick (kept)
+- Potentiometer / pot -> Potenciómetro
+- Slider -> Deslizador
+- Channel -> Canal
+- Differential -> Diferencial
+- Throttle cut -> Corte de gas
+- Throttle hold -> Retención de gas
+- Idle -> Ralentí
+""".strip(),
+    "it": """
+- Getting Started -> Per iniziare
+- Model Setup -> Configurazione del modello
+- System Setup -> Configurazione di sistema
+- Displays -> Display
+- Tutorials -> Tutorial
+- How-To Guides -> Guide pratiche
+- Lua Scripts -> Script Lua
+- Radio Notes -> Note sulla radio
+- Home -> Home (kept)
+- Model Select -> Selezione modello
+- Configure Screens -> Configura schermate
+- Checklist -> Checklist (kept)
+- Ailerons -> Alettoni
+- Elevator -> Profondità
+- Rudder -> Timone
+- Throttle -> Gas
+- Mix / Mixes -> Mix (kept)
+- Free mix -> Mix libero
+- Outputs -> Uscite
+- Timers -> Timer (kept)
+- Timer -> Timer (kept)
+- Trim / Trims -> Trim (kept)
+- Flight mode -> Fase di volo
+- Logical switch -> Interruttore logico
+- Special function -> Funzione speciale
+- Switch -> Interruttore
+- Source -> Sorgente
+- Sensor -> Sensore
+- Receiver -> Ricevitore
+- Widget -> Widget (kept)
+- Screen -> Schermata
+- Stick -> Stick (kept)
+- Potentiometer / pot -> Potenziometro
+- Slider -> Slider (kept)
+- Channel -> Canale
+- Differential -> Differenziale
+- Throttle cut -> Taglio gas
+- Throttle hold -> Blocco gas
+- Idle -> Minimo
+""".strip(),
+    "pt-BR": """
+- Getting Started -> Primeiros passos
+- Model Setup -> Configuração do modelo
+- System Setup -> Configuração do sistema
+- Displays -> Telas
+- Tutorials -> Tutoriais
+- How-To Guides -> Guias práticos
+- Lua Scripts -> Scripts Lua
+- Radio Notes -> Notas do rádio
+- Home -> Início
+- Model Select -> Seleção de modelo
+- Configure Screens -> Configurar telas
+- Checklist -> Lista de verificação
+- Ailerons -> Aileron (kept)
+- Elevator -> Profundor
+- Rudder -> Leme
+- Throttle -> Acelerador
+- Mix / Mixes -> Mixagem / Mixagens
+- Free mix -> Mixagem livre
+- Outputs -> Saídas
+- Timers -> Temporizadores
+- Timer -> Temporizador
+- Trim / Trims -> Trim (kept)
+- Flight mode -> Fase de voo
+- Logical switch -> Interruptor lógico
+- Special function -> Função especial
+- Switch -> Interruptor
+- Source -> Fonte
+- Sensor -> Sensor (kept)
+- Receiver -> Receptor
+- Widget -> Widget (kept)
+- Screen -> Tela
+- Stick -> Stick (kept)
+- Potentiometer / pot -> Potenciômetro
+- Slider -> Slider (kept)
+- Channel -> Canal
+- Differential -> Diferencial
+- Throttle cut -> Corte de acelerador
+- Throttle hold -> Retenção de acelerador
+- Idle -> Marcha lenta
+""".strip(),
+    "zh": """
+- Getting Started -> 快速入门
+- Model Setup -> 模型设置
+- System Setup -> 系统设置
+- Displays -> 显示屏
+- Tutorials -> 教程
+- How-To Guides -> 操作指南
+- Lua Scripts -> Lua 脚本
+- Radio Notes -> 遥控器说明
+- Home -> 主页
+- Model Select -> 模型选择
+- Configure Screens -> 配置显示屏
+- Checklist -> 检查清单
+- Ailerons -> 副翼
+- Elevator -> 升降舵
+- Rudder -> 方向舵
+- Throttle -> 油门
+- Mix / Mixes -> 混控 / 混控设置
+- Free mix -> 自由混控
+- Outputs -> 输出
+- Timers -> 计时器
+- Timer -> 计时器
+- Trim / Trims -> 微调
+- Flight mode -> 飞行模式
+- Logical switch -> 逻辑开关
+- Special function -> 特殊功能
+- Switch -> 开关
+- Source -> 信号源
+- Sensor -> 传感器
+- Receiver -> 接收机
+- Widget -> 小组件
+- Screen -> 屏幕
+- Stick -> 摇杆
+- Potentiometer / pot -> 电位器
+- Slider -> 滑块
+- Channel -> 通道
+- Differential -> 差动
+- Throttle cut -> 油门切断
+- Throttle hold -> 油门保持
+- Idle -> 怠速
 """.strip(),
 }
 

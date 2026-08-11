@@ -36,7 +36,7 @@ Screenshots referenced from a page live next to it in `docs/en/assets/` and
 are just Markdown image links — no special syntax. See
 [Screenshot Pipeline](screenshot-pipeline.md) for how they're generated.
 
-### PR previews
+### PR previews {: #pr-previews }
 
 Every pull request against `main` gets its own live preview, built and
 deployed automatically by `.github/workflows/pr-preview.yml`: at
@@ -66,7 +66,7 @@ change — no CMS, no separate translation app. A first French pilot
 (a handful of pages) proved the mechanics out end to end; here's how it
 actually works.
 
-### Adding/updating a translation
+### Adding/updating a translation {: #addingupdating-a-translation }
 
 1. Branch, create/edit `docs/<locale>/<same path as the English page>`,
    translating the prose. Keep code-literal text (key names like `ENT`,
@@ -160,10 +160,14 @@ radio firmware, RC hobbyist audience) and a list of terms that must never
 be translated (physical key names, protocol names, brand names), the same
 technique used by the sister
 [`rotorflight-lua-ethos-suite`](https://github.com/rotorflight/rotorflight-lua-ethos-suite)
-repo's own `bin/i18n/auto-translate.py`. A glossary of terms established
-during the French pilot is baked in for `fr`; extend
-`GLOSSARIES` in the script the same way once another locale has a few
-pages translated and reviewed.
+repo's own `bin/i18n/auto-translate.py`. Each supported locale has its own
+glossary baked into `GLOSSARIES` in the script for terminology
+consistency from the first translated page.
+
+Bootstrapping an entirely new locale — from picking the right locale code
+through translation, screenshots, anchor fixes, and nav labels — is a
+repeatable process end to end: see [Adding a New
+Language](adding-a-language.md) for the full playbook.
 
 ### Nav labels (`nav_translations`)
 

@@ -161,7 +161,7 @@ besoins.
 4. Vérifiez que sa LED verte est allumée — il est désormais répertorié comme
    récepteur redondant.
 
-## Failsafe
+## Failsafe {: #failsafe }
 
 Les données de failsafe sont renvoyées par l'émetteur environ toutes les
 10 secondes ; sur les récepteurs TD/TW/AP/AP Plus, elles sont également

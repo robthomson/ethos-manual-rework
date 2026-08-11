@@ -164,7 +164,7 @@ Bedarf von Frame zu Frame zwischen den Empfängern wechseln kann.
 4. Prüfen Sie, ob dessen grüne LED leuchtet — er wird nun als redundanter
    Empfänger geführt.
 
-## Failsafe
+## Failsafe {: #failsafe }
 
 Die Failsafe-Daten werden vom Sender etwa alle 10 Sekunden erneut
 übertragen; bei TD-/TW-/AP-/AP-Plus-Empfängern werden sie zusätzlich im

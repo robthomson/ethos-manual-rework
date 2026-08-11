@@ -51,6 +51,326 @@ plugins:
           name: English
           default: true
           build: true
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            # Same rationale/mechanism as de/fr's blocks -- values
+            # here are lifted verbatim from each translated page's
+            # own H1 (docs/es/<path>); section-tab labels use
+            # the terms in scripts/translate.py's es glossary.
+            # Added once es reached full page coverage.
+            Home: Inicio
+            Getting Started: Primeros pasos
+            System Setup: Configuración del sistema
+            Model Setup: Configuración del modelo
+            Displays: Pantallas
+            Lua Scripts: Scripts Lua
+            Tutorials: Tutoriales
+            How-To Guides: Guías prácticas
+            Radio Notes: Notas de la emisora
+            Ethos Suite: Ethos Suite
+            Reference: Referencia
+            Contributing: Contribuir
+            Main Views: Vistas principales
+            User Interface & Navigation: Interfaz de usuario y navegación
+            USB Connection Modes: Modos de conexión USB
+            Emergency Mode: Modo de emergencia
+            File Manager: Administrador de archivos
+            Alerts: Alertas
+            Date & Time: Fecha y hora
+            General: General
+            Battery: Batería
+            Hardware: Hardware
+            Controls: Controles
+            Devices: Dispositivos
+            Information: Información
+            Model Select: Selección de modelo
+            Model Edit: Edición del modelo
+            Flight Modes: Fases de vuelo
+            Mixes: Mezclas
+            Outputs: Salidas
+            Timers: Temporizadores
+            Trims: Trims
+            RF System: Sistema RF
+            Curves: Curvas
+            Logical Switches: Interruptores lógicos
+            Special Functions: Funciones especiales
+            Variables: Variables
+            Trainer: Trainer
+            Telemetry: Telemetría
+            Checklist: Lista de verificación
+            Lua Scripts (Model): Scripts Lua (Modelo)
+            Additional Displays: Pantallas adicionales
+            Custom Widgets: Widgets personalizados
+            Lua Interpreter: Intérprete Lua
+            Ethos Lua Documentation: Documentación de Lua para Ethos
+            Example Script Locations: Ubicación de los scripts de ejemplo
+            Configuration Limits: Límites de configuración
+            Basic Widget Layout: Estructura básica de un widget
+            Initial Radio Setup: Configuración inicial de la emisora
+            Basic Fixed-Wing Example: Ejemplo básico de ala fija
+            Basic Flying-Wing (Elevon) Example: Ejemplo básico de ala volante (elevones)
+            Basic Flybarless Heli Example: Ejemplo básico de helicóptero flybarless
+            Low Battery Voltage Warning: Aviso de batería baja
+            Battery Capacity Warning: Aviso de capacidad de batería
+            SR8/SR10 Setup: Configuración de modelo y reordenación de canales para SR8/SR10
+            Butterfly (Crocodile) Mixer: Mezclador Butterfly (Crocodile)
+            Configure an FBUS System: Configurar un sistema FBUS
+            Test a Redundant Receiver: Probar una configuración de receptor redundante
+            User Defined Text Checklist: Lista de verificación con texto definido por el usuario
+            In-Flight Adjustable Compensation Curve: Curva de compensación ajustable en vuelo
+            Instant Take-Back (Trainer): Recuperación instantánea del control para la función Trainer
+            Find the Latest Bootloader: Encontrar el bootloader más reciente u otro componente
+            X18S: X18S
+            X20 Pro / X20 Pro AW: X20 Pro / X20 Pro AW
+            Migration: Migración
+            Operation: Funcionamiento
+            Toolbars: Barras de herramientas
+            Screenshot Pipeline: Flujo de generación de capturas de pantalla
+            Versioning: Versionado
+            # Translation Status intentionally omitted -- same
+            # reason as de/fr: generated, English-only maintainer page.
+        - locale: it
+          name: Italiano
+          build: true
+          nav_translations:
+            # Same rationale/mechanism as de/fr's blocks -- values
+            # here are lifted verbatim from each translated page's
+            # own H1 (docs/it/<path>); section-tab labels use
+            # the terms in scripts/translate.py's it glossary.
+            # Added once it reached full page coverage.
+            Home: Home
+            Getting Started: Per iniziare
+            System Setup: Configurazione di sistema
+            Model Setup: Configurazione del modello
+            Displays: Display
+            Lua Scripts: Script Lua
+            Tutorials: Tutorial
+            How-To Guides: Guide pratiche
+            Radio Notes: Note sulla radio
+            Ethos Suite: Ethos Suite
+            Reference: Riferimento
+            Contributing: Contribuire
+            Main Views: Viste principali
+            User Interface & Navigation: Interfaccia utente e navigazione
+            USB Connection Modes: Modalità di connessione USB
+            Emergency Mode: Modalità di emergenza
+            File Manager: Gestione file
+            Alerts: Avvisi
+            Date & Time: Data e ora
+            General: Generale
+            Battery: Batteria
+            Hardware: Hardware
+            Controls: Comandi
+            Devices: Dispositivi
+            Information: Informazioni
+            Model Select: Selezione modello
+            Model Edit: Modifica modello
+            Flight Modes: Fasi di volo
+            Mixes: Mix
+            Outputs: Uscite
+            Timers: Timer
+            Trims: Trim
+            RF System: Sistema RF
+            Curves: Curve
+            Logical Switches: Interruttori logici
+            Special Functions: Funzioni speciali
+            Variables: Variabili
+            Trainer: Trainer
+            Telemetry: Telemetria
+            Checklist: Checklist
+            Lua Scripts (Model): Script Lua (modello)
+            Additional Displays: Display aggiuntivi
+            Custom Widgets: Widget personalizzati
+            Lua Interpreter: Interprete Lua
+            Ethos Lua Documentation: Documentazione Lua di Ethos
+            Example Script Locations: Posizione degli script di esempio
+            Configuration Limits: Limiti di configurazione
+            Basic Widget Layout: Layout base di un widget
+            Initial Radio Setup: Configurazione iniziale della radio
+            Basic Fixed-Wing Example: Esempio base per aeromodello ad ala fissa
+            Basic Flying-Wing (Elevon) Example: Esempio base di ala volante (elevoni)
+            Basic Flybarless Heli Example: Esempio base di elicottero flybarless
+            Low Battery Voltage Warning: Avviso di tensione batteria bassa
+            Battery Capacity Warning: Avviso di capacità della batteria
+            SR8/SR10 Setup: Configurazione modello SR8/SR10 e riordino dei canali
+            Butterfly (Crocodile) Mixer: Mixer Butterfly (Coccodrillo)
+            Configure an FBUS System: Configurare un sistema FBUS
+            Test a Redundant Receiver: Testare una configurazione con ricevitore ridondante
+            User Defined Text Checklist: Checklist con testo definito dall'utente
+            In-Flight Adjustable Compensation Curve: Curva di compensazione regolabile in volo
+            Instant Take-Back (Trainer): Ripresa istantanea del controllo per la funzione Trainer
+            Find the Latest Bootloader: Trovare il bootloader più recente o altri componenti
+            X18S: X18S
+            X20 Pro / X20 Pro AW: X20 Pro / X20 Pro AW
+            Migration: Migrazione
+            Operation: Utilizzo
+            Toolbars: Barre degli strumenti
+            Screenshot Pipeline: Pipeline degli screenshot
+            Versioning: Versioning
+            # Translation Status intentionally omitted -- same
+            # reason as de/fr: generated, English-only maintainer page.
+        - locale: pt-BR
+          name: Português (Brasil)
+          build: true
+          nav_translations:
+            # Same rationale/mechanism as de/fr's blocks -- values
+            # here are lifted verbatim from each translated page's
+            # own H1 (docs/pt-BR/<path>); section-tab labels use
+            # the terms in scripts/translate.py's pt-BR glossary.
+            # Added once pt-BR reached full page coverage.
+            Home: Início
+            Getting Started: Primeiros passos
+            System Setup: Configuração do sistema
+            Model Setup: Configuração do modelo
+            Displays: Telas
+            Lua Scripts: Scripts Lua
+            Tutorials: Tutoriais
+            How-To Guides: Guias práticos
+            Radio Notes: Notas do rádio
+            Ethos Suite: Ethos Suite
+            Reference: Referência
+            Contributing: Contribuir
+            Main Views: Vistas principais
+            User Interface & Navigation: Interface do usuário e navegação
+            USB Connection Modes: Modos de conexão USB
+            Emergency Mode: Modo de Emergência
+            File Manager: Gerenciador de arquivos
+            Alerts: Alertas
+            Date & Time: Data e Hora
+            General: Geral
+            Battery: Bateria
+            Hardware: Hardware
+            Controls: Controles
+            Devices: Dispositivos
+            Information: Informações
+            Model Select: Seleção de modelo
+            Model Edit: Edição do modelo
+            Flight Modes: Fases de voo
+            Mixes: Mixagens
+            Outputs: Saídas
+            Timers: Temporizadores
+            Trims: Trims
+            RF System: Sistema de RF
+            Curves: Curvas
+            Logical Switches: Interruptores lógicos
+            Special Functions: Funções especiais
+            Variables: Variáveis
+            Trainer: Trainer
+            Telemetry: Telemetria
+            Checklist: Lista de verificação
+            Lua Scripts (Model): Scripts Lua (Modelo)
+            Additional Displays: Telas adicionais
+            Custom Widgets: Widgets personalizados
+            Lua Interpreter: Interpretador Lua
+            Ethos Lua Documentation: Documentação Lua do Ethos
+            Example Script Locations: Localização dos scripts de exemplo
+            Configuration Limits: Limites de configuração
+            Basic Widget Layout: Layout básico de um widget
+            Initial Radio Setup: Configuração inicial do rádio
+            Basic Fixed-Wing Example: Exemplo básico de asa fixa
+            Basic Flying-Wing (Elevon) Example: Exemplo Básico de Asa Voadora (Elevon)
+            Basic Flybarless Heli Example: Exemplo Básico de Helicóptero Flybarless
+            Low Battery Voltage Warning: Aviso de Tensão Baixa de Bateria
+            Battery Capacity Warning: Aviso de capacidade da bateria
+            SR8/SR10 Setup: Configuração de modelo SR8/SR10 e reordenação de canais
+            Butterfly (Crocodile) Mixer: Mixagem Butterfly (Crocodilo)
+            Configure an FBUS System: Configurar um sistema FBUS
+            Test a Redundant Receiver: Testar uma Configuração de Receptor Redundante
+            User Defined Text Checklist: Lista de verificação com texto definido pelo usuário
+            In-Flight Adjustable Compensation Curve: Curva de compensação ajustável em voo
+            Instant Take-Back (Trainer): Retomada Instantânea para a Função Trainer
+            Find the Latest Bootloader: Encontrar o bootloader mais recente ou outro componente
+            X18S: X18S
+            X20 Pro / X20 Pro AW: X20 Pro / X20 Pro AW
+            Migration: Migração
+            Operation: Operação
+            Toolbars: Barras de ferramentas
+            Screenshot Pipeline: Pipeline de capturas de tela
+            Versioning: Versionamento
+            # Translation Status intentionally omitted -- same
+            # reason as de/fr: generated, English-only maintainer page.
+        - locale: zh
+          name: 中文
+          build: true
+          nav_translations:
+            # Same rationale/mechanism as de/fr's blocks -- values
+            # here are lifted verbatim from each translated page's
+            # own H1 (docs/zh/<path>); section-tab labels use
+            # the terms in scripts/translate.py's zh glossary.
+            # Added once zh reached full page coverage.
+            Home: 主页
+            Getting Started: 快速入门
+            System Setup: 系统设置
+            Model Setup: 模型设置
+            Displays: 显示屏
+            Lua Scripts: Lua 脚本
+            Tutorials: 教程
+            How-To Guides: 操作指南
+            Radio Notes: 遥控器说明
+            Ethos Suite: Ethos Suite
+            Reference: 参考
+            Contributing: 贡献
+            Main Views: 主视图
+            User Interface & Navigation: 用户界面与操作导航
+            USB Connection Modes: USB 连接模式
+            Emergency Mode: 紧急模式
+            File Manager: 文件管理器
+            Alerts: 警报
+            Date & Time: 日期与时间
+            General: 常规
+            Battery: 电池
+            Hardware: 硬件
+            Controls: 控制
+            Devices: 设备
+            Information: 信息
+            Model Select: 模型选择
+            Model Edit: 模型编辑
+            Flight Modes: 飞行模式
+            Mixes: 混控设置
+            Outputs: 输出
+            Timers: 计时器
+            Trims: 微调
+            RF System: 射频系统
+            Curves: 曲线
+            Logical Switches: 逻辑开关
+            Special Functions: 特殊功能
+            Variables: 变量
+            Trainer: 教练功能
+            Telemetry: 遥测
+            Checklist: 检查清单
+            Lua Scripts (Model): Lua 脚本（模型）
+            Additional Displays: 附加显示屏
+            Custom Widgets: 自定义小组件
+            Lua Interpreter: Lua 解释器
+            Ethos Lua Documentation: Ethos Lua 文档
+            Example Script Locations: 示例脚本位置
+            Configuration Limits: 配置限制
+            Basic Widget Layout: 基本小组件结构
+            Initial Radio Setup: 遥控器初始设置
+            Basic Fixed-Wing Example: 固定翼基础示例
+            Basic Flying-Wing (Elevon) Example: 基础飞翼（升降副翼）示例
+            Basic Flybarless Heli Example: 基础无副翼直升机示例
+            Low Battery Voltage Warning: 低电压警告
+            Battery Capacity Warning: 电池容量告警
+            SR8/SR10 Setup: SR8/SR10 模型设置与通道重排
+            Butterfly (Crocodile) Mixer: 蝴蝶(鳄鱼)混控
+            Configure an FBUS System: 配置 FBUS 系统
+            Test a Redundant Receiver: 测试冗余接收机配置
+            User Defined Text Checklist: 用户自定义文本检查清单
+            In-Flight Adjustable Compensation Curve: 飞行中可调补偿曲线
+            Instant Take-Back (Trainer): 教练功能的即时接管
+            Find the Latest Bootloader: 查找最新的引导程序或其他组件版本
+            X18S: X18S
+            X20 Pro / X20 Pro AW: X20 Pro / X20 Pro AW
+            Migration: 迁移
+            Operation: 操作
+            Toolbars: 工具栏
+            Screenshot Pipeline: 截图流水线
+            Versioning: 版本管理
+            # Translation Status intentionally omitted -- same
+            # reason as de/fr: generated, English-only maintainer page.
         - locale: de
           name: Deutsch
           build: true
@@ -318,4 +638,5 @@ nav:
       - contributing/index.md
       - Screenshot Pipeline: contributing/screenshot-pipeline.md
       - Versioning: contributing/versioning.md
+      - Adding a New Language: contributing/adding-a-language.md
       - Translation Status: contributing/translation-status.md
