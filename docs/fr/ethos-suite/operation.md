@@ -33,7 +33,7 @@ dès sa détection.
 - **Model manager** / **Lua library** / **Download center** — raccourcis
   vers ces outils.
 
-### Mise à jour d'Ethos
+### Mise à jour d'Ethos {: #updating-ethos }
 
 L'onglet **Ethos** affiche côte à côte les versions du firmware, du
 bootloader, de la SD card/eMMC (fichiers audio) et de la mémoire flash
@@ -208,7 +208,7 @@ en existe.
 - **Ethos Github** — versions et suivi des problèmes (recherchez parmi les
   problèmes existants avant d'en signaler un nouveau).
 
-### Paramètres de Suite
+### Paramètres de Suite {: #suite-settings }
 
 - **Language** — tchèque, allemand, anglais, espagnol, français, hébreu,
   italien, néerlandais, norvégien, portugais, slovène, chinois.

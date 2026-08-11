@@ -59,7 +59,7 @@ live in the same repo as separate branches, each deployed to its own
 `manual.rt-rc.com/<version>/` path with a version-select dropdown — see
 [Versioning](versioning.md) for the full scheme and how to cut a new one.
 
-## Translation plan
+## Translation plan {: #translation-plan }
 
 Translators (human or AI) work directly in git, same as any other
 change — no CMS, no separate translation app. A first French pilot
@@ -150,7 +150,16 @@ during the French pilot is baked in for `fr`; extend
 `GLOSSARIES` in the script the same way once another locale has a few
 pages translated and reviewed.
 
-Nav tab labels (e.g. "Model Setup") stay in English until a locale sets
-`nav_translations` for them — deliberately not done yet while only a
-handful of pages are translated, since translating labels ahead of the
-content behind them would read oddly.
+### Nav labels (`nav_translations`)
+
+Tab and sidebar labels in `nav:` (e.g. "Model Setup") don't pick up a
+locale's translated page title automatically unless the nav entry has no
+explicit label at all (e.g. `- how-to/index.md` — MkDocs then uses that
+page's own H1). Everywhere `nav:` gives an explicit `Label: path.md`
+string, or names a section (`Model Setup:` as a dict key with children),
+that label stays in English until the locale's `nav_translations` map in
+`mkdocs.yml` covers it — added for a locale once its page coverage is
+substantial enough that translating the chrome ahead of most of the
+content wouldn't read oddly. `fr`'s map was filled in once French reached
+full page coverage; each leaf label was copied verbatim from that page's
+own translated H1, so the sidebar text matches the page heading exactly.

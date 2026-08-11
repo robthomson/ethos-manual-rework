@@ -39,7 +39,7 @@ non-default channels at a glance.
     A long press on `ENT` from either the Mixes or Flight Modes screen
     jumps straight here.
 
-## Editing a channel
+## Editing a channel {: #editing-a-channel }
 
 ![Edit elevator output](../assets/model-outputs-elevator-edit.png)
 ![Edit throttle output](../assets/model-outputs-throttle-edit.png)
@@ -94,7 +94,7 @@ the Min/Max points.
   as distinct from slow, is available under [logical
   switches](logical-switches.md).)
 
-## Swap channels
+## Swap channels {: #swap-channels }
 
 ![Swap channels](../assets/model-outputs-swap-channels.png)
 ![Choose channel to swap](../assets/model-outputs-swap-channels-select.png)
@@ -111,7 +111,7 @@ Clears every parameter on a channel back to default — useful before
 repurposing a channel for something else, with a confirmation dialog to
 prevent accidents.
 
-## Balance channels
+## Balance channels {: #balance-channels }
 
 ![Choose channels to balance](../assets/model-outputs-balance-choose_channels.png)
 ![Choose CH7/CH6](../assets/model-outputs-balance-choose-ch7-and-ch6.png)

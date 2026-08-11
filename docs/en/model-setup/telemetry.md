@@ -10,7 +10,7 @@ telemetry is actually *displayed* as [display screen
 widgets](../displays/index.md), configured separately under Configure
 Screens.
 
-## How FrSky telemetry works
+## How FrSky telemetry works {: #how-frsky-telemetry-works }
 
 FrSky's sensors are hub-less: **Smart Port (S.Port)** is a 3-wire bus
 (Gnd, V+, Signal), daisy-chained in any order into the S.Port connection
@@ -116,7 +116,7 @@ from all three at once is planned but not yet available.)
 Every numeric sensor also gets automatic `<name>-`/`<name>+` min/max
 sensors, even though they're not shown in the main sensor list.
 
-## Discovering sensors
+## Discovering sensors {: #discovering-sensors }
 
 ![Discover new sensors: on](../assets/model-telemetry-discover-new-sensors-on.png)
 
@@ -144,7 +144,7 @@ found, and the screen populates automatically. This has to be repeated
 
   ![Bluetooth telemetry](../assets/model-telemetry-bt-option.png)
 
-## Editing a sensor
+## Editing a sensor {: #editing-a-sensor }
 
 ![Edit option select](../assets/model-telemetry-edit-option-select.png)
 
@@ -187,7 +187,7 @@ delay** fields as any other sensor.
 
 ![DIY sensor auto-detect](../assets/model-telemetry-diy-sensor-auto-detect.png)
 
-## Calculated sensors
+## Calculated sensors {: #calculated-sensors }
 
 ![Create calculated sensor](../assets/model-telemetry-calculated-sensor-select.png)
 

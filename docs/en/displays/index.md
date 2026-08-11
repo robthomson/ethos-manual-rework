@@ -31,7 +31,7 @@ as everywhere else in Ethos:
 
 ![Change widget source](../assets/display-change-source.png)
 
-## Widget types
+## Widget types {: #widget-types }
 
 **Value** — a single numeric or telemetry reading, shown as text:
 

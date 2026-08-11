@@ -235,7 +235,7 @@ held in reset). Optionally assign a proportional timing source (e.g.
 throttle stick) so the timer runs at real-time speed at full throttle and
 slows as throttle is reduced.
 
-## Step 10. Add a mix for retracts
+## Step 10. Add a mix for retracts {: #step-10-add-a-mix-for-retracts }
 
 ![Retracts mix source](../assets/tut-fw-eg-retracts-source.png)
 

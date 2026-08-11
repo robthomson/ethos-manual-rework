@@ -39,7 +39,7 @@ pour ce modèle.
 
 ![Options du filtre analogique](../assets/model-edit-analog-filter-select.png)
 
-## Interrupteurs de fonction
+## Interrupteurs de fonction {: #function-switches }
 
 ![Interrupteurs de fonction](../assets/model-edit-fn-switches.png)
 

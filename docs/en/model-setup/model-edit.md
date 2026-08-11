@@ -32,7 +32,7 @@ per-model setting overrides it for just this model.
 
 ![Analog filter options](../assets/model-edit-analog-filter-select.png)
 
-## Function switches
+## Function switches {: #function-switches }
 
 ![Function switches](../assets/model-edit-fn-switches.png)
 

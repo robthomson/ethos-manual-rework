@@ -5,7 +5,7 @@
 Testing and calibrating the radio's physical controls, switch type
 definitions, and the home key map.
 
-## Hardware check
+## Hardware check {: #hardware-check }
 
 Exercises every physical input so you can confirm each one registers
 correctly.
@@ -17,7 +17,7 @@ correctly.
   and **L** on the rear shoulders, plus the additional trims **T5**/**T6**.
 - **X18** — also checks the additional trims **T5**/**T6**.
 
-## Analogs calibration
+## Analogs calibration {: #analogs-calibration }
 
 ![Analog calibration](../assets/system-hardware-analogs-calibration.png)
 
@@ -39,7 +39,7 @@ An on/off ADC filter for the sticks, on by default — reduces jitter around
 stick center. This is the **global** setting; there's also a **per-model**
 Analogs Filter override under [Model Edit](../model-setup/model-edit.md).
 
-## Pots/Sliders settings
+## Pots/Sliders settings {: #potssliders-settings }
 
 Rename the pots and sliders. The **X20 Pro/R/RS** additionally supports two
 extra pots, **Ext1**/**Ext2**, typically used for 3-axis gimbals.
@@ -47,7 +47,7 @@ extra pots, **Ext1**/**Ext2**, typically used for 3-axis gimbals.
 ![ADC values, pots](../assets/system-hardware-pots-x20s.png)
 ![ADC values, pots (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
 
-## Switches settings
+## Switches settings {: #switches-settings }
 
 ![Switches](../assets/system-hardware-switches.png)
 
@@ -85,7 +85,7 @@ keys jump to.
   of destinations); a short press always opens the System or Model section
   respectively.
 
-## Radio-specific hardware options
+## Radio-specific hardware options {: #radio-specific-hardware-options }
 
 - **Enabling haptic gimbal upgrades** (X20 Pro, X20R) — the X20 Pro AW and
   X20RS ship with MC20R gimbals that have haptic stick-shaker motors; if
@@ -101,7 +101,7 @@ keys jump to.
 
   ![Encoder option (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
 
-## ADC value inspector
+## ADC value inspector {: #adc-value-inspector }
 
 Shows the raw analog-to-digital conversion values the CPU reads for each
 analog input:

@@ -11,7 +11,7 @@ hardware selection is **per model**, not radio-wide.
     [Screenshot Pipeline](../contributing/screenshot-pipeline.md)) — the
     content below is accurate but text-only for now.
 
-## Owner registration ID
+## Owner registration ID {: #owner-registration-id }
 
 An 8-character unique code (mix of upper/lower case letters and digits, no
 special characters) that becomes a receiver's **Registration ID** when
@@ -55,7 +55,7 @@ ACCESS, 8 channels update every 7ms, 16 every 14ms, 24 every 21ms
 (rotating in blocks of 8), and a 4ms **Racing mode** is available at
 Ch1-8 with compatible receivers (RS-series, v2.1.7+).
 
-## Registering and binding a receiver (ACCESS)
+## Registering and binding a receiver (ACCESS) {: #registering-and-binding-a-receiver-access }
 
 Binding an ACCESS receiver is two phases — **registration** only needs to
 happen once per receiver/transmitter pair; **binding** can be repeated
@@ -120,7 +120,7 @@ With the receiver **off**, the same RX button offers **Options** (waits
 for the receiver to connect), **Bind** (e.g. to rebind a receiver
 previously bound elsewhere), and **Clear** (equivalent to Reset bind).
 
-## Redundant receivers
+## Redundant receivers {: #redundant-receivers }
 
 A second receiver can be bound to an unused RX slot for redundancy — 2.4G
 or 900M can each back up the other. FrSky redundancy evaluates
@@ -155,7 +155,7 @@ firmware upgrade that adds this behavior.
     Test whichever failsafe setting you choose carefully before relying
     on it.
 
-## Range check
+## Range check {: #range-check }
 
 Run this at the field before every flying session with a new or changed
 setup. Selecting **Range Check** deliberately reduces transmit power (a

@@ -26,7 +26,7 @@ fixed](#first-four-channels-fixed) is on — e.g. 2 ailerons becomes
 
 ![Receiver channel order](../assets/system-sticks-rx-order.png)
 
-## First four channels fixed
+## First four channels fixed {: #first-four-channels-fixed }
 
 With this enabled, the first four channels are never grouped. With order
 **AETR** and an airframe with 2 ailerons, 1 elevator, 1 motor, 1 rudder,

@@ -74,7 +74,7 @@ liste déroulante de sélection de version — voir
 [Gestion des versions](versioning.md) pour le schéma complet et la procédure de
 création d'une nouvelle version.
 
-## Plan de traduction
+## Plan de traduction {: #translation-plan }
 
 Les traducteurs (humains ou IA) travaillent directement dans git, comme pour
 n'importe quelle autre modification — pas de CMS, pas d'application de traduction

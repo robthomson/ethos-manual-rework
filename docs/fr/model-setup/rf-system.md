@@ -17,7 +17,7 @@ de la radio.
     (voir [Pipeline de captures d'écran](../contributing/screenshot-pipeline.md)) —
     le contenu ci-dessous est exact, mais uniquement textuel pour l'instant.
 
-## Identifiant d'enregistrement du propriétaire
+## Identifiant d'enregistrement du propriétaire {: #owner-registration-id }
 
 Un code unique de 8 caractères (mélange de lettres majuscules/minuscules et
 de chiffres, sans caractères spéciaux) qui devient le **Registration ID**
@@ -67,7 +67,7 @@ toutes les 7 ms, 16 toutes les 14 ms, 24 toutes les 21 ms (par rotation de
 blocs de 8), et un **mode Racing** à 4 ms est disponible sur les voies 1-8
 avec les récepteurs compatibles (série RS, v2.1.7+).
 
-## Enregistrement et appairage d'un récepteur (ACCESS)
+## Enregistrement et appairage d'un récepteur (ACCESS) {: #registering-and-binding-a-receiver-access }
 
 L'appairage d'un récepteur ACCESS se fait en deux phases —
 l'**enregistrement** n'a lieu qu'une seule fois par couple
@@ -143,7 +143,7 @@ Avec le récepteur **hors tension**, le même bouton RX propose **Options**
 récepteur précédemment appairé ailleurs) et **Clear** (équivalent à Reset
 bind).
 
-## Récepteurs redondants
+## Récepteurs redondants {: #redundant-receivers }
 
 Un second récepteur peut être appairé à un emplacement RX libre pour assurer
 une redondance — le 2,4 G et le 900 M peuvent se suppléer mutuellement. La
@@ -182,7 +182,7 @@ firmware du récepteur ajoutant ce comportement.
 !!! warning
     Testez soigneusement le réglage de failsafe choisi avant de vous y fier.
 
-## Test de portée
+## Test de portée {: #range-check }
 
 Effectuez ce test sur le terrain avant chaque session de vol avec une
 configuration nouvelle ou modifiée. La sélection de **Range Check** réduit

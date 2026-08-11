@@ -31,7 +31,7 @@ Covers display attributes, audio, vario, haptics, and the top toolbar.
 - **Dark mode** — light or dark display theme.
 - **Highlight Color** — the UI's accent color (default `#F8B038`).
 
-## Audio settings
+## Audio settings {: #audio-settings }
 
 ![Audio settings](../assets/system-general-audio.png)
 
@@ -104,7 +104,7 @@ for further vario behavior.
 - **Strength** — a slider for vibration intensity.
 - **Mode** — the same option set as Audio mode above.
 
-## Storage location (X18 and X20 Pro/R/RS)
+## Storage location (X18 and X20 Pro/R/RS) {: #storage-location-x18-and-x20-prorrs }
 
 These radios have an internal 8GB eMMC. By default Ethos uses it, making
 an SD card optional — but you can select the eMMC, an SD card, or a

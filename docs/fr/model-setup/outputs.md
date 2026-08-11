@@ -44,7 +44,7 @@ non standard.
     Un appui long sur `ENT` depuis l'écran Mixages ou Phases de vol
     amène directement ici.
 
-## Modification d'une voie
+## Modification d'une voie {: #editing-a-channel }
 
 ![Modification de la sortie de profondeur](../assets/model-outputs-elevator-edit.png)
 ![Modification de la sortie des gaz](../assets/model-outputs-throttle-edit.png)
@@ -99,7 +99,7 @@ les points Min/Max.
   à distinguer du ralentissement, est disponible dans les [interrupteurs
   logiques](logical-switches.md).)
 
-## Permuter les voies
+## Permuter les voies {: #swap-channels }
 
 ![Permuter les voies](../assets/model-outputs-swap-channels.png)
 ![Choix de la voie à permuter](../assets/model-outputs-swap-channels-select.png)
@@ -116,7 +116,7 @@ Remet tous les paramètres d'une voie à leurs valeurs par défaut — utile ava
 réaffecter une voie à un autre usage, avec une boîte de dialogue de confirmation pour
 éviter les fausses manœuvres.
 
-## Équilibrer les voies
+## Équilibrer les voies {: #balance-channels }
 
 ![Choix des voies à équilibrer](../assets/model-outputs-balance-choose_channels.png)
 ![Choix de CH7/CH6](../assets/model-outputs-balance-choose-ch7-and-ch6.png)

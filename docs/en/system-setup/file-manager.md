@@ -27,7 +27,7 @@ Ethos creates `Logs/`, `models/`, and `screenshots/` automatically if
 they're missing; `Firmware/` is a manual convention for device firmware
 files like receivers.
 
-## Top-level folders
+## Top-level folders {: #top-level-folders }
 
 - **`audio/`** — user and system sound files, split by voice
   (`audio/en/gb`, `audio/en/us`, `audio/en/default`). User files are

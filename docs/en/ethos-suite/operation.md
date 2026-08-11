@@ -27,7 +27,7 @@ connect via USB — Suite shows the radio type (e.g. "X20") once detected.
 - **Model manager** / **Lua library** / **Download center** — shortcuts
   into those tools.
 
-### Updating Ethos
+### Updating Ethos {: #updating-ethos }
 
 The **Ethos** tab shows Firmware, Bootloader, SD card/eMMC (audio files),
 and flash memory (system bitmaps) versions side by side — system files in
@@ -185,7 +185,7 @@ alongside the remote catalog once any exist.
 - **Ethos Github** — releases and issue tracker (search existing issues
   before filing a new one).
 
-### Suite Settings
+### Suite Settings {: #suite-settings }
 
 - **Language** — Czech, German, English, Spanish, French, Hebrew,
   Italian, Dutch, Norwegian, Portuguese, Slovenian, Chinese.

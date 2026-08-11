@@ -37,7 +37,7 @@ Couvre les attributs d'affichage, l'audio, le vario, le retour haptique et la ba
 - **Highlight Color** — la couleur d'accentuation de l'interface (par défaut
   `#F8B038`).
 
-## Réglages audio
+## Réglages audio {: #audio-settings }
 
 ![Réglages audio](../assets/system-general-audio.png)
 
@@ -118,7 +118,7 @@ vario.
 - **Strength** — un curseur pour l'intensité des vibrations.
 - **Mode** — le même ensemble d'options que Audio mode ci-dessus.
 
-## Emplacement de stockage (X18 et X20 Pro/R/RS)
+## Emplacement de stockage (X18 et X20 Pro/R/RS) {: #storage-location-x18-and-x20-prorrs }
 
 Ces radios possèdent une mémoire eMMC interne de 8 Go. Par défaut, Ethos
 l'utilise, ce qui rend la SD card facultative — mais vous pouvez sélectionner

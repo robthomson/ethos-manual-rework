@@ -58,7 +58,7 @@ câblés simultanément — voir l'[étape 4](#4-configure-the-receiver-for-fbus
    flash**. Sélectionnez de nouveau Device Config ensuite pour vérifier que la
    modification a bien été prise en compte.
 
-## 4. Configurer le récepteur pour FBUS
+## 4. Configurer le récepteur pour FBUS {: #4-configure-the-receiver-for-fbus }
 
 **SR10 Pro** : [Système RF](../model-setup/rf-system.md) → le bouton du récepteur
 → **Options** → réglez **Telemetry Port** sur **FBUS**. Les servos Xact se

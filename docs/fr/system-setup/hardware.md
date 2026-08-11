@@ -9,7 +9,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Test et calibration des commandes physiques de la radio, définition du type
 des interrupteurs et mappage des touches d'accueil.
 
-## Vérification du matériel
+## Vérification du matériel {: #hardware-check }
 
 Sollicite chaque entrée physique afin de confirmer que chacune est
 correctement détectée.
@@ -22,7 +22,7 @@ correctement détectée.
   trims supplémentaires **T5**/**T6**.
 - **X18** — vérifie également les trims supplémentaires **T5**/**T6**.
 
-## Calibration des analogiques
+## Calibration des analogiques {: #analogs-calibration }
 
 ![Calibration des analogiques](../assets/system-hardware-analogs-calibration.png)
 
@@ -47,7 +47,7 @@ réduit les tremblements autour du centre du manche. Il s'agit du réglage
 **global** ; il existe aussi une surcharge **par modèle** du filtre des
 analogiques dans [Édition du modèle](../model-setup/model-edit.md).
 
-## Réglages des potentiomètres/curseurs
+## Réglages des potentiomètres/curseurs {: #potssliders-settings }
 
 Permet de renommer les potentiomètres et les curseurs. Le **X20 Pro/R/RS**
 prend en outre en charge deux potentiomètres supplémentaires,
@@ -56,7 +56,7 @@ prend en outre en charge deux potentiomètres supplémentaires,
 ![Valeurs ADC, potentiomètres](../assets/system-hardware-pots-x20s.png)
 ![Valeurs ADC, potentiomètres (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
 
-## Réglages des interrupteurs
+## Réglages des interrupteurs {: #switches-settings }
 
 ![Interrupteurs](../assets/system-hardware-switches.png)
 
@@ -97,7 +97,7 @@ Redéfinit la destination des touches d'accueil `SYS`, `MDL` et `DISP`
   ensemble de destinations) ; un appui court ouvre toujours respectivement
   la section Système ou Modèle.
 
-## Options matérielles spécifiques à chaque radio
+## Options matérielles spécifiques à chaque radio {: #radio-specific-hardware-options }
 
 - **Activation des manches haptiques** (X20 Pro, X20R) — les X20 Pro AW et
   X20RS sont livrés avec des manches MC20R équipés de moteurs de vibration
@@ -115,7 +115,7 @@ Redéfinit la destination des touches d'accueil `SYS`, `MDL` et `DISP`
 
   ![Option de l'encodeur (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
 
-## Inspecteur des valeurs ADC
+## Inspecteur des valeurs ADC {: #adc-value-inspector }
 
 Affiche les valeurs brutes de conversion analogique-numérique lues par le
 processeur pour chaque entrée analogique :

@@ -15,7 +15,7 @@ utiles pour des ajustements en vol au-delà des quatre manches principaux :
 
 Chaque manche possède son propre jeu de réglages de trim indépendant.
 
-## Réglages de trim
+## Réglages de trim {: #trim-settings }
 
 - **Plage** — ±25 % par défaut, réglable jusqu'à la course complète du
   manche, soit ±100 %. Sur l'écran principal, un trim à plage par défaut
@@ -153,7 +153,7 @@ dit, permet que le trim d'un manche soit piloté par une commande de trim
 physique différente de celle habituelle. (T5/T6 ne sont disponibles que sur
 les X20 Pro et X18.)
 
-## Trim instantané
+## Trim instantané {: #instant-trim }
 
 ![Trim instantané](../assets/model-trims-instant-trim.png)
 

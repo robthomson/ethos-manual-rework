@@ -31,7 +31,7 @@ donnent **AAETR**.
 
 ![Ordre des voies du récepteur](../assets/system-sticks-rx-order.png)
 
-## Quatre premières voies fixes
+## Quatre premières voies fixes {: #first-four-channels-fixed }
 
 Lorsque cette option est activée, les quatre premières voies ne sont jamais
 regroupées. Avec l'ordre **AETR** et une cellule comportant 2 ailerons,

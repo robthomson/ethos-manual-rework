@@ -40,7 +40,7 @@ que partout ailleurs dans Ethos :
 
 ![Modifier la source du widget](../assets/display-change-source.png)
 
-## Types de widgets
+## Types de widgets {: #widget-types }
 
 **Value** — une seule valeur numérique ou de télémétrie, affichée sous
 forme de texte :

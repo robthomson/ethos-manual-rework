@@ -101,7 +101,7 @@ deployed should move the mixer output by the full weight (e.g. 80% down
 to −100%, a 180% swing). Fine-tune actual travel limits in Outputs via
 Min/Max or a curve.
 
-## 7. Add the elevator compensation curve and mix
+## 7. Add the elevator compensation curve and mix {: #7-add-the-elevator-compensation-curve-and-mix }
 
 ![Compensation curve](../assets/how-to-butterfly-comp-curve.png)
 ![Compensation curve points](../assets/how-to-butterfly-comp-curve-points.png)

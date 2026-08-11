@@ -11,7 +11,7 @@ main sticks:
 
 Each stick has its own independent set of trim settings.
 
-## Trim settings
+## Trim settings {: #trim-settings }
 
 - **Range** — default ±25%, adjustable up to the stick's full ±100%. On
   the main display, a default-range trim reads −100 to 100; a full-range
@@ -139,7 +139,7 @@ Nominates which trim switch actually adjusts each stick — i.e. lets a
 stick's trim be driven by a different physical trim control than usual.
 (T5/T6 are available on the X20 Pro and X18 only.)
 
-## Instant trim
+## Instant trim {: #instant-trim }
 
 ![Instant trim](../assets/model-trims-instant-trim.png)
 

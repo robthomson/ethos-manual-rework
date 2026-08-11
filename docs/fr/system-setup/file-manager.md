@@ -32,7 +32,7 @@ pour la parcourir. Ethos crée automatiquement `Logs/`, `models/` et
 `screenshots/` s'ils sont absents ; `Firmware/` est une convention manuelle
 destinée aux fichiers de firmware des périphériques, tels que les récepteurs.
 
-## Dossiers de premier niveau
+## Dossiers de premier niveau {: #top-level-folders }
 
 - **`audio/`** — fichiers sonores utilisateur et système, répartis par voix
   (`audio/en/gb`, `audio/en/us`, `audio/en/default`). Les fichiers utilisateur

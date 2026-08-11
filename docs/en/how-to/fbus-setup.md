@@ -50,7 +50,7 @@ simultaneously — see [Step 4](#4-configure-the-receiver-for-fbus)):
    one servo at a time) — change to `0D`/`6801`/`CH5`, **Save to flash**.
    Reselect Device Config afterward to confirm the change stuck.
 
-## 4. Configure the receiver for FBUS
+## 4. Configure the receiver for FBUS {: #4-configure-the-receiver-for-fbus }
 
 **SR10 Pro**: [RF System](../model-setup/rf-system.md) → the receiver's
 button → **Options** → set **Telemetry Port** to **FBUS**. Xact servos

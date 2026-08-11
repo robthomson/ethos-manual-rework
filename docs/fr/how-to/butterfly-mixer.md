@@ -119,7 +119,7 @@ totalité du poids (par exemple de 80 % à −100 %, soit une amplitude de
 180 %). Affinez les limites de course réelles dans les Sorties à l'aide
 des valeurs Min/Max ou d'une courbe.
 
-## 7. Ajouter la courbe et le mixage de compensation de profondeur
+## 7. Ajouter la courbe et le mixage de compensation de profondeur {: #7-add-the-elevator-compensation-curve-and-mix }
 
 ![Courbe de compensation](../assets/how-to-butterfly-comp-curve.png)
 ![Points de la courbe de compensation](../assets/how-to-butterfly-comp-curve-points.png)

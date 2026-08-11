@@ -9,7 +9,7 @@ les débattements/Expo/proportions de mixage recommandés pour la
 Dreamflight Weasel. Effectuez d'abord la [configuration initiale de la
 radio](initial-radio-setup.md).
 
-## Étape 1. Vérifier les réglages système
+## Étape 1. Vérifier les réglages système {: #step-1-confirm-system-settings }
 
 Ordre **AETR** par défaut, avec **[Quatre premières voies
 fixes](../system-setup/controls.md#first-four-channels-fixed)** sur

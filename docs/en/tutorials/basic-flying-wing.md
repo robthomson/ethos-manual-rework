@@ -4,7 +4,7 @@ A 2-servo elevon flying wing, using the Dreamflight Weasel's recommended
 rates/Expo/mix ratios as a concrete worked example. Complete [Initial
 Radio Setup](initial-radio-setup.md) first.
 
-## Step 1. Confirm System settings
+## Step 1. Confirm System settings {: #step-1-confirm-system-settings }
 
 Default **AETR** order, with **[First four channels
 fixed](../system-setup/controls.md#first-four-channels-fixed)** **OFF**.

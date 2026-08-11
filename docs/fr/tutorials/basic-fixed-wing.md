@@ -259,7 +259,7 @@ actifs** est vrai (et qu'il n'est pas maintenu en remise à zéro).
 exemple le manche des gaz) afin que le chronomètre s'écoule en temps réel
 à plein gaz et ralentisse lorsque les gaz sont réduits.
 
-## Étape 10. Ajouter un mixage pour le train rentrant
+## Étape 10. Ajouter un mixage pour le train rentrant {: #step-10-add-a-mix-for-retracts }
 
 ![Source du mixage du train rentrant](../assets/tut-fw-eg-retracts-source.png)
 

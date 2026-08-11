@@ -54,6 +54,90 @@ plugins:
         - locale: fr
           name: Français
           build: true
+          nav_translations:
+            # Section tabs and explicit `Label: path` entries in nav: below
+            # don't pick up a locale's page-title translation automatically
+            # (mkdocs-static-i18n only does that for nav entries with no
+            # explicit label, e.g. `- how-to/index.md`) -- these have to be
+            # listed here. Values below are lifted verbatim from each
+            # translated page's own H1 (docs/fr/<path>) so the sidebar
+            # label matches the page heading exactly; section-tab labels
+            # (Home, Getting Started, ...) use the terms established in
+            # docs/en/contributing/index.md's translation glossary. Added
+            # once French reached full page coverage -- see
+            # docs/en/contributing/index.md#nav-labels-nav_translations.
+            Home: Accueil
+            Getting Started: Prise en main
+            Main Views: Vues principales
+            User Interface & Navigation: Interface utilisateur et navigation
+            USB Connection Modes: Modes de connexion USB
+            Emergency Mode: "Mode d'urgence"
+            System Setup: Configuration du système
+            File Manager: Gestionnaire de fichiers
+            Alerts: Alertes
+            Date & Time: Date et heure
+            General: Général
+            Battery: Batterie
+            Hardware: Matériel
+            Controls: Commandes
+            Devices: Périphériques
+            Information: Informations
+            Model Setup: Configuration du modèle
+            Model Select: Choix du modèle
+            Model Edit: Modification du modèle
+            Flight Modes: Phases de vol
+            Mixes: Mixages
+            Outputs: Sorties
+            Timers: Chronos
+            Trims: Trims
+            RF System: Système RF
+            Curves: Courbes
+            Logical Switches: Interrupteurs logiques
+            Special Functions: Fonctions spéciales
+            Variables: Variables
+            Trainer: Écolage
+            Telemetry: Télémétrie
+            Checklist: Liste de vérification
+            Lua Scripts (Model): Scripts Lua (modèle)
+            Displays: Écrans
+            Additional Displays: Écrans supplémentaires
+            Custom Widgets: Widgets personnalisés
+            Lua Scripts: Scripts Lua
+            Lua Interpreter: Interpréteur Lua
+            Ethos Lua Documentation: Documentation Lua d'Ethos
+            Example Script Locations: Emplacement des scripts d'exemple
+            Configuration Limits: Limites de configuration
+            Basic Widget Layout: Structure de base d'un widget
+            Tutorials: Tutoriels
+            Initial Radio Setup: Configuration initiale de la radio
+            Basic Fixed-Wing Example: Exemple de base pour aile fixe
+            Basic Flying-Wing (Elevon) Example: "Exemple de base : aile volante (elevons)"
+            Basic Flybarless Heli Example: Exemple de base d'hélicoptère flybarless
+            How-To Guides: Guides pratiques
+            Low Battery Voltage Warning: Alerte de tension batterie basse
+            Battery Capacity Warning: Alerte de capacité batterie
+            SR8/SR10 Setup: Configuration du modèle SR8/SR10 et réorganisation des voies
+            Butterfly (Crocodile) Mixer: Mixage Butterfly (Crocodile)
+            Configure an FBUS System: Configurer un système FBUS
+            Test a Redundant Receiver: Tester une configuration à récepteur redondant
+            User Defined Text Checklist: Liste de vérification à texte personnalisé
+            In-Flight Adjustable Compensation Curve: Courbe de compensation ajustable en vol
+            Instant Take-Back (Trainer): Reprise instantanée du contrôle pour la fonction écolage
+            Find the Latest Bootloader: Trouver le dernier bootloader ou autre composant
+            Radio Notes: Notes sur les radios
+            X18S: X18S
+            X20 Pro / X20 Pro AW: X20 Pro / X20 Pro AW
+            Ethos Suite: Suite Ethos
+            Migration: Migration
+            Operation: Utilisation
+            Reference: Référence
+            Toolbars: Barres d'outils
+            Contributing: Contribuer
+            Screenshot Pipeline: Chaîne de production des captures d'écran
+            Versioning: Gestion des versions
+            # Translation Status intentionally omitted -- it's a generated,
+            # English-only maintainer page (hooks/i18n_status.py), no
+            # French content exists or is planned for it.
 
 extra:
   version:

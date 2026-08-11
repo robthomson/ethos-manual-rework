@@ -103,7 +103,7 @@ avec **Smooth** activé. Faites un appui long sur `ENT` sur les points 1 à
 4 et choisissez **Use a source** pour affecter respectivement
 `VAdjPt5`…`VAdjPt2` (le point 5 reste fixé à 0, conformément à l'Étape 1).
 
-## 6. Appliquer la courbe
+## 6. Appliquer la courbe {: #6-apply-the-curve }
 
 Utilisez cette courbe exactement à l'endroit où le [Guide pratique :
 mixeur papillon](butterfly-mixer.md#7-add-the-elevator-compensation-curve-and-mix)

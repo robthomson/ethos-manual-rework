@@ -14,7 +14,7 @@ configuration se font ici, mais la télémétrie est en réalité *affichée*
 sous forme de [widgets sur les écrans d'affichage](../displays/index.md),
 configurés séparément dans Configurer les écrans.
 
-## Fonctionnement de la télémétrie FrSky
+## Fonctionnement de la télémétrie FrSky {: #how-frsky-telemetry-works }
 
 Les capteurs FrSky fonctionnent sans concentrateur : le **Smart Port
 (S.Port)** est un bus à 3 fils (Gnd, V+, Signal), chaîné dans n'importe
@@ -134,7 +134,7 @@ Chaque capteur numérique reçoit également des capteurs min/max
 automatiques `<name>-`/`<name>+`, même s'ils n'apparaissent pas dans la
 liste principale des capteurs.
 
-## Détection des capteurs
+## Détection des capteurs {: #discovering-sensors }
 
 ![Découvrir de nouveaux capteurs : activé](../assets/model-telemetry-discover-new-sensors-on.png)
 
@@ -165,7 +165,7 @@ capteur est ajouté.
 
   ![Télémétrie Bluetooth](../assets/model-telemetry-bt-option.png)
 
-## Modification d'un capteur
+## Modification d'un capteur {: #editing-a-sensor }
 
 ![Sélection de l'option d'édition](../assets/model-telemetry-edit-option-select.png)
 
@@ -212,7 +212,7 @@ perte de capteur** que pour tout autre capteur.
 
 ![Détection automatique du capteur DIY](../assets/model-telemetry-diy-sensor-auto-detect.png)
 
-## Capteurs calculés
+## Capteurs calculés {: #calculated-sensors }
 
 ![Créer un capteur calculé](../assets/model-telemetry-calculated-sensor-select.png)
 

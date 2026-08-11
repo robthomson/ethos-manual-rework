@@ -92,7 +92,7 @@ A new 5-point custom curve (e.g. "EleComp") with **Smooth** enabled.
 Long-press `ENT` on points 1–4 and **Use a source** to assign
 `VAdjPt5`…`VAdjPt2` respectively (point 5 stays fixed at 0, per Step 1).
 
-## 6. Apply the curve
+## 6. Apply the curve {: #6-apply-the-curve }
 
 Use this curve exactly where [How-To: Butterfly
 Mixer](butterfly-mixer.md#7-add-the-elevator-compensation-curve-and-mix)
