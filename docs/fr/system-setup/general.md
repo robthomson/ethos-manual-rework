@@ -99,7 +99,7 @@ Couvre les attributs d'affichage, l'audio, le vario, le retour haptique et la ba
     laissez quelques secondes après la connexion pour que la coupure du
     haut-parleur se réactive.
 
-## Vario
+## Vario {: #vario }
 
 ![Audio du vario](../assets/system-general-audio-vario.png)
 

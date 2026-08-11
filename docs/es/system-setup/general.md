@@ -89,7 +89,7 @@ Abarca los atributos de pantalla, el audio, el vario, la vibración y la barra d
     antes que el dispositivo Bluetooth para un funcionamiento normal, y espere unos
     segundos después de que se conecte para que el silenciado del altavoz vuelva a activarse.
 
-## Vario
+## Vario {: #vario }
 
 ![Audio del vario](../assets/system-general-audio-vario.png)
 

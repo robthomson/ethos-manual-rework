@@ -97,7 +97,7 @@ Riguarda gli attributi del display, l'audio, il vario, il feedback aptico e la b
     dispositivo Bluetooth e attendere qualche secondo dopo la connessione
     affinché la funzione di silenziamento dell'altoparlante si riattivi.
 
-## Vario
+## Vario {: #vario }
 
 ![Audio del vario](../assets/system-general-audio-vario.png)
 

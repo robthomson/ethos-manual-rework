@@ -99,7 +99,7 @@ Umfasst Display-Eigenschaften, Audio, Vario, Haptik und die obere Statusleiste.
     Sie nach dem Verbindungsaufbau einige Sekunden Zeit, bis die
     Lautsprecherstummschaltung wieder greift.
 
-## Vario
+## Vario {: #vario }
 
 ![Vario-Audio](../assets/system-general-audio-vario.png)
 

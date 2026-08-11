@@ -96,7 +96,7 @@ Abrange atributos de exibição, áudio, vario, vibração e a barra de ferramen
     para operação normal e aguarde alguns segundos após a conexão para que
     o silenciamento do alto-falante seja reativado.
 
-## Vario
+## Vario {: #vario }
 
 ![Áudio do vario](../assets/system-general-audio-vario.png)
 

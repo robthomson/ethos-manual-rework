@@ -371,6 +371,211 @@ GLOSSARIES: dict[str, str] = {
 - Throttle hold -> 油门保持
 - Idle -> 怠速
 """.strip(),
+    "cs": """
+- Getting Started -> Začínáme
+- Model Setup -> Nastavení modelu
+- System Setup -> Nastavení systému
+- Displays -> Displeje
+- Tutorials -> Návody
+- How-To Guides -> Praktické návody
+- Lua Scripts -> Lua skripty
+- Radio Notes -> Poznámky k vysílači
+- Home -> Domů
+- Model Select -> Výběr modelu
+- Configure Screens -> Konfigurace obrazovek
+- Checklist -> Kontrolní seznam
+- Ailerons -> Křidélka
+- Elevator -> Výškovka
+- Rudder -> Směrovka
+- Throttle -> Plyn
+- Mix / Mixes -> Mix / Mixy (kept)
+- Free mix -> Volný mix
+- Outputs -> Výstupy
+- Timers -> Časovače
+- Timer -> Časovač
+- Trim / Trims -> Trim (kept)
+- Flight mode -> Letový režim
+- Logical switch -> Logický přepínač
+- Special function -> Speciální funkce
+- Switch -> Přepínač
+- Source -> Zdroj
+- Sensor -> Senzor
+- Receiver -> Přijímač
+- Widget -> Widget (kept)
+- Screen -> Obrazovka
+- Stick -> Páčka
+- Potentiometer / pot -> Potenciometr
+- Slider -> Posuvník
+- Channel -> Kanál
+- Differential -> Diferenciál
+- Throttle cut -> Vypnutí plynu
+- Throttle hold -> Podržení plynu
+- Idle -> Volnoběh
+""".strip(),
+    "nl": """
+- Getting Started -> Aan de slag
+- Model Setup -> Modelinstellingen
+- System Setup -> Systeeminstellingen
+- Displays -> Displays (kept)
+- Tutorials -> Tutorials (kept)
+- How-To Guides -> Handleidingen
+- Lua Scripts -> Lua-scripts
+- Radio Notes -> Opmerkingen over de zender
+- Home -> Start
+- Model Select -> Modelkeuze
+- Configure Screens -> Schermen configureren
+- Checklist -> Checklist (kept)
+- Ailerons -> Rolroeren
+- Elevator -> Hoogteroer
+- Rudder -> Richtingsroer
+- Throttle -> Gas
+- Mix / Mixes -> Mix / Mixen
+- Free mix -> Vrije mix
+- Outputs -> Uitgangen
+- Timers -> Timers (kept)
+- Timer -> Timer (kept)
+- Trim / Trims -> Trim (kept)
+- Flight mode -> Vluchtmodus
+- Logical switch -> Logische schakelaar
+- Special function -> Speciale functie
+- Switch -> Schakelaar
+- Source -> Bron
+- Sensor -> Sensor (kept)
+- Receiver -> Ontvanger
+- Widget -> Widget (kept)
+- Screen -> Scherm
+- Stick -> Stick (kept)
+- Potentiometer / pot -> Potentiometer
+- Slider -> Schuifregelaar
+- Channel -> Kanaal
+- Differential -> Differentieel
+- Throttle cut -> Gas-afsnijding
+- Throttle hold -> Gas vasthouden
+- Idle -> Stationair
+""".strip(),
+    "nb": """
+- Getting Started -> Komme i gang
+- Model Setup -> Modelloppsett
+- System Setup -> Systeminnstillinger
+- Displays -> Skjermer
+- Tutorials -> Veiledninger
+- How-To Guides -> Praktiske guider
+- Lua Scripts -> Lua-skript
+- Radio Notes -> Merknader om senderen
+- Home -> Hjem
+- Model Select -> Modellvalg
+- Configure Screens -> Konfigurer skjermer
+- Checklist -> Sjekkliste
+- Ailerons -> Krengeror
+- Elevator -> Høyderor
+- Rudder -> Sideror
+- Throttle -> Gass
+- Mix / Mixes -> Miks / Mikser
+- Free mix -> Fri miks
+- Outputs -> Utganger
+- Timers -> Timer (kept)
+- Timer -> Timer (kept)
+- Trim / Trims -> Trim (kept)
+- Flight mode -> Flymodus
+- Logical switch -> Logisk bryter
+- Special function -> Spesialfunksjon
+- Switch -> Bryter
+- Source -> Kilde
+- Sensor -> Sensor (kept)
+- Receiver -> Mottaker
+- Widget -> Widget (kept)
+- Screen -> Skjerm
+- Stick -> Spak
+- Potentiometer / pot -> Potensiometer
+- Slider -> Glidebryter
+- Channel -> Kanal
+- Differential -> Differensial
+- Throttle cut -> Gasskutt
+- Throttle hold -> Gasshold
+- Idle -> Tomgang
+""".strip(),
+    "pl": """
+- Getting Started -> Pierwsze kroki
+- Model Setup -> Konfiguracja modelu
+- System Setup -> Ustawienia systemu
+- Displays -> Wyświetlacze
+- Tutorials -> Samouczki
+- How-To Guides -> Poradniki
+- Lua Scripts -> Skrypty Lua
+- Radio Notes -> Uwagi dotyczące nadajnika
+- Home -> Strona główna
+- Model Select -> Wybór modelu
+- Configure Screens -> Konfiguracja ekranów
+- Checklist -> Lista kontrolna
+- Ailerons -> Lotki
+- Elevator -> Ster wysokości
+- Rudder -> Ster kierunku
+- Throttle -> Gaz
+- Mix / Mixes -> Miks / Miksy
+- Free mix -> Miks wolny
+- Outputs -> Wyjścia
+- Timers -> Timery (kept)
+- Timer -> Timer (kept)
+- Trim / Trims -> Trym (kept)
+- Flight mode -> Tryb lotu
+- Logical switch -> Przełącznik logiczny
+- Special function -> Funkcja specjalna
+- Switch -> Przełącznik
+- Source -> Źródło
+- Sensor -> Czujnik
+- Receiver -> Odbiornik
+- Widget -> Widget (kept)
+- Screen -> Ekran
+- Stick -> Drążek
+- Potentiometer / pot -> Potencjometr
+- Slider -> Suwak
+- Channel -> Kanał
+- Differential -> Różnicowanie
+- Throttle cut -> Odcięcie gazu
+- Throttle hold -> Blokada gazu
+- Idle -> Bieg jałowy
+""".strip(),
+    "he": """
+- Getting Started -> תחילת העבודה
+- Model Setup -> הגדרות דגם
+- System Setup -> הגדרות מערכת
+- Displays -> תצוגות
+- Tutorials -> מדריכים
+- How-To Guides -> מדריכי הדרכה
+- Lua Scripts -> סקריפטים של Lua
+- Radio Notes -> הערות למשדר
+- Home -> בית
+- Model Select -> בחירת דגם
+- Configure Screens -> הגדרת מסכים
+- Checklist -> רשימת בדיקה
+- Ailerons -> מאזנים
+- Elevator -> מעלית
+- Rudder -> הגה כיוון
+- Throttle -> מצערת
+- Mix / Mixes -> מיקס / מיקסים
+- Free mix -> מיקס חופשי
+- Outputs -> יציאות
+- Timers -> טיימרים
+- Timer -> טיימר
+- Trim / Trims -> טרים (kept)
+- Flight mode -> מצב טיסה
+- Logical switch -> מתג לוגי
+- Special function -> פונקציה מיוחדת
+- Switch -> מתג
+- Source -> מקור
+- Sensor -> חיישן
+- Receiver -> מקלט
+- Widget -> ווידג'ט (kept, transliterated)
+- Screen -> מסך
+- Stick -> ג'ויסטיק
+- Potentiometer / pot -> פוטנציומטר
+- Slider -> מחוון
+- Channel -> ערוץ
+- Differential -> דיפרנציאל
+- Throttle cut -> ניתוק מצערת
+- Throttle hold -> החזקת מצערת
+- Idle -> סרק
+""".strip(),
 }
 
 

@@ -82,7 +82,7 @@ translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
     设备；正常使用时请先开启遥控器，再开启 Bluetooth 设备，并在其连接后等待
     几秒钟，使扬声器静音重新生效。
 
-## Vario（升降速度提示音）
+## Vario（升降速度提示音） {: #vario }
 
 ![Vario 音频](../assets/system-general-audio-vario.png)
 

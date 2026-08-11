@@ -86,7 +86,7 @@ Covers display attributes, audio, vario, haptics, and the top toolbar.
     before the Bluetooth device for normal operation, and allow a few
     seconds after it connects for speaker mute to re-engage.
 
-## Vario
+## Vario {: #vario }
 
 ![Vario audio](../assets/system-general-audio-vario.png)
 

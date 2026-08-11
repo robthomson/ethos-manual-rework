@@ -22,7 +22,7 @@ step 4 — steps 1 and 3 are cheap and avoid rework later.
 - [ ] **[8](#8-add-nav_translations-once-after-page-coverage-is-complete)** — Once page coverage is complete, add `nav_translations` (leaf labels from each page's own H1, section tabs from the glossary).
 - [ ] **[9](#9-ship-it)** — Commit, push, watch the Action, verify live (allow for CDN propagation lag on brand-new paths).
 
-## 1. Confirm the locale code before touching anything
+## 1. Confirm the locale code before touching anything {: #1-confirm-the-locale-code-before-touching-anything }
 
 Two separate things need to agree, and getting either wrong is annoying to
 unwind later (URLs bake the code in permanently):
@@ -53,7 +53,7 @@ unwind later (URLs bake the code in permanently):
   print(sorted(x.stem for x in p.glob("*.html")))
   ```
 
-## 2. Add the locale to `mkdocs.yml`
+## 2. Add the locale to `mkdocs.yml` {: #2-add-the-locale-to-mkdocsyml }
 
 ```yaml
 languages:
@@ -65,7 +65,7 @@ languages:
 No `nav_translations` yet — that's step 6, after there's real content to
 match labels against.
 
-## 3. Seed a glossary in `scripts/translate.py`
+## 3. Seed a glossary in `scripts/translate.py` {: #3-seed-a-glossary-in-scriptstranslatepy }
 
 Add a `GLOSSARIES["<code>"]` entry (see the existing `fr`/`de`/`es`/`it`
 entries for the term list to cover — flight-surface names, mix/output/
@@ -80,7 +80,7 @@ this hit `zh` specifically — it's because Windows' console defaults to
 of the script (`sys.stdout.reconfigure(encoding="utf-8", ...)`); if it
 resurfaces, that's where to look.
 
-## 4. Translate
+## 4. Translate {: #4-translate }
 
 ```bash
 python scripts/translate.py --only <code> --dry-run   # confirm scope/cost first
@@ -95,7 +95,7 @@ same wall-clock time as one.
 
 Check the log for `Done: N translated, 0 failed` before moving on.
 
-## 5. Check for existing screenshots before considering the simulator
+## 5. Check for existing screenshots before considering the simulator {: #5-check-for-existing-screenshots-before-considering-the-simulator }
 
 **Don't assume new screenshots require running the simulator pipeline —
 check first.** The predecessor repo
@@ -131,7 +131,7 @@ the simulator (see [Screenshot Pipeline](screenshot-pipeline.md)), which
 is out of scope for a text-translation pass and needs a local simulator
 install.
 
-## 6. Check and fix anchor links
+## 6. Check and fix anchor links {: #6-check-and-fix-anchor-links }
 
 Translating a heading changes its auto-generated slug, which silently
 breaks any `#that-heading-slug` link from another page — and **this is
@@ -151,14 +151,14 @@ after every batch of new/updated translations. It rebuilds the site
 itself by default (`mkdocs build --strict` first) so results are never
 stale.
 
-## 7. Verify for real
+## 7. Verify for real {: #7-verify-for-real }
 
 ```bash
 mkdocs build --strict; echo "exit code: $?"   # must be 0, not just free of "error"/"warn" text
 python scripts/check_anchors.py                # must report 0
 ```
 
-## 8. Add `nav_translations` — once, after page coverage is complete
+## 8. Add `nav_translations` — once, after page coverage is complete {: #8-add-nav_translations-once-after-page-coverage-is-complete }
 
 Tab and sidebar labels in `nav:` don't pick up a locale's translated page
 title automatically unless the nav entry has no explicit label at all.
@@ -179,7 +179,7 @@ h1 = re.search(r"^#\s+(.+)$", Path(f"docs/{code}/{rel_path}").read_text(encoding
 Skip `Translation Status` — it's a generated, English-only maintainer
 page with no translated equivalent in any locale.
 
-## 9. Ship it
+## 9. Ship it {: #9-ship-it }
 
 Commit, push to `main`, and watch the `Deploy Docs` Action run. GitHub
 Pages' CDN can 404 a brand-new locale path for the first 15–30+ seconds
