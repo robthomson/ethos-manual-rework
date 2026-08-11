@@ -61,26 +61,63 @@ live in the same repo as separate branches, each deployed to its own
 
 ## Translation plan
 
-Translation tooling is deliberately **not** built yet. Non-technical
-translators will need to learn enough git to branch, edit, and open a PR —
-a real barrier, but preferred over standing up and maintaining a separate
-translation app before there's a stable English source to translate from.
-Content is kept in plain Markdown specifically so that path stays open:
+Translators (human or AI) work directly in git, same as any other
+change — no CMS, no separate translation app. A first French pilot
+(a handful of pages) proved the mechanics out end to end; here's how it
+actually works.
 
-- In the near term, a translator (human or AI) works from the English
-  `docs/en/` tree directly, producing a sibling `docs/<locale>/` tree with
-  the same file structure.
-- [`mkdocs-static-i18n`](https://github.com/ultrabug/mkdocs-static-i18n) is
-  already wired up (`docs_structure: folder`, `en` as the default
-  language) — it understands exactly this folder-per-locale layout
-  (`docs/en/…`, `docs/fr/…`) and adds a language switcher automatically
-  the moment a second locale's folder exists; no further plugin
-  configuration is needed to add one.
-- Screenshots are **not** shared across locales — the Ethos UI itself is
-  localized, so each locale's `assets/` folder needs its own screenshots
-  captured with that language's radio settings file (see [Screenshot
-  Pipeline](screenshot-pipeline.md)).
-- Whether translation staleness (English pages that changed after they were
-  translated) needs its own tooling, versus being tracked by git history
-  alone, is an open question to revisit once there's a second language to
-  actually maintain.
+### Adding/updating a translation
+
+1. Branch, create/edit `docs/<locale>/<same path as the English page>`,
+   translating the prose. Keep code-literal text (key names like `ENT`,
+   `RTN`, UI element names shown on screen) as-is.
+2. Stamp the page with which English commit it was translated from:
+
+   ```markdown
+   ---
+   translated_from: <commit sha of docs/en/... at translation time>
+   ---
+   ```
+
+   Find that sha with `git log -1 --format=%H -- docs/en/<path>`.
+3. **If the English page has a heading that other pages link to by
+   anchor** (check by searching for `#that-heading-slug` across
+   `docs/en/`), don't let the translated heading's own auto-generated
+   slug change the target — pin the same, locale-stable ID explicitly
+   with `attr_list` (already enabled):
+
+   ```markdown
+   ## Choisir une source {: #choosing-a-source }
+   ```
+
+   Skipping this doesn't break the build, but it does silently break the
+   anchor scroll-to for any other, still-untranslated page linking into
+   that heading via fallback.
+4. Open a PR — [preview it](#pr-previews) like any other change, including
+   the language switcher.
+
+### Screenshots
+
+Nothing to duplicate up front. [`mkdocs-static-i18n`](https://github.com/ultrabug/mkdocs-static-i18n)
+falls back to the English file for *any* asset a locale doesn't have its
+own copy of — a translated page's `../assets/foo.png` just works,
+unmodified, showing the English screenshot, until a real localized one
+(captured once the [screenshot pipeline](screenshot-pipeline.md) is
+ported and run against that language's radio settings) is dropped in at
+the same filename under `docs/<locale>/assets/`, which silently
+overrides the fallback from then on.
+
+### Staleness tracking
+
+[Translation Status](translation-status.md) is generated automatically
+before every build (`hooks/i18n_status.py`, wired up via `mkdocs.yml`'s
+`hooks:` — runs locally, in PR previews, and in production alike, always
+current, never committed to git) and compares every locale's
+`translated_from` marker against each English page's actual last-changed
+commit: **current**, **stale** (English moved on), or **missing**. That
+page is the worklist — no GitHub Issues, no digging through Actions logs.
+
+Nav tab labels (e.g. "Model Setup") stay in English until a locale sets
+`nav_translations` for them — deliberately not done yet while only a
+handful of pages are translated, since translating labels ahead of the
+content behind them would read oddly.

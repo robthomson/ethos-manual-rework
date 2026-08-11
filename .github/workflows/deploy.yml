@@ -21,6 +21,11 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+        with:
+          # translation-status.md (see hooks/i18n_status.py) needs full
+          # history: `git log -- <path>` on a shallow clone only sees
+          # commits within the shallow window.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5

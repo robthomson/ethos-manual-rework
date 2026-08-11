@@ -6,6 +6,9 @@ repo_name: ethos-manual-rework
 edit_uri: edit/main/docs/
 docs_dir: docs
 
+hooks:
+  - hooks/i18n_status.py
+
 theme:
   name: material
   logo: assets/ethos-logo-reversed.png
@@ -151,3 +154,4 @@ nav:
       - contributing/index.md
       - Screenshot Pipeline: contributing/screenshot-pipeline.md
       - Versioning: contributing/versioning.md
+      - Translation Status: contributing/translation-status.md
