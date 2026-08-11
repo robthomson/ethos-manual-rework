@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -13,6 +13,10 @@
       
       
       
+        
+          <link rel="alternate" href="/1.6/tutorials/initial-radio-setup/" hreflang="en">
+        
+          <link rel="alternate" href="/1.6/fr/tutorials/initial-radio-setup/" hreflang="fr">
         
       
       
@@ -86,8 +90,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/1.6/." title="Ethos Manual" class="md-header__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="/1.6/fr/" title="Ethos Manual" class="md-header__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
       
   <img src="/1.6/assets/ethos-logo-reversed.png" alt="logo">
 
@@ -143,6 +147,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/1.6/tutorials/initial-radio-setup/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/1.6/fr/tutorials/initial-radio-setup/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -154,16 +184,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Recherche">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -176,7 +206,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Initialisation de la recherche
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -188,7 +218,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/robthomson/ethos-manual-rework" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/robthomson/ethos-manual-rework" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -209,7 +239,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -219,7 +249,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/1.6/." class="md-tabs__link">
+      <a href="/1.6/fr/" class="md-tabs__link">
         
   
   
@@ -240,7 +270,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/getting-started/" class="md-tabs__link">
+        <a href="/1.6/fr/getting-started/" class="md-tabs__link">
           
   
   
@@ -260,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/system-setup/" class="md-tabs__link">
+        <a href="/1.6/fr/system-setup/" class="md-tabs__link">
           
   
   
@@ -280,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/model-setup/" class="md-tabs__link">
+        <a href="/1.6/fr/model-setup/" class="md-tabs__link">
           
   
   
@@ -300,7 +330,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/displays/" class="md-tabs__link">
+        <a href="/1.6/fr/displays/" class="md-tabs__link">
           
   
   
@@ -320,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/lua-scripts/" class="md-tabs__link">
+        <a href="/1.6/fr/lua-scripts/" class="md-tabs__link">
           
   
   
@@ -340,7 +370,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/tutorials/" class="md-tabs__link">
+        <a href="/1.6/fr/tutorials/" class="md-tabs__link">
           
   
   
@@ -360,7 +390,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/how-to/" class="md-tabs__link">
+        <a href="/1.6/fr/how-to/" class="md-tabs__link">
           
   
   
@@ -380,7 +410,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/radio-notes/" class="md-tabs__link">
+        <a href="/1.6/fr/radio-notes/" class="md-tabs__link">
           
   
   
@@ -400,7 +430,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/ethos-suite/" class="md-tabs__link">
+        <a href="/1.6/fr/ethos-suite/" class="md-tabs__link">
           
   
   
@@ -420,7 +450,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/reference/" class="md-tabs__link">
+        <a href="/1.6/fr/reference/" class="md-tabs__link">
           
   
   
@@ -440,7 +470,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/1.6/contributing/" class="md-tabs__link">
+        <a href="/1.6/fr/contributing/" class="md-tabs__link">
           
   
   
@@ -474,7 +504,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/1.6/." title="Ethos Manual" class="md-nav__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+    <a href="/1.6/fr/" title="Ethos Manual" class="md-nav__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
       
   <img src="/1.6/assets/ethos-logo-reversed.png" alt="logo">
 
@@ -483,7 +513,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/robthomson/ethos-manual-rework" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/robthomson/ethos-manual-rework" title="Aller au dépôt" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -503,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/." class="md-nav__link">
+      <a href="/1.6/fr/" class="md-nav__link">
         
   
   
@@ -580,14 +610,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/getting-started/" class="md-nav__link">
+      <a href="/1.6/fr/getting-started/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Getting Started
+    Prise en main
   
 
     
@@ -608,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/getting-started/main-views/" class="md-nav__link">
+      <a href="/1.6/fr/getting-started/main-views/" class="md-nav__link">
         
   
   
@@ -636,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/getting-started/user-interface-and-navigation/" class="md-nav__link">
+      <a href="/1.6/fr/getting-started/user-interface-and-navigation/" class="md-nav__link">
         
   
   
@@ -664,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/getting-started/usb-connection-modes/" class="md-nav__link">
+      <a href="/1.6/fr/getting-started/usb-connection-modes/" class="md-nav__link">
         
   
   
@@ -692,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/getting-started/emergency-mode/" class="md-nav__link">
+      <a href="/1.6/fr/getting-started/emergency-mode/" class="md-nav__link">
         
   
   
@@ -777,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/" class="md-nav__link">
         
   
   
@@ -805,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/file-manager/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/file-manager/" class="md-nav__link">
         
   
   
@@ -833,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/alerts/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/alerts/" class="md-nav__link">
         
   
   
@@ -861,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/date-and-time/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/date-and-time/" class="md-nav__link">
         
   
   
@@ -889,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/general/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/general/" class="md-nav__link">
         
   
   
@@ -917,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/battery/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/battery/" class="md-nav__link">
         
   
   
@@ -945,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/hardware/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/hardware/" class="md-nav__link">
         
   
   
@@ -973,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/controls/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/controls/" class="md-nav__link">
         
   
   
@@ -1001,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/devices/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/devices/" class="md-nav__link">
         
   
   
@@ -1029,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/system-setup/information/" class="md-nav__link">
+      <a href="/1.6/fr/system-setup/information/" class="md-nav__link">
         
   
   
@@ -1114,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/" class="md-nav__link">
         
   
   
@@ -1142,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/model-select/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/model-select/" class="md-nav__link">
         
   
   
@@ -1170,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/model-edit/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/model-edit/" class="md-nav__link">
         
   
   
@@ -1198,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/flight-modes/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/flight-modes/" class="md-nav__link">
         
   
   
@@ -1226,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/mixes/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/mixes/" class="md-nav__link">
         
   
   
@@ -1254,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/outputs/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/outputs/" class="md-nav__link">
         
   
   
@@ -1282,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/timers/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/timers/" class="md-nav__link">
         
   
   
@@ -1310,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/trims/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/trims/" class="md-nav__link">
         
   
   
@@ -1338,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/rf-system/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/rf-system/" class="md-nav__link">
         
   
   
@@ -1366,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/curves/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/curves/" class="md-nav__link">
         
   
   
@@ -1394,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/logical-switches/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/logical-switches/" class="md-nav__link">
         
   
   
@@ -1422,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/special-functions/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/special-functions/" class="md-nav__link">
         
   
   
@@ -1450,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/variables/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/variables/" class="md-nav__link">
         
   
   
@@ -1478,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/trainer/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/trainer/" class="md-nav__link">
         
   
   
@@ -1506,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/telemetry/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/telemetry/" class="md-nav__link">
         
   
   
@@ -1534,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/checklist/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/checklist/" class="md-nav__link">
         
   
   
@@ -1562,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/model-setup/lua-scripts/" class="md-nav__link">
+      <a href="/1.6/fr/model-setup/lua-scripts/" class="md-nav__link">
         
   
   
@@ -1647,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/displays/" class="md-nav__link">
+      <a href="/1.6/fr/displays/" class="md-nav__link">
         
   
   
@@ -1675,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/displays/additional-displays/" class="md-nav__link">
+      <a href="/1.6/fr/displays/additional-displays/" class="md-nav__link">
         
   
   
@@ -1703,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/displays/custom-widgets/" class="md-nav__link">
+      <a href="/1.6/fr/displays/custom-widgets/" class="md-nav__link">
         
   
   
@@ -1788,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/lua-scripts/" class="md-nav__link">
+      <a href="/1.6/fr/lua-scripts/" class="md-nav__link">
         
   
   
@@ -1816,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/lua-scripts/lua-interpreter/" class="md-nav__link">
+      <a href="/1.6/fr/lua-scripts/lua-interpreter/" class="md-nav__link">
         
   
   
@@ -1844,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/lua-scripts/ethos-lua-documentation/" class="md-nav__link">
+      <a href="/1.6/fr/lua-scripts/ethos-lua-documentation/" class="md-nav__link">
         
   
   
@@ -1872,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/lua-scripts/example-script-locations/" class="md-nav__link">
+      <a href="/1.6/fr/lua-scripts/example-script-locations/" class="md-nav__link">
         
   
   
@@ -1900,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/lua-scripts/configuration-limits/" class="md-nav__link">
+      <a href="/1.6/fr/lua-scripts/configuration-limits/" class="md-nav__link">
         
   
   
@@ -1928,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/lua-scripts/basic-widget-layout/" class="md-nav__link">
+      <a href="/1.6/fr/lua-scripts/basic-widget-layout/" class="md-nav__link">
         
   
   
@@ -2013,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/tutorials/" class="md-nav__link">
+      <a href="/1.6/fr/tutorials/" class="md-nav__link">
         
   
   
@@ -2041,7 +2071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/tutorials/initial-radio-setup/" class="md-nav__link">
+      <a href="/1.6/fr/tutorials/initial-radio-setup/" class="md-nav__link">
         
   
   
@@ -2069,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/tutorials/basic-fixed-wing/" class="md-nav__link">
+      <a href="/1.6/fr/tutorials/basic-fixed-wing/" class="md-nav__link">
         
   
   
@@ -2097,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/tutorials/basic-flying-wing/" class="md-nav__link">
+      <a href="/1.6/fr/tutorials/basic-flying-wing/" class="md-nav__link">
         
   
   
@@ -2125,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/tutorials/basic-flybarless-heli/" class="md-nav__link">
+      <a href="/1.6/fr/tutorials/basic-flybarless-heli/" class="md-nav__link">
         
   
   
@@ -2210,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/" class="md-nav__link">
         
   
   
@@ -2238,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/low-battery-warning/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/low-battery-warning/" class="md-nav__link">
         
   
   
@@ -2266,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/battery-capacity-warning/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/battery-capacity-warning/" class="md-nav__link">
         
   
   
@@ -2294,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/sr8-sr10-setup/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/sr8-sr10-setup/" class="md-nav__link">
         
   
   
@@ -2322,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/butterfly-mixer/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/butterfly-mixer/" class="md-nav__link">
         
   
   
@@ -2350,7 +2380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/fbus-setup/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/fbus-setup/" class="md-nav__link">
         
   
   
@@ -2378,7 +2408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/test-redundant-receiver/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/test-redundant-receiver/" class="md-nav__link">
         
   
   
@@ -2406,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/user-defined-checklist/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/user-defined-checklist/" class="md-nav__link">
         
   
   
@@ -2434,7 +2464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/in-flight-compensation-curve/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
   
@@ -2462,7 +2492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/instant-takeback/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/instant-takeback/" class="md-nav__link">
         
   
   
@@ -2490,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/how-to/find-latest-bootloader/" class="md-nav__link">
+      <a href="/1.6/fr/how-to/find-latest-bootloader/" class="md-nav__link">
         
   
   
@@ -2575,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/radio-notes/" class="md-nav__link">
+      <a href="/1.6/fr/radio-notes/" class="md-nav__link">
         
   
   
@@ -2603,7 +2633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/radio-notes/x18s/" class="md-nav__link">
+      <a href="/1.6/fr/radio-notes/x18s/" class="md-nav__link">
         
   
   
@@ -2631,7 +2661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/radio-notes/x20-pro-and-aw/" class="md-nav__link">
+      <a href="/1.6/fr/radio-notes/x20-pro-and-aw/" class="md-nav__link">
         
   
   
@@ -2716,7 +2746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/ethos-suite/" class="md-nav__link">
+      <a href="/1.6/fr/ethos-suite/" class="md-nav__link">
         
   
   
@@ -2744,7 +2774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/ethos-suite/migration/" class="md-nav__link">
+      <a href="/1.6/fr/ethos-suite/migration/" class="md-nav__link">
         
   
   
@@ -2772,7 +2802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/ethos-suite/operation/" class="md-nav__link">
+      <a href="/1.6/fr/ethos-suite/operation/" class="md-nav__link">
         
   
   
@@ -2857,7 +2887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/reference/" class="md-nav__link">
+      <a href="/1.6/fr/reference/" class="md-nav__link">
         
   
   
@@ -2885,7 +2915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/reference/toolbars/" class="md-nav__link">
+      <a href="/1.6/fr/reference/toolbars/" class="md-nav__link">
         
   
   
@@ -2970,7 +3000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/contributing/" class="md-nav__link">
+      <a href="/1.6/fr/contributing/" class="md-nav__link">
         
   
   
@@ -2998,7 +3028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/contributing/screenshot-pipeline/" class="md-nav__link">
+      <a href="/1.6/fr/contributing/screenshot-pipeline/" class="md-nav__link">
         
   
   
@@ -3026,7 +3056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1.6/contributing/versioning/" class="md-nav__link">
+      <a href="/1.6/fr/contributing/versioning/" class="md-nav__link">
         
   
   
@@ -3067,7 +3097,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
   
   
   
@@ -3095,7 +3125,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Retour en haut de la page
 </button>
         
       </main>
@@ -3129,7 +3159,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/1.6", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "/1.6/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/1.6", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "/1.6/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="/1.6/assets/javascripts/bundle.d7400e89.min.js"></script>
