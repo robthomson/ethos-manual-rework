@@ -2,21 +2,25 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Date et heure
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
+# Date / Heure
 
 ![Date et heure](../assets/system-date.png)
 
-- **Format 24 heures** — bascule l'horloge entre l'affichage 12 et 24 heures.
-- **Afficher les secondes** — ajoute les secondes à l'affichage de l'horloge.
-- **Date** / **Heure** — règle la date et l'heure courantes ; les deux sont
-  utilisées pour l'enregistrement des données.
-- **Fuseau horaire** — votre fuseau horaire local.
-- **Ajuster la vitesse RTC** — compense la dérive de l'horloge temps réel,
-  jusqu'à 41 secondes/jour. Mesurez le nombre de secondes d'avance ou de
-  retard pris par votre horloge sur 24 heures, puis réglez la valeur de
-  calibration sur **12 × ce nombre de secondes** — négative si l'horloge
-  avance, positive si elle retarde (plage −500 à +500). Vérifiez de nouveau
-  après un ou deux jours et affinez le réglage.
-- **Ajustement automatique par GPS** — lorsque cette option est activée, la
-  date et l'heure sont réglées automatiquement à partir des données d'un
-  capteur GPS distant.
+- **Format horaire 24h** — bascule l'affichage de l'heure entre le format 12h
+  et 24h.
+- **Affichage des secondes** — ajoute les secondes à l'affichage de l'heure.
+- **Date** / **Heure** — réglage de la date et de l'heure actuelles ; toutes
+  deux sont utilisées lors des enregistrements de données.
+- **Fuseau horaire** — configuration du fuseau horaire de l'utilisateur.
+- **Calibrage RTC** — compense une dérive de l'horloge temps réel pouvant
+  atteindre 41 secondes par jour. Calculez combien de secondes votre horloge
+  gagne ou perd en 24 heures, puis réglez la valeur de calibration sur
+  **12 fois ce nombre de secondes** — valeur négative si votre horloge est
+  plus rapide, positive si elle est plus lente (plage −500 / +500).
+  Vérifiez de nouveau après un ou deux jours et affinez le réglage.
+- **Auto depuis GPS** — lorsque cette option est activée, la date et l'heure
+  sont réglées automatiquement à partir des données d'un capteur GPS distant.

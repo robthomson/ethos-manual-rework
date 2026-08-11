@@ -2,107 +2,119 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Matériel
 
 ![Vérification du matériel](../assets/system-hardware-check-x20s.png)
 
-Test et calibration des commandes physiques de la radio, définition du type
-des interrupteurs et mappage des touches d'accueil.
+Test et calibration des commandes physiques de la radio, définition des types
+d'inters et raccourcis des touches d'accueil.
 
-## Vérification du matériel {: #hardware-check }
+## Vérification matériel {: #hardware-check }
 
-Sollicite chaque entrée physique afin de confirmer que chacune est
+Sollicite chaque entrée physique afin de vérifier que chacune est
 correctement détectée.
 
-![Vérification du matériel X20 Pro](../assets/system-hardware-check-x20pro.png)
-![Vérification du matériel X18S](../assets/system-hardware-check-x18s.png)
+![Vérification du matériel / X20-PRO](../assets/system-hardware-check-x20pro.png)
+![Vérification du matériel / X18(S)](../assets/system-hardware-check-x18s.png)
 
-- **X20 Pro/R/RS** — vérifie également les deux boutons-poussoirs à
-  verrouillage **K** et **L** situés sur les épaules arrière, ainsi que les
-  trims supplémentaires **T5**/**T6**.
+- **X20 Pro/R/RS** — vérifie en plus les deux boutons-poussoirs à
+  verrouillage **K** et **L** situés sur les épaulements arrière, ainsi que
+  les trims supplémentaires **T5**/**T6**.
 - **X18** — vérifie également les trims supplémentaires **T5**/**T6**.
 
-## Calibration des analogiques {: #analogs-calibration }
+## Calibration analogique {: #analogs-calibration }
 
-![Calibration des analogiques](../assets/system-hardware-analogs-calibration.png)
+![Calibrage manches / potentiomètres](../assets/system-hardware-analogs-calibration.png)
 
-Indique à la radio la position exacte du centre et des butées de chaque
-manche, potentiomètre et curseur. Cette procédure est exécutée
-automatiquement au premier démarrage ; répétez-la après le remplacement d'un
-manche, d'un potentiomètre ou d'un curseur.
+Permet de définir précisément les centres et les limites de position de
+chaque manche, potentiomètre et curseur. Elle est automatiquement exécutée à
+la première mise en service de la radio ; elle doit être répétée après le
+remplacement d'un manche, d'un potentiomètre ou d'un curseur.
 
-## Calibration du gyroscope
+## Calibration gyros
 
-![Calibration du gyroscope](../assets/system-hardware-gyro-calibration.png)
+![Calibrage gyros](../assets/system-hardware-gyro-calibration.png)
 
-Calibre le gyroscope intégré afin que les entrées basées sur l'inclinaison
-réagissent correctement lorsque vous inclinez la radio — la position
-« à plat » devient celle dans laquelle vous tenez habituellement la radio.
-Cette procédure est également exécutée automatiquement au premier démarrage.
+Calibre le capteur gyroscopique intégré de manière à ce que les entrées
+basées sur l'inclinaison réagissent correctement à l'inclinaison de la
+radio — la position de « niveau » devient l'angle auquel vous tenez
+normalement la radio. Elle est également exécutée automatiquement à la
+première mise en service.
 
-## Filtre des analogiques
+## Filtre analogique
 
-Filtre ADC activable/désactivable pour les manches, activé par défaut — il
-réduit les tremblements autour du centre du manche. Il s'agit du réglage
-**global** ; il existe aussi une surcharge **par modèle** du filtre des
-analogiques dans [Édition du modèle](../model-setup/model-edit.md).
+Le filtre convertisseur analogique-numérique pour les manches peut être
+activé/désactivé avec ce réglage ; la valeur par défaut est ON, ce qui réduit
+les tremblements autour du neutre (centre de la course du manche). Il s'agit
+d'un paramètre **global** ; une option spécifique **au modèle** est également
+disponible sous Filtre analogique dans
+[Éditer modèle](../model-setup/model-edit.md).
 
-## Réglages des potentiomètres/curseurs {: #potssliders-settings }
+## Configuration Pots / Curseurs {: #potssliders-settings }
 
-Permet de renommer les potentiomètres et les curseurs. Le **X20 Pro/R/RS**
-prend en outre en charge deux potentiomètres supplémentaires,
-**Ext1**/**Ext2**, généralement utilisés pour des manches à 3 axes.
+Permet de renommer les potentiomètres et les curseurs. Les radios
+**X20 Pro/R/RS** peuvent en outre accueillir deux potentiomètres
+supplémentaires, **Ext1** et **Ext2**, généralement utilisés lors de
+l'installation de manches à 3 axes.
 
-![Valeurs ADC, potentiomètres](../assets/system-hardware-pots-x20s.png)
-![Valeurs ADC, potentiomètres (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
+![Configuration pots X20S](../assets/system-hardware-pots-x20s.png)
+![Configuration pots X20-PRO](../assets/system-hardware-pots-x20pro.png)
 
-## Réglages des interrupteurs {: #switches-settings }
+## Configuration Inters {: #switches-settings }
 
-![Interrupteurs](../assets/system-hardware-switches.png)
+![Configuration switches](../assets/system-hardware-switches.png)
 
-- **Délai de détection de la position médiane** — empêche qu'un basculement
-  rapide haut→bas (ou bas→haut) d'un interrupteur 3 positions n'enregistre
-  momentanément la position médiane ; celle-ci ne doit être prise en compte
-  que lorsque l'interrupteur s'y arrête effectivement. La valeur par défaut
-  est 0 ms, choisie pour convenir à la détection d'« auto-test » des
-  récepteurs stabilisés FrSky sur la voie CH12.
-- **Type d'interrupteur** — chaque interrupteur SA–SJ peut être défini comme
-  **None**, **Momentary**, **2 POS** ou **3 POS**, ce qui permet d'échanger
-  les fonctionnalités entre interrupteurs physiques (par exemple attribuer à
-  l'interrupteur momentané SH le rôle normalement tenu par l'interrupteur
+- **Délai détection position centrale** — garantit que la position centrale
+  des inters à trois positions n'est pas détectée lorsque l'inter est basculé
+  de la position haut à la position basse en un seul mouvement, et vice
+  versa ; elle ne doit être détectée que lorsque l'inter s'arrête
+  effectivement en position médiane. La valeur par défaut est 0 ms, afin de
+  s'adapter aux récepteurs stabilisés FrSky lors de la détection de
+  l'auto-vérification sur CH12.
+- **Type d'inter** — chaque inter SA à SJ peut être défini comme **Aucun**,
+  **Poussoir (momentané)**, **2 positions** ou **3 positions**, ce qui permet
+  d'intervertir les fonctionnalités entre inters physiques (par exemple
+  attribuer à l'inter momentané SH le rôle normalement tenu par l'inter
   2 positions SF) — dans la limite de ce que le câblage de la radio permet
   réellement (un rôle 3 positions ne peut généralement pas être attribué à un
   matériel qui n'est pas câblé pour cela).
 
-  ![Options des interrupteurs](../assets/system-hardware-switches-options.png)
-  ![Interrupteurs supplémentaires](../assets/system-hardware-switches-2.png)
+  ![Options des inters](../assets/system-hardware-switches-options.png)
+  ![Inters supplémentaires](../assets/system-hardware-switches-2.png)
 
-- **Renommage** — les interrupteurs peuvent être renommés de SA–SJ vers des
-  noms personnalisés ; ces noms sont globaux pour tous les modèles.
-- **X20 Pro** — ajoute les boutons-poussoirs **K**/**L** sur les épaules
-  arrière, ainsi que les positions **M**/**N** si elles sont câblées
-  (généralement pour des interrupteurs en bout de manche).
+- **Renommage** — les inters peuvent également être renommés des noms par
+  défaut SA à SJ en noms personnalisés ; notez que ces noms seront globaux
+  pour tous les modèles.
+- **X20 Pro** — dispose en plus des boutons-poussoirs **K**/**L** à
+  l'arrière, ainsi que des positions d'inter **M**/**N** si elles sont
+  câblées (généralement utilisées pour les interrupteurs d'extrémité de
+  manche).
 
-## Mappage des touches d'accueil
+## Raccourcis touches
 
-Redéfinit la destination des touches d'accueil `SYS`, `MDL` et `DISP`
-(`TELE` sur les radios plus anciennes).
+Permet de réattribuer la destination des touches d'accueil `SYS`, `MDL` et
+`DISP` (`TELE` sur les anciens modèles).
 
-- **`DISP`** — l'appui court comme l'appui long peuvent être réaffectés à
-  n'importe quelle page Modèle, page Système, à Configurer les écrans, à
-  Accueil ou à l'enregistrement des données de vol. Par souci de cohérence
-  avec la série X10, l'appui long sur `DISP` est conventionnellement réglé
-  sur Configurer les écrans.
-- **`SYS`/`MDL`** — seul l'appui long est réaffectable (vers le même
-  ensemble de destinations) ; un appui court ouvre toujours respectivement
-  la section Système ou Modèle.
+- **`DISP`** — les options d'appui court et d'appui long peuvent toutes deux
+  être réaffectées à n'importe quelle page du menu Modèle, page du menu
+  Système, à la page de configuration des écrans, à un écran principal ou à
+  l'enregistrement des données de vol. Par souci de cohérence avec la
+  série X10, l'appui long sur `DISP` est conventionnellement réglé sur la
+  configuration des écrans.
+- **`SYS`/`MDL`** — seules les options d'appui long peuvent être réaffectées
+  (vers le même ensemble de destinations), car une pression courte appelle
+  toujours respectivement la section Système ou Modèle.
 
 ## Options matérielles spécifiques à chaque radio {: #radio-specific-hardware-options }
 
 - **Activation des manches haptiques** (X20 Pro, X20R) — les X20 Pro AW et
-  X20RS sont livrés avec des manches MC20R équipés de moteurs de vibration
-  haptique ; si des manches MC20R ont été installés en rétrofit sur un
-  X20 Pro ou un X20R, activez-les ici (voir
+  X20RS sont livrées avec des manches MC20R équipés de moteurs de vibration
+  haptique ; si des manches MC20R ont été installés en rétrofit sur une
+  X20 Pro ou une X20R, activez-les ici (voir
   [Fonctions spéciales](../model-setup/special-functions.md) pour la
   configuration des motifs haptiques eux-mêmes).
 
@@ -115,19 +127,19 @@ Redéfinit la destination des touches d'accueil `SYS`, `MDL` et `DISP`
 
   ![Option de l'encodeur (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
 
-## Inspecteur des valeurs ADC {: #adc-value-inspector }
+## Inspection des valeurs ADC {: #adc-value-inspector }
 
-Affiche les valeurs brutes de conversion analogique-numérique lues par le
-processeur pour chaque entrée analogique :
+Cette page affiche les valeurs brutes de conversion analogique-numérique
+lues par le processeur pour chaque entrée analogique :
 
-![Vérification ADC (X20S)](../assets/system-hardware-adc-check-x20s.png)
-![Vérification ADC (X20 Pro)](../assets/system-hardware-adc-check-x20pro.png)
+![Vérif. analogique X20S](../assets/system-hardware-adc-check-x20s.png)
+![Vérif. analogique X20 Pro](../assets/system-hardware-adc-check-x20pro.png)
 
 **X20S** : 1 manche gauche horizontal, 2 manche gauche vertical, 3 manche
-droit vertical, 4 manche droit horizontal, 5 Pot 1, 6 Pot 2, 7 curseur
-central, 8 curseur gauche, 9 curseur droit.
+droit vertical, 4 manche droit horizontal, 5 Potentiomètre 1,
+6 Potentiomètre 2, 7 curseur central, 8 curseur gauche, 9 curseur droit.
 
 **X20 Pro** : identique à ce qui précède, mais avec deux voies
-supplémentaires de potentiomètres externes (7 Ext1, 8 Ext2 — par exemple des
-potentiomètres montés sur les manches) insérées avant les curseurs, qui
-deviennent 9 curseur central, 10 curseur gauche, 11 curseur droit.
+supplémentaires de potentiomètres externes (7 Ext1, 8 Ext2 — par ex. montés
+sur manche) insérées avant les curseurs, qui deviennent 9 curseur central,
+10 curseur gauche, 11 curseur droit.

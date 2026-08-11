@@ -2,132 +2,146 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Exemple de base : aile volante (elevons)
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
 
-Une aile volante à 2 servos en elevons, en prenant comme exemple concret
-les débattements/Expo/proportions de mixage recommandés pour la
-Dreamflight Weasel. Effectuez d'abord la [configuration initiale de la
-radio](initial-radio-setup.md).
+# Exemple d'aile volante basique (Elevon)
 
-## Étape 1. Vérifier les réglages système {: #step-1-confirm-system-settings }
+Une aile volante à 2 servos pour les elevons, en prenant comme exemple
+concret les débattements, l'Expo et les ratios de mixage recommandés par
+Dreamflight pour la Weasel. Commencez par suivre l'exemple de
+[configuration radio initiale](initial-radio-setup.md).
 
-Ordre **AETR** par défaut, avec **[Quatre premières voies
-fixes](../system-setup/controls.md#first-four-channels-fixed)** sur
-**OFF**. Enregistrez (si ACCESS) et appairez le récepteur via le
-[système RF](../model-setup/rf-system.md) avant de continuer.
+## Étape 1. Confirmer les paramètres du système {: #step-1-confirm-system-settings }
 
-## Étape 2. Identifier les servos/voies nécessaires
+Ordre des voies **AETR** par défaut, avec le réglage **[Quatre premières
+voies fixes](../system-setup/controls.md#first-four-channels-fixed)**
+désactivé (**OFF**). Utilisez la fonction [Système
+RF](../model-setup/rf-system.md) pour enregistrer (si votre récepteur est
+ACCESS) et lier votre récepteur avant de continuer.
 
-Sur une cellule à elevons, les [mixages](../model-setup/mixes.md)
-combinent les commandes d'ailerons et de profondeur sur les deux
-surfaces physiques — soit seulement 2 voies au total, chacune étant un
-mélange des deux commandes.
+## Étape 2. Identifier les servos/voies requis
+
+Dans le cas d'une aile volante à elevons, les
+[mixages](../model-setup/mixes.md) sont utilisés pour combiner les
+commandes d'ailerons et de profondeur afin d'agir sur les deux surfaces
+physiques — soit seulement 2 voies au total, chacune combinant les deux
+entrées.
 
 ## Étape 3. Créer un nouveau modèle
 
 ![Créer un modèle d'avion](../assets/tut-wing-eg-wiz-create-airplane.png)
 
-Depuis [Choix du modèle](../model-setup/model-select.md), lancez
-l'assistant **Avion** et choisissez **Récepteur non stabilisé**.
+Depuis [Sélection du modèle](../model-setup/model-select.md), lancez
+l'assistant **Avion** et choisissez l'option **Récepteur non stabilisé**.
 
-![Sans moteur](../assets/tut-wing-eg-wiz-no-engine.png)
+![Pas de moteur](../assets/tut-wing-eg-wiz-no-engine.png)
 
-Sélectionnez **Sans moteur**, acceptez les 2 voies d'ailerons proposées
-par défaut, puis sélectionnez **Sans volets**.
+Sélectionnez **Pas de moteur**, acceptez les 2 voies par défaut pour les
+ailerons, puis sélectionnez **Pas de volets**.
 
-![Sans empennage](../assets/tut-wing-eg-wiz-no-tail.png)
+![Pas d'empennage](../assets/tut-wing-eg-wiz-no-tail.png)
 
-Sélectionnez **Aucun** comme type d'empennage — c'est ce qui amène Ethos
-à construire automatiquement le mixage elevons (commandes ailerons +
-profondeur, toutes deux sur les mêmes deux voies). Nommez le modèle (par
-exemple « Weasel »), choisissez une image, puis terminez — il devient le
-modèle actif dans la catégorie Avion.
+Sélectionnez **Aucun** pour la queue — c'est ce qui amène Ethos à créer
+automatiquement le mixage elevons (commandes d'ailerons + profondeur,
+toutes deux sur les mêmes deux voies). Nommez le modèle (par exemple
+« Weasel »), sélectionnez une image bitmap, puis suivez l'assistant
+jusqu'à la fin — il devient le modèle actif dans le groupe Avion.
 
-## Étape 4. Vérifier et configurer les mixages
+## Étape 4. Examiner et configurer les mixages
 
 ![Vue d'ensemble des mixages](../assets/tut-wing-eg-mixes.png)
 
-L'assistant crée un mixage Ailerons sur les voies 1+2, suivi d'un mixage
-Profondeur *également* sur les voies 1+2 — les deux commandes agissent
-sur les deux voies d'elevons, ce qui constitue tout l'art du mixage
-elevons.
+L'assistant a créé un mixage Ailerons sur les voies 1 et 2, suivi d'un
+mixage Profondeur *également* sur les voies 1 et 2 — les deux commandes
+d'entrée agissent donc sur les deux voies d'elevons, ce qui constitue
+tout le principe du mixage elevons.
 
 ### Ailerons
 
 ![Mixage ailerons](../assets/tut-wing-eg-mixes-ail-mix.png)
 
-**Poids/Débattements** — d'après le manuel de la Weasel, le débattement
-des ailerons doit valoir environ 3× celui de la profondeur, et les deux
-doivent totaliser 100 % : **75 %** ailerons, **25 %** profondeur. Les
-petits débattements représentent environ la moitié des grands : **36 %**
-ailerons en petit débattement, **12 %** profondeur en petit débattement.
+**Poids/Débattements** — si l'on se réfère au manuel de la Weasel, les
+débattements recommandés pour les ailerons sont environ 3 fois supérieurs
+à ceux de la profondeur, et les deux doivent totaliser 100 % : **75 %**
+pour les ailerons et **25 %** pour la profondeur. Les taux bas
+représentent environ 50 % des taux élevés : nous utiliserons donc **36 %**
+pour les ailerons en petit débattement et **12 %** pour la profondeur en
+petit débattement.
 
-![Poids du mixage ailerons](../assets/tut-wing-eg-mixes-ail-mix-weight.png)
+![Débattement du mixage ailerons](../assets/tut-wing-eg-mixes-ail-mix-weight.png)
 
-**Expo** — valeurs recommandées pour la Weasel : 35 % en grand
-débattement / 20 % en petit, actives interrupteur SB en bas, ce qui
-adoucit la réponse autour du neutre du manche.
+**Expo** — les valeurs d'Expo recommandées par la Weasel sont de 35 % pour
+les grands débattements et de 20 % pour les petits, actives sur la
+position basse de l'interrupteur SB, ce qui aplatit la réponse autour du
+centre du manche.
 
-**Différentiel** — faible sur cette cellule, environ **4 %** :
+**Différentiel** — assez faible sur cette cellule, environ **4 %** :
 
 ![Différentiel d'ailerons](../assets/tut-wing-eg-mixes-ail-diff-04.png)
 
-(Voir l'[exemple de base pour aile
-fixe](basic-fixed-wing.md#ailerons) pour comprendre l'utilité du
-différentiel — le même raisonnement sur le lacet inverse s'applique ici.)
+(Voir l'[exemple d'avion basique](basic-fixed-wing.md#ailerons) pour
+comprendre l'utilité du différentiel — le même raisonnement sur le lacet
+adverse s'applique ici.)
 
 ### Profondeur
 
 ![Mixage profondeur](../assets/tut-wing-eg-mixes-ele-mix.png)
 
-Même principe : débattements **25 %**/**12 %** grand/petit, avec les
-mêmes valeurs d'Expo que pour les ailerons.
+De la même manière que pour les ailerons : des débattements de **25 %** et
+**12 %** (grands/petits), avec les mêmes valeurs d'Expo que pour les
+ailerons.
 
 ### Dérive
 
 ![Mixage dérive](../assets/tut-wing-eg-mixes-rud-mix.png)
 
-La Weasel n'en a pas — les ailes volantes n'en nécessitent généralement
-pas. Lorsqu'une dérive *est* nécessaire sur un modèle à elevons,
-ajoutez-la comme [mixage libre](../model-setup/mixes.md#mix-libraries)
-sur la voie 3.
+La Weasel n'a pas de dérive — les ailes volantes n'en ont généralement pas
+besoin. D'autres modèles à elevons peuvent nécessiter une dérive, auquel
+cas il faut utiliser un [mixage
+libre](../model-setup/mixes.md#mix-libraries) pour l'ajouter sur la
+voie 3.
 
-## Étape 5. Appairer le récepteur
+## Étape 5. Lier le récepteur
 
 Comme à l'[étape 1](#step-1-confirm-system-settings) — enregistrez et
-appairez avant de continuer, et envisagez de débrancher les liaisons des
-servos ou de réduire les courses jusqu'à ce que les limites Min/Max
-soient réglées, afin de ne rien forcer.
+liez votre récepteur avant de continuer. Pour éviter d'endommager vos
+servos par inadvertance, il serait sage de déconnecter les tringleries de
+servo ou de réduire la course jusqu'à ce que les limites Min/Max soient
+réglées.
 
-## Étape 6. Vérifier les mixages
+## Étape 6. Revoir les mixages
 
-Les voies de sortie 1/2 peuvent être renommées **Elevon1**/**Elevon2**.
-Avec les ailerons à fond à droite, la voie 1 (droite, montante) indique
-75 %, tandis que la voie 2 (gauche, descendante) indique 72 % — les 3 %
-d'écart *sont* l'effet du différentiel. Ajoutez par-dessus la profondeur
-à piquer à fond et la voie 1 devient 75+25 = 100 %, la voie 2 devient
-72−25 = 47 %.
+Les voies de sortie 1 et 2 peuvent être renommées **Elevon1** et
+**Elevon2**. Avec les ailerons à fond à droite, la voie 1 (droite,
+montante) est à 75 %, tandis que la voie 2 (gauche, descendante) est à
+72 % — cet écart de 3 % *est* l'effet du différentiel. Ajoutez par-dessus
+la profondeur à piquer à fond et la voie 1 passe à 75 + 25 = 100 %, la
+voie 2 à 72−25 = 47 %.
 
-## Étape 7. Configurer les débattements maximaux des servos
+## Étape 7. Configurer les courses maximales des servos
 
 ![Ailerons à fond](../assets/tut-wing-eg-outputs-full-ail.png)
 ![Ailerons à fond + profondeur à fond](../assets/tut-wing-eg-outputs-full-ail-full-ele.png)
 
-Centrez d'abord chaque servo avec **PWM center**. Le débattement maximal
-recommandé pour la Weasel est de 25 mm d'ailerons + 10 mm de profondeur,
-soit 35 mm cumulés — appliquez les commandes ailerons/profondeur à fond
-en addition *et* à fond en opposition, et vérifiez que ni les limites
-mécaniques ni celles des servos ne sont dépassées avant de fixer les
-débattements définitifs.
+Commencez par ajuster le neutre de chaque servo à l'aide du réglage **PWM
+center**. Les courses maximales recommandées par la Weasel sont de 25 mm
+(ailerons) + 10 mm (profondeur) = 35 mm cumulés — appliquez les commandes
+d'ailerons et de profondeur à fond en addition *et* à fond en opposition,
+et vérifiez que les limites mécaniques ou celles des servos ne sont pas
+dépassées avant de régler les débattements définitifs.
 
-- **Min/Max** — limites strictes, jamais outrepassées ; les réduire
-  diminue le débattement au lieu de l'écrêter. Par défaut ±100 %,
-  extensible à ±150 % si nécessaire.
-- **Courbe** — souvent plus rapide et plus souple que de jongler
-  directement avec Min/Max/Subtrim, avec en plus l'avantage d'un
-  graphique en direct. Une courbe à 3 points convient à la plupart des
-  sorties ; une courbe à 5 points sur le second elevon permet de
+- **Min/Max** — limites « strictes », jamais outrepassées ; les réduire
+  diminue le débattement au lieu d'induire un écrêtage. Les limites par
+  défaut sont de ±100 %, mais elles peuvent être portées à ±150 % si
+  nécessaire.
+- **Courbe** — souvent un moyen plus rapide et plus flexible que de
+  jongler directement avec Min/Max/Subtrim, avec en plus l'avantage d'un
+  beau graphique en direct. Utilisez une courbe à 3 points pour la plupart
+  des sorties ; une courbe à 5 points sur le second elevon permet de
   synchroniser facilement la course en 5 points avec celle du premier.
-  Lorsque vous utilisez une courbe à cette fin, laissez Min/Max/Subtrim
-  à leurs valeurs neutres (−100/100/0, ou −150/150/0 avec les limites
-  étendues) et laissez la courbe assurer la mise en forme.
+  Lors de l'utilisation d'une courbe, il est recommandé de laisser Min,
+  Max et Subtrim à leurs valeurs de passage (−100/100/0, ou −150/150/0 si
+  vous utilisez des limites étendues) et de laisser la courbe assurer la
+  mise en forme.

@@ -6,15 +6,15 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Sorties](../assets/model-outputs.png)
 
-Les sorties constituent la frontière entre la « logique » pure des [Mixages](mixes.md) et
+La section Sorties est l'interface entre la « logique » pure des [Mixages](mixes.md) et
 le monde physique — servos, tringleries, gouvernes, actionneurs,
 transducteurs. C'est là que les butées, l'inversion, le centrage et les
-courbes de correction sont adaptés aux besoins mécaniques réels du
+courbes de correction sont adaptés aux caractéristiques mécaniques réelles du
 modèle. Chaque voie de sortie correspond à une sortie servo du récepteur
-(CH1 → prise servo n° 1, avec les réglages de protocole par défaut).
+(CH1 correspond à la prise servo n° 1, avec les paramètres de protocole par défaut).
 
-Ethos travaille en pourcentages, mais les servos sont en définitive pilotés par
-la largeur d'impulsion PWM exprimée en microsecondes :
+Bien que la radio soit configurée en pourcentages, les servos sont en définitive pilotés par
+un signal PWM dont la largeur d'impulsion est exprimée en µs (microsecondes) :
 
 | % | µs |
 |---|---|
@@ -31,106 +31,111 @@ la largeur d'impulsion PWM exprimée en microsecondes :
     mixage actif. Sur une voie de gaz en particulier, le neutre correspond à
     **mi-gaz**.
 
-L'écran Sorties affiche deux barres par voie : la barre inférieure (verte) représente
-la valeur du mixeur pour cette voie, la barre supérieure (orange) la valeur
-après traitement des sorties réellement envoyée au récepteur (en % et en µs).
+L'écran Sorties affiche deux graphiques à barres par voie : la barre inférieure (verte) indique
+la valeur des mixages pour la voie, tandis que la barre supérieure (orange) indique la valeur
+réelle envoyée au récepteur après le traitement des sorties (en % et en µs).
 Les limites Min/Max apparaissent comme des sections grisées de la barre orange. Les voies
-qui ne sont pas actuellement transmises au module RF ont un fond plus sombre.
+qui ne sont pas transmises au module RF sont affichées avec un arrière-plan plus sombre.
 De petites icônes apparaissent sur une voie lorsque ses réglages Direction, Courbe, Ralentissement ou
 Équilibrage ont été modifiés par rapport aux valeurs par défaut, afin de repérer d'un coup d'œil les voies
 non standard.
 
 !!! tip
-    Un appui long sur `ENT` depuis l'écran Mixages ou Phases de vol
-    amène directement ici.
+    Pour un accès rapide à cet écran, un appui long sur `ENT` depuis l'écran
+    Mixages ou Phases de vol permet d'accéder directement aux sorties.
 
 ## Modification d'une voie {: #editing-a-channel }
 
 ![Modification de la sortie de profondeur](../assets/model-outputs-elevator-edit.png)
 ![Modification de la sortie des gaz](../assets/model-outputs-throttle-edit.png)
 
-Appuyez sur une voie pour l'ouvrir. Un aperçu en haut de l'écran montre la valeur du mixage
-(vert) face à la valeur de sortie (orange), avec un petit repère blanc pour
+Appuyez sur la voie à modifier. Un aperçu en haut de l'écran affiche la valeur des mixages
+(en vert) face à la valeur de sortie (en orange), avec un petit marqueur blanc pour
 les points Min/Max.
 
-- **Nom** — modifiable.
-- **Direction** — inverse la sortie de la voie, généralement pour inverser
-  le sens de rotation du servo. Signalée par une icône à double flèche sur la voie.
-  Cela n'affecte **pas** les mixages qui l'alimentent et n'inverse **pas** les
-  limites Min/Max.
-- **Min/Max** — limites strictes qui ne sont jamais outrepassées — à régler pour éviter
-  tout blocage mécanique. Elles font office de réglage de butée/gain : les réduire
-  diminue le débattement au lieu de provoquer un écrêtage. La valeur par défaut est ±100 %, réglable
-  jusqu'à ±150 %. Pendant le réglage, l'extrémité vers laquelle on se déplace
-  est affichée en gras (p. ex. poussez le manche de profondeur vers l'avant et la
-  valeur Max s'affiche en gras, pour confirmer qu'il s'agit bien de l'extrémité en cours de réglage).
+- **Nom** — le nom peut être modifié.
+- **Direction** — change la direction de la sortie de la voie, généralement pour inverser
+  la direction du servo. Signalée par une icône à double flèche sur la voie.
+  Notez que cela n'affecte **pas** les mixages qui pilotent la sortie et
+  n'intervertit **pas** non plus les limites Min/Max.
+- **Min/Max** — limites « strictes », c'est-à-dire qu'elles ne seront jamais remplacées — elles
+  doivent être réglées de manière à éviter le grippage mécanique. Elles servent de paramètres
+  de gain ou de « point final » : les réduire réduira le débattement plutôt que d'induire un
+  écrêtage. Les limites par défaut sont de ±100 %, mais peuvent être augmentées
+  jusqu'à ±150 %. Lors du réglage, l'extrémité à ajuster est mise en surbrillance
+  en gras (par exemple, poussez légèrement le manche de profondeur vers l'avant et la
+  valeur Max s'affiche en gras pour indiquer qu'il s'agit bien de l'extrémité en cours de réglage).
 
   ![Avertissement redondance SBUS](../assets/model-outputs-sbus-warning.png)
 
   !!! warning "Redondance SBUS"
-      Une configuration de redondance utilisant SBUS ne peut pas déplacer un servo au-delà d'environ
-      ±125 %. Les champs Min/Max eux-mêmes possèdent des plages asymétriques (−150–0 %
-      et 0–150 %) — si vous les pilotez depuis une [Variable](variables.md), donnez à cette
-      variable une plage identique ou activez **Ignorer la plage** (voir [options de
+      Lors de l'utilisation d'un système de redondance impliquant SBUS, les mouvements de servo
+      au-delà d'environ ±125 % ne sont pas possibles. Les paramètres Min/Max ont eux-mêmes
+      des plages asymétriques (−150 % à 0 % et 0 % à +150 %) — lorsque vous les pilotez
+      depuis une [Var](variables.md), à moins que la Var n'ait une plage identique, il sera
+      nécessaire de définir **Ignorer la plage** (voir [options de
       source](../getting-started/user-interface-and-navigation.md#choosing-a-source)),
-      sans quoi la conversion automatique de plage produira des valeurs inattendues. Si
-      la sortie du récepteur principal dépasse 125 % et qu'il passe en failsafe, le
-      récepteur redondant qui prend le relais via SBUS la ramènera à 125 %.
+      afin d'éviter les valeurs inattendues dues à la conversion de plage. Si
+      la sortie du récepteur principal dépasse 125 % et que celui-ci entre en sécurité
+      intégrée, le récepteur redondant qui prend le relais via SBUS la limite à 125 %.
 
-- **Centre/Subtrim** — décale la sortie, généralement pour centrer un bras
-  de servo ; les butées ne sont pas affectées.
+- **Centre/Subtrim** — introduit un décalage sur la sortie, généralement utilisé pour centrer
+  un bras de servo ; les points de terminaison ne sont pas affectés.
 
   !!! warning
-      N'utilisez pas le subtrim pour des décalages importants — il introduit un
-      différentiel notable dans la réponse du servo. Utilisez plutôt un **mixage d'offset**
-      pour tout ce qui va au-delà d'un centrage fin.
+      Ne soyez pas tenté d'utiliser le subtrim pour ajouter de grands décalages — il
+      construira une grande quantité de différentiel dans la réponse du servo. La bonne
+      méthode consiste à ajouter un **mixage décalé** pour tout ce qui va au-delà d'un
+      centrage fin.
 
-- **Centre PWM** — semblable au subtrim, mais décale la plage de débattement *entière* du servo,
-  butées strictes incluses, l'opération étant effectuée dans le servo lui-même
-  plutôt qu'affichée sur le moniteur de voies. Cela permet de garder le
-  centrage mécanique distinct du trim.
-- **Courbe** — associe une courbe Expo ou personnalisée (existante ou nouvelle, avec un
-  raccourci **Modifier** une fois définie) pour corriger la réponse réelle — p. ex.
-  maintenir un suivi précis entre les volets gauche et droit. Signalée par une icône de courbe sur
-  la voie.
-- **Ralentissement haut/bas** — ralentit la réponse de la sortie aux variations d'entrée, en
-  secondes pour parcourir 0→100 % — p. ex. ralentir un train rentrant entraîné par un servo
-  proportionnel ordinaire. Signalé par une icône d'horloge sur la voie. (Un **délai**,
-  à distinguer du ralentissement, est disponible dans les [interrupteurs
+- **Centre PWM** — similaire au subtrim, à la différence qu'un réglage effectué ici décale
+  *toute* la bande de mouvement du servo, limites strictes incluses ; il est effectivement
+  effectué dans le servo lui-même et n'est donc pas visible sur le moniteur de voies.
+  Cela sépare la fonction de centrage mécanique de la fonction de trim.
+- **Courbe** — permet de sélectionner une courbe Expo ou personnalisée (existante ou nouvelle,
+  avec un raccourci **Modifier** une fois la courbe configurée) pour corriger les problèmes de
+  réponse du monde réel — par exemple s'assurer que les volets gauche et droit suivent avec
+  précision. Signalée par une icône de courbe sur la voie.
+- **Ralentir haut/bas** — ralentit la réponse de la sortie par rapport au changement d'entrée ;
+  la valeur est le temps en secondes qu'il faudra à la sortie pour couvrir la plage 0→100 % —
+  par exemple pour ralentir des trains rentrants actionnés par un servo proportionnel normal.
+  Signalé par une icône d'horloge sur la voie. (Une fonction de **retard**,
+  à distinguer du ralentissement, est disponible sous les [interrupteurs
   logiques](logical-switches.md).)
 
-## Permuter les voies {: #swap-channels }
+## Échanger voies {: #swap-channels }
 
-![Permuter les voies](../assets/model-outputs-swap-channels.png)
-![Choix de la voie à permuter](../assets/model-outputs-swap-channels-select.png)
+![Échanger voies](../assets/model-outputs-swap-channels.png)
+![Choix de la voie à échanger](../assets/model-outputs-swap-channels-select.png)
 
-Permute deux voies de sortie. La boîte de dialogue s'ouvre avec la voie courante
-pré-renseignée ; choisissez l'autre et confirmez — la permutation est immédiate, et chaque
-mixage faisant référence à l'une des deux voies est mis à jour en conséquence.
+Cette fonction permet d'échanger deux voies de sortie. La boîte de dialogue s'ouvre avec la
+voie courante déjà remplie ; sélectionnez l'autre voie puis validez — l'échange a lieu
+immédiatement, et chaque mixage faisant référence à l'une des deux voies est mis à jour en
+conséquence.
 
-## Réinitialiser les réglages
+## Réinitialiser les paramètres
 
 ![Réinitialiser la voie](../assets/model-outputs-reset-select.png)
 
-Remet tous les paramètres d'une voie à leurs valeurs par défaut — utile avant de
-réaffecter une voie à un autre usage, avec une boîte de dialogue de confirmation pour
-éviter les fausses manœuvres.
+Efface tous les paramètres d'une voie pour les ramener à leurs valeurs par défaut — utile
+avant de réutiliser une voie pour autre chose, avec une boîte de dialogue de confirmation
+permettant d'éviter toute réinitialisation accidentelle.
 
 ## Équilibrer les voies {: #balance-channels }
 
 ![Choix des voies à équilibrer](../assets/model-outputs-balance-choose_channels.png)
 ![Choix de CH7/CH6](../assets/model-outputs-balance-choose-ch7-and-ch6.png)
 
-Équilibre une paire (ou jusqu'à 4) de voies afin qu'elles se déplacent de façon synchrone — p. ex.
-des volets qui ne bougent pas ensemble peuvent induire un roulis indésirable ; des gaz
+Équilibre une paire (ou jusqu'à 4) de voies afin qu'elles se déplacent de façon synchrone — par
+exemple des volets qui ne bougent pas ensemble peuvent induire un roulis indésirable ; des gaz
 déséquilibrés sur un modèle multimoteur peuvent induire un lacet indésirable. Ethos crée une
-courbe d'équilibrage différentielle pour chaque voie sélectionnée ; en comparant la position physique
-des gouvernes à chaque point de la courbe, vous pouvez les ajuster pour les faire correspondre,
-jusqu'à obtenir des gouvernes parfaitement synchrones.
+courbe d'équilibrage différentielle pour chaque voie sélectionnée ; en comparant la position
+physique des gouvernes à chaque point de la courbe, vous pouvez les ajuster pour les faire
+correspondre, jusqu'à obtenir des gouvernes parfaitement synchrones.
 
 **Avant l'équilibrage**, dans l'ordre :
 
-1. Réglez le sens des servos pour un débattement correct.
+1. Réglez la direction des servos pour un débattement correct.
 2. Avec les mixages au neutre, utilisez éventuellement le **Centre PWM** pour aligner les
    palonniers de servo.
 3. Réglez Min/Max et le Subtrim.

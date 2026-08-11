@@ -2,158 +2,170 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Général
 
-![Réglages généraux](../assets/system-general.png)
+![Paramètres généraux](../assets/system-general.png)
 
-Couvre les attributs d'affichage, l'audio, le vario, le retour haptique et la barre d'outils supérieure.
+Couvre l'affichage, les paramètres audio, le vario, le retour vibreur et la barre infos supérieure.
 
-## Attributs d'affichage
+## Affichage
 
-- **Language** — la langue des menus de l'écran (English, 中文, Česky, Deutsch,
+- **Langue** — la langue des menus de la radio (English, 中文, Česky, Deutsch,
   Español, Français, עברית, Italiano, Nederlands, Norsk, Português
   Brasileiro, Polish, Português, et d'autres).
-- **Keyboard** — disposition du clavier virtuel : QWERTY, QWERTZ ou AZERTY.
-- **Brightness** — un curseur pour la luminosité du rétroéclairage ; un appui
+- **Clavier** — choix de la disposition du clavier virtuel parmi QWERTY,
+  QWERTZ et AZERTY.
+- **Luminosité** — un curseur pour la luminosité du rétroéclairage ; un appui
   long sur `ENT` permet de la piloter depuis une source (par exemple un
-  curseur, comme dans l'exemple ci-dessous), ou de la forcer au
-  minimum/maximum.
+  potentiomètre ou un curseur, comme dans l'exemple ci-dessous), ou de la
+  forcer au minimum/maximum.
 
-  ![Menu de luminosité](../assets/system-general-brightness-menu.png)
-  ![Curseur de luminosité](../assets/system-general-brightness-slider.png)
+  ![Menu pour la luminosité](../assets/system-general-brightness-menu.png)
+  ![Utilisation d'un potentiomètre pour la luminosité](../assets/system-general-brightness-slider.png)
 
   !!! note
-      Si **Brightness** est égal à **Sleep mode brightness**, l'écran tactile
+      Si **Luminosité** est égale à **Luminosité veille**, l'écran tactile
       reste actif même en « veille ».
 
-- **Wake up** — les éléments qui réveillent le rétroéclairage depuis la veille
-  (plusieurs peuvent être activés) : **Always on** (jamais de veille),
-  **Sticks**, **Switches**, **Gyro** (inclinaison de la radio). Les touches
-  la réveillent toujours, quels que soient ces réglages.
-- **Sleep** — durée d'inactivité avant l'extinction du rétroéclairage (grisé
-  si Wake up est réglé sur Always on).
-- **Sleep mode brightness** — luminosité du rétroéclairage pendant la veille.
-- **Dark mode** — thème d'affichage clair ou sombre.
-- **Highlight Color** — la couleur d'accentuation de l'interface (par défaut
-  `#F8B038`).
+- **Activation** — les éléments qui réveillent le rétroéclairage après la mise
+  en veille (plusieurs options peuvent être sélectionnées simultanément) :
+  **Toujours** (pas de mise en veille), **Manches**, **Inters**, **Gyro**
+  (inclinaison de la radio). Les touches réveillent toujours l'écran, quels
+  que soient ces réglages.
+- **Mise en veille** — durée d'inactivité avant l'extinction du
+  rétroéclairage (non modifiable si Activation est réglé sur Toujours).
+- **Luminosité veille** — luminosité du rétroéclairage pendant la veille.
+- **Mode sombre** — choix entre les modes clair ou sombre de l'affichage.
+- **Couleur de surbrillance** — la couleur de surbrillance de l'interface
+  (par défaut `#F8B038`).
 
 ## Réglages audio {: #audio-settings }
 
-![Réglages audio](../assets/system-general-audio.png)
+![Audio](../assets/system-general-audio.png)
 
-- **Audio language** — langue des annonces vocales.
+- **Langue audio** — langue des annonces vocales.
 - **Choix des voix** — Ethos prend en charge plusieurs packs vocaux
   simultanés :
 
-  - **Voice 1 (main)** — utilisée pour toutes les annonces système intégrées.
+  - **Voix 1 (Princ.)** — utilisée pour toutes les annonces système Ethos.
     Pour l'anglais, le choix par défaut se fait entre les packs américain
     (`us`) et britannique (`gb`), lus depuis `audio/en/us/system` et
-    `audio/en/gb/system`. Les fichiers sonores de l'utilisateur pour la
-    [fonction spéciale Play Audio](../model-setup/special-functions.md) se
+    `audio/en/gb/system`. Les fichiers audio de l'utilisateur proposés par la
+    [fonction spéciale Lire audio](../model-setup/special-functions.md) se
     placent respectivement dans `audio/en/us/` ou `audio/en/gb/`.
-  - **Voice 2 / Voice 3** — packs supplémentaires, par exemple une voix TTS
-    personnalisée. Chacun nécessite la même structure de dossiers que Voice 1
-    — par exemple une voix nommée « Susan » nécessite `audio/en/Susan/` pour
-    les sons de l'utilisateur et `audio/en/Susan/system` pour ses sons système
-    (chaque voix a besoin d'un dossier `/system`, puisque c'est là que
-    **Play Value** et les annonces de chronomètre vont chercher leurs sons ;
-    une liste `.csv` des fichiers sonores système standard est fournie avec
-    chaque version audio). Une fois installée, une voix peut être affectée par
-    chronomètre et par fonction Play Audio — ou même définie comme Voice 1
-    pour remplacer purement et simplement les annonces système.
-  - **Voice « default »** — installée automatiquement comme solution de repli
+  - **Voix 2 / Voix 3** — packs de voix alternatives, par exemple une voix TTS
+    personnalisée. Chacune nécessite la même structure de dossiers que la
+    Voix 1 — par exemple une voix appelée « Susan » nécessite
+    `audio/en/Susan/` pour les fichiers audio de l'utilisateur et
+    `audio/en/Susan/system` pour ses fichiers audio système (chaque voix doit
+    avoir un dossier `/system`, puisque c'est là que **Lire valeur** et les
+    annonces du chrono vont chercher leurs sons ; une liste `.csv` des
+    fichiers audio système fournis en standard est incluse avec chaque version
+    audio). Une fois installée, une voix peut être affectée par chrono et par
+    fonction Lire audio — ou même définie comme Voix 1 pour remplacer purement
+    et simplement les annonces système.
+  - **Voix « default »** — installée automatiquement comme solution de repli
     sûre (et utilisée pour éviter les problèmes de conversion depuis les
-    installations 1.4.x) : si Voice 1 n'est pas déjà définie lors d'une
+    installations 1.4.x) : si la Voix 1 n'est pas déjà définie lors d'une
     installation ou d'une mise à jour, elle est réglée sur `default`, avec
-    lecture depuis `audio/en/default/system`. Les fichiers sonores
-    personnalisés fréquemment demandés pour Play Audio se trouvent dans
+    lecture depuis `audio/en/default/system`. Les fichiers audio
+    personnalisés fréquemment demandés pour Lire audio se trouvent dans
     `audio/en/default/`.
 
-- **Main volume** — un curseur pour le volume audio général (appui long sur
-  `ENT` pour le piloter depuis un potentiomètre) ; des bips sont émis pendant
-  le réglage afin de juger le niveau à l'oreille.
-- **Audio mode** :
-  - **Silent** — aucun son (déclenche tout de même l'[alerte de mode
-    silencieux](alerts.md) au démarrage, si elle est activée).
-  - **Alarms only** — seules les alarmes sont audibles.
-  - **Default** — sons normaux.
-  - **Often** — ajoute des bips d'erreur lorsqu'une valeur est poussée au-delà
-    de son minimum/maximum.
-  - **Always** — ajoute des bips pour la navigation ordinaire dans les menus,
-    en plus de Often.
+- **Volume principal** — un curseur pour contrôler le volume audio général (un
+  appui long sur `ENT` permet de le piloter depuis un potentiomètre) ; des
+  bips sont émis pendant le réglage afin d'aider à juger le niveau à
+  l'oreille.
+- **Modes audio** :
+  - **Silencieux** — pas d'audio (une alerte sera tout de même émise au
+    démarrage si la vérification du [mode silencieux](alerts.md) est activée).
+  - **Alarmes uniquement** — seules les alarmes seront jouées.
+  - **Par défaut** — les sons sont activés.
+  - **Fréquent** — ajoute des bips d'erreur lors du dépassement des valeurs
+    minimale ou maximale.
+  - **Toujours** — ajoute des bips lors de la navigation dans les menus, en
+    plus des sons du mode « Fréquent ».
   - **Bluetooth** (X20S/HD/Pro/R/RS uniquement) — relaie l'audio vers un
-    appareil Bluetooth appairé (casque, etc.). Choisissez **Search Devices**,
-    mettez l'appareil cible en mode d'appairage, puis sélectionnez-le dès
-    qu'il est trouvé :
+    appareil Bluetooth appairé (casque, etc.). Appuyez sur **Chercher
+    périphériques**, placez l'appareil cible en mode d'appairage, puis
+    sélectionnez-le dès qu'il est trouvé :
 
-    ![Appairage Bluetooth](../assets/system-general-audio-bluetooth.png)
-    ![Recherche Bluetooth](../assets/system-general-audio-bluetooth-searching.png)
-    ![Appareil Bluetooth sélectionné](../assets/system-general-audio-bluetooth-device-selected.png)
-    ![Connexion Bluetooth](../assets/system-general-audio-bluetooth-connecting.png)
-    ![Bluetooth connecté](../assets/system-general-audio-bluetooth-connected-ok.png)
+    ![Bluetooth audio](../assets/system-general-audio-bluetooth.png)
+    ![Message d'attente de périphériques](../assets/system-general-audio-bluetooth-searching.png)
+    ![Choix de périphérique Bluetooth](../assets/system-general-audio-bluetooth-device-selected.png)
+    ![Message d'attente de l'appareil](../assets/system-general-audio-bluetooth-connecting.png)
+    ![Appareil Bluetooth connecté](../assets/system-general-audio-bluetooth-connected-ok.png)
 
-    **Speaker mute** contrôle alors le haut-parleur intégré — toujours actif,
-    uniquement lorsque la télémétrie est active, ou piloté par une source (par
-    exemple un interrupteur). La radio mémorise l'appareil appairé ; pour un
-    fonctionnement normal, allumez la radio avant l'appareil Bluetooth, et
-    laissez quelques secondes après la connexion pour que la coupure du
-    haut-parleur se réactive.
+    **Couper haut-parleur** contrôle alors le haut-parleur intégré — toujours
+    activé, activé uniquement lorsque la télémétrie est active, ou contrôlé
+    par une source telle qu'un inter. Le système se souvient du périphérique
+    Bluetooth ; pour un fonctionnement normal, allumez la radio avant le
+    périphérique Bluetooth, et comptez quelques secondes après sa connexion
+    pour que la coupure du haut-parleur s'active à nouveau.
 
 ## Vario {: #vario }
 
-![Audio du vario](../assets/system-general-audio-vario.png)
+![Vario](../assets/system-general-audio-vario.png)
 
 - **Volume** — volume relatif de la tonalité du vario.
-- **Pitch zero** — hauteur de la tonalité à taux de montée nul.
-- **Pitch max** — hauteur de la tonalité au taux de montée maximal.
-- **Repeat** — délai entre les bips à la hauteur zéro.
+- **Tonalité zéro** — fréquence de la tonalité lorsque le taux de montée est
+  nul.
+- **Tonalité max** — fréquence de la tonalité à la vitesse de montée maximale.
+- **Répétition** — délai entre les bips à la tonalité zéro.
 
-Voir également le capteur VSpeed dans
-[Télémétrie](../model-setup/telemetry.md) et la [fonction spéciale Play
-Vario](../model-setup/special-functions.md) pour d'autres comportements du
-vario.
+Reportez-vous également au capteur VSpeed dans
+[Télémétrie](../model-setup/telemetry.md) et à la [fonction spéciale
+Vario](../model-setup/special-functions.md) pour d'autres paramètres du vario.
 
-## Haptique
+## Vibreur
 
-- **Strength** — un curseur pour l'intensité des vibrations.
-- **Mode** — le même ensemble d'options que Audio mode ci-dessus.
+- **Intensité** — un curseur pour l'intensité des vibrations.
+- **Mode** — les mêmes options que les modes audio ci-dessus.
 
 ## Emplacement de stockage (X18 et X20 Pro/R/RS) {: #storage-location-x18-and-x20-prorrs }
 
-Ces radios possèdent une mémoire eMMC interne de 8 Go. Par défaut, Ethos
-l'utilise, ce qui rend la SD card facultative — mais vous pouvez sélectionner
-l'eMMC, une SD card, ou une combinaison des deux. Si vous déplacez le système
-et les modèles vers une SD card, copiez les dossiers/fichiers concernés (y
-compris l'audio et les images) **avant** de changer l'emplacement de stockage.
+Ces radios disposent d'une mémoire eMMC interne de 8 Go. Par défaut, Ethos
+l'utilise, ce qui rend l'utilisation de la SD card facultative — mais vous
+pouvez sélectionner l'eMMC, une SD card, ou une combinaison des deux. Si le
+choix se porte sur le déplacement du système et des modèles vers une SD card,
+copiez tous les dossiers et fichiers concernés (y compris l'audio et les
+bitmaps) **avant** de changer l'emplacement de stockage.
 
-![Emplacement de stockage](../assets/system-general-storage.png)
+![Emplacement stockage](../assets/system-general-storage.png)
 
-## Barre d'outils supérieure
+## Barre infos supérieure
 
-![Réglages de la barre d'outils supérieure](../assets/system-general-topbar.png)
+![Barre infos sup.](../assets/system-general-topbar.png)
 
-- **Digital voltage** — affiche la tension de la batterie de la radio sous
-  forme de valeur numérique plutôt que de barre dans la barre d'outils
-  supérieure.
-- **Digital RSSI** — idem, pour le RSSI 2,4 GHz et 900 MHz.
-- **Select model at power on** — affiche l'écran de choix du modèle au
-  démarrage, avant l'apparition des alertes de la liste de vérification du
-  modèle précédent, ce qui permet de changer de modèle sans avoir à les
-  acquitter d'abord. Le dernier modèle utilisé est mis en évidence par défaut.
+- **Affichage numérique** — affiche la tension de la batterie de la radio sous
+  forme de valeur numérique plutôt que sous forme de barre dans la barre
+  infos supérieure.
+- **RSSI numérique** — idem, pour les RSSI 2,4 GHz et 900 MHz.
+- **Choix modèle au démarrage** — affiche l'écran de sélection du modèle à la
+  mise sous tension, avant que les alertes de la liste de contrôle du modèle
+  précédemment sélectionné ne s'affichent, ce qui évite d'avoir à annuler ces
+  alertes avant de choisir un autre modèle. Par défaut, le dernier modèle
+  utilisé est mis en surbrillance.
 
-  ![Choix du modèle au démarrage](../assets/system-general-model-start.png)
+  ![Choix modèle au démarrage](../assets/system-general-model-start.png)
 
 ## Présélection du mode USB
 
-![Mode USB](../assets/system-general-usb.png)
+![Présélection du mode USB](../assets/system-general-usb.png)
 
 Ce qui se produit automatiquement lorsque la radio est connectée à un PC via
 USB :
 
-- **Not set** — demande de choisir au moment de la connexion.
-- **Joystick** — passe immédiatement en mode joystick pour un simulateur RC.
-- **Ethos Suite** — passe immédiatement en mode Ethos pour [Ethos
-  Suite](../ethos-suite/index.md).
-- **Serial** — passe immédiatement en mode Serial, en acheminant les traces de
+- **Non défini** — une boîte de dialogue apparaît au moment de la connexion
+  pour proposer le choix.
+- **Joystick** — passe immédiatement en mode Joystick pour l'utilisation avec
+  un simulateur RC.
+- **Ethos Suite** — passe immédiatement en mode Ethos pour l'utilisation avec
+  [Ethos Suite](../ethos-suite/index.md).
+- **Série** — passe immédiatement en mode Série, en transmettant les traces de
   débogage Lua via USB-Serial à 115200 bps (un pilote de port COM virtuel
   Windows peut être nécessaire).

@@ -2,23 +2,29 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Liste de vérification à texte personnalisé
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
 
-![Texte de liste de vérification utilisateur](../assets/model-checklist-user-checklist.png)
+# Liste de contrôle de texte définie par l'utilisateur
 
-La fonction [Liste de vérification](../model-setup/checklist.md) peut afficher
-un texte personnalisé au démarrage — en texte brut ou formaté en Markdown — automatiquement,
-à chaque chargement de ce modèle.
+![Texte de liste de contrôle utilisateur](../assets/model-checklist-user-checklist.png)
 
-## 1. Créer le texte de la liste de vérification
+La fonction [Liste de contrôle](../model-setup/checklist.md) peut afficher du
+texte défini par l'utilisateur au démarrage — texte brut ou texte amélioré au
+format Markdown — automatiquement, à chaque fois que ce modèle est chargé.
 
-**Texte brut** — rédigez-le dans n'importe quel éditeur de texte (Notepad++, ou même MS
-Word enregistré en texte brut) et enregistrez-le sous `<model name>.txt`.
+## 1. Créez le texte de la liste de contrôle
 
-**Texte enrichi (Markdown)** — Ethos prend en charge le formatage Markdown, par exemple
-`##` pour un titre, `**bold**` pour du texte en gras. Utilisez n'importe quel éditeur de texte
-(en saisissant la syntaxe Markdown à la main) ou un éditeur Markdown dédié
-(Nextpad, MarkText, etc.), et enregistrez-le sous `<model name>.md`.
+**Texte brut** — rédigez-le à l'aide de n'importe quel éditeur de texte
+(Notepad++, ou même MS Word enregistré en texte brut) et enregistrez-le sous
+`<model name>.txt`.
+
+**Texte amélioré (Markdown)** — Ethos prend en charge la syntaxe Markdown, par
+exemple `##` pour désigner un titre, `**bold**` pour mettre du texte en gras.
+Utilisez n'importe quel éditeur de texte (en incorporant vous-même les
+caractères de mise en forme Markdown) ou un éditeur Markdown dédié (Nextpad,
+MarkText, etc.), et enregistrez le fichier sous `<model name>.md`.
 
 ```markdown
 ## Emphasis
@@ -26,13 +32,14 @@ Word enregistré en texte brut) et enregistrez-le sous `<model name>.txt`.
 *this is italic text*
 ```
 
-## 2. Le copier sur la radio
+## 2. Copiez-le sur la radio
 
-Copiez le fichier dans le même dossier `models/` que le fichier `.bin` propre au modèle
-(voir [Gestionnaire de fichiers](../system-setup/file-manager.md#top-level-folders)),
+Copiez le fichier dans le dossier `models/` où se trouve le fichier `.bin` du
+modèle (voir [Gestionnaire de fichiers](../system-setup/file-manager.md#top-level-folders)),
 puis éjectez les lecteurs de la radio en toute sécurité avant de la déconnecter.
 
-## 3. Le vérifier
+## 3. Passez-le en revue
 
-Chargez le modèle — le texte de la liste de vérification apparaît désormais automatiquement
-dans le cadre des contrôles de démarrage, avec défilement s'il dépasse la hauteur d'un écran.
+Chargez votre modèle — le texte de la liste de contrôle s'affiche désormais
+automatiquement dans le cadre des vérifications de démarrage, et vous pouvez le
+faire défiler s'il occupe plus d'un écran.

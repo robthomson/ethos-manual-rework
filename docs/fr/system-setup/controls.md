@@ -2,43 +2,48 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Commandes
 
 ![Manches](../assets/system-sticks.png)
 
-Appelé **Sticks** dans le menu — le mode de manches et l'ordre
+Appelé **Manches** dans le menu — le mode des manches et l'ordre
 d'affectation des voies par défaut.
 
-## Mode de manches
+## Mode des manches
 
-- **Mode 1** — gaz et ailerons sur le manche droit, profondeur et dérive
-  sur le manche gauche.
-- **Mode 2** — gaz et dérive sur le manche gauche, ailerons et profondeur
-  sur le manche droit.
+- **Mode 1** — Gaz / Ailerons sur le manche de droite, Profondeur / Dérive
+  sur celui de gauche.
+- **Mode 2** — Gaz / Dérive sur le manche de gauche, Ailerons / Profondeur
+  sur celui de droite.
 
-Par défaut, les manches portent le nom des modes standard de l'industrie,
-et peuvent être renommés.
+Par défaut, les manches sont nommés selon les standards d'utilisation,
+mais vous avez la possibilité de les renommer.
 
-## Ordre des voies
+## Ordre voies
 
-Définit l'ordre dans lequel les quatre entrées de manches sont affectées
-aux voies lorsqu'un nouveau modèle est créé par les assistants de
-[Choix du modèle](../model-setup/model-select.md). La valeur par défaut est
-**AETR**. Lorsqu'une cellule comporte plusieurs surfaces d'un même type,
-celles-ci sont regroupées, sauf si [Quatre premières voies
-fixes](#first-four-channels-fixed) est activé — par exemple, 2 ailerons
-donnent **AAETR**.
+L'ordre des voies définit l'ordre dans lequel les quatre entrées des
+manches sont affectées aux voies lorsqu'un nouveau modèle est créé par les
+assistants de [Choix du modèle](../model-setup/model-select.md). L'ordre
+par défaut est **AETR** (APGD). S'il y a plus d'une voie par type de
+surface, elles seront regroupées, à moins que [4 premières voies
+fixes](#first-four-channels-fixed) ne soit activé — par exemple, pour
+2 ailerons, l'ordre des voies sera **AAETR** (AAPGD).
 
-![Ordre des voies du récepteur](../assets/system-sticks-rx-order.png)
+![Ordre voies](../assets/system-sticks-rx-order.png)
 
-## Quatre premières voies fixes {: #first-four-channels-fixed }
+## 4 premières voies fixes {: #first-four-channels-fixed }
 
-Lorsque cette option est activée, les quatre premières voies ne sont jamais
-regroupées. Avec l'ordre **AETR** et une cellule comportant 2 ailerons,
-1 profondeur, 1 moteur, 1 dérive et 2 volets, l'assistant produit
+Lorsque cette option est activée, le regroupement des voies ne se produit
+jamais sur les quatre premières voies. Avec l'ordre **AETR** (APGD) et un
+modèle comportant 2 ailerons, 1 gouverne de profondeur, 1 moteur,
+1 gouvernail de direction et 2 volets, l'assistant crée un ordre de voies
 **AETRAFF** (les voies 1 à 4 restent exactement A-E-T-R, le second aileron
 et les deux volets étant ajoutés à la suite) au lieu de **AAETRFF**. C'est
 ce réglage qui permet à l'assistant de créer des modèles adaptés aux
 récepteurs stabilisés SRx, qui attendent cette disposition fixe.
 
-![Ordre fixe à 4 voies](../assets/system-sticks-4ch-fixed.png)
+![Ordre fixe des 4 premières voies](../assets/system-sticks-4ch-fixed.png)

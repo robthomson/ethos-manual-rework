@@ -2,22 +2,26 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Scripts Lua
 
-Les scripts Lua permettent de créer des [widgets d'affichage](../displays/custom-widgets.md)
-personnalisés pour présenter des informations qu'Ethos ne gère pas nativement, ainsi que
+Les scripts Lua vous permettent de créer des [widgets d'affichage](../displays/custom-widgets.md)
+personnalisés pour afficher des informations qu'Ethos ne gère pas nativement, ainsi que
 (par modèle) des [sources et tâches](../model-setup/lua-scripts.md) personnalisées — une base
-qu'il est prévu d'étoffer davantage, vers des fonctions personnalisées spécialisées et
-l'intégration de contrôleurs de vol.
+qu'il est prévu d'étoffer davantage, vers des fonctions spécialisées pour des tâches
+personnalisées et l'intégration des contrôleurs de vol.
 
-Lua est en soi un langage de script généraliste léger et embarquable (utilisé partout, des
-jeux vidéo aux applications web) ; Ethos l'intègre précisément pour ce type de
-personnalisation directement sur la radio.
+Le langage de script Lua est en soi un langage de script généraliste léger et intégrable,
+conçu pour être utilisé pour toutes sortes d'applications, des jeux aux applications Web ;
+Ethos l'intègre précisément pour ce type de personnalisation directement sur la radio.
 
 !!! warning
-    Les scripts Lua allongent le temps de démarrage de la radio. Le délai induit par un
-    script bien écrit devrait être imperceptible — un script mal écrit peut retarder le
-    démarrage presque indéfiniment.
+    Veuillez noter que les scripts Lua augmentent le temps de démarrage de la radio. S'ils
+    sont mis en œuvre correctement, le retard ne devrait pas être perceptible — mais si ce
+    n'est pas le cas, le retard peut être presque indéfini.
 
 - [Interpréteur Lua](lua-interpreter.md) — quelle version de Lua et quelles bibliothèques
   Ethos intègre.

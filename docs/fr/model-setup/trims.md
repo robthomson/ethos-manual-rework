@@ -2,200 +2,215 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Trims
 
 ![Trims](../assets/model-trims.png)
 
-Configure pour chaque manche la plage de trim, le pas et le comportement,
-ainsi que les trims croisés et le trim instantané. Les **X20 Pro/R/RS** et
-**X18** ajoutent deux commandes de trim supplémentaires, **T5**/**T6**,
-utiles pour des ajustements en vol au-delà des quatre manches principaux :
+Permet de configurer, pour chaque manche, la plage de trim, le pas de trim
+et le comportement du trim, ainsi que les trims croisés et le trim
+instantané. Les **X20 Pro/R/RS** et la **X18** disposent de deux trims
+supplémentaires, **T5**/**T6**, très utiles pour les réglages en vol
+au-delà des quatre manches principaux :
 
 ![Trims T5/T6](../assets/model-trims-pro-t5-t6.png)
 
-Chaque manche possède son propre jeu de réglages de trim indépendant.
+Il existe un ensemble de paramètres de trim indépendant pour chaque manche.
 
-## Réglages de trim {: #trim-settings }
+## Configuration des trims {: #trim-settings }
 
-- **Plage** — ±25 % par défaut, réglable jusqu'à la course complète du
-  manche, soit ±100 %. Sur l'écran principal, un trim à plage par défaut
-  affiche de −100 à 100 ; un trim à plage complète (100 %) affiche de
-  −400 à 400 (4× la plage normale).
+- **Plage** — la plage par défaut est de ±25 %, réglable jusqu'à la plage
+  complète du manche, soit ±100 %. Notez que sur l'écran principal, un trim
+  à plage par défaut est indiqué de −100 à 100 ; un trim à plage complète
+  (100 %) affichera de −400 à 400 (c'est-à-dire 4 fois la plage de trim
+  normale).
 
   !!! warning
       Élargir la plage signifie qu'en maintenant une palette de trim trop
-      longtemps, on peut ajouter suffisamment de trim pour rendre le modèle
-      impilotable.
+      longtemps, on peut ajouter tellement de trim que le modèle devient
+      impossible à piloter.
 
-- **Pas** — granularité de la commande de trim : **Très fin**, **Fin**,
-  **Moyen**, **Grossier**, **Exponentiel** (fin près du centre, grossier
-  en s'éloignant) ou **Personnalisé** (un pourcentage précis par cran).
+- **Pas** — granularité du pas de trim : **Extra fin**, **Fin**,
+  **Moyen**, **Grossier**, **Exponentiel** (pas fins près du centre, pas
+  grossiers plus loin) ou **Personnalisé** (un pourcentage précis par
+  clic).
 
   ![Options de pas](../assets/model-trims-step-options.png)
 
-  | Pas | µs par cran (plage 25 %) |
+  | Pas | µs par clic (plage 25 %) |
   |---|---|
-  | Très fin | 0,5 |
+  | Extra fin | 0,5 |
   | Fin | 1 |
   | Moyen | 2 |
   | Grossier | 4 |
   | Exponentiel | 0,3–16 |
 
-  En personnalisé, avec une plage de 25 % : pas de 1 % = 1 µs/cran, pas de
-  100 % = 128 µs/cran. Avec une plage de 100 % : pas de 1 % = 5 µs/cran,
-  pas de 100 % = 512 µs/cran.
+  En personnalisé, avec une plage de 25 % : taille du pas 1 % = 1 µs/clic,
+  taille du pas 100 % = 128 µs/clic. Avec une plage de 100 % : taille du
+  pas 1 % = 5 µs/clic, taille du pas 100 % = 512 µs/clic.
 
 ## Mode
 
 ![Mode du trim de profondeur](../assets/model-trims-mode-elevator.png)
 
-Par défaut, un trim est toujours actif, mais **Mode** modifie ce
-comportement. Changer de mode remet le trim à 0.
+Par défaut, les trims sont toujours activés, mais l'option **Mode** permet
+de modifier ce comportement. Notez que les trims sont réinitialisés à 0
+lorsque le mode est modifié.
 
 - **OFF** — désactive complètement le trim.
 
   ![Mode : off](../assets/model-trims-mode-option-off.png)
 
-  Utile, par exemple, sur un modèle électrique n'ayant pas besoin de trim
-  de gaz — la commande de trim ainsi libérée peut alors être
-  [réaffectée au réglage d'une variable](variables.md).
+  Utile, par exemple, sur un modèle électrique où le trim d'accélérateur
+  n'est pas nécessaire — le trim ainsi libéré peut ensuite être
+  [réutilisé pour ajuster une Var](variables.md).
 
-- **Easy** — une seule valeur de trim partagée par toutes les phases de
-  vol. C'est le choix habituel pour les ailerons et la dérive, puisque
-  ceux-ci ont rarement besoin de varier selon la phase de vol.
+- **Mode simple** — une seule valeur de trim, partagée entre tous les
+  modes de vol. C'est généralement le choix approprié pour les trims des
+  ailerons et de la dérive, car ces trims ne varient généralement pas
+  selon les modes de vol.
 
-  ![Mode : easy](../assets/model-trims-mode-option-easy.png)
+  ![Mode : simple](../assets/model-trims-mode-option-easy.png)
 
-- **Indépendant par phase de vol** — le trim n'affecte que la phase de vol
-  active. C'est le choix habituel pour le trim de profondeur, car celui-ci
-  doit couramment différer selon la phase de vol (par ex. lors de
-  changements de courbure de l'aile) — c'est même souvent la raison
-  principale de mettre en place des phases de vol.
+- **Trim indépendant par mode de vol** — le trim n'affecte que le mode de
+  vol actif. Cette option est normalement utilisée pour le trim de
+  profondeur, car le trim de profondeur requis varie généralement selon le
+  mode de vol, en raison par exemple de différences de carrossage de
+  l'aile — c'est même souvent la raison principale de la mise en place de
+  modes de vol.
 
-  ![Mode : indépendant par phase de vol](../assets/model-trims-mode-option-fm.png)
+  ![Mode : indépendant par mode de vol](../assets/model-trims-mode-option-fm.png)
 
-- **Personnalisé** — comportement entièrement personnalisé, construit à
+- **Perso** — comportement de trim entièrement personnalisé, construit à
   partir de **comportements** que vous ajoutez vous-même.
 
 ### Comportements de trim personnalisés
 
-![Ajouter un comportement](../assets/model-trims-mode-elevator-add-behaviour.png)
+![Ajouter un nouveau comportement](../assets/model-trims-mode-elevator-add-behaviour.png)
 ![Options de comportement](../assets/model-trims-mode-elevator-edit-behaviour.png)
 
 Chaque ligne de comportement comporte une condition et l'une des options
 suivantes :
 
-- **Débranché** — désactive le trim de manière sélective sous cette
+- **Déconnecté** — désactive le trim de manière sélective sous cette
   condition (plutôt que de le désactiver totalement avec Mode = OFF).
 
-  ![Débranché](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
-  ![Condition de débranchement](../assets/model-trims-mode-unplugged-select.png)
+  ![Déconnecté](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
+  ![Condition de déconnexion](../assets/model-trims-mode-unplugged-select.png)
 
 - **Normal** (par défaut) — comportement de trim ordinaire.
-- **Égal (à un autre trim)** — ce trim suit exactement la valeur de trim
-  d'une autre condition.
+- **Égal (à un autre trim)** — le trim d'une condition est configuré pour
+  être exactement égal au trim d'une autre condition.
 
   ![Égal](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
 
-- **Offset + (un autre trim)** — ce trim s'ajoute à la valeur de trim
-  d'une autre condition.
+- **Décalage + (un autre trim)** — le trim d'une condition est configuré
+  pour s'ajouter au trim d'une autre condition.
 
-  ![Offset](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+  ![Décalage](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
 
-**Exemple détaillé** — un planeur avec un trim de profondeur de base
-**Cruise**, et des trims dépendants pour **Speed** et **Thermal** :
+**Exemple de trim décalé** — un planeur avec un trim de profondeur de base
+en **Cruise**, et des trims dépendants pour **Speed** et **Thermal** :
 
 ![Sélection de FM5 Speed](../assets/model-trims-mode-elevator-custom-select.png)
 ![Sélection de FM4 Thermal](../assets/model-trims-mode-elevator-custom-select-2.png)
 
-1. Trimmez pour un vol en palier dans la phase de vol par défaut (Cruise).
-2. Ajoutez un comportement : **Offset + Default**, condition `FM5(Speed)`.
-   Désormais, tout réglage de trim effectué en mode Speed est enregistré
-   comme un décalage venant s'ajouter à la valeur de base Cruise —
-   distinct, mais toujours dépendant de celle-ci.
+1. Réglez le trim pour le vol en palier dans le mode de vol par défaut
+   (Cruise).
+2. Ajoutez un comportement : **Décalage + Par défaut**, avec la condition
+   `FM5(Speed)`. Désormais, tout réglage de trim effectué en mode Speed est
+   enregistré en tant que décalage par rapport à la valeur de trim de base
+   en Cruise — le trim y sera donc séparé, mais aussi dépendant du trim de
+   base.
 
-   ![Offset pour Speed](../assets/model-trims-mode-elevator-custom-speed.png)
+   ![Décalage pour Speed](../assets/model-trims-mode-elevator-custom-speed.png)
 
-3. Ajoutez un deuxième comportement : **Offset + Default**, condition
-   `FM4(Thermal)`, de la même manière. (Une fois le premier comportement
-   créé, la boîte de dialogue propose également `Equal FM5(Speed)` et
-   `Offset + FM5(Thermal)` comme options, puisqu'elle peut maintenant faire
-   référence à ce comportement aussi.)
+3. Ajoutez un deuxième comportement : **Décalage + Par défaut**, avec la
+   condition `FM4(Thermal)`, de la même manière. (Notez qu'une fois le
+   premier comportement configuré, la boîte de dialogue propose également
+   les options `Equal FM5(Speed)` et `Offset + FM5(Thermal)`, puisqu'elle
+   peut désormais faire référence à ce comportement aussi.)
 
-   ![Offset pour Speed et Thermal](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+   ![Décalage pour Speed et Thermal](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
 
-Avec cette configuration, un réglage ultérieur du trim de base Cruise
-(par exemple après un changement de centre de gravité) décale
-automatiquement les trims de Speed et de Thermal de la même valeur,
-puisqu'il s'agit de décalages venant s'y ajouter et non de valeurs
-indépendantes.
+Avec cette configuration, si le trim de croisière de base doit être modifié
+par la suite (par exemple parce que vous avez modifié le centre de
+gravité), les trims dépendants de Speed et de Thermal seront décalés
+automatiquement de la même valeur, puisqu'il s'agit de décalages venant s'y
+ajouter et non de valeurs indépendantes.
 
-- **Audio** — permet de désactiver l'annonce de trim standard pour un trim
-  réaffecté lorsqu'il n'est plus pertinent de l'entendre.
+- **Audio** — pour chaque trim, l'audio peut être désactivé si les
+  annonces de trim standard ne sont pas souhaitées, par exemple si le trim
+  a été réutilisé.
 
 ## Trims supplémentaires
 
 ![Ajouter un trim supplémentaire](../assets/model-trims-add-trim-select.png)
 ![Réglages du trim supplémentaire](../assets/model-trims-add-trim-edit.png)
 
-**Ajouter un trim supplémentaire** crée un trim au-delà des quatre manches
-standard (et de T5/T6) : **Nom**, sources **Haut**/**Bas** pour le piloter,
-plus les mêmes options **Plage**, **Pas**, **Mode** et **Audio** que
-ci-dessus.
+**Ajouter un trim supplémentaire** crée un trim en plus des quatre manches
+standard (et de T5/T6) : **Nom**, sources **En haut**/**En bas** pour le
+piloter, ainsi que les mêmes options **Plage**, **Pas**, **Mode** et
+**Audio** que ci-dessus.
 
 ## Trims croisés
 
 ![Trims croisés](../assets/model-trims-cross.png)
 ![Modification des trims croisés](../assets/model-trims-cross-edit.png)
 
-Désigne quelle commande de trim ajuste réellement chaque manche — autrement
-dit, permet que le trim d'un manche soit piloté par une commande de trim
-physique différente de celle habituelle. (T5/T6 ne sont disponibles que sur
-les X20 Pro et X18.)
+Permet de désigner l'inter de trim à utiliser réellement pour chaque manche
+— autrement dit, le trim d'un manche peut être piloté par une commande de
+trim physique différente de celle habituelle. (Les trims T5 et T6 ne sont
+disponibles que sur les X20 Pro et X18.)
 
 ## Trim instantané {: #instant-trim }
 
 ![Trim instantané](../assets/model-trims-instant-trim.png)
 
-Tant qu'il est actif, il ajoute les positions actuelles des manches aux
-trims par défaut correspondants (et aux trims croisés). À affecter de
-préférence à un interrupteur accessible sans lâcher les manches —
-déclenchez-le en vol rectiligne et en palier pour régler les trims
-instantanément, au lieu de cliquer de façon répétée sur une palette de trim
-lorsque les trims sont très éloignés du bon réglage. Désactivez-le après le
-vol de mise au point pour éviter de perturber accidentellement les trims par
-la suite.
+Lorsque cette fonction est active, elle ajoute les positions actuelles des
+manches aux valeurs de trim respectives des trims par défaut (également des
+trims croisés). Il est préférable de l'attribuer à un interrupteur que vous
+pouvez atteindre sans lâcher les manches — déclenchez-le en vol droit et à
+niveau pour régler les trims instantanément, au lieu d'appuyer plusieurs
+fois sur une palette de trim lorsque les trims sont très éloignés du bon
+réglage. Ce paramètre doit être désactivé après le vol de mise au point,
+afin d'éviter de perturber à nouveau accidentellement les trims par la
+suite.
 
 !!! note
     Le trim instantané n'est actif que lorsque l'une des vues principales
     est affichée.
 
-## Transférer les trims vers les subtrims
+## Déplacer les trims vers les subtrims
 
-![Transférer les trims vers les subtrims](../assets/model-trims-move-trims-to-subtrims.png)
+![Déplacer les trims vers les subtrims](../assets/model-trims-move-trims-to-subtrims.png)
 
-Après avoir trimmé pour un vol en palier, cette fonction transfère la
-valeur de trim d'une voie (par ex. la profondeur) dans son réglage
-[Subtrim](outputs.md) et remet le trim affiché à zéro — une manière propre
-de vérifier ensuite que les trims de vol n'ont pas dérivé.
+Après avoir réglé les trims pour le vol en palier, cette fonction
+transfère la valeur de trim d'une voie (par ex. la profondeur) dans son
+réglage [Subtrim](outputs.md) et réinitialise à zéro le trim affiché à
+l'écran — une manière propre de vérifier ensuite que les trims de vol
+n'ont pas dérivé.
 
-Lorsque des phases de vol sont utilisées, une voie peut avoir plusieurs
-valeurs de trim pertinentes, alors que le Subtrim dans les Sorties est un
-réglage global unique s'appliquant à toutes les phases de vol. Cette
-fonction en tient compte : elle prend le trim de la phase de vol
-**actuellement sélectionnée**, le transfère dans le Subtrim, remet ce trim
-à zéro et ajuste le trim de *toutes les autres* phases de vol sur la même
-voie pour compenser — de sorte que la position réelle de la gouverne reste
-globalement inchangée dans chaque phase de vol.
+Lorsque des modes de vol sont utilisés, une voie peut avoir plusieurs
+valeurs de trim pertinentes, alors que le Subtrim des Sorties est un
+réglage global unique s'appliquant à tous les modes de vol. Cette fonction
+en tient compte : elle prend le trim du mode de vol **actuellement
+sélectionné**, transfère son contenu vers le Subtrim, réinitialise ce trim
+et ajuste le trim de *tous les autres* modes de vol sur la même voie pour
+compenser — de sorte que la position réelle de la gouverne reste
+globalement inchangée dans chaque mode de vol.
 
 !!! tip
-    Effectuez toujours cette opération depuis la même phase de vol « de
+    Effectuez toujours cette opération depuis le même mode de vol « de
     base » (par ex. Cruise sur un planeur) par souci de cohérence — elle
     peut être répétée sans risque tant que vous procédez ainsi.
 
-Des valeurs de trim ou de subtrim importantes créent des débattements très
-asymétriques — il est préférable d'en corriger la cause mécaniquement.
+Des valeurs de trim ou de subtrim élevées entraînent des débattements très
+asymétriques — il serait plus sage de corriger le problème mécaniquement.
 Visez des liaisons à 90° lorsque les gouvernes sont au neutre (les volets
-étant l'exception, où l'on sacrifie un peu de course vers le haut pour plus
-de course vers le bas), puis utilisez **PWM center** pour affiner
+étant l'exception, où l'on sacrifie un peu de course vers le haut au profit
+de plus de course vers le bas), puis utilisez **PWM center** pour affiner
 exactement à 90° une fois la liaison bien réglée.

@@ -2,34 +2,38 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Périphériques
 
 ![Périphériques](../assets/system-devices.png)
 
-Appelé **Configuration des périphériques** dans le menu — ce sont les outils
-de configuration des périphériques raccordés en S.Port/FBUS : capteurs,
-récepteurs, « Gas Suite », servos, VTX et ESC. La rubrique **Capteurs DIY**
-apparaît automatiquement dès qu'un capteur DIY est détecté. Reportez-vous à
-la notice propre à chaque périphérique pour les détails complets ; cette
-page traite de ce qui leur est commun.
+Appelée **Configuration de l'appareil** dans le menu — ce sont les outils de
+configuration des capteurs et périphériques raccordés en S.Port/FBUS :
+capteurs, récepteurs, « Gaz suite », servos, VTX et ESC. La rubrique
+**Capteurs DIY** apparaît automatiquement dès qu'un capteur DIY est détecté.
+Référez-vous au manuel de chaque capteur / périphérique pour le détail des
+options disponibles ; cette page traite de ce qui leur est commun.
 
 !!! note
     Cela n'a rien à voir avec le choix du module RF (interne ou externe)
     utilisé par un *modèle* pour émettre — il s'agit d'un réglage propre à
     chaque modèle, décrit dans [RF System](../model-setup/rf-system.md).
 
-La configuration des périphériques est extensible : les utilisateurs comme
-FrSky peuvent y ajouter des pages au moyen de Lua.
+La configuration de l'appareil est extensible : les utilisateurs comme FrSky
+peuvent y ajouter des pages au moyen de Lua.
 
 ## Réattribution des ID de capteurs
 
-Les écrans de configuration des périphériques d'Ethos permettent de modifier
-directement le **Physical ID** et l'**Application ID** S.Port d'un
-périphérique. Si vous possédez plusieurs périphériques ayant la même
-fonction, raccordez-les **un à la fois** : détectez chacun d'eux dans
-[Télémétrie → Détecter de nouveaux capteurs](../model-setup/telemetry.md),
-modifiez ici son Physical ID et son Application ID dans la configuration des
-périphériques, puis revenez le détecter à nouveau sous son nouvel ID.
+L'écran « Configuration de l'appareil » d'Ethos vous permet de modifier
+directement l'**ID physique** et l'**ID d'application** S.Port d'un
+périphérique. Si vous avez plusieurs appareils qui ont la même fonction, vous
+devez les connecter **un par un** : découvrez chacun d'eux dans
+[Télémétrie → Découvrir de nouveaux capteurs](../model-setup/telemetry.md),
+modifiez ici son ID physique et son ID d'application dans « Configuration de
+l'appareil », puis revenez en arrière et redécouvrez-le avec son nouvel ID.
 
 ## Exemple des récepteurs
 
@@ -80,12 +84,12 @@ passer par un récepteur apparié.
 
 1. Branchez le périphérique sur le connecteur S.Port de l'émetteur (fil
    blanc/jaune du côté de l'encoche).
-2. Allez dans **Système → Configuration des périphériques**, faites défiler
-   jusqu'au périphérique (par exemple un capteur de courant FAS40 ADV) et
+2. Allez dans **Système → Configuration de l'appareil**, faites défiler
+   jusqu'au périphérique (par exemple un capteur d'intensité FAS40 ADV) et
    appuyez sur `ENT`.
 3. Sur la page de configuration, réglez **Module** sur **Connecteur
    S.Port**.
-4. Effectuez vos modifications — le Physical ID et l'Application ID doivent
+4. Effectuez vos modifications — l'ID physique et l'ID d'application doivent
    chacun être uniques — puis faites défiler vers le bas et appuyez sur
    **Save to flash**.
 

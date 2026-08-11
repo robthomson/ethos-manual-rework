@@ -2,39 +2,43 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Vues principales
 
 ## Écran d'accueil
 
-![Écran d'accueil](../assets/mainview.png)
+![Exemple de vue principale](../assets/mainview.png)
 
-L'écran d'accueil est ce que vous voyez lorsqu'aucun menu n'est ouvert — un empilement de **huit** écrans d'affichage au maximum, que vous configurez vous-même (voir [Écrans](../displays/index.md)), entre lesquels on navigue avec la touche `PAGE` ou par un balayage tactile. Un modèle nouvellement créé ne comporte qu'un seul écran, affichant une image du modèle, trois widgets de chronomètre et les indicateurs de trims/potentiomètres ; tout ce qui s'y trouve est ensuite configurable par l'utilisateur.
+L'écran d'accueil est ce que vous voyez lorsqu'aucun menu n'est ouvert — un empilement de **huit** vues au maximum, que vous configurez vous-même (voir [Écrans](../displays/index.md)), et entre lesquelles on passe avec la touche `PAGE` ou par un geste de balayage tactile. Un modèle nouvellement créé ne comporte qu'une seule vue, avec un widget pour l'image du modèle, trois widgets pour les chronos et l'affichage des trims et des potentiomètres ; tout ce qui s'y trouve est ensuite personnalisable par l'utilisateur.
 
-Les écrans partagent normalement les barres supérieure et inférieure décrites ci-dessous, mais un écran peut aussi être réglé en plein écran, ce qui masque les deux barres.
+Les vues principales partagent normalement les barres supérieure et inférieure décrites ci-dessous, mais une vue peut aussi être réglée en plein écran, ce qui masque les deux barres.
 
 ## La barre supérieure
 
-La barre supérieure affiche le nom du modèle à gauche (ainsi que la phase de vol active, si une phase est configurée), et une rangée d'icônes d'état à droite :
+La barre supérieure affiche le nom du modèle sur la gauche (ainsi que la phase de vol active, si les phases de vol sont utilisées), et une rangée d'icônes d'état sur la droite :
 
-- Enregistrement des données actif
-- État de l'écolage (maître ou élève, selon le cas)
+- l'enregistrement des données actif
+- l'écolage (maître ou élève, selon le cas)
 - RSSI — liaison 2,4 GHz
 - RSSI — liaison 900 MHz (si un module double bande / longue portée est installé)
-- Volume du haut-parleur
-- État de la batterie de la radio
+- le volume sonore
+- l'état de la batterie radio
 
-Toucher l'icône du haut-parleur ou de la batterie ouvre directement le panneau de réglages correspondant : [Général](../system-setup/general.md) (audio) ou [Batterie](../system-setup/battery.md).
+Un appui sur l'icône du haut-parleur ou de la batterie permet d'accéder directement aux options de configuration correspondantes : [Général](../system-setup/general.md) (audio) ou [Batterie](../system-setup/battery.md).
 
 ### Avertissement d'erreur
 
-Un triangle rouge apparaît dans la barre supérieure dès qu'Ethos détecte une erreur — une erreur de script Lua, une erreur de sauvegarde de la RAM, ou l'utilisation d'une version de firmware nightly/instable en sont les causes les plus fréquentes. Le détail de l'avertissement se trouve toujours dans **System → Info**, sur la même page que la durée de fonctionnement de la radio et les [journaux d'erreurs](../system-setup/information.md).
+Un triangle rouge s'affiche dans la barre supérieure dès qu'Ethos détecte une erreur — une erreur de script Lua, une erreur de sauvegarde de la RAM, ou l'exécution d'une version de test (nightly/instable) du firmware en sont les causes les plus fréquentes. Les détails relatifs à l'avertissement sont toujours affichés dans la page **Système → Infos**, sur la même page que la durée de fonctionnement de la radio et les [journaux d'erreurs](../system-setup/information.md).
 
 ## La barre inférieure
 
 ![Barre inférieure](../assets/bottombar.png)
 
-Quatre onglets sont alignés en bas de l'écran pour les sections principales — **Accueil**, **Configuration du modèle**, **Configurer les écrans**, **Configuration du système** — avec l'horloge du système à droite (touchez-la pour accéder directement à [Date et heure](../system-setup/date-and-time.md)).
+Quatre onglets sont alignés en bas de l'écran pour accéder aux sections principales — **Vue principale**, **Configuration du modèle**, **Configurer les écrans**, **Configuration de la radio** — l'heure système s'affichant à droite (un appui sur l'heure permet d'accéder directement à [Date et heure](../system-setup/date-and-time.md)).
 
 ## La zone des widgets
 
-Le milieu de chaque écran est occupé par des **widgets** : image du modèle, chronomètres, affichages de télémétrie, barres de trims/potentiomètres, et bien d'autres, tous placés et configurés par vous. Voir [Écrans](../displays/index.md) pour savoir comment ajouter, déplacer et configurer les widgets, et [Écrans supplémentaires](../displays/additional-displays.md) pour ajouter d'autres écrans au-delà de l'écran unique par défaut.
+La zone centrale de chaque vue se compose de différents **widgets** : image du modèle, chronos, données de télémétrie, barres de trims et de potentiomètres, et bien d'autres, tous placés et configurés par vous. Reportez-vous à la section [Écrans](../displays/index.md) pour savoir comment ajouter, déplacer et configurer les widgets, et à [Écrans supplémentaires](../displays/additional-displays.md) pour ajouter d'autres vues au-delà de la vue unique par défaut.

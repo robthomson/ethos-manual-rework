@@ -2,78 +2,83 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
+
 # Informations
 
 ![Informations système](../assets/system-info.png)
 
-Détails du firmware du système, type de manches, informations sur les modules RF interne/externe, informations sur le récepteur appairé, temps d'utilisation de la radio, journaux d'erreurs et réinitialisation d'usine.
+Détails du firmware de la radio, type de manches installés, informations sur les modules RF interne/externe, informations sur le récepteur appairé, durée d'utilisation de la radio, journaux d'erreurs et réinitialisation des paramètres d'usine.
 
 ## Informations sur la radio
 
 - **Numéro de série** — le numéro de série de la radio.
-- **Firmware** — version d'Ethos et type de radio (par ex. X20).
-- **Version du firmware** — variante de compilation, par ex. FCC, LBT ou Flex.
-- **Date** — date/heure de compilation du firmware.
+- **Firmware** — version d'Ethos et type de radio (par exemple X20).
+- **Version firmware** — variante de compilation, par exemple FCC, LBT ou Flex.
+- **Date** — date et heure de la version du firmware.
 - **RAM disponible** — mémoire RAM système libre, utile pour repérer un
   script Lua défaillant ; également disponible comme [source](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-  système afin de pouvoir être affichée dans un widget.
-- **Manches** — version des capteurs Hall des manches installés (ou « ADC »
-  pour des manches analogiques).
-- **Module interne** — versions matérielle et logicielle du module RF
+  système, afin de pouvoir être affichée dans un widget.
+- **Manches** — la version des capteurs à effet Hall des manches installés
+  (« ADC » pour les manches analogiques).
+- **Module interne** — versions du matériel et du firmware du module RF
   interne.
 - **Récepteur** — les détails du récepteur actuellement appairé, affichés
-  après le module interne. Si un récepteur redondant partage le même
-  emplacement que le récepteur principal, les deux s'affichent en
-  alternance (par ex. un Archer SR10 Pro affiché avec son R9MM-OTA
-  redondant sous « Receiver1 »).
-- **Module externe** — détails matériels/logiciels d'un module RF externe
-  FrSky installé utilisant le protocole ACCESS. Les modules Multi-protocol
-  ne sont pas affichés ici.
+  après le module interne. Si un récepteur redondant est lié au même
+  emplacement que le récepteur principal, les détails des deux récepteurs
+  s'affichent alternativement à l'écran (par exemple un Archer SR10 Pro et
+  son R9MM-OTA redondant sous « Receiver1 »).
+- **Module externe** — détails du matériel et du firmware de tout module RF
+  FrSky externe installé utilisant le protocole ACCESS. Les multimodules
+  (Multi-protocol) ne sont pas affichés ici.
 
 ![Informations X20 Pro](../assets/system-info-x20pro.png)
 
-## Temps d'utilisation de la radio
+## Utilisation radio
 
-![Temps d'utilisation de la radio](../assets/system-info-radio-runtime.png)
+![Utilisation radio](../assets/system-info-radio-runtime.png)
 
-Comptabilise le temps total d'utilisation de l'émetteur ; **Reset** le remet à zéro.
+Comptabilise la durée totale d'utilisation de l'émetteur ; **Réinit.** la remet à zéro.
 
 ## Erreurs
 
 ![Erreurs](../assets/system-info-errors.png)
 
-Un triangle rouge dans la barre supérieure de la vue principale signifie
-qu'Ethos a enregistré une erreur, détaillée ici. Les causes possibles
-sont :
+Lorsque Ethos détecte une erreur, un avertissement représenté par un
+triangle rouge s'affiche dans la barre supérieure de la vue principale ;
+l'erreur est détaillée ici. Les erreurs peuvent être dues à :
 
-- **Erreurs de script Lua** — un problème dans un script Lua en cours
+- **Erreurs de script Lua** — un problème lié à un script Lua en cours
   d'exécution.
-- **Erreur de sauvegarde RAM** — un modèle trop volumineux pour la RAM de
-  sauvegarde du modèle. Ethos a fait passer celle-ci de 4 Ko à 32 Ko, ce
-  qui rend cette erreur désormais improbable, mais si elle survient, elle
-  est significative : le modèle se charge plus lentement depuis la SD card
-  au lieu de la RAM de sauvegarde si le [mode
-  secours](../getting-started/emergency-mode.md) est déclenché.
-- **Utilisation d'une compilation nightly du firmware** — un rappel que les
-  compilations nightly ne sont pas destinées au vol.
+- **RAM backup error (erreur mémoire de sauvegarde)** — un modèle trop
+  volumineux pour la mémoire de sauvegarde du modèle. Ethos a fait passer
+  celle-ci de 4 Ko à 32 Ko, ce qui rend cette erreur désormais improbable,
+  mais si elle survient, elle est significative : le modèle se charge plus
+  lentement depuis la SD card au lieu de la mémoire de sauvegarde si le
+  [mode secours](../getting-started/emergency-mode.md) est déclenché.
+- **Exécution d'une version de développement / test du firmware (nightly)**
+  — un rappel que ces versions ne sont pas destinées à voler.
 
-**Reset** efface les erreurs enregistrées — pratique en pleine session de
+**Réinit.** efface les erreurs enregistrées — pratique en pleine session de
 débogage Lua.
 
-## Réinitialisation d'usine
+## Réinitialiser paramètres usine
 
-![Réinitialisation d'usine](../assets/system-info-factory-reset.png)
+![Réinitialisation de la radio](../assets/system-info-factory-reset.png)
 
-Rétablit les réglages d'usine de la radio entièrement depuis l'appareil —
-aucune connexion à un PC n'est nécessaire.
+Permet de rétablir les paramètres d'usine de la radio entièrement depuis
+l'appareil — aucune connexion à un PC n'est nécessaire.
 
-![Confirmation de la réinitialisation d'usine](../assets/system-info-factory-reset-confirm.png)
+![Confirmation de réinitialisation de la radio](../assets/system-info-factory-reset-confirm.png)
 
 !!! danger
-    La confirmation efface **tous** les modèles, journaux, captures
-    d'écran, documents, scripts, images bitmap et réglages de la radio. Une
-    barre de progression suit l'effacement, après quoi tous les lecteurs
-    sont démontés et la radio redémarre.
+    En confirmant, la radio efface **tous** les modèles, les fichiers
+    journaux, les captures d'écran, les documents, les scripts, les bitmaps
+    et les paramètres de la radio. Une barre de progression suit
+    l'effacement, après quoi tous les lecteurs sont démontés et la radio
+    redémarre.
 
 La page Informations des X20 Pro/R/RS affiche les informations
 équivalentes pour cette famille de radios.

@@ -2,84 +2,90 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Modification du modèle
+---
+translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+---
 
-![Modification du modèle](../assets/model-editmodel.png)
+# Edition modèle
 
-Permet de modifier les paramètres au niveau du modèle initialement définis
-par l'assistant — principalement l'identité, mais aussi quelques
-substitutions propres au modèle et divers utilitaires.
+![Edition du modèle](../assets/model-editmodel.png)
+
+Permet de modifier les paramètres de base du modèle tels qu'ils ont été
+configurés par l'assistant — principalement l'identité, mais aussi quelques
+réglages propres au modèle et divers utilitaires.
 
 ## Nom, Image
 
-Renommez le modèle ou changez son image ; la recherche d'une image affiche
-une vignette d'aperçu.
+Le modèle peut être renommé, son image peut être attribuée ou modifiée ; lors
+de la recherche d'une image, une vignette d'aperçu s'affiche.
 
 ## Type de modèle
 
 ![Type de modèle](../assets/model-edit-modeltype.png)
 
 !!! warning
-    Changer le type de modèle réinitialise **tous** les mixages.
+    La modification du type de modèle entraîne la réinitialisation de
+    **tous** les mixages.
 
-## Affectation des voies
+## Affectations de voies
 
-Modifier le type d'empennage ou (sur un hélicoptère) le type de plateau
-cyclique réinitialise également tous les mixages. Pour les autres voies, il
-est possible de modifier le nombre de voies affectées ou de les désaffecter.
+La modification du type d'empennage ou du plateau oscillant de l'hélicoptère
+entraîne également la réinitialisation de tous les mixages. Sur les autres
+voies, le nombre de voies attribuées peut être modifié ou annulé.
 
-## Filtre des analogiques
+## Filtre analogique
 
 ![Filtre analogique](../assets/model-edit-analog-filter.png)
 
-[Configuration du système → Matériel](../system-setup/hardware.md) propose un
-filtre analogique-numérique global capable de réduire les tremblements autour
-du neutre des manches ; ce réglage propre au modèle le remplace uniquement
-pour ce modèle.
+Il existe un paramètre global de filtre de convertisseur analogique-numérique
+sur la page [Configuration du système → Matériel](../system-setup/hardware.md),
+ce qui peut améliorer la détection autour du centre du manche ; ce paramètre
+spécifique au modèle peut être utilisé pour remplacer le paramètre global
+uniquement pour ce modèle.
 
 ![Options du filtre analogique](../assets/model-edit-analog-filter-select.png)
 
-## Interrupteurs de fonction {: #function-switches }
+## Inters de fonction {: #function-switches }
 
-![Interrupteurs de fonction](../assets/model-edit-fn-switches.png)
+![Inters de fonction](../assets/model-edit-fn-switches.png)
 
-Les six interrupteurs de fonction sont disponibles partout où un paramètre
-**Condition d'activation** apparaît, mais — contrairement aux interrupteurs
-ordinaires — ne peuvent pas être utilisés comme source polyvalente. Ils se
-configurent selon l'un des modes suivants :
+Les six inters de fonction sont disponibles partout où se trouve un paramètre
+**Condition active**, mais — contrairement aux inters standards — ils ne
+peuvent pas être utilisés comme source. Ils peuvent être configurés comme
+suit :
 
-- **6 positions avec OFF** — appuyer sur un interrupteur de fonction le
-  verrouille en position active ; appuyer de nouveau sur le *même*
-  interrupteur désactive les six.
-- **6 positions** — appuyer sur un interrupteur de fonction le verrouille en
-  position active jusqu'à ce qu'un *autre* interrupteur soit pressé, qui
-  prend alors le relais.
-- **2 × 3 positions** — divise les six interrupteurs en deux groupes de
-  trois, avec un interrupteur actif par groupe.
-- **6 × 2 positions** — six interrupteurs marche/arrêt verrouillables
-  indépendants.
-- **Momentané** — six interrupteurs indépendants, chacun actif uniquement
-  tant qu'il est maintenu.
-- **Persistant** — si cette option est activée, un interrupteur de fonction
-  conserve son état après une mise hors tension ou un rechargement du modèle
-  au lieu d'être réinitialisé.
+- **6-Pos avec OFF** — appuyez sur n'importe quel inter de fonction pour le
+  verrouiller sur ON ; appuyer une deuxième fois sur le *même* inter éteint
+  les six inters de fonction.
+- **6-Pos** — appuyez sur n'importe quel inter de fonction pour le verrouiller
+  sur ON jusqu'à ce qu'un *autre* inter de fonction soit enfoncé, qui prend
+  alors le relais.
+- **2 × 3 Pos** — divise les 6 inters de fonction en deux groupes de 3, avec
+  un inter allumé par groupe.
+- **6 × 2 Pos** — chacun des 6 inters peut être activé ou désactivé
+  indépendamment.
+- **Poussoir** — les 6 inters de fonction sont considérés comme momentanés :
+  chacun n'est activé que lorsqu'il est maintenu enfoncé.
+- **Permanent** — si cette option est activée, l'inter de fonction conserve
+  son état lors de la mise en marche de la radio ou de la sélection du même
+  modèle, au lieu d'être réinitialisé.
 
-![Options des interrupteurs de fonction](../assets/model-edit-fn-switches-select.png)
+![Options des inters de fonction](../assets/model-edit-fn-switches-select.png)
 
 ## Connecteur SPort
 
-La broche 5V du connecteur S.Port de l'émetteur peut être commutée par
-modèle — utile par exemple pour alimenter un récepteur externe dans une
-configuration écolage.
+La broche 5V du connecteur S.Port de l'émetteur peut être contrôlée modèle par
+modèle — pour alimenter par exemple un récepteur externe pour une fonction
+d'écolage.
 
 ## Temps d'utilisation du modèle
 
 ![Temps d'utilisation du modèle](../assets/model-edit-model-runtime.png)
 
-Comptabilise le temps total de vol/d'utilisation de ce modèle.
+Comptabilise le temps total de vol / d'utilisation de ce modèle.
 
-## Réinitialiser tous les mixages
+## Supprimer tous les mixages
 
-![Réinitialiser tous les mixages](../assets/model-edit-model-reset_all_mixes.png)
+![Supprimer tous les mixages](../assets/model-edit-model-reset_all_mixes.png)
 
 Réinitialise tous les mixages du modèle à leur état par défaut.

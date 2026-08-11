@@ -2,3 +2,4 @@ site/
 .venv/
 __pycache__/
 docs/en/contributing/translation-status.md
+.pdf_revision_cache/
