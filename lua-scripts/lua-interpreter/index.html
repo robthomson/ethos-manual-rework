@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,6 +1327,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2262,6 +2318,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2290,6 +2374,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2298,6 +2466,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2870,12 +3094,17 @@
 
 
 <h1 id="lua-interpreter">Lua Interpreter<a class="headerlink" href="#lua-interpreter" title="Permanent link">&para;</a></h1>
-<p>Which Lua version and runtime Ethos embeds, and the practical implications
-for script authors (available standard library, memory limits).</p>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass.</p>
-</div>
+<p>Ethos embeds an interpreter based on <strong>Lua 5.4.3</strong>, packaged with:</p>
+<ul>
+<li>the basic library</li>
+<li>the table library</li>
+<li>the io library</li>
+<li>the os library</li>
+<li>the math library</li>
+</ul>
+<p>Scripts run against this environment whether they're implementing a
+<a href="../../displays/custom-widgets/">display widget</a> or a per-model
+<a href="../../model-setup/lua-scripts/">source/task</a>.</p>
 
 
 

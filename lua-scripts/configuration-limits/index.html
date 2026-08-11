@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,6 +1327,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2262,6 +2318,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2290,6 +2374,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2298,6 +2466,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2870,12 +3094,17 @@
 
 
 <h1 id="configuration-limits">Configuration Limits<a class="headerlink" href="#configuration-limits" title="Permanent link">&para;</a></h1>
-<p>Practical limits when writing Lua scripts/widgets for Ethos — memory,
-execution time budget per cycle, and how the radio behaves when a script
-misbehaves.</p>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass.</p>
+<ul>
+<li><strong>2MB</strong> for bitmaps (a single full-screen bitmap on the X20 alone uses
+  roughly 768K).</li>
+<li><strong>2MB</strong> for Lua scripts — a generous budget in practice.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Bitmaps in scripts</p>
+<p>Avoid holding large amounts of bitmap data in RAM. Prefer <strong>lazy
+loading</strong> — load a bitmap only when it's actually needed, then keep
+it cached in memory for next time rather than re-reading it from the
+SD card/eMMC repeatedly.</p>
 </div>
 
 

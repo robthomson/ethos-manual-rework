@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1314,6 +1342,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2262,6 +2318,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2290,6 +2374,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2298,6 +2466,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2871,12 +3095,20 @@
 
 <h1 id="date-time">Date &amp; Time<a class="headerlink" href="#date-time" title="Permanent link">&para;</a></h1>
 <p><img alt="Date &amp; time" src="../../assets/system-date.png" /></p>
-<p>Sets the radio's clock, used for file timestamps and any time-of-day
-logic elsewhere in Ethos.</p>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass.</p>
-</div>
+<ul>
+<li><strong>24 hour time</strong> — switches the clock between 12- and 24-hour display.</li>
+<li><strong>Display seconds</strong> — adds seconds to the clock display.</li>
+<li><strong>Date</strong> / <strong>Time</strong> — set the current date/time; both feed into data
+  logging.</li>
+<li><strong>Time zone</strong> — your local time zone.</li>
+<li><strong>Adjust RTC speed</strong> — compensates for real-time-clock drift, up to 41
+  seconds/day. Measure how many seconds your clock gains or loses over 24
+  hours, and set the calibration value to <strong>12× that number of seconds</strong>
+  — negative if the clock runs fast, positive if it runs slow (range
+  −500 to +500). Re-check after a day or two and fine-tune.</li>
+<li><strong>Auto adjust from GPS</strong> — when enabled, sets date and time
+  automatically from a remote GPS sensor's data instead.</li>
+</ul>
 
 
 

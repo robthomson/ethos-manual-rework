@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,6 +1327,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2262,6 +2318,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2290,6 +2374,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2298,6 +2466,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2870,14 +3094,59 @@
 
 
 <h1 id="basic-widget-layout">Basic Widget Layout<a class="headerlink" href="#basic-widget-layout" title="Permanent link">&para;</a></h1>
-<p>The minimal structure of a custom display widget script (<code>name</code>, <code>create</code>,
-<code>paint</code>, <code>configure</code>, <code>read</code>/<code>write</code> for persisted settings) and how it's
-placed on a screen alongside built-in widgets from
-<a href="../../displays/">Displays</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass.</p>
-</div>
+<p>A custom Lua widget (see <a href="../../displays/custom-widgets/">Custom Widgets</a>
+for installing one) is built from a small set of named fields/handlers:</p>
+<ul>
+<li><strong><code>key</code></strong> <em>(string)</em> — a unique identifier for the widget.</li>
+<li><strong><code>name</code></strong> <em>(string or function)</em> — the widget's display name. Either a
+  plain string, or a function taking no arguments and returning one —
+  useful for a name that varies by locale.</li>
+<li><strong><code>create</code></strong> <em>(function)</em> — called once when the widget is created,
+  taking no arguments. Returns a <strong>widget table</strong>, which is then passed
+  to every other handler below — initialize your state here and store it
+  in that table.</li>
+<li><strong><code>configure</code></strong> <em>(function)</em> — called when the user opens the widget's
+  configuration screen, taking the widget table from <code>create()</code> as its
+  only argument, returning nothing. Build the configuration form here and
+  use it to update values in the widget table.</li>
+<li><strong><code>wakeup</code></strong> <em>(function)</em> — called every loop (roughly every 50ms),
+  taking the widget table, returning nothing. Check here whether anything
+  changed; if so, call <code>invalidateWindow()</code> to trigger a repaint via
+  <code>paint()</code>. Keep this handler fast — ideally doing nothing at all most
+  of the time it's called.</li>
+<li><strong><code>event</code></strong> <em>(function)</em> — called when the widget receives an event;
+  Ethos routes arbitrary events to a widget through this handler.</li>
+<li><strong><code>paint</code></strong> <em>(function)</em> — draws the widget, taking the widget table,
+  returning nothing. Called automatically whenever <code>lcd.invalidate()</code> has
+  fired. Can be comparatively slow, but should still only actually redraw
+  when something's changed.</li>
+<li><strong><code>read</code></strong> <em>(function, optional)</em> — reads persisted widget storage.</li>
+<li><strong><code>write</code></strong> <em>(function, optional)</em> — writes persisted widget storage.</li>
+<li><strong><code>init</code></strong> <em>(function)</em> — registers the widget and its callbacks with
+  Ethos. Typically the last thing in the script:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
+<span class="w">  </span><span class="nv">system</span><span class="p">.</span><span class="nf">registerWidget</span><span class="p">({</span>
+<span class="w">    </span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;unique&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">create</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">create</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">configure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">configure</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">wakeup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">wakeup</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">paint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">paint</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">read</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">read</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">write</span><span class="p">,</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="kr">end</span>
+
+<span class="kr">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><code>key</code> must be unique across installed widgets; the other fields tie into
+the widget's lifecycle as described above.</p>
+<p>Scripts live under <code>scripts/</code> on the SD card/eMMC, ideally organized into
+per-widget folders (see <a href="../../system-setup/file-manager/#top-level-folders">File
+Manager</a> and <a href="../example-script-locations/">Example
+Script Locations</a>). See the <em>FrSky ETHOS Lua
+Script Programming</em> thread on rcgroups for further worked examples.</p>
 
 
 

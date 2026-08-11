@@ -61,6 +61,12 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/getting-started/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/getting-started/emergency-mode/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/getting-started/emergency-mode/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/getting-started/main-views/</loc>
         <lastmod>2026-08-11</lastmod>
         <changefreq>daily</changefreq>
@@ -97,16 +103,52 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/how-to/fbus-setup/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/fbus-setup/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/how-to/find-latest-bootloader/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/find-latest-bootloader/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/how-to/in-flight-compensation-curve/</loc>
         <lastmod>2026-08-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/in-flight-compensation-curve/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/how-to/instant-takeback/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/instant-takeback/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/how-to/low-battery-warning/</loc>
         <lastmod>2026-08-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/low-battery-warning/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/how-to/sr8-sr10-setup/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/sr8-sr10-setup/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/how-to/test-redundant-receiver/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/test-redundant-receiver/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/how-to/user-defined-checklist/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/how-to/user-defined-checklist/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/lua-scripts/</loc>
@@ -203,6 +245,12 @@
         <lastmod>2026-08-11</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/model-setup/outputs/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/model-setup/rf-system/</loc>
+        <lastmod>2026-08-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/model-setup/rf-system/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/model-setup/special-functions/</loc>

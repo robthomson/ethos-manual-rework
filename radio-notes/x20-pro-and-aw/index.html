@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,6 +1327,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2247,6 +2303,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2275,6 +2359,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2283,6 +2451,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2871,13 +3095,40 @@
 
 <h1 id="x20-pro-x20-pro-aw">X20 Pro / X20 Pro AW<a class="headerlink" href="#x20-pro-x20-pro-aw" title="Permanent link">&para;</a></h1>
 <p><img alt="X20 Pro hardware check" src="../../assets/system-hardware-check-x20pro.png" /></p>
-<p>Differences from the X20S — including the X20 Pro AW's distinct haptic
-motor options.</p>
-<p><img alt="X20 Pro AW haptic" src="../../assets/model-sf-haptic-x20proaw.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass.</p>
-</div>
+<p>Differences from the X20S baseline this manual is written against —
+these apply to the <strong>X20 Pro</strong>, and mostly extend to the <strong>X20 Pro AW</strong>
+and <strong>X20R/RS</strong> family too.</p>
+<ul>
+<li><strong>Storage</strong> — internal 8GB eMMC by default, SD card optional — see
+  <a href="../../system-setup/general/#storage-location-x18-and-x20-prorrs">General → Storage
+  location</a>.</li>
+<li><strong>Extra trims</strong> — adds trim switches <strong>T5</strong> and <strong>T6</strong> — see
+  <a href="../../model-setup/trims/#trim-settings">Trims</a>.</li>
+<li><strong>Extra switches</strong> — two latching pushbutton switches, <strong>K</strong> and <strong>L</strong>,
+  on the rear shoulders, plus switch positions <strong>M</strong>/<strong>N</strong> if wired
+  (typically stick-end switches) — see <a href="../../system-setup/hardware/#switches-settings">Hardware →
+  Switches</a>.</li>
+<li><strong>Extra pots</strong> — <strong>Ext1</strong>/<strong>Ext2</strong>, typically used with 3-axis gimbals
+  — see <a href="../../system-setup/hardware/#potssliders-settings">Hardware → Pots/Sliders</a>.
+  This shifts the <a href="../../system-setup/hardware/#adc-value-inspector">ADC value inspector</a>
+  index: Ext1/Ext2 sit between Pot2 and the sliders.</li>
+<li><strong>Haptic feedback</strong> — the <strong>X20 Pro AW</strong> and <strong>X20RS</strong> ship with MC20R
+  gimbals with haptic stick-shaker motors built in; an <strong>X20 Pro</strong> or
+  <strong>X20R</strong> can gain the same via a retrofit MC20R gimbal upgrade, enabled
+  under <a href="../../system-setup/hardware/#radio-specific-hardware-options">Hardware → Enabling haptic gimbal
+  upgrades</a>.
+  Once enabled, <a href="../../model-setup/special-functions/#actions">Select haptic
+  motors</a> offers Default,
+  All motors, Left stick, or Right stick.</li>
+<li><strong>Rotary encoder</strong> — the X20 Pro AW and X20R/RS use a more sensitive
+  encoder; a <strong>half steps</strong> option under <a href="../../system-setup/hardware/#radio-specific-hardware-options">Hardware → Encoder
+  option</a>
+  tones it down.</li>
+<li><strong>Internal RF module</strong> — the X20 Pro/R/RS use the <strong>TD-ISRM Pro</strong>
+  module (LoRa-capable, with tandem dual-band and TD-Pro modes in
+  addition to ACCESS/ACCST D16), rather than the TD-ISRM module in the
+  X18/X20/X20S/X20HD — see <a href="../../model-setup/rf-system/">RF System</a>.</li>
+</ul>
 
 
 

@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,6 +1327,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2262,6 +2318,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2290,6 +2374,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2298,6 +2466,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2870,24 +3094,32 @@
 
 
 <h1 id="lua-scripts">Lua Scripts<a class="headerlink" href="#lua-scripts" title="Permanent link">&para;</a></h1>
-<p>Ethos includes a full Lua scripting environment — used both for
-<a href="../displays/custom-widgets/">custom display widgets</a> and standalone
-scripts/tools attached to a model (see <a href="../model-setup/lua-scripts/">Model Setup — Lua
-Scripts</a>).</p>
-<ul>
-<li><a href="lua-interpreter/">Lua Interpreter</a></li>
-<li><a href="ethos-lua-documentation/">Ethos Lua Documentation</a></li>
-<li><a href="example-script-locations/">Example Script Locations</a></li>
-<li><a href="configuration-limits/">Configuration Limits</a></li>
-<li><a href="basic-widget-layout/">Basic Widget Layout</a></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass. This
-section is reference/API documentation rather than UI walkthroughs, so
-it won't lean on simulator screenshots the way the rest of the manual
-does.</p>
+<p>Lua scripts let you build custom <a href="../displays/custom-widgets/">display widgets</a>
+to show information Ethos doesn't natively cover, and (per model) custom
+<a href="../model-setup/lua-scripts/">sources and tasks</a> — a foundation planned
+to grow further, toward specialized custom functions and flight
+controller integration.</p>
+<p>Lua itself is a lightweight, embeddable general-purpose scripting
+language (used everywhere from games to web apps); Ethos embeds it for
+exactly this kind of on-radio customization.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lua scripts add to the radio's startup time. A well-written script's
+delay should be unnoticeable — a poorly written one can delay startup
+almost indefinitely.</p>
 </div>
+<ul>
+<li><a href="lua-interpreter/">Lua Interpreter</a> — which Lua version and libraries
+  Ethos embeds.</li>
+<li><a href="ethos-lua-documentation/">Ethos Lua Documentation</a> — where the full
+  API reference lives.</li>
+<li><a href="example-script-locations/">Example Script Locations</a> — where to find
+  and download working examples.</li>
+<li><a href="configuration-limits/">Configuration Limits</a> — memory budgets for
+  bitmaps and scripts.</li>
+<li><a href="basic-widget-layout/">Basic Widget Layout</a> — the code structure a
+  custom widget script needs.</li>
+</ul>
 
 
 

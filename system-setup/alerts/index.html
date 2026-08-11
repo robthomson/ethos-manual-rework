@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1314,6 +1342,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2262,6 +2318,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2290,6 +2374,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2298,6 +2466,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2871,12 +3095,28 @@
 
 <h1 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">&para;</a></h1>
 <p><img alt="Alerts" src="../../assets/system-alerts.png" /></p>
-<p>Radio-wide audible and haptic alerts — separate from the per-model warnings
-configured under <a href="../../model-setup/special-functions/">Special Functions</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Draft</p>
-<p>This page is a placeholder — full content coming in a later pass.</p>
-</div>
+<p>Four radio-wide warnings, each independently switchable — separate from
+the per-model <a href="../../model-setup/special-functions/">special functions</a>
+and <a href="../../model-setup/logical-switches/">logical switches</a> you build
+yourself.</p>
+<ul>
+<li><strong>Silent mode</strong> — a spoken alert at startup when this check is on and
+  <a href="../general/">General → Audio mode</a> is set to Silent, as a reminder the
+  radio is muted.</li>
+<li><strong>Main voltage</strong> — "Radio battery is low" when the main radio battery
+  drops below the <strong>Low voltage</strong> threshold set in <a href="../battery/">Battery</a>.</li>
+<li><strong>RTC voltage</strong> — "RTC battery is low" when the RTC coin cell drops
+  below 2.5V (the default threshold). Data logging relies on the real-time
+  clock; an invalid time makes logs hard to read, especially telling
+  flight sessions apart. This can be silenced temporarily while waiting to
+  replace the battery, but shouldn't be left off indefinitely.</li>
+<li><strong>Sensor conflict warning</strong> — detects conflicting telemetry sensor IDs.
+  Only worth disabling if you have sensors that don't meet the S.Port
+  specification.</li>
+<li><strong>Inactivity</strong> — a spoken "Prolonged inactivity" alert (plus a haptic
+  buzz, in case the volume is turned down) after the radio has gone
+  unused for longer than the configured time — 10 minutes by default.</li>
+</ul>
 
 
 

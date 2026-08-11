@@ -694,6 +694,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1299,6 +1327,34 @@
     
   
     Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF System
   
 
     
@@ -2332,6 +2388,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to/butterfly-mixer/" class="md-nav__link">
         
   
@@ -2360,6 +2444,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure an FBUS System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test a Redundant Receiver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Defined Text Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to/in-flight-compensation-curve/" class="md-nav__link">
         
   
@@ -2368,6 +2536,62 @@
     
   
     In-Flight Adjustable Compensation Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instant Take-Back (Trainer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Find the Latest Bootloader
   
 
     
@@ -2985,6 +3209,12 @@
 <p>The home screen is one or more <strong>display screens</strong>, each built from
 <strong>widgets</strong> you place and configure yourself. Pressing <code>DISP</code> opens the
 display editor for the current screen.</p>
+<p>Up to <strong>eight</strong> screens are available, each starting from one of
+<strong>thirteen</strong> layouts (holding up to <strong>nine</strong> widget cells). Widgets can
+show telemetry, but also any of seventeen other information categories —
+model/radio status, timers, channels, and more. Configured screens are
+reached by touch-swiping or <code>PAGE</code> up/down; the top and bottom bars stay
+visible on every screen except a full-screen layout.</p>
 <h2 id="adding-a-widget">Adding a widget<a class="headerlink" href="#adding-a-widget" title="Permanent link">&para;</a></h2>
 <p><img alt="Widget types" src="../assets/display-widget-types.png" /></p>
 <p>Every screen is a grid; tapping an empty cell opens the widget picker.
@@ -3000,7 +3230,8 @@ as everywhere else in Ethos:</p>
 <h2 id="widget-types">Widget types<a class="headerlink" href="#widget-types" title="Permanent link">&para;</a></h2>
 <p><strong>Value</strong> — a single numeric or telemetry reading, shown as text:</p>
 <p><img alt="Value widget config" src="../assets/display-widget-value-config.png" /></p>
-<p>Most sources also support reducing to a live <strong>min</strong> or <strong>max</strong>, useful for
+<p>Most sources also support reducing to a live <strong>min</strong> or <strong>max</strong> — after
+selecting the source, long-press it and choose Min or Max — useful for
 things like worst-case RSSI over a flight:</p>
 <p><img alt="Value widget min" src="../assets/display-widget-value-min.png" />
 <img alt="Value widget min RSSI" src="../assets/display-widget-value-min-rssi.png" /></p>
@@ -3011,30 +3242,50 @@ images swapped based on a source's value (e.g. a battery icon that changes
 with voltage):</p>
 <p><img alt="Bitmap widget config" src="../assets/display-widget-bitmap-config.png" />
 <img alt="Bitmap widget type" src="../assets/display-widget-bitmap-type.png" /></p>
-<p><strong>LiPo</strong> — a purpose-built battery gauge, reading cell count and voltage
-directly from a source:</p>
+<p><strong>LiPo</strong> — a purpose-built battery gauge reading from a sensor like
+FLVSS: total pack voltage, cell count, and each individual cell voltage.
+Falling below the configured <strong>Low voltage</strong> threshold turns the display
+red — in the example below, a 3.3V threshold triggers on the lowest cell:</p>
 <p><img alt="LiPo widget config" src="../assets/display-widget-lipo-config.png" />
 <img alt="LiPo widget" src="../assets/display-widget-lipo.png" /></p>
-<p><strong>Channels</strong> — a live bar-graph view of output channel positions:</p>
+<p><strong>Channels</strong> — up to 8 output channels as a bar chart, horizontal or
+vertical:</p>
 <p><img alt="Channels widget config" src="../assets/display-widget-channels-config.png" />
 <img alt="Channels widget" src="../assets/display-widget-channels.png" /></p>
-<p><strong>Line Chart</strong> — plots a source's value over time:</p>
+<p><strong>Line Chart</strong> — plots a source's value over time, resetting on a Flight
+Reset:</p>
 <p><img alt="Line chart widget config" src="../assets/display-widget-line-chart-config.png" />
 <img alt="Line chart widget" src="../assets/display-widget-line-chart.png" /></p>
-<p>Tapping a live line chart opens its own zoom/pan options:</p>
+<ul>
+<li><strong>Source</strong> — what's being charted.</li>
+<li><strong>Pause condition</strong> — a source that pauses/resumes logging (or just tap
+  the running widget, if no source is free for this).</li>
+<li><strong>Log period</strong> — sampling interval; 500ms covers roughly 6 minutes
+  before scrolling, 1s roughly 12 minutes.</li>
+<li><strong>Inverted</strong> — flips the chart vertically.</li>
+<li><strong>Auto range</strong> — scales the vertical axis to fit the data automatically;
+  turned off, it uses fixed <strong>Min</strong>/<strong>Max</strong> values instead (e.g. a steady
+  −100%…+100% range).</li>
+</ul>
+<p>Tapping a running chart brings up <strong>Pause/resume</strong>, <strong>Reset</strong> (clear and
+restart), <strong>Configure widget</strong>, or jump to <strong>Configure screens</strong>:</p>
 <p><img alt="Line chart options" src="../assets/display-widget-line-chart-options.png" /></p>
-<p><strong>Text</strong> — static or source-driven label text, useful for annotating a
-screen layout:</p>
+<p><strong>Text</strong> — renders a Markdown text file's contents (read from
+<code>documents/user/</code> — see <a href="../system-setup/file-manager/#top-level-folders">File
+Manager</a>):</p>
 <p><img alt="Text widget config" src="../assets/display-widget-text-config.png" />
 <img alt="Text widget" src="../assets/display-widget-text.png" /></p>
-<p><strong>Timer Log</strong> — a scrollable log of past timer runs (useful for tracking
-flight-pack usage over a session):</p>
+<p><strong>Timer Log</strong> — a scrollable log of a chosen timer's past values, written
+each time that timer is reset (useful for tracking flight-pack usage
+across a session); <strong>Reverse</strong> puts the newest entry at the top:</p>
 <p><img alt="Timer log widget config" src="../assets/display-widget-timer-logs-config.png" />
 <img alt="Timer log widget" src="../assets/display-widget-timer-log.png" /></p>
-<p>Tapping an entry opens per-run detail:</p>
+<p>Long-press an entry (or the widget) for <strong>Clear logs</strong>, edit/reset the
+underlying timer, or jump to widget/screen configuration:</p>
 <p><img alt="Timer log entry menu" src="../assets/display-widget-timer-log-menu.png" /></p>
-<p><strong>GPS Map</strong> — plots live GPS position on a track, for models with a GPS
-sensor:</p>
+<p><strong>GPS Map</strong> — plots live GPS position as a track, for models with a GPS
+sensor (see the <em>FrSky - ETHOS Lua Script Programming</em> thread on
+rcgroups, post #8854, for more detail on this widget specifically):</p>
 <p><img alt="GPS map widget config" src="../assets/display-widget-gps-map-config.png" /></p>
 <h2 id="screen-level-options">Screen-level options<a class="headerlink" href="#screen-level-options" title="Permanent link">&para;</a></h2>
 <p>Beyond individual widgets, each screen has its own settings — layout grid
