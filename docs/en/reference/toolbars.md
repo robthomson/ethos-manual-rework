@@ -17,7 +17,3 @@ radio and receiver battery/voltage, and the time — configurable under
 A live bar-graph readout of the output channels — the same information as
 the [Channels display widget](../displays/index.md#widget-types), always
 available regardless of which display screen is active.
-
-!!! note "Draft"
-    This page covers the two bars themselves; full configuration options
-    for each are coming in a later pass.

@@ -8,6 +8,3 @@ setup.
 - [Basic Fixed-Wing Example](basic-fixed-wing.md)
 - [Basic Flying-Wing (Elevon) Example](basic-flying-wing.md)
 - [Basic Flybarless Heli Example](basic-flybarless-heli.md)
-
-!!! note "Draft"
-    This page is a placeholder — full content coming in a later pass.

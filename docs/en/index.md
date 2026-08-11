@@ -7,9 +7,12 @@ building custom telemetry displays, and the Lua scripting environment that
 sits on top of all of it.
 
 !!! note "Work in progress"
-    This manual is being rebuilt from scratch. Many sections are placeholders
-    for now — see [Contributing](contributing/index.md) if you'd like to help
-    fill them in.
+    This manual was rebuilt from scratch against the official Ethos 1.6.3
+    manual and the existing screenshot set. A handful of pages (Ethos
+    Suite, RF System, and a few How-To guides) are complete but don't
+    have screenshots yet — see [Screenshot
+    Pipeline](contributing/screenshot-pipeline.md) and
+    [Contributing](contributing/index.md) if you'd like to help.
 
 ## Where to start
 

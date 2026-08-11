@@ -1,7 +1,13 @@
 # Lua Interpreter
 
-Which Lua version and runtime Ethos embeds, and the practical implications
-for script authors (available standard library, memory limits).
+Ethos embeds an interpreter based on **Lua 5.4.3**, packaged with:
 
-!!! note "Draft"
-    This page is a placeholder — full content coming in a later pass.
+- the basic library
+- the table library
+- the io library
+- the os library
+- the math library
+
+Scripts run against this environment whether they're implementing a
+[display widget](../displays/custom-widgets.md) or a per-model
+[source/task](../model-setup/lua-scripts.md).

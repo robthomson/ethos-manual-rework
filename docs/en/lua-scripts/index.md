@@ -1,18 +1,27 @@
 # Lua Scripts
 
-Ethos includes a full Lua scripting environment — used both for
-[custom display widgets](../displays/custom-widgets.md) and standalone
-scripts/tools attached to a model (see [Model Setup — Lua
-Scripts](../model-setup/lua-scripts.md)).
+Lua scripts let you build custom [display widgets](../displays/custom-widgets.md)
+to show information Ethos doesn't natively cover, and (per model) custom
+[sources and tasks](../model-setup/lua-scripts.md) — a foundation planned
+to grow further, toward specialized custom functions and flight
+controller integration.
 
-- [Lua Interpreter](lua-interpreter.md)
-- [Ethos Lua Documentation](ethos-lua-documentation.md)
-- [Example Script Locations](example-script-locations.md)
-- [Configuration Limits](configuration-limits.md)
-- [Basic Widget Layout](basic-widget-layout.md)
+Lua itself is a lightweight, embeddable general-purpose scripting
+language (used everywhere from games to web apps); Ethos embeds it for
+exactly this kind of on-radio customization.
 
-!!! note "Draft"
-    This page is a placeholder — full content coming in a later pass. This
-    section is reference/API documentation rather than UI walkthroughs, so
-    it won't lean on simulator screenshots the way the rest of the manual
-    does.
+!!! warning
+    Lua scripts add to the radio's startup time. A well-written script's
+    delay should be unnoticeable — a poorly written one can delay startup
+    almost indefinitely.
+
+- [Lua Interpreter](lua-interpreter.md) — which Lua version and libraries
+  Ethos embeds.
+- [Ethos Lua Documentation](ethos-lua-documentation.md) — where the full
+  API reference lives.
+- [Example Script Locations](example-script-locations.md) — where to find
+  and download working examples.
+- [Configuration Limits](configuration-limits.md) — memory budgets for
+  bitmaps and scripts.
+- [Basic Widget Layout](basic-widget-layout.md) — the code structure a
+  custom widget script needs.

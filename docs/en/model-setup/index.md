@@ -3,7 +3,9 @@
 Everything in this section is stored **per model** — switching models
 switches all of it. This is where a model actually gets programmed, from
 picking an airframe template through to its mixes, outputs, and safety
-switches.
+switches. Reached via the **Airplane** tab along the bottom bar (or the
+`MDL` key) — as distinct from [System Setup](../system-setup/index.md),
+which covers everything common across every model.
 
 - [Model Select](model-select.md) — creating, choosing, and organizing
   models.
@@ -13,6 +15,7 @@ switches.
 - [Outputs](outputs.md) — servo/motor endpoints, subtrim, and reversing.
 - [Timers](timers.md)
 - [Trims](trims.md)
+- [RF System](rf-system.md) — receiver binding and RF module setup.
 - [Curves](curves.md)
 - [Logical Switches](logical-switches.md)
 - [Special Functions](special-functions.md)
@@ -23,7 +26,5 @@ switches.
 - [Lua Scripts](lua-scripts.md) — per-model Lua scripts and functions.
 
 For worked, start-to-finish examples of programming a model, see
-[Tutorials](../tutorials/index.md).
-
-!!! note "Draft"
-    This page is a placeholder — full content coming in a later pass.
+[Tutorials](../tutorials/index.md), and for task-focused walkthroughs,
+[How-To Guides](../how-to/index.md).

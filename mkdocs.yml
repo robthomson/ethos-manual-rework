@@ -69,6 +69,7 @@ nav:
       - Main Views: getting-started/main-views.md
       - User Interface & Navigation: getting-started/user-interface-and-navigation.md
       - USB Connection Modes: getting-started/usb-connection-modes.md
+      - Emergency Mode: getting-started/emergency-mode.md
   - System Setup:
       - system-setup/index.md
       - File Manager: system-setup/file-manager.md
@@ -89,6 +90,7 @@ nav:
       - Outputs: model-setup/outputs.md
       - Timers: model-setup/timers.md
       - Trims: model-setup/trims.md
+      - RF System: model-setup/rf-system.md
       - Curves: model-setup/curves.md
       - Logical Switches: model-setup/logical-switches.md
       - Special Functions: model-setup/special-functions.md
@@ -118,8 +120,14 @@ nav:
       - how-to/index.md
       - Low Battery Voltage Warning: how-to/low-battery-warning.md
       - Battery Capacity Warning: how-to/battery-capacity-warning.md
+      - SR8/SR10 Setup: how-to/sr8-sr10-setup.md
       - Butterfly (Crocodile) Mixer: how-to/butterfly-mixer.md
+      - Configure an FBUS System: how-to/fbus-setup.md
+      - Test a Redundant Receiver: how-to/test-redundant-receiver.md
+      - User Defined Text Checklist: how-to/user-defined-checklist.md
       - In-Flight Adjustable Compensation Curve: how-to/in-flight-compensation-curve.md
+      - Instant Take-Back (Trainer): how-to/instant-takeback.md
+      - Find the Latest Bootloader: how-to/find-latest-bootloader.md
   - Radio Notes:
       - radio-notes/index.md
       - X18S: radio-notes/x18s.md
