@@ -3593,6 +3593,11 @@ extra pots, <strong>Ext1</strong>/<strong>Ext2</strong>, typically used for 3-ax
 <li><strong>X20 Pro</strong> — adds pushbutton switches <strong>K</strong>/<strong>L</strong> on the rear
   shoulders, plus positions <strong>M</strong>/<strong>N</strong> if wired (typically for stick-end
   switches).</li>
+<li><strong>XE series</strong> — physical switches are marked <strong>S1</strong>–<strong>S14</strong>, mapped by
+  default to Ethos's <strong>SA</strong>–<strong>SN</strong> — relabel them to <strong>S1</strong>–<strong>S14</strong> (to
+  match the radio's own silkscreen) or any other naming, as preferred. The
+  XE series' extra abstraction layer means any physical switch can be
+  mapped to any Ethos switch position.</li>
 </ul>
 <h2 id="home-keymap">Home keymap<a class="headerlink" href="#home-keymap" title="Permanent link">&para;</a></h2>
 <p>Reassigns what the <code>SYS</code>, <code>MDL</code>, and <code>DISP</code> (<code>TELE</code> on older radios) home
@@ -3607,6 +3612,13 @@ keys jump to.</p>
   respectively.</li>
 </ul>
 <h2 id="radio-specific-hardware-options">Radio-specific hardware options<a class="headerlink" href="#radio-specific-hardware-options" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Bluetooth audio option</strong> (X20, X20R, X20RS) — enables an optional
+  Bluetooth audio module for these radios, for use with Bluetooth
+  earbuds/headsets. This isn't plug-and-play hardware — the module has to
+  be surface-mount soldered in — this setting just enables it once fitted.</li>
+</ul>
+<p><img alt="Bluetooth audio option" src="../../assets/system-hardware-bt-audio-options.png" /></p>
 <ul>
 <li><strong>Enabling haptic gimbal upgrades</strong> (X20 Pro, X20R) — the X20 Pro AW and
   X20RS ship with MC20R gimbals that have haptic stick-shaker motors; if

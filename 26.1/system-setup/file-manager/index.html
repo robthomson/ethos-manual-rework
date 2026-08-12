@@ -3411,13 +3411,12 @@
 internal RF module, S.Port-connected devices, OTA (Over-The-Air) devices,
 and external modules.</p>
 <h2 id="storage-layout">Storage layout<a class="headerlink" href="#storage-layout" title="Permanent link">&para;</a></h2>
-<p>Tap <strong>Flash</strong> (or press <code>PAGE</code> to switch drives) to browse the radio's
-internal virtual USB flash drive, used for system bitmaps and fonts:</p>
-<p><img alt="Flash storage" src="../../assets/system-filemanager-flash.png" /></p>
-<ul>
-<li><code>bitmaps/system</code> — the bitmaps used for screen displays and icons</li>
-<li><code>fonts/</code> — fonts for the different language selections</li>
-</ul>
+<p>As of Ethos 26.1, system bitmaps and fonts are built into the firmware
+itself rather than living on a browsable internal flash drive — this
+shortens startup time and speeds up the UI, since bitmaps no longer need
+loading dynamically. (On 1.6, this same storage held <code>bitmaps/system</code> and
+<code>fonts/</code> and was reachable by tapping <strong>Flash</strong>; that tap target no
+longer applies.)</p>
 <p>Both the bootloader and the system firmware itself live in this internal
 flash memory, on every FrSky radio back to the original X9D.</p>
 <p>The <strong>X20/X20S/X20HD</strong> series takes a FAT32-formatted SD card, 32GB or
