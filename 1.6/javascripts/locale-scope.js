@@ -59,7 +59,7 @@
   // URL patched in below already has the release download prefix and tag,
   // so this just appends the per-locale filename.
   function scopePdfLink(locale) {
-    var base = /*__PDF_BASE_URL__*/ "";
+    var base = /*__PDF_BASE_URL__*/ "https://github.com/robthomson/ethos-manual-rework/releases/download/pdf-1.6/";
     var link = document.querySelector('.md-social__link[title="Download PDF"]');
     if (!base || !link) {
       return;
