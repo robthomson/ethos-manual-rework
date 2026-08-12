@@ -9,9 +9,11 @@
 //
 // hooks/split_search_index.py splits that combined index into
 // search/search_index-<locale>.json per locale after the build, and patches
-// the locale list below in. This rewrites the one XHR Material's search
-// worker makes for search_index.json to fetch the split file matching the
-// locale segment in the current URL, before that request fires.
+// the locale list below in. This rewrites the one XHR Material's bundle.js
+// makes for search_index.json to fetch the split file matching the locale
+// segment in the current URL, before that request fires. overrides/main.html
+// loads this file *before* bundle.js specifically so this patch is in place
+// before that request goes out -- see that file for why.
 //
 // The version (mike) axis doesn't need any of this: mike builds and deploys
 // each version to its own subtree with its own independent search index, so
