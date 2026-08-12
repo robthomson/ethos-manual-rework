@@ -392,6 +392,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/how-to/in-flight-compensation-curve/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2483,6 +2500,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/cs/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1/cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/cs/lua-scripts/alternative-display-themes/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2906,6 +2940,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/he/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1/he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/he/how-to/in-flight-compensation-curve/</loc>
@@ -4166,6 +4217,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/nl/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1/nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/nl/how-to/in-flight-compensation-curve/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -5422,6 +5490,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/nb/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1/nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/nb/how-to/in-flight-compensation-curve/</loc>
@@ -6682,6 +6767,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pl/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1/pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pl/how-to/in-flight-compensation-curve/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -7938,6 +8040,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/es/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1/es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/es/how-to/in-flight-compensation-curve/</loc>
@@ -9198,6 +9317,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/it/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1/it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/it/how-to/in-flight-compensation-curve/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -10456,6 +10592,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pt-BR/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1/pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pt-BR/how-to/in-flight-compensation-curve/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -11712,6 +11865,23 @@
         <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/find-latest-bootloader/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/zh/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1/zh/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/zh/how-to/in-flight-compensation-curve/</loc>
@@ -13805,6 +13975,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -14228,6 +14415,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/find-latest-bootloader/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/find-latest-bootloader/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/fr/how-to/gear-door-sequencer/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1/fr/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/fr/how-to/in-flight-compensation-curve/</loc>
