@@ -6,11 +6,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Ethos Suite to towarzysząca aplikacja dla systemów Windows/Mac, służąca do zarządzania nadajnikiem z systemem Ethos, podłączonym przez USB.
 
-!!! note "Zrzuty ekranu w przygotowaniu"
-    Ethos Suite jest odrębną aplikacją PC, a nie samym nadajnikiem, dlatego
-    ta sekcja nie korzysta ze zrzutów ekranu przechwyconych z symulatora,
-    używanych w pozostałej części podręcznika — zobacz [Proces tworzenia
-    zrzutów ekranu](../contributing/screenshot-pipeline.md).
+![Karta Radio w Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 Po nawiązaniu połączenia Ethos Suite umożliwia:
 

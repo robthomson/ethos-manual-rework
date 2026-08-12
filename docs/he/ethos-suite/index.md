@@ -6,8 +6,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Ethos Suite היא אפליקציית הלוויין ל‑Windows/Mac לניהול משדר המריץ Ethos, המחובר דרך USB.
 
-!!! note "צילומי מסך בהמתנה"
-    Ethos Suite היא אפליקציית PC נפרדת, ולא המשדר עצמו, ולכן פרק זה אינו משתמש בצילומי המסך שנלקחו מהסימולטור כמו בשאר המדריך — ראה [תהליך צילומי המסך](../contributing/screenshot-pipeline.md).
+![לשונית הרדיו של Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 לאחר החיבור, Ethos Suite יכולה:
 

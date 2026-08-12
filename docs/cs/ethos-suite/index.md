@@ -7,11 +7,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Ethos Suite je doprovodná aplikace pro Windows/Mac určená ke správě vysílače
 s firmwarem Ethos, připojeného přes USB.
 
-!!! note "Snímky obrazovek budou doplněny"
-    Ethos Suite je samostatná PC aplikace, nikoli vysílač samotný, a proto
-    tato část nepoužívá snímky obrazovek zachycené v simulátoru, jako je to
-    ve zbytku příručky — viz [Postup tvorby snímků
-    obrazovek](../contributing/screenshot-pipeline.md).
+![Karta rádia v Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 Po připojení umožňuje Ethos Suite:
 

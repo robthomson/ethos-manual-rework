@@ -7,10 +7,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Ethos Suite er det tilhørende Windows-/Mac-programmet for å administrere en sender
 som kjører Ethos, tilkoblet via USB.
 
-!!! note "Skjermbilder kommer"
-    Ethos Suite er et separat PC-program, ikke selve senderen, og
-    derfor bruker ikke dette kapittelet de simulatorgenererte skjermbildene som resten
-    av manualen bruker — se [Skjermbilde-arbeidsflyt](../contributing/screenshot-pipeline.md).
+![Radio-fanen i Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 Når tilkoblingen er opprettet, kan Ethos Suite:
 

@@ -6,8 +6,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 Ethos Suite 是配套的 Windows/Mac 应用程序，用于通过 USB 连接管理运行 Ethos 的遥控器。
 
-!!! note "截图待补充"
-    Ethos Suite 是独立的 PC 应用程序，而非遥控器本身，因此本节不使用手册其余部分所采用的模拟器截图 —— 参见 [截图流程](../contributing/screenshot-pipeline.md)。
+![Ethos Suite 遥控器标签页](../assets/ethos-suite-radio-tab.png)
 
 连接完成后，Ethos Suite 可以：
 

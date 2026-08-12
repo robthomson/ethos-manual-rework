@@ -7,11 +7,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Ethos Suite is de bijbehorende Windows/Mac-toepassing voor het beheren van een
 zender met Ethos, verbonden via USB.
 
-!!! note "Screenshots volgen nog"
-    Ethos Suite is een afzonderlijke pc-toepassing en niet de zender zelf, waardoor
-    dit hoofdstuk geen gebruikmaakt van de in de simulator vastgelegde screenshots
-    die in de rest van de handleiding worden gebruikt — zie [Screenshot
-    Pipeline](../contributing/screenshot-pipeline.md).
+![Radio-tabblad in Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 Zodra de verbinding tot stand is gebracht, kan Ethos Suite:
 

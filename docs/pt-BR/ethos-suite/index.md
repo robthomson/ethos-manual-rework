@@ -7,11 +7,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 O Ethos Suite é o aplicativo complementar para Windows/Mac usado para gerenciar um rádio
 executando o Ethos, conectado via USB.
 
-!!! note "Capturas de tela pendentes"
-    O Ethos Suite é um aplicativo de PC separado, não o próprio rádio, portanto
-    esta seção não utiliza as capturas de tela obtidas no simulador como o restante
-    do manual — consulte [Screenshot
-    Pipeline](../contributing/screenshot-pipeline.md).
+![Aba Radio do Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 Uma vez conectado, o Ethos Suite pode:
 

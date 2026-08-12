@@ -7,11 +7,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 Die Ethos Suite ist die begleitende Windows-/Mac-Anwendung zur Verwaltung
 eines Senders, auf dem Ethos läuft und der über USB angeschlossen ist.
 
-!!! note "Screenshots ausstehend"
-    Die Ethos Suite ist eine eigenständige PC-Anwendung und nicht der Sender
-    selbst, daher verwendet dieser Abschnitt nicht die im Simulator
-    aufgenommenen Screenshots wie der Rest des Handbuchs — siehe
-    [Screenshot-Pipeline](../contributing/screenshot-pipeline.md).
+![Registerkarte Radio in Ethos Suite](../assets/ethos-suite-radio-tab.png)
 
 Nach dem Verbinden kann die Ethos Suite:
 
