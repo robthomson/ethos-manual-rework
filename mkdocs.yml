@@ -8,6 +8,7 @@ docs_dir: docs
 
 hooks:
   - hooks/i18n_status.py
+  - hooks/split_search_index.py
 
 theme:
   name: material
@@ -955,6 +956,9 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/search-scope.js
 
 markdown_extensions:
   - admonition
