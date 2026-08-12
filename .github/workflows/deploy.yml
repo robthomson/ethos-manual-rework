@@ -84,12 +84,20 @@ jobs:
             --version 1.6
           kill "$server_pid"
 
-      # One release per revision, tagged pdf-1.6-<short sha> ("pdf-" prefix
-      # so it reads as generated collateral rather than a software release;
-      # the sha ties a release to the exact commit's docs state and makes
-      # every past PDF snapshot a stable, genuinely linkable artifact --
-      # unlike the single rolling "pdf-1.6" release this replaces, which got
-      # clobbered on every deploy and could never be pointed at reliably).
+      # One release per revision, tagged pdf-1.6.<run number> ("pdf-"
+      # prefix so it reads as generated collateral rather than a software
+      # release). github.run_number is this workflow's own strictly-
+      # incrementing, built-in counter -- unique per run, never reused, no
+      # extra state to track.
+      #
+      # Deliberately NOT the commit sha (kept in the title/notes below
+      # instead): GitHub's releases list -- both the API's default order and
+      # the actual /releases page -- sorts version-aware when it can parse a
+      # tag as semver, and falls back to plain (ascending/oldest-first!)
+      # order when it can't. A hex sha suffix isn't semver-parseable, which
+      # made the release list render oldest-first regardless of any sort
+      # param passed; a dotted numeric run number is, and sorts correctly.
+      #
       # The site's header links to this repo's release list directly (see
       # overrides/partials/header.html), not to a specific release, so
       # there's nothing else to wire up after this -- readers just pick the
@@ -103,11 +111,12 @@ jobs:
       - name: Publish PDF manuals as a GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
+          RUN_NUMBER: ${{ github.run_number }}
         run: |
           KEEP_REVISIONS=10
 
           sha_short="${GITHUB_SHA:0:7}"
-          tag="pdf-1.6-${sha_short}"
+          tag="pdf-1.6.${RUN_NUMBER}"
 
           if gh release view "$tag" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
             # Re-running the workflow (workflow_dispatch) against a commit
@@ -116,7 +125,7 @@ jobs:
             gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
           else
             gh release create "$tag" --repo "$GITHUB_REPOSITORY" \
-              --title "Ethos Manual 1.6 -- PDF exports (${sha_short})" \
+              --title "Ethos Manual 1.6 -- PDF exports (rev ${RUN_NUMBER}, ${sha_short})" \
               --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/ as of commit ${GITHUB_SHA}, one per fully-translated locale."
             gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY"
           fi
@@ -127,7 +136,7 @@ jobs:
           # interpolating it straight into the filter is safe.
           mapfile -t stale_tags < <(
             gh release list --repo "$GITHUB_REPOSITORY" --limit 200 --json tagName,createdAt \
-              --jq "[.[] | select(.tagName | startswith(\"pdf-1.6-\"))] | sort_by(.createdAt) | reverse | .[${KEEP_REVISIONS}:] | .[].tagName"
+              --jq "[.[] | select(.tagName | startswith(\"pdf-1.6.\"))] | sort_by(.createdAt) | reverse | .[${KEEP_REVISIONS}:] | .[].tagName"
           )
           for old_tag in "${stale_tags[@]}"; do
             echo "pruning old PDF revision: $old_tag"
