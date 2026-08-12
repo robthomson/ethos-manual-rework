@@ -3568,21 +3568,22 @@
 
 
 <h1 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h1>
-<p>Ethos ships firmware under version numbers today (1.6.x) and has
-signalled a move toward year-based branding (e.g. "Ethos26"). This manual
-needs to keep old versions' documentation available and correct while new
-versions are actively being written — this page is how.</p>
+<p>Ethos moved from point-release firmware numbers (1.6.x) to year-based
+branding starting with Ethos26 (26.1.x) — the manual's <code>main</code> branch now
+tracks 26.1, with the full 1.6.x manual frozen on its own <code>1.6</code> branch.
+This page describes the mechanism that makes that possible, and the
+process for cutting the next version when it's time.</p>
 <h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
 <p>Versioning is handled by <a href="https://github.com/jimporter/mike">mike</a>, the
 tool Material for MkDocs itself recommends. <code>.github/workflows/deploy.yml</code>
 runs <code>mike deploy</code> instead of publishing straight to the <code>gh-pages</code> root:
 each version is built and committed to its own subfolder there (<code>/1.6/</code>,
-<code>/26/</code>, …), and <code>manual.rt-rc.com/</code> redirects to whichever version
+<code>/26.1/</code>, …), and <code>manual.rt-rc.com/</code> redirects to whichever version
 currently holds the <code>latest</code> alias. Material shows a version-select
 dropdown automatically, reading <code>versions.json</code> (which <code>mike</code> maintains)
 — this is unrelated to, and composes cleanly with, the locale switcher:
 version is the outer path segment, locale (once more than <code>en</code> exists) is
-the inner one, e.g. <code>manual.rt-rc.com/26/fr/...</code>.</p>
+the inner one, e.g. <code>manual.rt-rc.com/26.1/fr/...</code>.</p>
 <p>This reuses the same "subfolder on <code>gh-pages</code>" mechanism as <a href="../#pr-previews">PR
 previews</a> — <code>mike</code>'s version folders and the
 <code>pr-preview/</code> folder coexist on the same branch without conflicting, since
@@ -3600,7 +3601,9 @@ each only ever touches its own paths.</p>
   own PRs. It just no longer tracks new-version development.</li>
 </ul>
 <h2 id="cutting-a-new-version">Cutting a new version<a class="headerlink" href="#cutting-a-new-version" title="Permanent link">&para;</a></h2>
-<p>When the next version's manual needs to start (e.g. Ethos26):</p>
+<p>This is the process that took <code>main</code> from 1.6.x to 26.1 (branch <code>1.6</code>
+frozen, <code>main</code> retargeted), and the same steps apply to the next cut
+whenever it's needed — substitute the actual old/new version labels below.</p>
 <ol>
 <li>From <code>main</code>, create and push the frozen branch for the version being
    left behind:</li>
@@ -3617,9 +3620,9 @@ git push origin 1.6
 <li>
 <p>On <code>main</code>, edit <code>.github/workflows/deploy.yml</code>: change the version
    string in the <code>Deploy version 1.6 with mike</code> step (and its name) from
-   <code>1.6</code> to the new version's label (e.g. <code>26</code>). This is the <strong>only</strong>
+   <code>1.6</code> to the new version's label (e.g. <code>26.1</code>). This is the <strong>only</strong>
    required edit to start deploying the new version — the next push to
-   <code>main</code> will publish it to <code>/26/</code> and move the <code>latest</code> alias there,
+   <code>main</code> will publish it to <code>/26.1/</code> and move the <code>latest</code> alias there,
    while <code>/1.6/</code> stays exactly as it was.</p>
 </li>
 <li>
