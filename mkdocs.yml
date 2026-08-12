@@ -1050,6 +1050,7 @@ nav:
       - ethos-suite/index.md
       - Migration: ethos-suite/migration.md
       - Operation: ethos-suite/operation.md
+      - Ethos Web Simulator: ethos-suite/web-simulator.md
   - Reference:
       - reference/index.md
       - Toolbars: reference/toolbars.md

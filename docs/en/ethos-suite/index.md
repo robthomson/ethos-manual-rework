@@ -47,5 +47,7 @@ states:
   prevents the radio from powering up normally.
 
 See [Migration](migration.md) for moving an existing radio to Ethos
-Suite for the first time, and [Operation](operation.md) for the Suite
-interface itself.
+Suite for the first time, [Operation](operation.md) for the Suite
+interface itself, and the [Ethos Web
+Simulator](web-simulator.md) for a browser-based, no-install way to try
+Ethos without a physical radio.
