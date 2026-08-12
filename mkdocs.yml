@@ -957,16 +957,6 @@ plugins:
 extra:
   version:
     provider: mike
-  social:
-    # docs/javascripts/locale-scope.js rewrites this href on load to point
-    # at the current page's own locale (Material's `social.link` is emitted
-    # as-is, with no `| url` resolution -- see that file for why a static
-    # href here can't be locale-correct on its own). "#" until JS fixes it
-    # up is deliberate: better an inert link for the instant before that
-    # runs than a URL that's actively wrong.
-    - icon: material/file-pdf-box
-      name: Download PDF
-      link: "#"
 
 extra_css:
   - stylesheets/extra.css

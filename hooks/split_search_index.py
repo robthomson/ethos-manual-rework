@@ -83,9 +83,6 @@ def on_shutdown(**kwargs):
             encoding="utf-8",
         )
 
-    # docs/javascripts/locale-scope.js also drives the PDF-download link
-    # fixup (see overrides/main.html) -- both need the same locale list, so
-    # patch it into the one file rather than keeping two copies in sync.
     locale_scope_js = site_dir / "javascripts" / "locale-scope.js"
     if locale_scope_js.exists():
         text = locale_scope_js.read_text(encoding="utf-8")

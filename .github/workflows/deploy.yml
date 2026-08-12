@@ -88,7 +88,10 @@ jobs:
       # prefixed so it reads as generated collateral rather than a software
       # release. Uploading with --clobber replaces this release's assets in
       # place on every deploy, rather than accumulating a new copy in git
-      # history the way committing them to gh-pages would.
+      # history the way committing them to gh-pages would. The site's
+      # header links to this repo's release list directly (see
+      # overrides/partials/header.html), not to a specific asset, so
+      # there's nothing else to wire up after this.
       - name: Publish PDF manuals as a GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -99,14 +102,13 @@ jobs:
               --title "Ethos Manual 1.6 -- PDF exports" \
               --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/, one per fully-translated locale. Replaced on every deploy -- not meant to be linked to directly by tag/version."
           gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
-          python scripts/patch_pdf_links.py --tag "$tag" --locale-scope-js pages/1.6/javascripts/locale-scope.js
 
-      - name: Commit generated assets (CNAME, PDF link)
+      - name: Ensure custom domain is set
         run: |
           cd pages
           echo "manual.rt-rc.com" > CNAME
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "chore: set custom domain, update PDF download link"
+          git add CNAME
+          git diff --cached --quiet || git commit -m "chore: set custom domain"
           git push origin gh-pages
