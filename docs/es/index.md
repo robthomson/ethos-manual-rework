@@ -10,14 +10,6 @@ un modelo desde cero, el ajuste de los parámetros del sistema de la emisora,
 la creación de pantallas de telemetría personalizadas y el entorno de scripting Lua que
 se asienta sobre todo ello.
 
-!!! note "Trabajo en curso"
-    Este manual se ha reconstruido desde cero a partir del manual oficial de Ethos
-    1.6.3 y del conjunto de capturas de pantalla existente. Algunas páginas (Ethos
-    Suite, Sistema RF y algunas guías prácticas) están completas pero aún no
-    tienen capturas de pantalla — consulta [Flujo de trabajo de
-    capturas](contributing/screenshot-pipeline.md) y
-    [Contribuir](contributing/index.md) si deseas colaborar.
-
 ## Por dónde empezar
 
 - ¿Es tu primer contacto con Ethos? Empieza por [Primeros pasos](getting-started/index.md) —

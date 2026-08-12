@@ -10,14 +10,6 @@ Einrichtung eines Modells von Grund auf, die Konfiguration der senderweiten
 Systemeinstellungen, den Aufbau eigener Telemetrieanzeigen sowie die
 Lua-Skriptumgebung, die auf all dem aufsetzt.
 
-!!! note "In Arbeit"
-    Dieses Handbuch wurde von Grund auf neu erstellt, und zwar auf Basis des offiziellen
-    Ethos-1.6.3-Handbuchs und des vorhandenen Screenshot-Bestands. Einige wenige Seiten
-    (Ethos Suite, HF-System und ein paar „Gewusst wie“-Anleitungen) sind inhaltlich
-    vollständig, haben aber noch keine Screenshots — siehe [Screenshot-
-    Pipeline](contributing/screenshot-pipeline.md) und
-    [Mitwirken](contributing/index.md), falls Sie helfen möchten.
-
 ## Wo anfangen
 
 - Neu bei Ethos? Beginnen Sie mit [Erste Schritte](getting-started/index.md) —

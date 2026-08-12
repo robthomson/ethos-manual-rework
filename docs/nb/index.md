@@ -10,13 +10,6 @@ en modell fra grunnen av, konfigurasjon av senderens systeminnstillinger,
 oppbygging av egendefinerte telemetriskjermer og Lua-skriptmiljøet som ligger
 over alt dette.
 
-!!! note "Under arbeid"
-    Denne manualen er bygd opp fra grunnen av med utgangspunkt i den offisielle
-    Ethos 1.6.3-manualen og det eksisterende settet med skjermbilder. Noen få
-    sider (Ethos Suite, RF-system og et par praktiske guider) er ferdigskrevet,
-    men mangler fortsatt skjermbilder — se [Skjermbilde-arbeidsflyt](contributing/screenshot-pipeline.md) og
-    [Bidra](contributing/index.md) hvis du vil hjelpe til.
-
 ## Hvor du bør begynne
 
 - Ny med Ethos? Begynn med [Komme i gang](getting-started/index.md) —

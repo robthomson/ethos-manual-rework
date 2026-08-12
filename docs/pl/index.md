@@ -10,14 +10,6 @@ modelu od podstaw, ustawienia systemowe nadajnika,
 tworzenie własnych ekranów telemetrii oraz środowisko skryptowe Lua, które
 działa ponad tym wszystkim.
 
-!!! note "Prace w toku"
-    Podręcznik został zbudowany od nowa w oparciu o oficjalny podręcznik Ethos 1.6.3
-    oraz istniejący zestaw zrzutów ekranu. Kilka stron (Ethos
-    Suite, System RF oraz kilka poradników) jest kompletnych, ale nie
-    posiada jeszcze zrzutów ekranu — zobacz [Proces tworzenia zrzutów
-    ekranu](contributing/screenshot-pipeline.md) oraz
-    [Współtworzenie](contributing/index.md), jeśli chcesz pomóc.
-
 ## Od czego zacząć
 
 - Zaczynasz przygodę z Ethos? Rozpocznij od [Pierwszych kroków](getting-started/index.md) —

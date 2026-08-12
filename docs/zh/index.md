@@ -6,10 +6,6 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 **Ethos** 是运行在 FrSky Ethos 系列遥控器（X20S、X20 Pro、X20 Pro AW、X18S 等）上的操作系统。本手册涵盖从零开始建立模型、配置遥控器的系统级设置、构建自定义遥测显示界面，以及在此之上的 Lua 脚本运行环境。
 
-!!! note "编写中"
-    本手册依据官方 Ethos 1.6.3 手册和现有截图集重新编写。少数页面（Ethos
-    Suite、RF System 以及部分操作指南）内容已完成，但尚未配上截图 —— 如果您愿意帮忙，请参阅[截图流程](contributing/screenshot-pipeline.md)和[参与贡献](contributing/index.md)。
-
 ## 从何处开始
 
 - 初次接触 Ethos？请从[快速入门](getting-started/index.md)开始 —— 在改动任何设置之前，先了解主界面布局和导航方式。

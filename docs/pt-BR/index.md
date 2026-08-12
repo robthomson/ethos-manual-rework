@@ -10,14 +10,6 @@ um modelo a partir do zero, o ajuste das configurações no nível do sistema do
 a criação de telas de telemetria personalizadas e o ambiente de scripts Lua que
 funciona sobre tudo isso.
 
-!!! note "Trabalho em andamento"
-    Este manual foi reconstruído a partir do zero com base no manual oficial do
-    Ethos 1.6.3 e no conjunto de capturas de tela existente. Algumas páginas (Ethos
-    Suite, Sistema RF e alguns Guias práticos) estão completas, mas ainda não
-    possuem capturas de tela — consulte [Pipeline de capturas de
-    tela](contributing/screenshot-pipeline.md) e
-    [Contribuindo](contributing/index.md) se quiser ajudar.
-
 ## Por onde começar
 
 - Novo no Ethos? Comece com [Primeiros passos](getting-started/index.md) —

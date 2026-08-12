@@ -10,14 +10,6 @@ d'un modèle à partir de zéro, le réglage des paramètres système de la radi
 la fabrication d'écrans de télémétrie personnalisés, ainsi que l'environnement de script Lua qui
 vient se greffer sur l'ensemble.
 
-!!! note "Travail en cours"
-    Ce manuel a été entièrement réécrit à partir du manuel officiel Ethos 1.6.3
-    et du jeu de copies d'écran existant. Quelques pages (Ethos
-    Suite, Système RF, et quelques guides pratiques) sont complètes mais ne
-    disposent pas encore de copies d'écran — voir [Fabrication des copies
-    d'écran](contributing/screenshot-pipeline.md) et
-    [Contribuer](contributing/index.md) si vous souhaitez apporter votre aide.
-
 ## Par où commencer
 
 - Vous découvrez Ethos ? Commencez par [Prise en main](getting-started/index.md) —

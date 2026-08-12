@@ -10,14 +10,6 @@ modelu od začátku, konfiguraci systémových nastavení vysílače, tvorbu
 vlastních telemetrických displejů a prostředí pro Lua skripty, které stojí
 nad vším ostatním.
 
-!!! note "Rozpracováno"
-    Tento manuál byl znovu vytvořen od základu podle oficiálního manuálu
-    Ethos 1.6.3 a existující sady snímků obrazovek. Několik stránek (Ethos
-    Suite, RF System a několik praktických návodů) je dokončeno, ale zatím
-    nemá snímky obrazovek — pokud chcete pomoci, podívejte se na [Proces tvorby
-    snímků obrazovek](contributing/screenshot-pipeline.md) a
-    [Jak přispět](contributing/index.md).
-
 ## Kde začít
 
 - Jste v Ethos nováček? Začněte s [Začínáme](getting-started/index.md) —

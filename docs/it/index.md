@@ -10,14 +10,6 @@ configurazione di un modello da zero, l'impostazione dei parametri di sistema de
 radio, la creazione di schermate di telemetria personalizzate e l'ambiente di
 scripting Lua che si appoggia a tutto questo.
 
-!!! note "Lavori in corso"
-    Questo manuale è stato ricostruito da zero sulla base del manuale ufficiale
-    Ethos 1.6.3 e della raccolta di screenshot esistente. Alcune pagine (Ethos
-    Suite, Sistema RF e alcune guide "Come fare") sono complete ma non
-    dispongono ancora di screenshot — consulta [Pipeline degli
-    screenshot](contributing/screenshot-pipeline.md) e
-    [Contribuire](contributing/index.md) se desideri collaborare.
-
 ## Da dove iniziare
 
 - Sei nuovo di Ethos? Inizia da [Per iniziare](getting-started/index.md) —

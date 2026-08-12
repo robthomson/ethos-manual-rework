@@ -10,13 +10,6 @@ volledig vanaf nul instellen van een model, het configureren van de instellingen
 systeemniveau van de zender, het bouwen van eigen telemetriedisplays en de
 Lua-scriptomgeving die daar bovenop werkt.
 
-!!! note "Werk in uitvoering"
-    Deze handleiding is vanaf nul opnieuw opgebouwd op basis van de officiële
-    Ethos 1.6.3-handleiding en de bestaande set schermafbeeldingen. Een aantal
-    pagina's (Ethos Suite, RF-systeem en enkele Handleidingen) zijn volledig
-    maar hebben nog geen schermafbeeldingen — zie [Screenshot-pipeline](contributing/screenshot-pipeline.md) en
-    [Bijdragen](contributing/index.md) als je wilt helpen.
-
 ## Waar te beginnen
 
 - Nieuw met Ethos? Begin met [Aan de slag](getting-started/index.md) —
