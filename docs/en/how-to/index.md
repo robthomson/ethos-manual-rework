@@ -15,3 +15,4 @@ Setup](../model-setup/index.md).
 - [Instant Take-Back for the Trainer Function](instant-takeback.md)
 - [Find the Latest Bootloader or Other Component](find-latest-bootloader.md)
 - [Converting 1.6.x Models to 26.1](converting-1.6-models.md)
+- [Configure a Gear Door and Landing Gear Sequencer](gear-door-sequencer.md)

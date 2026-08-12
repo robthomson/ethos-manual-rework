@@ -24,13 +24,24 @@ receivers need the first four channels fixed as **AETRA** instead.
 3. Run the model creation wizard as normal — the first 5 channels come
    out as `AETRA`.
 
+!!! tip "As of Ethos 26.1"
+    The wizard's channel-numbering convention changed to match FrSky's
+    stabilized-receiver documentation directly (see [Model
+    Select](../model-setup/model-select.md#stabilized-receivers-and-channel-order))
+    — with **First four channels fixed** on, a freshly built model already
+    comes out in the correct SRx-compatible order with no further work.
+    The manual reordering below is only needed for a model that already
+    existed before upgrading to 26.1.
+
 !!! note "Archer receiver self-check"
     Self-check for Archer receivers now runs through [Device Config →
     SxR](../system-setup/devices.md) (firmware v2.1.10+) rather than a
     dedicated self-check procedure. The throttle channel must be at
-    −100% or self-check won't start.
+    −100% or self-check won't start — except on receiver firmware v3.0.0
+    and later, where that's no longer required. Also as of v3.0.0, there's
+    no longer a panic mode on channel 12.
 
-## Reordering an existing model
+## Reordering an existing (pre-26.1) model
 
 Converting an existing model (e.g. currently `AAETRFF`) to the
 stabilized-receiver order (`AETRAE`, then channel 9 Gain, 10/11 flight
@@ -77,3 +88,9 @@ Result:
 | 8 | Retracts |
 
 — now in the order FrSky stabilized receivers expect.
+
+See also [Converting 1.6.x Models to 26.1](converting-1.6-models.md) for
+the general aileron-differential mix reordering Ethos itself performs
+automatically on any pre-26.1 model — this page's manual channel-swap
+sequence is specifically about reaching the SRx receiver's own expected
+order, not about preserving differential.
