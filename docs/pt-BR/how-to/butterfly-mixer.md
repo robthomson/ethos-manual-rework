@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Mixagem Butterfly (Crocodilo)
+# Mixagem Butterfly (Corvo)
 
 A frenagem butterfly (também conhecida como crow) controla a taxa de
 descida, principalmente em planadores: os ailerons sobem moderadamente

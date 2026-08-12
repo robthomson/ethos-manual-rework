@@ -11,7 +11,7 @@ modelu](../model-setup/index.md).
 - [Varování při nízkém napětí baterie](low-battery-warning.md)
 - [Varování při vybité kapacitě baterie](battery-capacity-warning.md)
 - [Nastavení modelu a přeřazení kanálů pro SR8/SR10](sr8-sr10-setup.md)
-- [Mixer Butterfly (krokodýl)](butterfly-mixer.md)
+- [Mixer Butterfly (vrána)](butterfly-mixer.md)
 - [Konfigurace systému FBUS](fbus-setup.md)
 - [Test zapojení redundantního přijímače](test-redundant-receiver.md)
 - [Kontrolní seznam s vlastním textem](user-defined-checklist.md)

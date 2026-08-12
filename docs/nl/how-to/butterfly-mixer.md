@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Butterfly (Crocodile) mixer
+# Butterfly (kraai) mixer
 
 Butterfly-remmen (ook bekend als crow) regelen de daalsnelheid, vooral bij
 zweefvliegtuigen: de rolroeren gaan een beperkt stuk omhoog terwijl de flaps

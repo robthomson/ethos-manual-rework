@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Mixer Butterfly (Coccodrillo)
+# Mixer Butterfly (Corvo)
 
 La frenata butterfly (detta anche crow) controlla la velocità di
 discesa, principalmente sugli alianti: gli alettoni salgono di poco

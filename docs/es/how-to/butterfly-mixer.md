@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Mezclador Butterfly (Crocodile)
+# Mezclador Butterfly (Cuervo)
 
 El frenado butterfly (también conocido como *crow*) controla la velocidad
 de descenso, principalmente en veleros: los alerones suben una cantidad

@@ -11,7 +11,7 @@ onglet par onglet de la [Configuration du modèle](../model-setup/index.md).
 - [Alerte de tension de batterie basse](low-battery-warning.md)
 - [Alerte de capacité de batterie](battery-capacity-warning.md)
 - [Configuration du modèle SR8/SR10 et réorganisation des voies](sr8-sr10-setup.md)
-- [Mixage papillon (crocodile)](butterfly-mixer.md)
+- [Mixage papillon (corbeau)](butterfly-mixer.md)
 - [Configurer un système FBUS](fbus-setup.md)
 - [Tester une installation à récepteurs redondants](test-redundant-receiver.md)
 - [Liste de vérification textuelle définie par l'utilisateur](user-defined-checklist.md)

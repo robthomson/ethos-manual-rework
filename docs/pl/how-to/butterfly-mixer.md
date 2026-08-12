@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Mikser Butterfly (krokodyl)
+# Mikser Butterfly (kruk)
 
 Hamowanie aerodynamiczne typu butterfly (znane też jako crow) pozwala
 kontrolować prędkość opadania, głównie w szybowcach: lotki unoszą się

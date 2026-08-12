@@ -11,7 +11,7 @@ Abschnitt [Modell-Setup](../model-setup/index.md).
 - [Warnung bei niedriger Batteriespannung](low-battery-warning.md)
 - [Batteriekapazitätswarnung](battery-capacity-warning.md)
 - [SR8/SR10 Modell-Setup und Kanalreihenfolge ändern](sr8-sr10-setup.md)
-- [Butterfly-Mischer (Krokodil)](butterfly-mixer.md)
+- [Butterfly-Mischer (Krähe)](butterfly-mixer.md)
 - [Ein FBUS-System konfigurieren](fbus-setup.md)
 - [Eine redundante Empfängerkonfiguration testen](test-redundant-receiver.md)
 - [Benutzerdefinierte Text-Checkliste](user-defined-checklist.md)

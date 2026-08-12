@@ -9,7 +9,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 - [אזהרת מתח סוללה נמוך](low-battery-warning.md)
 - [אזהרת קיבולת סוללה](battery-capacity-warning.md)
 - [הגדרת דגם ושינוי סדר ערוצים ב-SR8/SR10](sr8-sr10-setup.md)
-- [מיקסר Butterfly (תנין)](butterfly-mixer.md)
+- [מיקסר Butterfly (עורב)](butterfly-mixer.md)
 - [הגדרת מערכת FBUS](fbus-setup.md)
 - [בדיקת מערך מקלטים מיותר (גיבוי)](test-redundant-receiver.md)
 - [רשימת בדיקה עם טקסט מוגדר על ידי המשתמש](user-defined-checklist.md)

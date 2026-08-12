@@ -11,7 +11,7 @@ costumam querer configurar, em contraste com a referência aba por aba em
 - [Aviso de baixa tensão da bateria](low-battery-warning.md)
 - [Aviso de capacidade da bateria](battery-capacity-warning.md)
 - [Configuração de modelo SR8/SR10 e reordenação de canais](sr8-sr10-setup.md)
-- [Mixagem Butterfly (Crocodilo)](butterfly-mixer.md)
+- [Mixagem Butterfly (Corvo)](butterfly-mixer.md)
 - [Configurar um sistema FBUS](fbus-setup.md)
 - [Testar uma configuração de receptor redundante](test-redundant-receiver.md)
 - [Lista de verificação com texto definido pelo usuário](user-defined-checklist.md)

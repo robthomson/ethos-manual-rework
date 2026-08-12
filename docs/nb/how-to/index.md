@@ -10,7 +10,7 @@ sette opp, i motsetning til fane-for-fane-referansen i [Modelloppsett](../model-
 - [Varsling om lav batterispenning](low-battery-warning.md)
 - [Varsling om batterikapasitet](battery-capacity-warning.md)
 - [Modelloppsett for SR8/SR10 og omorganisering av kanaler](sr8-sr10-setup.md)
-- [Butterfly-mikser (krokodille)](butterfly-mixer.md)
+- [Butterfly-mikser (kråke)](butterfly-mixer.md)
 - [Konfigurere et FBUS-system](fbus-setup.md)
 - [Teste et oppsett med redundant mottaker](test-redundant-receiver.md)
 - [Sjekkliste med egendefinert tekst](user-defined-checklist.md)

@@ -121,7 +121,7 @@ plugins:
             Low Battery Voltage Warning: Varování při nízkém napětí baterie
             Battery Capacity Warning: Varování při vyčerpání kapacity baterie
             SR8/SR10 Setup: Nastavení modelu pro SR8/SR10 a změna pořadí kanálů
-            Butterfly (Crocodile) Mixer: Mix Butterfly (Crocodile)
+            Butterfly (Crow) Mixer: Mix Butterfly (vrána)
             Configure an FBUS System: Konfigurace systému FBUS
             Test a Redundant Receiver: Test nastavení redundantního přijímače
             User Defined Text Checklist: Kontrolní seznam s uživatelským textem
@@ -203,7 +203,7 @@ plugins:
             Low Battery Voltage Warning: אזהרת מתח סוללה נמוך
             Battery Capacity Warning: אזהרת קיבולת סוללה
             SR8/SR10 Setup: הגדרת דגם עבור SR8/SR10 וסידור מחדש של ערוצים
-            Butterfly (Crocodile) Mixer: מיקסר Butterfly (Crocodile)
+            Butterfly (Crow) Mixer: מיקסר Butterfly (עורב)
             Configure an FBUS System: הגדרת מערכת FBUS
             Test a Redundant Receiver: בדיקת תצורת מקלט יתיר
             User Defined Text Checklist: רשימת בדיקה עם טקסט מוגדר על ידי המשתמש
@@ -285,7 +285,7 @@ plugins:
             Low Battery Voltage Warning: Waarschuwing voor lage accuspanning
             Battery Capacity Warning: Waarschuwing accucapaciteit
             SR8/SR10 Setup: SR8/SR10 modelinstellingen en kanalen herschikken
-            Butterfly (Crocodile) Mixer: Butterfly (Crocodile) mixer
+            Butterfly (Crow) Mixer: Butterfly (kraai) mixer
             Configure an FBUS System: Een FBUS-systeem configureren
             Test a Redundant Receiver: Een redundante ontvangeropstelling testen
             User Defined Text Checklist: Checklist met eigen tekst
@@ -367,7 +367,7 @@ plugins:
             Low Battery Voltage Warning: Varsel om lav batterispenning
             Battery Capacity Warning: Advarsel om batterikapasitet
             SR8/SR10 Setup: Modelloppsett for SR8/SR10 og omorganisering av kanaler
-            Butterfly (Crocodile) Mixer: Butterfly-miks (krokodille)
+            Butterfly (Crow) Mixer: Butterfly-miks (kråke)
             Configure an FBUS System: Konfigurere et FBUS-system
             Test a Redundant Receiver: Test av oppsett med redundant mottaker
             User Defined Text Checklist: Sjekkliste med egendefinert tekst
@@ -449,7 +449,7 @@ plugins:
             Low Battery Voltage Warning: Ostrzeżenie o niskim napięciu akumulatora
             Battery Capacity Warning: Ostrzeżenie o pojemności akumulatora
             SR8/SR10 Setup: Konfiguracja modelu dla SR8/SR10 i zmiana kolejności kanałów
-            Butterfly (Crocodile) Mixer: Mikser Butterfly (krokodyl)
+            Butterfly (Crow) Mixer: Mikser Butterfly (kruk)
             Configure an FBUS System: Konfiguracja systemu FBUS
             Test a Redundant Receiver: Test konfiguracji odbiornika redundantnego
             User Defined Text Checklist: Lista kontrolna z tekstem użytkownika
@@ -530,7 +530,7 @@ plugins:
             Low Battery Voltage Warning: Aviso de batería baja
             Battery Capacity Warning: Aviso de capacidad de batería
             SR8/SR10 Setup: Configuración de modelo y reordenación de canales para SR8/SR10
-            Butterfly (Crocodile) Mixer: Mezclador Butterfly (Crocodile)
+            Butterfly (Crow) Mixer: Mezclador Butterfly (Cuervo)
             Configure an FBUS System: Configurar un sistema FBUS
             Test a Redundant Receiver: Probar una configuración de receptor redundante
             User Defined Text Checklist: Lista de verificación con texto definido por el usuario
@@ -610,7 +610,7 @@ plugins:
             Low Battery Voltage Warning: Avviso di tensione batteria bassa
             Battery Capacity Warning: Avviso di capacità della batteria
             SR8/SR10 Setup: Configurazione modello SR8/SR10 e riordino dei canali
-            Butterfly (Crocodile) Mixer: Mixer Butterfly (Coccodrillo)
+            Butterfly (Crow) Mixer: Mixer Butterfly (Corvo)
             Configure an FBUS System: Configurare un sistema FBUS
             Test a Redundant Receiver: Testare una configurazione con ricevitore ridondante
             User Defined Text Checklist: Checklist con testo definito dall'utente
@@ -690,7 +690,7 @@ plugins:
             Low Battery Voltage Warning: Aviso de Tensão Baixa de Bateria
             Battery Capacity Warning: Aviso de capacidade da bateria
             SR8/SR10 Setup: Configuração de modelo SR8/SR10 e reordenação de canais
-            Butterfly (Crocodile) Mixer: Mixagem Butterfly (Crocodilo)
+            Butterfly (Crow) Mixer: Mixagem Butterfly (Corvo)
             Configure an FBUS System: Configurar um sistema FBUS
             Test a Redundant Receiver: Testar uma Configuração de Receptor Redundante
             User Defined Text Checklist: Lista de verificação com texto definido pelo usuário
@@ -770,7 +770,7 @@ plugins:
             Low Battery Voltage Warning: 低电压警告
             Battery Capacity Warning: 电池容量告警
             SR8/SR10 Setup: SR8/SR10 模型设置与通道重排
-            Butterfly (Crocodile) Mixer: 蝴蝶(鳄鱼)混控
+            Butterfly (Crow) Mixer: 蝴蝶(乌鸦)混控
             Configure an FBUS System: 配置 FBUS 系统
             Test a Redundant Receiver: 测试冗余接收机配置
             User Defined Text Checklist: 用户自定义文本检查清单
@@ -850,7 +850,7 @@ plugins:
             Low Battery Voltage Warning: Warnung bei niedriger Akkuspannung
             Battery Capacity Warning: Warnung bei verbrauchter Akkukapazität
             SR8/SR10 Setup: SR8/SR10 – Modellkonfiguration und Kanalreihenfolge ändern
-            Butterfly (Crocodile) Mixer: Butterfly-Mischer (Krokodil)
+            Butterfly (Crow) Mixer: Butterfly-Mischer (Krähe)
             Configure an FBUS System: Ein FBUS-System konfigurieren
             Test a Redundant Receiver: Redundante Empfängerkonfiguration testen
             User Defined Text Checklist: Benutzerdefinierte Text-Checkliste
@@ -932,7 +932,7 @@ plugins:
             Low Battery Voltage Warning: Alerte de tension batterie basse
             Battery Capacity Warning: Alerte de capacité batterie
             SR8/SR10 Setup: Configuration du modèle SR8/SR10 et réorganisation des voies
-            Butterfly (Crocodile) Mixer: Mixage Butterfly (Crocodile)
+            Butterfly (Crow) Mixer: Mixage Butterfly (Corbeau)
             Configure an FBUS System: Configurer un système FBUS
             Test a Redundant Receiver: Tester une configuration à récepteur redondant
             User Defined Text Checklist: Liste de vérification à texte personnalisé
@@ -1031,7 +1031,7 @@ nav:
       - Low Battery Voltage Warning: how-to/low-battery-warning.md
       - Battery Capacity Warning: how-to/battery-capacity-warning.md
       - SR8/SR10 Setup: how-to/sr8-sr10-setup.md
-      - Butterfly (Crocodile) Mixer: how-to/butterfly-mixer.md
+      - Butterfly (Crow) Mixer: how-to/butterfly-mixer.md
       - Configure an FBUS System: how-to/fbus-setup.md
       - Test a Redundant Receiver: how-to/test-redundant-receiver.md
       - User Defined Text Checklist: how-to/user-defined-checklist.md

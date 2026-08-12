@@ -11,7 +11,7 @@ willen instellen, in tegenstelling tot de tab-per-tab naslaginformatie in
 - [Waarschuwing lage accuspanning](low-battery-warning.md)
 - [Waarschuwing accucapaciteit](battery-capacity-warning.md)
 - [SR8/SR10 modelinstellingen en kanalen herordenen](sr8-sr10-setup.md)
-- [Butterfly-mixer (krokodil)](butterfly-mixer.md)
+- [Butterfly-mixer (kraai)](butterfly-mixer.md)
 - [Een FBUS-systeem configureren](fbus-setup.md)
 - [Een redundante ontvangeropstelling testen](test-redundant-receiver.md)
 - [Checklist met eigen tekst](user-defined-checklist.md)

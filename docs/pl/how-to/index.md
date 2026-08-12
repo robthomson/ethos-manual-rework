@@ -9,7 +9,7 @@ Krótkie, ukierunkowane na konkretne zadania przewodniki dotyczące rzeczy, któ
 - [Ostrzeżenie o niskim napięciu akumulatora](low-battery-warning.md)
 - [Ostrzeżenie o zużytej pojemności akumulatora](battery-capacity-warning.md)
 - [Konfiguracja modelu SR8/SR10 i zmiana kolejności kanałów](sr8-sr10-setup.md)
-- [Mikser butterfly (krokodyl)](butterfly-mixer.md)
+- [Mikser butterfly (kruk)](butterfly-mixer.md)
 - [Konfiguracja systemu FBUS](fbus-setup.md)
 - [Test konfiguracji z redundantnym odbiornikiem](test-redundant-receiver.md)
 - [Lista kontrolna z tekstem użytkownika](user-defined-checklist.md)

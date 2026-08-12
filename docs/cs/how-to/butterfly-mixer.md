@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Mix Butterfly (Crocodile)
+# Mix Butterfly (vrána)
 
 Brzdění butterfly (též crow) řídí rychlost klesání, především u větroňů:
 křidélka se mírně zvednou, zatímco klapky se vychýlí hodně dolů, čímž

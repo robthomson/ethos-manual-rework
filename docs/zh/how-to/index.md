@@ -9,7 +9,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 - [低电池电压警告](low-battery-warning.md)
 - [电池容量警告](battery-capacity-warning.md)
 - [SR8/SR10 模型设置与通道重排](sr8-sr10-setup.md)
-- [蝴蝶（鳄鱼嘴）混控](butterfly-mixer.md)
+- [蝴蝶（乌鸦）混控](butterfly-mixer.md)
 - [配置 FBUS 系统](fbus-setup.md)
 - [测试冗余接收机配置](test-redundant-receiver.md)
 - [用户自定义文本检查清单](user-defined-checklist.md)

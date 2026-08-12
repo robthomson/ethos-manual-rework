@@ -2,7 +2,7 @@
 translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 ---
 
-# Mixage Butterfly (Crocodile)
+# Mixage Butterfly (Corbeau)
 
 Le freinage butterfly (ou crocodile) permet de contrôler le taux de
 descente, le plus souvent sur les planeurs : les ailerons se relèvent

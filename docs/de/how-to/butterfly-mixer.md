@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Butterfly-Mischer (Krokodil)
+# Butterfly-Mischer (Krähe)
 
 Die Butterfly-Bremsstellung (auch „Krähenstellung“ genannt) steuert die
 Sinkgeschwindigkeit, vor allem bei Seglern: Die Querruder fahren ein

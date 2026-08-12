@@ -2,7 +2,7 @@
 translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
 ---
 
-# Butterfly-miks (krokodille)
+# Butterfly-miks (kråke)
 
 Butterfly-bremsing (også kalt crow) styrer synkehastigheten, hovedsakelig
 på seilfly: krengerorene går moderat opp mens flapsene går mye ned, noe

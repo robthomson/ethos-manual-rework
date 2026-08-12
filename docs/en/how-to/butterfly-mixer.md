@@ -1,4 +1,4 @@
-# Butterfly (Crocodile) Mixer
+# Butterfly (Crow) Mixer
 
 Butterfly (a.k.a. crow) braking controls descent rate, mainly on
 gliders: ailerons rise a modest amount while flaps drop a lot, creating
