@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{#-
+  Loads search-scope.js *before* Material's own bundle.js.
+
+  bundle.js fires the (only) request for search/search_index.json the
+  moment it runs -- not deferred to DOMContentLoaded or any later event --
+  so a script listed in `extra_javascript` (which base.html always renders
+  *after* the bundle.js <script> tag) installs its XMLHttpRequest patch too
+  late: the original, unfiltered request has already gone out by the time
+  it runs. Overriding this block to emit our tag first, then falling back
+  to the normal block via `super()`, guarantees search-scope.js's patch is
+  installed before bundle.js can make that request at all -- classic
+  <script> tags execute strictly in document order.
+-#}
+{% block scripts %}
+  <script src="{{ 'javascripts/search-scope.js' | url }}"></script>
+  {{ super() }}
+{% endblock %}

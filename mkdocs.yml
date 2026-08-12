@@ -12,6 +12,10 @@ hooks:
 
 theme:
   name: material
+  # overrides/main.html injects search-scope.js *before* Material's own
+  # bundle.js -- see that file for why (extra_javascript renders after
+  # bundle.js, too late to intercept the search index request it fires).
+  custom_dir: overrides
   logo: assets/ethos-logo-reversed.png
   favicon: assets/favicon.png
   icon:
@@ -956,9 +960,6 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
-
-extra_javascript:
-  - javascripts/search-scope.js
 
 markdown_extensions:
   - admonition
