@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Install Playwright's Chromium (for scripts/build_pdfs.py)
+        run: python -m playwright install --with-deps chromium
+
       - name: Validate build
         run: mkdocs build --strict
 
@@ -63,12 +66,30 @@ jobs:
           ref: gh-pages
           path: pages
 
-      - name: Ensure custom domain is set
+      # Crawls the just-deployed 1.6/ build over local HTTP with headless
+      # Chromium and writes ethos-manual.pdf straight into it -- see
+      # scripts/build_pdfs.py's docstring for why this runs as a separate,
+      # standalone step instead of an mkdocs plugin.
+      - name: Build PDF manuals
+        run: |
+          python -m http.server 8000 --directory pages/1.6 &
+          server_pid=$!
+          for i in $(seq 1 20); do
+            curl -sf http://localhost:8000/ > /dev/null && break
+            sleep 0.5
+          done
+          python scripts/build_pdfs.py \
+            --base-url http://localhost:8000 \
+            --out-dir pages/1.6 \
+            --version 1.6
+          kill "$server_pid"
+
+      - name: Commit generated assets (CNAME, PDF manuals)
         run: |
           cd pages
           echo "manual.rt-rc.com" > CNAME
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add CNAME
-          git diff --cached --quiet || git commit -m "chore: set custom domain"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore: set custom domain, update PDF manuals"
           git push origin gh-pages

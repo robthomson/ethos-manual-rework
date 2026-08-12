@@ -21,7 +21,7 @@ from pathlib import Path
 
 import yaml
 
-STATUS_FILENAME = "translation-status.md"
+from _locales import STATUS_FILENAME, en_pages as list_en_pages, list_locales
 
 
 def _git_last_commit(repo_root: Path, path: Path) -> tuple[str | None, str | None]:
@@ -61,21 +61,8 @@ def on_pre_build(config, **kwargs):
     repo_root = Path(config["config_file_path"]).parent
     output_path = en_dir / "contributing" / STATUS_FILENAME
 
-    # A locale folder is any docs_dir subdirectory (besides "en") that
-    # actually contains Markdown -- as opposed to shared, non-locale
-    # folders living alongside it (docs/assets, docs/stylesheets, ...),
-    # which we don't want mistaken for locales.
-    locales = sorted(
-        p.name
-        for p in docs_dir.iterdir()
-        if p.is_dir() and p.name != "en" and any(p.rglob("*.md"))
-    )
-
-    en_pages = sorted(
-        p.relative_to(en_dir).as_posix()
-        for p in en_dir.rglob("*.md")
-        if p.name != STATUS_FILENAME
-    )
+    locales = [locale for locale in list_locales(docs_dir) if locale != "en"]
+    en_pages = list_en_pages(docs_dir)
 
     counts = {locale: {"current": 0, "stale": 0, "missing": 0} for locale in locales}
     rows = []

@@ -25,7 +25,7 @@ the locale prefix on each entry's `location` (the default locale, English,
 has no prefix -- see `docs_structure: folder` in mkdocs.yml), and writes
 search/search_index-<locale>.json per locale.
 
-docs/javascripts/search-scope.js picks the matching split file at runtime
+docs/javascripts/locale-scope.js picks the matching split file at runtime
 based on the locale segment in the current URL; the locale list it needs
 for that is patched into the deployed copy of that file here, so the two
 never drift apart.
@@ -35,6 +35,8 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+
+from _locales import list_locales
 
 _last_config = None
 
@@ -59,14 +61,7 @@ def on_shutdown(**kwargs):
     docs_dir = Path(_last_config["docs_dir"])
     default_locale = "en"
 
-    # Same "does it actually contain markdown" test hooks/i18n_status.py
-    # uses to tell locale folders apart from shared, non-locale folders
-    # living alongside them (docs/assets, docs/javascripts, docs/stylesheets).
-    locales = sorted(
-        p.name
-        for p in docs_dir.iterdir()
-        if p.is_dir() and any(p.rglob("*.md"))
-    )
+    locales = list_locales(docs_dir)
     other_locales = [locale for locale in locales if locale != default_locale]
 
     data = json.loads(index_path.read_text(encoding="utf-8"))
@@ -88,11 +83,14 @@ def on_shutdown(**kwargs):
             encoding="utf-8",
         )
 
-    search_scope_js = site_dir / "javascripts" / "search-scope.js"
-    if search_scope_js.exists():
-        text = search_scope_js.read_text(encoding="utf-8")
+    # docs/javascripts/locale-scope.js also drives the PDF-download link
+    # fixup (see overrides/main.html) -- both need the same locale list, so
+    # patch it into the one file rather than keeping two copies in sync.
+    locale_scope_js = site_dir / "javascripts" / "locale-scope.js"
+    if locale_scope_js.exists():
+        text = locale_scope_js.read_text(encoding="utf-8")
         text = text.replace(
             "/*__I18N_LOCALES__*/ []",
             "/*__I18N_LOCALES__*/ " + json.dumps(other_locales),
         )
-        search_scope_js.write_text(text, encoding="utf-8")
+        locale_scope_js.write_text(text, encoding="utf-8")

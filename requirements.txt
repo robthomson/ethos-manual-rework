@@ -1,3 +1,8 @@
 mkdocs-material>=9.5
 mkdocs-static-i18n>=1.2
 mike>=2.0
+
+# scripts/build_pdfs.py -- PDF manual export, run as a separate CI step
+# (not an mkdocs plugin, see that file's docstring for why).
+playwright>=1.40
+pypdf>=4.0
