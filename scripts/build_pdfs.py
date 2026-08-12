@@ -39,6 +39,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import io
+import math
 import re
 import sys
 from datetime import date
@@ -49,6 +50,8 @@ import material
 import yaml
 from playwright.async_api import Browser, async_playwright
 from pypdf import PdfReader, PdfWriter
+from pypdf.annotations import Link
+from reportlab.pdfgen import canvas as reportlab_canvas
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "hooks"))
@@ -62,6 +65,38 @@ CONCURRENCY = 6
 # translation here.
 MATERIAL_LANG_DIR = Path(material.__file__).resolve().parent / "templates" / "partials" / "languages"
 
+# --- Shared layout constants for the cover/TOC/footer, chosen to match the
+# *real* content pages so they don't look like a bolted-on extra document:
+#
+# - Font: mkdocs-material's default theme.font (unset here -> "Roboto",
+#   loaded from Google Fonts, see material/templates/base.html's `fonts`
+#   block) with its own fallback stack appended.
+# - Margin: measured directly off a rendered content page (a plain
+#   render_pdf() of the home page, text bbox via pypdf) -- 82-87pt
+#   left/right. That's noticeably more than Material's own declared
+#   `@page{margin:25mm}` (~71pt) because Playwright's render_pdf() doesn't
+#   pass preferCSSPageSize, so that rule is never actually applied; the
+#   visible inset is entirely `.md-content`'s own internal padding. Matching
+#   the *measured* number (not the unused CSS rule) is what makes the TOC's
+#   margins actually look consistent with real pages.
+#
+# All A4/page-geometry math below is in PDF points (1pt = 1/72in, and CSS
+# "pt" is defined as the same 1/72in -- using pt for every TOC/footer
+# dimension means the CSS layout and this file's own page-position math for
+# hyperlink/footer placement agree exactly, no px<->pt conversion needed.
+FONT_STACK = '"Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+GOOGLE_FONT_LINK = (
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css?'
+    'family=Roboto:300,300i,400,400i,700,700i&display=fallback">'
+)
+PAGE_WIDTH_PT = 595.28  # A4
+PAGE_HEIGHT_PT = 841.89
+MARGIN_PT = 83.0
+ROW_HEIGHT_PT = 16.0
+HEADING_BLOCK_PT = 46.0
+FOOTER_Y_PT = 40.0  # baseline height from the bottom edge, within the margin band
+
 
 def pdf_filename(version: str, locale: str) -> str:
     return f"ethos-manual-{version}-{locale}.pdf"
@@ -71,6 +106,7 @@ COVER_HTML = """<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+{google_font_link}
 <style>
   body {{
     margin: 0;
@@ -80,7 +116,7 @@ COVER_HTML = """<!doctype html>
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: {font_stack};
     background: #1a1a1a;
     color: #fff;
     text-align: center;
@@ -97,33 +133,58 @@ COVER_HTML = """<!doctype html>
   <p>Version {version} &middot; Generated {generated}</p>
 </body>
 </html>
-"""
+""".replace("{google_font_link}", GOOGLE_FONT_LINK).replace("{font_stack}", FONT_STACK)
 
-TOC_HTML = """<!doctype html>
+# One physical page per render -- see paginate_toc()/render_toc_page_html().
+# Every dimension is in pt so this file's own row/page-position math (used
+# for footer stamping and the per-row hyperlink rects) lines up exactly with
+# what's on screen, with no unit conversion to get wrong.
+TOC_PAGE_HTML = """<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+{google_font_link}
 <style>
+  * {{ box-sizing: border-box; }}
   body {{
-    margin: 2.5rem 3rem;
-    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    width: {page_width}pt;
+    height: {page_height}pt;
+    padding: {margin}pt;
+    font-family: {font_stack};
     color: #1a1a1a;
   }}
-  h1 {{ font-size: 1.75rem; font-weight: 300; margin: 0 0 2rem; }}
-  .row {{ display: flex; align-items: baseline; gap: 0.5rem; padding: 0.2rem 0; }}
-  .row.section {{ font-weight: 600; margin-top: 0.9rem; }}
-  .row.page {{ margin-left: 1.5rem; font-weight: 400; font-size: 0.95rem; }}
-  .title {{ white-space: nowrap; }}
-  .leader {{ flex: 1 1 auto; border-bottom: 1px dotted #999; margin-bottom: 0.3rem; }}
-  .page-number {{ white-space: nowrap; color: #555; }}
+  h1 {{
+    font-size: 18pt;
+    font-weight: 300;
+    height: {heading_block}pt;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+  }}
+  .row {{
+    height: {row_height}pt;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }}
+  .row.section {{ font-weight: 600; font-size: 10.5pt; }}
+  .row.page {{ margin-left: 14pt; font-weight: 400; font-size: 9.5pt; }}
+  .title {{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+  .leader {{ flex: 1 1 auto; min-width: 8pt; border-bottom: 1px dotted #999; margin: 0 4pt 3pt; }}
+  .page-number {{ white-space: nowrap; color: #555; font-size: 9pt; }}
 </style>
 </head>
 <body>
-  <h1>{heading}</h1>
+  {heading_html}
   {rows}
 </body>
 </html>
-"""
+""".replace("{google_font_link}", GOOGLE_FONT_LINK).replace("{font_stack}", FONT_STACK).replace(
+    "{page_width}", str(PAGE_WIDTH_PT)
+).replace("{page_height}", str(PAGE_HEIGHT_PT)).replace("{margin}", str(MARGIN_PT)).replace(
+    "{heading_block}", str(HEADING_BLOCK_PT)
+).replace("{row_height}", str(ROW_HEIGHT_PT))
 
 TOC_ROW = (
     '<div class="row {css_class}">'
@@ -202,20 +263,80 @@ def toc_label(locale: str) -> str:
     return match.group(1) if match else "Table of contents"
 
 
-def render_toc_html(sections: list[dict], page_numbers: dict[str, int], heading: str) -> str:
-    rows = []
+def paginate_toc(sections: list[dict]) -> list[list[dict]]:
+    """Flatten sections into {"title", "path", "css_class"} rows and split
+    them across fixed-height TOC pages, entirely by row *count* -- no
+    rendering needed to know this, since every row and the heading block
+    have a fixed CSS height (see TOC_PAGE_HTML). Deciding this up front
+    (rather than rendering and measuring) is what makes both the page
+    numbers content pages get shifted by, and the hyperlink rect for every
+    row, computable as plain arithmetic below instead of guess-and-check.
+    """
+    rows: list[dict] = []
     for section in sections:
         first_title, first_path = section["pages"][0]
-        rows.append(
-            TOC_ROW.format(
-                css_class="section", title=escape(first_title), page=page_numbers[first_path]
-            )
-        )
+        rows.append({"title": first_title, "path": first_path, "css_class": "section"})
         for title, path in section["pages"][1:]:
-            rows.append(
-                TOC_ROW.format(css_class="page", title=escape(title), page=page_numbers[path])
-            )
-    return TOC_HTML.format(heading=escape(heading), rows="\n  ".join(rows))
+            rows.append({"title": title, "path": path, "css_class": "page"})
+
+    usable_height = PAGE_HEIGHT_PT - 2 * MARGIN_PT
+    capacity_first = math.floor((usable_height - HEADING_BLOCK_PT) / ROW_HEIGHT_PT)
+    capacity_rest = math.floor(usable_height / ROW_HEIGHT_PT)
+
+    toc_pages: list[list[dict]] = []
+    i = 0
+    while i < len(rows):
+        capacity = capacity_first if not toc_pages else capacity_rest
+        toc_pages.append(rows[i : i + capacity])
+        i += capacity
+    return toc_pages or [[]]
+
+
+def render_toc_page_html(
+    rows: list[dict], page_numbers: dict[str, int], heading: str, is_first_page: bool
+) -> str:
+    row_html = "\n  ".join(
+        TOC_ROW.format(
+            css_class=row["css_class"], title=escape(row["title"]), page=page_numbers[row["path"]]
+        )
+        for row in rows
+    )
+    heading_html = f"<h1>{escape(heading)}</h1>" if is_first_page else ""
+    return TOC_PAGE_HTML.format(heading_html=heading_html, rows=row_html)
+
+
+def toc_row_rect(
+    local_index: int, is_first_page: bool, page_width: float, page_height: float
+) -> tuple[float, float, float, float]:
+    """The clickable (x0, y0, x1, y1) rect, in PDF space (origin bottom-left),
+    for the row at `local_index` within its own TOC page -- the same fixed
+    top-offset arithmetic TOC_PAGE_HTML's CSS heights produce, just computed
+    here instead of measured, against that specific page's *actual* rendered
+    size (so a fraction-of-a-point difference between our A4 constants and
+    whatever Chromium actually emitted for format="A4" can't misalign it).
+    """
+    top = MARGIN_PT + (HEADING_BLOCK_PT if is_first_page else 0) + local_index * ROW_HEIGHT_PT
+    bottom = top + ROW_HEIGHT_PT
+    return (MARGIN_PT, page_height - bottom, page_width - MARGIN_PT, page_height - top)
+
+
+def make_footer_overlay(width_pt: float, height_pt: float, page_number: int, label: str):
+    """A one-page PDF containing just the running footer, to be merged onto
+    a real page. Uses a built-in PDF standard font (Helvetica) rather than
+    Roboto -- reportlab can't use the Google-Fonts-loaded Roboto a browser
+    render pulled in, and embedding a Roboto .ttf just for an 8pt footer
+    isn't worth the extra asset; Helvetica reads close enough at this size.
+    """
+    buf = io.BytesIO()
+    c = reportlab_canvas.Canvas(buf, pagesize=(width_pt, height_pt))
+    c.setFont("Helvetica", 8)
+    c.setFillColorRGB(0.45, 0.45, 0.45)
+    c.drawString(MARGIN_PT, FOOTER_Y_PT, label)
+    c.drawRightString(width_pt - MARGIN_PT, FOOTER_Y_PT, str(page_number))
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    return PdfReader(buf).pages[0]
 
 
 def locale_names(config: dict) -> dict[str, str]:
@@ -290,37 +411,33 @@ async def build_locale_pdf(
     await asyncio.gather(*(fetch(i, p) for i, p in enumerate(pages)))
     page_counts = [len(PdfReader(io.BytesIO(b)).pages) for b in results]  # type: ignore[arg-type]
 
-    def page_starts(offset: int) -> dict[str, int]:
-        """md_path -> its first page number in the final, merged PDF."""
-        starts: dict[str, int] = {}
-        cursor = offset
-        for path, count in zip(pages, page_counts):
-            starts[path] = cursor
-            cursor += count
-        return starts
+    # Row count -- and so TOC page count -- is fixed-height arithmetic (see
+    # paginate_toc()), independent of what page numbers actually get
+    # printed. So, unlike before, no render-and-check loop is needed to
+    # learn it: compute it once, then the content pages' real page numbers,
+    # then render the TOC (now that it knows what numbers to print) exactly
+    # once.
+    toc_pages = paginate_toc(sections)
+    toc_page_count = len(toc_pages)
+    offset = cover_page_count + toc_page_count + 1
+    starts: dict[str, int] = {}
+    cursor = offset
+    for path, count in zip(pages, page_counts):
+        starts[path] = cursor
+        cursor += count
 
-    # The TOC's own page count depends on its rendered content, which
-    # depends on the page numbers it prints, which depend on the TOC's own
-    # page count -- solved by rendering it, checking how many pages it
-    # actually came out as, and re-rendering with the real offset if that
-    # guess was wrong. Converges in practice within a couple of passes,
-    # since numbers shifting by a page or two essentially never changes how
-    # many lines wrap.
     heading = toc_label(locale)
-    toc_page_count = 1
-    for _ in range(3):
-        offset = cover_page_count + toc_page_count + 1
-        starts = page_starts(offset)
-        toc_html = render_toc_html(sections, starts, heading)
-        toc_bytes = await render_static_pdf(browser, toc_html)
-        new_count = len(PdfReader(io.BytesIO(toc_bytes)).pages)
-        if new_count == toc_page_count:
-            break
-        toc_page_count = new_count
+    toc_page_bytes = [
+        await render_static_pdf(
+            browser, render_toc_page_html(rows, starts, heading, is_first_page=(i == 0))
+        )
+        for i, rows in enumerate(toc_pages)
+    ]
 
     writer = PdfWriter()
     writer.append(PdfReader(io.BytesIO(cover_bytes)))
-    writer.append(PdfReader(io.BytesIO(toc_bytes)))
+    for pdf_bytes in toc_page_bytes:
+        writer.append(PdfReader(io.BytesIO(pdf_bytes)))
     for pdf_bytes in results:
         assert pdf_bytes is not None
         writer.append(PdfReader(io.BytesIO(pdf_bytes)))
@@ -333,6 +450,35 @@ async def build_locale_pdf(
         parent = writer.add_outline_item(section["title"], section_start)
         for title, path in section["pages"][1:]:
             writer.add_outline_item(title, starts[path] - 1, parent=parent)
+
+    # Real, clickable in-PDF links on every TOC row -- jumps straight to
+    # that row's target page, on top of (and in addition to) the outline
+    # panel above. Rects come from toc_row_rect()'s fixed-height arithmetic,
+    # not measurement, matched against each TOC page's *actual* rendered
+    # mediabox (see that function's docstring for why).
+    for toc_index, rows in enumerate(toc_pages):
+        writer_index = cover_page_count + toc_index
+        mediabox = writer.pages[writer_index].mediabox
+        page_width, page_height = float(mediabox.width), float(mediabox.height)
+        for local_index, row in enumerate(rows):
+            rect = toc_row_rect(local_index, toc_index == 0, page_width, page_height)
+            target_index = starts[row["path"]] - 1
+            writer.add_annotation(
+                page_number=writer_index,
+                annotation=Link(rect=rect, target_page_index=target_index, border=[0, 0, 0]),
+            )
+
+    # Running footer (page number + manual label) stamped onto every real
+    # page except the cover -- see make_footer_overlay()'s docstring. Global
+    # page numbers fall straight out of the writer's own page order, which
+    # is why bookmarks/TOC/footer never need to be kept in sync separately.
+    footer_label = f"Ethos Manual · v{version}"
+    for index in range(1, len(writer.pages)):
+        mediabox = writer.pages[index].mediabox
+        overlay = make_footer_overlay(
+            float(mediabox.width), float(mediabox.height), index + 1, footer_label
+        )
+        writer.pages[index].merge_page(overlay)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with out_path.open("wb") as f:

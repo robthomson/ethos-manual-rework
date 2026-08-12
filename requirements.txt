@@ -6,3 +6,4 @@ mike>=2.0
 # (not an mkdocs plugin, see that file's docstring for why).
 playwright>=1.40
 pypdf>=4.0
+reportlab>=4.0

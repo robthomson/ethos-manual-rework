@@ -121,10 +121,13 @@ jobs:
             gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY"
           fi
 
+          # gh's --jq takes exactly one jq-program argument -- it's not the
+          # real `jq` CLI, so it doesn't understand a separate --arg flag.
+          # $KEEP_REVISIONS is our own fixed integer (not user input), so
+          # interpolating it straight into the filter is safe.
           mapfile -t stale_tags < <(
             gh release list --repo "$GITHUB_REPOSITORY" --limit 200 --json tagName,createdAt \
-              --jq --arg keep "$KEEP_REVISIONS" \
-              '[.[] | select(.tagName | startswith("pdf-1.6-"))] | sort_by(.createdAt) | reverse | .[($keep | tonumber):] | .[].tagName'
+              --jq "[.[] | select(.tagName | startswith(\"pdf-1.6-\"))] | sort_by(.createdAt) | reverse | .[${KEEP_REVISIONS}:] | .[].tagName"
           )
           for old_tag in "${stale_tags[@]}"; do
             echo "pruning old PDF revision: $old_tag"
