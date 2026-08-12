@@ -51,31 +51,31 @@ leave [Sticks → Channel order](../system-setup/controls.md) at its AETR
 default with **First four channels fixed** on, so the wizard's output
 matches what the receiver expects.
 
-The wizard assigns channels right-to-left. For 2 ailerons + 1 elevator +
-1 rudder + 1 motor, that's:
+As of Ethos 26.1, the wizard assigns channels starting from the left and
+alternating from the outside in — matching FrSky's own stabilized-receiver
+documentation (earlier versions assigned right-to-left instead, which
+needed a manual channel swap to line up; that workaround is no longer
+necessary). For 2 ailerons + 1 elevator + 1 rudder + 1 motor, that's:
 
 | Ch | Function |
 |---|---|
-| 1 | Aileron 1 (right aileron) |
+| 1 | Aileron 1 (left aileron) |
 | 2 | Elevator |
 | 3 | Throttle |
 | 4 | Rudder |
-| 5 | Aileron 2 (left aileron) |
+| 5 | Aileron 2 (right aileron) |
 
-With this assignment, aileron differential is **positive** for the normal
-case (more up-throw than down-throw). FrSky's own receiver manuals
-currently document the *opposite* convention (left-to-right, so Ch1 =
-left aileron, Ch5 = right aileron) — in which case differential would need
-to be **negative** for the same physical effect.
-
-!!! tip
-    Using the Ethos convention consistently is recommended — all
-    stabilization functions still work correctly either way, since
-    compensation direction is set during stabilization setup. If you do
-    need to match the receiver-manual convention, the simplest route is
-    building the model with the wizard as normal, then using **Swap
-    channels** in [Outputs](outputs.md) to swap the two aileron channels
-    afterward — this keeps the aileron mixer's differential sign positive.
+!!! note "Upgrading a model built on Ethos 1.6.x"
+    Existing models keep working after the upgrade — Ethos never changes
+    [Channels](outputs.md) output assignments, so no rewiring is needed.
+    What it *may* do, the first time an affected model is selected, is
+    reorder aileron-related mixes (the aileron mix itself, Ail→Flaps,
+    Ail→Rud, V-tail Rudders) so aileron differential keeps working
+    correctly under the new left-to-right convention, appending "Left"/
+    "Right" to the affected channel names. See [Converting 1.6.x Models to
+    26.1](../how-to/converting-1.6-models.md) for the three specific
+    scenarios (default channel usage, swapped channels, inverted-mix
+    channels) and what, if anything, needs manual attention in each.
 
 ### Wizard steps
 

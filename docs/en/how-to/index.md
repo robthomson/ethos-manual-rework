@@ -14,3 +14,4 @@ Setup](../model-setup/index.md).
 - [In-Flight Adjustable Compensation Curve](in-flight-compensation-curve.md)
 - [Instant Take-Back for the Trainer Function](instant-takeback.md)
 - [Find the Latest Bootloader or Other Component](find-latest-bootloader.md)
+- [Converting 1.6.x Models to 26.1](converting-1.6-models.md)

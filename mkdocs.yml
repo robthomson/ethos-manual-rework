@@ -1038,6 +1038,7 @@ nav:
       - In-Flight Adjustable Compensation Curve: how-to/in-flight-compensation-curve.md
       - Instant Take-Back (Trainer): how-to/instant-takeback.md
       - Find the Latest Bootloader: how-to/find-latest-bootloader.md
+      - Converting 1.6.x Models to 26.1: how-to/converting-1.6-models.md
   - Radio Notes:
       - radio-notes/index.md
       - X18S: radio-notes/x18s.md
