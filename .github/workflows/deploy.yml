@@ -50,12 +50,11 @@ jobs:
       - name: Fetch gh-pages
         run: git fetch origin gh-pages --depth=1
 
-      # This branch is currently the "1.6" version -- when Ethos26 (or
-      # whatever comes next) work begins, cut a frozen `1.6` branch from
-      # main first, then bump the version string below on main. See
+      # This branch tracks the "26.1" version (Ethos26) -- 1.6 was frozen
+      # to its own branch when this version's work began. See
       # docs/en/contributing/versioning.md.
-      - name: Deploy version 1.6 with mike
-        run: mike deploy --push --update-aliases 1.6 latest
+      - name: Deploy version 26.1 with mike
+        run: mike deploy --push --update-aliases 26.1 latest
 
       - name: Set default (root redirect) version
         run: mike set-default --push latest
@@ -66,13 +65,13 @@ jobs:
           ref: gh-pages
           path: pages
 
-      # Crawls the just-deployed 1.6/ build over local HTTP with headless
+      # Crawls the just-deployed 26.1/ build over local HTTP with headless
       # Chromium into pdf-dist/ -- see scripts/build_pdfs.py's docstring for
       # why this runs as a separate, standalone step instead of an mkdocs
       # plugin, and why the PDFs land in a release rather than gh-pages.
       - name: Build PDF manuals
         run: |
-          python -m http.server 8000 --directory pages/1.6 &
+          python -m http.server 8000 --directory pages/26.1 &
           server_pid=$!
           for i in $(seq 1 20); do
             curl -sf http://localhost:8000/ > /dev/null && break
@@ -81,10 +80,10 @@ jobs:
           python scripts/build_pdfs.py \
             --base-url http://localhost:8000 \
             --out-dir pdf-dist \
-            --version 1.6
+            --version 26.1
           kill "$server_pid"
 
-      # One release per revision, tagged pdf-1.6.<run number> ("pdf-"
+      # One release per revision, tagged pdf-26.1.<run number> ("pdf-"
       # prefix so it reads as generated collateral rather than a software
       # release). github.run_number is this workflow's own strictly-
       # incrementing, built-in counter -- unique per run, never reused, no
@@ -116,7 +115,7 @@ jobs:
           KEEP_REVISIONS=10
 
           sha_short="${GITHUB_SHA:0:7}"
-          tag="pdf-1.6.${RUN_NUMBER}"
+          tag="pdf-26.1.${RUN_NUMBER}"
 
           if gh release view "$tag" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
             # Re-running the workflow (workflow_dispatch) against a commit
@@ -125,7 +124,7 @@ jobs:
             gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
           else
             gh release create "$tag" --repo "$GITHUB_REPOSITORY" \
-              --title "Ethos Manual 1.6 -- PDF exports (rev ${RUN_NUMBER}, ${sha_short})" \
+              --title "Ethos Manual 26.1 -- PDF exports (rev ${RUN_NUMBER}, ${sha_short})" \
               --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/ as of commit ${GITHUB_SHA}, one per fully-translated locale."
             gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY"
           fi
@@ -136,7 +135,7 @@ jobs:
           # interpolating it straight into the filter is safe.
           mapfile -t stale_tags < <(
             gh release list --repo "$GITHUB_REPOSITORY" --limit 200 --json tagName,createdAt \
-              --jq "[.[] | select(.tagName | startswith(\"pdf-1.6.\"))] | sort_by(.createdAt) | reverse | .[${KEEP_REVISIONS}:] | .[].tagName"
+              --jq "[.[] | select(.tagName | startswith(\"pdf-26.1.\"))] | sort_by(.createdAt) | reverse | .[${KEEP_REVISIONS}:] | .[].tagName"
           )
           for old_tag in "${stale_tags[@]}"; do
             echo "pruning old PDF revision: $old_tag"
