@@ -54,8 +54,8 @@ contributors can still preview locally with `mkdocs serve`.
 
 ## Versioning
 
-Multiple firmware versions' manuals (e.g. 1.6 alongside a future Ethos26)
-live in the same repo as separate branches, each deployed to its own
+Multiple firmware versions' manuals (1.6.x alongside the current Ethos26
+26.1) live in the same repo as separate branches, each deployed to its own
 `manual.rt-rc.com/<version>/` path with a version-select dropdown — see
 [Versioning](versioning.md) for the full scheme and how to cut a new one.
 

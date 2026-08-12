@@ -1,9 +1,10 @@
 # Versioning
 
-Ethos ships firmware under version numbers today (1.6.x) and has
-signalled a move toward year-based branding (e.g. "Ethos26"). This manual
-needs to keep old versions' documentation available and correct while new
-versions are actively being written — this page is how.
+Ethos moved from point-release firmware numbers (1.6.x) to year-based
+branding starting with Ethos26 (26.1.x) — the manual's `main` branch now
+tracks 26.1, with the full 1.6.x manual frozen on its own `1.6` branch.
+This page describes the mechanism that makes that possible, and the
+process for cutting the next version when it's time.
 
 ## How it works
 
@@ -11,12 +12,12 @@ Versioning is handled by [mike](https://github.com/jimporter/mike), the
 tool Material for MkDocs itself recommends. `.github/workflows/deploy.yml`
 runs `mike deploy` instead of publishing straight to the `gh-pages` root:
 each version is built and committed to its own subfolder there (`/1.6/`,
-`/26/`, …), and `manual.rt-rc.com/` redirects to whichever version
+`/26.1/`, …), and `manual.rt-rc.com/` redirects to whichever version
 currently holds the `latest` alias. Material shows a version-select
 dropdown automatically, reading `versions.json` (which `mike` maintains)
 — this is unrelated to, and composes cleanly with, the locale switcher:
 version is the outer path segment, locale (once more than `en` exists) is
-the inner one, e.g. `manual.rt-rc.com/26/fr/...`.
+the inner one, e.g. `manual.rt-rc.com/26.1/fr/...`.
 
 This reuses the same "subfolder on `gh-pages`" mechanism as [PR
 previews](index.md#pr-previews) — `mike`'s version folders and the
@@ -37,7 +38,9 @@ each only ever touches its own paths.
 
 ## Cutting a new version
 
-When the next version's manual needs to start (e.g. Ethos26):
+This is the process that took `main` from 1.6.x to 26.1 (branch `1.6`
+frozen, `main` retargeted), and the same steps apply to the next cut
+whenever it's needed — substitute the actual old/new version labels below.
 
 1. From `main`, create and push the frozen branch for the version being
    left behind:
@@ -55,9 +58,9 @@ When the next version's manual needs to start (e.g. Ethos26):
 
 2. On `main`, edit `.github/workflows/deploy.yml`: change the version
    string in the `Deploy version 1.6 with mike` step (and its name) from
-   `1.6` to the new version's label (e.g. `26`). This is the **only**
+   `1.6` to the new version's label (e.g. `26.1`). This is the **only**
    required edit to start deploying the new version — the next push to
-   `main` will publish it to `/26/` and move the `latest` alias there,
+   `main` will publish it to `/26.1/` and move the `latest` alias there,
    while `/1.6/` stays exactly as it was.
 
 3. Update the new version's content on `main` for whatever actually
