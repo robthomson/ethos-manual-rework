@@ -341,6 +341,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -645,6 +662,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/model-setup/logical-switches/</loc>
@@ -2415,6 +2449,40 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/contributing/translation-status/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/cs/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1/cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/cs/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1/cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/he/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2755,6 +2823,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/he/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1/he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/he/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -3059,6 +3144,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/he/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1/he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/he/model-setup/logical-switches/</loc>
@@ -3962,6 +4064,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/nl/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1/nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/nl/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -4266,6 +4385,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/nl/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1/nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/nl/model-setup/logical-switches/</loc>
@@ -5169,6 +5305,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/nb/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1/nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/nb/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -5473,6 +5626,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/nb/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1/nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/nb/model-setup/logical-switches/</loc>
@@ -6376,6 +6546,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pl/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1/pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pl/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -6680,6 +6867,23 @@
         <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/pl/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1/pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/pl/model-setup/logical-switches/</loc>
@@ -7583,6 +7787,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/es/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1/es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/es/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -7887,6 +8108,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/es/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1/es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/es/model-setup/logical-switches/</loc>
@@ -8790,6 +9028,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/it/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1/it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/it/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -9094,6 +9349,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/it/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1/it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/it/model-setup/logical-switches/</loc>
@@ -9997,6 +10269,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pt-BR/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1/pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pt-BR/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -10301,6 +10590,23 @@
         <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/pt-BR/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1/pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/pt-BR/model-setup/logical-switches/</loc>
@@ -11204,6 +11510,23 @@
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/zh/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1/zh/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/zh/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -11508,6 +11831,23 @@
         <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/zh/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1/zh/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/zh/model-setup/logical-switches/</loc>
@@ -13278,6 +13618,40 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/contributing/translation-status/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/fr/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -13618,6 +13992,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/fr/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1/fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/fr/how-to/fbus-setup/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -13922,6 +14313,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/flight-modes/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/fr/model-setup/glasses/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1/fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/fr/model-setup/logical-switches/</loc>
