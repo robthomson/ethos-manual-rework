@@ -19,7 +19,17 @@ STATUS_FILENAME = "translation-status.md"
 # plan) -- excluded from the English page list these helpers compare against,
 # so a locale isn't marked "missing" pages/coverage over content that was
 # never meant to be translated in the first place.
-UNTRANSLATED_PAGES = {STATUS_FILENAME}
+#
+# adding-a-language.md is a playbook for whoever bootstraps the *next*
+# locale (human or agent) -- contributor-facing, not manual content, same
+# category as translation-status.md. Leaving it out of this set silently
+# stops every locale from ever reaching "fully covered" (see
+# fully_covered_locales(), which gates scripts/build_pdfs.py) since no
+# translation of it is ever expected to exist.
+#
+# Matched by bare filename below (see en_pages()), not full path -- same
+# convention STATUS_FILENAME already relies on.
+UNTRANSLATED_PAGES = {STATUS_FILENAME, "adding-a-language.md"}
 
 
 def list_locales(docs_dir: Path) -> list[str]:

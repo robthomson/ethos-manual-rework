@@ -101,6 +101,23 @@ jobs:
             gh release create "$tag" --repo "$GITHUB_REPOSITORY" \
               --title "Ethos Manual 1.6 -- PDF exports" \
               --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/, one per fully-translated locale. Replaced on every deploy -- not meant to be linked to directly by tag/version."
+
+          # --clobber below only overwrites assets whose name matches one
+          # we're about to upload -- it never removes one that isn't. That
+          # leaves stale PDFs behind after a filename-scheme change, or
+          # after a locale drops out of fully_covered_locales() (e.g. a new
+          # English page lands untranslated). Prune anything not in this
+          # deploy's output first so the release always reflects exactly
+          # today's build, never a superset of it.
+          mapfile -t current_assets < <(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name')
+          mapfile -t new_assets < <(cd pdf-dist && ls *.pdf)
+          for asset in "${current_assets[@]}"; do
+            if ! printf '%s\n' "${new_assets[@]}" | grep -qxF "$asset"; then
+              echo "removing stale asset: $asset"
+              gh release delete-asset "$tag" "$asset" --repo "$GITHUB_REPOSITORY" -y
+            fi
+          done
+
           gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
 
       - name: Ensure custom domain is set
