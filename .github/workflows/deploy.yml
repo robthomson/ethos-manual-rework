@@ -84,41 +84,52 @@ jobs:
             --version 1.6
           kill "$server_pid"
 
-      # Same tag as the mike version this build corresponds to, "pdf-"
-      # prefixed so it reads as generated collateral rather than a software
-      # release. Uploading with --clobber replaces this release's assets in
-      # place on every deploy, rather than accumulating a new copy in git
-      # history the way committing them to gh-pages would. The site's
-      # header links to this repo's release list directly (see
-      # overrides/partials/header.html), not to a specific asset, so
-      # there's nothing else to wire up after this.
+      # One release per revision, tagged pdf-1.6-<short sha> ("pdf-" prefix
+      # so it reads as generated collateral rather than a software release;
+      # the sha ties a release to the exact commit's docs state and makes
+      # every past PDF snapshot a stable, genuinely linkable artifact --
+      # unlike the single rolling "pdf-1.6" release this replaces, which got
+      # clobbered on every deploy and could never be pointed at reliably).
+      # The site's header links to this repo's release list directly (see
+      # overrides/partials/header.html), not to a specific release, so
+      # there's nothing else to wire up after this -- readers just pick the
+      # newest one, which GitHub already surfaces first/as "Latest".
+      #
+      # Since every push to main re-triggers this, revisions would
+      # otherwise accumulate forever (~12 PDFs x ~15-20MB apiece, every
+      # deploy). KEEP_REVISIONS below prunes whole old releases (not
+      # individual assets -- each release here is self-contained) once
+      # there are more than that many.
       - name: Publish PDF manuals as a GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          tag="pdf-1.6"
-          gh release view "$tag" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1 || \
+          KEEP_REVISIONS=10
+
+          sha_short="${GITHUB_SHA:0:7}"
+          tag="pdf-1.6-${sha_short}"
+
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            # Re-running the workflow (workflow_dispatch) against a commit
+            # already published -- replace this revision's assets in place
+            # rather than failing on a duplicate tag.
+            gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
+          else
             gh release create "$tag" --repo "$GITHUB_REPOSITORY" \
-              --title "Ethos Manual 1.6 -- PDF exports" \
-              --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/, one per fully-translated locale. Replaced on every deploy -- not meant to be linked to directly by tag/version."
+              --title "Ethos Manual 1.6 -- PDF exports (${sha_short})" \
+              --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/ as of commit ${GITHUB_SHA}, one per fully-translated locale."
+            gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY"
+          fi
 
-          # --clobber below only overwrites assets whose name matches one
-          # we're about to upload -- it never removes one that isn't. That
-          # leaves stale PDFs behind after a filename-scheme change, or
-          # after a locale drops out of fully_covered_locales() (e.g. a new
-          # English page lands untranslated). Prune anything not in this
-          # deploy's output first so the release always reflects exactly
-          # today's build, never a superset of it.
-          mapfile -t current_assets < <(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name')
-          mapfile -t new_assets < <(cd pdf-dist && ls *.pdf)
-          for asset in "${current_assets[@]}"; do
-            if ! printf '%s\n' "${new_assets[@]}" | grep -qxF "$asset"; then
-              echo "removing stale asset: $asset"
-              gh release delete-asset "$tag" "$asset" --repo "$GITHUB_REPOSITORY" -y
-            fi
+          mapfile -t stale_tags < <(
+            gh release list --repo "$GITHUB_REPOSITORY" --limit 200 --json tagName,createdAt \
+              --jq --arg keep "$KEEP_REVISIONS" \
+              '[.[] | select(.tagName | startswith("pdf-1.6-"))] | sort_by(.createdAt) | reverse | .[($keep | tonumber):] | .[].tagName'
+          )
+          for old_tag in "${stale_tags[@]}"; do
+            echo "pruning old PDF revision: $old_tag"
+            gh release delete "$old_tag" --repo "$GITHUB_REPOSITORY" --cleanup-tag -y
           done
-
-          gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
 
       - name: Ensure custom domain is set
         run: |
