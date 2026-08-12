@@ -3613,17 +3613,27 @@ kind of source it is:</p>
 <p><img alt="2-position switch options" src="../../assets/source-2pos-options.png" />
 <img alt="Switch options" src="../../assets/switch-options.png" /></p>
 <ul>
-<li><strong>Negative</strong> — inverts the switch action.</li>
-<li><strong>HalfRange</strong> — for a 2-position switch or logical switch, changes its
+<li><strong>Invert</strong> — inverts the switch action.</li>
+<li><strong>Half range</strong> — for a 2-position switch or logical switch, changes its
   output range from ±100% to 0–100%.</li>
+</ul>
+<p><strong>Throttle sources</strong> — the throttle input has its own extra options:</p>
+<ul>
+<li><strong>Positive</strong> — only the positive-going half of the input feeds the mix.</li>
+<li><strong>Negative</strong> — only the negative-going half of the input feeds the mix.
+  <strong>Positive</strong>/<strong>Negative</strong> together are the usual way to split a single
+  surface-model trigger into throttle (positive half) and brake (negative
+  half).</li>
+<li><strong>Invert</strong> — reverses the input.</li>
+<li><strong>Ignore trainer input</strong> — see below.</li>
 </ul>
 <p><strong>Trim sources</strong> —</p>
 <p><img alt="Trim source options" src="../../assets/source-trim-options.png" /></p>
 <ul>
-<li><strong>Negative</strong> — inverts the trim action (useful inside a free mix's
+<li><strong>Invert</strong> — inverts the trim action (useful inside a free mix's
   Actions).</li>
 <li><strong>Full range</strong> — trims default to ±25%; as a source this can be widened
-  to ±100%.</li>
+  to ±100% with a long press on <code>ENT</code> on the trim.</li>
 <li><strong>Ignore trainer input</strong> — on a <a href="../../model-setup/logical-switches/">logical
   switch</a>, excludes trainer-input
   movement from tripping the switch. Typical use: detecting the <em>master</em>
@@ -3634,7 +3644,7 @@ kind of source it is:</p>
 <p><strong>Variable sources</strong> —</p>
 <p><img alt="Variable source options" src="../../assets/source-var-options.png" /></p>
 <ul>
-<li><strong>Negative</strong> — negates the variable's value for this use.</li>
+<li><strong>Invert</strong> — negates the variable's value for this use.</li>
 <li><strong>Ignore range</strong> — some fields have asymmetric ranges (e.g. Outputs'
   Min/Max, which run −150–0% and 0–150% respectively). Unless a
   <a href="../../model-setup/variables/">variable</a> used as that field's source has
