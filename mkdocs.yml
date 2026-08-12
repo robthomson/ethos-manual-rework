@@ -1008,6 +1008,7 @@ nav:
       - Trainer: model-setup/trainer.md
       - Telemetry: model-setup/telemetry.md
       - Checklist: model-setup/checklist.md
+      - Glasses: model-setup/glasses.md
       - Lua Scripts (Model): model-setup/lua-scripts.md
   - Displays:
       - displays/index.md

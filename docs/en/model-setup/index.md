@@ -23,6 +23,7 @@ which covers everything common across every model.
 - [Trainer](trainer.md)
 - [Telemetry](telemetry.md) — sensor discovery and calculated sensors.
 - [Checklist](checklist.md)
+- [Glasses](glasses.md) — heads-up display on ActiveLook smart glasses.
 - [Lua Scripts](lua-scripts.md) — per-model Lua scripts and functions.
 
 For worked, start-to-finish examples of programming a model, see
