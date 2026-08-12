@@ -67,9 +67,9 @@ jobs:
           path: pages
 
       # Crawls the just-deployed 1.6/ build over local HTTP with headless
-      # Chromium and writes ethos-manual.pdf straight into it -- see
-      # scripts/build_pdfs.py's docstring for why this runs as a separate,
-      # standalone step instead of an mkdocs plugin.
+      # Chromium into pdf-dist/ -- see scripts/build_pdfs.py's docstring for
+      # why this runs as a separate, standalone step instead of an mkdocs
+      # plugin, and why the PDFs land in a release rather than gh-pages.
       - name: Build PDF manuals
         run: |
           python -m http.server 8000 --directory pages/1.6 &
@@ -80,16 +80,33 @@ jobs:
           done
           python scripts/build_pdfs.py \
             --base-url http://localhost:8000 \
-            --out-dir pages/1.6 \
+            --out-dir pdf-dist \
             --version 1.6
           kill "$server_pid"
 
-      - name: Commit generated assets (CNAME, PDF manuals)
+      # Same tag as the mike version this build corresponds to, "pdf-"
+      # prefixed so it reads as generated collateral rather than a software
+      # release. Uploading with --clobber replaces this release's assets in
+      # place on every deploy, rather than accumulating a new copy in git
+      # history the way committing them to gh-pages would.
+      - name: Publish PDF manuals as a GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="pdf-1.6"
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1 || \
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" \
+              --title "Ethos Manual 1.6 -- PDF exports" \
+              --notes "Auto-generated PDF exports of https://manual.rt-rc.com/latest/, one per fully-translated locale. Replaced on every deploy -- not meant to be linked to directly by tag/version."
+          gh release upload "$tag" pdf-dist/*.pdf --repo "$GITHUB_REPOSITORY" --clobber
+          python scripts/patch_pdf_links.py --tag "$tag" --locale-scope-js pages/1.6/javascripts/locale-scope.js
+
+      - name: Commit generated assets (CNAME, PDF link)
         run: |
           cd pages
           echo "manual.rt-rc.com" > CNAME
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || git commit -m "chore: set custom domain, update PDF manuals"
+          git diff --cached --quiet || git commit -m "chore: set custom domain, update PDF download link"
           git push origin gh-pages

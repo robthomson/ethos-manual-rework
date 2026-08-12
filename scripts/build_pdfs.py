@@ -18,9 +18,18 @@ long done, and there's nothing left to get confused by. Material's own
 `@media print` styles already hide the header/sidebar/nav chrome cleanly, so
 no custom print stylesheet is needed.
 
+Writes plain, locale-suffixed files (ethos-manual-<locale>.pdf) to a local
+directory -- deploy.yml uploads them as GitHub Release assets rather than
+committing them into the gh-pages branch. At ~15-20MB apiece across a
+growing number of locales, regenerating and re-committing them on every
+push would permanently bloat that branch's git history a little more on
+every single deploy, forever; a release's assets just get replaced in
+place. scripts/patch_pdf_links.py points the site's "Download PDF" link at
+wherever they ended up.
+
 Usage (see .github/workflows/deploy.yml for how CI wires this in):
     python -m playwright install --with-deps chromium
-    python scripts/build_pdfs.py --base-url http://localhost:8000 --out-dir site --version 1.6
+    python scripts/build_pdfs.py --base-url http://localhost:8000 --out-dir pdf-dist --version 1.6
 """
 
 from __future__ import annotations
@@ -40,8 +49,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "hooks"))
 from _locales import fully_covered_locales  # noqa: E402
 
-PDF_FILENAME = "ethos-manual.pdf"
 CONCURRENCY = 6
+
+
+def pdf_filename(locale: str) -> str:
+    return f"ethos-manual-{locale}.pdf"
 
 COVER_HTML = """<!doctype html>
 <html>
@@ -189,11 +201,7 @@ async def main_async(args: argparse.Namespace) -> None:
         browser = await p.chromium.launch()
         try:
             for locale in locales:
-                out_path = (
-                    out_dir / PDF_FILENAME
-                    if locale == "en"
-                    else out_dir / locale / PDF_FILENAME
-                )
+                out_path = out_dir / pdf_filename(locale)
                 await build_locale_pdf(
                     browser,
                     base_url,
@@ -214,7 +222,7 @@ def main() -> None:
         "--base-url", required=True, help="e.g. http://localhost:8000 (a locally-served build of site/)"
     )
     parser.add_argument(
-        "--out-dir", required=True, type=Path, help="directory to write <locale>/ethos-manual.pdf into"
+        "--out-dir", required=True, type=Path, help="directory to write ethos-manual-<locale>.pdf into"
     )
     parser.add_argument(
         "--mkdocs-yml", default=REPO_ROOT / "mkdocs.yml", type=Path
