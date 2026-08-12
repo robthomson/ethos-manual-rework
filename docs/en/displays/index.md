@@ -7,7 +7,7 @@ The home screen is one or more **display screens**, each built from
 display editor for the current screen.
 
 Up to **eight** screens are available, each starting from one of
-**thirteen** layouts (holding up to **nine** widget cells). Widgets can
+**fifteen** layouts (holding up to **nine** widget cells). Widgets can
 show telemetry, but also any of seventeen other information categories —
 model/radio status, timers, channels, and more. Configured screens are
 reached by touch-swiping or `PAGE` up/down; the top and bottom bars stay

@@ -6,11 +6,19 @@ The default model comes with one screen (a model bitmap plus three timer
 widgets), but up to **eight** screens total are supported. Tap the **+**
 next to "Screen1" to add another:
 
-- Choose from **15** layouts, including two dedicated home-screen layouts
+- Choose from **15** layouts, including four dedicated home-screen layouts
   and a full-screen option, holding up to 9 widgets — configured exactly
-  like the first screen.
+  like the first screen. Any screen can be set as the home screen.
 - Screens can be reordered or deleted from their own edit dialog (tap
-  Screen1, Screen2, etc.).
+  Screen1, Screen2, etc.) — long-touch a screen's tab, or long-press `ENT`.
+
+## Top screen (XE series)
+
+The XE series radios have a separate, small **top screen** above the main
+display, configured the same way but independently — long-touch its tab
+(or long-press `ENT`) for a choice of 4 dedicated top-screen layouts. Its
+default widget is the model bitmap (set in [Model Edit](../model-setup/model-edit.md)
+or a new-model wizard), same as the main screen's.
 
 ## Worked example
 
