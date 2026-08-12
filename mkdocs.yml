@@ -1021,6 +1021,7 @@ nav:
       - Example Script Locations: lua-scripts/example-script-locations.md
       - Configuration Limits: lua-scripts/configuration-limits.md
       - Basic Widget Layout: lua-scripts/basic-widget-layout.md
+      - Alternative Display Themes: lua-scripts/alternative-display-themes.md
   - Tutorials:
       - tutorials/index.md
       - Initial Radio Setup: tutorials/initial-radio-setup.md

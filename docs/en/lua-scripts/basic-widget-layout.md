@@ -11,10 +11,15 @@ for installing one) is built from a small set of named fields/handlers:
   taking no arguments. Returns a **widget table**, which is then passed
   to every other handler below — initialize your state here and store it
   in that table.
+- **`destroy`** *(function, optional)* — called when the widget is
+  deleted.
 - **`configure`** *(function)* — called when the user opens the widget's
   configuration screen, taking the widget table from `create()` as its
   only argument, returning nothing. Build the configuration form here and
   use it to update values in the widget table.
+- **`build`** *(function, optional)* — called on every layout change once
+  the widget is placed on a screen, and also right after creation and
+  configuration.
 - **`wakeup`** *(function)* — called every loop (roughly every 50ms),
   taking the widget table, returning nothing. Check here whether anything
   changed; if so, call `invalidateWindow()` to trigger a repaint via
@@ -26,8 +31,14 @@ for installing one) is built from a small set of named fields/handlers:
   returning nothing. Called automatically whenever `lcd.invalidate()` has
   fired. Can be comparatively slow, but should still only actually redraw
   when something's changed.
+- **`menu`** *(function, optional)* — called when the widget's contextual
+  menu is built, to add extra entries beyond the standard ones. Returns a
+  table of `{name, function}` pairs.
 - **`read`** *(function, optional)* — reads persisted widget storage.
 - **`write`** *(function, optional)* — writes persisted widget storage.
+- **`persistent`** *(boolean, optional)* — enables persistent data
+  storage for the widget.
+- **`title`** *(boolean, optional)* — forces the widget's title on or off.
 - **`init`** *(function)* — registers the widget and its callbacks with
   Ethos. Typically the last thing in the script:
 

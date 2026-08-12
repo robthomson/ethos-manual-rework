@@ -25,3 +25,5 @@ exactly this kind of on-radio customization.
   bitmaps and scripts.
 - [Basic Widget Layout](basic-widget-layout.md) — the code structure a
   custom widget script needs.
+- [Alternative Display Themes](alternative-display-themes.md) — installing
+  extra selectable themes beyond Dark/Light.
