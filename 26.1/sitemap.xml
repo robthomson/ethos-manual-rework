@@ -511,6 +511,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/lua-scripts/basic-widget-layout/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2466,6 +2483,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/cs/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1/cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/cs/model-setup/glasses/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2991,6 +3025,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/he/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1/he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/he/lua-scripts/basic-widget-layout/</loc>
@@ -4234,6 +4285,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/nl/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1/nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/nl/lua-scripts/basic-widget-layout/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -5473,6 +5541,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/nb/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1/nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/nb/lua-scripts/basic-widget-layout/</loc>
@@ -6716,6 +6801,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pl/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1/pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pl/lua-scripts/basic-widget-layout/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -7955,6 +8057,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/es/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1/es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/es/lua-scripts/basic-widget-layout/</loc>
@@ -9198,6 +9317,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/it/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1/it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/it/lua-scripts/basic-widget-layout/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -10439,6 +10575,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pt-BR/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1/pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pt-BR/lua-scripts/basic-widget-layout/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -11678,6 +11831,23 @@
         <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/zh/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1/zh/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/zh/lua-scripts/basic-widget-layout/</loc>
@@ -13635,6 +13805,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/model-setup/glasses/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -14160,6 +14347,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/fr/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1/fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/fr/lua-scripts/basic-widget-layout/</loc>

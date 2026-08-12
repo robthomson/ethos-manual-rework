@@ -16,7 +16,7 @@
         <link rel="prev" href="../configuration-limits/">
       
       
-        <link rel="next" href="../../tutorials/">
+        <link rel="next" href="../alternative-display-themes/">
       
       
         
@@ -2118,6 +2118,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alternative-display-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alternative Display Themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3362,10 +3390,15 @@ for installing one) is built from a small set of named fields/handlers:</p>
   taking no arguments. Returns a <strong>widget table</strong>, which is then passed
   to every other handler below — initialize your state here and store it
   in that table.</li>
+<li><strong><code>destroy</code></strong> <em>(function, optional)</em> — called when the widget is
+  deleted.</li>
 <li><strong><code>configure</code></strong> <em>(function)</em> — called when the user opens the widget's
   configuration screen, taking the widget table from <code>create()</code> as its
   only argument, returning nothing. Build the configuration form here and
   use it to update values in the widget table.</li>
+<li><strong><code>build</code></strong> <em>(function, optional)</em> — called on every layout change once
+  the widget is placed on a screen, and also right after creation and
+  configuration.</li>
 <li><strong><code>wakeup</code></strong> <em>(function)</em> — called every loop (roughly every 50ms),
   taking the widget table, returning nothing. Check here whether anything
   changed; if so, call <code>invalidateWindow()</code> to trigger a repaint via
@@ -3377,8 +3410,14 @@ for installing one) is built from a small set of named fields/handlers:</p>
   returning nothing. Called automatically whenever <code>lcd.invalidate()</code> has
   fired. Can be comparatively slow, but should still only actually redraw
   when something's changed.</li>
+<li><strong><code>menu</code></strong> <em>(function, optional)</em> — called when the widget's contextual
+  menu is built, to add extra entries beyond the standard ones. Returns a
+  table of <code>{name, function}</code> pairs.</li>
 <li><strong><code>read</code></strong> <em>(function, optional)</em> — reads persisted widget storage.</li>
 <li><strong><code>write</code></strong> <em>(function, optional)</em> — writes persisted widget storage.</li>
+<li><strong><code>persistent</code></strong> <em>(boolean, optional)</em> — enables persistent data
+  storage for the widget.</li>
+<li><strong><code>title</code></strong> <em>(boolean, optional)</em> — forces the widget's title on or off.</li>
 <li><strong><code>init</code></strong> <em>(function)</em> — registers the widget and its callbacks with
   Ethos. Typically the last thing in the script:</li>
 </ul>
@@ -3456,13 +3495,13 @@ Script Programming</em> thread on rcgroups for further worked examples.</p>
         
         
           
-          <a href="../../tutorials/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorials">
+          <a href="../alternative-display-themes/" class="md-footer__link md-footer__link--next" aria-label="Next: Alternative Display Themes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Tutorials
+                Alternative Display Themes
               </div>
             </div>
             <div class="md-footer__button md-icon">
