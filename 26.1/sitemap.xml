@@ -205,6 +205,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/getting-started/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2483,6 +2500,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/contributing/translation-status/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/cs/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1/cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/cs/how-to/converting-1.6-models/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -2753,6 +2787,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/he/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1/he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/he/getting-started/</loc>
@@ -4030,6 +4081,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/nl/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1/nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/nl/getting-started/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -5303,6 +5371,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/nb/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1/nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/nb/getting-started/</loc>
@@ -6580,6 +6665,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pl/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1/pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pl/getting-started/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -7853,6 +7955,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/es/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1/es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/es/getting-started/</loc>
@@ -9130,6 +9249,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/it/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1/it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/it/getting-started/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -10405,6 +10541,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/pt-BR/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1/pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/pt-BR/getting-started/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -11678,6 +11831,23 @@
         <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/operation/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/zh/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1/zh/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/zh/getting-started/</loc>
@@ -13958,6 +14128,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/contributing/translation-status/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>daily</changefreq>
@@ -14228,6 +14415,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/fr/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1/fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/fr/getting-started/</loc>
