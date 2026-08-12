@@ -27,7 +27,7 @@ picker:
 
 - **Joystick** — presents the radio as a USB HID joystick, for driving PC
   flight simulators.
-- **FrSky Suite** — puts the radio into "Ethos mode" for communication
+- **Ethos Suite** — puts the radio into "Ethos mode" for communication
   with [Ethos Suite](../ethos-suite/index.md).
 - **Serial** — routes Lua debug traces over USB-serial (115200 bps). Ethos
   Suite's Lua Development Tools tab has an integrated terminal to display

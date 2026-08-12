@@ -124,18 +124,28 @@ kind of source it is:
 ![2-position switch options](../assets/source-2pos-options.png)
 ![Switch options](../assets/switch-options.png)
 
-- **Negative** — inverts the switch action.
-- **HalfRange** — for a 2-position switch or logical switch, changes its
+- **Invert** — inverts the switch action.
+- **Half range** — for a 2-position switch or logical switch, changes its
   output range from ±100% to 0–100%.
+
+**Throttle sources** — the throttle input has its own extra options:
+
+- **Positive** — only the positive-going half of the input feeds the mix.
+- **Negative** — only the negative-going half of the input feeds the mix.
+  **Positive**/**Negative** together are the usual way to split a single
+  surface-model trigger into throttle (positive half) and brake (negative
+  half).
+- **Invert** — reverses the input.
+- **Ignore trainer input** — see below.
 
 **Trim sources** —
 
 ![Trim source options](../assets/source-trim-options.png)
 
-- **Negative** — inverts the trim action (useful inside a free mix's
+- **Invert** — inverts the trim action (useful inside a free mix's
   Actions).
 - **Full range** — trims default to ±25%; as a source this can be widened
-  to ±100%.
+  to ±100% with a long press on `ENT` on the trim.
 - **Ignore trainer input** — on a [logical
   switch](../model-setup/logical-switches.md), excludes trainer-input
   movement from tripping the switch. Typical use: detecting the *master*
@@ -147,7 +157,7 @@ kind of source it is:
 
 ![Variable source options](../assets/source-var-options.png)
 
-- **Negative** — negates the variable's value for this use.
+- **Invert** — negates the variable's value for this use.
 - **Ignore range** — some fields have asymmetric ranges (e.g. Outputs'
   Min/Max, which run −150–0% and 0–150% respectively). Unless a
   [variable](../model-setup/variables.md) used as that field's source has

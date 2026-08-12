@@ -20,11 +20,13 @@ The top bar shows the model name on the left (plus the active flight mode,
 if one is configured), and a row of status icons on the right:
 
 - Data logging active
-- Trainer status (master or slave, as applicable)
 - RSSI — 2.4GHz link
 - RSSI — 900MHz link (if a dual-band/long-range module is fitted)
 - Speaker volume
 - Radio battery status
+- Screen locked (see [Lock touchscreen](user-interface-and-navigation.md))
+- USB connected (see [USB Connection Modes](usb-connection-modes.md))
+- Trainer status (master or slave, as applicable)
 
 Touching the speaker or battery icon jumps straight to the matching
 [General](../system-setup/general.md) (audio) or
@@ -46,6 +48,15 @@ Four tabs run along the bottom for the top-level sections — **Home**,
 **Model Setup**, **Configure Screens**, **System Setup** — with the system
 clock on the right (touch it to jump straight to
 [Date & Time](../system-setup/date-and-time.md)).
+
+The Model Setup icon reflects the current model's type:
+
+![Bottom bar, glider model](../assets/bottombar-glider.png)
+![Bottom bar, helicopter model](../assets/bottombar-heli.png)
+![Bottom bar, multirotor model](../assets/bottombar-multirotor.png)
+
+— airplane, glider, helicopter, and multirotor each get their own icon
+(and there are further icons for surface models and others).
 
 ## The widgets area
 
