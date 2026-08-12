@@ -8,13 +8,12 @@ and external modules.
 
 ## Storage layout
 
-Tap **Flash** (or press `PAGE` to switch drives) to browse the radio's
-internal virtual USB flash drive, used for system bitmaps and fonts:
-
-![Flash storage](../assets/system-filemanager-flash.png)
-
-- `bitmaps/system` — the bitmaps used for screen displays and icons
-- `fonts/` — fonts for the different language selections
+As of Ethos 26.1, system bitmaps and fonts are built into the firmware
+itself rather than living on a browsable internal flash drive — this
+shortens startup time and speeds up the UI, since bitmaps no longer need
+loading dynamically. (On 1.6, this same storage held `bitmaps/system` and
+`fonts/` and was reachable by tapping **Flash**; that tap target no
+longer applies.)
 
 Both the bootloader and the system firmware itself live in this internal
 flash memory, on every FrSky radio back to the original X9D.

@@ -71,6 +71,11 @@ extra pots, **Ext1**/**Ext2**, typically used for 3-axis gimbals.
 - **X20 Pro** — adds pushbutton switches **K**/**L** on the rear
   shoulders, plus positions **M**/**N** if wired (typically for stick-end
   switches).
+- **XE series** — physical switches are marked **S1**–**S14**, mapped by
+  default to Ethos's **SA**–**SN** — relabel them to **S1**–**S14** (to
+  match the radio's own silkscreen) or any other naming, as preferred. The
+  XE series' extra abstraction layer means any physical switch can be
+  mapped to any Ethos switch position.
 
 ## Home keymap
 
@@ -86,6 +91,13 @@ keys jump to.
   respectively.
 
 ## Radio-specific hardware options {: #radio-specific-hardware-options }
+
+- **Bluetooth audio option** (X20, X20R, X20RS) — enables an optional
+  Bluetooth audio module for these radios, for use with Bluetooth
+  earbuds/headsets. This isn't plug-and-play hardware — the module has to
+  be surface-mount soldered in — this setting just enables it once fitted.
+
+  ![Bluetooth audio option](../assets/system-hardware-bt-audio-options.png)
 
 - **Enabling haptic gimbal upgrades** (X20 Pro, X20R) — the X20 Pro AW and
   X20RS ship with MC20R gimbals that have haptic stick-shaker motors; if

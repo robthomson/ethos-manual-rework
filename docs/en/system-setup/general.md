@@ -28,7 +28,8 @@ Covers display attributes, audio, vario, haptics, and the top toolbar.
 - **Sleep** — inactivity time before the backlight turns off (greyed out
   if Wake up is set to Always on).
 - **Sleep mode brightness** — backlight brightness while asleep.
-- **Dark mode** — light or dark display theme.
+- **Theme** — the display theme; default is Dark, with Light as the
+  built-in alternative. Additional themes can be installed as Lua themes.
 - **Highlight Color** — the UI's accent color (default `#F8B038`).
 
 ## Audio settings {: #audio-settings }
