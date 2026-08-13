@@ -1,8 +1,8 @@
 ---
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+translated_from: 24914de982949d502ae0a8e73daf76e6110b4740
 ---
 
-# Hauptansichten
+# Hauptansichten - test
 
 ## Startbildschirm
 
