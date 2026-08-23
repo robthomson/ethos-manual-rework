@@ -1,5 +1,5 @@
 ---
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
+translated_from: 24914de982949d502ae0a8e73daf76e6110b4740
 ---
 
 # Hoofdweergaven
@@ -8,7 +8,7 @@ translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
 
 ![Startscherm](../assets/mainview.png)
 
-Het startscherm is wat u ziet wanneer er geen menu geopend is — een stapel van maximaal
+TEST Het startscherm is wat u ziet wanneer er geen menu geopend is — een stapel van maximaal
 **acht** displayschermen die u zelf configureert (zie
 [Displays](../displays/index.md)), waartussen u wisselt met de `PAGE`-toets
 of met een veegbeweging op het touchscreen. Een nieuw aangemaakt model begint met slechts één scherm
