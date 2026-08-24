@@ -42,15 +42,20 @@ jobs:
       # pandoc + xelatex, for scripts/build_pdf_latex.py -- the PDF pipeline
       # locales in hooks/_locales.py's PDF_LATEX_LOCALES use instead of the
       # Playwright one above (French, initially). texlive-latex-extra
-      # provides tcolorbox (admonition boxes), texlive-lang-french the
-      # French hyphenation patterns, fonts-noto the mainfont
-      # (book_metadata() in that script sets mainfont: "Noto Sans").
+      # provides tcolorbox (admonition boxes) and ucharclasses (per-script
+      # font fallback -- see book_metadata()'s docstring), texlive-lang-
+      # french the French hyphenation patterns. fonts-noto is the mainfont
+      # (book_metadata() sets mainfont: "Noto Sans") plus its Hebrew
+      # fallback; fonts-noto-cjk and fonts-dejavu-core are listed
+      # separately because they're each needed for exactly one of
+      # book_metadata()'s other fallback fonts and aren't guaranteed
+      # pulled in by fonts-noto alone on every Ubuntu version.
       - name: Install pandoc and TeX Live (for scripts/build_pdf_latex.py)
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             pandoc texlive-xetex texlive-latex-extra texlive-fonts-extra \
-            texlive-lang-french fonts-noto
+            texlive-lang-french fonts-noto fonts-noto-cjk fonts-dejavu-core
 
       - name: Validate build
         run: mkdocs build --strict

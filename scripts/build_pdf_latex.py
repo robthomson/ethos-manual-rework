@@ -73,6 +73,7 @@ ADMONITION_TYPES = {"note", "tip", "warning", "danger", "example"}
 FRONT_MATTER_RE = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
 ADMONITION_START_RE = re.compile(r'^!!! (\w+)(?:\s+"([^"]*)")?\s*$')
 HEADING_RE = re.compile(r"^(#{1,6})(\s)")
+HEADING_ATTR_RE = re.compile(r"^(#{1,6}\s.*?)\s*\{:\s*(.*?)\s*\}\s*$")
 FENCE_RE = re.compile(r"^\s*(```+|~~~+)")
 IMAGE_RE = re.compile(r'(!\[[^\]]*\]\()([^)\s]+)((?:\s+"[^"]*")?\))')
 URL_RE = re.compile(r"^[a-zA-Z][a-zA-Z0-9+.-]*://")
@@ -123,6 +124,29 @@ def shift_headings(text: str, delta: int) -> str:
     for line, in_fence in _walk_lines_tracking_fences(text):
         if not in_fence and HEADING_RE.match(line):
             line = ("#" * delta) + line
+        out.append(line)
+    return "\n".join(out) + "\n"
+
+
+def convert_heading_attrs(text: str) -> str:
+    """mkdocs/python-markdown's `attr_list` heading-ID syntax
+    (`## Heading {: #some-id }` -- used across docs/fr wherever a page's
+    English original has other pages linking to it by anchor, see
+    docs/en/contributing/index.md's `attr_list` guidance) isn't pandoc
+    markdown syntax; left alone, pandoc's reader treats the whole
+    `{: #some-id }` as literal heading text, so it leaks into the printed
+    heading itself and the TOC. Pandoc's own heading-attribute syntax is
+    the same idea without the leading colon (`## Heading {#some-id}`), so
+    this just reshapes one into the other. Skips fenced code blocks, since
+    docs/en/contributing/index.md itself shows this exact syntax as a
+    `markdown` code sample, which must stay literal.
+    """
+    out = []
+    for line, in_fence in _walk_lines_tracking_fences(text):
+        if not in_fence:
+            match = HEADING_ATTR_RE.match(line)
+            if match:
+                line = f"{match.group(1)} {{{match.group(2)}}}"
         out.append(line)
     return "\n".join(out) + "\n"
 
@@ -222,6 +246,7 @@ def convert_admonitions(text: str) -> str:
 def preprocess_page(source_file: Path) -> tuple[str, list[str]]:
     text = source_file.read_text(encoding="utf-8")
     text = strip_front_matter(text)
+    text = convert_heading_attrs(text)
     text = rewrite_image_paths(text, source_file)
     text, missing = defuse_missing_images(text)
     text = convert_admonitions(text)
@@ -283,6 +308,17 @@ ADMONITION_COLORS = {
     "example": "57606A",
 }
 
+# Fallback fonts for Unicode blocks "Noto Sans" (the mainfont) doesn't
+# cover, keyed by the \newfontfamily command name book_metadata()'s
+# header-includes binds each one to. See that function's docstring for how
+# these were chosen (empirically, by actually running xelatex) and why
+# each one is wrapped in \IfFontExistsTF rather than assumed present.
+FALLBACK_FONTS = {
+    "admonSymbolFont": "DejaVu Sans",  # Arrows, MathematicalOperators (e.g. →, −)
+    "admonHebrewFont": "Noto Sans Hebrew",
+    "admonCJKFont": "Noto Sans CJK SC",
+}
+
 
 def book_metadata(locale: str, display_name: str, version: str, generated: str) -> str:
     """The merged book's own single pandoc YAML metadata block -- title,
@@ -290,16 +326,52 @@ def book_metadata(locale: str, display_name: str, version: str, generated: str) 
     for scripts/pdf_latex/admonitions.lua's boxes and forcing figures to
     stay put (`[H]`) rather than float away from the text referencing them.
     Adapted from C:\\GitHub\\ethos-manual's french/styles.md, dropping what
-    doesn't apply here (no CJK font -- no CJK content in any locale opted
-    into this pipeline yet; no CSL/bibliography -- nothing in this manual
-    cites sources; no `links-as-notes` -- this content is link-dense with
-    internal cross-references, and turning every one into a footnote
-    showing a bare, inert `../foo.md` target would be actively worse here
-    than the underlined-link default).
+    doesn't apply here (no CSL/bibliography -- nothing in this manual cites
+    sources; no `links-as-notes` -- this content is link-dense with internal
+    cross-references, and turning every one into a footnote showing a bare,
+    inert `../foo.md` target would be actively worse here than the
+    underlined-link default).
+
+    "Noto Sans" alone doesn't cover every glyph docs/fr's real content
+    actually uses -- menu-navigation notation ("Système → Info") and a
+    signed voltage figure use → and − throughout, and
+    system-setup/general.md's list of the radio firmware's own menu
+    languages spells a couple of them natively (中文, עברית). xelatex
+    doesn't error on an unsupported glyph, it just silently drops it from
+    the page -- a worse failure mode than an error, and only found by
+    actually running this script's output through xelatex and reading the
+    "Missing character" warnings.
+
+    Pandoc's `mainfontfallback` metadata field looked like the built-in fix
+    (per-font per-project fallback lists), but empirically does nothing
+    with this pandoc version's default LaTeX template (verified via
+    `pandoc --to latex` on a real book.md -- no fallback code appears in
+    the output at all). fontspec itself has no automatic-fallback feature
+    for xelatex either (that's a lualatex-only luaotfload feature). What
+    actually works, tested directly against this exact set of characters:
+    the `ucharclasses` header-includes below, switching font by Unicode
+    block for the handful of ranges that need it and leaving everything
+    else on the mainfont. DejaVu Sans (not a Noto face) covers the Arrows
+    and MathematicalOperators blocks that "Noto Sans Symbols"/"Symbols2"
+    turned out, on testing, *not* to actually include despite the name.
+
+    Each fallback font is wrapped in `\\IfFontExistsTF` (falling back to
+    plain `mainfont` if not found) rather than an unconditional
+    `\\newfontfamily`, which errors out fatally -- aborting the whole
+    document, the exact failure mode this whole function exists to avoid --
+    if the named font isn't installed. "Noto Sans CJK SC" specifically
+    couldn't be verified locally (this repo's own dev sandbox has no CJK
+    font installed at all); it's guarded for that reason, even though
+    deploy.yml's apt install list does include fonts-noto-cjk.
     """
     color_defs = "\n  ".join(
         f"\\definecolor{{admon{kind.capitalize()}}}{{HTML}}{{{hex_}}}"
         for kind, hex_ in ADMONITION_COLORS.items()
+    )
+    fallback_font_defs = "\n  ".join(
+        f"\\IfFontExistsTF{{{font}}}{{\\newfontfamily\\{cmd}{{{font}}}}}"
+        f"{{\\newfontfamily\\{cmd}{{Noto Sans}}}}"
+        for cmd, font in FALLBACK_FONTS.items()
     )
     return f"""---
 title: "Ethos Manual"
@@ -329,6 +401,12 @@ header-includes:
   \\let\\origfigure\\figure
   \\let\\endorigfigure\\endfigure
   \\renewenvironment{{figure}}[1][2]{{\\expandafter\\origfigure\\expandafter[H]}}{{\\endorigfigure}}
+  \\usepackage{{ucharclasses}}
+  {fallback_font_defs}
+  \\setTransitionsFor{{Arrows}}{{\\admonSymbolFont}}{{\\normalfont}}
+  \\setTransitionsFor{{MathematicalOperators}}{{\\admonSymbolFont}}{{\\normalfont}}
+  \\setTransitionsFor{{Hebrew}}{{\\admonHebrewFont}}{{\\normalfont}}
+  \\setTransitionsFor{{CJKUnifiedIdeographs}}{{\\admonCJKFont}}{{\\normalfont}}
 ---
 
 """

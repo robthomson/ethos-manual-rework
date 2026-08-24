@@ -39,12 +39,15 @@ jobs:
       - name: Install Python dependencies
         run: pip install pyyaml
 
+      # fonts-noto-cjk/fonts-dejavu-core listed separately from fonts-noto --
+      # see deploy.yml's equivalent step for why (book_metadata()'s
+      # per-script fallback fonts each need one specifically).
       - name: Install pandoc and TeX Live
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             pandoc texlive-xetex texlive-latex-extra texlive-fonts-extra \
-            texlive-lang-french fonts-noto
+            texlive-lang-french fonts-noto fonts-noto-cjk fonts-dejavu-core
 
       - name: Build LaTeX PDF manual(s)
         run: |
