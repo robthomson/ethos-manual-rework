@@ -27,7 +27,11 @@ Same coverage bar as build_pdfs.py: only *fully covered* locales (every
 English page present, see hooks/_locales.py's fully_covered_locales()) that
 are also in PDF_LATEX_LOCALES get built. A locale can sit in
 PDF_LATEX_LOCALES ahead of reaching full coverage -- it just won't produce a
-PDF yet, same as any locale would under the Playwright pipeline.
+PDF yet, same as any locale would under the Playwright pipeline. Pass
+--include-partial to build one anyway (missing pages are skipped with a
+warning, not fatal) -- for exercising the pandoc/xelatex toolchain itself
+against a locale's real content before it reaches full coverage.
+deploy.yml's real build step never passes this.
 
 Requires the `pandoc` and `xelatex` binaries on PATH (see
 .github/workflows/deploy.yml for the apt packages that provide them) --
@@ -49,7 +53,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "hooks"))
-from _locales import fully_covered_locales, pdf_build_method  # noqa: E402
+from _locales import fully_covered_locales, list_locales, pdf_build_method  # noqa: E402
 from _nav import (  # noqa: E402
     load_mkdocs_config,
     localize_sections,
@@ -229,13 +233,28 @@ def build_book_body(locale: str, sections: list[dict], docs_dir: Path) -> tuple[
     returns how many missing-image markers defuse_missing_images() had to
     substitute along the way (0 in the common case) -- callers surface that
     count so a run that quietly patched over broken content doesn't look
-    identical to a clean one."""
+    identical to a clean one.
+
+    A page file itself not existing is only reachable via main()'s
+    --include-partial (the normal fully_covered_locales() gate guarantees
+    every page exists otherwise) -- skipped with a warning rather than
+    raising, same defusing-not-crashing posture as a missing image.
+    """
     locale_dir = docs_dir / locale
     parts: list[str] = []
     missing_count = 0
     for section in sections:
         for index, (_title, rel_path) in enumerate(section["pages"]):
-            text, missing = preprocess_page(locale_dir / rel_path)
+            source_file = locale_dir / rel_path
+            if not source_file.exists():
+                print(
+                    f"warning: {locale}/{rel_path} doesn't exist -- skipping "
+                    "(--include-partial build)",
+                    file=sys.stderr,
+                )
+                missing_count += 1
+                continue
+            text, missing = preprocess_page(source_file)
             if index > 0:  # not this section's landing page -- see shift_headings()
                 text = shift_headings(text, delta=1)
             for image_path in missing:
@@ -323,12 +342,24 @@ def build_locale_pdf(
     out_path: Path,
     version: str,
     generated: str,
+    debug_dir: Path | None = None,
 ) -> int:
     """Returns the missing-image count from build_book_body() -- 0 in the
-    common case -- so main() can print a build-wide summary."""
+    common case -- so main() can print a build-wide summary.
+
+    pandoc's own xelatex errors already surface directly in the caller's
+    terminal/CI log (subprocess.run() below doesn't capture that
+    subprocess's stdout/stderr, so they just inherit through); `debug_dir`,
+    if given, additionally saves the exact merged markdown pandoc was fed as
+    book-<locale>.md -- not written by default since it's only useful when
+    something's actually gone wrong.
+    """
     body, missing_count = build_book_body(locale, sections, docs_dir)
     book = book_metadata(locale, display_name, version, generated) + body
     out_path.parent.mkdir(parents=True, exist_ok=True)
+    if debug_dir is not None:
+        debug_dir.mkdir(parents=True, exist_ok=True)
+        (debug_dir / f"book-{locale}.md").write_text(book, encoding="utf-8")
     with tempfile.TemporaryDirectory(prefix="ethos-pdf-latex-") as tmp:
         book_path = Path(tmp) / "book.md"
         book_path.write_text(book, encoding="utf-8")
@@ -370,6 +401,21 @@ def main() -> None:
     parser.add_argument(
         "--version", default="dev", help="shown on the title page and in each output filename"
     )
+    parser.add_argument(
+        "--include-partial",
+        action="store_true",
+        help=(
+            "also build LaTeX-pipeline locales that aren't fully covered yet -- missing pages "
+            "are skipped with a warning rather than fatal (see build_book_body()). For testing "
+            "the pandoc/xelatex toolchain itself; deploy.yml's real build never passes this."
+        ),
+    )
+    parser.add_argument(
+        "--debug-dir",
+        type=Path,
+        default=None,
+        help="also save each locale's merged book-<locale>.md here (see build_locale_pdf())",
+    )
     args = parser.parse_args()
 
     config = load_mkdocs_config(args.mkdocs_yml)
@@ -377,13 +423,12 @@ def main() -> None:
     names = locale_names(config)
     generated = date.today().isoformat()
 
-    locales = [
-        loc
-        for loc in fully_covered_locales(args.docs_dir)
-        if pdf_build_method(loc) == "latex"
-    ]
+    candidate_locales = (
+        list_locales(args.docs_dir) if args.include_partial else fully_covered_locales(args.docs_dir)
+    )
+    locales = [loc for loc in candidate_locales if pdf_build_method(loc) == "latex"]
     if not locales:
-        print("no fully-covered locale is on the LaTeX pipeline -- nothing to build")
+        print("no locale on the LaTeX pipeline is eligible to build -- nothing to build")
         return
 
     total_missing = 0
@@ -397,6 +442,7 @@ def main() -> None:
             args.out_dir / pdf_filename(args.version, locale),
             args.version,
             generated,
+            debug_dir=args.debug_dir,
         )
 
     # Missing images don't fail the build (see defuse_missing_images()'s
