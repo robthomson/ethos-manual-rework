@@ -1,4 +1,11 @@
-"""Renders one combined PDF manual per fully-covered locale (plus English).
+"""Renders one combined PDF manual per fully-covered locale (plus English)
+that uses the Playwright pipeline -- see hooks/_locales.py's
+PDF_LATEX_LOCALES/pdf_build_method() for the per-locale choice between this
+script and scripts/build_pdf_latex.py's pandoc/xelatex pipeline (French,
+initially). Both write into the same --out-dir with the same
+ethos-manual-<version>-<locale>.pdf naming, so deploy.yml's release-upload
+step picks up either's output without needing to know which pipeline built
+it.
 
 Deliberately doesn't run as an mkdocs plugin/hook. mkdocs-static-i18n builds
 each locale through its own nested, complete build pass within a single
@@ -47,7 +54,6 @@ from html import escape
 from pathlib import Path
 
 import material
-import yaml
 from playwright.async_api import Browser, async_playwright
 from pypdf import PdfReader, PdfWriter
 from pypdf.annotations import Link
@@ -55,7 +61,14 @@ from reportlab.pdfgen import canvas as reportlab_canvas
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "hooks"))
-from _locales import fully_covered_locales  # noqa: E402
+from _locales import fully_covered_locales, pdf_build_method  # noqa: E402
+from _nav import (  # noqa: E402
+    load_mkdocs_config,
+    localize_sections,
+    locale_names,
+    nav_sections,
+    nav_translations_for,
+)
 
 CONCURRENCY = 6
 
@@ -193,67 +206,6 @@ TOC_ROW = (
 )
 
 
-def load_mkdocs_config(mkdocs_yml: Path) -> dict:
-    return yaml.safe_load(mkdocs_yml.read_text(encoding="utf-8"))
-
-
-def nav_sections(config: dict) -> list[dict]:
-    """Top-level `nav:` entries, preserving titles and grouping -- used to
-    build the PDF's table of contents (nav_pages() below only needed the
-    flat path list, and threw titles away).
-
-    Each entry is {"title": str, "pages": [(title, md_path), ...]}. A
-    section that's a single leaf (e.g. "Home: index.md") has exactly one
-    page, whose title matches the section title. A section that's a group
-    (e.g. "Getting Started:") may start with a bare, title-less landing
-    page -- `pages[0]` reuses the section's own title for that one --
-    followed by its labelled sub-pages.
-    """
-    sections = []
-    for entry in config["nav"]:
-        if not isinstance(entry, dict):
-            continue
-        for title, value in entry.items():
-            pages: list[tuple[str, str]] = []
-            if isinstance(value, str):
-                pages.append((title, value))
-            elif isinstance(value, list):
-                for item in value:
-                    if isinstance(item, str):
-                        pages.append((title, item))
-                    elif isinstance(item, dict):
-                        for sub_title, sub_value in item.items():
-                            pages.append((sub_title, sub_value))
-            sections.append({"title": title, "pages": pages})
-    return sections
-
-
-def nav_pages(config: dict) -> list[str]:
-    """Ordered list of docs_dir-relative .md paths, flattened from nav_sections()."""
-    return [path for section in nav_sections(config) for _, path in section["pages"]]
-
-
-def nav_translations_for(config: dict, locale: str) -> dict[str, str]:
-    """English title -> translated title, from that locale's i18n plugin config."""
-    for plugin in config["plugins"]:
-        if isinstance(plugin, dict) and "i18n" in plugin:
-            for language in plugin["i18n"]["languages"]:
-                if language["locale"] == locale:
-                    return language.get("nav_translations", {})
-    return {}
-
-
-def localize_sections(sections: list[dict], translations: dict[str, str]) -> list[dict]:
-    """Swap each section/page title for its nav_translations entry, where one exists."""
-    return [
-        {
-            "title": translations.get(section["title"], section["title"]),
-            "pages": [(translations.get(t, t), p) for t, p in section["pages"]],
-        }
-        for section in sections
-    ]
-
-
 def toc_label(locale: str) -> str:
     """"Table of contents" in this locale (see MATERIAL_LANG_DIR above)."""
     path = MATERIAL_LANG_DIR / f"{locale}.html"
@@ -337,16 +289,6 @@ def make_footer_overlay(width_pt: float, height_pt: float, page_number: int, lab
     c.save()
     buf.seek(0)
     return PdfReader(buf).pages[0]
-
-
-def locale_names(config: dict) -> dict[str, str]:
-    """locale -> display name (e.g. "fr" -> "Français"), from the i18n plugin config."""
-    names = {}
-    for plugin in config["plugins"]:
-        if isinstance(plugin, dict) and "i18n" in plugin:
-            for language in plugin["i18n"]["languages"]:
-                names[language["locale"]] = language["name"]
-    return names
 
 
 def page_url(md_path: str) -> str:
@@ -494,7 +436,13 @@ async def main_async(args: argparse.Namespace) -> None:
     names.setdefault("en", "English")
 
     docs_dir = REPO_ROOT / config["docs_dir"]
-    locales = ["en", *fully_covered_locales(docs_dir)]
+    # "en" plus every fully-covered locale *not* opted into the LaTeX
+    # pipeline (see hooks/_locales.py's PDF_LATEX_LOCALES) --
+    # scripts/build_pdf_latex.py handles the rest, into the same --out-dir.
+    locales = [
+        "en",
+        *(loc for loc in fully_covered_locales(docs_dir) if pdf_build_method(loc) == "playwright"),
+    ]
     generated = date.today().isoformat()
 
     base_url = args.base_url.rstrip("/")
