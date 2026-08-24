@@ -1,0 +1,77 @@
+name: Test LaTeX PDF (scratch)
+
+# Manual, side-effect-free way to exercise scripts/build_pdf_latex.py in an
+# environment that actually has pandoc/xelatex -- unlike deploy.yml, this
+# never touches gh-pages and never creates a release; it just uploads
+# whatever PDF(s) (and, on failure or if requested, the merged book.md
+# pandoc was fed) come out as a downloadable workflow artifact. Delete this
+# workflow once the LaTeX pipeline's been exercised enough to trust
+# deploy.yml's own "Build LaTeX PDF manuals" step directly.
+on:
+  workflow_dispatch:
+    inputs:
+      include_partial:
+        description: >-
+          Build LaTeX-pipeline locales even if not fully translated yet
+          (missing pages skipped with a warning -- see
+          build_pdf_latex.py's --include-partial). Leave on until a locale
+          reaches full page coverage, otherwise there's nothing to build.
+        type: boolean
+        default: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # scripts/build_pdf_latex.py only needs PyYAML (via scripts/_nav.py)
+      # -- not the full requirements.txt, which also pulls in mkdocs/
+      # playwright/etc. for the unrelated Playwright pipeline.
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      # fonts-noto-cjk/fonts-dejavu-core listed separately from fonts-noto --
+      # see deploy.yml's equivalent step for why (book_metadata()'s
+      # per-script fallback fonts each need one specifically).
+      - name: Install pandoc and TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc texlive-xetex texlive-latex-extra texlive-fonts-extra \
+            texlive-lang-french fonts-noto fonts-noto-cjk fonts-dejavu-core
+
+      - name: Build LaTeX PDF manual(s)
+        run: |
+          python scripts/build_pdf_latex.py \
+            --out-dir pdf-dist \
+            --version test \
+            --debug-dir pdf-debug \
+            ${{ inputs.include_partial && '--include-partial' || '' }}
+
+      - name: Upload PDF(s)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-pdf
+          path: pdf-dist/*.pdf
+          if-no-files-found: warn
+
+      # The merged markdown pandoc was actually fed -- useful for reading
+      # the exact source of a xelatex error, which otherwise only names a
+      # line number in a temp file that no longer exists once this job ends.
+      - name: Upload merged book.md (debug)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: latex-pdf-debug
+          path: pdf-debug/*.md
+          if-no-files-found: ignore

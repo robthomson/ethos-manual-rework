@@ -39,8 +39,35 @@ jobs:
       - name: Install Playwright's Chromium (for scripts/build_pdfs.py)
         run: python -m playwright install --with-deps chromium
 
+      # pandoc + xelatex, for scripts/build_pdf_latex.py -- the PDF pipeline
+      # locales in hooks/_locales.py's PDF_LATEX_LOCALES use instead of the
+      # Playwright one above (French, initially). texlive-latex-extra
+      # provides tcolorbox (admonition boxes) and ucharclasses (per-script
+      # font fallback -- see book_metadata()'s docstring), texlive-lang-
+      # french the French hyphenation patterns. fonts-noto is the mainfont
+      # (book_metadata() sets mainfont: "Noto Sans") plus its Hebrew
+      # fallback; fonts-noto-cjk and fonts-dejavu-core are listed
+      # separately because they're each needed for exactly one of
+      # book_metadata()'s other fallback fonts and aren't guaranteed
+      # pulled in by fonts-noto alone on every Ubuntu version.
+      - name: Install pandoc and TeX Live (for scripts/build_pdf_latex.py)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc texlive-xetex texlive-latex-extra texlive-fonts-extra \
+            texlive-lang-french fonts-noto fonts-noto-cjk fonts-dejavu-core
+
       - name: Validate build
         run: mkdocs build --strict
+
+      # Reads docs/<locale>/**/*.md straight from this checkout -- unlike
+      # the Playwright pipeline below, it needs no built site and no local
+      # HTTP server, so it runs standalone, this early, order-independent
+      # relative to the mike/gh-pages steps that follow (writes into the
+      # same pdf-dist/ the Playwright step below also writes into, under
+      # its own per-locale filenames -- see both scripts' docstrings).
+      - name: Build LaTeX PDF manuals
+        run: python scripts/build_pdf_latex.py --out-dir pdf-dist --version 26.1
 
       - name: Configure git identity
         run: |
@@ -69,7 +96,9 @@ jobs:
       # Chromium into pdf-dist/ -- see scripts/build_pdfs.py's docstring for
       # why this runs as a separate, standalone step instead of an mkdocs
       # plugin, and why the PDFs land in a release rather than gh-pages.
-      - name: Build PDF manuals
+      # Covers every locale *not* on the LaTeX pipeline above (which already
+      # wrote its own locales' PDFs into pdf-dist/ earlier in this job).
+      - name: Build PDF manuals (Playwright)
         run: |
           python -m http.server 8000 --directory pages/26.1 &
           server_pid=$!

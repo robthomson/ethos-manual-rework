@@ -67,3 +67,19 @@ def fully_covered_locales(docs_dir: Path) -> list[str]:
         for locale in list_locales(docs_dir)
         if locale != "en" and not missing_pages(docs_dir, locale, pages)
     ]
+
+
+# Which locales render their PDF manual via the LaTeX/pandoc pipeline
+# (scripts/build_pdf_latex.py) instead of the default Playwright one
+# (scripts/build_pdfs.py). A per-locale choice, not a global switch -- French
+# is first because it's the locale that already had a LaTeX-based manual in
+# the predecessor repo (C:\GitHub\ethos-manual's french/forge/pdf.py) to
+# model this on. Add a locale here once its PDF should switch pipelines;
+# nothing else needs to change to do so.
+PDF_LATEX_LOCALES = {"fr"}
+
+
+def pdf_build_method(locale: str) -> str:
+    """"latex" or "playwright" -- which of the two PDF-export scripts owns
+    building this locale's manual. See PDF_LATEX_LOCALES above."""
+    return "latex" if locale in PDF_LATEX_LOCALES else "playwright"
