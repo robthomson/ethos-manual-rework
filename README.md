@@ -25,8 +25,11 @@ All content lives under `docs/<locale>/`, currently just `docs/en/`. Screenshots
 live alongside the content in `docs/en/assets/` — they're captured per-language
 (the radio UI itself is localized), so each locale will eventually have its
 own `assets/` folder rather than a shared one. The site navigation is defined
-by hand in `mkdocs.yml`; add new pages there as well as under `docs/en/` for
-them to appear in the nav.
+in [`docs/en/SUMMARY.md`](docs/en/SUMMARY.md) (one line per page, nested
+under its section); add new pages there as well as under `docs/en/` for
+them to appear in the nav. Per-locale nav titles are separate, in
+`mkdocs.yml`'s `nav_translations:` blocks — see
+[`docs/en/contributing/adding-a-language.md`](docs/en/contributing/adding-a-language.md).
 
 See [`docs/en/contributing/screenshot-pipeline.md`](docs/en/contributing/screenshot-pipeline.md)
 for how the screenshots are (and will again be) generated from the Ethos

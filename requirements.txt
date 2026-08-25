@@ -1,5 +1,16 @@
+# <2 pinned deliberately: MkDocs 2.0 removes the plugin system entirely
+# (nav becomes pre-rendered HTML handed to themes) and has no migration
+# path for existing projects -- everything below this line stops working
+# under it regardless of version bumps. Revisit if/when this site
+# actually needs to move off 1.x (likely to ProperDocs, a drop-in
+# continuation of 1.x -- see https://github.com/orgs/ProperDocs/discussions/33
+# -- rather than 2.0 itself), not as a side effect of an unpinned upgrade.
+mkdocs>=1.6,<2
 mkdocs-material>=9.5
 mkdocs-static-i18n>=1.2
+# Nav is now authored as docs/en/SUMMARY.md instead of mkdocs.yml's nav:
+# block -- see that file's own top comment and scripts/_nav.py.
+mkdocs-literate-nav>=0.6
 mike>=2.0
 
 # scripts/build_pdfs.py -- PDF manual export, run as a separate CI step

@@ -497,7 +497,7 @@ def main() -> None:
     args = parser.parse_args()
 
     config = load_mkdocs_config(args.mkdocs_yml)
-    sections = nav_sections(config)
+    sections = nav_sections(config, args.docs_dir)
     names = locale_names(config)
     generated = date.today().isoformat()
 
