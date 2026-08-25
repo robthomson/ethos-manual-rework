@@ -14,7 +14,7 @@ The Battery section is for calibrating the radio batteries and setting the alarm
 
 This is the alarm threshold voltage. The default is 7.2V. A value of 7.4V would give an extra safety margin.
 
-A Warning dialog will be opened, and a speech 'Radio battery is low' alert will be given every minute when the main radio battery voltage drops below the threshold set here if the ‘Main voltage’ check is ON in System / Alerts / [Main voltage](../system-setup/alerts.md).
+A Warning dialog will be opened, and a speech 'Radio battery is low' alert will be given every minute when the main radio battery voltage drops below the threshold set here if the ‘Main voltage’ check is ON in System / Alerts / [Main voltage](alerts.md).
 
 ### Warning!
 
@@ -32,4 +32,4 @@ If the battery is changed to a different type, then the limits must be set appro
 
 ## RTC voltage
 
-Shows the voltage of RTC (Real Time Clock) battery in the radio. The voltage is 3.0v for a new battery. If the voltage is below 2.7v please replace the battery inside the radio to ensure the clock runs properly. If the voltage drops below 2.5V, and alert will be given, please refer to Alerts / [RTC voltage](../system-setup/alerts.md).
+Shows the voltage of RTC (Real Time Clock) battery in the radio. The voltage is 3.0v for a new battery. If the voltage is below 2.7v please replace the battery inside the radio to ensure the clock runs properly. If the voltage drops below 2.5V, and alert will be given, please refer to Alerts / [RTC voltage](alerts.md).

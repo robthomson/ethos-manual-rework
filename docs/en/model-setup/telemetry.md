@@ -191,7 +191,7 @@ Edit sensor options include data logging and configuring thresholds. When the se
 
 #### Settings tab
 
-The settings tab is used for enabling ‘competition only’ mode, and enabling Bluetooth for sending telemetry and for enabling an ‘Individual RSSI alert per band’ for TD and TW receivers. Please refer to the ‘[Settings tab](../model-setup/telemetry.md)’ below.
+The settings tab is used for enabling ‘competition only’ mode, and enabling Bluetooth for sending telemetry and for enabling an ‘Individual RSSI alert per band’ for TD and TW receivers. Please refer to the ‘[Settings tab](telemetry.md)’ below.
 
 ### Sensors tab options
 
@@ -243,7 +243,7 @@ AccZ, the Acceleration in the Z axis of the receiver
 
 AccX, the Acceleration in the X axis of the receiver
 
-Note that the minimum and maximum values are also defined for each sensor, even though they are not displayed on the sensor list. For example, when Altitude is defined, Altitude- and Altitude+ for the minimum and maximum altitude also become available. Please refer to [Sensor options](../user-interface-and-navigation/editing-controls.md) for details.
+Note that the minimum and maximum values are also defined for each sensor, even though they are not displayed on the sensor list. For example, when Altitude is defined, Altitude- and Altitude+ for the minimum and maximum altitude also become available. Please refer to [Sensor options](../getting-started/user-interface-and-navigation.md) for details.
 
 Sensor discovery must be done for every model, and every time a new sensor is added.
 
@@ -313,7 +313,7 @@ When enabled, the sensor data will be logged to the SD card or eMMC.
 
 ##### Reset
 
-A source can be configured to reset the sensor. Note that the reset will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](../model-setup/telemetry.md).
+A source can be configured to reset the sensor. Note that the reset will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](telemetry.md).
 
 ##### Sensor lost warning delay
 
@@ -405,7 +405,7 @@ When enabled, the sensor data will be logged to the SD card or eMMC.
 
 ##### Reset
 
-A source can be configured to reset the sensor. Note that the reset will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](../model-setup/telemetry.md).
+A source can be configured to reset the sensor. Note that the reset will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](telemetry.md).
 
 ##### Sensor lost warning delay
 
@@ -413,7 +413,7 @@ When set to ‘Warning disabled’ it will suppress the sensor lost warning. Alt
 
 On the receiver this warning is disabled by default because it is unlikely to be lost because it is internal.
 
-Note: The vario related settings are now in the ‘[Play vario](../model-setup/special-functions.md)’ special function.
+Note: The vario related settings are now in the ‘[Play vario](special-functions.md)’ special function.
 
 #### Create DIY Sensor
 
@@ -475,7 +475,7 @@ When enabled, the sensor data will be logged to the SD card or eMMC. Logs are en
 
 ##### Reset
 
-A source can be configured to reset the sensor. Note that the reset will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](../model-setup/telemetry.md).
+A source can be configured to reset the sensor. Note that the reset will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](telemetry.md).
 
 ##### Sensor lost warning delay
 
@@ -919,4 +919,4 @@ Telemetry may also be forwarded in FBUS format via the S.Port connector on top o
 
 ![](../assets/model-telemetry-rssi-individual-alert.png)
 
-When using TD or TW protocols, there is an option to receive Individual RSSI voice alerts per band. Please refer to the [RSSI](../model-setup/telemetry.md) section above.
+When using TD or TW protocols, there is an option to receive Individual RSSI voice alerts per band. Please refer to the [RSSI](telemetry.md) section above.

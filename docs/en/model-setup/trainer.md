@@ -54,7 +54,7 @@ The trainer cable mode may be changed to Master to configure the radio for the t
 
 ##### Trainer master configuration
 
-Please refer to the [Trainer master configuration](../model-setup/trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
+Please refer to the [Trainer master configuration](trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
 
 #### Trainer cable options
 
@@ -234,11 +234,11 @@ There are 2 protocol options for a for slave trainer link using the external mod
 
 ##### SBUS
 
-Please refer to the [SBUS](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for an SBUS trainer connection.
+Please refer to the [SBUS](rf-system.md) section in Model /RF for details on configuring the external module interface for an SBUS trainer connection.
 
 ##### PPM\`
 
-Please refer to the [PPM](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for a PPM trainer connection.
+Please refer to the [PPM](rf-system.md) section in Model /RF for details on configuring the external module interface for a PPM trainer connection.
 
 ##### Channel range
 
@@ -256,15 +256,15 @@ There are 2 protocol options for a for master trainer link using the external mo
 
 ##### Trainer master (SBUS)
 
-Please refer to the [Trainer master (SBUS)](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for an SBUS trainer connection.
+Please refer to the [Trainer master (SBUS)](rf-system.md) section in Model /RF for details on configuring the external module interface for an SBUS trainer connection.
 
 ##### Trainer master (PPM)
 
-Please refer to the [Trainer master (PPM)](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for a PPM trainer connection.
+Please refer to the [Trainer master (PPM)](rf-system.md) section in Model /RF for details on configuring the external module interface for a PPM trainer connection.
 
 ##### Trainer master configuration
 
-Please refer to the [Trainer master configuration](../model-setup/trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
+Please refer to the [Trainer master configuration](trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
 
 #### Trainer cable options
 
@@ -306,7 +306,7 @@ The S.Port connector trainer mode may be changed to Master to configure the radi
 
 ##### Trainer master configuration
 
-Please refer to the [Trainer master configuration](../model-setup/trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
+Please refer to the [Trainer master configuration](trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
 
 #### Trainer cable options
 

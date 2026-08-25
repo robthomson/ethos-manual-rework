@@ -20,7 +20,7 @@ The ‘Owner registration ID’ is compatible with EdgeTX but only partly compat
 
 ## Internal module TD-ISRM (X18 and X20/S/HD)
 
-For the TD ISRM Pro RF module please refer to the [Internal Module TD-ISRM Pro](../model-setup/rf-system.md) section.
+For the TD ISRM Pro RF module please refer to the [Internal Module TD-ISRM Pro](rf-system.md) section.
 
 ### Overview
 
@@ -52,13 +52,13 @@ Please refer to the ACCESS section below for configuration details.
 
 In ACCST D16 the RF module becomes a single 2.4G RF path.
 
-Please refer to the [ACCST D16](../model-setup/rf-system.md) section below.
+Please refer to the [ACCST D16](rf-system.md) section below.
 
 #### TD mode
 
 In TD mode the RF module is in a low latency long range mode using the 2.4G and 900M RF links in Tandem to work with the new Tandem receivers. Tandem supports 24 channels on both bands.
 
-Please refer to the [TD Mode](../model-setup/rf-system.md) section below.
+Please refer to the [TD Mode](rf-system.md) section below.
 
 ### Flex firmware options
 
@@ -249,7 +249,7 @@ Tap on Options:
 
 *High PWM Speed*: Servo update rates are completely determined by the receiver.  This checkbox enables a 7ms PWM update rate (vs 18ms standard). Ensure that your servos can handle this update rate.
 
-Please refer to the [Channel Range (Access) section](../model-setup/rf-system.md) for details on the update rate set at the transmitter.
+Please refer to the [Channel Range (Access) section](rf-system.md) for details on the update rate set at the transmitter.
 
 ![](../assets/Pictures/1000000000000320000001E0763FFB50.png)
 
@@ -801,7 +801,7 @@ Please also refer to the Telemetry section for a discussion on [VFR and RSSI](#R
 
 ## Internal Module TD-ISRM Pro (X20 Pro/R/RS)
 
-For the TD ISRM RF module please refer to the [Internal module TD-ISRM](../model-setup/rf-system.md) section.
+For the TD ISRM RF module please refer to the [Internal module TD-ISRM](rf-system.md) section.
 
 ### Overview
 
@@ -841,13 +841,13 @@ Refer to the ACCESS/ACCST D16 section below.
 
 In TD Mode the RF module is in a low latency long range mode using the 2.4G and 900M RF links in Tandem to work with up to three Tandem receivers. Tandem supports 24 channels on both bands.
 
-This mode is similar to the TD Mode in the X20. Please refer to the [TD Mode](../model-setup/rf-system.md) section for setup details.
+This mode is similar to the TD Mode in the X20. Please refer to the [TD Mode](rf-system.md) section for setup details.
 
 ##### TW 2.4G TWIN/900M.
 
 In TW mode there is one 2.4G FSK and one 2.4G LoRa RF link for use with up to three TWIN receivers. There is a 900M receiver option for redundancy, via the SBUS IN/OUT ports. This further enhances the RF signal's reliability, particularly in scenarios involving long-distance RC operations.
 
-Refer to the [TW Mode](../model-setup/rf-system.md) section below.
+Refer to the [TW Mode](rf-system.md) section below.
 
 ##### TD-Pro
 
@@ -865,7 +865,7 @@ In ACCESS/ACCST D16 mode the 2.4G and 900M RF paths can work in tandem with one 
 
 ![](../assets/Pictures/1000000000000320000001E07D045559.png)
 
-This mode is similar to the ACCESS mode in the X20. Up to a total of three ACCESS or 900M receivers may be bound. Please refer to the [X20 ACCESS](../model-setup/rf-system.md) section for setup details.
+This mode is similar to the ACCESS mode in the X20. Up to a total of three ACCESS or 900M receivers may be bound. Please refer to the [X20 ACCESS](rf-system.md) section for setup details.
 
 #### ACCST D16 with a 900M receiver option for redundancy
 
@@ -951,7 +951,7 @@ LBT: Select the RF Power desired between 25mW (telemetry via 868MHz), 200mW or 5
 
 ![](../assets/Pictures/1000000000000320000001E0F124A04C.png)
 
-If your receiver has not yet been registered, initiate the registration process by selecting \[Register\]. The steps are the same as those described in the [ACCESS](../model-setup/rf-system.md) section.
+If your receiver has not yet been registered, initiate the registration process by selecting \[Register\]. The steps are the same as those described in the [ACCESS](rf-system.md) section.
 
 Switch off the receivers.
 
@@ -1260,7 +1260,7 @@ Tap on Options:
 
 *High PWM Speed*: Servo update rates are completely determined by the receiver.  This checkbox enables a 7ms PWM update rate (vs 18ms standard). Ensure that your servos can handle this update rate.
 
-Please refer to the [Channel Range (TW) section](../model-setup/rf-system.md) for details on the update rate set at the transmitter.
+Please refer to the [Channel Range (TW) section](rf-system.md) for details on the update rate set at the transmitter.
 
 ![](../assets/Pictures/1000000000000320000001E0A55085F5.png)
 
@@ -1348,7 +1348,7 @@ Our example below shows a 900M receiver being added.
 
 1. Connect the SBUS Out port of the redundant receiver to the SBUS IN port of the main receiver.
 
-Please note that you may have to reassign a receiver port to the SBUS IN function. Please refer to the [Channel Mapping](../model-setup/rf-system.md) section.
+Please note that you may have to reassign a receiver port to the SBUS IN function. Please refer to the [Channel Mapping](rf-system.md) section.
 
 ![](../assets/Pictures/1000000000000320000001E06ED253CD.png)
 
@@ -1659,7 +1659,7 @@ Tap on Options:
 
 *High PWM Speed*: Servo update rates are completely determined by the receiver.  This checkbox enables a 7ms PWM update rate (vs 18ms standard). Ensure that your servos can handle this update rate.
 
-Please refer to the [Channel Range (Access) section](../model-setup/rf-system.md) for details on the update rate set at the transmitter.
+Please refer to the [Channel Range (Access) section](rf-system.md) for details on the update rate set at the transmitter.
 
 ![](../assets/Pictures/1000000000000320000001E0FDCA0F39.png)
 
@@ -1819,7 +1819,7 @@ The above two screenshots show the typical sensors received from an ELRS receive
 
 ![](../assets/model-rf-trainer-ppm.png)
 
-The External RF Module can operate in PPM mode. Please refer to the [External module](../model-setup/trainer.md) section in Model / Trainer for details on configuring a slave trainer using PPM Out on the PXX OUT pin in the external module bay.
+The External RF Module can operate in PPM mode. Please refer to the [External module](trainer.md) section in Model / Trainer for details on configuring a slave trainer using PPM Out on the PXX OUT pin in the external module bay.
 
 ##### Channels Range
 
@@ -1829,7 +1829,7 @@ By default channels 1 to 8 are transmitted.
 
 ![](../assets/model-rf-trainer-sbus.png)
 
-The External RF Module can operate in SBUS mode. Please refer to the [External module](../model-setup/trainer.md) section in Model / Trainer for details on configuring a slave trainer using SBUS Out on the PXX OUT pin in the external module bay.
+The External RF Module can operate in SBUS mode. Please refer to the [External module](trainer.md) section in Model / Trainer for details on configuring a slave trainer using SBUS Out on the PXX OUT pin in the external module bay.
 
 ##### Channels Range
 
@@ -1845,7 +1845,7 @@ The External RF Module can be configured to operate as ‘Trainer master’ in P
 
 ##### Trainer master configuration
 
-Please refer to the [Trainer master configuration](../model-setup/trainer.md) section for details on configuring Trainer master mode.
+Please refer to the [Trainer master configuration](trainer.md) section for details on configuring Trainer master mode.
 
 ##### External module connections
 
@@ -1863,7 +1863,7 @@ The External RF Module can be configured to operate as ‘Trainer master’ in S
 
 ##### Trainer master configuration
 
-Please refer to the [Trainer master configuration](../model-setup/trainer.md) section for details on configuring Trainer master mode.
+Please refer to the [Trainer master configuration](trainer.md) section for details on configuring Trainer master mode.
 
 ##### External module connections
 

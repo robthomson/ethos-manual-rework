@@ -66,7 +66,7 @@ The condition is True if the absolute value of the selected source 'A' is less t
 
 The condition is True if the change in value 'd' (i.e. delta) of the selected source ‘A’ is greater than or equal to the user defined value 'X', within the 'Check interval'. If the 'Check interval' is set to '---', then the check interval becomes infinite.
 
-Please refer to [this example](../programming-tutorials/how-to-section.md) for one use of the Delta function.
+Please refer to this example for one use of the Delta function.
 
 #### |∆| > X
 
@@ -224,7 +224,7 @@ Note that the Sticky function continues to operate, even if its output is gated 
 
 This value determines the time for which the logic switch conditions have to be True before the logic switch output becomes True (Not relevant to Timer Generator and Edge). Delays can go up to 60.0s.
 
-Please refer to [this example](../programming-tutorials/how-to-section.md) about the Neuron ESC voltage going below 4.2V for at least x seconds.
+Please refer to this example about the Neuron ESC voltage going below 4.2V for at least x seconds.
 
 ### Delay before inactive
 
@@ -304,4 +304,4 @@ A typical application is where a logic switch is configured to detect movement o
 
 The logic switch is then typically used in conjunction with a trainer switch to disable/enable the ‘Active condition’ in the master trainer function.
 
-Please refer to How-To 11. [How to configure instant take-back for the trainer function](../programming-tutorials/emphasis.md) for an example.
+Please refer to How-To 11. How to configure instant take-back for the trainer function for an example.

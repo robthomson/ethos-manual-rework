@@ -104,7 +104,7 @@ Please note that if Brightness (for backlight ON) = ‘Sleep mode brightness’ 
 
 ### Theme
 
-Allows selection between themes for the display. The default theme is Dark, with Light as an alternative. In addition, other Lua themes may be installed. Please refer to the ‘[Alternative Lua display themes](../lua-scripts/alternative-lua-display-themes.md)’ section for more details.
+Allows selection between themes for the display. The default theme is Dark, with Light as an alternative. In addition, other Lua themes may be installed. Please refer to the ‘[Alternative Lua display themes](../lua-scripts/alternative-display-themes.md)’ section for more details.
 
 ### Highlight Color
 

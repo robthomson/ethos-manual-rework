@@ -21,6 +21,6 @@ To use an online download tool like ‘DownGit’.
 - Navigate to the folder or file you want to download.
 - Copy the URL for the page, and paste it into the field provided when you open the ‘[DownGit](https://downgit.github.io/#/home?url=https:%2F%2Fgithub.com%2FFrSkyRC%2FETHOS-Feedback-Community%2Ftree%2F26.1%2Flua%2Fexamples%2Ftheme)’ tool.
 
-The majority of the examples are for Lua widgets, which are configured in the [Configure Screens](../configure-screens/index.md) section. Another application for Lua scripts is to create System Tools, which appear
+The majority of the examples are for Lua widgets, which are configured in the [Configure Screens](../displays/index.md) section. Another application for Lua scripts is to create System Tools, which appear
 
 after ‘Info’ in the System section of the menus. Please refer to the ‘servo’ example for an example System Tool.

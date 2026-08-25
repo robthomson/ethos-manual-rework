@@ -70,7 +70,7 @@ There are four modes of trim behaviour:
 
 With trim Mode set to OFF, the trim is disabled.
 
-For example, on electric models the throttle trim is not required and can be disabled by setting the mode to OFF. The trim can then be repurposed to adjust a Var, please refer to [Repurposed trim](../model-setup/variables-vars.md) in the Vars section.
+For example, on electric models the throttle trim is not required and can be disabled by setting the mode to OFF. The trim can then be repurposed to adjust a Var, please refer to [Repurposed trim](variables.md) in the Vars section.
 
 #### Easy mode
 

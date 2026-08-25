@@ -2,7 +2,7 @@
 
 Ethos allows the user considerable flexibility in what is displayed in the main views. Initially only the basic information shown below is displayed, until the user customizes or adds views and widgets to be displayed. Note that up to eight main views may be defined.
 
-The main views normally share the top and bottom bars, but there is a full screen option. Please refer to the [Configure Screens](../configure-screens/index.md) section for details on configuring the views.
+The main views normally share the top and bottom bars, but there is a full screen option. Please refer to the [Configure Screens](../displays/index.md) section for details on configuring the views.
 
 ## Initial main view
 
@@ -41,13 +41,13 @@ Errors may be due to:
 - RAM backup error
 - Running a nightly firmware build
 
-Error messages relating to the warning are displayed in the System / Info page. Please refer to the [Errors](../system-setup/info.md) section.
+Error messages relating to the warning are displayed in the System / Info page. Please refer to the [Errors](../system-setup/information.md) section.
 
 ### The bottom bar
 
 ![](../assets/bottombar.png)
 
-The bottom bar has four tabs for accessing the top level functions, i.e from left to right: Home, [Model Setup](../model-setup/index.md), [Configure Screens](../configure-screens/index.md), and [System Setup](../system-setup/index.md). The system time is displayed on the right. Touching the time will bring up the Date & Time settings.
+The bottom bar has four tabs for accessing the top level functions, i.e from left to right: Home, [Model Setup](../model-setup/index.md), [Configure Screens](../displays/index.md), and [System Setup](../system-setup/index.md). The system time is displayed on the right. Touching the time will bring up the Date & Time settings.
 
 The Model Setup icon above is for an Airplane type model.
 
@@ -67,6 +67,6 @@ The Model Setup icon above is for a Multirotor type model. There are additional 
 
 The middle area of the main views consists of widgets which may be configured to display images, timers, telemetry data, radio values etc. The default main screen has a widget on the left for a model image and three widgets for timers, as well as displaying the trims and pots. The widgets are user configurable to display other information. Once multiple screens have been configured, they can be accessed using a touch swipe gesture or the Page key.
 
-Please refer to the [Configure Screens](../configure-screens/index.md) section for more details.
+Please refer to the [Configure Screens](../displays/index.md) section for more details.
 
 Note: The ‘Throttle ACTIVE’ widget above is the Status widget available in the FrSky - ETHOS Lua Script Programming thread on rcgroups.

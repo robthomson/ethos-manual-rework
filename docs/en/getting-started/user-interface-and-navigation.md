@@ -1,6 +1,6 @@
 # User Interface and Navigation
 
-The radio has a touch screen, making the user interface quite intuitive. Touching the [Model Setup](../model-setup/index.md) (Airplane icon), [Configure Screens](../configure-screens/index.md) (Multiple screens icon), and [System Setup](../system-setup/index.md) (Gear icon) tabs take you directly to those functions, which are described in those sections of the manual. They can also be accessed using the \[MDL\], \[DISP\] and \[SYS\] keys respectively.
+The radio has a touch screen, making the user interface quite intuitive. Touching the [Model Setup](../model-setup/index.md) (Airplane icon), [Configure Screens](../displays/index.md) (Multiple screens icon), and [System Setup](../system-setup/index.md) (Gear icon) tabs take you directly to those functions, which are described in those sections of the manual. They can also be accessed using the \[MDL\], \[DISP\] and \[SYS\] keys respectively.
 
 Alternately the rotary selector may be used to move the highlight to the desired tile or parameter, followed by pressing Enter to select it.
 
@@ -137,7 +137,7 @@ You can select the 'Edge' option if you need a one-time action when the source t
 
 A ‘†’ character will be displayed as a prefix to the source indicate the Edge option.
 
-Please note that the ‘Edge’ option is available on switches but depending on the context. It is also available on the [Sticky](../model-setup/logic-switches.md) logic switch trigger conditions.
+Please note that the ‘Edge’ option is available on switches but depending on the context. It is also available on the [Sticky](../model-setup/logical-switches.md) logic switch trigger conditions.
 
 ##### Source option for switches
 

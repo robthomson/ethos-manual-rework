@@ -44,7 +44,7 @@ The ‘Owner registration ID’ is an 8 character ID that contains a unique rand
 
 Telemetry is used for passing information from the model back to the RC pilot. This information can be quite extensive, and includes RSSI (receiver signal strength) and VFR (valid frame rate), various voltages and currents, and any other sensor outputs such as GPS position, altitude, etc.
 
-Note that the telemetry screens are set up as main views in the [Configure Screens](../configure-screens/index.md) section.
+Note that the telemetry screens are set up as main views in the [Configure Screens](../displays/index.md) section.
 
 ## Checklist
 

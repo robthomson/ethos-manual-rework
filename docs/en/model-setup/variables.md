@@ -10,7 +10,7 @@ Vars can hold fixed values (i.e. constants), or they can be adjustable with user
 
 Vars are also extremely useful when it is desirable to have one adjustment value that is to be used in multiple places. For example, a glider may have split ailerons on each wing, allowing the inside ones to be used as flaps during landing. However, during normal flight all four surfaces act as ailerons and hence should share a common differential setting to counter adverse yaw while turning, which can be achieved by making use of a Var.
 
-Vars can be substituted for the normal numeric value in all parameters with the ‘Options’ feature, which is identified by the menu icon (hamburger symbol). Refer to the [Options feature](../user-interface-and-navigation/editing-controls.md) section.
+Vars can be substituted for the normal numeric value in all parameters with the ‘Options’ feature, which is identified by the menu icon (hamburger symbol). Refer to the [Options feature](../getting-started/user-interface-and-navigation.md) section.
 
 There are 64 Vars available.
 

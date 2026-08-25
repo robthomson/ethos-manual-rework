@@ -8,7 +8,7 @@ The System Alerts are:
 
 ## Silent mode
 
-A ‘Silent mode’ alert will be given at startup when ‘Silent mode’ check is ON and the ‘Audio mode’ has been set to Silent in System / General / [Audio mode](../system-setup/general.md)
+A ‘Silent mode’ alert will be given at startup when ‘Silent mode’ check is ON and the ‘Audio mode’ has been set to Silent in System / General / [Audio mode](general.md)
 
 ## Main voltage
 

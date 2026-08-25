@@ -142,4 +142,4 @@ The above example shows the Offset parameter of a curve of type “Function" dri
 
 ![](../assets/model-curves-custom-with-var.png)
 
-In this example above the middle curve point is being driven by a Var, which again could be adjusted in flight by a reassigned Trim. Please refer to the [VARs](../model-setup/variables-vars.md) section for more details.
+In this example above the middle curve point is being driven by a Var, which again could be adjusted in flight by a reassigned Trim. Please refer to the [VARs](variables.md) section for more details.

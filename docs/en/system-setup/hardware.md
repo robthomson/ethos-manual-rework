@@ -38,7 +38,7 @@ Gyro calibration can be performed so that the gyro sensor outputs respond correc
 
 ## Analogs filter
 
-The analog to digital converter filter for the sticks can be turned on/off with this setting. The default value is ON, which may improve jitter around stick centre. This is a global setting here on the Hardware page. There is a model specific option available in the ‘Edit model’ section under [Analogs Filter](../model-setup/edit-model.md).
+The analog to digital converter filter for the sticks can be turned on/off with this setting. The default value is ON, which may improve jitter around stick centre. This is a global setting here on the Hardware page. There is a model specific option available in the ‘Edit model’ section under [Analogs Filter](../model-setup/model-edit.md).
 
 ## Pots/Sliders settings
 

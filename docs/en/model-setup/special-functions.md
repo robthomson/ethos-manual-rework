@@ -68,7 +68,7 @@ The following categories may be reset:
 - Timer: individual timers may be reset
 - Telemetry: individual sensors may be reset
 
-Please note that ‘Reset: Flight data’ and ‘Reset: Whole telemetry’ and ‘Reset: Telemetry sensor’ will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](../model-setup/telemetry.md).
+Please note that ‘Reset: Flight data’ and ‘Reset: Whole telemetry’ and ‘Reset: Telemetry sensor’ will also clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](telemetry.md).
 
 ### Action: Screenshot
 
@@ -92,7 +92,7 @@ Please also refer to the ‘SF Common parameters’ above.
 
 When asserted, all current channel values in the Channels menu are copied to the failsafe settings and then sent to the receiver, and then resent approximately every 10 seconds.
 
-Please also refer to [Failsafe](../model-setup/rf-system.md) Settings.
+Please also refer to [Failsafe](rf-system.md) Settings.
 
 #### Module
 

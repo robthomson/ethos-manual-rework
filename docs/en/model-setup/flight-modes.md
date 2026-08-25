@@ -6,7 +6,7 @@ Flight modes bring incredible flexibility to a model setup, because they allow m
 
 Flight modes remove much of the switching and trimming burden from the pilot.
 
-The great power of flight modes is that they support independent trims and can also be used to enable Vars and Mixes. Together, these features allow for great flexibility. Please refer to the [Introduction to Flight Modes](../programming-tutorials/basic-fixed-wing-airplane-example.md) in the Tutorials section to see examples of these features applied.
+The great power of flight modes is that they support independent trims and can also be used to enable Vars and Mixes. Together, these features allow for great flexibility. Please refer to the [Introduction to Flight Modes](../tutorials/basic-fixed-wing.md) in the Tutorials section to see examples of these features applied.
 
 ![](../assets/model-fm.png)
 

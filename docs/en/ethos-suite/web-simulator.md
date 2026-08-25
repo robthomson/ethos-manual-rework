@@ -50,7 +50,7 @@ It is best to replicate your radio’s setup in the simulator. This will provide
 
 The recommended setup steps are:
 
-1. Make a backup of your radio using the Suite [Backup & recovery](../frsky-suite/operation.md) function.
+1. Make a backup of your radio using the Suite [Backup & recovery](operation.md) function.
 
 2. In the Upload menu select ‘Upload a radio backup’ and browse to your saved backup file. (Refer to the menus below.)
 

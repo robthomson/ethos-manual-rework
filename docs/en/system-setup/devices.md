@@ -26,7 +26,7 @@ Device Config is now extensible and the user (and FrSky) can add pages via Lua.
 
 ![](../assets/Pictures/1000000000000320000001E0FB5EF710.png)
 
-FrSky stabilized receivers can now be configured via ‘Device config’ after installation of the necessary setup Lua scripts. These are easily installed with 1 click from the Lua Library in ETHOS Suite, please refer to the [Lua library](../frsky-suite/operation.md) section and look for the StabilizerConfig Lua.
+FrSky stabilized receivers can now be configured via ‘Device config’ after installation of the necessary setup Lua scripts. These are easily installed with 1 click from the Lua Library in ETHOS Suite, please refer to the [Lua library](../ethos-suite/operation.md) section and look for the StabilizerConfig Lua.
 
 ### Overview
 
@@ -40,7 +40,7 @@ The ‘Stabilizer config’ option is used for the newer receivers such as the T
 
 The SxR option is used for older receivers, such as ACCST D16 S6R,
 
-ACCST D16 S8R, Archer SR6, Archer SR8 Pro, Archer SR10 Pro, R9 Stab, R9 Stab OTA, as well as the RB30S and RB40S. Please refer to the [SxR option](../system-setup/device-config.md) below for details.
+ACCST D16 S8R, Archer SR6, Archer SR8 Pro, Archer SR10 Pro, R9 Stab, R9 Stab OTA, as well as the RB30S and RB40S. Please refer to the [SxR option](devices.md) below for details.
 
 ### Stabilizer config option
 
@@ -84,7 +84,7 @@ The older legacy receivers (such as ACCST D16 S6R, ACCST D16 S8R) and the Archer
 
 Even though the Archer receivers are named SRx instead of SxR and have Gain assigned to channel 9, they still use the SxR option.
 
-The newer receivers with "Advanced stabilization" and the Gain control on channel 13 use the ‘[Stabilizer config](../system-setup/device-config.md)’ option.
+The newer receivers with "Advanced stabilization" and the Gain control on channel 13 use the ‘[Stabilizer config](devices.md)’ option.
 
 ![](../assets/Pictures/1000000000000320000001E0530F45FB.png)
 
@@ -112,7 +112,7 @@ Make your configuration changes, remembering that the Physical ID and the Applic
 
 Then scroll further down and tap on the ‘Save to flash’ button.
 
-Also refer to the How To section “[How to configure an FBUS system](../programming-tutorials/how-to-section.md)” for more examples.
+Also refer to the How To section “How to configure an FBUS system” for more examples.
 
 ### Configuring S.Port devices
 

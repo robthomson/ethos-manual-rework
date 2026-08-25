@@ -12,7 +12,7 @@ FrSky Suite opens in the Ethos devices section by default, with the view shown a
 
 ![](../assets/Pictures/1000000100000CA2000008B0CFAA509D.png)
 
-You can connect the radio in bootloader mode or while powered up in ‘FrSky Suite’ mode. Please refer to the [USB Connection To PC modes](../usb-connection-to-pc-modes/index.md) section for more information.
+You can connect the radio in bootloader mode or while powered up in ‘FrSky Suite’ mode. Please refer to the [USB Connection To PC modes](../getting-started/usb-connection-modes.md) section for more information.
 
 Once an Ethos radio has been detected, its details are listed as shown in the example above. The ‘Radio connection not detected’ status message has been replaced by ‘Connected to X20 Pro’ to show that an X20 Pro is connected.
 
@@ -28,7 +28,7 @@ The status of the RF module is shown next to the ‘Radio information’ panel, 
 
 ##### Backup and recovery
 
-Before performing updates, it is prudent to click on the ‘[Backup and recovery](../frsky-suite/operation.md)’ option to make backups of the current state of your radio.
+Before performing updates, it is prudent to click on the ‘[Backup and recovery](operation.md)’ option to make backups of the current state of your radio.
 
 ##### Eject Drives
 
@@ -50,7 +50,7 @@ Please note that the system files in Flash memory are now updated together with 
 
 ##### Pre-release update options
 
-If you wish to update to pre-release versions of firmware, the server setting in ‘Suite settings’ must be changed from ‘FrSky Server’ to ‘GitHub’. Please refer to the [Server location](../frsky-suite/operation.md) section below.
+If you wish to update to pre-release versions of firmware, the server setting in ‘Suite settings’ must be changed from ‘FrSky Server’ to ‘GitHub’. Please refer to the [Server location](operation.md) section below.
 
 ##### Selecting the update options
 
@@ -70,7 +70,7 @@ Once you have selected the desired scope of the update, click on the selected op
 
 ![](../assets/Pictures/1000000100000CCA000008CCA35CBC6D.png)
 
-After clicking on the ‘Write firmware and system files’ option, you will be prompted do first go to the backup page and do a full backup before proceeding. Please refer to the [Backup & recovery](../frsky-suite/operation.md) section.
+After clicking on the ‘Write firmware and system files’ option, you will be prompted do first go to the backup page and do a full backup before proceeding. Please refer to the [Backup & recovery](operation.md) section.
 
 This is especially important because after the update your model files will be updated to the new version as soon as you load them. This is a one-way process, so once upgraded the models will no longer be able to be loaded if you decide to downgrade your radio to an earlier version. After downgrading your firmware you will need to recover your models etc. from your backups.
 
@@ -190,7 +190,7 @@ The Ethos simulator lets you explore the radio capabilities and test functionali
 
 To begin, select the radio type to be simulated, the desired Ethos release version and the RF protocol. Then click ‘Start Simulator’.
 
-Please note that pre-release Nightly versions will only be offered if ‘GitHub’ has been selected as the [server location](../frsky-suite/operation.md) in the ‘Suite settings’ tab.
+Please note that pre-release Nightly versions will only be offered if ‘GitHub’ has been selected as the [server location](operation.md) in the ‘Suite settings’ tab.
 
 #### Simple setup
 
@@ -218,7 +218,7 @@ Alternatively you can create and test a whole new model, perhaps by basing it on
 
 The recommended setup steps are:
 
-1. Make a backup of your radio using the Suite [Backup & recovery](../frsky-suite/operation.md) function.
+1. Make a backup of your radio using the Suite [Backup & recovery](operation.md) function.
 
 2. It is best to initially complete the new model wizard for a simple model. This makes it easier to find and replace this setup with your radio backup. Please refer to the ‘Simple setup’ section above.
 

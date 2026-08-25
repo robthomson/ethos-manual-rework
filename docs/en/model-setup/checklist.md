@@ -64,4 +64,4 @@ The Checklist function can also display user defined text. The text can be plain
 
 ![](../assets/model-checklist-user-checklist.png)
 
-Once the text file is installed for a given model and that model is loaded the radio will display the Checklist as part of the startup routine. Please refer to [How to set up a User Defined Text Checklist](../programming-tutorials/how-to-section.md) in the How To section.
+Once the text file is installed for a given model and that model is loaded the radio will display the Checklist as part of the startup routine. Please refer to How to set up a User Defined Text Checklist in the How To section.

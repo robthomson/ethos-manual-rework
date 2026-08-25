@@ -42,7 +42,7 @@ Our helicopter example has the following servos/channels:
 
 Refer to the Model Setup / [Model Select](../model-setup/model-select.md) section to create your new model. Also refer to the Menu Navigation section to familiarize yourself with the radio's user interface, so that you can find the functions you need easily.
 
-Please refer to the System / [Sticks](../system-setup/sticks.md) section and confirm that the Channel Order is AETR, and set the 'First four channels fixed' setting to ‘OFF’ to ensure that the channel order created by the wizard will suit the FBL unit. The Spirit FBL units expect the SBUS channels to be in this order, despite the fact that it uses TAER in it’s setup.
+Please refer to the System / [Sticks](../system-setup/controls.md) section and confirm that the Channel Order is AETR, and set the 'First four channels fixed' setting to ‘OFF’ to ensure that the channel order created by the wizard will suit the FBL unit. The Spirit FBL units expect the SBUS channels to be in this order, despite the fact that it uses TAER in it’s setup.
 
 Tap on the Model tab (Airplane Icon), and select the Model Select function. Create a Heli category if not already present and select it. Tap on the ‘+’ symbol, which will present you with a choice of model creation wizards, i.e. Airplane, Glider, Heli, Multirotor or Other. The wizard takes your selections and creates the Mixer lines needed to implement the functionality required.
 

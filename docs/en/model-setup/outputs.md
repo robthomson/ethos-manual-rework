@@ -26,7 +26,7 @@ The Channel min and max settings are indicated by the greyed-out sections in the
 
 The channels that are not being output to the RF module are shown with a darker background.  In the example above, all eight channels are being transmitted, so they have a lighter grey background.
 
-The icons ![](../assets/icon_inverted.png)  ![](../assets/icon_curve.png)  ![](../assets/icon_slow.png)  ![](../assets/icon_balance.png)  appear in a channel’s display if the defaults for output [Direction](../model-setup/channels.md), output [Curve](../model-setup/channels.md), [Slow Up/Down](#Output slow up-down) have been changed or [Balance Channels](#Balance channels) has been configured. For details, please refer to their respective settings below.
+The icons ![](../assets/icon_inverted.png)  ![](../assets/icon_curve.png)  ![](../assets/icon_slow.png)  ![](../assets/icon_balance.png)  appear in a channel’s display if the defaults for output [Direction](outputs.md), output [Curve](outputs.md), [Slow Up/Down](#Output slow up-down) have been changed or [Balance Channels](#Balance channels) has been configured. For details, please refer to their respective settings below.
 
 Note: For quick access to this monitor screen, a long press of the enter key from the ‘Mixes’ screen and ‘Flight modes’ screens will jump to the Channels.
 
@@ -64,7 +64,7 @@ The Channel min and max settings are indicated by the greyed-out sections in the
 
 When using a redundancy system involving SBUS, servo movements beyond about +/- 125% are not possible.
 
-Note:  The Min/Max parameters have ranges of (-150% to 0%) and (0% to +150%) respectively. When using VARs as a source to adjust the Min/Max parameters, unless the Var has an identical range, it will be necessary to set the Var range to be ignored to avoid unexpected values due to range conversion. Please refer to the [Var options](../user-interface-and-navigation/editing-controls.md) section for details of this option.
+Note:  The Min/Max parameters have ranges of (-150% to 0%) and (0% to +150%) respectively. When using VARs as a source to adjust the Min/Max parameters, unless the Var has an identical range, it will be necessary to set the Var range to be ignored to avoid unexpected values due to range conversion. Please refer to the [Var options](../getting-started/user-interface-and-navigation.md) section for details of this option.
 
 ![](../assets/model-outputs-sbus-warning.png)
 

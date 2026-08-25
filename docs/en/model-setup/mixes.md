@@ -36,7 +36,7 @@ There is one mix for each control and a graphic display for that mix.
 
 ![](../assets/model-mixes-ail-edit.png)
 
-To edit a mix, touch the mix and touch again for the popup menu, then select Edit. Other options are to switch to the ‘[View per channel](../model-setup/mixes.md)’ grouping view (described in a section lower down), to move the mix up or down, to clone a mix, or to delete a mix.
+To edit a mix, touch the mix and touch again for the popup menu, then select Edit. Other options are to switch to the ‘[View per channel](mixes.md)’ grouping view (described in a section lower down), to move the mix up or down, to clone a mix, or to delete a mix.
 
 Please note that inactive mixes are shown greyed out, to assist in debugging.
 
@@ -132,9 +132,9 @@ Long press \[ENT\] on the Input to bring up the throttle options:
 The above two options are commonly used in surface models where the trigger operates both throttle (positive going half) and brake (negative going half).
 
 - Enable ‘Invert’ to reverse the input control.
-- Enabling ‘Ignore trainer input’ prevents the student radio from affecting the mix. Refer to the ‘[Option to ignore trainer input](../model-setup/logic-switches.md)’ section for more details.
+- Enabling ‘Ignore trainer input’ prevents the student radio from affecting the mix. Refer to the ‘[Option to ignore trainer input](logical-switches.md)’ section for more details.
 
-Please also refer to the options section under [Source Options](../user-interface-and-navigation/editing-controls.md).
+Please also refer to the options section under [Source Options](../getting-started/user-interface-and-navigation.md).
 
 ### Trim
 
@@ -355,7 +355,7 @@ It is possible to create a new Var while in the ‘Source select’ dialog.
 
 A long press Enter on the Source parameter will open the options dialog, allowing you to convert the free mix input to a fixed value.
 
-(While this is simple, consider using a Var with a fixed value instead. Using Vars allows you to put all your core adjustment values in one menu with meaningful names. Please refer to the [Variables (VARs) section](../model-setup/variables-vars.md) for more detail.)
+(While this is simple, consider using a Var with a fixed value instead. Using Vars allows you to put all your core adjustment values in one menu with meaningful names. Please refer to the [Variables (VARs) section](variables.md) for more detail.)
 
 ![](../assets/model-mix-free-source-as-value.png)
 
@@ -418,7 +418,7 @@ The available actions are:
 
 The actions can be combined to create for example multiple rates with multiple expo curves, different amounts of differential etc.
 
-The recommended actions order is Slow, Curve, Weight, Differential, Offset then Trim. This should be adhered to unless there is a specific reason for using a different order. For example, you may want to remove an offset from an input. To change the order, please refer to the [Reordering free mix actions](../model-setup/mixes.md) section below.
+The recommended actions order is Slow, Curve, Weight, Differential, Offset then Trim. This should be adhered to unless there is a specific reason for using a different order. For example, you may want to remove an offset from an input. To change the order, please refer to the [Reordering free mix actions](mixes.md) section below.
 
 ![](../assets/model-mix-free-actions-weight-active-condition.png)
 
@@ -630,7 +630,7 @@ Any channel can be selected to receive the output from this mix. If the Channels
 
 #### Aileron, Elevator, Rudder
 
-Please refer to the detailed [Aileron Elevator Rudder mixes](../model-setup/mixes.md) description above.
+Please refer to the detailed [Aileron Elevator Rudder mixes](mixes.md) description above.
 
 #### Flaps
 
@@ -638,7 +638,7 @@ The Flaps mix will mix an Input to one or more channels with individual Weights.
 
 #### Throttle
 
-The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle Mix](../model-setup/mixes.md) discussion above.
+The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle Mix](mixes.md) discussion above.
 
 #### Aileron to Flap
 
@@ -822,7 +822,7 @@ Additional outputs may be added, each with their own curve(s).
 
 This allows for example one output to control gear doors, with another controlling the retractable gear. Using each output’s curves, a sequence can be configured to first open the gear doors slowly, followed by the retractable gear, and finally closing of the doors again, with timing such that the correct time is allowed for each step. The curves may be configured with a slope to control the speed of the output changing, or to step instantaneously if for example the retract controller controls its own speed of operation.
 
-Please refer to ‘[How to configure a door and gear sequencer](../programming-tutorials/emphasis.md)’ for an example.
+Please refer to ‘How to configure a door and gear sequencer’ for an example.
 
 ##### Sequencer operation summary
 
@@ -842,11 +842,11 @@ Please note that some mixes only appear if the requisite channels exist in the m
 
 #### Free mix
 
-Please refer to the [Free mix](../model-setup/mixes.md) description under the Airplane Library section above.
+Please refer to the [Free mix](mixes.md) description under the Airplane Library section above.
 
 #### Aileron, Elevator, Rudder
 
-Please refer to the detailed [Aileron Elevator Rudder](../model-setup/mixes.md) mixes description above.
+Please refer to the detailed [Aileron Elevator Rudder](mixes.md) mixes description above.
 
 #### Flaps
 
@@ -854,7 +854,7 @@ The Flaps mix will mix an Input to one or more channels with individual Weights.
 
 #### Throttle
 
-The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle Mix](../model-setup/mixes.md) discussion above.
+The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle Mix](mixes.md) discussion above.
 
 #### Aileron to Flap
 
@@ -918,11 +918,11 @@ The Offset mix is used to add a fixed value to the mix when an offset is require
 
 #### Free mix
 
-Please refer to the [Free mix](../model-setup/mixes.md) description under the Airplane Library section above.
+Please refer to the [Free mix](mixes.md) description under the Airplane Library section above.
 
 #### Aileron, Elevator, Rudder
 
-Please refer to the detailed [Aileron Elevator Rudder](../model-setup/mixes.md) mixes description above.
+Please refer to the detailed [Aileron Elevator Rudder](mixes.md) mixes description above.
 
 #### Pitch
 
@@ -934,7 +934,7 @@ In typical helicopter FBL systems, the bank mode allows pilots to switch between
 
 #### Throttle
 
-The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle Mix](../model-setup/mixes.md) discussion above.
+The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle Mix](mixes.md) discussion above.
 
 #### Gyro
 
@@ -958,11 +958,11 @@ The Offset mix is used to add a fixed value to the mix when an offset is require
 
 #### Free mix
 
-Please refer to the [Free mix](../model-setup/mixes.md) description under the Airplane Library section above.
+Please refer to the [Free mix](mixes.md) description under the Airplane Library section above.
 
 #### Roll, Pitch, Yaw
 
-These mixes are similar to Aileron, Elevator and Rudder mixes. Please refer to the [Aileron Elevator Rudder Mixes](../model-setup/mixes.md) description above.
+These mixes are similar to Aileron, Elevator and Rudder mixes. Please refer to the [Aileron Elevator Rudder Mixes](mixes.md) description above.
 
 #### Bank
 
@@ -970,7 +970,7 @@ In typical helicopter flight controller systems, the bank mode allows pilots to 
 
 #### Throttle
 
-The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle mix](../model-setup/mixes.md) discussion above.
+The Throttle mix is for motor control and includes Throttle Cut and Throttle Hold options. Please refer to the detailed [Throttle mix](mixes.md) discussion above.
 
 #### Test mix
 

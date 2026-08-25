@@ -2,7 +2,7 @@
 
 This introductory section describes the initial steps in setting up the radio itself, before programming any specific models. Once completed, any of the programming examples in the following sections can be followed.
 
-Note: These examples are not 'cookbook' in nature. They assume that the user has a basic understanding of the vocabulary of radio control models, and is familiar with navigating the Ethos menu structure. If, at any time, you are confused, please review previous sections of this manual for a refresher. In particular, please refer to the [User Interface and Navigation](../user-interface-and-navigation/index.md) section to familiarize yourself with the radio's user interface, so that you can find the setup page you need easily.
+Note: These examples are not 'cookbook' in nature. They assume that the user has a basic understanding of the vocabulary of radio control models, and is familiar with navigating the Ethos menu structure. If, at any time, you are confused, please review previous sections of this manual for a refresher. In particular, please refer to the [User Interface and Navigation](../getting-started/user-interface-and-navigation.md) section to familiarize yourself with the radio's user interface, so that you can find the setup page you need easily.
 
 ## Step 1. Charge the radio and flight batteries.
 

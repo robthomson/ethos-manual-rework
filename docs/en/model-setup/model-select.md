@@ -122,7 +122,7 @@ iii) Also rename the two channels to their correct left and right functions.
 
 iv) **Warning!** After making the changes, confirm that the mixes and output channels work correctly in the right order with the propellor(s) removed.
 
-For a more detailed review of the three conversion scenarios, please refer to [Appendix A - Conversion of Ethos models from 1.6.x to 26.1.x](../appendix-a-conversion-of-ethos-models-from-1-6-x-to-26-1-x/index.md).
+For a more detailed review of the three conversion scenarios, please refer to [Appendix A - Conversion of Ethos models from 1.6.x to 26.1.x](../how-to/converting-1.6-models.md).
 
 ![](../assets/model-modelselect-model-wizard-tail.png)
 
@@ -156,7 +156,7 @@ The new model has been created.
 
 The created model will appear in the user-defined model category folder that was active when the wizard was started, and will be sorted alphabetically within each group.
 
-Please also refer to the [Basic Fixed Wing Airplane example](../programming-tutorials/basic-fixed-wing-airplane-example.md) in the Programming Tutorials section for a worked example.
+Please also refer to the [Basic Fixed Wing Airplane example](../tutorials/basic-fixed-wing.md) in the Programming Tutorials section for a worked example.
 
 ## Wizard output channel naming
 
@@ -270,4 +270,4 @@ You can also initiate receiving a model directly from the ‘Model select’ men
 
 Tap on ‘Receive model’ to initiate the process to receive a model from another Ethos radio via Bluetooth.
 
-Please refer to the [Receive model](../model-setup/model-select.md) section above for further details.
+Please refer to the [Receive model](model-select.md) section above for further details.

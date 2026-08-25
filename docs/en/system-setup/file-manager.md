@@ -8,7 +8,7 @@ Note that when updating the system firmware, the files in the SD or eMMC card ma
 
 Please note that from Ethos 26.1 onwards the radio no longer uses the internal Flash memory drive for storing system bitmaps and fonts. These files are now part of the Ethos firmware, shortening the start up time, and increasing the speed of the UI (no dynamic load for bitmaps).
 
-ETHOS has a radio-to-radio Bluetooth file transfer feature. Please refer to the example in the [Sharing files via Bluetooth](../system-setup/file-manager.md) section below.
+ETHOS has a radio-to-radio Bluetooth file transfer feature. Please refer to the example in the [Sharing files via Bluetooth](file-manager.md) section below.
 
 Note: Both the Bootloader and the system firmware are stored in the internal flash memory on all FrSky Radios back to the original X9D.
 
@@ -66,7 +66,7 @@ This folder is for audio files.
 audio/en/us	American voice  
 **audio/en/default**	default voice
 
-These folders are for user sound files, which can be played by the 'Play audio' special function. Refer to the Model / [Special Functions](#Special Functions section) section, and also the [Choice of Voices](../system-setup/general.md) section.
+These folders are for user sound files, which can be played by the 'Play audio' special function. Refer to the Model / [Special Functions](#Special Functions section) section, and also the [Choice of Voices](general.md) section.
 
 The format should be 16kHz or 32kHz PCM linear 16 bits or alaw (EU) 8 bits or mulaw (US) 8bits. There may be 31 characters in the names of wav files plus extension.
 
@@ -86,7 +86,7 @@ Tap on the \[audio\] folder to view the folder contents.
 
 Tap on a WAV file, and select the Play option to listen to it.
 
-The file may also be copied, moved, renamed or deleted. There are also options for sending or receiving the file via Bluetooth. Please refer to [Sharing files via Bluetooth](../system-setup/file-manager.md) below.
+The file may also be copied, moved, renamed or deleted. There are also options for sending or receiving the file via Bluetooth. Please refer to [Sharing files via Bluetooth](file-manager.md) below.
 
 Note: All three folders are updated by Ethos Suite regardless of which one(s) you have selected in the Voice options.
 
@@ -126,7 +126,7 @@ Rule 2: the name must not contain more than 11 characters, plus 4 for the extens
 
 #### Image conversion tools
 
-Ethos Suite has image conversion tools available. Please refer to the [Image manager](../frsky-suite/operation.md) section of Ethos Suite.
+Ethos Suite has image conversion tools available. Please refer to the [Image manager](../ethos-suite/operation.md) section of Ethos Suite.
 
 ### ***documents***/
 
@@ -200,11 +200,11 @@ Lua script types include widgets, tasks, sources and tools. They are also used f
 
 #### Widgets
 
-Widgets are used in the main views to display desired information such as telemetry and radio status etc. Please refer to the [Configure Screens](../configure-screens/index.md) section for more details.
+Widgets are used in the main views to display desired information such as telemetry and radio status etc. Please refer to the [Configure Screens](../displays/index.md) section for more details.
 
 #### Tasks and sources
 
-Using Lua scripts it is possible to create custom sources such as for example custom sensors, or to create tasks that perform custom actions such as for example logging data to a file after flight is over. Once installed under the scripts/ folder, the Lua menu appears in the Model section to manage the task or source for each model. Please refer to the [Lua](../model-setup/lua.md) menu for more details.
+Using Lua scripts it is possible to create custom sources such as for example custom sensors, or to create tasks that perform custom actions such as for example logging data to a file after flight is over. Once installed under the scripts/ folder, the Lua menu appears in the Model section to manage the task or source for each model. Please refer to the [Lua](../model-setup/lua-scripts.md) menu for more details.
 
 #### Tools
 

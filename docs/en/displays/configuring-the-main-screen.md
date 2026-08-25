@@ -12,7 +12,7 @@ Tap on the model bitmap widget to enter edit mode.
 
 ![](../assets/display-widget-bitmap-config.png)
 
-By default the bitmap widget on the main screen has the ‘Bitmap type’ set to ‘Model bitmap’. The bitmap cannot be selected here, it is configured in ‘Model / [Edit model](../model-setup/edit-model.md)’ or the new model wizards. The model bitmap must be located in the [/bitmaps/model](../system-setup/file-manager.md) folder.
+By default the bitmap widget on the main screen has the ‘Bitmap type’ set to ‘Model bitmap’. The bitmap cannot be selected here, it is configured in ‘Model / [Edit model](../model-setup/model-edit.md)’ or the new model wizards. The model bitmap must be located in the [/bitmaps/model](../system-setup/file-manager.md) folder.
 
 By default the three widgets on the right display the three timers.
 
@@ -30,13 +30,13 @@ In the example above, on the left the Model Bitmap widget is displaying the mode
 
 ![](../assets/display-widget-config-options.png)
 
-Tap on any widget from the main screens to bring up a dialog to go to Model / Edit to configure the model bitmap, or to configure the widget, or to go to the main [Configure Screens](../configure-screens/index.md) function.
+Tap on any widget from the main screens to bring up a dialog to go to Model / Edit to configure the model bitmap, or to configure the widget, or to go to the main [Configure Screens](index.md) function.
 
 ### Top screen widgets (XE series only)
 
 ![](../assets/top-screen-default.png)
 
-On the XE series radios the default top screen widget is the ‘Bitmap type’ set to ‘Model bitmap’. The bitmap cannot be selected here, it is configured in ‘Model / [Edit model](../model-setup/edit-model.md)’ or the new model wizards. The model bitmap must be located in the [/bitmaps/model](../system-setup/file-manager.md) folder.
+On the XE series radios the default top screen widget is the ‘Bitmap type’ set to ‘Model bitmap’. The bitmap cannot be selected here, it is configured in ‘Model / [Edit model](../model-setup/model-edit.md)’ or the new model wizards. The model bitmap must be located in the [/bitmaps/model](../system-setup/file-manager.md) folder.
 
 To change the widget tap on the model bitmap widget to enter edit mode. Please refer to the standard widgets below to select a different widget for display in the top screen.
 
