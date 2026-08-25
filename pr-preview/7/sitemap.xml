@@ -550,6 +550,15 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/programming-tutorials/initial-radio-setup-example/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/radio-layouts/</loc>
+        <lastmod>2026-08-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/de/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/es/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/radio-layouts/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/system-setup/</loc>
         <lastmod>2026-08-25</lastmod>
         <changefreq>daily</changefreq>
@@ -1340,6 +1349,15 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/de/programming-tutorials/initial-radio-setup-example/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/programming-tutorials/initial-radio-setup-example/"/>
         <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/programming-tutorials/initial-radio-setup-example/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/es/radio-layouts/</loc>
+        <lastmod>2026-08-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/es/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/de/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/radio-layouts/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/es/system-setup/</loc>
@@ -2134,6 +2152,15 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/es/programming-tutorials/initial-radio-setup-example/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/it/radio-layouts/</loc>
+        <lastmod>2026-08-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/de/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/es/radio-layouts/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/it/system-setup/</loc>
         <lastmod>2026-08-25</lastmod>
         <changefreq>daily</changefreq>
@@ -2924,6 +2951,15 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/programming-tutorials/initial-radio-setup-example/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/es/programming-tutorials/initial-radio-setup-example/"/>
         <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/programming-tutorials/initial-radio-setup-example/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/de/radio-layouts/</loc>
+        <lastmod>2026-08-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/de/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/es/radio-layouts/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/it/radio-layouts/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/de/system-setup/</loc>
