@@ -1,11 +1,10 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Radio Notes
 
-# Notas sobre las emisoras
-
-Este manual está escrito principalmente para la **X20S**. Esta sección cubre
-los casos en los que la interfaz o el hardware de otras emisoras Ethos difiere.
-
-- [X18S](x18s.md)
-- [X20 Pro / X20 Pro AW](x20-pro-and-aw.md)
+- [X20/X20S](x20-x20s.md)
+- [X20 Pro](x20-pro.md)
+- [X20 Pro AW](x20-pro-aw.md)
+- [X20R/RS](x20r-rs.md)
+- [X18/X18SE](x18-x18se.md)
+- [XE/XES/XE RS](xe-xes-xe-rs.md)
+- [X14/X14RS](x14-x14rs.md)
+- [TWIN XLite](twin-xlite.md)
