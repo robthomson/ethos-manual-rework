@@ -1,44 +1,21 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
+# Palancas
 
-# Controles
+![](../assets/system-icon-sticks.png)
 
-![Palancas](../assets/system-sticks.png)
+![](../assets/system-sticks.png)
 
-En el menú aparece como **Sticks**: define el modo de palancas y el orden
-predeterminado de asignación de canales.
+Selecciona el modo de las palancas que prefiera. El modo 1 tiene el acelerador y el alerón en el mando derecho, y el elevador y el timón en el izquierdo. El modo 2 tiene el acelerador y el timón en la palanca de la izquierda, y el alerón y el elevador en la derecha.
 
-## Modo de palancas
-
-- **Modo 1**: motor y alerones en la palanca derecha, profundidad y
-  dirección en la izquierda.
-- **Modo 2**: motor y dirección en la palanca izquierda, alerones y
-  profundidad en la derecha.
-
-Por defecto, las palancas se nombran según los modos estándar del sector,
-aunque se pueden renombrar.
+Por defecto, las palancas se denominan como se indica más arriba para los modos de palanca estándar de la industria. Se les puede cambiar el nombre según se desee.
 
 ## Orden de canales
 
-Define el orden en que las cuatro entradas de las palancas se asignan a los
-canales cuando se crea un modelo nuevo con los asistentes de [Selección de
-modelo](../model-setup/model-select.md). El valor predeterminado es
-**AETR**. Cuando una aeronave tiene más de una superficie del mismo tipo,
-estas se agrupan entre sí, salvo que [Primeros cuatro canales
-fijos](#first-four-channels-fixed) esté activado; por ejemplo, con 2
-alerones queda **AAETR**.
+![](../assets/system-sticks-rx-order.png)
 
-![Orden de canales del receptor](../assets/system-sticks-rx-order.png)
+El orden de canales define el orden en que las cuatro entradas de las palancas se asignan a los canales de las mezclas cuando se crea un nuevo modelo a través de los asistentes. El orden por defecto es AETR. Si hay más de un canal para cada tipo de superficie, se agruparán a menos que los cuatro primeros canales sean fijos, ver más abajo. Por ejemplo, para 2 alerones el orden de los canales será AAETR.
 
-## Primeros cuatro canales fijos {: #first-four-channels-fixed }
+## Primeros 4 canales fijos
 
-Con esta opción activada, los cuatro primeros canales nunca se agrupan. Con
-el orden **AETR** y una aeronave con 2 alerones, 1 profundidad, 1 motor, 1
-dirección y 2 flaps, el asistente genera **AETRAFF** (los canales 1–4 se
-mantienen exactamente como A-E-T-R, y el segundo alerón y los dos flaps se
-añaden a continuación) en lugar de **AAETRFF**. Este es el ajuste que hace
-que el asistente cree modelos adecuados para los receptores estabilizados
-SRx, que requieren esa disposición fija.
+![](../assets/system-sticks-4ch-fixed.png)
 
-![Orden fijo de 4 canales](../assets/system-sticks-4ch-fixed.png)
+Cuando opción está activada, la agrupación de canales no se producirá en los cuatro primeros canales. Si el orden de los canales es AETR, entonces el asistente creará un modelo adecuado a los receptores estabilizados SRx. Por ejemplo, un modelo con 2 Alerones, 1 Elevador, 1 Motor, 1 Timón y 2 Flaps se creará con un orden de canales AETRAFF. Si esta opción no está activada, el orden de canales sería AAETRFF.

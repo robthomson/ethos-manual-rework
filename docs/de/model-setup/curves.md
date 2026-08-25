@@ -1,108 +1,143 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Kurven
 
-![Kurventypen](../assets/model-curves-type.png)
+![](../assets/model-icon-curves.png)
 
-Wiederverwendbare Übertragungskurven für [Mischer](mixes.md#anatomy-of-a-mix) oder
-[Ausgänge](outputs.md#editing-a-channel) — das eingebaute Expo steht in beiden
-direkt zur Verfügung, alles Weiterführende wird hier definiert (oder über
-**Kurve hinzufügen**, das direkt aus beiden Bearbeitungsbildschirmen erreichbar
-ist). Es stehen bis zu 50 Kurven zur Verfügung; standardmäßig ist keine davon
-angelegt (Expo ist unabhängig davon immer eingebaut). Mit **+** wird eine Kurve
-hinzugefügt; beim Antippen einer vorhandenen Kurve erscheinen
-**Bearbeiten**/**Verschieben**/**Kopieren-Einfügen**/**Klonen**/**Löschen**.
+Kurven können verwendet werden, um das Regelverhalten in den Mischern oder Kanäle zu ändern. Während die Standard-Expo-Kurve direkt in diesen Abschnitten verfügbar ist, wird dieser Abschnitt verwendet, um benutzerdefinierte Kurven zu definieren, die erforderlich sein könnten. Die Funktion „Kurve hinzufügen“ kann auch direkt von dem Editierbildschirmen der Mischer und Kanäle aus aufgerufen werden.
 
-![Kurve hinzufügen](../assets/model-curves-add.png)
+Es sind 50 Kurven verfügbar.
 
-## Kurventypen
+![](../assets/model-curves-add.png)
 
-- **Expo** — Standardwert 40; ein positiver Wert macht die Reaktion um die
-  Mittelstellung herum weicher, ein negativer Wert macht sie schärfer. Eine
-  weichere Reaktion um die Knüppelmitte hilft, ein Übersteuern zu vermeiden,
-  insbesondere bei weniger erfahrenen Piloten.
+Es gibt keine Standardkurven (außer Expo, das integriert ist). Tippen Sie auf die Schaltfläche „+“, um eine neue Kurve hinzuzufügen.
 
-  ![Expo](../assets/model-curves-expo.png)
+![](../assets/model-curves-edit-options.png)
 
-- **Funktion** — eine kleine Auswahl fester mathematischer Formen:
+Sobald die Kurven definiert sind, erscheint durch Antippen einer Kurve ein Popup-Menü, über das Sie diese Kurve bearbeiten, verschieben, kopieren/einfügen, klonen oder löschen können.
 
-  ![Funktionstypen](../assets/model-curves-fn-types.png)
+![](../assets/model-curves-edit.png)
 
-  - **x > 0** — gibt die Quelle im positiven Bereich unverändert weiter; im
-    negativen Bereich wird 0 ausgegeben.
+Auf dem Startbildschirm können Sie Ihre Kurve benennen und den Kurventyp auswählen.
 
-    ![x > 0](../assets/model-curves-fn-xgt0.png)
+![](../assets/model-curves-type.png)
 
-  - **x < 0** — das Spiegelbild: gibt im negativen Bereich weiter, im positiven
-    Bereich 0.
+Die verfügbaren Kurventypen sind:
 
-    ![x < 0](../assets/model-curves-fn-xlt0.png)
+## Expo
 
-  - **|x|** — gibt die Quelle als Absolutwert weiter (immer positiv).
+Die Standard-Exponentialkurve hat einen Wert von 40.
 
-    ![|x|](../assets/model-curves-fn-barx.png)
+![](../assets/model-curves-expo.png)
 
-  - **f > 0** — gibt 100 % aus, solange die Quelle positiv ist, und 0, solange
-    sie negativ ist (ein harter Umschalter, keine Durchleitung).
+Ein positiver Wert macht die Reaktion um 0 herum weicher, während ein negativer Wert die Reaktion um 0 herum schärfer macht. Das Abschwächen der Reaktion um die Knüppelmitte herum hilft, eine Übersteuerung des Modells zu vermeiden, insbesondere für Anfänger.
 
-    ![f > 0](../assets/model-curves-fn-fgt0.png)
+## Funktion
 
-  - **f < 0** — gibt −100 % aus, solange die Quelle negativ ist, und 0, solange
-    sie positiv ist.
+![](../assets/model-curves-fn-types.png)
 
-    ![f < 0](../assets/model-curves-fn-flt0.png)
+Die folgenden mathematischen Funktionskurven sind verfügbar:
 
-  - **|f|** — gibt −100 % im negativen und +100 % im positiven Bereich aus.
+### x > 0
 
-    ![|f|](../assets/model-curves-fn-barf.png)
+![](../assets/model-curves-fn-xgt0.png)
 
-  Jeder Kurventyp — auch die Funktion — besitzt zudem einen **Offset**, der die
-  Kurve auf der Y-Achse nach oben oder unten verschiebt (eine Nachkommastelle
-  Genauigkeit, wie bei Y-Werten generell):
+Wenn der Quellenwert positiv ist, folgt der Kurvenausgang der Quelle.
 
-  ![Funktions-Offset](../assets/model-curves-fn-xgt0-offset.png)
+Wenn der Quellenwert negativ ist, ist der Kurvenausgang 0.
 
-- **Benutzerdefiniert** — eine punktbasierte Kurve, standardmäßig mit 5 Punkten,
-  maximal 21.
+#### Offset
 
-  ![Benutzerdefinierte Kurve mit 5 Punkten](../assets/model-curves-custom5.png)
+![](../assets/model-curves-fn-xgt0-offset.png)
 
-  - **Glätten** — legt eine weiche Kurve durch alle Punkte, statt sie durch
-    gerade Teilstrecken zu verbinden.
+Beachten Sie, dass alle Kurven einen positiven oder negativen Offset haben können, der die Kurve auf der Y-Achse nach oben oder unten verschiebt. Kurvenversatz und Y-Wert haben eine Genauigkeit von einer Dezimalstelle.
 
-    ![Geglättete Kurve](../assets/model-curves-custom5-2-smooth.png)
+### x < 0
 
-  - **Einfacher Modus** — **Ein** beschränkt die Bearbeitung auf gleichmäßig
-    verteilte Y-Koordinaten (X ist fest); **Aus** erlaubt die Bearbeitung von X
-    und Y je Punkt, ausgenommen die Endpunkte bei −100 %/+100 %, die gesperrt
-    sind, da die Kurve stets den gesamten Signalbereich abdecken muss.
+![](../assets/model-curves-fn-xlt0.png)
 
-    ![Einfacher Modus aus](../assets/model-curves-custom-easy-off.png)
+Wenn der Quellenwert negativ ist, folgt der Kurvenausgang der Quelle.
 
-  **Bedienelemente des Editors** (nach dem gleichen Schema wie der [Editor für
-  die Ausgleichskurven der Ausgänge](outputs.md#balance-channels)):
+Ist der Quellenwert positiv, so ist der Kurvenausgang 0.
 
-  - **Quelle** — standardmäßig die eigene(n) Mischerquelle(n) der Kurve, oder
-    **Automatischer Analogeingang**, um den zuerst bewegten
-    Steuerknüppel/Schieber/Geber zu übernehmen.
-  - Einrasten auf den nächstgelegenen Punkt mit dem Drehgeber sowie ein Schalter
-    **Sperren**, um die Eingaben einzufrieren, während die daraus resultierende
-    Bewegung der Ruderfläche beobachtet wird.
-  - Ein Live-Cursor zeigt den aktuellen Eingangswert an, der die Kurve
-    ansteuert, um ihn vor dem Anpassen mit einem Punkt in Deckung zu bringen.
+### |x|
 
-## Eine Kurve über eine Var ansteuern
+![](../assets/model-curves-fn-barx.png)
 
-Sowohl der **Offset** einer Funktionskurve als auch ein einzelner Punkt einer
-**benutzerdefinierten** Kurve können anstelle eines festen Werts von einer
-[Var](variables.md) angesteuert werden — und diese Var lässt sich wiederum über
-eine umgewidmete Trimmung im Flug verstellen:
+Der Kurvenausgang folgt der Quelle, ist aber immer positiv (auch „Absolutwert“ genannt).
 
-![Funktions-Offset über eine Var](../assets/model-curves-fn-offset-var.png)
-![Punkt einer benutzerdefinierten Kurve über eine Var](../assets/model-curves-custom-with-var.png)
+### f > 0
 
-Ein vollständig durchgearbeitetes Beispiel für dieses Vorgehen finden Sie unter
-[Variablen](variables.md) und [Anleitung: Im Flug verstellbare
-Kompensationskurve](../how-to/in-flight-compensation-curve.md).
+![](../assets/model-curves-fn-fgt0.png)
+
+Wenn der Quellwert negativ ist, ist der Kurvenausgang 0.
+
+Wenn der Quellwert positiv ist, beträgt der Kurvenausgang 100 %.
+
+### f < 0
+
+![](../assets/model-curves-fn-flt0.png)
+
+Wenn der Quellwert negativ ist, beträgt der Kurvenausgang -100%.
+
+Wenn der Quellwert positiv ist, ist der Kurvenausgang 0.
+
+### |f|
+
+![](../assets/model-curves-fn-barf.png)
+
+Wenn der Quellwert negativ ist, beträgt die Kurvenausgabe -100%.
+
+Wenn der Quellwert positiv ist, wird die Kurve zu +100% ausgegeben.
+
+## Benutzer
+
+### Anzahl der Punkte
+
+![](../assets/model-curves-custom5.png)
+
+Die standardmäßige benutzerdefinierte Kurve hat 5 Punkte. Sie können zwischen 2 und 21 Punkte in Ihrer Kurve haben.
+
+![](../assets/Pictures/1000000000000018000000181B9B646A.png)  Die in den Mischern der Kurve konfigurierte(n) Quelle(n) kann/können verwendet werden, oder optional jeder andere geeignete Analogeingang. Wenn Sie die Option „Automatischer Analogeingang“ wählen, wird der erste Knüppel, Schieberegler oder Regler, den Sie bewegen, als Quelle für X verwendet.
+
+##### Menü-Tasten
+
+![](../assets/Pictures/10000000000000280000001EF06CB86B.png)Wenn diese Option ausgewählt ist, wird automatisch der nächstgelegene Kurvenpunkt auf der X-Achse für die Einstellung mit dem Drehgeber ausgewählt.
+
+Der Eingang muss so eingestellt werden, dass der X-Wert auf einen Kurvenpunkt ausgerichtet ist, bevor die Einstellung vorgenommen wird.
+
+![](../assets/Pictures/100000000000001500000019F279C5CD.png) Durch Tippen auf dieses Symbol oder Drücken der EINGABE-Taste im Diagrammbearbeitungsmodus können Sie den Sperrmodus ein- und ausschalten. Wenn dieser Modus aktiviert ist, werden alle Eingaben gesperrt, so dass Sie die Steuerknüppeleingabe loslassen können und die Steuerflächen beobachten können, während Sie Ihre Kurve anpassen.
+
+Zur Unterstützung bei der Einrichtung ist der Cursor aktiv und zeigt den Wert des Eingangs an, der die Kurve steuert.
+
+![](../assets/model-curves-custom5-2.png)
+
+Kurvenversatz und Y-Wert haben eine Genauigkeit von einer Dezimalstelle.
+
+### Gerundet
+
+![](../assets/model-curves-custom5-2-smooth.png)
+
+Wenn diese Option aktiviert ist, wird eine gerundete Kurve durch alle Punkte erstellt.
+
+### Einfacher Modus = Ein
+
+Der einfache Modus hat äquidistante Festwerte auf der X-Achse und erlaubt nur die Programmierung der Y-Koordinaten für die Kurve.
+
+### Einfacher Modus = Aus
+
+![](../assets/model-curves-custom-easy-off.png)
+
+#### Punkte
+
+Bei ausgeschaltetem „Einfachen Modus“ können sowohl die X- als auch die Y-Koordinaten konfiguriert werden (siehe Beispiel oben).  Beachten Sie, dass die -100% und +100% X-Koordinaten für die Endpunkte der Kurve nicht bearbeitet werden können, da die Kurve den gesamten Signalbereich abdecken muss.
+
+## Funktionskurven-Offset Änderung im Flug
+
+![](../assets/model-curves-fn-offset-var.png)
+
+Das obige Beispiel zeigt den Offset-Parameter einer Kurve vom Typ „Funktion“, die von einer Var gesteuert wird, die möglicherweise während des Fluges durch eine neu zugewiesene Trimmung angepasst werden könnte.
+
+## Änderung des Kurvenpunkts im Flug
+
+![](../assets/model-curves-custom-with-var.png)
+
+In diesem Beispiel wird der mittlere Kurvenpunkt von einer Var gesteuert, die wiederum im Flug durch eine neu zugewiesene Trimmung angepasst werden kann. Bitte lesen Sie den Abschnitt [VARs ](variables.md)für weitere Details.

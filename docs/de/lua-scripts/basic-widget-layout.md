@@ -1,68 +1,97 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Struktur eines Lua-Widgets
 
-# Grundlegender Widget-Aufbau
+Alle Lua-Skripte – einschließlich der Widgets – verwenden Handler (auch als Code-Module bezeichnet), um spezifische Aufgaben auszuführen, wie etwa die Hintergrunddatenver-arbeitung, die Steuerung bzw. Darstellung der Anzeige, die Konfiguration von Widgets, das Auslesen oder Speichern von Konfigurationen, das Abfangen und Auswerten von Ereignissen und Ähnliches.
 
-Ein eigenes Lua-Widget (siehe [Eigene Widgets](../displays/custom-widgets.md)
-zur Installation) besteht aus einer kleinen Anzahl benannter Felder bzw.
-Handler:
+## init(function)
 
-- **`key`** *(String)* — ein eindeutiger Bezeichner für das Widget.
-- **`name`** *(String oder Funktion)* — der Anzeigename des Widgets. Entweder
-  ein einfacher String oder eine Funktion ohne Argumente, die einen solchen
-  zurückgibt — nützlich für einen Namen, der je nach Sprache unterschiedlich
-  ausfällt.
-- **`create`** *(Funktion)* — wird einmalig beim Erstellen des Widgets ohne
-  Argumente aufgerufen. Gibt eine **Widget-Tabelle** zurück, die anschließend
-  an alle nachfolgenden Handler übergeben wird — initialisieren Sie hier Ihren
-  Zustand und speichern Sie ihn in dieser Tabelle.
-- **`configure`** *(Funktion)* — wird aufgerufen, wenn der Benutzer die
-  Konfigurationsseite des Widgets öffnet; erhält als einziges Argument die
-  Widget-Tabelle aus `create()` und gibt nichts zurück. Erstellen Sie hier das
-  Konfigurationsformular und aktualisieren Sie damit die Werte in der
-  Widget-Tabelle.
-- **`wakeup`** *(Funktion)* — wird in jedem Durchlauf aufgerufen (etwa alle
-  50 ms), erhält die Widget-Tabelle und gibt nichts zurück. Prüfen Sie hier,
-  ob sich etwas geändert hat; falls ja, rufen Sie `invalidateWindow()` auf, um
-  über `paint()` ein Neuzeichnen auszulösen. Halten Sie diesen Handler schnell
-  — im Idealfall tut er bei den meisten Aufrufen überhaupt nichts.
-- **`event`** *(Funktion)* — wird aufgerufen, wenn das Widget ein Ereignis
-  empfängt; Ethos leitet beliebige Ereignisse über diesen Handler an ein
-  Widget weiter.
-- **`paint`** *(Funktion)* — zeichnet das Widget, erhält die Widget-Tabelle und
-  gibt nichts zurück. Wird automatisch aufgerufen, sobald `lcd.invalidate()`
-  ausgelöst wurde. Darf vergleichsweise langsam sein, sollte aber dennoch nur
-  dann tatsächlich neu zeichnen, wenn sich etwas geändert hat.
-- **`read`** *(Funktion, optional)* — liest den dauerhaft gespeicherten
-  Widget-Speicher.
-- **`write`** *(Funktion, optional)* — schreibt den dauerhaft gespeicherten
-  Widget-Speicher.
-- **`init`** *(Funktion)* — meldet das Widget und seine Callbacks bei Ethos an.
-  Üblicherweise das Letzte im Skript:
+Die Init-Handler-Funktion dient dazu, das Widget während des Senderstarts zu registrieren. Sie verwendet die Methode system.registerWidget(), um das Widget zu deklarieren. Zudem legt sie fest, welche weiteren Handler im Skript zum Einsatz kommen.
 
-```lua
+Ein Beispiel für einen Init-Handler für ein Widget könnte wie folgt aussehen:
+
 local function init()
-  system.registerWidget({
-    key = "unique",
-    name = name,
-    create = create,
-    configure = configure,
-    wakeup = wakeup,
-    paint = paint,
-    read = read,
-    write = write,
-  })
+
+system.registerWidget({
+
+key = "unique",
+
+name = “Example”,
+
+create = create,
+
+configure = configure,
+
+wakeup = wakeup,
+
+paint = paint,
+
+read = read,
+
+write = write,
+
+})
+
 end
 
-return { init = init }
-```
+Bitte beachten Sie, dass „key“ ein eindeutiger Bezeichner für Ihr Widget ist. Die verschiedenen aufgeführten Funktionen werden im Lebenszyklus des Widgets verwendet.
 
-`key` muss über alle installierten Widgets hinweg eindeutig sein; die übrigen
-Felder greifen wie oben beschrieben in den Lebenszyklus des Widgets ein.
+## system.registerWidget() method
 
-Skripte liegen unter `scripts/` auf der SD card bzw. dem eMMC, idealerweise in
-Ordnern pro Widget organisiert (siehe [Dateimanager](../system-setup/file-manager.md#top-level-folders)
-und [Beispielhafte Skript-Speicherorte](example-script-locations.md)). Weitere
-ausgearbeitete Beispiele finden Sie im Thread *FrSky ETHOS Lua Script
-Programming* auf rcgroups.
+Die Methode system.registerWidget() kann die folgenden Parameter aufweisen:
+
+## key (string)
+
+Das Widget muss einen eindeutigen Schlüssel haben.
+
+## name (string or function)
+
+Die Funktion name benötigt keine Argumente und gibt den Namen des Widgets als Zeichenkette zurück. Der Name kann einfach eine Zeichenkette oder das Ergebnis einer Funktion sein. Zum Beispiel kann der Name je nach Gebietsschema in einer anderen Sprache sein.
+
+## create (function)
+
+Die Funktion create handler wird bei der Erstellung eines Widgets aufgerufen. Sie benötigt keine Argumente und gibt die Widget-Tabelle zurück, die dann später an alle Funktionen übergeben wird. Initialisieren Sie hier Ihre Variablen und speichern Sie den Status in der zurückgegebenen Widget-Tabelle.
+
+### destroy (function, optional)
+
+Der Destroy-Handler wird bei der Löschung des Widgets aufgerufen.
+
+## configure (function)
+
+Die Configure-Handler-Funktion wird aufgerufen, wenn der Benutzer die Widget-Konfiguration aufruft. Sie akzeptiert die von \`create()\` zurückgegebene Widget-Tabelle als einziges Argument und liefert keinen Rückgabewert. Sie wird immer dann ausgeführt, wenn der Benutzer in die Widget-Konfiguration wechselt. An dieser Stelle können Sie das Konfigurationsformular erstellen und es dazu verwenden, Werte in der Widget-Tabelle zu ändern.
+
+## wakeup (function)
+
+Die Wakeup-Handler-Funktion wird in jeder Schleife aufgerufen, d.h. alle 50ms. Sie nimmt die Widget-Tabelle als einziges Argument und gibt nichts zurück.
+
+Die Funktion wakeup() sollte prüfen, ob sich etwas geändert hat. Wenn ja, ist eine Aktualisierung erforderlich, so dass die Funktion invalidateWindow() aufgerufen werden sollte. Daraufhin wird die Funktion paint() aufgerufen. Sie sollten dafür sorgen, dass diese Funktion sehr schnell ist und idealerweise die meiste Zeit nichts tut.
+
+## event (function)
+
+Die Ereignisbehandlungsfunktion, die aufgerufen wird, wenn ein Ereignis empfangen wird. ETHOS bietet die Möglichkeit, jedes Ereignis in einem Widget durch diese Ereignisfunktion abzufangen.
+
+## paint (function)
+
+Die Funktion paint 'zeichnet' das Widget. Sie nimmt die Widget-Tabelle als einziges Argument und gibt nichts zurück. Sie sollte aufgerufen werden, wenn eine Aktualisierung erforderlich ist, und wird automatisch aufgerufen, wenn lcd.invalidate() aufgerufen wurde. Sie kann langsam sein, daher sollten Sie nur zeichnen, wenn sich etwas geändert hat.
+
+### menu (function, optional)
+
+Der optionale Menü-Handler wird aufgerufen, wenn ein Kontextmenü erstellt wird, um das Hinzufügen weiterer Optionen zum Menü zu ermöglichen. Der Handler sollte eine Tabelle von Paaren der Form { Name, Funktion } zurückgeben.
+
+## read (function)
+
+Optionaler Lese-Handler. In ETHOS ist es möglich, den Speicher nach den Wünschen des Benutzers zu nutzen.
+
+## write (function)
+
+Optionaler Schreibhandler. In ETHOS ist es möglich, den Speicher nach den Wünschen des Benutzers zu nutzen.
+
+### persistent (boolean, optional)
+
+Optionaler Handler für persistente Daten
+
+### title (boolean, optional)
+
+Optionaler Titel-Handler. Der Widget-Titel wird erzwungen ein- oder ausgeschaltet.
+
+LUA-Skripte werden im Ordner scripts/ auf der SD-Karte oder eMMC gespeichert, vorzugsweise in Ordnern organisiert.
+
+Bitte lesen Sie den rcgroups 'FrSky ETHOS Lua Script Programming' Thread für weitere Informationen.

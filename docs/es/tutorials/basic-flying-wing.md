@@ -1,133 +1,123 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
+# Ejemplo de Ala volante básica (Elevones)
 
-# Ejemplo básico de ala volante (elevones)
+Este sencillo ejemplo de ala volante cubre la configuración de un modelo con 2 servos para la Profundidad. Usaremos las Regímenes de giro, exponenciales y relaciones de mezcla recomendadas para una Dreamflight Weasel.
 
-Un ala volante con elevones de 2 servos, utilizando las relaciones de
-rates/Expo/mezclas recomendadas para el Dreamflight Weasel como ejemplo
-práctico concreto. Complete primero la [Configuración inicial de la
-emisora](initial-radio-setup.md).
+## Paso 1. Confirme la configuración del Sistema
 
-## Paso 1. Confirme los ajustes del sistema {: #step-1-confirm-system-settings }
+Comience por seguir el 'Ejemplo de configuración inicial de radio' de más arriba, que se utiliza para configurar las partes del hardware del sistema de radio que son comunes a todos los modelos. Para este ejemplo usaremos el orden de canales por defecto AETR (Alerón, Elevador, Acelerador, Timón). Asegúrese de que el ajuste 'Primeros cuatro canales fijos' está en OFF.
 
-Orden **AETR** por defecto, con **[Primeros cuatro canales
-fijos](../system-setup/controls.md#first-four-channels-fixed)** en
-**OFF**. Registre (si utiliza ACCESS) y vincule el receptor mediante
-[Sistema RF](../model-setup/rf-system.md) antes de continuar.
+Utilice la función [Sistema RF](../model-setup/rf-system.md) para registrar su receptor (si su receptor es ACCESS) y vincularlo como preparación para configurar el modelo.
 
-## Paso 2. Identifique los servos/canales necesarios
+## Paso 2. Identificar los servos/canales necesarios
 
-En una célula con elevones, las [mezclas](../model-setup/mixes.md)
-combinan las entradas de alerones y profundidad sobre ambas superficies
-físicas: solo 2 canales en total, cada uno de ellos una combinación de
-ambas entradas.
+La función Mezclas forma el corazón de la radio. Para un modelo con elevones, las mezclas se preparan para combinar los controles de alerón y profundidad para que ambos actúen sobre las superficies de los elevones.
 
-## Paso 3. Cree un modelo nuevo
+Nuestro ejemplo tiene los siguientes servos/canales:
 
-![Crear modelo de avión](../assets/tut-wing-eg-wiz-create-airplane.png)
+2 canales que combinan las entradas de alerón y elevador
 
-Desde [Seleccionar modelo](../model-setup/model-select.md), inicie el
-asistente **Avión** y elija **Receptor no estabilizado**.
+## Paso 3. Crear un nuevo modelo.
 
-![Sin motor](../assets/tut-wing-eg-wiz-no-engine.png)
+Consulte la sección Configuración del modelo [Seleccion de modelo](../model-setup/model-select.md) para crear su nuevo modelo. Consulte también los menús de la sección Navegación para familiarizarse con la interfaz de usuario de la radio, de modo que pueda encontrar fácilmente las funciones que necesita.
 
-Seleccione **Sin motor**, acepte los 2 canales de alerones por defecto y
-seleccione **Sin flaps**.
+Pulse sobre la pestaña Modelo (icono del avión) y seleccione la función Seleccionar modelo. A continuación, pulse sobre el símbolo "+", que le presentará una selección de asistentes de creación de modelos.
 
-![Sin cola](../assets/tut-wing-eg-wiz-no-tail.png)
+![](../assets/Pictures/1000000000000320000001E0828D9DAE.png)
 
-Seleccione **Ninguna** como tipo de cola: esto es lo que hace que Ethos
-cree automáticamente la mezcla de elevones (entradas de alerones +
-profundidad, ambas sobre los mismos dos canales). Defina un nombre para
-su modelo (p. ej. "Weasel"), elija una imagen y finalice: pasará a ser el
-modelo activo en la categoría Avión.
+Para nuestro ejemplo, pulse sobre el icono Avión para iniciar el asistente de creación del modelo.
+
+![](../assets/tut-wing-eg-wiz-rx.png)
+
+El asistente incluye ajustes opcionales para establecer mezclas predefinidas para receptores Frsky estabilizados. Para este ejemplo, elegiremos las opción ‘Receptor no estabilizado’.
+
+![](../assets/tut-wing-eg-wiz-no-engine.png)
+
+Seleccione "Sin motor" para el motor.
+
+![](../assets/tut-wing-eg-wiz-ail-flaps.png)
+
+Acepte los 2 canales por defecto para Alerones, y seleccione 'No flaps'.
+
+![](../assets/tut-wing-eg-wiz-no-tail.png)
+
+Seleccione 'Ninguno' para la cola. Esto creará una mezcla de elevones usando las entradas de Alerón y Profundidad.
+
+![](../assets/tut-wing-eg-wiz-name.png)
+
+Llamaremos al modelo "Weasel", seleccionaremos una fotografía para él, y seguiremos el asistente hasta el final, lo que dará como resultado la creación del modelo "Weasel" en el grupo Avión. También se convertirá en el modelo activo, por lo que podremos seguir configurando sus características.
 
 ## Paso 4. Revisar y configurar las mezclas
 
-![Vista general de las mezclas](../assets/tut-wing-eg-mixes.png)
+![](../assets/Pictures/1000000000000320000001E0E66E00F4.png)
 
-El asistente crea una mezcla de Alerones en los canales 1+2, seguida de
-una mezcla de Profundidad *también* en los canales 1+2: ambas entradas
-actúan sobre los dos canales de elevones, que es precisamente en lo que
-consiste la mezcla de elevones.
+Pulse sobre el icono Mezclas para revisar las mezclas creadas por el asistente de Avión.
+
+![](../assets/Pictures/1000000000000320000001E0A72EFF70.png)
+
+El asistente ha creado una mezcla de Alerones en los canales 1 y 2, seguida de una mezcla de Profundidad también en los canales 1 y 2. Esto significa que ambos controles de entrada actuarán en los dos canales de los elevones.
 
 ### Alerones
 
-![Mezcla de alerones](../assets/tut-wing-eg-mixes-ail-mix.png)
+Para revisar la mezcla de Alerones, pulse sobre la línea Alerones y seleccione Editar en el menú emergente.
 
-**Peso/Rates**: según el manual del Weasel, la deflexión de los alerones
-debe ser aproximadamente 3 veces la de profundidad, y ambas deben sumar
-100%: **75%** de alerones y **25%** de profundidad. Los rates bajos son
-aproximadamente la mitad de los altos: **36%** de alerones en rate bajo y
-**12%** de profundidad en rate bajo.
+![](../assets/Pictures/1000000000000320000001E0EAE848A6.png)
 
-![Peso de la mezcla de alerones](../assets/tut-wing-eg-mixes-ail-mix-weight.png)
+#### Peso/Régimen de giro
 
-**Expo**: el valor recomendado para el Weasel es 35% en rate alto y 20%
-en rate bajo, activado con el interruptor SB abajo, suavizando la
-respuesta en torno al centro de la palanca.
+Consultando el manual del Weasel, las deflexiones recomendadas para el alerón son aproximadamente 3 veces mayores que para la Profundidad. Queremos pesos combinados del 100%, por lo que el peso del alerón debe ser del 75% y el de Profundidad del 25%.
 
-**Diferencial**: pequeño en esta célula, alrededor del **4%**:
+También según el manual, el porcentaje bajo de giro deben ser aproximadamente el 50% del porcentaje alto de giro. Por lo tanto, utilizaremos un 36% para las tasas bajas del alerón y un 12% para las tasas bajas de elevador.
 
-![Diferencial de alerones](../assets/tut-wing-eg-mixes-ail-diff-04.png)
+#### Expo
 
-(Consulte el [Ejemplo básico de ala
-fija](basic-fixed-wing.md#ailerons) para saber por qué es importante el
-diferencial: aquí se aplica el mismo razonamiento sobre la guiñada
-adversa.)
+![](../assets/Pictures/1000000000000320000001E04BC03176.png)
+
+En los ejemplos anteriores de Régimen de giro se puede ver que la respuesta de salida es lineal. Para evitar que la respuesta sea demasiado brusca con las palancas centradas, puede utilizar una curva Expo para reducir el movimiento de la superficie de control en el centro del movimiento de la palanca y aumentarlo a medida que se va alejando del centro. Los valores de Expo recomendados para el Weasel son 35% para alto y 20% para bajo, así que añadiremos una curva que estará activa en la posición baja del interruptor SB. El gráfico muestra ahora una respuesta curva que es más plana en el centro del recorrido de las palancas.
+
+![](../assets/Pictures/1000000000000320000001E0CF4C0182.png)
+
+Para los Alerones hay otro ajuste especial llamado Diferencial. Si los alerones izquierdo y derecho se mueven hacia arriba o hacia abajo en la misma cantidad, el alerón que se mueve hacia abajo causará más resistencia que el alerón que se mueve hacia arriba, haciendo que el ala guiñe en la dirección opuesta al giro. Esto se conoce como guiñada adversa. Para reducirlo, un valor positivo en el ajuste del diferencial provocará un menor movimiento descendente de los alerones, reduciendo la guiñada adversa y mejorando las características de giro y manejo. El diferencial recomendado para el Weasel es bastante pequeño y equivale aproximadamente al 4%.
 
 ### Profundidad
 
-![Mezcla de profundidad](../assets/tut-wing-eg-mixes-ele-mix.png)
+![](../assets/Pictures/1000000000000320000001E0313A5BED.png)
 
-El mismo patrón: rates alto/bajo de **25%**/**12%** y los mismos valores
-de Expo que en los alerones.
+De manera similar a los Alerones, podemos configurar el régimen de giro y el expo para la Profundidad. Usaremos tasas/pesos de elevador de 25% y 12%. Usaremos los mismos valores de Expo que para los alerones.
 
 ### Timón
 
-![Mezcla de timón](../assets/tut-wing-eg-mixes-rud-mix.png)
+El Weasel no tiene timón, ya que realmente no lo necesita. Otros modelos pueden requerir un timón, en cuyo caso se debe utilizar una mezcla libre para añadir un timón en el canal 3.
 
-El Weasel no lleva timón: las alas volantes generalmente no lo necesitan.
-Cuando *sí* se necesita timón en un modelo con elevones, añádalo como una
-[Mezcla Libre](../model-setup/mixes.md#mix-libraries) en el canal 3.
+![](../assets/Pictures/1000000000000320000001E0E566F6F9.png)
 
-## Paso 5. Vincule el receptor
+## Paso 5. Vincular el receptor
 
-Igual que en el [Paso 1](#step-1-confirm-system-settings): registre y
-vincule antes de continuar, y considere desconectar los varillajes de los
-servos o reducir el recorrido hasta que se hayan ajustado los límites
-Mínimo y Máximo, para evitar forzar algún elemento.
+Use la función  [Systema RF](../model-setup/rf-system.md) para registrar (si su receptor es ACCESS) y vincular su receptor antes de configurar las Salidas.
 
-## Paso 6. Revise las mezclas
+Vea en detalle las dos secciones siguientes para revisar sus mezclas y configurar las Salidas antes de continuar. Para evitar daños inadvertidos a sus servos por exceso de movimiento, sería inteligente desconectar los reenvíos o reducir los movimientos de los servos hasta que esté listo y haya ajustado los límites máximo y mínimo de los servos.
 
-Los canales de salida 1/2 pueden renombrarse como
-**Elevon1**/**Elevon2**. Con el alerón a la derecha a fondo, el canal 1
-(derecho, hacia arriba) indica 75%, mientras que el canal 2 (izquierdo,
-hacia abajo) indica 72%: la diferencia del 3% *es* el diferencial en
-acción. Si además se aplica profundidad abajo a fondo, el canal 1 pasa a
-75+25 = 100% y el canal 2 pasa a 72−25 = 47%.
+## Paso 6. Revisar las mezclas
+
+Puede utilizar la pantalla Salidas para revisar las mezclas. Los canales de salida 1 y 2 pueden renombrarse a Elevon1 y Elevon2.
+
+![](../assets/Pictures/1000000000000320000001E056894E58.png)
+
+El ejemplo anterior muestra que se ha aplicado todo el alerón derecho, por lo que el canal 1 está al 75%, mientras que el alerón izquierdo desciende al 72% debido al diferencial de alerón.
+
+![](../assets/Pictures/1000000000000320000001E08EE81229.png)
+
+Este ejemplo muestra que se ha aplicado todo el alerón derecho, así como todo el elevador hacia abajo, por lo que el canal 1 está a 75+25 = 100%, mientras que el alerón izquierdo hacia abajo está a 72-25 = 47% debido al diferencial de alerón.
 
 ## Paso 7. Configure los recorridos máximos de los servos
 
-![Alerón a fondo](../assets/tut-wing-eg-outputs-full-ail.png)
-![Alerón a fondo + profundidad a fondo](../assets/tut-wing-eg-outputs-full-ail-full-ele.png)
+Comience ajustando los puntos centrales del servo utilizando el ajuste Centro PPM.
 
-Centre primero cada servo con **PWM center**. El recorrido máximo
-recomendado para el Weasel es de 25mm de alerones + 10mm de profundidad =
-35mm combinados: aplique las entradas de alerones/profundidad tanto
-sumándose *como* oponiéndose a fondo y compruebe que ninguna supere los
-límites mecánicos ni los del servo antes de fijar las deflexiones
-definitivas.
+Por último, los recorridos máximos reales del servo deben configurarse para establecer las deflexiones recomendadas y evitar exceder los límites mecánicos del servo. Los recorridos máximos recomendados para el Weasel son 25mm (alerón) + 10mm (elevador) = 35mm. Mueva las palancas de alerones y profundidad a tope a un lado y a otro, entonces configure sus deflexiones máximas de superficie asegurándose de que no se exceden los límites de los servos.
 
-- **Mínimo/Máximo**: límites absolutos, que nunca se sobrepasan;
-  reducirlos reduce el recorrido en lugar de recortarlo. Por defecto
-  ±100%, ampliable a ±150% si es necesario.
-- **Curva**: a menudo más rápida y flexible que ajustar directamente
-  Mínimo/Máximo/Subtrim, con la ventaja de un gráfico en vivo. Una curva
-  de 3 puntos es adecuada para la mayoría de las salidas; una curva de 5
-  puntos en el segundo elevón facilita sincronizar el recorrido en 5
-  puntos con el del primero. Al utilizar una curva para esto, deje
-  Mínimo/Máximo/Subtrim en sus valores de paso directo (−100/100/0, o
-  −150/150/0 con límites ampliados) y deje que sea la curva la que se
-  encargue del ajuste.
+#### Min/Max
+
+Los ajustes mínimo y máximo del canal son límites "duros", es decir, nunca se anularán. Deben ajustarse para evitar atascos mecánicos. Tenga en cuenta que sirven como ajustes de ganancia o "punto final", por lo que la reducción de estos límites reducirá la fuerza en lugar de inducir un recorte de recorrido. Tenga en cuenta que los límites por defecto son +/- 100,0%, pero pueden aumentarse hasta +/- 150,0% si fuera necesario.
+
+#### Curva
+
+Las curvas son una forma más rápida y flexible de configurar el centro y los límites mín./máx. de las salidas, y se obtiene además un bonito gráfico. Utilice una curva de 3 puntos para la mayoría de las salidas, pero utilice una curva de 5 puntos para cosas como el segundo mando de profundidad, para que pueda sincronizar el recorrido en 5 puntos. Cuando se utiliza una curva es una buena práctica dejar Min, Max y Subtrim en sus valores 'pass-thru' de -100, 100 y 0 respectivamente (ó -150, 150 y 0 si se utilizan límites extendidos).

@@ -1,0 +1,7 @@
+# X20R/RS Diseño
+
+![](../assets/Pictures/10000001000003B0000002FCE30F4DA4.png)
+
+![](../assets/Pictures/1000000100000374000002CD729BFEE5.png)
+
+![](../assets/Pictures/1000000100000341000002E5F6CA5534.png)

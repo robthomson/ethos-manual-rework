@@ -1,34 +1,11 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Verfahren für die Umstellung auf FrSky Suite
 
-# Migration
-
-Umstieg eines Senders von den älteren, separaten PC-Update-Werkzeugen auf die
-Ethos Suite – zum ersten Mal.
-
-1. **Ethos ≥ 1.1.4 sicherstellen** — dies ist die Mindestversion, die den neuen
-   Suite-kompatiblen Bootloader (FRSK-Format) direkt aus dem
-   [Dateimanager](../system-setup/file-manager.md) flashen kann. Falls nötig,
-   zunächst manuell auf 1.1.4 aktualisieren.
-2. **SD card/eMMC sichern** — den gesamten Inhalt in einen Ordner auf dem
-   PC kopieren.
-3. **Den aktuellen Bootloader herunterladen** von den
-   [ETHOS-Feedback-Community Releases](https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases)
-   und entpacken. Zu jedem Release gehört eine Datei `components.json`, in der die
-   aktuelle Version jeder Komponente aufgeführt ist — wie diese zu lesen ist, steht
-   unter [Anleitung: Den aktuellen Bootloader finden](../how-to/find-latest-bootloader.md).
-4. Den Sender unter dem Eintrag `targets` in dieser Datei suchen, um die genau
-   zu verwendende Bootloader-Version zu ermitteln, und die passende Datei in den
-   Assets dieses Releases heraussuchen.
-5. Den Sender in den [Bootloader-Modus](../getting-started/usb-connection-modes.md#bootloader-mode)
-   starten (`ENT` gedrückt halten, dann einschalten) und über USB verbinden.
-6. Die Bootloader-Datei auf die SD card/eMMC kopieren (normalerweise in den Ordner
-   `Firmware/`), anschließend die Laufwerke auswerfen und die Verbindung trennen.
-7. Den Sender normal starten, zu **System → Dateimanager** wechseln, die soeben kopierte
-   Datei `bootloader.frsk` antippen und **Bootloader flashen** wählen.
-8. Die Ethos Suite herunterladen und installieren — [Bedienung](operation.md) beschreibt
-   ab hier das Aktualisieren von Firmware und Dateien sowie die übrigen Funktionen der Suite.
-9. Wenn die Ethos Suite dies nicht automatisch erledigt, muss der Ordner `bitmaps/user`
-   auf der SD card/eMMC gegebenenfalls in `bitmaps/models` umbenannt werden (dort werden
-   die Modellbilder des Benutzers abgelegt).
+- Vergewissern Sie sich, dass Sie mindestens die Ethos-Version 1.1.4 verwenden, die Mindestversion, die zum Flashen des neuen, mit der FrSky Suite kompatiblen Bootloaders (FRSK-Format) über den Dateimanager des Senders erforderlich ist. Ist dies nicht der Fall, müssen Sie manuell auf 1.1.4 aktualisieren, um auf FrSky Suite für automatische Updates umsteigen zu können.
+- Erstellen Sie eine Sicherungskopie Ihrer SD-Karte oder eMMC (es ist ratsam, alles in einen Ordner auf Ihrem Computer zu kopieren).
+- Laden Sie die Zip-Datei für den neuesten Bootloader von [https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases](https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases) für Ihren Sender herunter und entpacken Sie sie. Die aktuellen Bootloader-Versionen sind in einer Datei namens components.json aufgeführt, die alle in einer Version verwendeten Komponenten auflistet. Die Datei wird mit jeder neuen Firmware-Version veröffentlicht und kann mit einem Texteditor wie Notepad geöffnet werden.
+- Suchen Sie einfach Ihren Sender unter den Überschriften „Ziele“, dann wird die entsprechende Bootloader-Versionsnummer darunter aufgeführt. Sie finden den Bootloader in den Assets der Ethos-Version mit dieser Nummer.
+- Schalten Sie den Sender im Bootloader-Modus ein (halten Sie die Eingabetaste gedrückt und drücken Sie dann auf ON) und verbinden Sie das System über ein USB-Datenkabel mit dem PC.
+- Kopieren Sie den Bootloader in einen Ordner auf Ihrer SD-Karte oder eMMC (normalerweise in den Ordner Firmware), werfen Sie dann die Laufwerke sicher aus und trennen Sie den Sender vom PC.
+- Starten Sie den Sender, gehen Sie zu System / Dateimanager, tippen Sie auf die Datei bootloader.frsk, die Sie soeben kopiert haben, und wählen Sie die Option „Flash bootloader“.
+- Laden Sie die FrSky Suite herunter und installieren Sie sie. Sie sollten nun in der Lage sein, die nachstehenden Abschnitte zu befolgen, um Ihre Sender-Firmware und die Flash- und SD-Karten- oder eMMC-Dateien auf die neuesten Versionen zu aktualisieren und die anderen Funktionen der FrSky Suite zu nutzen.
+- Bitte beachten Sie, dass Sie möglicherweise den Ordner bitmaps/user auf der SD-Karte oder eMMC in bitmaps/models umbenennen müssen, wenn FrSky Suite dies nicht für Sie tut. Dies ist der Ordner, in dem die Benutzer-Bitmaps gespeichert werden.

@@ -1,83 +1,98 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
+# Editar modelo
 
-# Edición del modelo
+![](../assets/model-icon-editmodel.png)
 
-![Editar modelo](../assets/model-editmodel.png)
+La opción "Editar modelo" se utiliza para editar los parámetros básicos del modelo después de configurarlos el asistente, o cuando se desee.
 
-Permite editar los parámetros a nivel de modelo que el asistente configuró
-inicialmente: principalmente la identificación, pero también algunas
-excepciones y utilidades propias de cada modelo.
+![](../assets/model-editmodel.png)
 
-## Nombre, imagen
+## Nombre, Imagen
 
-Permite cambiar el nombre del modelo o su imagen; al buscar una imagen se
-muestra una miniatura de previsualización.
+Se puede cambiar el nombre del modelo, asignarle una imagen, o modificarla. Al buscar una imagen, se muestra una vista previa en miniatura para facilitar la localización de la imagen correcta.
+
+Los mapas de bits del modelo deben estar ubicados en la carpeta [bitmaps/models](#bitmaps-models-) en la tarjeta SD o eMMC.
 
 ## Tipo de modelo
 
-![Tipo de modelo](../assets/model-edit-modeltype.png)
+![](../assets/model-edit-modeltype.png)
 
-!!! warning
-    Cambiar el tipo de modelo restablece **todas** las mezclas.
+Si se cambia el tipo de modelo, se restablecerán todas las mezclas.
+
+## Receptor
+
+![](../assets/model-edit-receiver-type.png)
+
+Lista los tipos de receptores actualizados, que se pueden cambiar.
 
 ## Asignación de canales
 
-Cambiar el tipo de cola o, en un helicóptero, el tipo de plato cíclico
-también restablece todas las mezclas. En los demás canales se puede
-modificar el número de canales asignados o dejarlos sin asignar.
+Cambiar el tipo de cola, o el plato cíclico de un helicóptero, hará que se reinicien todas las mezclas. En los otros canales se puede cambiar el número de canales de salida asignados, o quitar su asignación.
 
-## Filtro de analógicos
+## Banda muerta del acelerador
 
-![Filtro de analógicos](../assets/model-edit-analog-filter.png)
+![](../assets/model-edit-thr-deadband.png)
 
-[Configuración del sistema → Hardware](../system-setup/hardware.md) dispone de un
-filtro analógico-digital global que puede reducir las oscilaciones alrededor del
-centro de la palanca; este ajuste por modelo lo anula únicamente para este modelo.
+Permite configurar una banda muerta en el acelerador para aceleradores basados en ‘cero’ es decir que tengan adelante y reversa, para evitar movimientos no deseados del motor cuando la palanca está en neutral.
 
-![Opciones del filtro de analógicos](../assets/model-edit-analog-filter-select.png)
+## Filtros analógicos
 
-## Interruptores de función {: #function-switches }
+![](../assets/model-edit-analog-filter.png)
 
-![Interruptores de función](../assets/model-edit-fn-switches.png)
+![](../assets/model-edit-analog-filter-select.png)
 
-Los seis interruptores de función están disponibles en cualquier sitio donde
-aparezca un parámetro **Condición activa**, pero —a diferencia de los
-interruptores normales— no pueden usarse como fuente de uso general. Se
-configuran de una de estas formas:
+En la página Hardware hay un filtro de conversión analógico-digital, en el apartado F[iltros analógicos](../system-setup/hardware.md), que puede mejorar la vibración del mando (‘jitter’) alrededor del centro de las palancas. Este ajuste, específico para cada modelo, puede usarse para anular los ajustes globales de la radio.
 
-- **6 posiciones con OFF**: al pulsar un interruptor de función queda
-  enclavado en ON; al pulsar de nuevo *el mismo*, se apagan los seis.
-- **6 posiciones**: al pulsar un interruptor de función queda enclavado en
-  ON hasta que se pulsa *otro distinto*, que toma el relevo.
-- **2 × 3 posiciones**: divide los seis en dos grupos de tres, con un
-  interruptor activo por grupo.
-- **6 × 2 posiciones**: seis interruptores enclavados independientes de
-  encendido/apagado.
-- **Momentáneo**: seis interruptores independientes, cada uno activo sólo
-  mientras se mantiene pulsado.
-- **Persistente**: si se habilita, el interruptor de función conserva su
-  estado al apagar la emisora o recargar el modelo, en lugar de
-  restablecerse.
+## Interruptores de función
 
-![Opciones de los interruptores de función](../assets/model-edit-fn-switches-select.png)
+![](../assets/model-edit-fn-switches.png)
 
-## Conector SPort
+Los seis interruptores de función están disponibles en todos los campos donde se pueda seleccionar una "condición activa". Tenga en cuenta que no se pueden usar como fuente, a diferencia de los interruptores normales que sí se pueden usar.
 
-El pin de 5 V del conector S.Port de la emisora puede habilitarse o
-deshabilitarse para cada modelo, lo que resulta útil, por ejemplo, para
-alimentar un receptor externo en una configuración de entrenador.
+![](../assets/model-edit-fn-switches-select.png)
 
-## Tiempo de uso del modelo
+### Configuración
 
-![Tiempo de uso del modelo](../assets/model-edit-model-runtime.png)
+Pueden configurarse del siguiente modo:
 
-Contabiliza el tiempo total que este modelo ha estado volando o en
-funcionamiento.
+#### 6-Pos con OFF
 
-## Restablecer todas las mezclas
+Al pulsar cualquier interruptor de función, éste se activará. Sin embargo, si se pulsa por segunda vez un interruptor que ya está en ON, se apagará dejando los seis interruptores de función en OFF.
 
-![Restablecer todas las mezclas](../assets/model-edit-model-reset_all_mixes.png)
+#### 6-POS
 
-Restablece todas las mezclas del modelo a su estado por defecto.
+Al pulsar cualquier interruptor de función, éste se activará hasta que se pulse otro interruptor de función distinto que hará que el interruptor anterior se apague.
+
+#### 2 x 3-Pos
+
+Divide los 6 interruptores de función en dos grupos de 3. Cada grupo puede tener solo un interruptor en ON.
+
+#### 6 x 2-Pos
+
+Divide los 6 interruptores de función en 6 interruptores distintos. Cada interruptor puede estar en ON u OFF.
+
+#### Momentáneo
+
+Divide los 6 interruptores de función en 6 interruptores momentáneos. Cada interruptor está en ON mientras esté pulsando.
+
+### Persistente
+
+Si se activa, el interruptor de función estará siempre en el mismo estado cuando se vuelva a encender la radio o se reinicie el modelo.
+
+## Energía del conector Sport (5V)
+
+![](../assets/model-edit-sport.png)
+
+El pin ‘+’ (central) en el conector S.Port puede configurarse de la siguiente manera:  
+a) El pin ‘+’ (central) en el conector S.Port puede dejarse apagado. Use la opción ‘---’.  
+b) El pin ‘+’ (central) en el conector S.Port puede configurarse como ‘Siempre encendido’ para proporcionar +5V a un dispositivo periférico.  
+c) El pin ‘+’ (central) en el conector S.Port puede ser controlado por un interruptor u otra fuente para proporcionar +5V a un dispositivo periférico.  
+  
+Se debe tener cuidado de no sobrecargar la salida.
+
+## Tiempo de funcionamiento del modelo
+
+Es un cronómetro que tiene en cuenta el tiempo de funcionamiento global del modelo. Presione el botón de reinicio del tiempo de ejecución del modelo para reiniciarlo.
+
+## Elimina todas las mezclas
+
+Al seleccionar "Elimina todas las mezclas" se restablecerán todas las mezclas del modelo.

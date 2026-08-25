@@ -1,137 +1,123 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # Beispiel für ein Nurflügel-Flugzeug (Elevon)
 
-Ein Nurflügler mit 2 Servos für die Elevons, wobei wir die von Dreamflight
-Weasel empfohlenen Raten, Expo- und Mischungsverhältnisse als konkretes
-durchgerechnetes Beispiel verwenden. Führen Sie zuvor die
-[Ersteinrichtung des Senders](initial-radio-setup.md) durch.
+Dieses einfache Nurflügler-Beispiel behandelt die Konfiguration eines Modells mit 2 Servos für die Höhenruder. Wir werden die von Dreamflight Weasel empfohlenen Raten, Expo- und Mischungsverhältnisse verwenden.
 
-## Schritt 1. Bestätigen Sie die Systemeinstellungen {: #step-1-confirm-system-settings }
+## Schritt 1. Bestätigen Sie die Systemeinstellungen
 
-Standard-Kanalreihenfolge **AETR**, wobei die Einstellung **[Erste vier Kanäle
-fest](../system-setup/controls.md#first-four-channels-fixed)** auf **AUS**
-stehen sollte. Verwenden Sie die Funktion
-[HF-System](../model-setup/rf-system.md), um Ihren Empfänger zu registrieren
-(wenn Ihr Empfänger ACCESS ist) und zu binden, bevor Sie fortfahren.
+Beginnen Sie mit dem obigen „Beispiel für die Ersteinrichtung des Senders“, das zur Konfiguration der Teile des Senders dient, die allen Modellen gemeinsam sind. In diesem Beispiel verwenden wir die Standard-Kanalreihenfolge AETR (Querruder, Höhenruder, Gas, Seitenruder). Stellen Sie sicher, dass die Einstellung 'Erste vier Kanäle fest' auf EIN steht.
+
+Verwenden Sie die Funktion [HF-System](../model-setup/rf-system.md), um Ihren Empfänger zu registrieren (wenn Ihr Empfänger ACCESS ist) und zu binden, um die Konfiguration des Modells vorzubereiten.
 
 ## Schritt 2. Identifizieren Sie die benötigten Servos/Kanäle
 
-Bei einem Nurflügelmodell werden die [Mischer](../model-setup/mixes.md)
-verwendet, um die Querruder- und Höhenrudereingänge zu kombinieren, damit beide
-auf die beiden Ruderflächen wirken — insgesamt also nur 2 Kanäle, von denen
-jeder eine Mischung beider Eingänge darstellt.
+Die Funktion „Mischer“ ist das Herzstück des Senders. Bei einem Nurflügelmodell werden die Mischer verwendet, um die Querruder- und Höhenrudersteuerungen zu kombinieren, damit beide auf die Höhenruderflächen wirken.
 
-## Schritt 3. Erstellen Sie ein neues Modell
+Unser Nuri-Beispiel hat die folgenden Servos/Kanäle:
 
-![Flugzeugmodell erstellen](../assets/tut-wing-eg-wiz-create-airplane.png)
+2 Kanäle, die die Querruder- und Höhenrudereingänge kombinieren
 
-Starten Sie aus der [Modellauswahl](../model-setup/model-select.md) heraus den
-Assistenten **Flugzeug** und wählen Sie die Option **Nicht stabilisierter
-Empfänger**.
+## Schritt 3. Erstellen Sie ein neues Modell.
 
-![Kein Motor](../assets/tut-wing-eg-wiz-no-engine.png)
+Lesen Sie den Abschnitt Modell-Setup / Modellauswahl, um Ihr neues Modell zu erstellen. Lesen Sie auch den Abschnitt „Menü-Navigation“, um sich mit der Benutzeroberfläche des Senders vertraut zu machen, damit Sie die benötigten Funktionen leicht finden können.
 
-Wählen Sie für den Motor **Kein Motor**, akzeptieren Sie die Standardeinstellung
-von 2 Kanälen für die Querruder und wählen Sie **Keine Klappen**.
+Tippen Sie auf die Registerkarte Modell (Flugzeugsymbol), und wählen Sie die Funktion Modellauswahl. Tippen Sie dann auf das '+'-Symbol, das Ihnen eine Auswahl an Assistenten zur Modellerstellung bietet.
 
-![Kein Leitwerk](../assets/tut-wing-eg-wiz-no-tail.png)
+![](../assets/tut-wing-eg-wiz-create-airplane.png)
 
-Wählen Sie **Keine Auswahl** für den Leitwerk-Typ — dadurch erstellt Ethos
-automatisch die Elevon-Mischung (Querruder- und Höhenrudereingänge, beide auf
-dieselben zwei Kanäle). Geben Sie dem Modell einen Namen (z. B. „Weasel"),
-wählen Sie ein Bitmap-Bild dafür aus und folgen Sie dem Assistenten bis zum
-Ende — das Modell wird zum aktiven Modell in der Gruppe „Flugzeug".
+In unserem Beispiel tippen Sie auf das Flugzeugsymbol, um den Wizard zur Modellerstellung zu starten.
 
-## Schritt 4. Überprüfung und Konfiguration der Mischer
+![](../assets/tut-wing-eg-wiz-rx.png)
 
-![Übersicht der Mischer](../assets/tut-wing-eg-mixes.png)
+Der Wizard bietet die Möglichkeit, voreingestellte Mischer für stabilisierte FrSky-Empfänger einzurichten. Für dieses Beispiel wählen wir die Option „Nicht stabilisierter Empfänger“. Drücken Sie auf den rechten unteren Pfeil, um zur nächsten Seite zu gelangen. Mit dem linken Pfeil gelangen Sie zur vorherigen Seite.
 
-Der Assistent hat einen Querrudermischer auf den Kanälen 1 und 2 erstellt,
-gefolgt von einem Höhenrudermischer, *ebenfalls* auf den Kanälen 1 und 2. Das
-bedeutet, dass beide Eingangssteuerungen auf die beiden Elevon-Kanäle wirken —
-und genau darin besteht der Trick der Elevon-Mischung.
+![](../assets/tut-wing-eg-wiz-no-engine.png)
+
+Wählen Sie für den Motor „Kein Motor“.
+
+![](../assets/tut-wing-eg-wiz-ail-flaps.png)
+
+Akzeptieren Sie die Standardeinstellung von 2 Kanälen für die Querruder und wählen Sie 'Keine Klappen'.
+
+![](../assets/tut-wing-eg-wiz-no-tail.png)
+
+Wählen Sie 'Keine Auswahl' für das Heck. Dadurch wird eine Höhenrudermischung mit Querruder- und Höhenrudereingängen erstellt. Die Kanalbelegung sieht man dann auf der folgenden Seite.
+
+![](../assets/tut-wing-eg-wiz-name.png)
+
+Wir geben dem Modell den Namen „Wiesel“, wählen ein Bitmap-Bild dafür aus und folgen dem Assistenten bis zum Ende, was dazu führt, dass das Modell „Wiesel“ in der Gruppe „Flugzeug“ erstellt wird. Es wird auch zum aktiven Modell gemacht, so dass wir mit der Konfiguration seiner Funktionen fortfahren können.
+
+## ***Schritt 4. Überprüfung und Konfiguration der Misch******er***
+
+![](../assets/tut-wing-eg-mixes-icon.png)
+
+Tippen Sie auf das Symbol Mischer, um die vom Flugzeug-Assistenten erstellten Mischer zu überprüfen.
+
+![](../assets/tut-wing-eg-mixes.png)
+
+Der Wizard hat einen Querrudermischer auf den Kanälen 1 und 2 erstellt, gefolgt von einem Höhenrudermischer, ebenfalls auf den Kanälen 1 und 2. Das bedeutet, dass beide Eingangssteuerungen auf die beiden Höhenruderkanäle wirken.
 
 ### Querruder
 
-![Querrudermischer](../assets/tut-wing-eg-mixes-ail-mix.png)
+Um den Querrudermischer zu überprüfen, tippen Sie auf die Zeile „Querruder“ und wählen Sie im Popup-Menü „Bearbeiten“.
 
-**Gewichtung/Anteile** — im Weasel-Handbuch sind die empfohlenen Ausschläge für
-das Querruder etwa dreimal größer als für das Höhenruder, und beide zusammen
-sollen 100 % ergeben: **75 %** Querruder, **25 %** Höhenruder. Die niedrigen
-Werte betragen etwa 50 % der hohen Werte: **36 %** für die niedrigen Raten des
-Querruders und **12 %** für die niedrigen Raten des Höhenruders.
+![](../assets/tut-wing-eg-mixes-ail-mix-weight.png)
 
-![Gewichtung des Querrudermischers](../assets/tut-wing-eg-mixes-ail-mix-weight.png)
+#### Gewichtung/Anteile
 
-**Expo** — die von Weasel empfohlenen Expo-Werte sind 35 % für hoch und 20 %
-für niedrig, aktiv in der SB-Schalterstellung nach unten; die Reaktion wird
-dadurch in der Knüppelmitte flacher.
+Im Weasel-Handbuch sind die empfohlenen Ausschläge für das Querruder etwa dreimal größer als für das Höhenruder. Wir wollen kombinierte Gewichte von 100%, also sollte das Querrudergewicht 75% und das Höhenruder 25% betragen.
 
-**Differenzierung** — bei dieser Zelle recht klein, etwa **4 %**:
+Nach dem Weasel-Handbuch sollten die niedrigen Werte etwa 50% der hohen Werte betragen. Daher werden wir 36% für die niedrigen Raten des Querruders und 12% für die niedrigen Raten des Höhenruders verwenden.
 
-![Querruderdifferenzierung](../assets/tut-wing-eg-mixes-ail-diff-04.png)
+#### Expo
 
-(Warum die Differenzierung wichtig ist, erläutert das [Grundlegende Beispiel
-für ein Flächenflugzeug](basic-fixed-wing.md#ailerons) — die Überlegungen zum
-negativen Gieren gelten hier ebenso.)
+![](../assets/tut-wing-eg-mixes-ail-mix.png)
+
+In den obigen Beispielen für die Steuerknüppel können Sie sehen, dass das Ausgangsverhalten linear ist. Um zu vermeiden, dass die Reaktion in der Knüppelmitte zu unruhig ist, können Sie eine Expo-Kurve verwenden, um die Steuerflächenbewegung in der Knüppelmitte zu reduzieren und sie zu erhöhen, wenn sich der Knüppel weiter von der Mitte entfernt. Die von Weasel empfohlenen Expo-Werte sind 35% für hoch und 20% für niedrig, also fügen wir eine Kurve hinzu, die in der SB-Schalterstellung nach unten aktiv wird. Das Diagramm zeigt nun eine gekrümmte Reaktion, die in der Knüppelmitte flacher ist.
+
+![](../assets/tut-wing-eg-mixes-ail-diff-04.png)
+
+Für die Querruder gibt es eine weitere spezielle Einstellung, die Differenzierung genannt wird. Wenn sich das linke und das rechte Querruder um den gleichen Betrag nach oben oder unten bewegt, verursacht das sich nach unten bewegendem Querruder mehr Widerstand als das sich nach oben bewegende, wodurch der Flügel in die entgegengesetzte Richtung der Kurve giert. Dies wird als negatives Gieren bezeichnet. Um dies zu reduzieren, führt ein positiver Wert in der Differential-Einstellung zu einer geringeren Abwärtsbewegung des Querruders, wodurch das ungünstige Gieren reduziert und die Kurvenflug-/Handlingseigenschaften verbessert werden. Die vom Weasel empfohlene Differenzierung ist recht klein und entspricht etwa 4%.
 
 ### Höhenruder
 
-![Höhenrudermischer](../assets/tut-wing-eg-mixes-ele-mix.png)
+![](../assets/tut-wing-eg-mixes-ele-mix.png)
 
-Nach demselben Schema: **25 %**/**12 %** für hohe und niedrige Raten, und wir
-verwenden die gleichen Expo-Werte wie für die Querruder.
+Ähnlich wie bei den Querrudern können wir auch für das Höhenruder die Gewichtung/Anteile einstellen. Wir verwenden einen Wert von 25% und 12% und wir verwenden die gleichen Expo-Werte wie für die Querruder.
 
 ### Seitenruder
 
-![Seitenrudermischer](../assets/tut-wing-eg-mixes-rud-mix.png)
+Der Weasel hat kein Seitenruder, er braucht auch keines. Andere Nurflügel-Modelle benötigen möglicherweise ein Seitenruder. Da für Nuris in der Kategorie Motormodelle keinen fertiger Seitenrudermischer in der Mischerbibliothek vorgesehen ist, verwenden wir in diesem Fall einen Freier Mischer, um ein Seitenruder auf Kanal 3 hinzuzufügen. In der Kategorie Segler ist er aber vorhanden.
 
-Der Weasel hat kein Seitenruder, er braucht auch keines — Nurflügel-Modelle
-benötigen in der Regel keines. Wird bei einem Elevon-Modell *doch* eines
-benötigt, verwenden Sie einen [Freien
-Mischer](../model-setup/mixes.md#mix-libraries), um ein Seitenruder auf Kanal 3
-hinzuzufügen.
+![](../assets/tut-wing-eg-mixes-rud-mix.png)
 
-## Schritt 5. Binden des Empfängers
+## ***Schritt 5. Binden*** ***des*** ***Empfänger******s***
 
-Wie in [Schritt 1](#step-1-confirm-system-settings) — registrieren und binden
-Sie den Empfänger, bevor Sie fortfahren. Um Schäden durch versehentliches
-Übersteuern Ihrer Servos zu vermeiden, wäre es ratsam, Ihre Servoanlenkungen zu
-trennen oder den Servoweg zu reduzieren, bis Sie bereit sind, die
-Servo-Min/Max-Grenzen zu konfigurieren.
+Verwenden Sie die Funktion [HF-System](../model-setup/rf-system.md), um Ihren Empfänger zu registrieren (wenn Ihr Empfänger ACCESS ist) und zu binden, um die Konfiguration der Kanäle vorzubereiten.
+
+Bitte lesen Sie die nächsten beiden Abschnitte über die Überprüfung Ihrer Mischer und die Konfiguration der Kanäle durch, bevor Sie fortfahren. Um Schäden durch versehentliches Übersteuern Ihrer Servos zu vermeiden, wäre es ratsam, Ihre Servoanlenkungen zu trennen oder den Servoweg zu reduzieren, bis Sie bereit sind, die Servo-Min/Max-Grenzen zu konfigurieren.
 
 ## Schritt 6. Überprüfen Sie die Mischer
 
-Die Ausgangskanäle 1 und 2 können in **Elevon1** und **Elevon2** umbenannt
-werden. Bei vollem Querruderausschlag nach rechts steht Kanal 1 (rechts, nach
-oben) auf 75 %, während Kanal 2 (links, nach unten) 72 % beträgt — die Differenz
-von 3 % *ist* die wirkende Querruderdifferenz. Kommt zusätzlich voller
-Höhenruderausschlag nach unten hinzu, liegt Kanal 1 bei 75+25 = 100 % und
-Kanal 2 bei 72−25 = 47 %.
+Sie können den Bildschirm „Kanäle“ verwenden, um die Mischungen zu überprüfen. Die Ausgangskanäle 1 und 2 können in Elevon1 und Elevon2 umbenannt werden.
+
+![](../assets/tut-wing-eg-outputs-full-ail.png)
+
+Das obige Beispiel zeigt, dass das rechte Querruder voll ausgefahren wurde, so dass Kanal 1 auf 75 % steht, während das linke abwärts gerichtete Querruder aufgrund der Querruderdifferenz -72 % beträgt.
+
+![](../assets/tut-wing-eg-outputs-full-ail-full-ele.png)
+
+In diesem Beispiel wurde sowohl das rechte Querruder als auch das Höhenruder voll ausgefahren, so dass Kanal 1 bei 75+25 = 100 % liegt, während das linke, nach unten gerichtete Querruder aufgrund der Querruderdifferenz -72+25 = -47 % beträgt.
 
 ## Schritt 7. Konfigurieren Sie die maximalen Servowege
 
-![Voller Querruderausschlag](../assets/tut-wing-eg-outputs-full-ail.png)
-![Voller Querruder- und voller Höhenruderausschlag](../assets/tut-wing-eg-outputs-full-ail-full-ele.png)
+Beginnen Sie mit der Einstellung der Servo-Mittelpunkte mit Hilfe der PWM-Mitte-Einstellung.
 
-Beginnen Sie mit der Einstellung der Servo-Mittelpunkte mit Hilfe der
-**PWM-Mitte**-Einstellung. Die vom Weasel empfohlenen maximalen Ausschläge sind
-25 mm (Querruder) + 10 mm (Höhenruder) = 35 mm gesamt — geben Sie sowohl volle
-gleichsinnige *als auch* volle gegensinnige Querruder-/Höhenrudereingaben und
-achten Sie darauf, dass die Servo- und Anlenkungsgrenzen nicht überschritten
-werden, bevor Sie die endgültigen Ausschläge festlegen.
+Schließlich sollten die tatsächlichen maximalen Servoausschläge konfiguriert werden, um die empfohlenen Ausschläge einzustellen und um ein Überschreiten der mechanischen Servogrenzen zu vermeiden. Die vom Weasel empfohlenen maximalen Ausschläge sind 25mm (Querruder) + 10mm (Höhenruder) = 35mm. Stellen Sie die maximalen Ruderausschläge ein und achten Sie darauf, dass die Servo- und Anlenkungsgrenzen nicht überschritten werden.
 
-- **Min/Max** — „harte" Grenzwerte, die nicht überschrieben werden können; eine
-  Verringerung dieser Grenzwerte verringert den Weg und führt nicht zum
-  Abschneiden der oberen Werte. Standardmäßig ±100 %, bei Bedarf erweiterbar
-  auf ±150 %.
-- **Kurve** — oft schneller und flexibler, als direkt mit Min/Max/Subtrim zu
-  jonglieren, und Sie erhalten eine schöne Grafik. Verwenden Sie eine
-  3-Punkt-Kurve für die meisten Ausgänge; eine 5-Punkt-Kurve auf dem zweiten
-  Elevon erleichtert es, den Weg an 5 Punkten mit dem ersten zu synchronisieren.
-  Bei Verwendung einer Kurve empfiehlt es sich, Min, Max und Subtrim auf ihren
-  neutralen Werten zu belassen (−100/100/0 bzw. −150/150/0, wenn Sie erweiterte
-  Grenzwerte verwenden), und die Formgebung der Kurve zu überlassen.
+#### Min/Max
+
+Die Minimal- und Maximalwerte für den Kanal sind „harte“ Grenzwerte, d.h. sie können nicht überschrieben werden. Sie sollten so eingestellt werden, dass eine mechanische Blockierung vermieden wird. Beachten Sie, dass sie als Verstärkungs- oder „Endpunkt“-Einstellungen dienen, d. h. eine Verringerung dieser Grenzwerte verringert den Übersteuerungsgrad und führt nicht zum Abschneiden der oberen Werte. Beachten Sie, dass die Grenzwerte standardmäßig auf +/- 100,0 % eingestellt sind, hier aber bei Bedarf auf +/- 150,0 % erhöht werden können.
+
+#### Kurve
+
+Kurven sind ein schnellerer und flexiblerer Weg, die Mitte und die Min/Max-Grenzen der Kanäle zu konfigurieren, und Sie erhalten eine schöne Grafik. Verwenden Sie eine 3-Punkt-Kurve für die meisten Ausgänge, aber verwenden Sie eine 5-Punkt-Kurve für Dinge wie das zweite Höhenruder, damit Sie den Weg an 5 Punkten synchronisieren können. Bei Verwendung einer Kurve empfiehlt es sich, Min, Max und Subtrim auf den Werten -100, 100 bzw. 0 zu belassen (bzw. -150, 150 und 0, wenn Sie erweiterte Grenzwerte verwenden).

@@ -1,12 +1,11 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Programmier-Beispiele
 
-Vollständige Schritt-für-Schritt-Anleitungen zur Programmierung eines Modells – vom Assistenten der [Modellauswahl](../model-setup/model-select.md) bis hin zu einer flugfertigen Konfiguration.
+In diesem Abschnitt werden einige Programmierbeispiele für eine Reihe von Modellen beschrieben. Anschließend folgt ein Abschnitt über die Grundeinstellungen des Funkgeräts, die für jedes Modell erforderlich sind.
 
-- [Beispiel für die Ersteinrichtung eines Senders](initial-radio-setup.md)
-- [Grundlegendes Beispiel für ein Flächenflugzeug](basic-fixed-wing.md)
-- [Beispiel für ein Nurflügel-Flugzeug (Elevon)](basic-flying-wing.md)
-- [Beispiel für einen einfachen Flybarless Helikopter](basic-flybarless-heli.md)
+- Beispiel für die Ersteinrichtung eines Funkgeräts
+- Beispiel für ein einfaches Motor-Modell
+- Beispiel für ein einfaches 4-Kanal-Segelflugzeug
+- Beispiel für eine einfache Tragfläche
+- Beispiel für einen einfachen Flybarless-Helikopter
+
+Auch wenn diese Beispiele für bestimmte Modelltypen zu gelten scheinen, sind sie nur ein Mittel, um die Ethos-Programmierung zu erläutern. Es wäre nützlich, diese Modelle tatsächlich mit dem Sender zu programmieren und die Ausgaben auf dem Bildschirm zu beobachten, während die Eingaben manipuliert werden. Wenn Sie diese Konzepte und den Prozess verstanden haben, können Sie diese Beispiele an Ihr Modell anpassen.

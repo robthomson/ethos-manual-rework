@@ -1,15 +1,23 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Notfall-Modus (Emergency Mode)
 
-# Notfallmodus
+Der Notfallmodus ist die Reaktion des Senders auf ein unerwartetes Ereignis wie das Zurücksetzen des Watchdogs. Der Watchdog ist ein Zeitgeber, der von verschiedenen Teilen von Ethos ständig neu gestartet wird. Wenn ein Fehler jeglicher Art verhindert, dass der Watchdog-Timer neu gestartet werden kann, läuft die Zeit ab und führt zu einem Hardware-Reset des Senders. In diesem Notfallmodus startet der Sender extrem schnell neu, ohne die normalen Startprüfungen, damit Sie so schnell wie möglich wieder die Kontrolle über Ihr Modell erhalten. Auf die SD-Karte oder eMMC wird im Notfallmodus nicht zugegriffen.
 
-Der Notfallmodus ist die Reaktion von Ethos auf einen unerwarteten Fehler auf unterer Systemebene, beispielsweise einen Watchdog-Reset. Der Watchdog ist ein Timer, der von verschiedenen Teilen des Systems fortlaufend neu gestartet wird; wird dieser Neustart durch irgendetwas verhindert, läuft der Timer ab und erzwingt einen Hardware-Reset. Der Notfallmodus startet den Sender daraufhin so schnell wie möglich neu und überspringt dabei sämtliche üblichen Startprüfungen, sodass die Kontrolle über das Modell mit minimaler Verzögerung wieder zur Verfügung steht. Auf die SD card bzw. den eMMC-Speicher wird in diesem Modus überhaupt nicht zugegriffen.
+Im Notfallmodus stehen nur die wesentlichen Funktionen zur Steuerung Ihres Modells zur Verfügung, jedoch keine der übergeordneten Funktionen. Der Bildschirm wird leer und zeigt die Worte 'EMERGENCY MODE' an, begleitet von einem 300ms langen Piepton, der sich alle 3 Sekunden wiederholt. Sprachalarme, Skripte, Protokollierung usw. werden nicht mehr ausgeführt. Wenn der Notfallmodus eintritt, sollten Sie natürlich so schnell wie möglich landen.
 
-Verfügbar sind ausschließlich die wesentlichen Funktionen, die zur weiteren Steuerung des Modells erforderlich sind — keine der höheren Funktionen. Der Bildschirm bleibt leer bis auf den Schriftzug **EMERGENCY MODE**, begleitet von einem alle 3 Sekunden wiederholten Signalton von 300 ms Dauer; Sprachansagen, Lua-Skripte, Datenaufzeichnung und Telemetrie werden vollständig eingestellt. Tritt dies im Flug auf, landen Sie so schnell wie möglich.
+Die häufigste Ursache für den Notfallmodus ist ein Ausfall der SD-Karte.
 
-Die häufigste Ursache ist ein Ausfall der SD card.
+## Test des Notfallmodus
 
-## Notfallmodus testen
+In einigen Fällen kann es für die Benutzer hilfreich sein, den Notfallmodus testen zu können.
 
-Es kann ein **Systemtool** hinzugefügt werden, mit dem sich der Notfallmodus zu Testzwecken gezielt auslösen lässt, damit man ihn nicht erst im Flug zum ersten Mal erlebt. Ein Tippen auf das Symbol „Emergency Test“ fordert zunächst eine Bestätigung an und versetzt den Sender anschließend genau so in den Notfallmodus, wie es bei einem echten Fehler geschehen würde.
+![](../assets/Pictures/1000000000000320000001E0CAE58A4D.png)
+
+Zum Testen des Notfallmodus kann ein Systemtool hinzugefügt werden. Tippen Sie auf das Symbol Notfalltest, um den Test zu starten.
+
+![](../assets/Pictures/1000000100000320000001E08E7E1C65.png)
+
+In diesem Dialogfeld werden Sie um Bestätigung gebeten, um fortzufahren.
+
+![](../assets/Pictures/1000000000000320000001E0FC0300AF.png)
+
+Der Sender wechselt in den Notfallmodus.

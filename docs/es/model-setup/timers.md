@@ -1,83 +1,163 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Cronómetros
 
-# Temporizadores
+![](../assets/model-icon-timers.png)
 
-![Temporizadores](../assets/model-timers.png)
+![](../assets/model-timers.png)
 
-Ocho temporizadores totalmente programables, cada uno con cuenta ascendente o
-descendente. Añada uno con el **+** situado junto a los encabezados de columna,
-o mediante **Añadir** más abajo. Al tocar un temporizador se abren las opciones
-de reiniciar/editar/añadir/mover/copiar-pegar.
+Hay 8 cronómetros totalmente programables que pueden contar de forma ascendente o cuenta-atrás.
 
-![Edición del temporizador](../assets/model-timer1-edit.png)
+En la pantalla principal de cronómetros, (vea arriba) se pueden añadir nuevos cronómetros tocando en el símbolo ‘+’ situado a la derecha en la cabecera.
 
-## Campos comunes (cuenta descendente y ascendente)
+![](../assets/model-timers-action-select.png)
 
-- **Valor** — la lectura actual del temporizador.
-- **Nombre** — editable.
-- **Modo** — **Up** (ascendente) o **Down** (descendente).
-- **Valor inicial** (solo cuenta descendente) — el valor desde el que se
-  descuenta.
-- **Valor de alarma** (solo cuenta ascendente) — el valor a partir del cual se
-  considera que el temporizador ha transcurrido; sigue contando más allá de ese
-  valor, pero se muestra en rojo en los widgets de temporizador.
-- **Condición de inicio** — pone en marcha el temporizador. Si la **condición de
-  parada** se deja en su valor por defecto, la condición de inicio controla por
-  sí sola el arranque *y* la parada. En caso contrario, el temporizador se
-  inicia la primera vez que la condición de inicio se cumple y sigue
-  funcionando a partir de ese momento.
-- **Condición de parada** — si no se deja en su valor por defecto, controla el
-  temporizador una vez en marcha: detenido mientras sea verdadera, en marcha
-  mientras sea falsa. En el ejemplo siguiente, el temporizador se inicia cuando
-  `ThrottleActive` pasa a ser verdadero y se detiene cuando la telemetría deja
-  de estar activa:
+Al tocar cualquier línea del temporizador, aparece una ventana emergente con opciones para restablecer, editar, añadir uno nuevo, mover, o copiar/pegar el cronómetro.
 
-  ![Condición de parada](../assets/model-timer1-edit-stop.png)
+## Cuenta-atrás (cronómetro descendente)
 
-- **Fuente de temporización proporcional** — con `---` cuenta en tiempo real.
-  Cualquier otra fuente (por ejemplo, el stick de acelerador o el canal de
-  acelerador) escala la velocidad del temporizador: a −100 % el temporizador
-  está parado, a +100 % funciona a velocidad real, y entre ambos extremos
-  escala proporcionalmente.
-- **Reiniciar** — un interruptor, interruptor de función, interruptor lógico o
-  posición de trim que reinicia el temporizador; se mantiene reiniciado
-  mientras la condición sea verdadera.
-- **Persistente** — conserva el valor del temporizador al apagar la emisora o
-  al cambiar de modelo, y lo recupera la próxima vez que se use ese modelo.
-- **Voz** — qué [paquete de voz](../system-setup/general.md#audio-settings)
-  anuncia este temporizador.
+![](../assets/model-timer1-edit.png)
 
-## Acciones de audio
+### Valor
 
-![Añadir acción de audio](../assets/model-timer1-add-action.png)
-![Tipo de acción](../assets/model-timer1-action-type-select.png)
-![Acción de cuenta atrás](../assets/model-timer1-action-countdown.png)
+Muestra el valor actual del cronómetro.
 
-Configuración de avisos totalmente flexible para cada temporizador. Cada acción
-tiene un tipo — **Countdown** (cuenta atrás hablada), **Beep countdown**
-(pitidos en lugar de voz), **Play file** (reproducir archivo) o **Play value**
-(reproducir valor) — además de:
+### Nombre
 
-- **Start** — el valor desde el que empieza la cuenta atrás de esta acción.
-- **Step** — intervalo de aviso, hasta 10 minutos (600 s).
-- **Haptic** — acompañar el aviso con vibración.
+Permite dar un nombre al cronómetro.
 
-Un conjunto típico de tres acciones:
+### Modo
 
-![Resumen de acciones](../assets/model-timer1-actions-summary.png)
-![Acciones del temporizador 2](../assets/model-timer2-actions-summary.png)
+El cronómetro puede contar ascendente o **Cuenta-atrás** (Descendente).
 
-1. Cuenta atrás hablada a partir de 2:00 restantes, cada 30 s, con vibración.
-2. Cuenta atrás con pitidos a partir de 0:10 restantes, cada 1 s, con vibración.
-3. Un archivo personalizado (por ejemplo, `timer-1-elapsed`) que se reproduce al
-   transcurrir el tiempo, con vibración.
+### Valor de inicio
 
-Añada más acciones con **Añadir**; la lista se ejecuta por orden de prioridad,
-con la **prioridad más alta al final**.
+Si el cronómetro de ha ajustado para cuenta-atrás (descendente) este valor será el de inicio para la cuenta-atrás hasta cero.
 
-Consulte también el [widget Registros de cronómetro](../displays/index.md#widget-types)
-para disponer de un registro de los tiempos anteriores.
+### Condición de inicio
 
-![Widget de temporizador](../assets/model-timers-widget.png)
+La condición de inicio es la que activa el cronómetro. Si la condición de inicio está ajustada por defecto, el cronómetro empezará a medir y parará con la condición de inicio. Si la condición de parada no es por defecto, el cronómetro empezará a medir cuando la condición de inicio sea verdadera y luego seguirá midiendo indefinidamente.
+
+### Condición de paro
+
+Si la condición de parada es por defecto, el cronómetro estará controlado sólo por la condición de inicio.
+
+![](../assets/model-timer1-edit-stop.png)
+
+Si el cronómetro no se ha configurado por defecto, una vez que ha empezado la cuenta la condición de parada es la que controlará el cronómetro. El cronómetro se parará cuando la condición de parada sea verdadera (True) pero continuará funcionando si la condición de parada es falsa (False).
+
+En el ejemplo de arriba, el cronómetro se activa cuando el acelerador activo se hace verdadero (true) y se para cuando la telemetría ya no está activa.
+
+### Fuente proporcional de tiempo
+
+Si se ajusta a ‘---’ el cronómetro contará en tiempo real. Si se selecciona una Fuente proporcional para temporizar, la velocidad del cronómetro estará controlada por esa Fuente, por ejemplo, la palanca del motor o incluso el canal del motor. Cuando el valor de motor sea -100%, el crono se parará. Cuando el valor es de +100%, el crono contará en tiempo real. Cuando los valores de motor sean intermedios, el crono contará proporcionalmente.
+
+![](../assets/model-timer1-add-action.png)
+
+### Reseteo
+
+El crono se puede restablecer con posiciones de interruptor, de función, interruptores lógicos, o ajustes de compensado. Tenga en cuenta que el crono se mantendrá en reseteo mientras la condición de reseteo siga siendo válida.
+
+### Persistente
+
+Activar la condición Persistente, permite almacenar el valor del crono en la memoria cuando la radio se apaga o el modelo se cambia. El valor se recargará la próxima vez que el modelo se seleccione.
+
+### Voz
+
+Seleccione la voz que desee para usar alertas por voz. Para más detalles, vaya a la sección de [Selección de Voces](#Choice of Voices) ya descrita anteriormente.
+
+### Acciones audio
+
+Las Acciones Audio con muy potentes y flexibles, permitiendo que las alertas de los cronómetros se ajusten exactamente a las necesidades del usuario.
+
+Toque en ‘Agregar una nueva acción de audio’.
+
+![](../assets/model-timer1-action-countdown.png)
+
+Seleccione el tipo de acción de audio requerida, por ejemplo. ‘Cuenta-atrás’ en la imagen de arriba.
+
+#### Inicio
+
+El valor de desde el que la acción de Cuenta-atrás empieza a contar.
+
+#### Paso
+
+Este valor ajusta los intervalos entre los cuales se realizarán los anuncios del valor del cronómetro. Este valor puede ajustarse hasta 10 minutos (600 segundos).
+
+#### Vibrar
+
+Si se activa, los avisos estarán acompañados de vibración.
+
+![](../assets/model-timer1-action-type-select.png)
+
+Los tipos de acciones de audio incluyen ‘Cuenta-atrás’ (por voz), ‘Pitido’ (el sistema da pitidos en lugar de los avisos), ‘Reproducir fichero’ y ‘Reproducir valor’.
+
+![](../assets/model-timer1-actions-summary.png)
+
+En este ejemplo de arriba, se han configurado 3 acciones de audio:
+
+- Primero, una cuenta atrás de 2 minutos que avisará cada 30 segundos. Se ha habilitado que la alerta se dará por voz y vibración.
+- Después se ha establecido una Cuenta-atrás de 10 segundos remanentes, que activarán un pitido cada segundo. También se ha activado la vibración.
+- Finalmente, un aviso de audio personalizado llamado ‘timer-1-elapsed’ se activará cuando el crono acabe (por ejemplo, llegue a cero) acompañado de una vibración.
+
+Se pueden añadir acciones audio adicionales, simplemente tocando el botón ‘Añadir’. Tenga en cuenta que el listado debe estar hecho en orden de prioridad, con la mayor prioridad al final de la lista.
+
+## Cronómetro ascendente
+
+![](../assets/model-timer2-edit.png)
+
+### Valor
+
+Muestra el valor actual del cronómetro.
+
+### Nombre
+
+Permite darle un nombre al cronómetro.
+
+### Modo
+
+El crono puede contar de forma **Ascendente** o Descendente.
+
+### Valor de alarma
+
+![](../assets/model-timers-widget.png)
+
+Si el crono se ha ajustado para contar hacia arriba, el valor establecido en las alarmas condicionará el valor en el que el crono se pare. El crono seguirá contando tiempo, pero el valor se pondrá de color rojo en el asistente.
+
+### ***C******ondi******c******i******ó******n*** ***de inicio***
+
+La condición de inicio es la que activa el crono. Si la condición de paro (párrafo siguiente) está en su valor por defecto, entonces el crono empieza y para de contar si se cumple sólo la condición de inicio. Si la condición de paro no está en su valor por defecto, entonces el crono empieza a contar cuando la condición de inicio es verdadera, y luego seguirá contando tiempo.
+
+### ***C******ondi******c******i******ó******n*** ***de paro***
+
+Si la condición de paro está por defecto, entonces el crono solo se controlará por la condición de inicio.
+
+Si no está ajustada por defecto, una vez que el crono empieza a contar, la condición de paro lo controla. El crono se parará cuando la condición de paro sea verdadera, pero seguirá contando mientras la condición de paro sea Falsa.
+
+### Fuente proporcional de tiempo
+
+Si se ajusta a ‘---’ el cronómetro contará en tiempo real. Si se selecciona una Fuente proporcional para temporizar, la velocidad del cronómetro estará controlada por esa Fuente, por ejemplo, la palanca del motor o incluso el canal del motor. Cuando el valor de motor sea -100%, el crono se parará. Cuando el valor es de +100%, el crono contará en tiempo real. Cuando los valores de motor sean intermedios, el crono contará proporcionalmente.
+
+### Restablecer el crono
+
+El crono se puede restablecer con posiciones de interruptor, de función, interruptores lógicos, o ajustes de compensado. Tenga en cuenta que el crono se mantendrá en reseteo mientras la condición de reseteo siga siendo válida.
+
+### Persistente
+
+Activando la condición Persistente, se permite almacenar el valor del crono en la memoria cuando la radio se apaga o el modelo se cambia. El valor se recargará la próxima vez que el modelo se seleccione.
+
+### Voz
+
+Seleccione la Voz que se usará para las alertas por voz. Para más detalles, vaya a la sección de [Selección de Voces](#Choice of Voices) ya descrita anteriormente.
+
+### Acciones de audio
+
+Las Acciones Audio con muy potentes y flexibles, permitiendo que las alertas de los cronómetros se ajusten exactamente a las necesidades del usuario.
+
+![](../assets/model-timer2-actions-summary.png)
+
+En este ejemplo, se han configurado 3 acciones de audio:
+
+- Primero, una cuenta atrás de 2 minutos que avisará cada 30 segundos. Se ha habilitado que la alerta se dé por voz y vibración.
+- Después se ha establecido una ‘Cuenta-atrás’ de 10 segundos remanentes, que activarán un pitido cada segundo. También se ha activado la vibración.
+- Finalmente, un aviso personalizado de audio extraído de un archivo llamado ‘timer-2-elapsed’ se activará cuando el crono se pare al llegar al valor de alarma, acompañado de una vibración.
+
+Se pueden añadir acciones audio adicionales, simplemente tocando el botón ‘Añadir’. Tenga en cuenta que el listado debe estar hecho en orden de prioridad, con la mayor prioridad al final de la lista.

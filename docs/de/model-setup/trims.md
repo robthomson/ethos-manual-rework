@@ -1,216 +1,234 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # Trimmungen
 
-![Trimmungen](../assets/model-trims.png)
+![](../assets/model-icon-trims.png)
 
-Im Bereich Trimmungen können Sie für jeden Steuerknüppel den Trimmbereich,
-die Trimmschrittgröße und das Trimmverhalten konfigurieren; hier können auch
-Cross-Trimm und Instant-Trimm eingestellt werden. Der **X20 Pro/R/RS** und
-der **X18** verfügen über die zwei zusätzlichen Trimmtaster **T5**/**T6**,
-die für Anpassungen während des Fluges über die vier Hauptknüppel hinaus
-sehr nützlich sind:
+Im Bereich Trimmungen können Sie den Trimmbereich und die Trimmschrittgröße konfigurieren oder ein benutzerdefiniertes Trimmverhalten für jeden der 4 Steuerknüppel festlegen. Hier können auch Cross-Trimm und Instant-Trimm konfiguriert werden.
 
-![Trimmungen T5/T6](../assets/model-trims-pro-t5-t6.png)
+Der X20 Pro/R/RS und der X18 verfügen über die zwei zusätzliche Trimmtaster T5 und T6, die für Anpassungen während des Fluges sehr nützlich sind.
 
-Für jeden Knüppel gibt es eine eigene, unabhängige Reihe von
-Trimmeinstellungen.
+Zusätzliche Trimmungen können nach Bedarf konfiguriert werden.
 
-## Trimm-Einstellungen {: #trim-settings }
+![](../assets/model-trims.png)
 
-- **Bereich** — der Standard-Trimmbereich beträgt +/- 25 %, er kann bis zum
-  vollen Knüppelbereich von ±100 % verändert werden. Beachten Sie, dass auf
-  dem Hauptdisplay der Standard-Trimmbereich als −100 bis 100 angezeigt
-  wird; bei einem Trimmbereich von 100 % wird −400 bis 400 angezeigt (d. h.
-  das Vierfache des normalen Trimmbereichs).
+Für jeden Knüppel gibt es eine Reihe von Trimmeinstellungen.
 
-  !!! warning
-      Bei einem größeren Bereich ist Vorsicht geboten, da ein zu langes
-      Halten des Trimmtasters so viel Trimmung hinzufügen kann, dass Ihr
-      Modell nicht mehr fliegbar ist.
+![](../assets/model-trims-pro-t5-t6.png)
 
-- **Schritt** — Größe der Trimmschritte: **Extra fein**, **Fein**,
-  **Mittel**, **Grob**, **Exponentiell** (feine Schritte in der Nähe der
-  Mitte, grobe Schritte weiter außen) oder **Benutzerdefiniert** (der
-  Trimmschritt wird als Prozentsatz pro Klick angegeben).
+Der X20 Pro und der X18 ist mit den zwei zusätzliche Trimmtastern T5 und T6 ausgestattet.
 
-  ![Schritt-Optionen](../assets/model-trims-step-options.png)
+## Trimm-Einstellungen
 
-  | Schritt | µs pro Klick (Bereich 25 %) |
-  |---|---|
-  | Extra fein | 0,5 |
-  | Fein | 1 |
-  | Mittel | 2 |
-  | Grob | 4 |
-  | Exponentiell | 0,3–16 |
+### Bereich
 
-  Bei benutzerdefinierten Trimmungen und einem Standardbereich von 25 %:
-  Schrittweite 1 % = 1 µs pro Klick, Schrittweite 100 % = 128 µs pro Klick.
-  Bei einem Bereich von 100 %: Schrittweite 1 % = 5 µs pro Klick,
-  Schrittweite 100 % = 512 µs pro Klick.
+Der Standard-Trimmbereich beträgt +/- 25%. Der Bereich kann so verändert werden, dass er den vollen Knüppelbereich von 100 % abdeckt. Bei dieser Option ist Vorsicht geboten, da ein zu langes Halten des Trimmtasters so viel Trimmung hinzufügen kann, dass Ihr Modell nicht mehr fliegbar ist.
 
-## Modus
+Beachten Sie, dass auf dem Hauptdisplay der Standard-Trimmbereich als -100 bis 100 angezeigt wird. Bei einem Trimmbereich von 100 % wird -400 bis 400 angezeigt (d.h. das Vierfache des normalen Trimmbereichs).
 
-![Trimm-Modus Höhenruder](../assets/model-trims-mode-elevator.png)
+### Schritt
 
-Standardmäßig sind die Trimmungen immer eingeschaltet, aber mit **Mode**
-lässt sich dieses Verhalten ändern. Die Trimmungen werden auf 0
-zurückgesetzt, wenn der Modus geändert wird.
+![](../assets/model-trims-step-options.png)
 
-- **AUS** — die Trimmung ist vollständig deaktiviert.
+Mit dem Parameter „Schritt“ können Sie die Trimmung deaktivieren oder die Größe der Trimmschritte konfigurieren, von „Extra fein“ über „Fein“, „Mittel“, „Grob“, „Exponentiell“ und „Benutzerdefiniert“. Die Einstellung Exponentiell ergibt feine Schritte in der Nähe der Mitte und grobe Schritte weiter außen. Bei der Einstellung Benutzerdefiniert kann der Trimmschritt als Prozentsatz angegeben werden.
 
-  ![Mode: AUS](../assets/model-trims-mode-option-off.png)
+Bei einem Standardbereich von 25 % sind die Trimmschritte pro Klick wie folgt:
 
-  Bei Elektromodellen ist die Gastrimmung beispielsweise nicht erforderlich
-  und kann durch Einstellen des Modus auf AUS deaktiviert werden. Die
-  freigewordene Trimmung kann dann
-  [zum Einstellen einer Var verwendet werden](variables.md).
+Extra fein	0.5us
 
-- **einfacher Modus** — es gibt nur einen Trimmwert für jedes
-  Steuerelement, so dass der Trimmwert für alle Flugphasen gleich ist. Dies
-  ist in der Regel für die Querruder- und Seitenrudertrimmung geeignet, da
-  sich diese Trimmungen normalerweise nicht zwischen den Flugphasen
-  unterscheiden.
+Fein	1us
 
-  ![Mode: einfacher Modus](../assets/model-trims-mode-option-easy.png)
+Mittel	2us
 
-- **Trimmung je Flugphase** — die Trimmung wirkt sich nur auf die aktive
-  Flugphase aus. Diese Option wird normalerweise für die
-  Höhenrudertrimmung verwendet, da die erforderliche Höhenrudertrimmung
-  typischerweise für jede Flugphase unterschiedlich ist, z. B. aufgrund von
-  Unterschieden in der Flügelwölbung — in der Tat ist dies oft der
-  Hauptgrund für die Einführung von Flugphasen überhaupt.
+Grob	4us
 
-  ![Mode: Trimmung je Flugphase](../assets/model-trims-mode-option-fm.png)
+Exponential	0.3us bis 16us
 
-- **Benutzer** — im benutzerdefinierten Modus kann das Trimmverhalten
-  vollständig angepasst werden, aufgebaut aus **Aktionen**, die Sie selbst
-  hinzufügen.
+Bei benutzerdefinierten Trimmungen und einem Standardbereich von 25 % sind die Trimmschritte pro Klick wie folgt:
 
-### Benutzerdefiniertes Trimmverhalten
+Schrittweite 1%	    1us
 
-![Eine Aktion hinzufügen](../assets/model-trims-mode-elevator-add-behaviour.png)
-![Verhaltensoptionen](../assets/model-trims-mode-elevator-edit-behaviour.png)
+Schrittweite 100%	128us pro Schritt
 
-Jede Aktionszeile besteht aus einer Bedingung und einer der folgenden
-Optionen:
+Bei benutzerdefinierten Trimmungen und einem Bereich von 100 % sind die Trimmschritte pro Klick:
 
-- **nicht ausgewählt** — deaktiviert die Trimmung selektiv unter dieser
-  Bedingung (anstatt sie mit Mode = AUS vollständig abzuschalten).
+Schrittweite 1%	    5us
 
-  ![nicht ausgewählt](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
-  ![Bedingung für „nicht ausgewählt“](../assets/model-trims-mode-unplugged-select.png)
+Schrittweite 100%	512us pro Schritt
 
-- **normal** (Standard) — gewöhnliches Trimmverhalten.
-- **Gleichwertig (mit einem anderen Trimmer)** — die Trimmung für diese
-  Bedingung ist exakt gleich der Trimmung einer anderen Bedingung.
+### Modus
 
-  ![gleich Standard](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
+![](../assets/model-trims-mode-elevator.png)
 
-- **Offset + (weiterer Trimm)** — die Trimmung für diese Bedingung wird zur
-  Trimmung einer anderen Bedingung hinzugefügt.
+Standardmäßig sind die Trimmungen immer eingeschaltet, aber die Optionen für das Trimmverhalten können so konfiguriert werden, dass das Trimmverhalten je nach den verschiedenen Bedingungen geändert wird.
 
-  ![Offset](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+Hinweis: Die Trimmungen werden auf 0 zurückgesetzt, wenn der Modus geändert wird.
 
-**Beispiel für Offsettrimmung** — ein Segelflugzeug mit einer
-Basis-Höhenrudertrimmung für **Reiseflug** sowie davon abhängigen
-Trimmungen für **Speed** und **Thermal**:
+Es gibt vier Modi für das Trimmverhalten:
 
-![FM5(Speed) auswählen](../assets/model-trims-mode-elevator-custom-select.png)
-![FM4(Thermal) auswählen](../assets/model-trims-mode-elevator-custom-select-2.png)
+#### AUS
 
-1. Trimmen Sie das Höhenruder in der Standard-Flugphase (Reiseflug) für den
-   Horizontalflug.
-2. Fügen Sie eine Aktion hinzu: **Offset + Standard** mit der Bedingung
-   `FM5(Speed)`. Wenn der FM5(Speed)-Modus ausgewählt ist, werden alle
-   Trimmeinstellungen als Offset zum Basis-Trimmwert im Reiseflug
-   gespeichert — die Trimmung ist damit separat, aber dennoch abhängig von
-   der Basistrimmung.
+![](../assets/model-trims-mode-option-off.png)
 
-   ![Offset für Speed](../assets/model-trims-mode-elevator-custom-speed.png)
+Wenn der Trimm-Modus auf AUS gesetzt ist, ist die Trimmung deaktiviert.
 
-3. Fügen Sie auf die gleiche Weise eine zweite Aktion hinzu:
-   **Offset + Standard** mit der Bedingung `FM4(Thermal)`. (Sobald die erste
-   Aktion existiert, werden im Dropdown-Dialog zusätzlich die Optionen
-   `gleich FM5(Speed)` und `Offset + FM5(Thermal)` angezeigt, da nun auch
-   auf diese Aktion Bezug genommen werden kann.)
+Bei Elektromodellen ist die Gastrimmung beispielsweise nicht erforderlich und kann durch Einstellen des Modus auf AUS deaktiviert werden. Die Trimmung kann dann zum Einstellen einer Var verwendet werden, siehe dazu den Abschnitt „[Verwendete Trimmung](variables.md)“ im Abschnitt „Var“.
 
-   ![Offset für Speed und Thermal](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+#### Einfacher Modus
 
-Wenn Ihre Basistrimmung für den Reiseflug später geändert werden muss, weil
-Sie die Schwerpunktlage des Flugzeugs geändert haben, werden die abhängigen
-Trimmeinstellungen für Speed und Thermal automatisch um den gleichen Betrag
-geändert, da es sich um Offsets auf diesen Wert und nicht um unabhängige
-Werte handelt.
+![](../assets/model-trims-mode-option-easy.png)
 
-- **Audio** — für jede Trimmung kann Audio deaktiviert werden, wenn die
-  Standardansagen nicht gewünscht sind, z. B. wenn die Trimmung
-  umfunktioniert wurde.
+Im Einfachen Modus gibt es nur einen Trimmwert für jedes Steuerelement, so dass der Trimmwert für alle Flugphasen gleich ist. Dies ist in der Regel für die Querruder- und Seitenrudertrimmung geeignet, da sich diese Trimmungen in der Regel nicht zwischen den Flugphasen unterscheiden.
+
+#### Trimmung je Flugphase
+
+![](../assets/model-trims-mode-option-fm.png)
+
+#### Benutzer
+
+![](../assets/model-trims-mode-elevator-custom-select.png)
+
+Im benutzerdefinierten Modus kann das Trimmverhalten angepasst werden
+
+![](../assets/model-trims-mode-elevator-add-behaviour.png)
+
+Sobald der benutzerdefinierte Modus ausgewählt wurde, erscheint ein neues Dialogfeld „Aktion“. Klicken Sie auf „Eine Aktion hinzufügen“.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour.png)
+
+Es wird eine neue Aktion hinzugefügt.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+Die anfänglichen Verhaltensoptionen sind:
+
+-     - nicht ausgewählt
+-     - normal (Standard)
+-     - gleich Standard 
+-     - Offset + Standard
+
+Die einzelnen Optionen werden im Folgenden beschrieben.
+
+##### Deaktivieren der Trimmung
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
+
+Trimmungen können selektiv deaktiviert werden, indem die Option „nicht ausgewählt“ konfiguriert wird.
+
+![](../assets/model-trims-mode-unplugged-select.png)
+
+Trimmungen können selektiv deaktiviert werden, indem man von „EIN“ zum gewünschten Zustand wechselt. Um eine Trimmung vollständig zu deaktivieren, setzen Sie den Trimm-Modus wie oben beschrieben auf AUS.
+
+##### Gleichwertig (mit einem anderen Trimmer)
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
+
+Die Trimmung für eine bestimmte Bedingung kann so konfiguriert werden, dass sie gleich der Trimmung einer anderen Bedingung ist.
+
+##### Offset + (weiterer Trimm)
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+Die Trimmung für eine bestimmte Bedingung kann so konfiguriert werden, dass sie zur Trimmung einer anderen Bedingung hinzugefügt wird.
+
+##### Beispiel für Offsettrimmung
+
+Bei vielen Modellen möchten Sie eine Basis-Höhenrudertrimmung für das Fliegen im Standardmodus und dann abhängige Höhenrudertrimmungen für andere Flugphasen haben.
+
+Bei Segelflugzeugen zum Beispiel ist die Voreinstellung normalerweise ein Flugphase namens Reiseflug, bei dem das Höhenruder zuerst für den Horizontalflug getrimmt wird.
+
+Dann wollen Sie abhängige Höhenrudertrimmungen in anderen Flugphasen wie Speed und Thermal. Wir werden ein neues Verhalten für die Modi „Geschwindigkeit“ und „Thermik“ hinzufügen.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+![](../assets/model-trims-mode-elevator-custom-speed.png)
+
+Wir konfigurieren das erste Verhalten als 'Offset + Standard' mit der Bedingung 'FM5(Speed)'. Wenn der FM5(Speed)-Modus ausgewählt ist, werden alle Trimmeinstellungen als Offset zum Basismodus-Trimmwert in FM0(Reiseflug) gespeichert. Daher ist die Trimmung in FM5(Speed) separat, aber auch abhängig von der Basistrimmung.
+
+![](../assets/model-trims-mode-elevator-custom-select-2.png)
+
+Beachten Sie, dass bei der Konfiguration des zweiten Verhaltens jetzt zusätzliche Optionen „Gleiche FM5(Geschwindigkeit)“ und „Offset + FM5(Thermik)“ im Dropdown-Dialog angezeigt werden. Diese sind auf das erste Verhalten zurückzuführen, das wir oben konfiguriert haben.
+
+![](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+
+Ähnlich wie im ersten Fall konfigurieren wir das zweite Verhalten als „Offset + Standard“ mit der Bedingung „FM4(Thermal)“. Wenn der FM4(Thermal)-Modus ausgewählt ist, werden alle Trimmeinstellungen als Offset zum Basismodus-Trimmwert in FM0(Reiseflug) gespeichert. Daher ist die Trimmung in FM4(Thermik) separat, aber auch abhängig von der Basistrimmung.
+
+Wenn Ihre Basistrimmung für den Reiseflug geändert werden muss, weil Sie die Schwerpunktlage des Flugzeugs geändert haben, werden die abhängigen Trimmeinstellungen für Geschwindigkeit und Thermik ebenfalls um den gleichen Betrag geändert.
+
+### Audio
+
+Für jede Trimmung kann Audio deaktiviert werden, wenn die Standardansagen nicht gewünscht sind, z. B. wenn die Trimmung umfunktioniert wurde.
+
+### Trimmen auf Subtrimmen verschieben
+
+![](../assets/model-trims-mode-elevator-trim-to-subtrim-select.png)
+
+Nachdem Sie Ihr Modell für den Horizontalflug getrimmt haben, können Sie mit dieser Funktion den erforderlichen Trimmwert (z. B. für das Höhenruder) in die Subtrim-Einstellung in „Channels“ (Kanäle) übertragen und die Trimmung im Hauptbildschirm auf die Nullposition zurücksetzen. So können Sie leicht überprüfen, ob sich Ihre Flugtrimmungen nicht verschoben haben.
+
+![](../assets/model-trims-mode-elevator-trim-to-subtrim-options.png)
+
+Bei der Option „Trimmung zu Subtrimmung verschieben“ für die Höhenrudertrimmung ist standardmäßig „Höhenrudertrimmung“ ausgewählt. Es können weitere Trimmungen hinzugefügt werden, oder Sie können die Master-Option „Trimmungen zu Subtrimmungen verschieben“ unten verwenden, die standardmäßig alle Trimmungen auswählt.
 
 ## Extra Trimmer
 
-![Extra Trimmer hinzufügen](../assets/model-trims-add-trim-select.png)
-![Einstellungen des Extra Trimmers](../assets/model-trims-add-trim-edit.png)
+![](../assets/model-trims-add-trim-select.png)
 
-Mit **Extra Trimmer hinzufügen** wird eine Trimmung über die vier
-Standardknüppel (und T5/T6) hinaus erstellt: **Name**, die Quellen für
-**hoch**/**runter** zur Ansteuerung sowie dieselben Optionen für
-**Bereich**, **Schritt**, **Mode** und **Audio** wie oben.
+Extra Trimmer können durch Tippen auf die Schaltfläche „Extra Trimmer hinzufügen“ erstellt werden.
+
+![](../assets/model-trims-add-trim-edit.png)
+
+### Name
+
+Der neue Trimmer kann benannt werden.
+
+### hoch
+
+Wählen Sie die Quelle aus, die für die Erhöhung des Trimmwerts verwendet werden soll.
+
+### runter
+
+Wählen Sie die Quelle aus, die zur Verringerung des Trimmwerts verwendet werden soll.
+
+### Bereich
+
+Bitte beachten Sie die Bereichs-Beschreibung für die Standardausstattungen oben.
+
+### Schritt
+
+Bitte beachten Sie die obige Schrittweiten-Beschreibung für die Standardausstattungen.
+
+### Mode
+
+Bitte beachten Sie die Beschreibung zur Konfiguration des Verhaltens der Standardleisten oben.
+
+### Audio
+
+Für jeden Trimmer kann die Ansage deaktiviert werden, wenn die Standardansagen nicht gewünscht sind, z.B. wenn die Verkleidung umfunktioniert wurde.
 
 ## Kreuz-Trimmung
 
-![Kreuz-Trimmung](../assets/model-trims-cross.png)
-![Kreuz-Trimmung bearbeiten](../assets/model-trims-cross-edit.png)
+![](../assets/model-trims-cross-edit.png)
 
-Legt fest, welcher Trimmtaster tatsächlich welchen Steuerknüppel trimmt —
-erlaubt also, die Trimmung eines Knüppels über ein anderes physisches
-Trimmelement als üblich anzusteuern. (T5/T6 stehen nur beim X20 Pro und
-X18 zur Verfügung.)
+Für jeden Trimmknüppel können Kreuztrimmungen eingerichtet werden, so dass Sie für jeden Knüppel festlegen können, welcher Trimmschalter verwendet werden soll. (Die Trimmungen T5 und T6 sind nur für den X20 Pro, X20R(S) und den X18 verfügbar).
 
-## Instant-Trimm {: #instant-trim }
+## Direkt Trim
 
-![Instant-Trimm](../assets/model-trims-instant-trim.png)
+![](../assets/model-trims-instant-trim.png)
 
-Solange aktiv, werden die aktuellen Knüppelpositionen in die entsprechenden
-Standardtrimmungen (und Kreuz-Trimmungen) übernommen. Legen Sie diese
-Funktion am besten auf einen Schalter, der erreichbar ist, ohne die Knüppel
-loszulassen — im geraden Horizontalflug ausgelöst, setzt sie die
-Trimmungen sofort, anstatt bei stark verstellten Trimmungen wiederholt
-einen Trimmtaster betätigen zu müssen. Deaktivieren Sie sie nach dem
-Trimmflug wieder, um die Trimmungen später nicht versehentlich zu
-verstellen.
+Wenn diese Funktion aktiv wird, addiert sie die aktuellen Knüppelpositionen zu den jeweiligen Trimmwerten für die Standardtrimmung (auch Quertrimmung). Am besten weisen Sie die Funktion einem Schalter zu, den Sie erreichen können, ohne die Steuerknüppel loszulassen, damit Sie die Trimmungen im Geradeausflug sofort einstellen können. Dadurch wird vermieden, dass Sie die Trimmschalter mehrmals betätigen müssen, wenn die Trimmung nicht stimmt. Diese Einstellung sollte nach dem Trimmflug deaktiviert werden, damit die Trimmung nicht versehentlich wieder verstellt wird.
 
-!!! note
-    Der Instant-Trimm ist nur aktiv, solange eine der Hauptansichten
-    angezeigt wird.
+Bitte beachten Sie, dass das sofortige Trimmen nur aktiv ist, wenn Sie sich in einer der Hauptansichten befinden.
 
-## Trimmungen zu Sub-Trimmungen verschieben
+## Verschiebe Trimmung nach Subtrim
 
-![Trimmungen zu Sub-Trimmungen verschieben](../assets/model-trims-move-trims-to-subtrims.png)
+![](../assets/model-trims-move-trims-to-subtrims.png)
 
-Nach dem Austrimmen auf Horizontalflug wird der Trimmwert eines Kanals
-(z. B. Höhenruder) in dessen [Sub-Trimm](outputs.md)-Einstellung übernommen
-und die angezeigte Trimmung auf null zurückgesetzt — eine saubere
-Möglichkeit, später zu prüfen, ob sich die Flugtrimmung verändert hat.
+Nachdem Sie Ihr Modell für den Horizontalflug getrimmt haben, können Sie mit dieser Funktion den gewünschten Trimmwert (z.B. für das Höhenruder) in die Subtrimm-Einstellung unter „Kanäle“ verschieben und die Trimmung im Hauptbildschirm auf die Nullposition zurücksetzen. Auf diese Weise können Sie leicht überprüfen, ob sich Ihre Flugtrimmungen nicht verändert haben.
 
-Bei Verwendung von Flugphasen kann ein Kanal mehrere relevante Trimmwerte
-besitzen, während der Sub-Trimm im Bereich Ausgänge eine einzige globale
-Einstellung für alle Flugphasen ist. Diese Funktion berücksichtigt das: Sie
-übernimmt die Trimmung der **aktuell ausgewählten** Flugphase in den
-Sub-Trimm, setzt diese Trimmung zurück und passt die Trimmungen *aller
-anderen* Flugphasen desselben Kanals kompensierend an — sodass die
-tatsächliche Ruderstellung in jeder Flugphase insgesamt unverändert bleibt.
+![](../assets/model-trims-move-trims-to-subtrims-options.png)
 
-!!! tip
-    Führen Sie dies aus Konsistenzgründen immer aus derselben
-    „Basis“-Flugphase heraus aus (z. B. Reiseflug bei einem Segelflugzeug) —
-    solange Sie das tun, kann der Vorgang gefahrlos wiederholt werden.
+Überprüfen Sie die Trimmwerte, die auf die Sub-Trimmung übertragen werden sollen. Möglicherweise möchten Sie die Gastrimmung abwählen.
 
-Große Trimm- oder Sub-Trimmwerte führen zu sehr asymmetrischen Ausschlägen
-— besser, die Ursache mechanisch zu beheben. Ziel sind Anlenkungen im
-90°-Winkel bei neutralen Rudern (Ausnahme sind Wölbklappen, bei denen man
-etwas Ausschlag nach oben gegen mehr Ausschlag nach unten eintauscht);
-anschließend lässt sich mit **PWM center** exakt auf 90° feinjustieren,
-sobald die Anlenkung nahe dran ist.
+Bei der Verwendung von Flugphasen kann mehr als ein Trimmwert für jeden Kanal in Betracht kommen. Der Parameter Subtrim in den „Kanälen“ ist eine globale Einstellung, die für alle Flugphasen gilt, während die Trimmwerte je nach Flugphase variieren können. Daraus folgt, dass die Verschiebung der Trimmung in einer Flugphase in die globale Subtrimmung eine Anpassung der Trimmungen in den anderen Flugphasen erfordern kann. Daher übernimmt die Funktion die Trimmung der aktuell ausgewählten Flugphase, überträgt ihren Inhalt in die Subtrimmung, setzt die Trimmung zurück und passt die betroffenen Trimmungen aller anderen Flugphasen an. Am Ende des Tages sollten die Steuerflächenpositionen in jeder Flugphase die gleichen sein wie vor der Operation 'Trimmung zu Subtrimmung'.
+
+Große Trimm- oder Subtrimmwerte können sich aufgrund der daraus resultierenden stark asymmetrischen Ausschläge nachteilig auswirken. Es wäre ratsam, das Problem mechanisch zu korrigieren. Es sollten alle Anstrengungen unternommen werden, um 90 Grad an den Anlenkungen zu erreichen, wenn sich die Flächen in der Neutralstellung befinden, mit Ausnahme der Klappen, bei denen man den Weg in Aufwärtsrichtung opfert, um den Weg in Abwärtsrichtung zu maximieren. Nachdem man die Anlenkungen so nahe wie möglich an 90 Grad gebracht hat, sollte PWM-Center verwendet werden, um sie genau auf 90 Grad zu bringen.
+
+Es ist kein Problem, die Trimmung mit der Subtrimmung zu wiederholen, aber Sie sollten konsequent sein und immer in der gleichen Flugphase, d.h. in Ihrer „Basis“-Flugphase, arbeiten. Bei einem Segelflugzeug ist z.B. die Reiseflugphase normalerweise die Basisflugphase und diejenige, der zuerst getrimmt wird.

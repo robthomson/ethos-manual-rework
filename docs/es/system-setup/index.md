@@ -1,35 +1,41 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Visión general
 
-# Configuración del sistema
+![](../assets/system-icon-filemanager.png)
 
-La Configuración del sistema ajusta las partes de la emisora que son comunes a todos los
-modelos — se accede desde la pestaña **Engranaje** de la barra inferior (o con la tecla `SYS`).
-Todo lo específico de un solo modelo se encuentra en [Configuración del
-modelo](../model-setup/index.md) (la pestaña **Avión** / tecla `MDL`) —
-en particular, qué módulo de RF usa un modelo (interno o externo) es un
-ajuste propio de cada modelo, dentro de [Sistema RF](../model-setup/rf-system.md), y no
-está aquí.
+Dentro del menú de configuración del Sistema, toque uno de los cuadrados para configurar la correspondiente sección, o use el selector rotatorio para remarcar el deseado y presione Enter. Puede deslizar el dedo hacia la izquierda para acceder a una segunda página, o usar el selector rotatorio para mover el remarcado hacia la segunda página. Alternativamente, se puede usar la tecla Page para cambiar entre las páginas.
 
-Toque un icono para abrirlo, o desplace la selección con el selector
-rotatorio y pulse `ENT`. Hay una segunda página de iconos — deslice hacia la izquierda, lleve
-la selección hasta ella o pulse `PAGE` para cambiar de página.
+## Administrador de archivos
 
-- [Gestor de archivos](file-manager.md) — archivos y carpetas, y actualización del
-  firmware del módulo de RF interno, de dispositivos S.Port, por OTA y de módulos
-  externos.
-- [Alertas](alerts.md) — modo silencioso, batería de la emisora y del RTC, conflicto de sensores
-  y avisos de inactividad.
-- [Fecha y hora](date-and-time.md) — el reloj del sistema y su visualización.
-- [General](general.md) — idioma, pantalla, audio, vario, vibración, barra
-  de herramientas superior, modelo al encender y preselección del modo USB.
-- [Batería](battery.md) — gestión de la batería de la emisora.
-- [Hardware](hardware.md) — comprobación y calibración de los controles
-  físicos, definición del tipo de interruptores y asignación de las teclas de inicio.
-- [Controles](controls.md) — modo de palancas y orden de canales por defecto (aparece como
-  "Sticks" en el menú).
-- [Dispositivos](devices.md) — sensores, receptores, el Gas Suite, servos y
-  transmisores de vídeo (aparece como "Device config" en el menú).
-- [Información](information.md) — versión del firmware, tipos de gimbal, información del
-  módulo de RF, tiempo de uso y registros de errores.
+El gestor de archivos sirve para administrar archivos y para acceder a los archivos para flashear el firmware del módulo interno de radio-frecuencia, del S.Port externo, hacer actualizaciones OTA, y de los módulos externos.
+
+## Alertas
+
+Configura las alertas de modo silencioso, aviso de bajos voltajes de la batería interna y de la batería RTC, conflictos entre sensores y alerta de inactividad de la radio.
+
+## Fecha y hora
+
+Configuración del reloj del sistema y opciones de visualización de la hora.
+
+## General
+
+Para configurar el estilo de los menús, el idioma del sistema y los atributos de la pantalla LCD, como son el brillo y la retroiluminación, así como los modos de audio, los modos y ajustes del variómetro y de la vibración. Además, se pueden seleccionar las opciones de la barra superior, la selección del modelo al encender la radio y la preselección del modo USB que se requiera.
+
+## Batería
+
+Configuración de los ajustes para gestión de la batería.
+
+## Hardware
+
+Esta sección permite comprobar los dispositivos físicos de entrada del hardware, y calibrar los analógicos y los giróscopos. También permite cambiar los tipos de interruptores, así como para definir el comportamiento de la tecla Home.
+
+## Palancas
+
+Configuración de los modos de las palancas y el orden de los canales por defecto. También se puede cambiar el nombre de cada uno de los 4 controles de las palancas.
+
+## Configuración de dispositivos
+
+Son herramientas para configurar dispositivos tales como sensores, receptores, la ‘Gas suite’, servos y transmisores de vídeo.
+
+## Información
+
+Información del sistema sobre la versión del firmware, tipos de gimbals y módulos RF.

@@ -1,105 +1,308 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Entrenador
 
-![Entrenador](../assets/model-trainer.png)
+![](../assets/model-icon-trainer.png)
 
-La función Entrenador está desactivada por defecto. La radio se puede configurar
-como **Maestro** (la radio del instructor, que recibe hasta 16 controles de la
-radio del alumno) o como **Esclavo** (la radio del alumno, que transfiere al
-maestro un número configurable de canales).
+La función de Entrenador puede configurarse como maestro o esclavo. En modo maestro, pueden transferirse hasta 16 controles desde la radio esclava o del estudiante a la radio maestra o del instructor cuando la 'condición activa' está activa. En modo esclavo, un número configurable de canales se transfiere al maestro.  
+  
+Existen 5 métodos para configurar enlaces de entrenador, los cuales pueden usarse simultáneamente en cualquier dirección mediante:  
+▪ Cable de entrenador  
+▪ Bluetooth  
+▪ SBUS en el conector del módulo externo  
+▪ PPM en el conector del módulo externo (este no puede usarse al mismo tiempo que SBUS en el módulo externo)  
+▪ SBUS en el conector S.Port de la radio  
+  
+Lo anterior también puede usarse para otras aplicaciones, como un módulo de seguimiento de cabeza que envía señales que la radio utiliza para controlar la vista de una cámara FPV.
 
-## Modo Maestro
+![](../assets/model-trainer-add.png)
 
-![Modo Maestro](../assets/model-trainer-master.png)
-![Opciones del entrenador](../assets/model-trainer-options.png)
+No hay enlaces de entrenador predeterminados. Toque el botón ‘+’ para agregar un nuevo enlace de entrenador.
 
-### Modo de enlace
+![](../assets/model-trainer-options.png)
 
-![Opciones del modo de enlace](../assets/model-trainer-link-mode-options.png)
+Elija el método de conexión de entre las cuatro opciones que se listan.
 
-- **Cable de entrenamiento** — un cable de audio mono de 3,5 mm entre las dos radios.
-- **Bluetooth** —
+## Cable entrenador
 
-  ![Enlace Bluetooth](../assets/model-trainer-link-mode-bt.png)
+![](../assets/model-trainer-cable-select.png)
 
-  - **Modo** — velocidad normal o alta velocidad; para una latencia más baja,
-    utilice el ajuste de alta velocidad si ambas radios lo admiten.
+Toque en la opción ‘Cable Entrenador para configurar un enlace de entrenamiento usando un cable físico, que debería ser un cable audio mono de 3.5mm.
 
-    ![Modo Bluetooth](../assets/model-trainer-link-mode-bt-mode.png)
+### Estado
 
-  - **Nombre local** — el nombre BT local que se mostrará en los dispositivos
-    que se conecten (por defecto `FrSkyBT`, pero puede editarse).
-  - **Dirección local** — la dirección Bluetooth local de la radio.
-  - **Dirección remota** — la dirección Bluetooth del dispositivo remoto, una
-    vez encontrado y vinculado.
-  - **Buscar dispositivos** (solo en modo Maestro) — pone la radio en modo de
-    búsqueda BT de los dispositivos cercanos:
+La función Cable Entrenador puede deshabilitarse. Esto permite al usuario habilitar solo una pestaña de entrenador a la vez, mientras se conservan las diferentes configuraciones.
 
-    ![Buscando](../assets/model-trainer-link-mode-bt-search.png)
-    ![Esperando](../assets/model-trainer-link-mode-bt-search-waiting.png)
-    ![Seleccionar dispositivo](../assets/model-trainer-link-mode-bt-select-device.png)
-    ![Conectado](../assets/model-trainer-link-mode-bt-device-connected.png)
+### Modo entrenador
 
-  - **Conectar el último dispositivo** / **Restablecer el módulo** — conecta con
-    el último dispositivo configurado, o restablece el módulo y limpia todos los
-    ajustes de su configuración.
+#### Alumno (esclavo)
 
-- **Módulo SBUS externo** — proporciona una entrada SBUS al pin PXX-IN de la
-  bahía del módulo externo de la radio, para instalar un receptor FrSky dotado
-  de salida SBUS (por ejemplo, un Archer RS) que actúe como el extremo receptor
-  de un enlace inalámbrico de entrenamiento, de forma que **cualquier** radio
-  FrSky pueda hacer de radio del alumno (buddy box), emparejada con ese receptor.
-- **Módulo externo CPPM** — de forma similar, proporciona una entrada CPPM al
-  pin PXX-IN, para usarse con un receptor antiguo que tenga salida CPPM.
+![](../assets/model-trainer-cable-slave.png)
 
-### Condición activa
+El modo por defecto para Cable Entrenador es Alumno.
 
-![Condición activa](../assets/model-trainer-active-condition.png)
+##### Intervalo de Canales
 
-Un interruptor o botón, un interruptor de función, un interruptor lógico, la
-posición de compensado o el modo de vuelo que cede el control del modelo a la
-radio del alumno mientras esté activo.
+Se transmiten ocho canales, con el número de canal de inicio configurable.
 
-### Canales del entrenador
+#### Maestro
 
-![Edición de la condición activa](../assets/model-trainer-active-condition-edit.png)
+![](../assets/model-trainer-cable-master-select.png)
 
-Se pueden transferir hasta 16 canales de la radio del alumno a la radio maestra
-mientras la 'Condición activa' esté activa. Pulse sobre cada canal para
-configurarlo individualmente:
+El modo Cable Entrenador puede cambiarse a Maestro para configurar la radio para el tutor.
 
-- **Condición activa** — una condición propia de cada canal; por ejemplo, para
-  desactivar únicamente la palanca de profundidad del alumno durante parte de
-  una sesión de entrenamiento.
-- **Modo** — **OFF** (desactiva el canal para uso del entrenador), **Añadir**
-  (modo aditivo, en el que se suman las señales del maestro y del alumno para
-  que ambos puedan actuar sobre la función a la vez) o **Sustituir** (el modo de
-  uso normal: el alumno tiene el control total de este canal mientras está
-  activada la condición).
-- **Porcentaje** — escala las entradas del alumno; normalmente se ajusta al 100 %.
-- **Destino** — asigna el canal del alumno a la función correspondiente.
+![](../assets/model-trainer-cable-master.png)
 
-Consulte [Guía práctica: recuperación instantánea del control](../how-to/instant-takeback.md)
-para ver un ejemplo práctico de cómo el instructor recupera el control al
-instante mediante un interruptor, y [Ignorar la entrada del alumno](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-para evitar que el movimiento de las palancas del alumno active un interruptor
-lógico que vigila las palancas del propio instructor.
+##### Configuración de modo Maestro
 
-## Modo Esclavo
+Vea la sección de [Configuración del modo Maestro](#Trainer master configuration) más abajo, para detalles sobre la configuración de su condición activa y los canales esclavizados.
 
-![Modo Esclavo](../assets/model-trainer-slave-mode.png)
+#### Opciones del Cable Entrenador
 
-- **Modo de enlace** — las mismas opciones de cable de entrenamiento, Bluetooth
-  o módulo externo SBUS/CPPM que en Maestro (con los mismos campos Bluetooth
-  **Modo**/**Nombre local**/**Dirección local**/**Dirección remota**).
+![](../assets/model-trainer-cable-master-delete-select.png)
 
-  ![Modo de enlace en Esclavo](../assets/model-trainer-slave-link-mode.png)
+Tocando la pestaña ‘Cable Entrenador’ hará aparecer sus opciones.
 
-- **Número de canales** — selecciona qué rango de canales de esta radio se
-  transfiere a la radio maestra.
+Si se ha configurado el Cable Entrenador en modo maestro, entonces las opciones de copiar seguidas de pegar estarán disponibles. Esto permite que los ajustes del maestro se copien y se peguen entre los métodos de entrenamiento.   
+  
+Finalmente, hay disponible una opción de borrar para eliminar la pestaña de configuración del cable entrenador.
 
-  ![Canales en Esclavo](../assets/model-trainer-slave-channels.png)
-  ![Edición de canal en Esclavo](../assets/model-trainer-slave-channel-edit.png)
+## Bluetooth
+
+![](../assets/model-trainer-bt-select.png)
+
+Seleccione la opción ‘Bluetooth’ para configurar una enlace de entrenamiento mediante Bluetooth.
+
+### Estado
+
+La función de entrenamiento por Bluetooth puede deshabilitarse. Permite al usuario habilitar solo una pestaña de entrenador a la vez, mientras se conservan las diferentes configuraciones.
+
+### Modo del Entrenador
+
+#### Alumno (esclavo)
+
+![](../assets/model-trainer-bt-slave.png)
+
+El modo de entrenamiento por defecto para bluetooth es Alumno (esclavo).
+
+##### Nombre local
+
+Es el nombre local BT que se mostrará en los dispositivos conectados. El nombre por defecto será el de la emisora.
+
+##### Dispositivo
+
+Detalla el estado de la conexión Bluetooth.
+
+##### Intervalo de canales
+
+Por defecto se transmitirán los primeros ocho canales, pero esta opción es configurable.
+
+#### Maestro
+
+![](../assets/model-trainer-bt-master-select.png)
+
+El modo de entrenamiento Bluetooth trainer puede cambiarse a Maestro para configurar la radio del tutor.
+
+![](../assets/model-trainer-bt-master.png)
+
+##### Nombre local
+
+Es el nombre local BT que se mostrará entre los dispositivos conectados. El valor por defecto es el del modelo de la radio, pero puede editarse.
+
+##### Dispositivo
+
+##### Buscar dispositivos
+
+![](../assets/model-trainer-bt-master-search.png)
+
+Toque en 'Buscar dispositivos' para poner la radio en modo de detección BT.
+
+![](../assets/model-trainer-bt-master-alice.png)
+
+Los dispositivos encontrados se enumeran en un cuadro de diálogo emergente con una solicitud para seleccionar uno de ellos. Seleccione la dirección BT que coincida con la radio que se utilizará como compañero de entrenamiento.
+
+![](../assets/model-trainer-bt-master-connected-ok.png)
+
+El dispositivo BT seleccionadose ha conectado.
+
+![](../assets/model-trainer-bt-master-connected.png)
+
+Una vez que se ha encontrado y enlazado un dispositivo Bluetooth, la dirección Bluetooth del dispositivo remoto se muestra en la línea del Dispositivo.
+
+![](../assets/model-trainer-bt-master-disconnect-select.png)
+
+##### Desconectar
+
+Toque en el dispositivo para que aparezca la opción de Desconectar.
+
+#### Configuración del Maestro
+
+##### Condición activa
+
+![](../assets/model-trainer-bt-master-active-condition.png)
+
+El control del modelo puede transferirse a la radio del estudiante mediante un interruptor o botón, un interruptor de función, interruptor lógico, posición de ajuste o modo de vuelo.
+
+##### Canales de entrenamiento
+
+![](../assets/model-trainer-bt-master-channels.png)
+
+Se pueden transferir hasta 16 controles desde la radio del estudiantea la radio del maestro cuando la 'Condición active' que se ajuste arriba esté activa.
+
+![](../assets/model-trainer-bt-master-channel-edit.png)
+
+Toque en cada canal para configurarlo individualmente.
+
+##### Active condition
+
+Cada canal esclavo también puede ser controlado individualmente por una fuente seleccionada. Así que, por ejemplo, la entrada del elevador del estudiante puede ser desactivada durante una sesión.
+
+##### Modo
+
+##### OFF
+
+Deshabilita el canal para uso del entrenador.
+
+##### Añadir
+
+Selecciona el modo aditivo, donde ambas señales del maestro y del alumno se añaden de forma que el profesor y el estudiante puedan actuar a la vez.
+
+##### Reemplazar
+
+Reemplaza el control de la radio principal con la del estudiante, de modo que el estudiante tenga control total mientras la 'condición activa' esté activada. Este es el modo de uso normal.
+
+##### Porcentaje
+
+Normalmente se ajusta a 100%, pero puede usarse para escalar las entradas del alumno.
+
+##### Destino
+
+Asigna el canal de la radio del estudiante a la función correspondiente.
+
+### Option de Ignorar entradas de entrenador
+
+![](../assets/trainer-take-back-ailinput-ignore.png)
+
+En los interruptores lógicos, las fuentes pueden tener esta opción configurada para ignorar las fuentes que provienen de la entrada del entrenador. Una aplicación típica es cuando un interruptor lógico está configurado para detectar el movimiento de las palancas del entrenador principal (por ejemplo, la palanca del elevador) para permitir una intervención instantánea si algo sale mal. Esta opción es necesaria para evitar que las entradas de la palanca del estudiante activen el interruptor lógico.
+
+![](../assets/trainer-take-back-ailinput-ignore-enabled.png)
+
+El pequeño icono de 'círculo tachado' muestra que la fuente del Elevador ignorará las entradas del Elevador desde la radio del estudiante.
+
+### Opciones de entrenamiento Bluetooth
+
+![](../assets/model-trainer-bt-master-options.png)
+
+Tocando la pestaña 'Bluetooth' se muestran las opciones de la pestaña Bluetooth.  
+  
+Si se ha configurado un maestro con Bluetooth, entonces las opciones de copiar seguidas de pegar se volverán disponibles. Esto permite copiar y pegar los ajustes de entrenamiento del maestro entre los distintos métodos de entrenamiento.
+
+![](../assets/model-trainer-bt-master-delete-select.png)
+
+Finalmente, estará disponible un opción Borrar para eliminar la configuración BT.
+
+## Módulo externo
+
+![](../assets/model-trainer-ext-select.png)
+
+Seleccione la opción ‘Módulo externo’ para configurar un enlace de entrenador usando un módulo externo.
+
+### Estado
+
+La función de entrenamiento por módulo externo puede deshabilitarse. Esto permite al usuario habilitar una sola pestaña de entrenamiento cada vez, conservando otras configuraciones diferentes.
+
+### Modo de entrenamiento
+
+### Alumno (esclavo)
+
+![](../assets/model-trainer-ext-slave.png)
+
+El modo por defecto para entrenamiento a través de módulo externo es Alumno (esclavo).
+
+##### Protocolo
+
+![](../assets/model-trainer-ext-slave-protocol-select.png)
+
+Hay 2 opciones de protocolo para un enlace de entrenador esclavo usando la interfaz del módulo externo en la parte trasera del radio:
+
+##### SBUS
+
+Vea la sección [SBUS](rf-system.md) en Modelo /RF para detalles sobre configurar el interface del módulo externo para una conexión SBUS de entrenamiento.
+
+##### PPM\`
+
+Vea la sección [PPM](#PPM) en Modelo /RF para detalles sobre configurar el interface del módulo externo para una conexión PPM de entrenamiento.
+
+##### Rango de canales
+
+Con SBUS se transmiten16 canale. Con PPM se transmiten ocho canales, pero el canal de inicio es configurable.
+
+#### Maestro
+
+![](../assets/model-trainer-ext-master.png)
+
+##### Protocolo
+
+![](../assets/model-trainer-ext-master-protocol-select.png)
+
+Hay 2 protocolos opcionales para enlaces como maestro usando la interfax del módulo externo de la parte trasera de la radio:
+
+##### Entrenador maestro (SBUS)
+
+Vea la sección [Entrenador maestro (SBUS)](rf-system.md) en Modelo /RF para detalles sobre configuración del interface del módulo externopara una conexión SBUS de entrenamiento.
+
+##### Entrenador maestro (PPM)
+
+Vea la [Trainer master (PPM)](rf-system.md) en Modelo /RF para detalles sobre configuración del interface del módulo externopara una conexión PPM de entrenamiento.
+
+##### Trainer master configuration
+
+Vea la sección [Configuración del entrenador maestro](#Trainer master configuration) más abajo, para detalles sobre la configuración de la ‘Condición activa’ del modo maestro de entrenamiento y los canales esclavos.
+
+#### Opciones del cable entrenador
+
+Tocando en la pestaña del ‘conector S.Port’ aparecerán las opciones disponibles.
+
+Si se ha configurado un entrenador maestro, entonces las opciones de copiar seguidas de pegar se vuelven disponibles. Esto permite que la configuración del entrenador maestro se copie y se pegue entre los métodos del alumno.  
+  
+Finalmente, está disponible una opción Borrar para eliminar la pestaña de configuración del módulo externo.
+
+## Conector S.Port
+
+![](../assets/model-trainer-sport-select.png)
+
+Seleccione la opción ‘Conector S.Port’ para configurar un enlace de entrenamiento usando el conector S.Port de la parte superior de la radio.
+
+### Estado
+
+La función de enlace de entrenamiento a través del conector puede deshabilitarse. Esto permite que el usuario utilice una pestaña de entrenamiento cada vez, conservando las diferentes configuraciones.
+
+### Modo de Entrenamiento
+
+#### Alumno (esclavo)
+
+![](../assets/model-trainer-sport-slave.png)
+
+El modo predeterminado para un entrenador con conector S.Port es Alumno (esclavo).
+
+##### Intervalo de canales
+
+Por defecto se transmiten los primeros ocho canales, pero esto se puede configurar.
+
+#### Maestro
+
+![](../assets/model-trainer-sport-master-select.png)
+
+El modo de entrenamiento del conector S.Port puede cambiarse a Maestro para configurar la radio para el tutor.
+
+![](../assets/model-trainer-sport-master.png)
+
+##### Configuración del entrenador maestro
+
+Vea la sección [Configuración del entrenador maestro](#Trainer master configuration) más abajo para configurar la ‘Condición activa’ y los canales esclavos del entrenador maestro.
+
+#### Opciones del cable entrenador
+
+Al tocar la pestaña 'Conector S.Port' se muestran las opciones de la pestaña.  
+  
+Si se ha configurado un entrenador maestro, entonces las opciones de copiar seguidas de pegar se vuelven disponibles. Esto permite que la configuración del entrenador maestro se copie y se pegue entre los métodos del entrenador.  
+  
+Finalmente, hay una opción de Borrar que estará disponible para eliminar la pestaña de configuración del conector S.Port.

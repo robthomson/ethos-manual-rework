@@ -1,72 +1,49 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Modos de vuelo
 
-![Modos de vuelo](../assets/model-fm.png)
+![](../assets/model-icon-fm.png)
 
-Los modos de vuelo (fases de vuelo) permiten que un interruptor seleccione
-entre comportamientos distintos para un mismo modelo: los veleros pueden
-usar Lanzamiento/Crucero/Velocidad/Térmica, los aviones a motor
-Normal/Despegue/Aterrizaje, y los helicópteros Normal (arranque,
-despegue/aterrizaje) / Idle Up 1 (acrobacia) / Idle Up 2 (3D). Liberan al
-piloto de la mayor parte del trabajo de conmutación manual y de reajuste de
-los compensadores: un modo de vuelo puede tener sus propios compensadores
-independientes y puede condicionar tanto las [Variables](variables.md) como
-las [Mezclas](mixes.md); combinando ambas cosas hay de sobra para una
-complejidad real. Consulte el [Ejemplo básico de ala
-fija](../tutorials/basic-fixed-wing.md) para ver los modos de vuelo
-aplicados a un modelo real.
+Los modos de vuelo aportan una increíble flexibilidad a la configuración de un modelo, ya que permiten que los modelos se configuren para tareas específicas o comportamientos. Por ejemplo, los planeadores pueden configurarse para tener modos seleccionables como Despegue, Crucero, Velocidad y Térmico. Los aviones a motor pueden tener modos de vuelo de normal de precisión, Despegue y Aterrizaje con flaps a mitad o con todo flaps desplegados. Los helicópteros pueden tener modos tales como Normal para el rodaje y despegue/aterrizaje, Ralentí 1 para vuelo acrobático y Ralentí 2 para quizás 3D.
 
-Por defecto no hay definido ningún modo de vuelo. Toque en el modo de vuelo
-predeterminado y seleccione **Editar** para cambiarle el nombre, o
-**Agregar** para crear uno nuevo: hasta 20 en total.
+Los modos de vuelo eliminan gran parte de la carga de trabajo del piloto con interruptores y compensadores.
+
+La gran potencia de los modos de vuelo es que admiten compensados independientes, y pueden usarse para activar Variables y mezclas. Juntas, estas características permiten una gran flexibilidad. Consulte la [Introducción a Modos de Vuelo](../tutorials/basic-fixed-wing.md) en la sección Tutoriales para ver ejemplos aplicados de estas características.
+
+![](../assets/model-fm.png)
+
+El modo de vuelo MV0 por defecto estará inactivo hasta que se configure. Pulse el botón ‘+’ para definir un nuevo modo de modo de vuelo. Puede haber hasta 20 modos de vuelo por modelo.
+
+![](../assets/model-fm-form.png)
 
 ## Nombre
 
-Un nombre descriptivo: Crucero, Velocidad, Térmica, Despegue, Aterrizaje,
-lo que mejor encaje.
+Permite darle un nombra al modo de vuelo.
 
 ## Condición activa
 
-![Formulario del modo de vuelo](../assets/model-fm-form.png)
+Cuando se añade un modo de vuelo la condición activa por defecto es ‘inactivo’, es decir '---'. Los modos de vuelo pueden ser controlados por posiciones de interruptores, botones, interruptores de función, interruptores lógicos, un evento del sistema (como el corte o retención del acelerador) o posiciones de compensado.
 
-Un modo de vuelo nuevo comienza inactivo (`---`). Una vez definida, la
-condición puede establecerse eligiendo entre posiciones de interruptores o
-botones, interruptores de función, interruptores lógicos, un evento del
-sistema (como el corte o la retención del acelerador) o posiciones de
-trimado.
+Tenga en cuenta que el modo de vuelo por defecto no tiene un parámetro de ‘condición activa’ porque este es el modo de vuelo que siempre estará activo cuando ningún otro modo de vuelo lo esté. El primer modo de vuelo que tiene su interruptor en ON es el activo. Tenga en cuenta que sólo un modo de vuelo está activo a la vez.
 
-El modo de vuelo **predeterminado** no tiene ninguna condición activa: es el
-que está activo siempre que no se cumpla la condición de ningún otro modo de
-vuelo. Solo puede haber un modo de vuelo activo a la vez: el primero (en
-orden de prioridad) cuya condición sea cierta en ese momento. El modo activo
-se muestra en negrita.
+El modo de vuelo activo se muestra en negrita.
 
-!!! warning "Añadir un modo de vuelo a un modelo existente"
-    Un modo de vuelo recién añadido está, por defecto, activo en todas las
-    mezclas que ya dependen de los modos de vuelo; compruebe que cada una de
-    esas mezclas sigue comportándose correctamente, en particular una mezcla
-    de **Bloqueo** que fije un canal a un modo de vuelo concreto.
+## Ralentizado de entrada y salida
 
-## Fade in, out
+Son tiempos asignados para hacer transiciones suaves entre distintos modos de vuelo. El ejemplo muestra un segundo asignado a cada uno. Debe tener en cuenta que los retardos en entrada y salida solo funcionarán si las mezclas que los necesiten son dependientes de los modos de vuelo.
 
-Tiempos de transición para pasar suavemente de un modo de vuelo a otro (por
-ejemplo, 1 segundo en cada sentido); esto solo tiene efecto sobre las
-mezclas que a su vez dependen de los modos de vuelo.
+![](../assets/model-fm-0to3.png)
 
-## Gestión de los modos de vuelo
+Una vez programado, el modo de vuelo activo se muestra en las mezclas. Puede programarse hasta 100 modos de vuelo distintos. Como en la mayoría de las funciones en ETHOS, el usuario puede añadir un texto descriptivo en los modos de vuelo, como pueden ser crucero, velocidad, térmico, normal, despegue, aterrizaje, etc.
 
-![Mover modo de vuelo](../assets/model-fm-move.png)
-![Seleccionar para mover](../assets/model-fm-move-select.png)
-![Modos 0-3](../assets/model-fm-0to3.png)
+También debe tener en cuenta que cuando se añade un nuevo modo de vuelo en un modelo, debe comprobarse el comportamiento correcto de todas las mezclas, ya que el modo de vuelo estará activo por defecto en todas las mezclas que usen modos de vuelo. Esto será un problema, por ejemplo, cuando se usa una mezcla para bloquear un canal específico en algún modo de vuelo.
 
-Toque en un modo de vuelo para **Editar**, **Agregar**, **Clonar** o
-**Eliminar**. Un modo de vuelo **clonado** hereda los ajustes de su origen
-en todas las mezclas que utilizan modos de vuelo —mismo comportamiento,
-mismo estado activo/inactivo—, por lo que el clon se añade por defecto como
-último modo de vuelo, para no interferir con los ya existentes. **Mover**
-cambia la prioridad de un modo de vuelo: la prioridad sigue un orden
-ascendente y, como se ha indicado arriba, el primero cuya condición sea
-cierta es el que está activo.
+## Gestión de modos de vuelo
+
+![](../assets/model-fm-move-select.png)
+
+Pulse sobre un modo de vuelo para abrir un menú que le permite editar, mover, duplicar y borrar. Se pueden añadir nuevos modos de vuelo pulsando el botón ‘+’ en la parte de arriba.
+
+Un modo de vuelo clonado heredará los ajustes y mezclas originales, de forma que se comporten de la misma forma, estando activo o no cuando este modo se active. El nuevo modo clonado debería añadirse al final de la lista de modos de vuelo, para que no interfiera con los demás modos de vuelo que se hayan introducido en el modelo.
+
+![](../assets/model-fm-move.png)
+
+Puede utilizar la opción "Mover" para cambiar la prioridad de un modo de vuelo. La prioridad de los modos de vuelo es en orden ascendente, y el primero que tiene su interruptor en ON es el activo.

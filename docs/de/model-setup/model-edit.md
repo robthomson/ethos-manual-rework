@@ -1,82 +1,99 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
+# Modell-Konfig.
 
-# Modell bearbeiten
+![](../assets/model-icon-editmodel.png)
 
-![Modell bearbeiten](../assets/model-editmodel.png)
+Mit der Option „Modell bearbeiten“ können Sie die grundlegenden Parameter des Modells bearbeiten, wie sie vom Assistenten eingerichtet wurden.
 
-Hier werden die Parameter auf Modellebene bearbeitet, die der Assistent
-ursprünglich eingerichtet hat — hauptsächlich die Identität, aber auch einige
-modellspezifische Überschreibungen und Hilfsfunktionen.
+![](../assets/model-editmodel.png)
 
-## Name, Bild
+## Name, Foto
 
-Modell umbenennen oder dessen Bild ändern; beim Durchsuchen nach einem Bild
-wird eine Vorschau-Miniatur angezeigt.
+Das Modell kann umbenannt, das Bild zugewiesen oder geändert werden. Bei der Suche nach einem Bild wird ein Vorschaubild angezeigt, um das Auffinden des richtigen Bildes zu erleichtern.
+
+Die Modell-Bitmaps müssen sich im Ordner [bitmaps/models](../system-setup/file-manager.md) auf der SD-Karte oder dem eMMC befinden.
 
 ## Modelltyp
 
-![Modelltyp](../assets/model-edit-modeltype.png)
+![](../assets/model-edit-modeltype.png)
 
-!!! warning
-    Das Ändern des Modelltyps setzt **alle** Mischer zurück.
+Wenn Sie den Modelltyp ändern, werden alle Mischungen zurückgesetzt.
+
+## Empfänger
+
+![](../assets/model-edit-receiver-type.png)
+
+Listet die aktuellen Empfängertypen auf, der geändert werden können.
 
 ## Kanalzuweisungen
 
-Das Ändern des Leitwerkstyps oder (bei einem Heli) des Taumelscheibentyps
-setzt ebenfalls alle Mischer zurück. Bei anderen Kanälen kann die Anzahl der
-zugewiesenen Kanäle geändert oder die Zuweisung aufgehoben werden.
+Durch Ändern des Heckrotortyps oder der Taumelscheibe werden alle Mischungen zurückgesetzt. Auf den anderen Kanälen kann die Anzahl der zugewiesenen Ausgangskanäle geändert oder die Zuweisung aufgehoben werden.
 
-## Analogfilter
+## Gas-Totzone
 
-![Analogfilter](../assets/model-edit-analog-filter.png)
+![](../assets/model-edit-thr-deadband.png)
 
-In [Systemeinstellungen → Hardware](../system-setup/hardware.md) gibt es einen
-globalen Analog-Digital-Filter, der ein Zittern um die Knüppelmitte reduzieren
-kann; diese modellspezifische Einstellung überschreibt ihn nur für dieses
-Modell.
+Ermöglicht die Konfiguration einer Gas-Totzone für Nullpunkt-Gas mit Vorwärts- und Rückwärtslauf, um unbeabsichtigte Motorbewegungen zu vermeiden, wenn sich der Steuerknüppel in Neutralstellung befindet.
 
-![Optionen des Analogfilters](../assets/model-edit-analog-filter-select.png)
+## Analoger Filter
 
-## Funktionsschalter {: #function-switches }
+![](../assets/model-edit-analog-filter.png)
 
-![Funktionsschalter](../assets/model-edit-fn-switches.png)
+![](../assets/model-edit-analog-filter-select.png)
 
-Die sechs Funktionsschalter stehen überall dort zur Verfügung, wo ein
-Parameter **Aktive Bedingung** erscheint, können aber — anders als gewöhnliche
-Schalter — nicht als allgemeine Quelle verwendet werden. Sie werden als eine
-der folgenden Varianten konfiguriert:
+Es gibt eine globale Analog-Digital-Wandler-Filtereinstellung auf der Seite Hardware unter [Analoge Filter](../system-setup/hardware.md), die das Zittern um die Knüppelmitte verbessern kann. Diese modellspezifische Einstellung kann verwendet werden, um die globale Einstellung außer Kraft zu setzen.
 
-- **6-Pos mit OFF** — das Drücken eines Funktionsschalters rastet ihn ein;
-  erneutes Drücken *desselben* Schalters schaltet alle sechs aus.
-- **6-POS** — das Drücken eines Funktionsschalters rastet ihn ein, bis ein
-  *anderer* gedrückt wird, der dann übernimmt.
-- **2 × 3-Pos** — teilt die sechs in zwei Gruppen zu je drei auf, mit einem
-  aktiven Schalter pro Gruppe.
-- **6 × 2-Pos** — sechs unabhängige, einrastende Ein/Aus-Schalter.
-- **Momentary** — sechs unabhängige Schalter, jeder nur so lange aktiv, wie er
-  gedrückt gehalten wird.
-- **Persistent** — falls aktiviert, behält ein Funktionsschalter seinen Zustand
-  über das Ausschalten bzw. das Neuladen des Modells hinweg bei, anstatt
-  zurückgesetzt zu werden.
+## Funktionsschalter
 
-![Optionen der Funktionsschalter](../assets/model-edit-fn-switches-select.png)
+![](../assets/model-edit-fn-switches.png)
 
-## SPort-Anschluss
+Die sechs Funktionsschalter stehen überall dort zur Verfügung, wo die Parameter „Aktive Bedingung“ zu finden sind. Bitte beachten Sie, dass sie nicht wie normale Schalter als Quelle verwendet werden können.
 
-Der 5V-Pin des S.Port-Anschlusses des Senders kann pro Modell geschaltet
-werden — nützlich zum Beispiel zur Stromversorgung eines externen Empfängers
-in einer Lehrer/Schüler-Konfiguration.
+![](../assets/model-edit-fn-switches-select.png)
 
-## Modell-Laufzeit
+### Konfiguration
 
-![Modell-Laufzeit](../assets/model-edit-model-runtime.png)
+Sie können wie folgt konfiguriert werden:
 
-Erfasst die Gesamtzeit, die dieses Modell geflogen bzw. betrieben wurde.
+#### 6-Pos mit AUS
+
+Das Drücken eines beliebigen Funktionsschalters schaltet diesen Schalter ein. Wird jedoch ein Schalter, der bereits eingeschaltet ist, ein zweites Mal gedrückt, wird er ausgeschaltet, so dass alle sechs Funktionsschalter ausgeschaltet bleiben.
+
+#### 6-POS
+
+Das Drücken eines beliebigen Funktionsschalters schaltet diesen Schalter ein, bis ein anderer Funktionsschalter gedrückt wird, um den neu gedrückten Schalter einzuschalten.
+
+#### 2 x 3-Pos
+
+Unterteilt die 6 Funktionsschalter in zwei 3er-Gruppen, wobei in jeder Gruppe ein Schalter eingeschaltet sein kann.
+
+#### 6 x 2-Pos
+
+Unterteilt die 6 Funktionsschalter in 6 rastende Schalter. Jeder Schalter kann EIN oder AUS sein.
+
+#### Taster
+
+Unterteilt die 6 Funktionsschalter in 6 Momentschalter. Jeder Schalter ist EIN, wenn er gedrückt wird.
+
+### Wert speich. wenn TX AUS
+
+Wenn diese Option aktiviert ist, bleibt der Funktionsschalter in denselben Zustand, wenn der Sender eingeschaltet oder das Modell neu geladen wird.
+
+## S.Port-Anschlussstromversorgung (5V)
+
+![](../assets/model-model-edit-sport-power-select.png)
+
+Der mittlere Pin („+“) des S.Port-Anschlusses kann wie folgt konfiguriert werden:
+
+- Der mittlere Pin („+“) des S.Port-Anschlusses kann ausgeschaltet bleiben. Verwenden Sie die Option „---“.
+- Der mittlere Pin („+“) des S.Port-Anschlusses kann als „Immer an“ konfiguriert werden, um ein Peripheriegerät mit +5V zu versorgen.
+- Der mittlere Pin („+“) des S.Port-Anschlusses kann über einen Schalter oder eine andere Quelle angesteuert werden, um ein Peripheriegerät mit +5V zu versorgen.
+
+Es ist darauf zu achten, dass der Ausgang nicht überlastet wird.
+
+## Modelllaufzeit
+
+Der Laufzeit-Stoppuhren des Modells erfasst die Gesamtlaufzeit. Drücken Sie die Reset-Taste, um ihn zurückzusetzen.
 
 ## Alle Mischer zurücksetzen
 
-![Alle Mischer zurücksetzen](../assets/model-edit-model-reset_all_mixes.png)
-
-Setzt sämtliche Mischer des Modells auf ihren Standardzustand zurück.
+Durch Ausführen von „Alle Mischer zurücksetzen“ werden alle Mischer zurückgesetzt.

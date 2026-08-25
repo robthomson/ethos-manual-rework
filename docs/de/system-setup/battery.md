@@ -1,37 +1,35 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Stromversorgung
 
-# Akku
+![](../assets/system-icon-battery.png)
 
-![Akkueinstellungen des Senders](../assets/system-battery.png)
+![](../assets/system-battery.png)
 
-Kalibriert die Messung des senderinternen Akkus und legt die Alarmschwellen
-fest — getrennt von den Flugakku-Einstellungen eines Modells (siehe [Anleitung:
-Warnung bei niedriger Akkuspannung](../how-to/low-battery-warning.md)).
+Der Abschnitt Batterie dient zum Kalibrieren der Senderbatterien und zum Einstellen der Alarmschwellen.
 
-- **Hauptspannung** — zeigt den aktuellen Messwert an und dient zugleich der
-  Kalibrierung: Tragen Sie hier die tatsächliche, mit einem Multimeter
-  gemessene Spannung ein. Der Standardwert ist 8,4 V (ein voll geladener
-  2S-Li-Ion-Akku).
-- **Niedrige Spannung** — die Alarmschwelle, standardmäßig 7,2 V (7,4 V bietet
-  zusätzliche Reserve). Wenn die [Warnung zur Hauptspannung](alerts.md)
-  aktiviert ist, löst ein Unterschreiten dieses Werts einen Warndialog sowie
-  jede Minute die Sprachansage „Radio battery is low“ aus — unabhängig davon,
-  ob der Dialog geöffnet ist oder nicht.
+## Senderakku -kalibriert?-
 
-  !!! warning
-      Landen Sie und laden Sie den Senderakku, sobald diese Warnung ertönt — sie
-      wiederholt sich in jedem Fall jede Minute. Bei 6,0 V schaltet sich der
-      Sender bedingungslos ab, um die beiden 3,0-V-Li-Ion-Zellen zu schützen.
+Unter „Senderakku -kalibriert?-“ wird die aktuelle Batteriespannung angezeigt, aber auch die Kalibrierung der Batteriespannung eingestellt. Sie können die mit einem Multimeter gemessene aktuelle Batteriespannung eingeben. Der Standardwert ist 8,4 V für eine geladene 2-Zellen-Lithiumbatterie.
 
-- **Anzeigebereich der Spannung** — Minimum und Maximum für die grafische
-  Akkuanzeige in der oberen rechten Ecke: Bei MIN erlischt das erste
-  Balkensegment, bei MAX leuchtet das vierte. Die Standardwerte sind 6,4–8,4 V
-  für den eingebauten Li-Ion-Akku; viele Piloten heben den unteren Wert an, um
-  früher eine Unterspannungswarnung zu erhalten und eine Tiefentladung zu
-  vermeiden. Passen Sie diese Werte an den tatsächlich eingebauten Akkutyp an.
-- **RTC-Spannung** — die Spannung der Knopfzelle für die Echtzeituhr. Im
-  Neuzustand 3,0 V; unterhalb von 2,7 V sollte sie ersetzt werden, damit die Uhr
-  genau bleibt, und unterhalb von 2,5 V ist mit der
-  [RTC-Spannungswarnung](alerts.md) zu rechnen.
+## Warnschwelle Akkuspannung
+
+Dies ist die Alarmschwellenspannung. Der Standardwert ist 7,2 V. Ein Wert von 7,4 V würde eine zusätzliche Sicherheitsspanne bieten.
+
+Es wird ein Warndialogfeld geöffnet, und jede Minute wird die Sprachmeldung „Senderakku  schwach“ ausgegeben, wenn die Spannung des Senderakkus unter den hier festgelegten Schwellenwert fällt, sofern die Option „Hauptspannung“ unter „System/Alarme/Senderbatterie - kalibriert?“ aktiviert ist.
+
+### Warnung!
+
+### Wenn diese Warnung angezeigt wird, ist es ratsam, zu landen und den Akku des Funkgeräts aufzuladen! Die Warnung wird jede Minute wiederholt, auch wenn das Warnungsdialogfeld noch geöffnet ist.
+
+### Bitte beachten Sie, dass sich der Sender unabhängig davon abschaltet, wenn die Akkuspannung auf 6,0 V fällt, um den LiIon-Akku (2 X 3,0 V) zu schützen!
+
+## Anzeige Spannungsbereich
+
+Mit diesen Einstellungen wird der Bereich der grafischen Batterieanzeige oben rechts auf dem Bildschirm festgelegt. Der Standardbereich für den eingebauten Li-Ion-Akku liegt zwischen 6,4 und 8,4 V. Viele Piloten erhöhen die untere Messspannung, um den TX-Spannungsalarm früher auszulösen und eine Tiefentladung des TX-Akkus zu vermeiden.
+
+Der MIN-Wert ist der Wert, bei dem der erste Punktbalken erlischt, und der MAX-Wert ist der Wert, bei dem der vierte Punktbalken aufleuchtet, wenn Sie die grafische Darstellung der Batteriespannung verwenden.
+
+Wenn der Akku auf einen anderen Typ umgestellt wird, müssen die Grenzwerte entsprechend angepasst werden.
+
+## Uhr/Datum -Batterie-
+
+Zeigt die Spannung der RTC-Batterie (Real Time Clock) im Sender an. Die Spannung beträgt 3,0 V bei einer neuen Batterie. Wenn die Spannung unter 2,7 V liegt, tauschen Sie bitte die Batterie im Sender aus, um sicherzustellen, dass die Uhr richtig läuft. Wenn die Spannung unter 2,5 V fällt, wird eine Warnung ausgegeben (siehe Warnungen / [RTC-Spannung](alerts.md)).

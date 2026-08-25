@@ -1,81 +1,67 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Checkliste
 
-![Checkliste](../assets/model-checklist.png)
+![](../assets/model-icon-checklist.png)
 
-Eine Reihe von Sicherheitsprüfungen vor dem Flug, die beim Einschalten des
-Senders und/oder beim Laden eines Modells ausgeführt werden. Zu den
-integrierten Prüfungen gehören Stummschaltung, nicht gesetztes Failsafe,
-Schalter- und Geberstellungen sowie Sender- und RTC-Batterie — die
-Schalterprüfung zeigt an, in welche Richtung jeder Schalter bewegt werden
-muss, gekennzeichnet durch rote Punkte auf dem Warnbildschirm:
+Die Checklistenfunktion bietet eine Reihe von Vorflugkontrollen. Dabei handelt es sich um eine Gruppe von Sicherheitsfunktionen, die beim Einschalten des Funkgeräts und/oder beim Laden eines Modells aus der Modellliste wirksam werden.
 
-![Checkliste beim Start](../assets/model-checklist-at_start.png)
+![](../assets/model-checklist-at_start.png)
 
-!!! note
-    Sowohl `OK` als auch `RTN` überspringen die Vorflugprüfungen
-    vollständig, unabhängig davon, was die Warnung auf dem Bildschirm
-    nahelegt.
+Zu den Standardprüfungen gehören: Sender ist im Stummen Modus, Failsafe nicht gesetzt, Schalter und Potis prüfen, Sender mit schwachem Akku, RTC-Batterie schwach, usw. Die Schalterprüfung zeigt die Richtung an, in die der Schalter bewegt werden sollte, siehe die roten Punkte im Beispiel des Warnbildschirms oben.
 
-## Gasprüfung
+Bitte beachten Sie, dass im Gegensatz zur obigen Warnung die OK- oder RTN-Taste die Vorflug-Checks überspringt.
 
-![Prüffunktion](../assets/model-checklist-check_function.png)
+Zusätzliche Checks können unten eingestellt werden.
 
-Aktivieren Sie die Prüfung und wählen Sie einen Operator — `<` (kleiner
-als), `~` (ungefähr gleich) oder `>` (größer als) — im Vergleich zu einem
-Wert; es wird gewarnt, wenn sich der Gasknüppel außerhalb des von diesem
-Vergleich zugelassenen Bereichs befindet.
+![](../assets/model-checklist.png)
+
+## Gasstellung prüfen
+
+![](../assets/model-checklist-check_function.png)
+
+Um die Gasprüfung zu aktivieren, wählen Sie den zu verwendenden Operator. Die Optionen sind '<' kleiner als, '~' ungefähr gleich, oder '>' größer als. Der Vorflug-Check warnt Sie, wenn der Gasknüppel außerhalb des im Wert-Parameter eingestellten Werts liegt.
 
 ## Failsafe-Prüfung
 
-Warnt, wenn für das aktuelle Modell kein [Failsafe](rf-system.md#failsafe)
-gesetzt wurde.
+Wenn diese Option aktiviert ist, werden Sie gewarnt, wenn Failsafe für das aktuelle Modell nicht eingestellt wurde. Es ist sehr ratsam, dies aktiviert zu lassen!
 
-!!! tip
-    Es wird dringend empfohlen, diese Prüfung aktiviert zu lassen.
+## Schalter prüfen
 
-## Schalterprüfung
+![](../assets/model-checklist-switches.png)
 
-![Schalter](../assets/model-checklist-switches.png)
-![Optionen der Schalterprüfung](../assets/model-checklist-switches-options.png)
+Für jeden Schalter können Sie festlegen, ob der Sender diese Schalter in den gewünschten vordefinierten Positionen anfordert. Wenn den Schaltern in System / Hardware / 'Schaltereinstellungen' benutzerdefinierte Namen gegeben wurden, werden diese Namen angezeigt.
 
-Für jeden Schalter kann eine bestimmte Stellung beim Start verlangt werden
-(Schalter mit eigenen Namen aus [Systemeinstellungen →
-Hardware](../system-setup/hardware.md#switches-settings) werden mit diesen
-Namen angezeigt). **Alle Schalterstellungen laden** übernimmt die
-*aktuellen* physischen Stellungen als Sollstellungen für jeden Schalter,
-der nicht mit **Keine Prüfung** gekennzeichnet ist.
+Mit der Option „Alle Schalter-Stellungen laden“ können Sie die gewünschten Positionen aus den aktuellen Schalterpositionen auslesen, mit Ausnahme derjenigen, die mit „nicht geprüft“ markiert sind.
 
-## Prüfung der Funktionsschalter
+![](../assets/model-checklist-switches-options.png)
 
-![Funktionsschalter](../assets/model-checklist-function-switches.png)
-![Optionen der Funktionsschalterprüfung](../assets/model-checklist-function-switches-options.png)
+Die Kontrollmöglichkeiten sind oben dargestellt.
 
-Dasselbe Prinzip gilt für die sechs
-[Funktionsschalter](model-edit.md#function-switches). **Alle
-Funktionsschalterstellungen laden** funktioniert genauso wie oben
-beschrieben.
+## Funktionsschalter prüfen
 
-## Prüfung der Potis / Schieberegler
+![](../assets/model-checklist-function-switches.png)
 
-![Potis](../assets/model-checklist-pots.png)
-![Optionen der Potiprüfung](../assets/model-checklist-pots-options.png)
+![](../assets/model-checklist-function-switches-options.png)
 
-Verlangt beim Start bestimmte Stellungen der Potis bzw. Schieberegler,
-und zwar einzeln für jedes Bedienelement (`~`/`<`/`>`, wie bei der
-Gasprüfung). **Alle Potistellungen laden** übernimmt die aktuellen
-Stellungen automatisch — prüfen Sie anschließend die automatisch
-gewählten Operatoren sorgfältig, da `~` gegenüber `<`/`>` möglicherweise
-nicht dem entspricht, was Sie tatsächlich beabsichtigt haben.
+Für jeden Funktionsschalter können Sie festlegen, ob das Funkgerät die Schalter in die gewünschten vordefinierten Positionen bringen soll. Die Optionen sind oben dargestellt.
+
+Die Option „Alle Funktionsschalter-Positionen laden“ kann verwendet werden, um die gewünschten Positionen aus den aktuellen Funktionsschalterpositionen zu lesen, mit Ausnahme derjenigen, die mit „nicht geprüft“ markiert sind.
+
+## Potis / Sliders prüfen
+
+![](../assets/model-checklist-pots.png)
+
+Legt fest, ob der Sender die Potis und Schieberegler beim Einschalten in vordefinierten Positionen anfordert. Die gewünschten Potiwerte können für jedes Poti eingegeben werden.
+
+Mit der Option „Alle Poti-Stellungen laden“ können die gewünschten Positionen aus den aktuellen Potentiometern gelesen werden, mit Ausnahme derjenigen, die mit „nicht geprüft“ markiert sind. Es muss sorgfältig geprüft werden, ob die automatisch gewählten Operatoren wie gewünscht sind (d.h. '~' vs. '<' oder '>').
+
+![](../assets/model-checklist-pots-options.png)
+
+Alternativ können die Prüffunktionen auch einzeln eingestellt werden (d. h. '~' gegenüber '<' oder '>').
 
 ## Benutzerdefinierter Text
 
-![Benutzerdefinierter Checklistentext](../assets/model-checklist-user-checklist.png)
+Die Funktion Checkliste kann auch benutzerdefinierten Text anzeigen. Bei dem Text kann es sich um reinen Text oder erweiterten Text handeln.
 
-Zeigt eine Datei mit einfachem oder erweitertem Text als Teil der
-Startcheckliste an, sobald sie für das Modell eingerichtet ist. Die
-vollständige Einrichtung finden Sie unter [Anleitung: Benutzerdefinierte
-Text-Checkliste](../how-to/user-defined-checklist.md).
+![](../assets/model-checklist-user-checklist.png)
+
+Sobald die Textdatei für ein bestimmtes Modell installiert ist und dieses Modell geladen wird, zeigt das Funkgerät die Checkliste als Teil der Startroutine an. Bitte lesen Sie im Abschnitt „Anleitung“ nach, wie Sie eine benutzerdefinierte Text-Checkliste einrichten.

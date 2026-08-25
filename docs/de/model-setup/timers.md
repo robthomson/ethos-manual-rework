@@ -1,89 +1,163 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Stoppuhren
 
-![Stoppuhren](../assets/model-timers.png)
+![](../assets/model-icon-timers.png)
 
-Es gibt acht vollständig programmierbare Timer, die entweder vorwärts oder
-rückwärts zählen können. Eine neue Stoppuhr wird über das Symbol **+** neben
-den Spaltenüberschriften oder darunter über **Hinzufügen** angelegt. Durch
-Berühren einer beliebigen Stoppuhr wird ein Popup-Fenster mit Optionen zum
-Zurücksetzen oder Bearbeiten dieser Stoppuhr, zum Hinzufügen einer neuen oder
-zum Verschieben oder Kopieren/Einfügen angezeigt.
+![](../assets/model-timers.png)
 
-![Stoppuhr bearbeiten](../assets/model-timer1-edit.png)
+Es gibt 8 vollständig programmierbare Stoppuhren, die entweder vorwärts oder rückwärts zählen können.
 
-## Gemeinsame Felder (rückwärts und vorwärts zählend)
+Im Hauptbildschirm für Stoppuhren (siehe oben) können neue Stoppuhren  hinzugefügt werden, indem Sie auf das Symbol „+“ neben den Spaltenüberschriften tippen.
 
-- **Wert** — zeigt den aktuellen Wert des Timers an.
-- **Name** — ermöglicht die Benennung des Timers.
-- **Mode** — **aufwärts** oder **abwärts** zählen.
-- **Start Wert** (nur beim Rückwärtszählen) — der Wert, von dem aus der Timer
-  auf Null herunterzählt.
-- **Alarmwert** (nur beim Hochzählen) — der Wert, bei dem die Stoppuhr abläuft;
-  sie zählt weiter, der Wert wird in den Uhren-Widgets jedoch rot angezeigt.
-- **Zustand starten** — die Startbedingung startet den Timer. Wenn die
-  **Stoppbedingung** auf der Standardeinstellung bleibt, startet und stoppt der
-  Timer nur mit der Startbedingung. Andernfalls startet der Timer, wenn die
-  Start-Bedingung zuerst WAHR wird, und läuft dann weiter.
-- **Zustand anhalten** — wenn diese Bedingung nicht „Standard“ ist, steuert sie
-  die Stoppuhr, sobald diese läuft: Die Stoppuhr wird angehalten, wenn die
-  Stopp-Bedingung WAHR ist, läuft aber weiter, wenn sie FALSCH ist. Im
-  folgenden Beispiel wird die Stoppuhr gestartet, wenn `ThrottleActive` WAHR
-  wird, und angehalten, wenn die Telemetrie nicht mehr aktiv ist:
+![](../assets/model-timers-action-select.png)
 
-  ![Zustand anhalten](../assets/model-timer1-edit-stop.png)
+Wenn Sie auf eine Stoppuhr-Zeile tippen, wird ein Popup-Fenster mit Optionen zum Zurücksetzen oder Bearbeiten der Stoppuhr oder zum Verschieben oder Kopieren/Einfügen der Stoppuhr angezeigt.
 
-- **Proportionale Zeitquelle** — bei der Einstellung `---` zählt der Timer in
-  Echtzeit. Jede andere Quelle (z. B. der Gasknüppel oder sogar der Gaskanal)
-  steuert die Geschwindigkeit des Timers: Bei −100 % wird die Stoppuhr
-  angehalten, bei +100 % zählt sie in Echtzeit, bei Zwischenwerten zählt sie
-  proportional.
-- **Zurücksetzen** — die Stoppuhr kann durch die Stellung von Schaltern,
-  Funktionsschaltern, Logikschaltern oder Trimmschaltern zurückgesetzt werden;
-  sie bleibt so lange zurückgesetzt, wie die Rücksetzbedingung gültig ist.
-- **Wert speichern, wenn TX AUS?** — die Stoppuhr wird im Speicher gehalten,
-  wenn der Sender ausgeschaltet oder das Modell gewechselt wird. Der Wert wird
-  bei der nächsten Verwendung des Modells wieder geladen.
-- **Stimme** — legt fest, welches
-  [Sprachpaket](../system-setup/general.md#audio-settings) diese Stoppuhr
-  ansagt.
+## Countdown-Stoppuhr
 
-## Audio-Aktionen
+![](../assets/model-timer1-edit.png)
 
-![Neue Audio-Aktion hinzufügen](../assets/model-timer1-add-action.png)
-![Typ](../assets/model-timer1-action-type-select.png)
-![Countdown-Aktion](../assets/model-timer1-action-countdown.png)
+### Wert
 
-Audio-Aktionen sind sehr leistungsfähig und flexibel, so dass der
-Stoppuhr-Alarm genau nach den Anforderungen des Benutzers konfiguriert werden
-kann. Jede Aktion hat einen Typ — **Countdown** (per Stimme), **Signalton
-Countdown** (mit Pieptönen anstelle der Stimme), **Datei abspielen** oder
-**Wert ansagen** — sowie:
+Zeigt den aktuellen Wert der Stoppuhr an.
 
-- **Start** — der Wert, ab dem diese Countdown-Aktion beginnt.
-- **Schritt** — die Intervalle, in denen der Timerwert angesagt wird, bis zu
-  10 Minuten (600 s).
-- **Haptik** — die Ansagen werden durch haptisches Feedback begleitet.
+### Name
 
-Eine typische Kombination aus drei Audio-Aktionen:
+Ermöglicht die Benennung der Stoppuhr.
 
-![Übersicht der Audio-Aktionen](../assets/model-timer1-actions-summary.png)
-![Audio-Aktionen der Stoppuhr 2](../assets/model-timer2-actions-summary.png)
+### Mode
 
-1. Countdown per Sprache ab 2:00 Restzeit, alle 30 s, mit haptischem Feedback.
-2. Signalton-Countdown ab 0:10 Restzeit, jede Sekunde, mit haptischem Feedback.
-3. Eine benutzerdefinierte Audiodatei (z. B. `timer-1-elapsed`), die beim
-   Ablauf abgespielt wird, mit haptischem Feedback.
+Die Stoppuhr kann aufwärts oder **abwärts** zählen.
 
-Weitere Audio-Aktionen können über **Hinzufügen** ergänzt werden. Bitte
-beachten Sie, dass die Liste nach Prioritäten geordnet sein sollte, wobei die
-**höchste Priorität am Ende der Liste** steht.
+### Start Wert
 
-Siehe auch das
-[Anzeige-Widget Timer-Log](../displays/index.md#widget-types) für ein
-laufendes Protokoll vergangener Stoppuhrläufe.
+Wenn die Stoppuhr auf Rückwärts zählen eingestellt wurde, ist der Startwert der Wert, von dem aus die Stoppuhr auf Null herunterzählt.
 
-![Stoppuhr-Widget](../assets/model-timers-widget.png)
+### Zustand starten
+
+Die Startbedingung startet die Stoppuhr. Wenn die Stoppbedingung unten auf die Standardeinstellung gesetzt ist, startet und stoppt die Stoppuhr nur mit der Startbedingung. Wenn die Stopp-Bedingung unten nicht „Standard“ ist, dann startet die Stoppuhr, wenn die Start-Bedingung zuerst WAHR wird, und läuft dann weiter.
+
+### Zustand anhalten
+
+Wenn die Stopp-Bedingung „Standard“ ist, wird die Stoppuhr nur durch die Start-Bedingung gesteuert.
+
+![](../assets/model-timer1-edit-stop.png)
+
+Wenn es nicht „Standard“ ist, steuert die Stopp-Bedingung die Zeitschaltuhr, sobald diese läuft. Die Stoppuhr wird angehalten, wenn die Stopp-Bedingung WAHR ist, läuft aber weiter, wenn die Stopp-Bedingung FALSCH ist.
+
+Im obigen Beispiel wird sie gestartet, wenn Gas aktiv WAHR wird, und wird angehalten, wenn die Telemetrie nicht mehr aktiv ist.
+
+### Proportionale Zeitquelle
+
+Bei der Einstellung '---' zählt die Stoppuhr in Echtzeit. Wenn eine proportionale Zeitquelle ausgewählt ist, wird die Geschwindigkeit der Stoppuhr von dieser Quelle gesteuert, z.B. vom Gasknüppel oder sogar vom Gaskanal. Wenn der Gaswert -100% ist, wird die Stoppuhr angehalten. Ist der Gaswert +100%, zählt sie in Echtzeit. Bei Zwischenwerten zählt die Stoppuhr proportional.
+
+![](../assets/model-timer1-add-action.png)
+
+### zurücksetzten
+
+Die Stoppuhr kann durch die Stellung von Schaltern, Funktionsschaltern, Logikschaltern oder Trimmschaltern zurückgesetzt werden. Es ist zu beachten, dass sie so lange zurückgesetzt bleibt, wie die Rücksetzbedingung gültig ist.
+
+### Wert speichern, wenn TX AUS?
+
+Wenn „Wert speichern, wenn TX AUS?“ auf „EIN“ gesetzt ist, wird die Stoppuhr im Speicher gehalten, wenn der Sender ausgeschaltet oder das Modell gewechselt wird. Der Wert wird bei der nächsten Verwendung des Modells wieder geladen.
+
+### Stimme
+
+Wählen Sie die Stimme aus, die für Sprachansagen verwendet werden soll. Weitere Informationen finden Sie im Abschnitt „[Auswahl der Stimmen](../system-setup/general.md)“.
+
+### Audio-Aktionen
+
+Audio-Aktionen sind sehr leistungsfähig und flexibel, so dass der Stoppuhr-Alarm genau nach den Anforderungen des Benutzers konfiguriert werden kann.
+
+Klicken Sie auf „Neue Audioaktion hinzufügen“.
+
+![](../assets/model-timer1-action-countdown.png)
+
+Wählen Sie die gewünschte Audioaktion aus, z. B. „Sekunden zählen“ im obigen Beispiel.
+
+#### Start
+
+Der Startwert ist der Wert, ab dem diese Countdown-Aktion beginnt.
+
+#### Schritt
+
+Der Schrittwert legt die Intervalle fest, in denen der Wert der Stoppuhr angesagt werden soll. Der Schrittwert kann bis zu 10 Minuten (600 Sekunden) betragen.
+
+#### Haptik
+
+Wenn diese Funktion aktiviert ist, werden die Ansagen durch haptisches Feedback begleitet.
+
+![](../assets/model-timer1-action-type-select.png)
+
+Zu den Audio-Aktionsarten gehören „Sekunden zählen“ (per Sprache), „Signalton“ (mit Signaltönen anstelle von Sprache), „Datei abspielen“ und „Wert abspielen“.
+
+![](../assets/model-timer1-actions-summary.png)
+
+In diesem Beispiel wurden drei Audio-Aktionen konfiguriert:
+
+1. Zunächst wird alle 30 Sekunden eine Countdown-Warnung ausgegeben, die bei noch verbleibenden 2 Minuten beginnt. Die Warnung erfolgt in Form einer Sprachausgabe, und es wurde auch eine haptische Rückmeldung aktiviert.
+2. Zweitens ertönt ab 10 Sekunden vor Ablauf ein Signalton, danach wird jede Sekunde ein Signalton abgespielt. Die haptische Rückmeldung wurde ebenfalls aktiviert.
+3. 3. Zuletzt wird eine benutzerdefinierte Audiodatei „timer-1-elapsed” abgespielt, wenn die Stoppuhr abgelaufen ist (d. h. Null erreicht hat), begleitet von einer haptischen Rückmeldung.
+
+Weitere Audio-Aktionen können durch Berühren der Schaltfläche „Hinzufügen“ hinzugefügt werden. Bitte beachten Sie, dass die Liste nach Prioritäten geordnet sein sollte, wobei die höchste Priorität am Ende der Liste steht.
+
+## Stoppuhr zum Hochzählen
+
+![](../assets/model-timer2-edit.png)
+
+### Wert
+
+Zeigt den aktuellen Wert der Stoppuhr an.
+
+### Name
+
+Ermöglicht die Benennung der Stoppuhr.
+
+### Mode
+
+Die Stoppuhr kann aufwärts oder abwärts zählen.
+
+### Alarmwert
+
+![](../assets/model-timers-widget.png)
+
+Wenn die Stoppuhr auf Hochzählen eingestellt wurde, legt der Parameter Alarmwert den Wert fest, bei dem sie abläuft. Die Stoppuhr zählt weiter, aber der Wert wird im Uhren-Widgets rot angezeigt.
+
+### ***Z******ustand starten***
+
+Die angegebene Startbedingung startet die Stoppuhr. Wenn die Stoppbedingung unten auf die Standardeinstellung gesetzt ist, startet und stoppt dier Stoppuhr nur mit der Startbedingung. Wenn die Stopp-Bedingung unten nicht „Standard“ ist, dann startet die Stoppuhr, wenn die Start-Bedingung zuerst WAHR wird, und läuft dann weiter.
+
+### ***Zustand*** ***anhalten***
+
+Wenn die Stoppbedingung „Standard“ ist, wird die Zeitschaltuhr nur durch die Startbedingung gesteuert.
+
+Wenn sie nicht „Standard“ ist, steuert die Stopp-Bedingung die Zeitschaltuhr, sobald diese läuft. Die Zeitschaltuhr wird angehalten, wenn die Anhaltebedingung WAHR ist, läuft aber weiter, wenn die Anhaltebedingung FALSCH ist.
+
+### Proportionale Zeitquelle
+
+Bei der Einstellung '---' zählt die Stoppuhr in Echtzeit. Wenn eine proportionale Zeitquelle ausgewählt ist, wird dessen Geschwindigkeit von dieser Quelle gesteuert, z.B. dem Gasknüppel oder sogar dem Gaskanal. Wenn der Gashebelwert -100% beträgt, wird die Stoppuhr angehalten. Wenn der Gaswert +100% beträgt, zählt sie in Echtzeit. Bei Zwischengaswerten wird proportional gezählt.
+
+### Zurücksetzen
+
+Die Stoppuhr kann durch Schalterstellungen, Funktionsschalter, Logikschalter oder Trimmschalterstellungen zurückgesetzt werden. Beachten Sie, dass die Stoppuhr im Reset gehalten wird, solange die Reset-Bedingung gültig ist.
+
+### Wert speich. wenn TX AUS
+
+Wenn „Wert speichern, wenn TX AUS?“ auf „EIN“ gesetzt ist, wird der Stoppuhrwert im Speicher gespeichert, wenn der Sender ausgeschaltet oder das Modell gewechselt wird. Der Wert wird bei der nächsten Verwendung des Modells neu geladen.
+
+### Stimme
+
+Wählen Sie die Stimme aus, die für Sprachansagen verwendet werden soll. Weitere Informationen finden Sie im Abschnitt „[Auswahl der Stimmen](../system-setup/general.md)“.
+
+### Audio-Aktionen
+
+Die Audio-Aktionen sind sehr leistungsfähig und flexibel, so dass die Stoppuhr-Warnungen genau nach den Anforderungen des Benutzers konfiguriert werden können.
+
+![](../assets/model-timer2-actions-summary.png)
+
+In diesem Beispiel wurden drei Audio-Aktionen konfiguriert:
+
+1. Zunächst wird alle 30 Sekunden ein Countdown bis zum Alarmwert, der bei einer verbleibenden Minute beginnt, ausgegeben. Die Warnung erfolgt durch Sprache und haptische Rückmeldung wurde ebenfalls aktiviert.
+2. Zweitens ertönt ab 10 Sekunden vor Ablauf ein Warnton, danach wird jede Sekunde ein Warnton abgespielt. Die haptische Rückmeldung wurde ebenfalls aktiviert.
+3. Schließlich wird eine benutzerdefinierte Audiodatei „timer-2-elapsed“( Stoppuhr-2-abgelaufen') abgespielt, wenn die Stoppuhr bei Erreichen des Alarmwertes abläuft, begleitet von haptischem Feedback.
+
+Weitere Audio-Aktionen können durch Berühren der Schaltfläche „Hinzufügen“ hinzugefügt werden. Bitte beachten Sie, dass die Liste nach Prioritäten geordnet sein sollte, wobei die höchste Priorität am Ende der Liste steht.

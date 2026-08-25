@@ -1,162 +1,277 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# **Seleccionar m****odel****o**
 
-# Selección de modelo
+![](../assets/model-icon-modelselect.png)
 
-![Asistente de modelo - avión](../assets/model-modelselect-model-wizard-airplane.png)
+A la opción Seleccionar modelo se accede seleccionando 'Selec. modelo' en el menú Modelo. Se utiliza para seleccionar el modelo a usar, añadir un nuevo modelo, clonarlo, borrarlo o enviar y recibir el modelo a través de Bluetooth.
 
-Permite crear, seleccionar, clonar y eliminar modelos, así como gestionar las
-carpetas de categorías definidas por el usuario en las que se organizan.
+## Gestión de carpetas de modelos
 
-## Gestión de las carpetas de modelos
+Ethos le permite crear sus propias carpetas de modelos para categorizar y agrupar sus modelos. Los nombres típicos de las carpetas de modelos suelen ser Avión, Planeador, Heli, Quad, Warbird, Barco, Coche, Plantilla, Archivo, etc.
 
-![Carpetas de modelos](../assets/model-modelselect-folders.png)
+![](../assets/model-modelselect-folders.png)
 
-Ethos permite agrupar los modelos en carpetas propias, normalmente del tipo
-Avión, Velero, Heli, Quad, Warbird, Barco, Coche, Plantilla o Archivo.
-Hasta que se cree alguna, los modelos residen en una carpeta automática
-**Uncategorized** (creada al actualizar a Ethos 1.1.0 alpha 17 o posterior, o
-cuando se copia un archivo de modelo en `\Models` desde otra ubicación); Ethos
-vuelve a eliminarla en cuanto queda vacía.
+Hasta que haya creado y organizado sus carpetas, Ethos creará automáticamente la carpeta ‘Sin categoría’. Esto ocurre cuando se actualiza a la versión Ethos 1.1.0 alpha 17 o posterior, o cuando se copia un modelo de la red o de un amigo en la carpeta \\Models de la tarjeta SD o eMMC.  Ethos borrará automáticamente la carpeta ‘Sin categoría’ cuando ya no sea necesaria.
 
-Para crear una carpeta, pulse **+** junto a "Uncategorized" (o mantenga pulsado
-`PAGE` arriba/abajo), asígnele un nombre (hasta 15 caracteres) y confirme. Las
-carpetas se ordenan alfabéticamente, con **Uncategorized** siempre al final, y
-se corresponden directamente con subcarpetas dentro de `\Models` en la SD
-card/eMMC. Al pulsar sobre el nombre de una carpeta se abren las opciones de
-renombrar o eliminar; al eliminar una carpeta, los modelos que contenga vuelven
-a Uncategorized.
+Para crear una primera carpeta, toque el símbolo ‘+’ a la derecha de la etiqueta ‘Sin categorizar’, o mantenga presionada la tecla Page Up/Down.
 
-![Cambiar de carpeta](../assets/model-modelselect-folder-change-select.png)
+![](../assets/model-modelselect-create-airplane-folder.png)
 
-Para mover un modelo, pulse sobre su icono, seleccione **Change folder** y
-después pulse sobre el destino:
+Introduzca el nombre en el cuadro de diálogo "Crear carpeta" y pulse aceptar. Los nombres de las carpetas pueden tener un máximo de 15 caracteres. Repita el proceso para el resto de categorías. Tenga en cuenta que estas carpetas aparecen como subcarpetas debajo de la carpeta \\Models en la tarjeta SD o eMMC.
 
-![Seleccionar carpeta](../assets/model-modelselect-folder-airplane-select.png)
+Las carpetas de categorías de modelos se ordenan alfabéticamente, pero la carpeta "Sin categoría" siempre aparecerá la última de la lista.
+
+![](../assets/model-modelselect-folder-options.png)
+
+Al pulsar sobre el nombre de una carpeta, aparece un cuadro de diálogo que permite renombrarla o eliminarla. Si había modelos en la carpeta que se está borrando, Ethos los colocará automáticamente en la carpeta ‘Sin categoría’.
 
 ## Añadir un nuevo modelo
 
-![Crear modelo](../assets/model-modelselect-model-create.png)
+![](../assets/model-modelselect-folder-airplane-select.png)
 
-Seleccione la categoría en la que desea crear el modelo, pulse **+** y después
-**Create model** para iniciar el asistente (cree antes la categoría si aún no
-existe). Hay asistentes disponibles para **Airplane**, **Glider**,
-**Helicopter**, **Multirotor** y **Other**; cada uno recorre la configuración
-básica de ese tipo de modelo, incluidas las mezclas predefinidas opcionales
-para receptores estabilizados FrSky (ganancia, modo de estabilización). Los
-nombres de modelo pueden tener hasta 15 caracteres.
+Para crear un nuevo modelo, seleccione la categoría de modelo en la que desea crear el modelo y pulse sobre el icono \[+\] para crear el nuevo modelo o recibirlo desde otra radio Ethos vía Bluetooth.
 
-### Receptores estabilizados y orden de canales
+![](../assets/model-modelselect-model-create.png)
 
-![Asistente: avión](../assets/model-modelselect-model-wizard-airplane.png)
+Seleccione ‘Crear Modelo’ para iniciar el asistente de creación de modelo. (Es posible que tenga que crear primero sus categorías de modelos, véase más arriba).
 
-Los receptores estabilizados FrSky requieren específicamente el orden de canales
-**AETR**: deje [Palancas → Orden de canales](../system-setup/controls.md) en su
-valor por defecto AETR con **First four channels fixed** activado, de modo que
-la salida del asistente coincida con lo que espera el receptor.
+![](../assets/model-modelselect-model-wizard-airplane.png)
 
-El asistente asigna los canales de derecha a izquierda. Para 2 alerones +
-1 elevador + 1 timón + 1 motor, el resultado es:
+Elija el tipo de modelo que desea crear y siga las instrucciones.
 
-| Canal | Función |
-|---|---|
-| 1 | Alerón 1 (alerón derecho) |
-| 2 | Elevador |
-| 3 | Acelerador |
-| 4 | Timón |
-| 5 | Alerón 2 (alerón izquierdo) |
+Hay asistentes (“wizards”) para:
 
-Con esta asignación, el diferencial de alerones es **positivo** en el caso
-normal (más recorrido hacia arriba que hacia abajo). Los propios manuales de
-receptores de FrSky documentan actualmente la convención *opuesta* (de izquierda
-a derecha, es decir, canal 1 = alerón izquierdo, canal 5 = alerón derecho), en
-cuyo caso el diferencial tendría que ser **negativo** para obtener el mismo
-efecto físico.
+- Avión
+- Planeador
+- Helicóptero
+- Multirrotor
+- Otro
 
-!!! tip
-    Se recomienda emplear la convención de Ethos de forma coherente: todas las
-    funciones de estabilización siguen funcionando correctamente en cualquiera
-    de los dos casos, ya que la dirección de la compensación se establece
-    durante la configuración de la estabilización. Si necesita ajustarse a la
-    convención del manual del receptor, lo más sencillo es crear el modelo con
-    el asistente de la forma habitual y después utilizar **Swap channels** en
-    [Salidas](outputs.md) para intercambiar los dos canales de alerones; así se
-    mantiene positivo el signo del diferencial de la mezcla de alerones.
+Los asistentes le ayudan con la configuración básica para el tipo de modelo seleccionado.
 
-### Pasos del asistente
+![](../assets/model-modelselect-model-wizard-rx.png)
 
-![Asistente: tipo de cola](../assets/model-modelselect-model-wizard-tail.png)
-![Asistente: número de alerones/flaps](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
-![Asistente: número de canales de elevador/timón](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
-![Asistente: motor](../assets/model-modelselect-model-wizard-engine.png)
-![Asistente: reasignación de canales](../assets/model-modelselect-model-wizard-ch-reassignment.png)
-![Asistente: nombre](../assets/model-modelselect-model-wizard-name.png)
-![Asistente: receptor](../assets/model-modelselect-model-wizard-rx.png)
+Los asistentes incluyen la opción de realizar mezclas predeterminadas cuando se usan receptores Frsky estabilizados, como pueden ser los modos de ganancia y estabilización.
 
-Para un **Airplane**, tras el tipo de cola y el número de superficies, el
-asistente continúa con el número de canales del motor y después con el número de
-canales de alerones/flaps.
+### Receptores estabilizados
 
-La **configuración de la cola** permite elegir entre cola tradicional en cruz,
-cola en V o sin cola (delta/ala volante):
+Los receptores estabilizados de FrSky requieren un orden de canales especificos denominado AETR. Por ese motivo, el ‘orden de los Canales’ en el menú de las palancas debe dejarse en este orden AETR por defecto y se debe activar la opción ‘Los cuatro primeros canales fijos’ para asegurar que el orden de los canales creados por el asistente estará ajustado al receptor.
 
-- **Delta/ala volante**: al crear un modelo Airplane con 2 alerones y sin
-  superficies de cola se genera automáticamente la mezcla de elevones, con pesos
-  por defecto del 50 % para que la aplicación simultánea a fondo de alerón +
-  elevador siga sumando el 100 %.
-- **Delta con un receptor estabilizado que realiza la mezcla**: en su lugar
-  seleccione 1 alerón y 1 elevador; la mezcla de elevones se realiza en el
-  receptor, según indique su propio manual.
-- **Delta con superficies dedicadas de alerones y elevador**: deje que el
-  asistente se ejecute como si el modelo tuviera cola; configurará los canales
-  de alerones y elevador necesarios (con o sin timón) y no se creará ninguna
-  mezcla de elevones.
+![](../assets/model-modelselect-model-wizard-engine.png)
 
-El paso de **reasignación de canales** permite modificar la asignación por
-defecto del asistente, teniendo en cuenta que los receptores estabilizados
-necesitan sus canales en un orden concreto (consulte las instrucciones del
-propio receptor). El último paso establece el nombre del modelo y le asocia una
-imagen.
+Para un modelo de tipo Avión, la página siguiente es el Motor, que permite la selección del número de canales necesario para los motores (si es que hay alguno).
 
-El modelo terminado queda en la carpeta de categoría que estuviera activa al
-iniciar el asistente, ordenado alfabéticamente dentro de ella. Consulte
-[Ejemplo básico de ala fija](../tutorials/basic-fixed-wing.md) para ver un
-ejemplo completo paso a paso.
+![](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
 
-## Recibir un modelo desde otra radio Ethos
+Para un modelo de tipo Avión, se seleccionan a continuación los canales de alerones y Flaps.
 
-![Recibir modelo](../assets/model-modelselect-model-receive.png)
+A partir de Ethos 26.1.0 el nuevo asistente de creación de modelos asignará los canales empezando desde la izquierda y alternando desde fuera a dentro, estando en línea con la documentación de los receptores de Frsky.
 
-Seleccione la categoría de destino, pulse **+** y después **Receive model**: la
-radio queda a la espera y muestra su dirección Bluetooth para que el emisor
-pueda localizarla. En la radio que envía, pulse sobre el modelo y seleccione
-**Send model**; la radio receptora pide confirmación del nombre del archivo
-entrante antes de aceptarlo.
+De esta forma, en un modelo sencillo con 2 alerones, 1 profundidad, 1 timón y 1 motor el orden de los canales será como sigue (asumiendo que el ordend e los canales por defecto es AETR y los ‘Cuatro primeros canales fijos’ se hayan seleccionado):
+
+CH1	Alerón Izquierdo
+
+CH2	Profundidad
+
+CH3	Motor
+
+CH4	Timón
+
+CH5	Alerón derecho
+
+### Actualizando modelos a Ethos 1.7.0
+
+Durante la actualización a Ethos 1.7 las mezclas de los modelos existentes se convertirán para ajustarse al nuevo esquema desde la izquierda.
+
+Hay 3 escenarios:
+
+a) Los modelos existentes con el orden de canales por defecto para 1.6.x que contaba desde la derecha se reordenarán para ajustarse al nuevo esquema para contar desde la izquierda. Sin embargo, la colocación de los canales se mantendrá exactamente igual para que no se tenga que cambiar ningún cable en el modelo. Sólo se reorganizarán las mezclas en una nueva secuencia, pero los canales de salida originales se mantienen para que el modelo continue ooperando corresctamente. Por ejemplo, el orden de las mezclas será:
+
+Desde
+
+CH1 Alerón Derecho
+
+CH2 Profundidad
+
+CH3 Motor
+
+CH4 Timón
+
+CH5 Alerón Izquierdo
+
+a
+
+CH5 Alerón Izquierdo
+
+CH2 Profundidad
+
+CH3 Motor
+
+CH4 Timón
+
+CH1 Alerón Derecho
+
+b) Los modelos existentes que hayan tenido sus canales intercambiados para contar desde la izquierda tendrán sus mezclas reorganizadas para asegurar que el diferencial de alerón continúe funcionando correctamente, pero las asignaciones de canales permanecen igual que antes.
+
+c) Los modelos existentes que tengan sus canales intercambiados mediante inversión de la mezcla de alerones y el renombrado de los canales de salida, trabajarán correctamente después de la actualización, pero pueden tener algún conflicto relaccionado con ese renombrado de los canales. Para resolver este problema, se necesitará deshacer la inversión de las mezclas que se hayan hecho anteriormente:
+
+i) Re-invertir la mezcla de Alerones con valores positivos de Peso y Diferencial.
+
+ii) Intercambiar los canales de salida de la mezcla de alerones, usandola función ‘Intercambio de canales’ del menú de canales.
+
+iii) También habremos de renombrar los dos canales para las funciones correctas de izquierda a derecha.
+
+iv) **¡PRECAUCIÓN!** Después de hacer los cambios, confirme que las mezclas y los canales de salida trabajan correctamente y en el orden correcto, con las hélices desmontadas.
+
+Para una revisión en profundidad de los tres escenarios de conversión, vaya al [Apéndice A - Conversión de modelos de Ethos desde 1.6.3 a 1.7.0](../how-to/converting-1.6-models.md)
+
+![](../assets/model-modelselect-model-wizard-tail.png)
+
+Para un modelo de tipo Avión, a continuación elegiremos la configuración de la cola de forma tradicional en cruz, en forma de V, o sin cola (por ejemplo en un ala en delta o en un ala volante).
+
+### Alas Delta
+
+Se puede conseguir ajustar los elevones de un Ala en Delta, creando un nuevo avión que disponga de 2 alerones y ninguna superficie de cola, lo que resultará en que la mezcla de elevones se construya automáticamente. Los pesos de la mezcla se establecerán por defecto en el 50% para proporcionar un total del 100% si se aplican simultáneamente los alerones y el elevador.
+
+Alternativamente, cuando se utilice un receptor estabilicado, la mezcla en delta se puede realizar por el receptor. Para esta situación, en el wizard se debe seleccionar 1 alerón y 1 elevador, ya que la mezcla de los elevones las realizará el receptor. Siga el manual del receptor estabilizado para más detalles.
+
+Para un modelo con ala en delta que disponga de ambas superficies, alerones y elevador, permita que se termine el asistente como si el modelo tuviera cola. De esta forma se configurarán los canales necesarios de alerón y profundidad , con o sin timón de dirección, como se requiera.
+
+![](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
+
+Para un modelo de tipo Avión, una vez elegido una cola tradicional en T, el número de canales de profundidad y del timón podrán también ser configurados.
+
+![](../assets/model-modelselect-model-wizard-ch-reassignment.png)
+
+Después de ajustar las opciones de los canales, el paso que se muestra arriba le permitirá reasignar las funciones del modelo a canales diferentes. El asistente obedece el ‘Orden de los canales’ configurado en la sección de las palancas, excepto cuando se configure un receptor Frsky estabilizado que requiere que los canales estabilizados tengan un orden específico. Para más detalles, siga las intrucciones del manual del receptor.
+
+![](../assets/model-modelselect-model-wizard-name.png)
+
+En el último paso, se podrá definir el nombre del modelo y asignarle una imagen. Tenga en cuenta que los nombres de los modelos pueden tener hasta 15 caracteres.
+
+![](../assets/model-modelselect-model-wizard-ultimate.png)
+
+El nuevo modelo ya se ha creado.
+
+![](../assets/model-modelselect-model-airplane-category.png)
+
+El modelo creado aparecerá en la carpeta de categorías de modelos definida por el usuario que estaba activa cuando se inició el asistente, y se ordenará alfabéticamente dentro de cada grupo.
+
+Consulte el [Ejemplo de avión básico de la fija](../tutorials/basic-fixed-wing.md) en la sección Tutoriales de programación para ver un ejemplo completo.
+
+## Renombrar el canal de salida del asistente
+
+Los nuevos modelos utilizan las siguientes reglas de nomenclatura de los canales:
+
+- Cuando la mezcla tiene solo una salida, no hay numeración ni sufijo de nombre.
+    - Cuando la mezcla hace algo diferente en las salidas, entonces los canales de salida necesitan un nombre explícito (es decir, "izquierda" / "derecha" para los alerones)
+    - Cuando la mezcla hace exactamente los mismos cálculos en todas las salidas, entonces el nombre tendrá solo un número como sufijo.
 
 ## Seleccionar un modelo
 
-Pulse sobre **Model select** para ver la lista de modelos.
+![](../assets/model-icon-modelselect.png)
 
-!!! note "Conversión de modelos tras una actualización de Ethos"
-    Ethos convierte cada modelo individualmente la primera vez que se
-    *selecciona* después de una actualización de versión, no todos a la vez al
-    actualizar: no hay ningún retardo perceptible y puede hacerse en cualquier
-    momento posterior, incluso con una versión de Ethos aún más reciente. La
-    fecha de **Last Modification** que aparece en la parte inferior de la
-    pantalla de selección se actualiza cuando se produce una conversión (o
-    cuando se edita el modelo; en caso contrario, permanece igual).
+Pulse sobre "Seleccionar modelo" para que aparezca una lista de sus modelos.
 
-**Selección rápida**: un toque prolongado o una pulsación larga de `ENT` sobre
-el icono de un modelo cambia inmediatamente a dicho modelo.
+![](../assets/model-modelselect-folders.png)
 
-**Menú de gestión de modelos**: pulse sobre un modelo para resaltarlo y pulse de
-nuevo para abrir el menú:
+Tenga en cuenta que, después de una actualización de Ethos, el sistema convertirá los modelos individualmente cuando sean seleccionados en la pantalla. No hay necesidad de seleccionar cada modelo porque la conversión puede hacerse posteriormente, incluso con una actualización posterior de Ethos. No hay un retraso significativo en la elección del modelo. Cuando la conversión se ha efectuado, la marca de fecha de la última modificación debajo del modelo cambiará a la fecha actual. Si no se necesita conversión del modelo, la fecha continuará siendo la de la última modificación que se hizo en el modelo.
 
-- **Set current model**
-- **Clone**: duplica el modelo. Un clon recibe automáticamente un nuevo número
-  de receptor; si en su lugar le reasigna el número de receptor del original,
-  funciona sin necesidad de volver a hacer el binding.
-- **Change folder**
-- **Send**/**Receive**: hacia o desde otra radio, como se ha descrito arriba.
-- **Delete**: solo se ofrece para un modelo que no sea el actual.
+### Selección rápida
+
+Mantenga presionado el icono de un modelo, o mantenga presionada Enter seleccionará ese modelo inmediatamente.
+
+## Menú de administración de modelos
+
+![](../assets/model-modelselect-folders-2.png)
+
+Toque en un modelo para resaltarlo y entonces toque otra vez en él para que aparezca el menú de administración del modelo.
+
+### Seleccionar el modelo
+
+![](../assets/model-modelselect-model-set.png)
+
+Toque en ‘Seleccionar modelo’ para que el modelo seleccionado se convierta en el modelo actual.
+
+Alternativamente, se puede usar el método de ‘selección rápida’ descrito arriba.
+
+### Duplicar un modelo
+
+![](../assets/model-modelselect-clone-select.png)
+
+Toque en ‘Duplicar’ para hacer una copia exacta del modelo resaltado.
+
+![](../assets/model-modelselect-clone-options.png)
+
+Se abrirá un cuadro de diálogo que le permitirá personalidar el duplicado.
+
+Por defecto, el sistema RF no se duplica, con lo que el módulo RF estará apagado en el nuevo modelo pero con un número de modelo diferente. Si se selecciona la opción 'Sistema RF', la configuración RF, incluido el número de modelo, se clonará.
+
+Las mezclas, cronómetros y curvas del modelo no se clonarán si no se seleccionan.
+
+Toque en ‘OK’ para proceder. Un diálogo de confirmación de ‘¡Modelo duplicado con éxito!’ aparecerá cuando se acabe el proceso.
+
+### Cambiar carpeta
+
+![](../assets/model-modelselect-folder-change-select.png)
+
+Para mover un modelo a otra carpeta, toque en el icono del modelo, y seleccione ‘Cambiar Carpeta’ en el menú.
+
+![](../assets/model-modelselect-folder-change-glider.png)
+
+Toque en la carpeta a la que desea moverlo.
+
+## Recibir un modelo
+
+![](../assets/model-modelselect-receive-model-select.png)
+
+Toque en ‘Recibir modelo’ para iniciar el proceso de recibir un modelo de otra radio Ethos a través de Bluetooth. Tenga en cuenta que debe iniciarse antes ‘Recibir modelo’ que ‘Enviar modelo’ en la radio que lo envía.
+
+![](../assets/model-modelselect-receive-model-waiting.png)
+
+Hasta que se encuentre una conexión Bluetooth, se mostrará un cuadro de diálogo de 'Esperando conexión'.
+
+![](../assets/model-modelselect-receive-model-dialog.png)
+
+Una vez que se ha establecido una conexión, se mostrará el dialogo de confirmación 'Va a recibir archivo… en el directorio….' esperando la confirmación para continuar.
+
+![](../assets/model-modelselect-receive-model-receiving.png)
+
+La transferencia del archivo comenzará y se mostrará una barra con el progreso del proceso, seguido de un mensaje de finalización con éxito.
+
+### Enviar un modelo
+
+![](../assets/model-modelselect-send-model-select.png)
+
+Toque en ‘Enviar modelo’ para iniciar la transferencia de un modelo a otro radio Ethos vía Bluetooth. Tenga en cuenta que ‘Recibir modelo’ debe iniciarse antes de ‘Enviar modelo’ en el radio que envía.
+
+![](../assets/model-modelselect-send-model-waiting-devices.png)
+
+Hasta que se encuentre una conexión Bluetooth, se mostrará un cuadro de diálogo 'Esperando dispositivos'.
+
+![](../assets/model-modelselect-send-model-dialog.png)
+
+Una vez que encuentren los dispositivos, se mostrará un cuadro de diálogo para seleccionar dispositivos. Seleccione el dispositivo al que se quiere enviar el modelo.
+
+![](../assets/model-modelselect-send-model-sending.png)
+
+La transferencia del archivo comienza y se muestra una barra de progreso.
+
+![](../assets/model-modelselect-send-model-success.png)
+
+Aparacerá una mensaje de éxito a la finalización del proceso.
+
+### Borrar
+
+Toque en ‘Borrar’ para eliminar un modelo. Esta opción no estará disponible para el modelo activo.
+
+## Recibir un modelo desde otra radio Ethos
+
+![](../assets/model-modelselect-folder-airplane-select.png)
+
+También puede iniciarse la recepción de un modelo directamente desde el menú 'Seleccionar modelo'. Simplemente tocando el icono \[+\] después de seleccionar la categoría de modelo en la que se desea crear el modelo.
+
+![](../assets/model-modelselect-model-receive.png)
+
+Toque en ‘Recibir modelo’ para iniciar el proceso de recibir un modelo de otra radio Ethos a través de Bluetooth.  
+  
+Para más detalles, consulte la sección [Recibir modelo](#Receive model) mencionada más arriba.

@@ -1,146 +1,337 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # General
 
-![Ajustes generales](../assets/system-general.png)
+![](../assets/system-icon-general.png)
 
-Abarca los atributos de pantalla, el audio, el vario, la vibración háptica y la barra de herramientas superior.
+Aquí se puede configurar lo siguiente:
 
-## Atributos de pantalla
+- Atributos de la pantalla LCD
+- Los ajustes del audio de la radio
+- Los ajustes del vario
+- Los ajustes de vibración del modo háptico
+- El contenido de la barra superior
 
-- **Language** — el idioma de los menús de la pantalla (English, 中文, Česky, Deutsch,
-  Español, Français, עברית, Italiano, Nederlands, Norsk, Português
-  Brasileiro, Polish, Português y otros).
-- **Keyboard** — disposición del teclado virtual: QWERTY, QWERTZ o AZERTY.
-- **Brightness** — control deslizante para el brillo de la retroiluminación; si mantiene pulsado `ENT`
-  podrá gobernarlo desde una fuente (por ejemplo un slider, como en el ejemplo siguiente)
-  o forzarlo al mínimo/máximo.
+## Atributos de la pantalla
 
-  ![Menú de brillo](../assets/system-general-brightness-menu.png)
-  ![Deslizador de brillo](../assets/system-general-brightness-slider.png)
+Los atributos de la pantalla LCD se pueden configurar aquí:
 
-  !!! note
-      Si **Brightness** tiene el mismo valor que **Sleep mode brightness**, la pantalla táctil
-      seguirá activa incluso mientras la emisora esté «dormida».
+![](../assets/system-general.png)
 
-- **Wake up** — qué elementos sacan del reposo a la retroiluminación (puede
-  habilitarse más de uno): **Always on** (nunca se duerme), **Sticks**,
-  **Switches**, **Gyro** (al inclinar la emisora). Las teclas siempre la despiertan,
-  independientemente de estos ajustes.
-- **Sleep** — tiempo de inactividad antes de que se apague la retroiluminación (aparece atenuado
-  si Wake up está configurado como Always on).
-- **Sleep mode brightness** — brillo de la retroiluminación durante el reposo.
-- **Dark mode** — tema de pantalla claro u oscuro.
-- **Highlight Color** — color de realce de la interfaz (por defecto `#F8B038`).
+### Idioma
 
-## Ajustes de audio {: #audio-settings }
+Se admiten los siguientes idiomas para los menús de pantalla:
 
-![Ajustes de audio](../assets/system-general-audio.png)
+English
 
-- **Audio language** — idioma de los anuncios de voz.
-- **Elección de voces** — Ethos admite varios paquetes de voz simultáneos:
+中文
 
-  - **Voice 1 (main)** — se utiliza para todos los anuncios integrados del sistema. Para
-    el inglés, la elección predeterminada es entre los paquetes americano (`us`) y británico
-    (`gb`), que se leen de `audio/en/us/system` y `audio/en/gb/system`.
-    Los archivos de sonido de usuario para la [función especial Play Audio](../model-setup/special-functions.md)
-    se colocan en `audio/en/us/` o en `audio/en/gb/`, respectivamente.
-  - **Voice 2 / Voice 3** — paquetes adicionales, por ejemplo una voz
-    TTS personalizada. Cada uno necesita la misma estructura de carpetas que Voice 1; por ejemplo, una voz
-    llamada «Susan» necesita `audio/en/Susan/` para los sonidos de usuario y
-    `audio/en/Susan/system` para sus sonidos del sistema (toda voz necesita una
-    carpeta `/system`, ya que es de donde leen **Play Value** y los anuncios
-    de los cronómetros; con cada versión de audio se distribuye una lista `.csv` de los
-    archivos de sonido estándar del sistema). Una vez instalada, una voz puede
-    asignarse a cada cronómetro y a cada función Play Audio, o incluso establecerse como Voice
-    1 para sustituir por completo los anuncios del sistema.
-  - **Voice "default"** — se instala automáticamente como alternativa segura (y
-    sirve para evitar problemas de conversión desde instalaciones 1.4.x): si Voice 1 no
-    está ya configurada durante una instalación o actualización, se establece en `default`, que lee
-    de `audio/en/default/system`. Los archivos de sonido personalizados más solicitados
-    para Play Audio se encuentran en `audio/en/default/`.
+Česky
 
-- **Main volume** — control deslizante para el volumen general del audio (mantenga pulsado `ENT` para
-  gobernarlo desde un pot); durante el ajuste suenan pitidos para que pueda valorar el
-  nivel de oído.
-- **Audio mode**:
-  - **Silent** — sin audio (aun así activa la [alerta de modo silencioso](alerts.md)
-    al arrancar, si está habilitada).
-  - **Alarms only** — solo se oyen las alarmas.
-  - **Default** — sonidos normales.
-  - **Often** — añade pitidos de error cuando un valor se lleva más allá de su
-    mínimo o máximo.
-  - **Always** — añade, además de lo anterior (Often), pitidos para la navegación normal por los menús.
-  - **Bluetooth** (solo X20S/HD/Pro/R/RS) — envía el audio a un dispositivo
-    Bluetooth emparejado (auriculares, etc.). Elija **Search Devices**, ponga el
-    dispositivo de destino en modo de emparejamiento y selecciónelo cuando aparezca:
+Deutsch
 
-    ![Emparejamiento Bluetooth](../assets/system-general-audio-bluetooth.png)
-    ![Búsqueda Bluetooth](../assets/system-general-audio-bluetooth-searching.png)
-    ![Dispositivo Bluetooth seleccionado](../assets/system-general-audio-bluetooth-device-selected.png)
-    ![Conectando por Bluetooth](../assets/system-general-audio-bluetooth-connecting.png)
-    ![Bluetooth conectado](../assets/system-general-audio-bluetooth-connected-ok.png)
+Español
 
-    **Speaker mute** controla entonces el altavoz interno: siempre activo,
-    solo mientras la telemetría esté activa, o gobernado por una fuente (por ejemplo un
-    interruptor). La emisora recuerda el dispositivo emparejado; para un funcionamiento normal,
-    encienda la emisora antes que el dispositivo Bluetooth y espere unos
-    segundos tras la conexión para que el silenciado del altavoz vuelva a activarse.
+Français
 
-## Vario {: #vario }
+עִברִית
 
-![Audio del vario](../assets/system-general-audio-vario.png)
+Italiano
 
-- **Volume** — volumen relativo del tono del vario.
-- **Pitch zero** — frecuencia del tono con velocidad de ascenso cero.
-- **Pitch max** — frecuencia del tono con la velocidad de ascenso máxima.
-- **Repeat** — retardo entre pitidos con el tono a cero.
+Nederlands
 
-Consulte también el sensor VSpeed en [Telemetría](../model-setup/telemetry.md)
-y la [función especial Play Vario](../model-setup/special-functions.md)
-para conocer más detalles del comportamiento del vario.
+Norsk
 
-## Vibración
+Português Brasileiro
 
-- **Strength** — control deslizante para la intensidad de la vibración háptica.
-- **Mode** — el mismo conjunto de opciones que Audio mode, más arriba.
+Polish
 
-## Ubicación de almacenamiento (X18 y X20 Pro/R/RS) {: #storage-location-x18-and-x20-prorrs }
+Português
 
-Estas emisoras disponen de una eMMC interna de 8 GB. Por defecto, Ethos la utiliza, con lo que
-la SD card es opcional, pero puede seleccionar la eMMC, una SD card o una
-combinación de ambas. Si traslada el sistema y los modelos a una SD card, copie
-las carpetas y archivos correspondientes (incluidos audio y bitmaps) **antes**
-de cambiar la ubicación de almacenamiento.
+### Teclado
 
-![Ubicación de almacenamiento](../assets/system-general-storage.png)
+Permite seleccionar entre las distribuciones de teclado virtual QWERTY, QWERTZ y AZERTY.
 
-## Barra de herramientas superior
+### Luminosidad
 
-![Ajustes de la barra superior](../assets/system-general-topbar.png)
+Utilice el control deslizante para controlar el brillo de la pantalla, de izquierda a derecha para ajustar el brillo de oscuro a brillante. Manteniendo pulsada la tecla ENT aparecen opciones para utilizar una fuente, o ajustarla al mínimo o al máximo.
 
-- **Digital voltage** — muestra el voltaje de la batería de la emisora como un número en lugar de
-  como una barra en la barra de herramientas superior.
-- **Digital RSSI** — lo mismo, para el RSSI de 2,4 GHz y de 900 MHz.
-- **Select model at power on** — muestra la pantalla de selección de modelo al
-  arrancar, antes de que aparezcan las alertas de la lista de comprobación del modelo anterior, de modo que pueda
-  cambiar de modelo sin tener que descartarlas primero. El último modelo utilizado
-  aparece resaltado por defecto.
+Tenga en cuenta que si la luminosidad (con la luz de fondo encendida) es igual que la del ‘Brillo en modo de suspensión’ (con la luz de fondo apagada) la pantalla táctil permanece activa.
 
-  ![Selección de modelo al arrancar](../assets/system-general-model-start.png)
+#### Opción pot/slider
 
-## Preselección del modo USB
+![](../assets/system-general-brightness-menu.png)
 
-![Modo USB](../assets/system-general-usb.png)
+Pulse sobre "Utilizar una fuente" y seleccione un potenciómetro para utilizarlo como control de luminosidad.
 
-Lo que ocurre automáticamente cuando la emisora se conecta a un PC por USB:
+![](../assets/system-general-brightness-slider.png)
 
-- **Not set** — pregunta qué opción usar en el momento de la conexión.
-- **Joystick** — entra inmediatamente en modo joystick para un simulador de RC.
-- **Ethos Suite** — entra inmediatamente en modo Ethos para [Ethos
-  Suite](../ethos-suite/index.md).
-- **Serial** — entra inmediatamente en modo Serial, enviando las trazas de depuración de Lua
-  por USB-Serial a 115200 bps (puede ser necesario un controlador de puerto COM virtual
-  para Windows).
+El ejemplo de arriba muestra el brillo controlado a través del deslizador derecho.
+
+### Activar
+
+![](../assets/system-general-sleep.png)
+
+La retroiluminación de la pantalla puede despertarse del estado de reposo de acuerdo con una o más de las siguientes opciones:
+
+#### Siempre encendido
+
+La retroiluminación permanece encendida permanentemente.
+
+#### Palancas
+
+La retroiluminación se enciende al accionar las palancas o las teclas.
+
+#### Interruptores
+
+La retroiluminación se enciende al accionar interruptores o teclas.
+
+#### Giróscopo
+
+La retroiluminación se enciende al inclinar la radio o al accionar las teclas.
+
+Tenga en cuenta que se puede activar más de una opción.
+
+### Suspender
+
+El tiempo de inactividad antes de que se apague la retroiluminación. Cuando se selecciona Siempre encendido, la opción Sleep no se podrá seleccionar (se pone en gris)
+
+### Brillo en modo suspensión
+
+![](../assets/system-general-sleep-brightness.png)
+
+Utilice el control deslizante para ajustar el brillo de la pantalla durante el modo de reposo, de izquierda a derecha para ajustar el brillo de oscuro a brillante.
+
+Tenga en cuenta que si la luminosidad (con la luz de fondo encendida) es igual que la del ‘brillo en modo suspensión’ (con la luz de fondo apagada) la pantalla táctil permanece activa aunque la iluminación parezca apagada.
+
+### Tema
+
+Permite la selección entre temas para la pantalla. El tema por defecto es Oscuro, con Claro como alternativa. Además, se pueden instalar otros temas Lua. Por favor, consulte la sección 'Temas de pantalla Lua alternativos' para más detalles.
+
+### Color de realce
+
+Permite seleccionar el color de realce que se utilizará en la pantalla. Por defecto es amarillo (#F8B038).
+
+## Ajustes de audio
+
+![](../assets/system-general-audio.png)
+
+### Idioma de audio
+
+Permite la selección del idioma en el que se hacen los anuncios por voz.
+
+#### Elección de voces
+
+El Sistema de selección de voces, proporciona la capacidad de seleccionar varias voces distintas en un determinado idioma.
+
+##### Voz 1 (principal)
+
+La voz principal se usa para todos los anuncios del sistema que son parte del sistema operativo Ethos. Por defecto, para idioma inglés se puede elegir entre voces americanas (us) e Inglesas (gb). Estos paquetes de sonido solo cubren los anuncios por voz del sistema
+
+En el ejemplo anterior, se ha seleccionado como ‘Voz 1’ (principal) la opción ‘Español’ por defecto
+
+Los archivos están almacenados en las siguientes carpetas:
+
+a*udio/en/us/system*
+
+audio/en/gb/system
+
+*audio/es/system*
+
+##### Archivos de sonido de usuario
+
+Los archivos de usuario pueden instalarse para su uso con la función especial ‘Reproducir audio’ (anteriomente se llamaban ‘Play track’ y ‘Play sequence’). Su localización debe ser:
+
+*audio/en/us/*     o
+
+audio/en/gb/
+
+audio/es
+
+##### Voces 2 y 3
+
+Se pueden almacenar paquetes alternativos de voces para usarse como Voz 2 o 3.
+
+Para asegurarse de que se reproduzcan adecuadamente las voces 2 y 3, necesitará añadir los archivos adecuados con una estructura de carpetas similar a la estándar mostrada para la voz principal. Como ejemplo, si vas a usar una voz designada Susana, la estructura de las carpetas debería ser:
+
+audio/es/Susana	Para archivos de usuario
+
+*audio/es/Susana/system	Para* cambiar archivos de sonido del sistema
+
+Tenga en Cuenta que cada voz debe tener una carpeta /system que contenga los archivos audio que necesitará para ‘Reproducir valor’ y para los cronómetros. La lista de los archivos de voz del Sistema se encuentra en un archivo .csv que se suministra con cada paquete de audio.
+
+De esa manera, puede elegir la voz que quiera usar para cada cronómetro y ‘Reproducir Audio’ para las funciones especiales. Opcionalmente, puedes asignar un paquete de voces personalizados como Voz 1 (principal) si quiere reemplazar los anuncios del sistema por los suyos.
+
+##### Voz por defecto (default)
+
+*Para evitar problemas de* conversión de los sonidos, desde la versión 1.4.X, se ha instalado un paquete de voz ‘por defecto’. Durante la instalación/actualización, si los sonidos de sistema por defecto de la Voz 1 (voz principal) no se ha determinado todavía, la ‘Voz 1 (principal)’ se ajustará como voz ‘por defecto’, siempre que exista la carpeta.
+
+Los archivos están en la siguiente carpeta:
+
+a*udio/en/default/system*
+
+audio/es/default/system
+
+##### Archivos de sonido del usuario
+
+Algunos sonidos más frecuentemente solicitados se proporcionan durante la instalación para usarse con la función ‘Reproducir audio’ de las funciones especiales (previamente llamadas ‘Play track’ y ‘Play sequence’). Su localización es:
+
+audio/en/default/
+
+audio/es/default
+
+*En esta carpeta se pueden añadir archivos* *de sonido* *adicionales, si el usuario desea seguir usando esta voz por defecto.*
+
+### Volumen principal
+
+Utilice el control deslizante para controlar el volumen de audio. Una pulsación larga de la tecla ENT permite utilizar un pot o slider. Los pitidos durante el ajuste ayudan a valorar el volumen.
+
+### Modos audio
+
+![](../assets/system-general-audio-modes.png)
+
+#### Silencio
+
+Sin audio. Tenga en cuenta que se emitirá una alerta al encender la radio si la opción Modo Silencio está activada en Sistema / Alertas.
+
+#### Sólo alarmas
+
+Sólo las alarmas se reproducirán por el audio.
+
+#### Por defecto
+
+Los sonidos están activados.
+
+#### Frecuente
+
+Además, se oirán pitidos de error cuando se intente superar el valor máximo o mínimo de los valores editables.
+
+#### Siempre
+
+Además de los sonidos de "Frecuente", también se oirán pitidos cuando se navegue por el menú.
+
+### Bluetooth (sólo radios X20S/HD/Pro/R/RS)
+
+Los modelos X20S, HD y X20 Pro/R/RS disponen de un modo audio adicional para enviar el audio a algún dispositivo Bluetooth, como pueden ser unos auriculares.
+
+![](../assets/system-general-audio-bluetooth.png)
+
+Toque en ‘Buscar dispositivos’.
+
+![](../assets/system-general-audio-bluetooth-searching.png)
+
+Aparece el anuncio ‘Esperando dispositivos’. Encienda el dispositivo Bluetooth y póngalo en modo emparejamiento.
+
+![](../assets/system-general-audio-bluetooth-device-selected.png)
+
+Cuando se encuentre el dispositivo Bluetooth, se mostrará su nombre. Púlselo para seleccionarlo.
+
+![](../assets/system-general-audio-bluetooth-connecting.png)
+
+Se mostrará el anuncio ‘Esperando dispositivo’
+
+![](../assets/system-general-audio-bluetooth-connected.png)
+
+Cuando la radio y el dispositivo se han emparejado, aparece el anuncio ‘Dispositivo Bluetooth conectado’. Pulse OK.
+
+![](../assets/system-general-audio-bluetooth-connected-ok.png)
+
+Aparecerá de nuevo la pantalla de Bluetooth mostrando la conexión. El dispositivo audio debería estar ya operativo.
+
+![](../assets/system-general-audio-bluetooth-disconnect-select.png)
+
+#### Disconnect
+
+#### Toque en el dispositivo para que aparezca la opción de desconectarlo.
+
+#### Altavoz desactivado
+
+Para desactivar el altavoz del sistema (por ejemplo, cuando se usa un auricular Bluetooth) se puede seleccionar como ‘siempre encendido’, cuando la telemetría esté funcionando, o controlarlo por una fuente (por ejemplo, un interruptor) o cualquier otra condición.
+
+El Sistema recordará el dispositivo Bluetooth. Para que funcione automáticamente, primero encienda la radio y luego el dispositivo. El dispositivo Bluetooth se conectará, pudiendo ocurrir que pasen unos segundos para que un altavoz silenciado se active otra vez.
+
+## Vario
+
+![](../assets/system-general-audio-vario.png)
+
+Aquí se pueden configurar las características de audio de los tonos del Vario.
+
+### Volumen
+
+El volumen relativo del tono vario.
+
+### Tono en cero
+
+El tono cuando la velocidad de ascenso es cero.
+
+### Tono en máximo
+
+El tono a máxima velocidad de ascenso.
+
+### Repetición en cero
+
+El retardo entre pitidos en el tono cero.
+
+Consulte el sensor [VSpeed](#VSpeed sensor) en Telemetría y la función especial [Play vario](#Play vario) para usar otros parámetros del Vario.
+
+## Vibrar
+
+![](../assets/system-general-haptic.png)
+
+### Intensidad
+
+Utiliza el control deslizante para controlar la intensidad de la vibración.
+
+### Modo
+
+![](../assets/system-general-haptic-options.png)
+
+Similar al Modo Audio anterior.
+
+## Location de datos (X18 y X20 Pro/R/RS)
+
+![](../assets/system-general-storage.png)
+
+Las radios X18 y X20 Pro/R/RS disponen de un eMMC de 8Gb (embedded MultiMediaCard) que es un dispositivo de almacenamiento formado por una memoria flash tipo NAND y un controlador simple de almacenamiento. ETHOS selecciona por defecto el almacenamiento en la eMMC, pero se puede también optar por usar una tarjeta SD. El usuario puede seleccionar eMMC, SD, o una combinación de ambas.
+
+Observe las opciones disponibles en la figura de arriba. Si la información del Sistema o de los modelos se quiere mover a la tarjeta SD, será necesario copiar las carpetas y los archivos a la tarjeta SD antes de hacer la selección. Lo mismo ocurre con los archivos de audio y los bitmaps.
+
+## Barra superior
+
+![](../assets/system-general-topbar.png)
+
+### Voltaje digital
+
+El estado de la batería en la barra de herramientas superior se puede cambiar desde la presentación en barra predeterminada, a mostrar en su lugar el voltaje de la batería de la radio en formato digitales.
+
+### RSSI digital
+
+Del mismo modo, el estado del RSSI se puede cambiar desde una visualización por barras a un valor digital, tanto para 2.4G como para 900M.
+
+## Seleccionar modelo al arranque
+
+![](../assets/system-general-model-start.png)
+
+Cuando se habilita esta opción, al encender la radio aparecerá la opción de seleccionar un modelo cuando se enciende la radio. De esta manera, se puede seleccionar un modelo antes de que se activen las alertas de la lista de chequeo de modelos anteriores. Así evitará tener que esperar a que se cancelen las alertas de la lista de chequeo antes de poder seleccionar un modelo diferente.
+
+Por defecto, estará remarcado el último modelo utilizado en sesiones previas.
+
+## Preselección modo USB
+
+![](../assets/system-general-usb.png)
+
+Cuando se conecta la radio a un PC a través de un cable USB, estarán disponibles las siguientes opciones:
+
+### Sin definir
+
+Aparece la opción ‘Sin definir’ por defecto inmediatamente después de conectar la radio, para permitir seleccionar la opción elegida.
+
+### Joystick
+
+Con esta opción, la radio automáticamente entrará en el modo joystick para poder usarse con los simuladores RC.
+
+### Ethos Suite
+
+Con esta opción, la radio entrará automáticamente en el ‘Modo Ethos’ para poderse comunicar con la Suite Ethos. Vaya a la sección [Modo Ethos](#Ethos Mode) para más detalles.
+
+### Serie
+
+Con esta opción, la radio entrará automáticamente en el modo Serie. En este modo, las trazas de depuración de los scripts Lua se envían al puerto USB-Serie, siempre que haya alguno presente. Se transmitirán a 115200bps. Un Puerto COM virtual puede encontrarse [aqui](https://www.st.com/en/development-tools/stsw-stm32102.html).

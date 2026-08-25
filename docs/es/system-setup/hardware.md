@@ -1,133 +1,160 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # Hardware
 
-![Comprobación del hardware](../assets/system-hardware-check-x20s.png)
+![](../assets/system-icon-hardware.png)
 
-Comprobación y calibración de los controles físicos de la emisora, definición
-del tipo de interruptores y asignación de las teclas de inicio.
+La sección Hardware se utiliza para probar todas las entradas, realizar la calibración analógica y del giróscopo, configurar los tipos de interruptor y definir el comportamiento de la tecla ‘Home’.
 
-## Comprobación del hardware {: #hardware-check }
+![](../assets/system-hardware.png)
 
-Permite accionar cada entrada física para confirmar que todas se registran
-correctamente.
+## Verificación de hardware
 
-![Comprobación del hardware en X20 Pro](../assets/system-hardware-check-x20pro.png)
-![Comprobación del hardware en X18S](../assets/system-hardware-check-x18s.png)
+![](../assets/system-hardware-check-x20s.png)
 
-- **X20 Pro/R/RS** — comprueba también los dos pulsadores con enclavamiento
-  **K** y **L** situados en los hombros traseros, además de los
-  compensadores adicionales **T5**/**T6**.
-- **X18** — comprueba también los compensadores adicionales **T5**/**T6**.
+La verificación de hardware permite comprobar el funcionamiento de todas las entradas.
 
-## Calibración de los analógicos {: #analogs-calibration }
+### X20 Pro/R/RS
 
-![Calibración de los analógicos](../assets/system-hardware-analogs-calibration.png)
+![](../assets/system-hardware-check-x20pro.png)
 
-Indica a la emisora exactamente dónde están el centro y los límites de cada
-gimbal, pot y slider. Se ejecuta automáticamente en el primer arranque;
-repítala después de sustituir un gimbal, un pot o un slider.
+La verificación del Hardware en las X20 Pro/R/RS incluye los dos botones instantáneos K y L situados en la parte trasera de los laterales, además de los dos compensadores adicionales T5 and T6.
 
-## Calibración del giróscopo
+### X18
 
-![Calibración del giróscopo](../assets/system-hardware-gyro-calibration.png)
+![](../assets/system-hardware-check-x18s.png)
 
-Calibra el giróscopo interno para que las entradas basadas en la inclinación
-respondan correctamente al inclinar la emisora: la posición «nivelada» pasa a
-ser la forma en que usted la sujeta normalmente. También se ejecuta
-automáticamente en el primer arranque.
+Las radios X18 también tienen los dos compensadores adicionales T5 y T6.
 
-## Filtro de analógicos
+## Calibración de analógicos
 
-Filtro ADC para las palancas, que se puede activar o desactivar y que viene
-activado por defecto: reduce las oscilaciones alrededor del centro de la
-palanca. Este es el ajuste **global**; existe además un filtro de analógicos
-**por modelo** que lo sustituye, en
-[Edición del modelo](../model-setup/model-edit.md).
+![](../assets/system-hardware-analogs-calibration.png)
 
-## Ajustes de pots/sliders {: #potssliders-settings }
+La calibración de analógicos se realiza para que la radio sepa exactamente dónde están los centros y límites de cada palanca, pot y deslizador. Se ejecuta automáticamente en el arranque inicial de la radio. Debe repetirse después de reemplazar un cardan, pot o un slider.
 
-Permite renombrar los pots y los sliders. Las emisoras **X20 Pro/R/RS**
-admiten además dos pots extra, **Ext1**/**Ext2**, empleados habitualmente
-para gimbals de 3 ejes.
+## Calibración de giróscopos
 
-![Valores ADC, pots](../assets/system-hardware-pots-x20s.png)
-![Valores ADC, pots (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
+![](../assets/system-hardware-gyro-calibration.png)
 
-## Ajustes de los interruptores {: #switches-settings }
+La calibración de los giróscopos puede realizarse de forma que las salidas del sensor giroscópico respondan correctamente a la inclinación de la radio. Por ejemplo, la posición "nivelada" de la radio sería el ángulo en el que normalmente el piloto sujeta la radio.
 
-![Interruptores](../assets/system-hardware-switches.png)
+## Filtro analógico
 
-- **Retardo de detección de la posición central** — evita que un cambio
-  rápido de arriba→abajo (o de abajo→arriba) en un interruptor de 3
-  posiciones registre momentáneamente la posición central; la posición
-  central solo debería registrarse cuando el interruptor se detenga
-  realmente en ella. El valor por defecto es 0 ms, elegido para adaptarse a
-  la detección de «autocomprobación» de los receptores estabilizados de
-  FrSky en el CH12.
-- **Tipo de interruptor** — cada interruptor SA–SJ puede definirse como
-  **None**, **Momentary**, **2 POS** o **3 POS**, lo que permite
-  intercambiar funcionalidades entre interruptores físicos (por ejemplo,
-  asignar al interruptor momentáneo SH la función que normalmente
-  desempeña el SF de 2 posiciones), siempre dentro de lo que el cableado de
-  la emisora admita realmente (por lo general no puede asignarse una
-  función de 3 posiciones a un hardware que no está cableado para ello).
+El filtro del conversión analógico-digital puede activarse/desactivarse con este ajuste. El valor por defecto es ON, ya que suele mejorar el jitter alrededor del centro de la palanca. Cuando se hace en esta sección, es un ajuste global que afecta a todos los modelos. Además, hay opción de realizar esta calibración para cada modelo individualmente, dentro de la sección ‘Editar modelo’ en el punto [Filtro analógico](../model-setup/model-edit.md).
 
-  ![Opciones de interruptor](../assets/system-hardware-switches-options.png)
-  ![Interruptores adicionales](../assets/system-hardware-switches-2.png)
+## Configuración de Pots/Sliders
 
-- **Renombrado** — los interruptores se pueden renombrar de SA–SJ a nombres
-  personalizados; los nombres son globales para todos los modelos.
-- **X20 Pro** — añade los pulsadores **K**/**L** en los hombros traseros,
-  además de las posiciones **M**/**N** si están cableadas (normalmente para
-  interruptores en el extremo de las palancas).
+![](../assets/system-hardware-pots-x20s.png)
 
-## Asignación de teclas de inicio
+Aquí se pueden dar nombres personalizados a los pots y a los sliders.
 
-Reasigna el destino al que saltan las teclas de inicio `SYS`, `MDL` y
-`DISP` (`TELE` en emisoras más antiguas).
+### X20 Pro/R/RS
 
-- **`DISP`** — tanto la pulsación corta como la larga se pueden reasignar a
-  cualquier página de Modelo, página de Sistema, Configurar pantallas,
-  Inicio o al Registro de datos de vuelo. Por coherencia con la serie X10,
-  la pulsación larga de `DISP` se suele configurar en Configurar pantallas.
-- **`SYS`/`MDL`** — solo la pulsación larga es reasignable (al mismo
-  conjunto de destinos); una pulsación corta abre siempre la sección de
-  Sistema o de Modelo, respectivamente.
+![](../assets/system-hardware-pots-x20pro.png)
 
-## Opciones de hardware específicas de cada emisora {: #radio-specific-hardware-options }
+Las X20 Pro/R/RS tienen la posibilidad de instalar dos pots adicionales: Ext1 and Ext2. Se suele utilizar esta opción cuando se instalan gimbals de tres ejes.
 
-- **Habilitar actualización para vibración en los gimbal** (X20 Pro, X20R) —
-  las emisoras X20 Pro AW y X20RS se suministran con gimbals MC20R que
-  incorporan motores de vibración háptica en las palancas; si se han
-  instalado gimbals MC20R en una X20 Pro o una X20R, actívelos aquí (vaya a
-  la sección [Funciones especiales](../model-setup/special-functions.md)
-  para configurar los propios patrones de vibración háptica).
+## Configuración de interruptores
 
-  ![Vibración háptica (X20 Pro)](../assets/system-hardware-haptic-x20pro.png)
-  ![Vibración háptica (X20 Pro AW)](../assets/system-hardware-haptic-x20proaw.png)
+![](../assets/system-hardware-switches.png)
 
-- **Opción del encoder** (X20 Pro AW, X20R/RS) — estas emisoras disponen de
-  un selector rotatorio más sensible; active los **medios pasos** para
-  suavizarlo.
+![](../assets/system-hardware-switches-2.png)
 
-  ![Opción del encoder (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
+### Retardo de detección del centro de un interruptor
 
-## Inspector de valores ADC {: #adc-value-inspector }
+Este ajuste garantiza que no se detecte la posición intermedia del interruptor en los interruptores de tres posiciones cuando el interruptor pasa de la posición superior a la inferior en un solo movimiento, y viceversa. Sólo se detectará cuando el interruptor se detenga en la posición central. El valor por defecto se ha cambiado a 0ms para adaptarse a los receptores estabilizados FrSky cuando son detectados automáticamente ('Self Check') en el canal CH12.
 
-Muestra los valores brutos de la conversión analógico-digital que la CPU lee
-para cada entrada analógica:
+![](../assets/system-hardware-switches-options.png)
 
-![Comprobación ADC (X20S)](../assets/system-hardware-adc-check-x20s.png)
-![Comprobación ADC (X20 Pro)](../assets/system-hardware-adc-check-x20pro.png)
+Los interruptores SA a SJ pueden definirse como:
 
-**X20S**: 1 palanca izquierda horizontal, 2 palanca izquierda vertical, 3
-palanca derecha vertical, 4 palanca derecha horizontal, 5 Pot 1, 6 Pot 2, 7
-slider central, 8 slider izquierdo, 9 slider derecho.
+- Ninguno
+- Momentáneo
+- 2 POS
+- 3 POS
 
-**X20 Pro**: igual que lo anterior, pero con dos canales adicionales de pots
-externos (7 Ext1, 8 Ext2 — por ejemplo, pots montados en las palancas)
-insertados antes de los sliders, que pasan a ser 9 slider central, 10 slider
-izquierdo, 11 slider derecho.
+Esto permite el intercambio de los interruptores, por ejemplo, el interruptor momentáneo SH podría intercambiarse con el interruptor de 2 posiciones SF. Tenga en cuenta que puede que no sea posible sustituir un interruptor momentáneo o de 2 posiciones por un interruptor de 3 posiciones si el cableado de la radio no lo permite.
+
+Los interruptores también pueden renombrarse desde los nombres predeterminados (desde SA hasta SJ) a nombres personalizados. Tenga en cuenta que estos nombres serán comunes en todos los modelos.
+
+### X20 Pro
+
+![](../assets/system-hardware-switches-x20pro.png)
+
+La X20 Pro dispone de dos interruptores momentáneos SK and SL en la parte trasera superior. Además, los interruptores de las posiciones M y N se pueden conectar a la placa principal. Se suelen usar como interruptores de fin de recorrido de las palancas.
+
+### Sólo para la serie XE
+
+![](../assets/xers-hw-switches.png)
+
+En las radios serie XE, los interruptores están marcados de S1 a S14, los cuales por defecto se asignan de SA a SN en Ethos. Si se desea, las etiquetas de Ethos pueden cambiarse a S1 a S14 para reflejar las marcas en la radio, o cualquier otro nombre que se prefiera.  
+  
+Tenga en cuenta que debido a su capa adicional de abstracción, en Ethos cualquier interruptor puede asignarse a cualquier posición de interruptor.
+
+## Mapeado teclas menú
+
+![](../assets/system-hardware-shortcuts.png)
+
+Las teclas de inicio \[SYS\], \[MDL\] y \[DISP\] (TELE en los modelos antiguos) pueden reasignarse para adaptarlas a las necesidades del usuario.
+
+### Tecla \[DISP\]
+
+![](../assets/system-hardware-shortcuts-options.png)
+
+Para la tecla \[DISP\] las opciones de pulsación larga y corta se pueden reasignar a cualquier página de Modelo, de Sistema, en la página Configurar Pantallas, la tecla de Inicio o en la de registros de datos de vuelo. Por coherencia con la serie X10, la tecla \[DISP\_mantenida\] puede asignarse convencionalmente en la página Configurar Pantallas.
+
+### Teclas \[SYS\] y \[MDL\]
+
+Para las teclas \[SYS\] y \[MDL\] sólo se pueden reasignar las opciones de pulsación larga para reasignarse a cualquier página de Modelo, de Sistema, de la página Configurar Pantallas, la página de Inicio o a la de registros de datos de vuelo. Una pulsación corta le lleva a la sección Sistema o Modelo respectivamente.
+
+## Opción audio Bluetooth (X20, X20R, X20RS)
+
+![](../assets/Pictures/1000000000000320000001E0C5906176.png)
+
+Se puede añadir un módulo audio Bluetooth a las X20, X20R or X20RS para poder usar auriculares Bluetooth (por ejemplo). Esta opción se podrá habilitar sólo si el módulo está instalado.
+
+Tenga en cuenta que este módulo no es plug and play, sino que se deben hacer soldaduras.
+
+## Habilitar actualizaciones de vibración de gimbals  (X20 Pro y X20R)
+
+![](../assets/system-hardware-haptic-x20pro.png)
+
+Las X20 Pro AW y X20RS disponen de gimbals MC20R con pequeños motores de vibración para las palancas. Si los gimbals MC20R se han actualizado opcionalmente en las X20 Pro o X20R, puede seleccionarse aquí las opciones de vibración para los motores de cada una de las palancas. Vaya a la sección ‘[Seleccionar motores de vibración](#Select haptic motors)’ para más detalles sobre cómo configurarlos.
+
+## Opción Mitad de paso del selector rotatorio (X20 Pro AW y X20R/RS)
+
+![](../assets/system-hardware-x20proaw-encoder-option.png)
+
+Las radios X20 Pro AW y X20R/RS disponen de un selector rotatorio mejorado que es más sensible. Para reducir esa sensibilidad, se puede activar la opción de ‘half steps’para reducir esa sensibilidad.
+
+## Comprobador de ADC
+
+![](../assets/system-hardware-adc-check-x20s.png)
+
+Muestra los valores de conversión analógico-digital (ADC) de las entradas analógicas leídas por la CPU.
+
+1. Palanca izquierda horizontal
+2. Palanca izquierda vertical
+3. Palanca derecha vertical
+4. Palanca derecha horizontal
+5. Pot 1
+6. Pot 2
+7. Slider central
+8. Slider izquierdo
+9. Slider derecho
+
+### X20 Pro
+
+![](../assets/system-hardware-adc-check-x20pro.png)
+
+Para la X20 Pro, los valores (ADC) son:
+
+1. Palanca izquierda horizontal
+2. Palanca izquierda vertical
+3. Palanca derecha vertical
+4. Palanca derecha horizontal
+5. Pot 1
+6. Pot 2
+7. Ext1 (pot externo, por ejemplo, montado en una palanca)
+8. Ext1 (pot externo, por ejemplo, montado en una palanca)
+9. Slider central
+10. Slider izquierdo
+11. Slider derecho

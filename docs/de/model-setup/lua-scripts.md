@@ -1,46 +1,53 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Lua
 
-# Lua-Skripte (Modell)
+![](../assets/model-icon-lua.png)
 
-![Lua-Konfiguration](../assets/model-lua-config.png)
+Das Lua-Menü wird nur angezeigt, wenn der Benutzer eine Lua-Quelle oder ein Lua-Aufgabenskript im Ordner „scripts/“ auf der SD-Karte oder eMMC installiert hat.
 
-Dieses Menü erscheint nur, wenn eine Lua-**Quelle** oder ein
-**Aufgabenskript** im Ordner `scripts/` auf der SD card/eMMC installiert
-ist (siehe [Dateimanager](../system-setup/file-manager.md#top-level-folders))
-— es dient dazu, diese Skripte **pro Modell** zu aktivieren und zu
-konfigurieren, nicht dazu, sie zu installieren. Einmal installiert, sind
-Lua-Quellen oder -Aufgaben global für jedes Modell verfügbar; auf dieser
-Seite entscheidet jedes Modell, ob es sie verwendet, und legt seine eigene
-Konfiguration fest. Beispiele für Quell- und Aufgabenskripte werden auf der
-Ethos-Feedback-Community-Website veröffentlicht (`/lua/examples/task`,
-`/lua/examples/source`).
+Mit Lua-Skripten ist es möglich, benutzerdefinierte Quellen wie beispielsweise benutzerdefinierte Sensoren zu erstellen oder Aufgaben zu erstellen, die benutzerdefinierte Aktionen ausführen, wie beispielsweise das Protokollieren von Daten in einer Datei nach Beendigung des Fluges.
 
-## Lua-Aufgaben
+Nach der Installation sind Lua-Quellen oder -Aufgaben global für jedes Modell verfügbar. Über dieses Menü können dann die jeweiligen Quell- und Aufgabenskripte für das aktive Modell selektiv aktiviert und konfiguriert werden.
 
-Alle installierten Aufgaben werden aufgelistet und können für das aktive
-Modell einzeln aktiviert werden. Wenn eine Aufgabe aktiviert ist, wird das
-zugehörige Konfigurationsformular angezeigt (sofern vorhanden) — das
-Aufgabenskript verfügt über eine eigene Lese- und Schreibfunktion, damit
-jedes Modell seine eigenen Einstellungen speichern kann. Eine Aufgabe kann
-beispielsweise einen konfigurierbaren Zahlenbereich haben, der für jedes
-Modell unabhängig angepasst werden kann.
+Auf der Webseite der ETHOS-Feedback-Community finden Sie einige Beispiel-Lua-Quell- und -Aufgabenskripte, siehe /lua/examples/task und /lua/examples/source.
 
-## Lua-Quellen
+![](../assets/model-lua-config.png)
 
-Für Quellen gilt dasselbe Prinzip: pro Modell aktivieren und anschließend
-über das Formular konfigurieren, das das Quellenskript bereitstellt. Eine
-so registrierte Quelle lässt sich überall sonst in Ethos wie eine
-gewöhnliche
-[Quelle](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-verwenden, genau wie eine integrierte.
+## LUA-Aufgaben
 
-## Für Skriptautoren
+Für jede einzelne Aufgabe:
 
-Quellen und Aufgaben werden aus Lua heraus über `system.registerSource()`
-und `system.registerTask()` registriert — weitere Informationen finden Sie
-im Ethos LUA Referenzhandbuch sowie unter
-[Lua-Skripte](../lua-scripts/index.md) in diesem Handbuch zur allgemeinen
-Skriptumgebung (Widgets sind ein separater, verwandter Mechanismus — siehe
-[Eigene Widgets](../displays/custom-widgets.md)).
+### Aufgabe aktivieren
+
+Alle verfügbaren Aufgaben werden aufgelistet. Jede Aufgabe kann für das aktive Modell aktiviert werden.
+
+### Konfiguration der Aufgabe
+
+Wenn eine Aufgabe aktiviert ist, wird ein zugehöriges LUA-Konfigurationsformular angezeigt, damit die Aufgabe für das aktive Modell konfiguriert werden kann. Die Aufgabe verfügt über eine Lese- und eine Schreibfunktion, damit der Benutzer alle Konfigurationsparameter speichern kann.
+
+Im obigen Beispiel hat die Beispielaufgabe einen konfigurierbaren Bereich, der für jedes Modell, das die Aufgabe verwendet, angepasst werden kann.
+
+## LUA***-Quellen***
+
+Für jede einzelne Quelle:
+
+### Quelle aktivieren
+
+Alle verfügbaren LUA-Quellen werden aufgelistet. Jede Quelle kann für das aktive Modell aktiviert werden.
+
+### Konfiguration der Quellen
+
+Wenn eine Quelle aktiviert ist, wird ein zugehöriges Lua-Konfigurationsformular angezeigt, mit dem die Quelle für das aktive Modell konfiguriert werden kann (z. B. Range im obigen Bildschirmfoto für die Aufgabe).
+
+## LUA-Skript-Funktionen
+
+Zu den anwendbaren Lua-Funktionen gehören:
+
+system.registerSource()
+
+system.registerTask()
+
+Weitere Informationen finden Sie im [Ethos LUA Referenzhandbuch](https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/LuaDoc/index.html).
+
+## Installation
+
+Lua-Quellen und -Tasks werden im Ordner „scripts“ auf der SD-Karte oder eMMC installiert. Bitte beachten Sie den Abschnitt [Skripte](../system-setup/file-manager.md) unter System / Dateimanager.

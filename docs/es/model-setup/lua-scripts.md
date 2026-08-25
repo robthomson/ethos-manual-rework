@@ -1,48 +1,53 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Lua
 
-# Scripts Lua (Modelo)
+![](../assets/model-icon-lua.png)
 
-![Configuración de Lua](../assets/model-lua-config.png)
+El menú Lua sólo aparecerá si el usuario ha instalado una fuente o tarea Lua en la carpeta scripts/ de la tarjeta SD o eMMC.
 
-Este menú solo aparece una vez que se ha instalado un script Lua de
-**fuente** o de **tarea** en la carpeta `scripts/` de la SD card/eMMC
-(consulte [Gestor de
-archivos](../system-setup/file-manager.md#top-level-folders)): sirve para
-activar y configurar dichos scripts **por modelo**, no para instalarlos.
-Una vez instalada, una fuente o una tarea está disponible de forma global
-para todos los modelos; en esta página es donde cada modelo la habilita y
-establece su propia configuración. En el sitio de la
-Ethos-Feedback-Community se publican ejemplos de scripts de fuente y de
-tarea (`/lua/examples/task`, `/lua/examples/source`).
+Es posible usar Lua Scripts para crear fuentes personalizadas (como pueden ser sensores personalizados) o para crear rutinas que realizan acciones personalizadas tales como almacenar registros de datos en un archivo después de que se haya terminado un vuelo.
+
+Una vez instaladas, las fuentes o las rutinas Lua estarán disponibles globalmente o en cada modelo. Este menu puede usarse para activar o configurar selectivamente las respectivas fuentes y tareas para el modelo activo.
+
+Podrá encontrar algunos ejemplos de fuentes y rutinas en forma de scripts Lua ask en la página ETHOS-Feedback-Community, en el apartado /lua/examples/task y en el de /lua/examples/source.
+
+![](../assets/model-lua-config.png)
 
 ## Tareas Lua
 
-Todas las tareas instaladas aparecen listadas con un conmutador de
-activación por modelo. Al activar una de ellas se despliega su formulario
-de configuración (si lo tiene): el script de la tarea proporciona sus
-propias funciones de lectura/escritura, de modo que cada modelo puede
-guardar sus propios ajustes. Por ejemplo, una tarea puede ofrecer un
-rango numérico configurable que se establece de forma independiente en
-cada modelo.
+Para cada tarea:
+
+### Habilitar tarea (Task enable)
+
+Se listan aquí todas las tareas disponibles. Cada una de ellas puede ser habilitada para el modelo activo.
+
+### Configuración de la tarea
+
+Si se habilita una tarea, cualquier configuración Lua asociada se muestra para permitir configurarla para el modelo activo. La tarea dispondrá de una función de lectura y escritura que permitirá al usuario almacenar todos los parámetros de su configuración.
+
+Como en el ejemplo de arriba, la tarea utilizada tiene un rango configurable que puede ajustarse a cada uno de los modelos que la utilice.
 
 ## Fuentes Lua
 
-El mismo esquema se aplica a las fuentes: se activan por modelo y después
-se configuran mediante el formulario que proporcione el script de la
-fuente. Una fuente registrada de este modo pasa a estar disponible como
-una
-[fuente](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-normal en cualquier otra parte de Ethos, exactamente igual que una
-integrada.
+Para cada fuente:
 
-## Para autores de scripts
+### Habilitar fuente
 
-Las fuentes y las tareas se registran desde Lua mediante
-`system.registerSource()` y `system.registerTask()`: consulte la Ethos
-Lua Reference Guide y el apartado [Scripts
-Lua](../lua-scripts/index.md) de este manual para conocer el entorno
-general de programación de scripts (los widgets son un mecanismo
-distinto, aunque relacionado; consulte [Widgets
-personalizados](../displays/custom-widgets.md)).
+Se listan aquí todas las fuentes disponibles. Cada una de ellas puede ser habilitada para el modelo activo.
+
+### Configuración de la fuente
+
+Si se habilita una fuente, cualquier configuración Lua asociada se muestra para permitir configurarla para el modelo activo (como puede ser el alcance en la pantalla de arriba). La fuente dispondrá de una función de lectura y escritura que permitirá al usuario almacenar todos los parámetros de su configuración.
+
+## Funciones de scripts Lua
+
+Las funciones Lua aplicables incluyen:
+
+system.registerSource()
+
+system.registerTask()
+
+Para más detalles, vaya a la [Guia de referencia Ethos Lua](https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/LuaDoc/index.html).
+
+## Instalación
+
+Las fuentes Lua y las tareas se instalan en el directorio ‘scripts’ de la tarjeta SD card o eMMC. Vaya a la sección [scripts](#scripts) de Sistema / Administrador de archivos.

@@ -1,15 +1,23 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Modo de emergencia
 
-El modo de emergencia es la respuesta de Ethos ante un fallo inesperado de bajo nivel, como un reinicio por watchdog. El watchdog es un temporizador que diversas partes del sistema reinician continuamente; si algo impide que se reinicie, se agota su tiempo y fuerza un reinicio del hardware. El modo de emergencia reinicia entonces la emisora lo más rápido posible, omitiendo todas las comprobaciones normales de arranque, de modo que el control del modelo se devuelve con el mínimo retardo. En este modo no se accede en absoluto a la SD card/eMMC.
+El modo de emergencia es la respuesta de la radio a un evento inesperado como un reinicio del “watchdog”. El “watchdog” es un temporizador que se reinicia continuamente por diferentes partes de Ethos. Si un fallo de cualquier tipo impide que el temporizador “watchdog” se reinicie, se agotará el tiempo y provocará un reinicio hardware de la radio. En este Modo de Emergencia la radio se reinicia extremadamente rápido, sin ninguna de las comprobaciones normales de arranque para que usted recupere el control de su modelo lo más rápido posible. En el Modo de Emergencia no se puede acceder a la Tarjeta SD o eMMC.
 
-Solo están disponibles las funciones esenciales necesarias para seguir controlando el modelo — ninguna de las funciones de nivel superior. La pantalla queda en blanco salvo por las palabras **EMERGENCY MODE**, acompañadas de un pitido repetido de 300 ms cada 3 segundos; las alertas de voz, los scripts Lua, el registro de datos y la telemetría se detienen. Si esto ocurre en vuelo, aterrice lo antes posible.
+El Modo Emergencia sólo proporciona las funciones esenciales para controlar su modelo, pero ninguna de las funciones de alto nivel. La pantalla se quedará en blanco y mostrará las palabras “Modo Emergencia”, acompañadas de un pitido de 300 ms que se repetirá continuamente cada 3 segundos. Las alertas de voz, la ejecución de scripts, el registro, etc. dejarán de funcionar. Si se produce el modo de Emergencia, obviamente deberá aterrizar lo antes posible.
 
-La causa más habitual es un fallo de la SD card.
+La causa más común del Modo de Emergencia es el fallo de la tarjeta SD o eMMC.
 
 ## Prueba del modo de emergencia
 
-Se puede añadir una **herramienta del sistema** para activar deliberadamente el modo de emergencia con fines de prueba, de modo que no haya que descubrirlo por primera vez en vuelo. Al pulsar el icono Emergency Test se solicita confirmación y, a continuación, la emisora entra en modo de emergencia exactamente igual que si se tratara de un fallo real.
+En determinados casos puede ser útil para el usuario poder probar el modo de emergencia.
+
+![](../assets/Pictures/1000000000000320000001E0CAE58A4D.png)
+
+Se puede añadir una herramienta de Sistema para probar el modo de emergencia. Seleccione el icono Emergency Test para iniciar la prueba.
+
+![](../assets/Pictures/1000000000000320000001E07840F732.png)
+
+Un cuadro de diálogo le pedirá confirmación para proceder.
+
+![](../assets/Pictures/1000000000000320000001E0FC0300AF.png)
+
+La radio entrará en el modo de emergencia.

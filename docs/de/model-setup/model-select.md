@@ -1,164 +1,273 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# **Model****le**
 
-# Modellauswahl
+![](../assets/model-icon-modelselect.png)
 
-![Modellassistent – Flugzeug](../assets/model-modelselect-model-wizard-airplane.png)
-
-Hier werden Modelle erstellt, ausgewählt, geklont und gelöscht sowie die
-benutzerdefinierten Kategorieordner verwaltet, in denen sie abgelegt sind.
+Die Option „Modellauswahl“ wird über das Menü „Modell“ aufgerufen. Sie dient dazu, das aktuelle Modell auszuwählen, ein neues Modell hinzuzufügen, ein Modell zu klonen, ein Modell über Bluetooth zu senden, zu empfangen oder es zu löschen.
 
 ## Modellordner verwalten
 
-![Modellordner](../assets/model-modelselect-folders.png)
+Mit Ethos können Sie Ihre eigenen Modellordner erstellen, um Ihre Modelle zu kategorisieren und zu gruppieren. Typische Modellordnernamen sind z.B. Flugzeug, Segelflugzeug, Heli, Quad, Warbird, Boot, Auto, Vorlage, Archiv usw.
 
-Ethos ermöglicht es, Modelle in eigenen Ordnern zu gruppieren – typischerweise
-etwa Flugzeug, Segler, Heli, Quad, Warbird, Boot, Auto, Vorlage oder Archiv.
-Solange kein Ordner angelegt ist, liegen die Modelle in einem automatisch
-erzeugten Ordner **Uncategorized** (er wird beim Upgrade auf Ethos 1.1.0
-alpha 17+ angelegt oder wenn eine Modelldatei aus einer anderen Quelle nach
-`\Models` kopiert wird); Ethos löscht ihn wieder, sobald er leer ist.
+![](../assets/model-modelselect-folders.png)
 
-Um einen Ordner zu erstellen, tippen Sie auf **+** neben „Uncategorized“ (oder
-halten Sie `PAGE` auf/ab gedrückt), vergeben einen Namen (bis zu 15 Zeichen)
-und bestätigen. Ordner werden alphabetisch sortiert, wobei **Uncategorized**
-immer zuletzt steht, und entsprechen direkt den Unterordnern unter `\Models`
-auf der SD card/eMMC. Ein Tippen auf einen Ordnernamen öffnet
-Umbenennen/Löschen – beim Löschen eines Ordners werden alle darin enthaltenen
-Modelle zurück nach Uncategorized verschoben.
+Bis Sie Ihre Ordner erstellt und organisiert haben, erstellt Ethos automatisch den Ordner 'keine Kategorie'. Dies geschieht, wenn Sie auf Ethos Version 1.1.0 alpha 17 oder höher aktualisieren, oder wenn Sie ein Modell aus dem Netz oder von einem Freund in den Ordner \\Models auf der SD- oder eMMC-Karte kopieren. Ethos löscht den Ordner 'keine Kategorie' automatisch, wenn er nicht mehr benötigt wird.
 
-![Ordner wechseln](../assets/model-modelselect-folder-change-select.png)
+Um Ihren ersten Ordner zu erstellen, tippen Sie auf das „+“ rechts neben der Bezeichnung „keine Kategorie“ oder drücken Sie lange auf die Taste „Seite nach oben/unten“ (PG Up/Down).
 
-Um ein Modell zu verschieben, tippen Sie auf sein Symbol, wählen **Ordner
-wechseln** und tippen anschließend auf das Ziel:
+![](../assets/model-modelselect-create-airplane-folder.png)
 
-![Ordner auswählen](../assets/model-modelselect-folder-airplane-select.png)
+Geben Sie den Namen in das Dialogfeld „Ordner erstellen“ ein und tippen Sie auf „OK“. Die Ordnernamen können bis zu 15 Zeichen lang sein. Wiederholen Sie diesen Vorgang für Ihre anderen Kategorien. Beachten Sie, dass diese Ordner als Unterordner unter dem Ordner „\\models“ auf der SD-Karte oder eMMC angezeigt werden.
 
-## Ein neues Modell anlegen
+Die Ordner der Modellkategorien sind alphabetisch sortiert, aber der Ordner 'keine Kategorie' erscheint immer als letzter in der Liste.
 
-![Modell erstellen](../assets/model-modelselect-model-create.png)
+![](../assets/model-modelselect-folder-options.png)
 
-Wählen Sie die Kategorie, in der das Modell erstellt werden soll, tippen Sie
-auf **+** und dann auf **Modell erstellen**, um den Assistenten zu starten
-(legen Sie die Kategorie zuvor an, falls sie noch nicht existiert). Assistenten
-zur Modellerstellung gibt es für **Flugzeug**, **Segler**, **Hubschrauber**,
-**Multirotor** und **Andere**; jeder führt durch die Grundeinstellungen des
-jeweiligen Modelltyps, einschließlich optionaler vordefinierter Mischer für
-stabilisierte FrSky-Empfänger (Gain, Stabilisierungsmodus). Modellnamen dürfen
-bis zu 15 Zeichen lang sein.
+Wenn Sie auf einen Ordnernamen tippen und die Taste PgUp/Dn lang drücken, erscheint ein Dialog, in dem Sie den Ordner umbenennen oder löschen können. Wenn sich in dem zu löschenden Ordner Modelle befanden, legt Ethos diese automatisch im Ordner „'keine Kategorie'“ ab.
 
-### Stabilisierte Empfänger und Kanalreihenfolge
+## Hinzufügen eines neuen Modells
 
-![Assistent: Flugzeug](../assets/model-modelselect-model-wizard-airplane.png)
+![](../assets/model-modelselect-folder-airplane-select.png)
 
-Stabilisierte FrSky-Empfänger benötigen zwingend die Kanalreihenfolge
-**AETR** – belassen Sie [Steuerknüppel → Kanalreihenfolge](../system-setup/controls.md)
-auf der Standardeinstellung AETR mit aktivierter Option **Erste vier Kanäle
-fest**, damit die Ausgabe des Assistenten dem entspricht, was der Empfänger
-erwartet.
+Um ein neues Modell hinzuzufügen, wählen Sie die Modellkategorie aus, unter der Sie das Modell erstellen möchten, und tippen Sie dann auf das \[+\] -Symbol, um ein neues Modell zu erstellen oder um ein Modell von einem anderen Ethos Sender über Bluetooth zu empfangen.
 
-Der Assistent vergibt die Kanäle von rechts nach links. Für 2 Querruder + 1
-Höhenruder + 1 Seitenruder + 1 Motor ergibt sich:
+![](../assets/model-modelselect-model-create.png)
 
-| Kanal | Funktion |
-|---|---|
-| 1 | Querruder 1 (rechtes Querruder) |
-| 2 | Höhenruder |
-| 3 | Gas |
-| 4 | Seitenruder |
-| 5 | Querruder 2 (linkes Querruder) |
+Tippen Sie auf „Modell erstellen“, um den Assistenten für neue Modelle zu starten. (möglicherweise müssen Sie zuerst Ihre Modellkategorien erstellen, siehe oben).
 
-Mit dieser Zuordnung ist die Querruder-Differenzierung im Normalfall **positiv**
-(mehr Ausschlag nach oben als nach unten). Die FrSky-Empfängeranleitungen
-dokumentieren derzeit die *umgekehrte* Konvention (von links nach rechts, also
-Kanal 1 = linkes Querruder, Kanal 5 = rechtes Querruder) – in diesem Fall
-müsste die Differenzierung für denselben physikalischen Effekt **negativ** sein.
+![](../assets/model-modelselect-model-wizard-airplane.png)
 
-!!! tip
-    Es wird empfohlen, durchgängig die Ethos-Konvention zu verwenden – alle
-    Stabilisierungsfunktionen arbeiten in beiden Fällen korrekt, da die
-    Kompensationsrichtung bei der Einrichtung der Stabilisierung festgelegt
-    wird. Falls Sie die Konvention der Empfängeranleitung dennoch übernehmen
-    müssen, ist der einfachste Weg, das Modell wie gewohnt mit dem Assistenten
-    zu erstellen und anschließend über **Kanäle tauschen** in den
-    [Ausgängen](outputs.md) die beiden Querruderkanäle zu vertauschen – so
-    bleibt das Vorzeichen der Differenzierung im Querrudermischer positiv.
+Wählen Sie die Art des Modells aus, das Sie erstellen möchten, und folgen Sie den Anweisungen.
 
-### Schritte des Assistenten
+Es gibt Assistenten für:
 
-![Assistent: Leitwerkstyp](../assets/model-modelselect-model-wizard-tail.png)
-![Assistent: Anzahl Querruder/Klappen](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
-![Assistent: Anzahl Höhen-/Seitenruder](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
-![Assistent: Motor](../assets/model-modelselect-model-wizard-engine.png)
-![Assistent: Kanalneuzuordnung](../assets/model-modelselect-model-wizard-ch-reassignment.png)
-![Assistent: Name](../assets/model-modelselect-model-wizard-name.png)
-![Assistent: Empfänger](../assets/model-modelselect-model-wizard-rx.png)
+- Motorflugzeug
+- Segelflugzeug
+- Hubschrauber
+- Multirotor
+- Sonstiges
 
-Bei einem **Flugzeug** folgen nach Leitwerks-Typ und Ruderanzahl die Anzahl der
-Motorkanäle und danach die Anzahl der Querruder-/Klappenkanäle.
+Der Assistent unterstützen Sie bei der grundlegenden Einrichtung für den jeweiligen Modelltyp.
 
-Bei der **Leitwerkskonfiguration** stehen klassisches Kreuz-Leitwerk,
-V-Leitwerk oder kein Leitwerk (Delta/Nurflügel) zur Auswahl:
+![](../assets/model-modelselect-model-wizard-rx.png)
 
-- **Delta/Nurflügel** – wird ein Flugzeugmodell mit 2 Querrudern und ohne
-  Leitwerksflächen erstellt, wird automatisch ein Elevon-Mischer angelegt, mit
-  Standardgewichtungen von 50 %, sodass volle gleichzeitige Querruder- und
-  Höhenruderbefehle weiterhin insgesamt 100 % ergeben.
-- **Delta mit einem stabilisierten Empfänger, der die Mischung übernimmt** –
-  wählen Sie stattdessen 1 Querruder und 1 Höhenruder; die Elevon-Mischung
-  erfolgt gemäß der zugehörigen Anleitung im Empfänger.
-- **Delta mit separaten Querruder- und Höhenruderflächen** – lassen Sie den
-  Assistenten so laufen, als hätte das Modell ein Leitwerk; er konfiguriert die
-  benötigten Querruder- und Höhenruderkanäle (mit oder ohne Seitenruder), und
-  es wird kein Elevon-Mischer angelegt.
+Der Wizard bieten die Möglichkeit, zusätzliche voreingestellte Mischer für stabilisierte FrSky-Empfänger einzurichten, z. B. Verstärkung und Stabilisierungsmodus.
 
-Im Schritt **Kanalneuzuordnung** können Sie die Standardzuordnung des
-Assistenten überschreiben – beachten Sie dabei, dass stabilisierte Empfänger
-ihre Kanäle in einer bestimmten Reihenfolge benötigen (siehe die Anleitung des
-jeweiligen Empfängers). Im letzten Schritt werden der Modellname vergeben und
-ein Bild verknüpft.
+### Keiselstabilisierte Empfänger
 
-Das fertige Modell landet in dem Kategorieordner, der beim Start des
-Assistenten aktiv war, und wird dort alphabetisch einsortiert. Eine
-vollständige Schritt-für-Schritt-Anleitung finden Sie unter [Einfaches
-Flächenmodell – Beispiel](../tutorials/basic-fixed-wing.md).
+Die stabilisierten Empfänger von FrSky erfordern eine bestimmte Kanalreihenfolge, nämlich AETR. Daher sollte die „Kanalreihenfolge” im Menü „Sticks” auf der Standardeinstellung AETR belassen und die Option „Erste vier Kanäle fest” aktiviert werden, um sicherzustellen, dass die vom Assistenten erstellte Kanalreihenfolge zum Empfänger passt.
 
-## Ein Modell von einem anderen Ethos-Sender empfangen
+![](../assets/model-modelselect-model-wizard-engine.png)
 
-![Modell empfangen](../assets/model-modelselect-model-receive.png)
+Bei einem Modell vom Typ Motorflugzeug wird als Nächstes die Anzahl der Querruder- und Klappenkanäle ausgewählt.
 
-Wählen Sie die Zielkategorie, tippen Sie auf **+** und dann auf **Modell
-empfangen** – der Sender wartet und zeigt seine Bluetooth-Adresse an, damit ihn
-der sendende Sender finden kann. Tippen Sie auf dem sendenden Sender auf das
-Modell und wählen Sie **Modell senden**; der empfangende Sender lässt den
-eingehenden Dateinamen bestätigen, bevor er ihn annimmt.
+![](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
 
-## Ein Modell auswählen
+Bei einem Modell vom Typ Flugzeug wird als Nächstes die Anzahl der Querruder- und Klappenkanäle ausgewählt.
 
-Tippen Sie auf **Modellauswahl**, um die Modellliste zu öffnen.
+Ab Ethos 1.7.0 weisen die neuen Wizards die Kanäle beginnend von links und abwechselnd von außen nach innen zu, wodurch sie mit der Dokumentation des FrSky-Empfängers übereinstimmen.
 
-!!! note "Modellkonvertierung nach einem Ethos-Upgrade"
-    Ethos konvertiert jedes Modell einzeln, wenn es nach einem
-    Versionsupgrade erstmals *ausgewählt* wird, und nicht alle Modelle auf
-    einmal beim Upgrade – dabei entsteht keine spürbare Verzögerung, und die
-    Konvertierung kann problemlos zu einem späteren Zeitpunkt erfolgen, auch
-    unter einer noch neueren Ethos-Version. Das Datum **Letzte Änderung** am
-    unteren Rand des Auswahlbildschirms wird aktualisiert, wenn eine
-    Konvertierung stattfindet (oder wenn Sie das Modell bearbeiten –
-    andernfalls bleibt es unverändert).
+Für ein einfaches Modell mit 2 Querrudern, 1 Höhenruder, 1 Seitenruder und 1 Motor lautet die Kanalreihenfolge daher wie folgt (vorausgesetzt, die Standard-„Kanalreihenfolge” von AETR und die Option „Erste vier Kanäle fest” sind aktiviert):
 
-**Schnellauswahl** – ein langer Fingerdruck oder ein langes `ENT` auf einem
-Modellsymbol wechselt sofort zu diesem Modell.
+CH1 Querruder links
 
-**Modellverwaltungsmenü** – tippen Sie auf ein Modell, um es zu markieren, und
-tippen Sie erneut, um das Menü aufzurufen:
+CH2 Höhenruder
 
-- **Als aktuelles Modell setzen**
-- **Klonen** – dupliziert das Modell. Ein Klon erhält automatisch eine neue
-  Empfängernummer; wenn Sie stattdessen die Empfängernummer des Originals
-  übernehmen, funktioniert es ohne erneutes Binden.
-- **Ordner wechseln**
-- **Senden**/**Empfangen** – an bzw. von einem anderen Sender, wie oben
-  beschrieben.
-- **Löschen** – wird nur für ein Modell angeboten, das nicht das aktuelle ist.
+CH3 Gas
+
+CH4 Seitenruder
+
+CH5 Querruder rechts
+
+### Aktualisierung der Modelle auf Ethos 26.1.0
+
+Während des Upgrades auf Ethos 26.1.0 können bestehende Modelle an das neue Schema der Zählung von links angepasst werden.
+
+Es gibt drei Szenarien:
+
+a) Bei bestehenden Modellen mit der Standard-Kanalreihenfolge 1.6.x, die von rechts gezählt wird, werden die Mischer neu angeordnet, um sie an das neue Schema anzupassen, bei dem von links gezählt wird. Die Zuweisung der Ausgangskanäle bleibt jedoch unverändert, sodass keine Änderungen an der Verkabelung des Modells erforderlich sind. Nur die Mischer werden in einer neuen Reihenfolge angeordnet, aber die ursprünglichen Zuweisungen der Ausgangskanäle bleiben erhalten, damit das Modell weiterhin korrekt funktioniert. Die Reihenfolge der Mischer lautet beispielsweise:
+
+von
+
+CH1 Querruder rechts
+
+CH2 Höhenruder
+
+CH3 Gas
+
+CH4 Seitenruder
+
+CH5 Querruder links
+
+zu
+
+CH5 Querruder links
+
+CH2 Höhenruder
+
+CH3 Gas
+
+CH4 Seitenruder
+
+CH1 Querruder rechts
+
+b) Bei bestehenden Modellen, deren Kanäle so vertauscht wurden, dass die Zählung von links beginnt, werden die Mischer neu angeordnet, um sicherzustellen, dass die Querruderdifferenzierung weiterhin korrekt funktioniert; die Kanalbelegungen bleiben dabei jedoch unverändert.
+
+c) Bestehende Modelle, deren Kanäle durch Umkehrung der Querruder-Mischung und Umbenennung der Ausgangskanäle vertauscht wurden, funktionieren nach dem Upgrade zwar korrekt, es kommt jedoch zu einem Konflikt bei der Kanalbenennung. Um dies zu beheben, müssen Sie die zuvor vorgenommenen Änderungen zur Umkehrung der Mischung rückgängig machen:
+
+I) Kehren Sie die Querruder-Mischung mit positiven Werten für Gewicht und Differential um.
+
+II) Tauschen Sie die Querruder-Ausgangskanäle mithilfe der „Kanäle tauschen-Funktion” im Menü „Kanäle” gegeneinander aus.
+
+III) Benennen Sie auch die beiden Kanäle entsprechend ihrer korrekten linken und rechten Funktion um.
+
+IV) **Achtung!** Überprüfen Sie nach den Änderungen, ob die Mischer und Ausgangskanäle in der richtigen Reihenfolge funktionieren, wenn der/die Propeller entfernt sind.
+
+Für eine detailliertere Betrachtung der drei Konversionsszenarien verweisen wir auf  Anhang [A – Konvertierung von Ethos-Modellen von 1.6.3 auf 1.7.0](../how-to/converting-1.6-models.md)
+
+![](../assets/model-modelselect-model-wizard-tail.png)
+
+Bei einem Flugzeugmodell wird die Leitwerkskonfiguration zwischen traditionellem Kreuzleitwerk, V-Leitwerk oder keinem Leitwerk (z. B. bei einem Delta- oder Nurflügel) gewählt.
+
+### Delta-Flügel
+
+Ein Höhenruder-Setup kann erreicht werden, indem ein neues Flugzeugmodell mit 2 Querrudern und ohne Leitwerk erstellt wird, was dazu führt, dass die Höhenrudermischung automatisch erstellt wird. Die voreingestellten Mischungsgewichte betragen 50 %, so dass bei gleichzeitiger Anwendung von Quer- und Höhenruder insgesamt 100 % erreicht werden.
+
+Bei einem Deltamodell, das sowohl Quer- als auch Höhenruderflächen hat, lassen Sie den Wizard so arbeiten, als hätte das Modell ein Leitwerk. Er konfiguriert die benötigten Quer- und Höhenruderkanäle, je nach Bedarf mit oder ohne Seitenruder.
+
+Alternativ kann bei Verwendung eines stabilisierten Empfängers die Deltamischung vom Empfänger durchgeführt werden. Im Wizard sollten Sie für diese Situation 1 Querruder und 1 Höhenruder auswählen, da die Höhenrudermischung im Empfänger erfolgt. Bitte lesen Sie das Handbuch für stabilisierte Empfänger für weitere Details.
+
+Bei einem Deltaflügelmodell mit Quer- und Höhenruder, lassen Sie den Wizard so arbeiten, als hätte das Modell ein Heck. Er konfiguriert die benötigten Quer- und Höhenruderkanäle, je nach Bedarf mit oder ohne Seitenruder.
+
+![](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
+
+Bei einem Flugzeugmodell, bei dem beispielsweise ein traditionelles Kreuzleitwerk gewählt wurde, kann die Anzahl der Höhenruder- und Seitenruderkanäle konfiguriert werden.
+
+![](../assets/model-modelselect-model-wizard-ch-reassignment.png)
+
+Nachdem Sie die Kanaloptionen eingerichtet haben, können Sie mit dem oben gezeigten Schritt die Modellfunktionen verschiedenen Kanälen neu zuweisen. Der Wizard befolgt die im Menü „Knüppelmodus“ konfigurierte „Kanalreihenfolge“, aber auf diesem Bildschirm können Sie die Kanäle neu zuweisen, wobei zu beachten ist, dass stabilisierte FrSky-Empfänger eine bestimmte Reihenfolge der stabilisierten Kanäle erfordern. Weitere Informationen finden Sie in der Anleitung des Empfängers.
+
+![](../assets/model-modelselect-model-wizard-name.png)
+
+IIm letzten Schritt kann der Modellname definiert und ein Modellbild verknüpft werden. Beachten Sie, dass Modellnamen bis zu 15 Zeichen lang sein können.
+
+![](../assets/model-modelselect-model-wizard-ultimate.png)
+
+Das neue Modell wurde erstellt.
+
+![](../assets/model-modelselect-model-airplane-category.png)
+
+Das erstellte Modell wird in dem benutzerdefinierten Modellkategorie-Ordner angezeigt, der beim Start des Assistenten aktiv war, und wird innerhalb jeder Gruppe alphabetisch sortiert.
+
+Bitte beachten Sie auch das Beispiel „[Grundlegendes Beispiel für ein Flächenflugzeug](../tutorials/basic-fixed-wing.md)“ im Abschnitt „Programmier-Anleitungen“ für ein ausgearbeitetes Beispiel.
+
+## Benennung der Ausgabekanäle im Wizard
+
+Die neuen Modell-Assistenten verwenden die folgenden Regeln für die Kanalbenennung:
+
+- Wenn der Mischer nur einen Ausgang hat, erfolgt keine Nummerierung und kein Namenszusatz.
+    - Wenn dier Mischer an den Ausgängen ein abweichendes Verhalten zeigt, benötigen die Ausgangskanäle einen expliziten Namen (z. B. „links“ / „rechts“ für die Querruder).
+    - Wenn der Mischer auf allen Ausgängen exakt dieselben Berechnungen durchführt, dann enthält der Name lediglich eine Nummer als Suffix.
+
+## Auswahl eines Modells
+
+![](../assets/model-icon-modelselect.png)
+
+Tippen Sie auf „Modelle“, um eine Liste Ihrer Modelle anzuzeigen.
+
+![](../assets/model-modelselect-folders.png)
+
+Bitte beachten Sie, dass nach einem Ethos-Versions-Upgrade ETHOS die Modelle einzeln konvertiert, wenn sie über den Modellauswahl-Bildschirm ausgewählt werden. Es ist nicht notwendig, jedes Modell nach einem Update auszuwählen, da die Konvertierung zu einem späteren Zeitpunkt erfolgen kann, wenn sie ausgewählt werden, selbst bei einer späteren Version von Ethos. Es gibt keine spürbare Verzögerung im Konvertierungsprozess, wenn ein Modell ausgewählt wird. Wenn die Konvertierung stattfindet, wird das Datum der letzten Änderung am unteren Rand des Modellauswahlbildschirms auf das aktuelle Datum geändert. Wenn keine Konvertierung erforderlich ist, ändert sich das Datum nur, wenn Sie das Modell bearbeiten.
+
+### Schnellauswahl
+
+Durch langes Berühren oder langes Drücken auf ein Modell-Symbol wird sofort zu diesem Modell gewechselt. Siehe auch „Aktuelles Modell festlegen“ weiter unten.
+
+## Menü Modellverwaltung
+
+![](../assets/model-modelselect-folders-2.png)
+
+Tippen Sie auf ein Modell, um es zu markieren, und tippen Sie dann erneut darauf, um das Modellverwaltungsmenü aufzurufen.
+
+### Aktuelles Modell auswählen
+
+![](../assets/model-modelselect-model-set.png)
+
+Tippen Sie auf „Modell auswählen“, um das markierte Modell zum aktuellen Modell zu machen.
+
+Alternativ können Sie auch die oben beschriebene Methode „Schnellauswahl“ verwenden.
+
+### Ein Modell klonen
+
+![](../assets/model-modelselect-clone-select.png)
+
+Tippen Sie auf „klonen“, um eine Kopie des markierten Modells zu erstellen.
+
+![](../assets/model-modelselect-clone-options.png)
+
+Es öffnet sich ein Dialogfeld, in dem Sie den Klon anpassen können.
+
+Standardmäßig wird das HF-System nicht geklont, d. h. das RF-Modul wird im Klon deaktiviert, aber mit einer anderen Modellnummer versehen. Wenn die Option „HF-System“ ausgewählt ist, wird die HF-Konfiguration einschließlich der Modellnummer geklont.
+
+Die Modellmischer, T Stoppuhren und Kurven werden nicht geklont, wenn diese Option deaktiviert ist. Tippen Sie auf „OK“, um fortzufahren. Nach Abschluss des Vorgangs wird ein Bestätigungsdialogfeld mit der Meldung „Modell erfolgreich geklont!“ angezeigt.
+
+### Ordner wechseln
+
+![](../assets/model-modelselect-folder-change-select.png)
+
+Um ein Modell in einen anderen Ordner zu verschieben, tippen Sie auf das Symbol des Modells und wählen Sie dann im Dialogfeld „Ordner wechseln“ aus.
+
+![](../assets/model-modelselect-folder-change-glider.png)
+
+Tippen Sie auf den Ordner, in den Sie ihn verschieben möchten.
+
+### Modell empfangen
+
+![](../assets/model-modelselect-receive-model-select.png)
+
+Tippen Sie auf „Modell empfangen“, um den Vorgang zum Empfangen eines Modells von einem anderen Ethos-Sender über Bluetooth zu starten. Bitte beachten Sie, dass „Modell empfangen“ vor „Modell senden“ im sendenden Funkgerät gestartet werden muss.
+
+![](../assets/model-modelselect-receive-model-waiting.png)
+
+Bis eine Bluetooth-Verbindung gefunden wird, wird der Dialog „Warten auf Verbindung“ angezeigt.
+
+![](../assets/model-modelselect-receive-model-dialog.png)
+
+Sobald eine Verbindung hergestellt wurde, wird ein Dialogfeld „Bestätigen“ angezeigt, das auf eine Bestätigung wartet, um fortzufahren.
+
+![](../assets/model-modelselect-receive-model-receiving.png)
+
+Die Dateiübertragung beginnt und ein Fortschrittsbalken wird angezeigt, gefolgt von einer Erfolgsmeldung nach Abschluss.
+
+### Modell senden
+
+![](../assets/model-modelselect-send-model-select.png)
+
+Tippen Sie auf „Modell senden“, um die Übertragung eines Modells über Bluetooth an einen anderen Ethos-Sender zu starten. Bitte beachten Sie, dass „Modell empfangen“ vor „Modell senden“ im sendenden Funkgerät gestartet werden muss.
+
+![](../assets/model-modelselect-send-model-waiting-devices.png)
+
+Bis eine Bluetooth-Verbindung gefunden wird, wird der Dialog „Warten auf Geräte“ angezeigt.
+
+![](../assets/model-modelselect-send-model-dialog.png)
+
+Sobald Geräte gefunden wurden, wird ein Dialogfeld zur Geräteauswahl angezeigt. Wählen Sie das Gerät aus, an das das Modell gesendet werden soll.
+
+![](../assets/model-modelselect-send-model-sending.png)
+
+Die Dateiübertragung beginnt und ein Fortschrittsbalken wird angezeigt. Nach Abschluss der Übertragung erscheint eine Erfolgsmeldung.
+
+### Löschen
+
+Tippen Sie auf „Löschen“, um ein Modell zu löschen. **Diese Option ist für das aktive Modell nicht verfügbar**.
+
+## Empfang eines Modells von einem anderen Ethos-Sender
+
+![](../assets/model-modelselect-folder-airplane-select.png)
+
+Um ein Modell zu erhalten, wählen Sie die Modellkategorie aus, unter der Sie das Modell erstellen möchten, und tippen Sie dann auf das Symbol \[+\].
+
+![](../assets/model-modelselect-model-receive.png)
+
+Tippen Sie auf „Modell empfangen“, um den Vorgang zum Empfangen eines Modells von einem anderen Ethos-Sender über Bluetooth zu starten.
+
+Weitere Informationen finden Sie im Abschnitt „[Modell empfangen](model-select.md)“ oben.

@@ -1,15 +1,7 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Grenzen der LUA-Skript-Konfiguration
 
-# Konfigurationsgrenzen
+- 2MB für Bitmaps (ein Vollbild-Bitmap auf X20 verbraucht 768K)
 
-- **2 MB** für Bitmaps (allein ein einzelnes bildschirmfüllendes Bitmap
-  belegt auf dem X20 rund 768 K).
-- **2 MB** für Lua-Skripte — in der Praxis ein großzügiges Budget.
+- 2MB für LUA-Skripte (dies ist eine große Menge)
 
-!!! tip "Bitmaps in Skripten"
-    Vermeiden Sie es, große Mengen an Bitmap-Daten im RAM zu halten. Verwenden
-    Sie besser **Lazy Loading** — laden Sie ein Bitmap erst dann, wenn es
-    tatsächlich benötigt wird, und behalten Sie es anschließend für das nächste
-    Mal im Speicher, anstatt es wiederholt von der SD card/eMMC einzulesen.
+Vermeiden Sie es, zu viel Speicherplatz für Bitmaps zu verwenden. Es wird vorgeschlagen, dass die Benutzer „lazy loading“ verwenden = eine Bitmap NUR bei Bedarf laden. Dann wird sie für die nächste Verwendung im Speicher gehalten, um mehrfaches Lesen von der SD-Karte oder eMMC zu vermeiden.

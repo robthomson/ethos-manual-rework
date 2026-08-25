@@ -1,111 +1,137 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Curvas
 
-![Tipos de curva](../assets/model-curves-type.png)
+![](../assets/model-icon-curves.png)
 
-Curvas de respuesta reutilizables para [Mezclas](mixes.md#anatomy-of-a-mix) o
-[Salidas](outputs.md#editing-a-channel) — el Expo integrado está disponible
-directamente en ambas, pero cualquier cosa más elaborada se define aquí (o
-mediante **Añadir curva**, accesible directamente desde cualquiera de las dos
-pantallas de edición). Se dispone de hasta 50 curvas; no existe ninguna por
-defecto (el Expo siempre está integrado, independientemente de ello). Añada una
-con **+**; toque una curva existente para
-**Editar**/**Mover**/**Copiar-pegar**/**Clonar**/**Eliminar**.
+Las curvas se pueden utilizar para modificar la respuesta de control en las Mezclas o las Salidas. Aunque la curva Expo estándar está disponible directamente aquí, esta sección se utiliza para definir cualquier curva personalizada que pueda ser necesaria. También se puede acceder a la función "Añadir curva" directamente desde las pantallas de edición de Mezclas y de Salidas.
 
-![Añadir curva](../assets/model-curves-add.png)
+Hay 50 curvas disponibles.
 
-## Tipos de curva
+![](../assets/model-curves-add.png)
 
-- **Expo** — valor por defecto 40; un valor positivo suaviza la respuesta en
-  torno al centro, uno negativo la hace más agresiva. Suavizar la zona central
-  del recorrido de la palanca ayuda a evitar el sobrecontrol, especialmente en
-  pilotos con menos experiencia.
+No hay curvas por defecto (excepto Expo que es una siempre disponible). Pulse el botón "+" para añadir una nueva curva.
 
-  ![Expo](../assets/model-curves-expo.png)
+![](../assets/model-curves-edit-options.png)
 
-- **Función** — un pequeño conjunto de formas matemáticas fijas:
+Una vez que se haya definido alguna curva, al pulsar sobre una de ellas, aparece un cuadro de diálogo que le permite Editar, Mover, Copiar/pegar, Duplicar o Borrar la curva resaltada.
 
-  ![Tipos de función](../assets/model-curves-fn-types.png)
+![](../assets/model-curves-edit.png)
 
-  - **x > 0** — deja pasar la fuente sin modificar mientras es positiva;
-    devuelve 0 mientras es negativa.
+La pantalla inicial le permite asignar un nombre a su curva y seleccionar el tipo de curva.
 
-    ![x > 0](../assets/model-curves-fn-xgt0.png)
+![](../assets/model-curves-type.png)
 
-  - **x < 0** — el reflejo: deja pasar la fuente mientras es negativa, 0
-    mientras es positiva.
+Los tipos de curva disponibles son:
 
-    ![x < 0](../assets/model-curves-fn-xlt0.png)
+## Expo
 
-  - **|x|** — deja pasar la fuente como su valor absoluto (siempre
-    positivo).
+La curva exponencial por defecto tiene un valor de 40.
 
-    ![|x|](../assets/model-curves-fn-barx.png)
+![](../assets/model-curves-expo.png)
 
-  - **f > 0** — devuelve 100 % mientras la fuente es positiva, 0 mientras es
-    negativa (una conmutación brusca, no un paso directo).
+Un valor positivo suavizará la respuesta en torno a 0, mientras que un valor negativo agudizará la respuesta en torno a 0. Suavizar la respuesta en torno a la mitad de la palanca ayuda a evitar un control excesivo del modelo, especialmente para los principiantes.
 
-    ![f > 0](../assets/model-curves-fn-fgt0.png)
+## Función
 
-  - **f < 0** — devuelve −100 % mientras es negativa, 0 mientras es positiva.
+![](../assets/model-curves-fn-types.png)
 
-    ![f < 0](../assets/model-curves-fn-flt0.png)
+Están disponibles las siguientes curvas de funciones matemáticas:
 
-  - **|f|** — devuelve −100 % mientras es negativa, +100 % mientras es
-    positiva.
+### x > 0
 
-    ![|f|](../assets/model-curves-fn-barf.png)
+![](../assets/model-curves-fn-xgt0.png)
 
-  Todos los tipos de curva —incluida la Función— disponen además de un
-  **Offset**, que la desplaza hacia arriba o hacia abajo en el eje Y (con
-  precisión de un decimal, igual que los valores de Y en general):
+Si el valor de la fuente es positivo, la salida de la curva sigue a la fuente. Si el valor de la fuente es negativo, la salida de la curva es 0.
 
-  ![Offset de función](../assets/model-curves-fn-xgt0-offset.png)
+#### Desplazamiento (Offset)
 
-- **Personalizada** — una curva basada en puntos, 5 puntos por defecto, hasta
-  21.
+![](../assets/model-curves-fn-xgt0-offset.png)
 
-  ![Curva personalizada de 5 puntos](../assets/model-curves-custom5.png)
+Tenga en Cuenta que en todas las curvas se puede configurar un desplazamiento positivo o negativo que moverá la curva en el eje Y hacia arriba o hacia abajo.Los desplazamientos de las curvas y los valores de Y tienen un decimal de precisión.
 
-  - **Suavizado** — traza una curva suave que pasa por todos los puntos en
-    lugar de segmentos rectos entre ellos.
+### x < 0
 
-    ![Curva suavizada](../assets/model-curves-custom5-2-smooth.png)
+![](../assets/model-curves-fn-xlt0.png)
 
-  - **Modo fácil** — **On** limita la edición a coordenadas Y con separación
-    uniforme (la X queda fija); **Off** permite editar tanto la X como la Y de
-    cada punto, salvo los puntos extremos de −100 %/+100 %, que están
-    bloqueados porque la curva debe cubrir siempre todo el rango de la señal.
+Si el valor de la fuente es negativo, la salida de la curva sigue a la fuente. Si el valor de la fuente es positivo, la salida de la curva es 0.
 
-    ![Modo fácil desactivado](../assets/model-curves-custom-easy-off.png)
+### |x|
 
-  **Controles del editor** (mismo esquema que el [editor de la curva de
-  equilibrado de Salidas](outputs.md#balance-channels)):
+![](../assets/model-curves-fn-barx.png)
 
-  - **Fuente** — por defecto, la/s fuente/s configuradas en las mezclas de la
-    propia curva, u opcionalmente **Auto analog input**: la primera palanca,
-    slider o pot que mueva se usará como fuente.
-  - El punto más cercano de la curva se selecciona automáticamente para su
-    ajuste con el selector rotatorio, y un icono de candado (**Bloqueo**)
-    permite bloquear todas las entradas para poder soltar la palanca y observar
-    el movimiento de las superficies de control mientras ajusta la curva.
-  - Un cursor en vivo muestra el valor de entrada actual que acciona la curva;
-    la entrada debe ajustarse para alinear ese valor con un punto de la curva
-    antes de realizar el ajuste.
+La salida de la curva sigue a la fuente, pero siempre es positiva (también llamada "valor absoluto").
 
-## Accionar una curva desde una Var
+### f > 0
 
-Tanto el **Offset** de una curva de Función como un punto individual de una
-curva **Personalizada** pueden ser accionados por una [Var](variables.md) en
-lugar de por un valor fijo — y esa Var, a su vez, puede ajustarse en vuelo
-mediante un compensador (trim) reasignado:
+![](../assets/model-curves-fn-fgt0.png)
 
-![Offset de función desde una Var](../assets/model-curves-fn-offset-var.png)
-![Punto de curva personalizada desde una Var](../assets/model-curves-custom-with-var.png)
+Si el valor de la fuente es negativo, entonces la salida de la curva es 0. Si el valor de la fuente es positivo, entonces la salida de la curva es 100%.
 
-Consulte [Variables](variables.md) y [Guía práctica: curva de compensación
-ajustable en vuelo](../how-to/in-flight-compensation-curve.md) para ver un
-ejemplo completo y detallado de este patrón.
+### f < 0
+
+![](../assets/model-curves-fn-flt0.png)
+
+Si el valor de la fuente es negativo, la salida de la curva es -100%. Si el valor de la fuente es positivo, la salida de la curva es 0.
+
+### |f|
+
+![](../assets/model-curves-fn-barf.png)
+
+Si el valor de la fuente es negativo, la salida de la curva es -100%.
+
+Si el valor de la fuente es positivo, la salida de la curva es +100%.
+
+## A medida
+
+### Número de Puntos
+
+![](../assets/model-curves-custom5.png)
+
+La curva personalizada por defecto tiene 5 puntos. Se pueden tener hasta 21 puntos en cada curva.
+
+##### Menu buttons
+
+![](../assets/Pictures/1000000000000018000000181B9B646A.png) Se pueden usar la/s fuente/s que se hayan configurado en las mezclas de la curva, u opcionalmente cualquier otra entrada analógica. Si selecciona esta opción de 'Entrada analógica automática’ la primerar palanca, slider o pot que se mueva se usará como fuente de las X.
+
+Tenga en cuenta que este botón sólo aparecerá si la curva está asociada a una mezcla.
+
+![](../assets/Pictures/10000000000000280000001EF06CB86B.png)Cuando se selecciona este icono, El punto más cercano del eje X de la curva se seleccionará automáticamente para su ajuste con el selector rotatorio.
+
+La entrada debe ajustarse para alinear el valor X de la curva con un punto de la curva, antes de hacer el ajuste.
+
+![](../assets/Pictures/100000000000001500000019F279C5CD.png) Tocando este icono, o presionando la tecla ENTER mientras se está en el modo de edición del gráfico activará o desactivará el Modo de blocaje. Cuando se activa, se congelan todas las entradas para que se pueda soltar la palanca y le permita observar las superficies de control mientras ajusta la curva.
+
+Para ayudar en los ajustes, el cursor estará activo mostrando el valor de la entrada que está modificando la curva.
+
+![](../assets/model-curves-custom5-2.png)
+
+Los desplazamientos de la curva y los valores de Y tienen un decimal de precisión.
+
+### Suavizar
+
+![](../assets/model-curves-custom5-2-smooth.png)
+
+Si se activa, se crea una curva suavizada que pasa a través de todos los puntos.
+
+### Modo simple = On
+
+El modo simple tiene valores fijos equidistantes en el eje X, y sólo permite programar las coordenadas Y de la curva.
+
+### Modo simple = Off
+
+![](../assets/model-curves-custom-easy-off.png)
+
+#### Puntos
+
+Con el Modo simple desactivado, pueden configurarse tanto las coordenadas X como Y, (véase el ejemplo anterior).  Tenga en cuenta que las coordenadas -100% y +100% X para los puntos finales de la curva no se pueden editar, porque la curva debe cubrir todo el rango de la señal.
+
+## Función cambiar en vuelo el desplazamiento de una curva
+
+![](../assets/model-curves-fn-offset-var.png)
+
+El ejemplo de arriba muestra como el desplazamiento de una curva de tipo ‘Función’ es controlada por un Var, que probablemente se podría ajustar en vuelo mediante una reasignación de un compensador.
+
+## Cambiar los puntos de una curva en vuelo
+
+![](../assets/model-curves-custom-with-var.png)
+
+En este ejemplo, el punto medio de la curva está controlado por un Var, que de nuevo puede ajustarse en vuelo mediante la reasignación de un compensador. Vaya a la sección [VARs](variables.md) para más detalles.

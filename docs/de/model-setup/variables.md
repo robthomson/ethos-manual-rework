@@ -1,104 +1,108 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Variable (Vars)
 
-# Variablen
+![](../assets/model-icon-vars.png)
 
-![Variablen](../assets/model-vars.png)
+Variablen (Vars) können verwendet werden, um die Einstellungsparameter eines Modells so zu benennen und zu speichern, dass sie an anderer Stelle in der Senderprogrammierung, einschließlich der Mischer, referenziert werden können. Vars kann man sich als Container vorstellen, die Informationen enthalten.
 
-Variablen („Vars“) sind benannte Container für modelleigene
-Einstellwerte, die an jeder anderen Stelle der Programmierung
-referenziert werden können – auch in [Mischern](mixes.md). Da sie in
-einem eigenen Bereich abgelegt werden, sind die *Konfigurationsdaten*
-eines Modells von seiner *Programmierlogik* getrennt: Anstatt Dutzende
-von Mischern zu durchsuchen, um einen Wert zu finden und anzupassen,
-steht alles an einer Stelle unter einem aussagekräftigen Namen. Es
-werden bis zu 64 Vars unterstützt; standardmäßig ist keine vorhanden.
-Mit **+** fügen Sie eine Var hinzu; durch Antippen einer vorhandenen
-Var erhalten Sie **bearbeiten**/**verschieben**/**kopieren**/**klonen**/**löschen**.
+Sie wurden in einem eigenen Abschnitt untergebracht, was eine saubere Trennung zwischen den Konfigurationsdaten eines Modells und der Programmierlogik ermöglicht. Das bedeutet, dass Sie alle Ihre Setup-Einstellungen an einem Ort mit aussagekräftigen Namen zentralisieren können, wo sie leicht zu finden und zu bearbeiten sind, ohne dass Sie zwischen Dutzenden von Mischern oder anderen Konfigurationselementen hin- und herspringen und zu dem entsprechenden Parameter blättern müssen.
 
-![Variable hinzufügen](../assets/model-vars-add.png)
+Vars können feste Werte (d.h. Konstanten) enthalten, oder sie können mit benutzerdefinierbaren Grenzen einstellbar sein, um zu vermeiden, dass falsche Werte einen Absturz verursachen. Jede Var kann je nach den konfigurierten aktiven Bedingungen (z. B. Flugphasen) mehrere Werte enthalten. Aktionen können so konfiguriert werden, dass sie ihren Wert ändern, z. B. durch Verwendung einer umgewidmeten Trimmung für eine Anpassung während des Fluges oder durch Addieren/Subtrahieren/Multiplizieren/Dividieren von Eingaben. Die Variablen bleiben zwischen den Sitzungen bestehen.
 
-Eine Var kann eine feste Konstante enthalten oder innerhalb
-benutzerdefinierter Grenzen verstellbar sein (damit unsinnige Werte
-keinen Absturz verursachen), und sie kann pro aktiver Bedingung
-(z. B. pro Flugphase) einen *unterschiedlichen* Wert annehmen. Die Werte
-bleiben über Sitzungen hinweg erhalten. Eine Var kann überall dort
-anstelle eines gewöhnlichen numerischen Werts verwendet werden, wo die
-[Optionen-Funktion](../getting-started/user-interface-and-navigation.md#the-options-feature)
-verfügbar ist (die Felder mit dem Hamburger-Symbol).
+Vars sind auch äußerst nützlich, wenn ein Einstellwert an mehreren Stellen verwendet werden soll. Zum Beispiel kann ein Segelflugzeug an jedem Flügel geteilte Querruder haben, von denen die inneren bei der Landung als Klappen verwendet werden können. Während des normalen Fluges wirken jedoch alle vier Flächen als Querruder und sollten daher eine gemeinsame Differenzierungseinstellung haben, um ein ungünstiges Gieren beim Wenden auszugleichen, was durch die Verwendung einer Var erreicht werden kann.
 
-!!! example
-    Ein Segler mit geteilten Querrudern (die inneren Sektionen dienen
-    zugleich als Landeklappen) soll überall dort, wo alle vier Ruder als
-    Querruder arbeiten, ein einziges gemeinsames Querruder-Differential
-    verwenden – eine Var, die diesen einen Wert enthält und aus jedem
-    betroffenen Mischer referenziert wird, hält ihn konsistent und muss
-    nur an einer Stelle abgestimmt werden.
+Variablen können den normalen numerischen Wert in allen Parametern mit der Funktion „Optionen“ ersetzen, die durch das Menüsymbol (Hamburger-Symbol) gekennzeichnet ist. Siehe dazu den [Abschnitt „Optionen](../getting-started/user-interface-and-navigation.md)“.
 
-## Eine Var hinzufügen
+Es sind 64 Vars verfügbar.
 
-![Neue Variable](../assets/model-vars-new_var.png)
+![](../assets/model-vars-add.png)
 
-- **Wert** — aktueller Wert (reine Anzeige, nicht editierbar).
-- **Name** — Ermöglicht die Benennung der Var.
-- **Kommentar** — Freitext zur Erläuterung des Zwecks.
-- **Bereich** — untere/obere Grenze (eine Kommastelle, innerhalb
-  ±500 %), die der Wert der Var niemals überschreiten kann.
+Es gibt keine Standard-Variablen. Tippen Sie auf die Schaltfläche „+“, um eine neue Variable hinzuzufügen.
 
-### Werte
+![](../assets/model-vars-actions.png)
 
-![Variablenwerte](../assets/model-vars-values.png)
+Sobald die Variablen definiert sind, wird durch Antippen einer Liste von Variablen ein Dialogfeld angezeigt, in dem Sie die markierte Variable bearbeiten, verschieben, kopieren/einfügen, klonen oder löschen können.
 
-- **Fest** — eine einzelne Konstante mit einer Kommastelle.
-- **Mehrfach/variabel** — mit **Neuen Wert hinzufügen** wird pro aktiver
-  Bedingung ein Wert angelegt. Beispiel: `Var12` liefert 9 %, solange die
-  Flugphase Thermik (FM4) aktiv ist, und −3 %, solange Speed (FM5) aktiv
-  ist, wobei der Bereich auf −10 %…+15 % begrenzt ist, sodass keiner der
-  Werte sinnvolle Grenzen überschreiten kann:
+## Hinzufügen von Vars
 
-  ![Flugphasenabhängige Werte](../assets/model-vars-fm-dependent.png)
-  ![Einen Wert hinzufügen](../assets/model-vars-add-value.png)
+![](../assets/model-vars-new_var.png)
+
+### Wert
+
+Zeigt den aktuellen Wert der Var.
+
+### Name
+
+Erlaubt die Benennung der Var.
+
+### Kommentar
+
+Zum besseren Verständnis kann ein Kommentar zur Erklärung der Verwendung oder Funktion hinzugefügt werden.
+
+### Bereich
+
+Der untere und obere Grenzwert eines Bereichs kann auf eine Dezimalstelle innerhalb von +/- 500 % eingestellt werden, um den Wert des Var innerhalb definierter Grenzen zu halten.
+
+### Wert
+
+#### Feste Werte
+
+![](../assets/model-vars-values.png)
+
+Vars kann einen einzelnen festen Wert (d. h. eine Konstante) mit einer Dezimalstelle enthalten, wie im obigen Beispiel.
+
+#### Mehrere oder variable Werte
+
+![](../assets/model-vars-add-value.png)
+
+Wählen Sie „Neuen Wert hinzufügen“, um einen neuen Wert zu einer Var hinzuzufügen.
+
+![](../assets/model-vars-fm-dependent.png)
+
+Jede Var kann je nach den konfigurierten aktiven Bedingungen (z. B. Flugphasen) mehrere Werte annehmen. Im obigen Beispiel hat Var12 einen Wert von 9%, wenn der Thermikflugphase FM4 aktiv ist. Wenn die Speed- Flugphase FM5 aktiv ist, hat Var12 einen Wert von -3%.
+
+Beachten Sie, dass ein Bereich zwischen -10% und +15% festgelegt wurde, um größere Werte als gewünscht zu vermeiden.
+
+Die Variablen bleiben zwischen den Sitzungen bestehen.
 
 ### Aktionen
 
-![Variablenaktionen](../assets/model-vars-actions.png)
-![Aktion hinzufügen](../assets/model-vars-add-action.png)
+![](../assets/model-vars-add-action.png)
 
-Aktionen verändern den Wert einer Var im Zeitverlauf, gesteuert durch
-einen Eingang.
+#### Es können verschiedene Aktionen hinzugefügt werden, z.B. zur Wiederverwendung von Trimmungen oder zur Durchführung von Berechnungen.
 
-**Umgewidmete Trimmung** — übergibt eine der physischen Trimmungen der
-Verstellung dieser Var anstelle ihrer normalen Funktion, üblicherweise
-beschränkt auf eine aktive Bedingung:
+#### Wiederverwendete Trimmung
 
-![Eine Trimmung umwidmen](../assets/model-vars-functions-repurpose.png)
-![Umzuwidmende Trimmung auswählen](../assets/model-vars-functions-repurpose-select.png)
+![](../assets/model-vars-functions-repurpose-select.png)
 
-!!! example
-    Die Gastrimmung wird zur Verstellung einer Var für die
-    Wölbklappenkompensation umgewidmet, allerdings nur, solange die
-    Flugphase Landung (FM3) aktiv ist, mit dem Bereich 0–25 % und einer
-    Schrittweite von 1,0 % pro Klick. Außerhalb dieser aktiven Bedingung
-    übernimmt die Trimmung automatisch wieder ihre gewöhnliche Funktion.
+Eine der Trimmer kann wiederverwendet werden, um den Wert eines Var anzupassen.
 
-**Arithmetische Aktionen** — gesteuert durch einen beliebigen Eingang:
+![](../assets/model-vars-functions-repurpose.png)
 
-- **Zuweisen** — setzt die Var auf einen bestimmten Wert.
-- **Addieren** / **Subtrahieren** / **Multiplizieren** / **Dividieren** —
-  Rechenoperationen mit dem aktuellen Wert.
-- **Prozent** — wendet einen Prozentsatz des steuernden Eingangs an.
-- **Min** / **Max** — begrenzt die Var gegenüber dem steuernden Eingang.
+Im obigen Beispiel wurde eine Aktion definiert, um die Gas-Trimmung für die Tiefenruderkompensation nur während der Landeflugphase FM3 zu verwenden. Es wurde ein Bereich von 0 - 25% festgelegt, um den Var in einem vernünftigen Rahmen zu halten. Es kann ein Trimmschrittwert mit einer Dezimalstelle definiert werden, z.B. 1,0% im obigen Beispiel.
 
-  ![Funktionsaktionen](../assets/model-vars-functions.png)
+Wiederverwendete Trimmungen werden nur für diese spezifische aktive Bedingung verwendet. Zu allen anderen Zeiten arbeiten sie gemäß ihrer normalen Funktion.
 
-!!! example
-    `FS3(edge)` weist einer Var direkt 40 % zu; `FS1(edge)` addiert bei
-    jedem Druck 2 (begrenzt auf das Maximum des Bereichs); `FS2(edge)`
-    subtrahiert bei jedem Druck 2 (begrenzt auf das Minimum des Bereichs).
-    Die Option **Flanke** („Edge“, langes Drücken auf den
-    Funktionsschalter) ist hier entscheidend – ohne sie würde die Aktion
-    fortlaufend ausgelöst, solange der Schalter gehalten wird, statt
-    einmal pro Betätigung.
+#### Arithmetische Operationen
 
-  ![Durchgerechnetes Beispiel](../assets/model-vars-calc-example.png)
+![](../assets/model-vars-functions.png)
+
+Aktionen können auch eingestellt werden auf:
+
+- Der Var einen bestimmten Wert zuweisen
+- Addieren (+) zu der Var
+- Subtrahieren (-) von der Var
+- Multiplizieren (\*) der Var mit dem Parameter
+- Dividieren (/) der Var durch den Parameter
+- Anwenden eines Prozentsatzes auf die Var
+- Min
+- Max
+
+Die Aktionen werden durch Eingaben gesteuert.
+
+![](../assets/model-vars-calc-example.png)
+
+Im obigen Beispiel weist der Funktionsschalter FS1(Flanke) der Var einen Wert von 40 % zu, und FS3 (Flanke) erhöht seinen Wert bei jedem Tastendruck um 2, bis das Maximum des Bereichs erreicht ist, und FS2 (Flanke) verringert seinen Wert ebenfalls um 2, bis das Minimum des Bereichs erreicht ist. Bitte beachten Sie, dass die Flankenoption ausgewählt werden muss (langer Druck auf den FS), damit die Aktion nur ausgeführt wird, wenn der Funktionsschalter seinen Zustand ändert.
+
+## Vars entfernen
+
+Durch das Entfernen eines VAR werden alle seine Verwendungen gleichzeitig in den VAR-Wert konvertiert.

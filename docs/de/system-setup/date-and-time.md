@@ -1,23 +1,39 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Datum & Uhrzeit
 
-![Datum & Uhrzeit](../assets/system-date.png)
+![](../assets/system-icon-date.png)
 
-- **24-Stunden-Format** — schaltet die Uhr zwischen 12- und 24-Stunden-Anzeige um.
-- **Sekunden anzeigen** — ergänzt die Uhrzeitanzeige um die Sekunden.
-- **Datum** / **Uhrzeit** — stellt das aktuelle Datum bzw. die aktuelle
-  Uhrzeit ein; beide werden auch für die Datenaufzeichnung verwendet.
-- **Zeitzone** — Ihre lokale Zeitzone.
-- **RTC-Geschwindigkeit anpassen** — gleicht die Gangabweichung der
-  Echtzeituhr aus, bis zu 41 Sekunden pro Tag. Ermitteln Sie, wie viele
-  Sekunden Ihre Uhr innerhalb von 24 Stunden vor- oder nachgeht, und setzen
-  Sie den Kalibrierwert auf das **12-fache dieser Sekundenzahl** — negativ,
-  wenn die Uhr vorgeht, positiv, wenn sie nachgeht (Bereich −500 bis +500).
-  Überprüfen Sie das Ergebnis nach ein bis zwei Tagen erneut und justieren Sie
-  bei Bedarf nach.
-- **Automatisch per GPS anpassen** — wenn diese Option aktiviert ist, werden
-  Datum und Uhrzeit stattdessen automatisch aus den Daten eines externen
-  GPS-Sensors übernommen.
+![](../assets/system-date.png)
+
+Die Einstellungen für Datum und Uhrzeit sind:
+
+## Zeitformat 24 Std
+
+Die Uhr wird im 24-Stunden-Format angezeigt, wenn sie aktiviert ist.
+
+## zeigt Sekunden
+
+Wenn diese Funktion aktiviert ist, zeigt die Uhr auch Sekunden an.
+
+## Datum
+
+Sollte auf das aktuelle Datum gesetzt werden. Dieses wird in den Protokollen verwendet.
+
+## Uhrzeit
+
+Sollte auf die aktuelle Zeit gesetzt werden. Diese wird in den Protokollen verwendet.
+
+## Zeitzone
+
+Ermöglicht die Konfiguration der Zeitzone des Benutzers.
+
+## Man. Abgl. Uhrz.-Genauigkeit
+
+Die Echtzeituhr kann kalibriert werden, um eine Abweichung der Uhr von bis zu 41 Sekunden pro Tag auszugleichen.
+
+Berechnen Sie für die Kalibrierung, wie viele Sekunden Ihre Uhr in 24 Stunden zu- oder abnimmt.
+
+Stellen Sie den Kalibrierungswert auf das 12-fache dieser Anzahl von Sekunden ein, so dass er negativ ist, wenn Ihre Uhr schnell läuft, und positiv, wenn sie langsam läuft. Um die beste Genauigkeit zu erzielen, sollten Sie überprüfen, ob Ihre Uhr genau geht, und den Kalibrierungswert leicht anpassen. Der tatsächliche Kalibrierungswert kann auf -500 bis +500 eingestellt werden.
+
+## Autom. Abgl. Uhrz. über GPS
+
+Wenn diese Funktion aktiviert ist, werden Uhrzeit und Datum automatisch anhand der GPS-Sensordaten eingestellt.
