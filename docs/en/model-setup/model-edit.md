@@ -1,71 +1,99 @@
-# Model Edit
+# Edit model
 
-![Edit model](../assets/model-editmodel.png)
+![](../assets/model-icon-editmodel.png)
 
-Edits the model-level parameters the wizard set up initially — mostly
-identity, but also a few per-model overrides and utilities.
+The ‘Edit model’ option is used to edit the basic parameters for the model as set up by the wizard.
+
+![](../assets/model-editmodel.png)
 
 ## Name, Picture
 
-Rename the model or change its picture; browsing for an image shows a
-preview thumbnail.
+The model can be renamed, or the picture assigned or changed. When browsing for a picture a preview thumbnail is shown to facilitate locating the correct image.
+
+Model bitmaps must be located in the [bitmaps/models](../system-setup/file-manager.md) folder on the SD card or eMMC.
 
 ## Model type
 
-![Model type](../assets/model-edit-modeltype.png)
+![](../assets/model-edit-modeltype.png)
 
-!!! warning
-    Changing the model type resets **all** mixes.
+Changing the model type will cause all mixes to be reset.
+
+## Receiver
+
+![](../assets/model-edit-receiver-type.png)
+
+Lists the current receiver type, which can be changed.
 
 ## Channel assignments
 
-Changing tail type or (on a heli) swashplate type also resets all mixes.
-Other channels can have their assigned count changed, or be unassigned.
+Changing the tail type, or heli swash plate will cause all mixes to be reset. On the other channels the number of assigned output channels can be changed or unassigned.
+
+## Throttle dead band
+
+![](../assets/model-edit-thr-deadband.png)
+
+Allows configuration of a throttle deadband for zero-based throttles with forward and reverse to avoid unintended motor movement when the stick is at neutral.
 
 ## Analogs filter
 
-![Analog filter](../assets/model-edit-analog-filter.png)
+![](../assets/model-edit-analog-filter.png)
 
-[System Setup → Hardware](../system-setup/hardware.md) has a global
-analog-to-digital filter that can reduce jitter around stick center; this
-per-model setting overrides it for just this model.
+![](../assets/model-edit-analog-filter-select.png)
 
-![Analog filter options](../assets/model-edit-analog-filter-select.png)
+There is a global analog to digital converter filter setting on the Hardware page under [Analogs Filter](../system-setup/hardware.md), which may improve jitter around stick centre. This model specific setting can be used to override the global setting.
 
-## Function switches {: #function-switches }
+## Function switches
 
-![Function switches](../assets/model-edit-fn-switches.png)
+![](../assets/model-edit-fn-switches.png)
 
-The six function switches are available anywhere an **Active condition**
-parameter appears, but — unlike ordinary switches — can't be used as a
-general-purpose source. They're configured as one of:
+The six function switches are available wherever 'Active condition' parameters are found. Please note that they cannot be used as a source like normal switches can.
 
-- **6-Pos with OFF** — pressing a function switch latches it on; pressing
-  the *same* one again turns all six off.
-- **6-POS** — pressing a function switch latches it on until a *different*
-  one is pressed, which takes over.
-- **2 × 3-Pos** — splits the six into two groups of three, one active
-  switch per group.
-- **6 × 2-Pos** — six independent latching on/off switches.
-- **Momentary** — six independent switches, each on only while held.
-- **Persistent** — if enabled, a function switch keeps its state across
-  power-off/model reload instead of resetting.
+![](../assets/model-edit-fn-switches-select.png)
 
-![Function switch options](../assets/model-edit-fn-switches-select.png)
+### Configuration
 
-## SPort connector
+They may be configured as follows:
 
-The transmitter's S.Port connector's 5V pin can be switched per model —
-useful for powering an external receiver in a trainer setup, for example.
+#### 6-Pos with OFF
+
+Pressing any function switch will latch that switch ON. However, pressing a switch that is already ON a second time will turn it off, leaving all six function switches OFF.
+
+#### 6-POS
+
+Pressing any function switch will latch that switch ON until a different function switch is pressed to latch the newly pressed switch ON.
+
+#### 2 x 3-Pos
+
+Breaks the 6 function switches into two groups of 3. Each group can have one switch ON.
+
+#### 6 x 2-Pos
+
+Breaks the 6 function switches into 6 latching switches. Each switch can be ON or OFF.
+
+#### Momentary
+
+Breaks the 6 function switches into 6 momentary switches. Each switch is ON while depressed.
+
+### Persistent
+
+If enabled, this will cause the function switch to be in the same state when the radio is turned on or the model is reloaded.
+
+## S.Port connector power (5V)
+
+![](../assets/model-model-edit-sport-power-select.png)
+
+The ‘+’ (middle) pin on the S.Port connector may be configured as follows:
+
+- The ‘+’ (middle) pin on the S.Port connector may be left switched off. Use the ‘---’ option.
+- The ‘+’ (middle) pin on the S.Port connector may be configured as ‘Always on’ to provide +5V to a peripheral device. 
+- The ‘+’ (middle) pin on the S.Port connector may be controlled by a switch or other source to provide +5V to a peripheral device.
+
+Care must be taken not to overload the output.
 
 ## Model runtime
 
-![Model runtime](../assets/model-edit-model-runtime.png)
-
-Tracks total time this model has been flown/run.
+The model runtime timer keeps track of the total time that the model has run. Press the model runtime reset button to reset it.
 
 ## Reset all mixes
 
-![Reset all mixes](../assets/model-edit-model-reset_all_mixes.png)
-
-Resets every mix on the model back to its default state.
+Executing 'Reset all mixes' will reset all the mixes.

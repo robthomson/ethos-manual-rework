@@ -1,173 +1,210 @@
-# Outputs
+# Channels
 
-![Outputs](../assets/model-outputs.png)
+![](../assets/model-icon-outputs.png)
 
-Outputs is the boundary between [Mixes](mixes.md)'s pure "logic" and the
-physical world — servos, linkages, control surfaces, actuators,
-transducers. It's where endpoints, reversing, centering, and
-correction curves get adapted to what the model actually needs
-mechanically. Each output channel corresponds to a receiver servo output
-(CH1 → servo plug #1, with default protocol settings).
+The Channels section is the interface between the setup "logic" and the real world with servos, linkages and control surfaces as well as actuators and transducers. In the Mixes we have set up what we want our different controls to do. This section allows these pure logical outputs to be adapted to the mechanical characteristics of the model. This is where we configure minimum and maximum throws, servo or channel reverse, and adjust the servo or channel center point using the PPM center adjustment, or add an offset using subtrim. We can also define a curve to correct any real world response issues. There is also a channel balancing feature. The various channels are outputs, for example CH1 corresponds to servo plug #1 on your receiver (with the default protocol settings).
 
-Ethos works in percentages, but servos are ultimately driven by PWM pulse
-width in microseconds:
+Although the radio is configured using percentages as input, servos and output devices are controlled by a PWM (Pulse Width Modulation) signal in μs (microseconds). The relationship between the units is as follows:
 
-| % | µs |
-|---|---|
-| −150% | 732 |
-| −100% | 988 |
-| 0% | 1500 |
-| 100% | 2012 |
-| 150% | 2268 |
+−150%	=	732 μs
 
-!!! warning
-    A channel with **no active mix** outputs neutral (0% / 1500µs) — this
-    includes a channel whose only mix(es) are currently inactive. Make
-    sure every channel you actually use always has an active mix backing
-    it. On a throttle channel specifically, neutral means **half throttle**.
+−100%	=	988 μs
 
-The Outputs screen shows two bars per channel: the lower (green) bar is
-the mixer's value for that channel, the upper (orange) bar is the
-post-Outputs value actually sent to the receiver (in both % and µs).
-Min/Max limits show as greyed-out sections of the orange bar. Channels not
-currently being transmitted to the RF module have a darker background.
-Small icons appear on a channel when its Direction, Curve, Slow, or
-Balance settings have been changed from default, as a way to spot
-non-default channels at a glance.
+0%	=	1500 μs
 
-!!! tip
-    A long press on `ENT` from either the Mixes or Flight Modes screen
-    jumps straight here.
+100%	=	2012 μs
 
-## Editing a channel {: #editing-a-channel }
+150%	=	2268 μs
 
-![Edit elevator output](../assets/model-outputs-elevator-edit.png)
-![Edit throttle output](../assets/model-outputs-throttle-edit.png)
+Note that a channel not assigned to any mix will have an output at neutral = 0% = 1500us. The same applies when a channel’s mix or mixes are inactive, so care must be taken to ensure that used channels always have an active mix. A throttle channel at neutral = 0% = 1500us will be at half throttle!!
 
-Tap a channel to open it. A preview at the top shows the mix value
-(green) against the output value (orange), with a small white marker for
-the Min/Max points.
+![](../assets/model-outputs.png)
 
-- **Name** — editable.
-- **Direction** — reverses the channel's output, typically to reverse
-  servo rotation direction. Shown as a double-arrow icon on the channel.
-  This does **not** affect the mixes feeding it, and does **not** swap the
-  Min/Max limits.
-- **Min/Max** — hard limits that are never overridden — set to avoid
-  mechanical binding. These act as endpoint/gain settings: reducing them
-  reduces throw rather than causing clipping. Default is ±100%, adjustable
-  up to ±150%. While adjusting, whichever end is currently being moved
-  toward is shown in bold (e.g. nudge the elevator stick forward and the
-  Max value bolds, to confirm that's the end you're setting).
+The Channels screen shows two bar graphs for each channel. The lower (green) bar shows the value of the mixes for the channel, while the upper (orange) bar shows the actual value (in both % and µS terms) of the Output after the outputs processing, which is what is sent to the receiver. In the example above you can see that both the mixes and channel output values for CH4 Throttle are at -100%.
 
-  ![SBUS redundancy warning](../assets/model-outputs-sbus-warning.png)
+The Channel min and max settings are indicated by the greyed-out sections in the upper (orange) bar. For their adjustment see the section below.
 
-  !!! warning "SBUS redundancy"
-      A redundancy setup using SBUS can't move a servo beyond roughly
-      ±125%. The Min/Max fields themselves have asymmetric ranges (−150–0%
-      and 0–150%) — if driving them from a [Var](variables.md), give that
-      Var an identical range or set **Ignore range** (see [source
-      options](../getting-started/user-interface-and-navigation.md#choosing-a-source)),
-      or the automatic range conversion will produce unexpected values. If
-      the main receiver's output exceeds 125% and it enters failsafe, the
-      redundant receiver taking over via SBUS clamps it back to 125%.
+The channels that are not being output to the RF module are shown with a darker background.  In the example above, all eight channels are being transmitted, so they have a lighter grey background.
 
-- **Center/Subtrim** — offsets the output, typically to center a servo
-  arm; endpoints are unaffected.
+The icons ![](../assets/icon_inverted.png)  ![](../assets/icon_curve.png)  ![](../assets/icon_slow.png)  ![](../assets/icon_balance.png)  appear in a channel’s display if the defaults for output [Direction](../model-setup/channels.md), output [Curve](../model-setup/channels.md), [Slow Up/Down](#Output slow up-down) have been changed or [Balance Channels](#Balance channels) has been configured. For details, please refer to their respective settings below.
 
-  !!! warning
-      Don't use subtrim for large offsets — it builds significant
-      differential into the servo's response. Use an **offset mix**
-      instead for anything beyond fine centering.
+Note: For quick access to this monitor screen, a long press of the enter key from the ‘Mixes’ screen and ‘Flight modes’ screens will jump to the Channels.
 
-- **PWM center** — like subtrim, but shifts the *entire* servo travel band
-  including the hard limits, done effectively inside the servo itself
-  rather than shown on the channel monitor. This keeps mechanical
-  centering separate from trimming.
-- **Curve** — attaches an Expo or custom curve (existing or new, with an
-  **Edit** shortcut once set) to correct real-world response — e.g.
-  keeping left/right flaps tracking accurately. Shown as a curve icon on
-  the channel.
-- **Slow up/down** — slows the output's response to input changes, in
-  seconds to travel 0→100% — e.g. slowing retracts driven by an ordinary
-  proportional servo. Shown as a clock icon on the channel. (A **delay**,
-  as distinct from slow, is available under [logical
-  switches](logical-switches.md).)
+## Channels setup
 
-## Swap channels {: #swap-channels }
+Tap on the output channel to be edited or reviewed.
 
-![Swap channels](../assets/model-outputs-swap-channels.png)
-![Choose channel to swap](../assets/model-outputs-swap-channels-select.png)
+![](../assets/model-outputs-throttle-edit.png)
 
-Swaps two output channels. The dialog opens with the current channel
-pre-filled; pick the other and confirm — the swap is immediate, and every
-mix referencing either channel is updated accordingly.
+### Channel preview
 
-## Reset settings
+A channel preview is shown at the top of the Channels setup screen. The mixes value is shown in green, while the channel output value is shown in orange (default theme).
 
-![Reset channel](../assets/model-outputs-reset-select.png)
+The Channel min and max settings are indicated by the greyed-out sections in the upper (orange) bar.
 
-Clears every parameter on a channel back to default — useful before
-repurposing a channel for something else, with a confirmation dialog to
-prevent accidents.
+### Name
 
-## Balance channels {: #balance-channels }
+The name can be edited.
 
-![Choose channels to balance](../assets/model-outputs-balance-choose_channels.png)
-![Choose CH7/CH6](../assets/model-outputs-balance-choose-ch7-and-ch6.png)
+### Direction
 
-Balances a pair (or up to 4) of channels so they move in unison — e.g.
-flaps that don't move together can induce unwanted roll; unbalanced
-throttles on a multi-engine model can induce unwanted yaw. Ethos builds a
-differential balance curve per selected channel; comparing the physical
-surface positions at each curve point lets you adjust them to match,
-ending in perfectly tracking surfaces.
+Will change the direction of the channel output, typically to reverse servo direction.
 
-**Before balancing**, in order:
+![](../assets/icon_inverted.png)	When enabled, a double-arrow icon is displayed in the channel’s graph display, please refer to CH6 Flap1 L in the Channels screenshot above.
 
-1. Set servo directions for correct travel.
-2. With mixes at neutral, optionally use **PWM center** to square up the
-   servo horns.
-3. Set Min/Max and Subtrim.
+Please note that this does not affect the mixes driving the output, and also does not swap the min/max limits (see below).
+
+### Min/Max
+
+The Channel min and max settings are ‘hard’ limits, i.e. they will never be overridden. They should be set to avoid mechanical binding. Note that they serve as gain or ‘end point’ settings, so reducing these limits will reduce throw rather than induce clipping. Note that the limits default to +/- 100.0%, but may be increased here to +/- 150.0%.
+
+The Channel min and max settings are indicated by the greyed-out sections in the upper (orange) bar.
+
+#### Warning:
+
+When using a redundancy system involving SBUS, servo movements beyond about +/- 125% are not possible.
+
+Note:  The Min/Max parameters have ranges of (-150% to 0%) and (0% to +150%) respectively. When using VARs as a source to adjust the Min/Max parameters, unless the Var has an identical range, it will be necessary to set the Var range to be ignored to avoid unexpected values due to range conversion. Please refer to the [Var options](../user-interface-and-navigation/editing-controls.md) section for details of this option.
+
+![](../assets/model-outputs-sbus-warning.png)
+
+If using more than 125% on the main receiver driving PWM outputs, and this receiver enters failsafe, the servo positions then received from a redundant receiver via SBUS are limited to 125%.
+
+In particular, if an output on the main receiver is beyond 125%, then at the point of switching to the redundant receiver, the output will change to 125%.
+
+#### Setup aid
+
+![](../assets/model-outputs-elevator-edit.png)
+
+When adjusting the min/max output limits, the end to be adjusted is highlighted bold.
+
+For example, if you want to set the Max endpoint for the elevator channel, when you slightly move the elevator stick forward, the max value is shown in bold to indicate that is the end to be adjusted. If you move the stick back, the min value will be in bold.
+
+### Center/Subtrim
+
+Used to introduce an offset on the output, typically used to center a servo arm. Note that the endpoints are not affected.
+
+#### Warning:
+
+Don't be tempted to use Subtrim to add large offsets - it will build a large amount of differential into the servo response. The correct way is to add an offset mix.
+
+### PWM center
+
+This is similar to subtrim, with the difference that an adjustment done here will shift the entire servo band of movement (including hard limits). This adjustment won't be visible on the channel monitor because it is effectively done in the servo. The advantage of using ‘PWM center’ to mechanically center the control surface is that this separates the centering function from the trimming function.
+
+### Curve
+
+Allows you to select an Expo or custom curve to condition the output. The popup allows to to either select an existing curve, or to add a new curve.  After configuring the curve, an Edit button is added so that you can edit the curve easily.
+
+![](../assets/icon_curve.png)	When enabled, a curve icon is displayed in the channel’s graph display, please refer to CH5 Rudders in the Channels screenshot above.
+
+### Balance Curve
+
+A balance curve may be added, which is done automatically when you activate the Balance Channels feature below. This allows you to balance selected pairs or a group of up to 4 channels to ensure that they move in unison.
+
+### Slow up/down
+
+Response of the output can be slowed down with regard to the input change. Slow could for example be used to slow retracts that are actuated by a normal proportional servo. The value is time in seconds that the output will take to go from 0 to +100%.
+
+![](../assets/icon_slow.png) When configured, a clock icon is displayed in the channel’s graph display, please refer to CH6 Flap1 L and CH7 Flap2 R in the Channels screenshot above.
+
+### Delay
+
+Please note that a delay function is available under logic switches
+
+### Swap channels
+
+![](../assets/model-outputs-swap-channels-select.png)
+
+This feature allows two output channels to be swapped.
+
+![](../assets/model-outputs-swap-channels.png)
+
+The swap dialog opens with the first channel already filled in. Select the channel to be swapped, and click OK. Note that the swap takes place immediately.  All mixes etc will be adjusted accordingly.
+
+### Reset settings
+
+![](../assets/model-outputs-reset-select.png)
+
+Reset settings will clear all parameters for the output channel if the channel is no longer required. A confirmation dialog will avoid accidental resetting.
+
+This will avoid settings not being at their defaults if the channel is re-used for something else.
+
+### Balance channels
+
+This feature allows you to balance selected pairs or a group of up to 4 channels to ensure that they move in unison. For example, unbalanced flaps can result in unwanted roll, while unbalanced throttles on multi-engine models can result in unwanted yaw.
+
+#### Overview
+
+This feature automatically creates a differential balance curve for each channel selected. The number of balance points may be chosen. By comparing the physical positions of control surfaces (such as flaps) at each point of the curves, they can be easily adjusted to be equal. The final result is perfectly tracking surfaces.
+
+#### Prerequisites
+
+Prior to balancing channels, this recommended process should be followed:
+
+1. Set the servo directions for correct surfaces travel.
+2. With mixes at neutral, optionally use PWM Center to set servo horns at right angles.
+3. Configure the Min/Max limits and Subtrim.
 4. Configure any other curves.
 5. Configure Slow.
-6. *Then* balance and equalize across the travel range.
+6. Proceed with Balance Channels to balance and equalize control surfaces at multiple points of travel.
 
-**Using it**: choose the channels to balance and the order to display
-them in —
+#### How to use
 
-![CH7/CH6 selected](../assets/model-outputs-balance-ch7-and-ch6.png)
+![](../assets/model-outputs-balance-select.png)
 
-— mix output on the X axis, balance-adjustment differential on the Y
-axis. Tap a channel's graph (or select it and press `ENT`) to edit its
-balance curve; `PAGE` switches between channels mid-edit:
+Open the channel Edit page for the left-most channel you want to balance. In this example we have chosen channel 6 ‘Flap1 L’. Scroll down and tap on ‘Balance channels’ to get started.
 
-![Balance curve editor](../assets/model-outputs-balance-curve-edit.png)
+![](../assets/model-outputs-balance-choose_channels.png)￼
 
-Editor controls:
+A ‘Choose channels’ dialog opens for the channels to be balanced to be chosen.
 
-- **Source** — normally the mix's own source(s), or any other convenient
-  analog input; **Auto analog input** picks up the first stick/slider/pot
-  you move as X, both in the graph and in the model itself.
-- **Magnet** — snaps the rotary encoder's adjustment to the nearest X-axis
-  curve point automatically:
+![](../assets/model-outputs-balance-choose-ch7-and-ch6.png)￼
 
-  ![Magnet off](../assets/model-outputs-balance-ch6-magnet-off.png)
-  ![Magnet on](../assets/model-outputs-balance-ch6-magnet-on.png)
+Select the channels in the order in which you wish to display them. In our example CH6 (Flap1 L) was already ticked because we started on this channel.
 
-  The input still needs to be moved to align X with a curve point before
-  adjusting it.
-- **Lock** — toggled by tapping its icon or pressing `ENT` in graph-edit
-  mode; locks all inputs so you can release the stick and observe the
-  control surfaces while adjusting the curve.
-- **Configuration** — change point count per channel (all or individually)
-  and whether each curve is smoothed.
-- **Help** (`?`, also the `MDL` key) — opens the built-in help.
+On radios without a touchscreen, scroll to the desired channel/s and press ENT to select them.  Finally, press the Page key to highlight the OK button, then press ENT to confirm the selections.
 
-**Multichannel**: up to 4 channels can be balanced together —
+![](../assets/model-outputs-balance-ch7-and-ch6.png)
 
-![4-channel balance](../assets/model-outputs-balance-ch2-9-8-1.png)
+The channels will be displayed in the order of selection. In this example, CH6 (Flap1 L) was selected first by default, then we selected CH7 (Flap2 R). The mix outputs are shown along the X axes, while the balance adjustment differential values are shown on the Y axes.
 
-Once set, a balance curve can be reviewed, edited, or cleared from the
-channel's own config page — a balance icon marks it on the channel graph
-(alongside a Direction icon too, if that's also non-default).
+![](../assets/model-outputs-balance-ch6-magnet-on.png)
+
+Tap on a channel graph (or scroll to it and press ENTER) to edit the balance curve. The PAGE key will switch between the channels while editing.
+
+The input (shown by the vertical white marker line) must be adjusted to align the X value with a curve point before adjustment is made.
+
+##### Menu buttons
+
+![](../assets/Pictures/1000000000000018000000181B9B646A.png) The source(s) configured in the channel mixes may be used, or optionally any other convenient analog input. If you select this 'Auto analog input' option, the first stick, slider or pot you move will be used as the source for X, not only in the graph, but also in the model.
+
+![](../assets/Pictures/10000000000000280000001EF06CB86B.png)When enabled, the nearest curve point on the X axis will be automatically selected for adjustment with the rotary encoder, as in the example above.
+
+The input must be adjusted to align the X value with a curve point before adjustment is made.
+
+![](../assets/Pictures/100000000000001500000019F279C5CD.png) Tapping in the icon, or pressing the ENTER key while in graph edit mode will toggle Lock mode on and off. When enabled, all inputs are locked so that you can release the stick input, allowing you to observe the control surfaces while you adjust your curve.
+
+![](../assets/Pictures/100000000000001A0000001A796A96C4.png) Open the configuration dialog for the chosen channels. It is possible to modify the number of points of all curves, or only some, and choose if they are smoothed or not.
+
+**?** This button will call up the help file. It can also be called up with the MDL key.
+
+![](../assets/model-outputs-balance-ch6-magnet-off.png)
+
+In the example above, the Magnet option has been deselected. The curve point to be adjusted is highlighted, and can be moved using the 'SYS' and 'DISP' keys.
+
+Again, the input should be adjusted to align the cursor (X value) with a curve point before adjustment is made.
+
+#### Multichannel option
+
+![](../assets/model-outputs-balance-ch2-9-8-1.png)
+
+Up to 4 channels may be balanced simultaneously. Again, the channels must be selected in the order in which you want them displayed, normally counting from the left and alternating from the outside in. The above example shows channel assignments from a TD SR12 receiver.
+
+#### Review, edit or clear balance curve
+
+![](../assets/model-outputs-balance-curve-edit.png)
+
+Once a channel has been balanced, its balance curve can be reviewed, edited or cleared from the channel’s config page.
+
+![](../assets/Pictures/100000000000001400000014F01B2957.png)	Note that a balance icon is displayed on the channel’s graph display (orange bar). In the example above a Direction icon is also displayed, indicating that the output has been reversed, which can also be seen from the graph showing that the output direction is opposite to that of the mixer.

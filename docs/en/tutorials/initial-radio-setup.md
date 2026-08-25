@@ -1,73 +1,61 @@
-# Initial Radio Setup
+# Initial radio setup example
 
-The one-time setup to work through before programming any model. The
-[Tutorials](index.md) that follow all assume this is done first.
+This introductory section describes the initial steps in setting up the radio itself, before programming any specific models. Once completed, any of the programming examples in the following sections can be followed.
 
-!!! note
-    These tutorials aren't a strict cookbook — they assume basic RC
-    vocabulary and comfort navigating the Ethos menus. If anything here
-    is unclear, revisit [User Interface &
-    Navigation](../getting-started/user-interface-and-navigation.md)
-    first.
+Note: These examples are not 'cookbook' in nature. They assume that the user has a basic understanding of the vocabulary of radio control models, and is familiar with navigating the Ethos menu structure. If, at any time, you are confused, please review previous sections of this manual for a refresher. In particular, please refer to the [User Interface and Navigation](../user-interface-and-navigation/index.md) section to familiarize yourself with the radio's user interface, so that you can find the setup page you need easily.
 
-## Step 1. Charge the radio and flight batteries
+## Step 1. Charge the radio and flight batteries.
 
-Charge the radio battery per the guidelines that came with the radio, and
-the flight batteries with a charger suited to their chemistry — take
-particular care with Lithium packs.
+Please charge the radio battery using the guidelines received with the radio. Also charge the flight batteries to be used, using a charger suitable for the battery type(s), observing all safety precautions, especially when using Lithium batteries.
 
-## Step 2. Calibrate the hardware
+## Step 2. Calibrate the hardware.
 
-Confirm [Hardware
-calibration](../system-setup/hardware.md#analogs-calibration) has been
-done (it runs automatically on first startup) so the radio knows the
-exact center and limits of every gimbal, pot, and slider. Redo it under
-**System → Hardware** any time a gimbal, pot, or slider is replaced.
+Ensure that you have performed the hardware calibration during initial startup of the radio, to confirm that the radio knows exactly where the centers and limits of each gimbal, pot, and slider are. It can be re-done by following instructions in the System \\ Hardware \\ [Calibration](../system-setup/hardware.md) section of this manual.
 
-## Step 3. Perform the radio system setup
+## Step 3. Perform the radio system setup.
 
-[System Setup](../system-setup/index.md) covers everything common to
-every model, as distinct from [Model Setup](../model-setup/index.md)'s
-per-model settings. Most defaults are fine to start, but review:
+The radio system setup is used to configure those parts of the radio system’s hardware that are common to all models. It differs from the '[Model Setup](../model-setup/index.md)' functions which configure the model specific settings for each model.
 
-- **[Date & Time](../system-setup/date-and-time.md)** — set correctly.
-- **[Audio → Choice of
-  Voices](../system-setup/general.md#audio-settings)** — set up voice
-  announcements, including any custom audio files.
-- **[Controls (Sticks)](../system-setup/controls.md)**:
-  - **Stick mode** — Mode 1 (throttle/aileron right, elevator/rudder
-    left) or Mode 2 (throttle/rudder left, aileron/elevator right —
-    Ethos's default).
+Please read the system setup section to familiarize yourself with all the settings in this section.
 
-    !!! warning
-        If a model is configured for one stick mode while the
-        transmitter is set to the other, an electric motor can spin up
-        the instant the receiver powers on.
+Many settings can (at least initially) be left at their defaults, but the following should be reviewed:
 
-  - **Channel order** — Ethos defaults to **AETR** (Aileron, Elevator,
-    Throttle, Rudder); Spektrum/JR convention is **TAER**, Futaba/Hitec
-    is **AETR**. This sets the order stick inputs are assigned when a new
-    model is created — models can still be adjusted individually later.
+### Date & Time
 
-    !!! note "FrSky stabilized receivers"
-        These require **AETR** specifically. With more than one surface
-        per function (e.g. 2 ailerons), the wizard normally groups them
-        (giving **AAETR**) — but SRx receivers expect **AETRA**/**AETRAE**
-        instead, so enable **[First four channels
-        fixed](../system-setup/controls.md#first-four-channels-fixed)**
-        under Sticks to keep the first four channels in strict AETR order
-        regardless.
+Set the current time and date.
 
-- **[Battery](../system-setup/battery.md)** — set **Main voltage**, **Low
-  voltage**, and **Display voltage range** to match the radio's actual
-  battery.
-- **[Owner Registration ID](../model-setup/rf-system.md#owner-registration-id)**
-  — used by ACCESS receivers, and shared across transmitters for Smart
-  Share. Configured under Model Setup, but functions as a system-wide
-  setting in practice, since every new model uses it (it can still be
-  changed per-receiver during registration if needed).
+### Audio
 
-!!! note "Units"
-    Ethos has no global metric/imperial toggle — [telemetry sensor
-    units](../model-setup/telemetry.md#editing-a-sensor) are set
-    individually, per sensor.
+Set up the voices section for the radio voice announcements including your custom audio files. Refer to the [General / Audio / Choice of Voices](../system-setup/general.md) section.
+
+### Sticks
+
+#### Sticks mode
+
+Select your preferred stick mode. Mode 1 has throttle and aileron on the right stick, and elevator and rudder on the left. Mode 2 has throttle and rudder on the left stick, and aileron and elevator on the right.
+
+Note: Mode 2 is the default.
+
+**C****aution**!  If a model is configured for Mode 2 and the TX for Mode 1, it is possible to have the motor for electric models start when the receiver is turned on.
+
+#### Channel order
+
+The default channel order for Ethos is AETR (i.e. Aileron, Elevator, Throttle, Rudder). You may prefer to set the default channel order to the order you are accustomed to. TAER is the default for Spektrum/JR, and AETR is the default for Futaba/Hitec. This setting defines the order in which the four stick inputs are inserted when a new model is created. They can of course be changed later.
+
+##### FrSky stabilized receivers
+
+Note that AETR is the required order if you want to use any of the FrSky stabilized receivers. However, for models with more than one surface for ailerons, elevator, rudder, flaps etc the wizard will normally group these surfaces, so for example you would get AAETR if using 2 Aileron channels.
+
+The SRx receivers expect a channel order of AETRA or AETRAE, so the wizard can be told (in System / Sticks) to keep the 'First four channels fixed'.
+
+### Battery
+
+Review your radio battery's specification and configure the 'Main voltage', 'Low voltage' and 'Display voltage range' as described in the [System / Battery](../system-setup/battery.md) section of this manual.
+
+### Owner registration ID
+
+The ‘Owner registration ID’ is used with ACCESS systems. This ID becomes the ‘Registration ID’ when registering a receiver. Enter the same code in the owner registration ID field of your other transmitters you want to use the SmartShareTM feature with. Refer to the Model Setup / [RF System](../model-setup/rf-system.md) section of this manual (although it is configured in the Model Setup section, the ‘Owner registration ID’ will be used for each new model and can be considered a system setting. Please note also that the owner registration ID can be changed for a particular receiver during the registration process).
+
+### Units
+
+Please note that in Ethos telemetry units are configured on a per sensor basis. There is no global metric or imperial setting.

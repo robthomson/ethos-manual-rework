@@ -1,67 +1,72 @@
 # Main Views
 
-## Home screen
+Ethos allows the user considerable flexibility in what is displayed in the main views. Initially only the basic information shown below is displayed, until the user customizes or adds views and widgets to be displayed. Note that up to eight main views may be defined.
 
-![Home screen](../assets/mainview.png)
+The main views normally share the top and bottom bars, but there is a full screen option. Please refer to the [Configure Screens](../configure-screens/index.md) section for details on configuring the views.
 
-The home screen is what you see whenever no menu is open — a stack of up to
-**eight** display screens you configure yourself (see
-[Displays](../displays/index.md)), swiped or paged between with the `PAGE`
-key or a touch swipe. A freshly created model starts with just one screen
-showing a model image, three timer widgets, and the trim/pot indicators;
-everything on it is user-configurable from there.
+## Initial main view
 
-Screens normally share the top and bottom bars described below, but a
-screen can also be set to full-screen, hiding both.
+![](../assets/display-main-view.png)
 
-## The top bar
+The initial main view has the model image on the left, and the three timers on the right.
 
-The top bar shows the model name on the left (plus the active flight mode,
-if one is configured), and a row of status icons on the right:
+## Configured main view
 
-- Data logging active
-- RSSI — 2.4GHz link
-- RSSI — 900MHz link (if a dual-band/long-range module is fitted)
-- Speaker volume
+![](../assets/mainview.png)
+
+### The top bar
+
+The top bar displays the model name on the left, as well as the active flight mode if configured. On the right are icons for:
+
+- Whether data logging is active
+- RSSI 2.4G
+- RSSI 900M
+- Speaker sound volume
 - Radio battery status
-- Screen locked (see [Lock touchscreen](user-interface-and-navigation.md))
-- USB connected (see [USB Connection Modes](usb-connection-modes.md))
-- Trainer status (master or slave, as applicable)
+- Screen locked (see top bar below)
+- USB connected (see top bar below)
+- Trainer icon for master or slave as appropriate (see top bar below)
 
-Touching the speaker or battery icon jumps straight to the matching
-[General](../system-setup/general.md) (audio) or
-[Battery](../system-setup/battery.md) settings panel.
+Touching the speaker and battery icons will bring up the relevant General (Audio etc.) and Battery control panels.
 
-### Error warning
+#### Error warning
 
-A red triangle appears in the top bar whenever Ethos detects an error —
-a Lua script error, a RAM backup error, or running a nightly/unstable
-firmware build are the common causes. The detail behind the warning is
-always in **System → Info**, on the same page as radio runtime and
-[error logs](../system-setup/information.md).
+![](../assets/topbar.png)
 
-## The bottom bar
+When ETHOS detects an error a red triangle error warning icon is displayed in the main view top bar.
 
-![Bottom bar](../assets/bottombar.png)
+Errors may be due to:
 
-Four tabs run along the bottom for the top-level sections — **Home**,
-**Model Setup**, **Configure Screens**, **System Setup** — with the system
-clock on the right (touch it to jump straight to
-[Date & Time](../system-setup/date-and-time.md)).
+- Lua script errors
+- RAM backup error
+- Running a nightly firmware build
 
-The Model Setup icon reflects the current model's type:
+Error messages relating to the warning are displayed in the System / Info page. Please refer to the [Errors](../system-setup/info.md) section.
 
-![Bottom bar, glider model](../assets/bottombar-glider.png)
-![Bottom bar, helicopter model](../assets/bottombar-heli.png)
-![Bottom bar, multirotor model](../assets/bottombar-multirotor.png)
+### The bottom bar
 
-— airplane, glider, helicopter, and multirotor each get their own icon
-(and there are further icons for surface models and others).
+![](../assets/bottombar.png)
 
-## The widgets area
+The bottom bar has four tabs for accessing the top level functions, i.e from left to right: Home, [Model Setup](../model-setup/index.md), [Configure Screens](../configure-screens/index.md), and [System Setup](../system-setup/index.md). The system time is displayed on the right. Touching the time will bring up the Date & Time settings.
 
-The middle of each screen is filled with **widgets**: model image, timers,
-telemetry readouts, trim/pot bars, and more, all placed and configured by
-you. See [Displays](../displays/index.md) for how to add, move, and
-configure widgets, and [Additional Displays](../displays/additional-displays.md)
-for adding more than the default single screen.
+The Model Setup icon above is for an Airplane type model.
+
+![](../assets/bottombar-glider.png)
+
+The Model Setup icon above is for a Glider type model.
+
+![](../assets/bottombar-heli.png)
+
+The Model Setup icon above is for a Heli type model.
+
+![](../assets/bottombar-multirotor.png)
+
+The Model Setup icon above is for a Multirotor type model. There are additional icons for surface type models etc.
+
+### The widgets area
+
+The middle area of the main views consists of widgets which may be configured to display images, timers, telemetry data, radio values etc. The default main screen has a widget on the left for a model image and three widgets for timers, as well as displaying the trims and pots. The widgets are user configurable to display other information. Once multiple screens have been configured, they can be accessed using a touch swipe gesture or the Page key.
+
+Please refer to the [Configure Screens](../configure-screens/index.md) section for more details.
+
+Note: The ‘Throttle ACTIVE’ widget above is the Status widget available in the FrSky - ETHOS Lua Script Programming thread on rcgroups.

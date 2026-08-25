@@ -1,92 +1,108 @@
-# Variables
+# Variables (Vars)
 
-![Variables](../assets/model-vars.png)
+![](../assets/model-icon-vars.png)
 
-Variables ("Vars") are named containers for a model's own settings
-values, referenceable anywhere else in the programming — including
-[mixes](mixes.md). Keeping them in their own section separates a model's
-*configuration data* from its *programming logic*: instead of hunting
-through dozens of mixes to find and tweak a value, everything lives in
-one place with a meaningful name. 64 Vars are available; none exist by
-default. Add one with **+**; tap an existing Var for **Edit**/**Move**/
-**Copy**/**Clone**/**Delete**.
+Variables (Vars) can be used to name and store a model’s settings parameters in a way which can then be referenced elsewhere in the radio programming including the mixes. Vars can be thought of as containers that hold information.
 
-![Add variable](../assets/model-vars-add.png)
+They have been separated into their own section, which allows a clean separation between a model’s configuration data and the programming logic. This means you can centralize all your setup settings in one place with meaningful names, where they can be found and edited easily, without having to jump between dozens of mixes or other configuration items and scroll to the relevant parameter.
 
-A Var can hold a fixed constant, or be adjustable within user-defined
-limits (to keep bad values from causing a crash), and can hold a
-*different* value per active condition (e.g. per flight mode). Values are
-persistent between sessions. A Var substitutes for any ordinary numeric
-value anywhere the [Options
-feature](../getting-started/user-interface-and-navigation.md#the-options-feature)
-is available (the hamburger-icon fields).
+Vars can hold fixed values (i.e. constants), or they can be adjustable with user-definable limits to avoid bad values potentially causing a crash. Each Var can hold multiple values depending upon the active conditions (such as flight modes) configured. Actions can be configured to alter their value, such as using a repurposed trim for an in-flight adjuster, or using add/subtract/multiply/divide actions driven by inputs. Vars are persistent between sessions.
 
-!!! example
-    A glider with split ailerons (the inboard sections doubling as
-    landing flaps) wants a single shared aileron-differential setting
-    used everywhere all four surfaces act as ailerons — a Var holding
-    that one value, referenced from every relevant mix, keeps it
-    consistent and means it only has to be tuned in one place.
+Vars are also extremely useful when it is desirable to have one adjustment value that is to be used in multiple places. For example, a glider may have split ailerons on each wing, allowing the inside ones to be used as flaps during landing. However, during normal flight all four surfaces act as ailerons and hence should share a common differential setting to counter adverse yaw while turning, which can be achieved by making use of a Var.
 
-## Adding a Var
+Vars can be substituted for the normal numeric value in all parameters with the ‘Options’ feature, which is identified by the menu icon (hamburger symbol). Refer to the [Options feature](../user-interface-and-navigation/editing-controls.md) section.
 
-![New variable](../assets/model-vars-new_var.png)
+There are 64 Vars available.
 
-- **Value** — current value (read-only display).
-- **Name** — editable.
-- **Comment** — free text explaining its purpose.
-- **Range** — low/high limits (one decimal, within ±500%) the Var's value
-  can never exceed.
+![](../assets/model-vars-add.png)
+
+There are no default Vars. Tap on the ‘+’ button to add a new Var.
+
+![](../assets/model-vars-actions.png)
+
+Once Vars have been defined, tapping on a list of Vars brings up a dialog allowing you to Edit, Move, Copy/Paste, Clone or Delete the highlighted Var.
+
+## Adding Vars
+
+![](../assets/model-vars-new_var.png)
+
+### Value
+
+Displays the current value of the Var.
+
+### Name
+
+Allows the Var to be named.
+
+### Comment
+
+A comment may be added as explanation of its use or function, to aid in understanding.
+
+### Range
+
+The low and high limits of a range can be set to one decimal within +/- 500% to keep the value of the Var within defined limits.
 
 ### Values
 
-![Variable values](../assets/model-vars-values.png)
+#### Fixed values
 
-- **Fixed** — a single constant, one decimal place.
-- **Multiple/variable** — **Add new value** attaches a value per active
-  condition. E.g. `Var12` reads 9% while flight mode Thermal (FM4) is
-  active, and −3% while Speed (FM5) is active, with its Range constrained
-  to −10%…+15% so neither can exceed sensible limits:
+#### ![](../assets/model-vars-values.png)
 
-  ![Flight-mode-dependent values](../assets/model-vars-fm-dependent.png)
-  ![Add a value](../assets/model-vars-add-value.png)
+Vars can hold a single fixed value (i.e. a constant) to one decimal, as per the example above.
+
+#### Multiple or variable values
+
+![](../assets/model-vars-add-value.png)
+
+Select ‘Add new value’ to add a new value to a Var.
+
+![](../assets/model-vars-fm-dependent.png)
+
+Each Var can hold multiple values depending upon the active conditions (such as flight modes) configured. In the example above, while the Thermal flight mode FM4 is active, Var12 has a value of 9%. When the Speed flight mode FM5 is active, Var12 will have a value of -3%.
+
+Note that a range between -10% and +15% has been set to avoid values larger than desired.
+
+Vars are persistent between sessions.
 
 ### Actions
 
-![Variable actions](../assets/model-vars-actions.png)
-![Add action](../assets/model-vars-add-action.png)
+![](../assets/model-vars-add-action.png)
 
-Actions change a Var's value over time, driven by an input.
+Var actions may be added, for example to repurpose trims or to perform calculations.
 
-**Repurposed trim** — hands one of the physical trims over to adjusting
-this Var instead of its normal function, typically gated to one active
-condition:
+#### Repurposed trim
 
-![Repurpose a trim](../assets/model-vars-functions-repurpose.png)
-![Select trim to repurpose](../assets/model-vars-functions-repurpose-select.png)
+![](../assets/model-vars-functions-repurpose-select.png)
 
-!!! example
-    Repurpose the throttle trim to adjust a camber-compensation Var, but
-    only while flight mode Landing (FM3) is active, with Range 0–25% and
-    a 1.0% step per click. Outside that active condition, the trim
-    reverts to its ordinary function automatically.
+One of the trims can be repurposed to adjust a Var’s value.
 
-**Arithmetic actions** — driven by any input:
+![](../assets/model-vars-functions-repurpose.png)
 
-- **Assign** — sets the Var to a specific value.
-- **Add** / **Subtract** / **Multiply** / **Divide** — arithmetic against
-  the current value.
-- **Percentage** — applies a percentage of the driving input.
-- **Min** / **Max** — clamps the Var against the driving input.
+In the example above, an action has been defined to repurpose the Throttle trim for camber compensation during the Landing flight mode FM3 only. A range of 0 - 25% has been set to keep the Var between reasonable limits. A trim step value to one decimal may be defined, e.g. 1.0% in the example above.
 
-  ![Function actions](../assets/model-vars-functions.png)
+Repurposed trims are only repurposed for that specific active condition. They operate according to their normal function at all other times.
 
-!!! example
-    `FS3(edge)` assigns 40% to a Var outright; `FS1(edge)` adds 2 on each
-    press (capped at the Range maximum); `FS2(edge)` subtracts 2 on each
-    press (capped at the Range minimum). The **Edge** option (long-press
-    the function switch) matters here — without it, the action would
-    re-fire continuously for as long as the switch is held, rather than
-    once per press.
+#### Arithmetic Actions
 
-  ![Worked example](../assets/model-vars-calc-example.png)
+![](../assets/model-vars-functions.png)
+
+Actions can also be set to:
+
+- Assign a specific value to the Var
+- Add(+) to the Var
+- Subtract(-) from the Var
+- Multiply(\*) the Var by the parameter
+- Divide(/) the Var by the parameter
+- Apply a percentage to the Var
+- Min
+- Max
+
+The actions are driven by inputs.
+
+![](../assets/model-vars-calc-example.png)
+
+In this example above, function switch FS3(edge) will assign a value of 40% to the Var, and FS1(edge) will increase its value by 2 with every button press until the Range maximum is reached, and FS2(edge) will similarly decrease its value by 2 until the Range minimum is reached. Please note that the edge option must be selected (long press on the FS) so that the action is only performed when the function switch changes state.
+
+## Removing Vars
+
+Removing a VAR will convert all its uses to the VAR value, at the same time.

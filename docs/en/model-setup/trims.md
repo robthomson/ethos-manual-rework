@@ -1,181 +1,234 @@
 # Trims
 
-![Trims](../assets/model-trims.png)
+![](../assets/model-icon-trims.png)
 
-Configures each stick's trim range, step size, and behavior, plus cross
-trim and instant trim. The **X20 Pro/R/RS** and **X18** add two extra trim
-switches, **T5**/**T6**, useful for in-flight adjustments beyond the four
-main sticks:
+The Trims section allows you to configure the trim range and trim step size, or to configure custom trim behavior for each of the 4 control sticks. It also allows cross trims and instant trim to be configured.
 
-![T5/T6 trims](../assets/model-trims-pro-t5-t6.png)
+The X20 Pro/R/RS and X18 have two additional trim switches T5 and T6, which are very useful for in-flight adjustments.
 
-Each stick has its own independent set of trim settings.
+Additional trims may be configured as required.
 
-## Trim settings {: #trim-settings }
+![](../assets/model-trims.png)
 
-- **Range** — default ±25%, adjustable up to the stick's full ±100%. On
-  the main display, a default-range trim reads −100 to 100; a full-range
-  (100%) trim reads −400 to 400 (4× the normal range).
+There is a set of Trims settings for each stick.
 
-  !!! warning
-      Widening the range means holding a trim tab too long can add enough
-      trim to make the model unflyable.
+![](../assets/model-trims-pro-t5-t6.png)
 
-- **Step** — trim switch granularity: **Extra fine**, **Fine**,
-  **Medium**, **Coarse**, **Exponential** (fine near center, coarse
-  further out), or **Custom** (a specific percentage per click).
+The X20 Pro and x18 have two additional trims T5 and T6.
 
-  ![Step options](../assets/model-trims-step-options.png)
+## Trim settings
 
-  | Step | µs per click (25% range) |
-  |---|---|
-  | Extra fine | 0.5 |
-  | Fine | 1 |
-  | Medium | 2 |
-  | Coarse | 4 |
-  | Exponential | 0.3–16 |
+### Range
 
-  Custom, at a 25% range: 1% step = 1µs/click, 100% step = 128µs/click.
-  At a 100% range: 1% step = 5µs/click, 100% step = 512µs/click.
+The default trim range is +/- 25%. The range may be changed to cover up to the full stick range of 100%. Care must be taken with this option, as holding the trim tabs for too long might add so much trim as to make your model unflyable.
 
-## Mode
+Note that on the main display the default trim range is shown as -100 to 100. A trim range of 100% will show -400 to 400 (i.e. 4 times the normal trim range).
 
-![Elevator trim mode](../assets/model-trims-mode-elevator.png)
+### Step
 
-By default a trim is always active, but **Mode** changes that behavior.
-Changing modes resets the trim to 0.
+![](../assets/model-trims-step-options.png)
 
-- **OFF** — disables the trim entirely.
+The trim step parameter allows trims to be disabled, or to configure the granularity of the trim switch steps, from ‘Extra fine’ through Fine, Medium, Coarse, Exponential or Custom. The Exponential setting gives fine steps near the center, and coarse steps further out. Custom allows the trim step to be specified as a percentage.
 
-  ![Mode: off](../assets/model-trims-mode-option-off.png)
+With a default range of 25%, the trim steps per click are:
 
-  Useful, for example, on an electric model with no need for throttle
-  trim — the freed-up trim control can then be [repurposed to adjust a
-  Var](variables.md).
+Extra fine	0.5us
 
-- **Easy** — one shared trim value across every flight mode. The usual
-  choice for aileron and rudder, since those rarely need to vary by
-  flight mode.
+Fine	1us
 
-  ![Mode: easy](../assets/model-trims-mode-option-easy.png)
+Medium	2us
 
-- **Independent per flight mode** — the trim only affects the active
-  flight mode. The usual choice for elevator trim, since elevator trim
-  commonly needs to differ by flight mode (e.g. wing camber changes) —
-  in fact, this is often the main reason to set up flight modes at all.
+Coarse	4us
 
-  ![Mode: FM-independent](../assets/model-trims-mode-option-fm.png)
+Exponential	0.3us to 16us
 
-- **Custom** — full custom behavior, built from **behaviors** you add
-  yourself.
+For Custom trims and a default range of 25%, the trim steps per click are:
 
-### Custom trim behaviors
+Step size 1%	1us
 
-![Add a behavior](../assets/model-trims-mode-elevator-add-behaviour.png)
-![Behavior options](../assets/model-trims-mode-elevator-edit-behaviour.png)
+Step size 100%	128us per step
 
-Each behavior row has a condition and one of:
+For Custom trims and a range of 100%, the trim steps per click are:
 
-- **Unplugged** — disables the trim selectively under this condition
-  (rather than turning it off outright with Mode = OFF).
+Step size 1%	5us
 
-  ![Unplugged](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
-  ![Unplugged condition](../assets/model-trims-mode-unplugged-select.png)
+Step size 100%	512us per step
 
-- **Normal** (default) — ordinary trim behavior.
-- **Equal (to another trim)** — this trim tracks another condition's trim
-  value exactly.
+### Mode
 
-  ![Equal](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
+![](../assets/model-trims-mode-elevator.png)
 
-- **Offset + (another trim)** — this trim is added on top of another
-  condition's trim value.
+By default the trims are always on, but Trim behavior options can be configured to alter the trim behavior according to various conditions.
 
-  ![Offset](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+Note: Trims are reset to 0 when the mode is changed.
 
-**Worked example** — a glider with a base **Cruise** elevator trim, and
-dependent trims for **Speed** and **Thermal**:
+There are four modes of trim behaviour:
 
-![Select FM5 Speed](../assets/model-trims-mode-elevator-custom-select.png)
-![Select FM4 Thermal](../assets/model-trims-mode-elevator-custom-select-2.png)
+#### OFF
 
-1. Trim for level flight in the default mode (Cruise).
-2. Add a behavior: **Offset + Default**, condition `FM5(Speed)`. Now any
-   trim adjustment made in Speed mode is saved as an offset on top of the
-   Cruise base value — separate, but still dependent on it.
+![](../assets/model-trims-mode-option-off.png)
 
-   ![Offset for Speed](../assets/model-trims-mode-elevator-custom-speed.png)
+With trim Mode set to OFF, the trim is disabled.
 
-3. Add a second behavior: **Offset + Default**, condition `FM4(Thermal)`,
-   the same way. (Once the first behavior exists, the dialog also offers
-   `Equal FM5(Speed)` and `Offset + FM5(Thermal)` as options, since it can
-   now reference that behavior too.)
+For example, on electric models the throttle trim is not required and can be disabled by setting the mode to OFF. The trim can then be repurposed to adjust a Var, please refer to [Repurposed trim](../model-setup/variables-vars.md) in the Vars section.
 
-   ![Offset for Speed and Thermal](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+#### Easy mode
 
-With this set up, adjusting the base Cruise trim later (say, after a C of
-G change) shifts Speed's and Thermal's trims by the same amount
-automatically, since they're offsets on top of it rather than independent
-values.
+![](../assets/model-trims-mode-option-easy.png)
 
-- **Audio** — disable the standard trim announcement for a repurposed
-  trim if it no longer makes sense to hear it.
+In Easy mode there is only one trim value for each control, so the trim value is shared across all flight modes. This is usually appropriate for aileron and rudder trim since these trims usually do not vary across flight modes.
 
-## Additional trims
+#### Independent per flight mode
 
-![Add extra trim](../assets/model-trims-add-trim-select.png)
-![Extra trim settings](../assets/model-trims-add-trim-edit.png)
+![](../assets/model-trims-mode-option-fm.png)
 
-**Add an extra trim** creates a trim beyond the four standard sticks (and
-T5/T6): **Name**, **Up**/**Down** sources to drive it, plus the same
-**Range**, **Step**, **Mode**, and **Audio** options as above.
+#### Custom
+
+![](../assets/model-trims-mode-elevator-custom-select.png)
+
+In Custom mode, the trim behavior can be customized
+
+![](../assets/model-trims-mode-elevator-add-behaviour.png)
+
+Once Custom mode has been selected, a new ‘Behavior’ dialog appears. Click on ‘Add a new behaviour’.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour.png)
+
+A new behavior line will be added.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+The initial behavior options are:
+
+- Unplugged
+- Normal (default)
+- Equal default 
+- Offset + default
+
+Each of the options are described below.
+
+##### Disable trims
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
+
+Trims can be disabled selectively by configuring the ‘Unplugged’ option.
+
+![](../assets/model-trims-mode-unplugged-select.png)
+
+Trims can be disabled selectively by changing from ‘Always On’ to the desired condition. To disable a trim completely, set the trim Mode to OFF as explained above.
+
+##### Equal (to another trim)
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
+
+The trim for a specific condition can be configured to be equal to the trim of another condition.
+
+##### Offset + (another trim)
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+The trim for a specific condition can be configured to be added to the trim of another condition.
+
+##### Offset trim example
+
+On many models you want to have a base elevator trim for when it is flying in its default mode, and then to have dependent elevator trim settings for other flight modes.
+
+As an example, on gliders the default is normally a flight mode called Cruise, where the elevator is trimmed first for level flight.
+
+Then you want dependent elevator trims in other flight modes such as Speed and Thermal. We will ‘Add a new behavior’ for the Speed and Thermal modes.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+![](../assets/model-trims-mode-elevator-custom-speed.png)
+
+We configure the first behavior as ‘Offset + Default’ with condition ‘FM5(Speed)’. When FM5(Speed) mode is selected, any trim adjustments will be saved as an offset to the base mode trim value in FM0(Cruise). Therefore the trim in FM5(Speed) will be separate but also dependent on the base trim.
+
+![](../assets/model-trims-mode-elevator-custom-select-2.png)
+
+Note that when we configure the second behavior, we now get additional ‘Equal FM5(Speed)’ and ‘Offset + FM5(Thermal)’ options in the drop-down dialog. These are due to the first behavior we have configured above.
+
+![](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+
+Similar to the first, we configure the second behavior as ‘Offset + Default’ with condition ‘FM4(Thermal)’. When FM4(Thermal) mode is selected, any trim adjustments will be saved as an offset to the base mode trim value in FM0(Cruise). Therefore the trim in FM4(Thermal) will be separate but also dependent on the base trim.
+
+If your base Cruise trim then needs to change because you have altered the glider’s C of G, the dependent trim settings for Speed and Thermal will also be changed by the same amount.
+
+### Audio
+
+For each trim Audio can be disabled if the standard trim announcements are not desired, for example if the trim has been repurposed.
+
+### Move trim to subtrim
+
+![](../assets/model-trims-mode-elevator-trim-to-subtrim-select.png)
+
+After trimming your model for level flight, this function can be used to move the required trim value (of for example the Elevator) into the Subtrim setting in Channels, and reset the trim in the main screen to the zero position. This makes it easy to check that your flight trims have not moved.
+
+![](../assets/model-trims-mode-elevator-trim-to-subtrim-options.png)
+
+The ‘Move trim to subtrim’ option for the Elevator trim will have ‘Trim Elevator’ selected by default. Other trims may be added, or you may use the master ‘Move trims to subtrims’ option below which selects all trims by default.
+
+## Additional Trims
+
+![](../assets/model-trims-add-trim-select.png)
+
+Additional trims may be created by tapping on the ‘Add an extra trim’ button.
+
+![](../assets/model-trims-add-trim-edit.png)
+
+### Name
+
+The new trim can be named.
+
+### Up
+
+Select the source to be used for increasing the trim value.
+
+### Down
+
+Select the source to be used for decreasing the trim value.
+
+### Range
+
+Please refer to the range description for the standard trims above.
+
+### Step
+
+Please refer to the step description for the standard trims above.
+
+### Mode
+
+Please refer to the description for configuring the behavior of the standard trims above.
+
+### Audio
+
+For each trim Audio can be disabled if the standard trim announcements are not desired, for example if the trim has been repurposed.
 
 ## Cross trim
 
-![Cross trim](../assets/model-trims-cross.png)
-![Cross trim edit](../assets/model-trims-cross-edit.png)
+![](../assets/model-trims-cross-edit.png)
 
-Nominates which trim switch actually adjusts each stick — i.e. lets a
-stick's trim be driven by a different physical trim control than usual.
-(T5/T6 are available on the X20 Pro and X18 only.)
+Cross trims can be set up for each trim stick, so you can nominate which trim switch to use for each stick. (The T5 and T6 trims are available on the X20 Pro and X18 only.)
 
-## Instant trim {: #instant-trim }
+## Instant trim
 
-![Instant trim](../assets/model-trims-instant-trim.png)
+![](../assets/model-trims-instant-trim.png)
 
-While active, adds the current stick positions into the corresponding
-default (and cross) trims. Best assigned to a switch reachable without
-letting go of the sticks — trigger it while flying straight and level to
-set trims instantly, instead of clicking a trim tab repeatedly when trims
-are badly off. Disable it again after the trimming flight to avoid
-accidentally disturbing trims later.
+When this function transitions to active it adds the current stick positions to the respective trim values for default trims (also cross trims). It is best assigned to a switch you can reach without letting go of the sticks, which is then used to instantly set the trims while flying straight and level. This avoids having to frantically press the trim switches many times if the trims are way off. This setting should be disabled after the trimming flight, to avoid accidentally upsetting the trims again.
 
-!!! note
-    Instant trim is only active while viewing one of the main views.
+Please note that Instant Trim is only active when you are on one of the main views.
 
 ## Move trims to subtrims
 
-![Move trims to subtrims](../assets/model-trims-move-trims-to-subtrims.png)
+![](../assets/model-trims-move-trims-to-subtrims.png)
 
-After trimming for level flight, moves a channel's trim value (e.g.
-elevator) into its [Subtrim](outputs.md) setting and resets the on-screen
-trim back to zero — a clean way to confirm flight trims haven't drifted
-since.
+After trimming your model for level flight, this function can be used to move the required trim values into the Subtrim setting in Channels, and reset the trim in the main screen to the zero position. This makes it easy to check that your flight trims have not moved.
 
-With flight modes involved, a channel can have more than one relevant
-trim value, while Subtrim in Outputs is a single global setting applying
-to every flight mode. This function accounts for that: it takes the
-**currently selected** flight mode's trim, moves it into Subtrim, resets
-that trim, and adjusts every *other* flight mode's trim on the same
-channel to compensate — so every flight mode's actual surface position
-ends up unchanged overall.
+![](../assets/model-trims-move-trims-to-subtrims-options.png)
 
-!!! tip
-    Always run this from the same "base" flight mode (e.g. Cruise on a
-    glider) for consistency — it can be repeated safely as long as you do.
+Review the trims to be moved to subtrims. You may wish to deselect the throttle trim.
 
-Large trim or subtrim values create very asymmetric throws — better to
-fix the root cause mechanically. Aim for linkages at 90° when surfaces are
-neutral (flaps being the exception, where you trade some up-travel for
-more down-travel), then use **PWM center** to fine-tune to exactly 90°
-once the linkage is close.
+When using flight modes, there may be more than one trim value to be considered for each channel. The Subtrim parameter in Channels is a global setting which applies in all flight modes, while trim values may vary according to the flight mode. Therefore it follows that shifting the trim in one flight mode into the global Subtrim may require the other flight modes’ trims to be adjusted. Therefore the function will take the trim of the currently selected flight mode, transfer its content to the subtrim, reset the trim, and adjust all other flight modes' affected trims. At the end of the day the control surface positions in each flight mode should be the same as they were before the ‘Trims to subtrims’ operation.
+
+Large trim or subtrim values may have an adverse effect due to the resulting very asymmetric throws. It would be wiser to correct the problem mechanically. Every effort should be made to have 90 deg at the linkages when the surfaces are at neutral, with the exception of flaps where you sacrifice travel in the up direction in order to maximize travel in the down direction. After getting the linkages as close to 90 deg as possible, PWM Center should be used to get them exactly to 90 deg.
+
+There is no problem repeating Trims to Subtrims, but you should be consistent and always do it in the same flight mode, i.e. your ‘base’ flying mode. For example on a glider the Cruise flight mode is usually the base mode and the one to trim first.
