@@ -431,11 +431,11 @@ async def build_locale_pdf(
 
 async def main_async(args: argparse.Namespace) -> None:
     config = load_mkdocs_config(args.mkdocs_yml)
-    sections = nav_sections(config)
+    docs_dir = REPO_ROOT / config["docs_dir"]
+    sections = nav_sections(config, docs_dir)
     names = locale_names(config)
     names.setdefault("en", "English")
 
-    docs_dir = REPO_ROOT / config["docs_dir"]
     # "en" plus every fully-covered locale *not* opted into the LaTeX
     # pipeline (see hooks/_locales.py's PDF_LATEX_LOCALES) --
     # scripts/build_pdf_latex.py handles the rest, into the same --out-dir.
