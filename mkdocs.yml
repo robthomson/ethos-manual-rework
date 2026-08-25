@@ -36,7 +36,16 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.tabs
+    # navigation.tabs rendered every top-level nav entry as its own
+    # horizontal tab -- fine for the old, invented ~12-section nav, but
+    # the real manual's own structure has ~14 top-level chapters (even
+    # after grouping the 8 radio-layout ones below), which overflowed the
+    # tab bar in practice. Sidebar-only nav (sections/indexes, no tabs)
+    # scales to any number of top-level sections with no overflow risk,
+    # today or after any future re-sync -- the same choice the old
+    # ethos-manual/french tree already made for the same reason.
+    - navigation.sections
+    - navigation.indexes
     - navigation.top
     - navigation.footer
     - search.suggest
