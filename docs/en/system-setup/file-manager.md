@@ -1,128 +1,249 @@
-# File Manager
+# File manager
 
-![File Manager - radio](../assets/system-filemanager-radio.png)
+![](../assets/system-icon-filemanager.png)
 
-File Manager browses the radio's storage and flashes firmware to the
-internal RF module, S.Port-connected devices, OTA (Over-The-Air) devices,
-and external modules.
+The ‘File manager’ is for managing files and folders, and access to flash firmware to the RF module, external S.Port, OTA (Over The Air) devices and external modules.
 
-## Storage layout
+Note that when updating the system firmware, the files in the SD or eMMC card may also need updating.
 
-As of Ethos 26.1, system bitmaps and fonts are built into the firmware
-itself rather than living on a browsable internal flash drive — this
-shortens startup time and speeds up the UI, since bitmaps no longer need
-loading dynamically. (On 1.6, this same storage held `bitmaps/system` and
-`fonts/` and was reachable by tapping **Flash**; that tap target no
-longer applies.)
+Please note that from Ethos 26.1 onwards the radio no longer uses the internal Flash memory drive for storing system bitmaps and fonts. These files are now part of the Ethos firmware, shortening the start up time, and increasing the speed of the UI (no dynamic load for bitmaps).
 
-Both the bootloader and the system firmware itself live in this internal
-flash memory, on every FrSky radio back to the original X9D.
+ETHOS has a radio-to-radio Bluetooth file transfer feature. Please refer to the example in the [Sharing files via Bluetooth](../system-setup/file-manager.md) section below.
 
-The **X20/X20S/X20HD** series takes a FAT32-formatted SD card, 32GB or
-smaller (a SanDisk Ultra Micro SDHC Class 10 16GB card is a solid choice).
-The **X18** and **X20 Pro/R/RS** use an internal eMMC by default (an
-external SD card can be added alongside it) — tap **Radio** to browse it.
-Ethos creates `Logs/`, `models/`, and `screenshots/` automatically if
-they're missing; `Firmware/` is a manual convention for device firmware
-files like receivers.
+Note: Both the Bootloader and the system firmware are stored in the internal flash memory on all FrSky Radios back to the original X9D.
 
-## Top-level folders {: #top-level-folders }
+Tap on ‘File manager’ to open the file explorer.
 
-- **`audio/`** — user and system sound files, split by voice
-  (`audio/en/gb`, `audio/en/us`, `audio/en/default`). User files are
-  played by the [Play Audio special function](../model-setup/special-functions.md);
-  system files include `hello.wav` (the "Welcome to Ethos" greeting — a
-  `bye.wav` can be added but isn't provided). Format: 16kHz or 32kHz PCM,
-  linear 16-bit, or A-law (EU)/µ-law (US) 8-bit; filenames up to 31
-  characters plus extension. All three voice folders are kept in sync by
-  Ethos Suite regardless of which is actually selected.
+![](../assets/system-filemanager-sd.png)
 
-  ![Audio folder](../assets/system-filemanager-audio.png)
+The X20/S/HD series requires an SD card that is 32gig or less formatted fat32. SanDisk Ultra Micro SDHC Class 10 16gig cards are a good option. Files will be on the FRSky website.
 
-- **`bitmaps/`** — `bitmaps/models/` holds user model images (set in
-  [Model Edit](../model-setup/model-edit.md) or the new-model wizards);
-  `bitmaps/user/` holds everything else. Recommended format: 32-bit BMP,
-  8 bits per color, with an alpha channel, 300×280px — this keeps the
-  radio's on-board decoding cheap. Ethos resizes BMPs on the fly but not
-  PNG/JPEG. Filenames may only use `A-Z a-z 0-9 ()!-_@#;[]+=` and spaces,
-  and must be 11 characters or fewer (plus a 4-character extension) to
-  show up in the model image picker — longer names still appear in File
-  Manager but won't be selectable there. Ethos Suite's image conversion
-  tools handle the format conversion for you.
+![](../assets/system-filemanager-radio.png)
 
-  ![Bitmaps folder](../assets/system-filemanager-bitmaps.png)
+The X18 and X20 Pro/R/RS radios use an internal eMMC card for file storage by default, but an external SD card may be added. Tap on the ‘Radio’ tab to explore the eMMC card memory. The \[Page\] key may also be used to switch between drives.
 
-- **`documents/user/`** — user text documents, recalled from the **Text**
-  display widget.
+The system will create some of the folders if the user does not create them, like Logs, Models and Screenshots. The Firmware folder was created manually to keep device firmware like receivers, etc.
 
-- **`Firmware/`** — firmware files for the internal RF module, external
-  modules, and other devices (receivers, etc.), flashed from here via
-  S.Port or OTA. Copy new firmware here while the radio is in [bootloader
-  mode](../getting-started/usb-connection-modes.md) and connected by USB;
-  tapping a firmware file and choosing **Flash** starts the update:
+SD Card drive path when connected to a PC:
 
-  ![Flash internal RF module](../assets/system-filemanager-flash.png)
-  ![Flash S8R receiver via S.Port](../assets/system-filemanager-flash-S8R.png)
-  ![Flash TD-R18 receiver OTA](../assets/system-filemanager-flash-TD-ISRM.png)
-  ![Flash the bootloader](../assets/system-filemanager-flash-bootloader.png)
+SD Card (drive letter)/ or
 
-- **`I18n/`** — language translation files.
+RADIO (drive letter)/ {radios with internal eMMC card}
 
-- **`Logs/`** — data logs.
+## File manager menu
 
-- **`models/`** — the model files themselves. These can't be edited
-  directly here, only backed up or shared. Since Ethos v1.2.11, a model is
-  named from its model name rather than `model01.bin` onward (e.g. a model
-  called "Extra" becomes `Extra.bin`; a second "Extra" becomes
-  `Extra01.bin`). Renaming a model in [Model Edit](../model-setup/model-edit.md)
-  renames its file too — always in lower case (the mixed-case display name
-  is stored inside the file), and not every character in a model name
-  survives into the filename. Since v1.1.0 Alpha 17, each user-created
-  model category gets its own subfolder.
+![](../assets/system-filemanager-menu.png)
 
-- **`screenshots/`** — output of the [Screenshot special
-  function](../model-setup/special-functions.md).
+The File manager has an options menu. Tap on the 3 vertical dots in the menu bar (or scroll backwards).
 
-- **`scripts/`** — Lua scripts, optionally organized into their own
-  subfolders with support files. Script types are **widgets** (see
-  [Displays](../displays/index.md)), **tasks and sources** (custom
-  sensors or post-flight actions — installed here, they appear under the
-  model's [Lua](../model-setup/lua-scripts.md) menu), and **tools** (e.g.
-  the stabilized-receiver configuration tools under System menus).
-  Third-party external modules each get their own script and folder,
-  e.g. `scripts/multi`, `scripts/elrs`, `scripts/ghost`,
-  `scripts/crossfire`.
+![](../assets/system-filemanager-menu-options.png)
 
-  !!! warning
-      Lua scripts add to the radio's startup time. A well-written script's
-      delay is unnoticeable — a poorly written one can delay startup
-      almost indefinitely.
+The File manager menu has two options:
 
-- **`radio.bin`** (root folder) — the system settings file, written by
-  the radio itself at initialization. Back it up together with `models/`
-  before a firmware update, so you can downgrade if needed.
+- You can receive a model via Bluetooth. Please refer to the ‘models’ folder below for more detail.
+- You can create a new folder in the folder you have open when you invoke this menu.
 
-- **`firmware.bin`** (root folder) — drop a new radio firmware file here
-  to have it flashed automatically the next time the radio is
-  disconnected from the PC. The SD card/eMMC and internal flash drive
-  contents may need updating in the same pass.
+## File manager sort options
 
-- **`sdcard.version`** (root folder) — the SD card content version,
-  maintained by Ethos Suite.
+![](../assets/system-filemanager-menu-sort-options.png)
+
+Tap on the ‘Sort options’ icon next to the file manager menu icon above, to open the sort options dialog:
+
+- You can sort by file name or by the file last modification date.
+- You can sort in ascending or descending order.
+
+This option is extremely useful for finding the most recent log file in the ‘logs’ folder.
+
+## Top level folders
+
+The top level folders are:
+
+### audio/
+
+This folder is for audio files.
+
+#### audio/en/gb	English voice  
+audio/en/us	American voice  
+**audio/en/default**	default voice
+
+These folders are for user sound files, which can be played by the 'Play audio' special function. Refer to the Model / [Special Functions](#Special Functions section) section, and also the [Choice of Voices](../system-setup/general.md) section.
+
+The format should be 16kHz or 32kHz PCM linear 16 bits or alaw (EU) 8 bits or mulaw (US) 8bits. There may be 31 characters in the names of wav files plus extension.
+
+#### audio/en/gb/system  
+audio/en/us/system  
+a*udio/en/**default**/system*
+
+These folders are for system sound files, e.g.
+
+| hello.wav | The 'Welcome to Ethos' greeting |
+| --- | --- |
+| bye.wav	 | This is not provided by Ethos, but you can add your own goodbye WAV file. |
+
+Tap on the \[audio\] folder to view the folder contents.
+
+![](../assets/system-filemanager-audio.png)
+
+Tap on a WAV file, and select the Play option to listen to it.
+
+The file may also be copied, moved, renamed or deleted. There are also options for sending or receiving the file via Bluetooth. Please refer to [Sharing files via Bluetooth](../system-setup/file-manager.md) below.
+
+Note: All three folders are updated by Ethos Suite regardless of which one(s) you have selected in the Voice options.
+
+### bitmaps/
+
+This folder is for bitmap files.
+
+#### bitmaps/***models***/
+
+![](../assets/system-filemanager-bitmaps.png)
+
+This folder is for user model images that are configured in ‘Model / Edit model’ or the new model wizards.
+
+Note that File Manager displays file details in the right hand pane, such as the file name, the file size and the last modification date.
+
+#### bitmaps/***user***/
+
+This folder is for user bitmaps other than the model images set up in ‘Model / Edit model’.
+
+The recommended image format is the following BMP format:
+
+32bits BMP format
+
+8 bits per color
+
+Alpha channel (used for image transparency)
+
+Size: 300×280px
+
+This format reduces the computational load on the on-board microcontroller of the radio. Additionally, ETHOS will resize BMPs on the fly, but not PNG or JPG.
+
+Image file naming rules:
+
+Rule 1: use only the following characters: A-Z, a-z, 0-9, ()!-\_@#;\[\]+= and Space
+
+Rule 2: the name must not contain more than 11 characters, plus 4 for the extension. If the name is longer than 11 characters, it is displayed in the File Manager but does not appear in the model image selection interface.
+
+#### Image conversion tools
+
+Ethos Suite has image conversion tools available. Please refer to the [Image manager](../frsky-suite/operation.md) section of Ethos Suite.
+
+### ***documents***/
+
+This folder is for documents.
+
+***documents***/***user***/
+
+This folder is for user text documents. They can be called up in the ‘Text’ widget.
+
+### ***Firmware***/
+
+This folder is for firmware files. Firmware updates for the Internal RF module, external modules and other devices like receivers etc. are stored here. They can then be flashed from here via the external S.Port on the radio, or OTA (Over The Air). The new firmware must be copied to the Firmware folder after placing the radio in boot-loader mode and connecting to a PC via USB.
+
+![](../assets/system-filemanager-flash-TD-ISRM.png)
+
+Tap on the Firmware folder to view the firmware files that have been copied to this folder.  Select the appropriate firmware for your device, and then tap on the Flash option in the popup dialog. The example above shows the internal RF module about to be updated.
+
+![](../assets/system-filemanager-flash-S8R.png)
+
+The example above shows an S8R receiver about to be updated via the S.Port connection on the radio.
+
+![](../assets/system-filemanager-flash-OTA.png)
+
+The example above shows a TD-R18 receiver about to be updated Over-The-Air via the wireless link to the bound receiver.
+
+![](../assets/system-filemanager-flash-bootloader.png)
+
+The example above shows the bootloader about to be updated.
+
+The files may also be copied, moved or deleted.
+
+### I18n
+
+This folder holds the language translation files.
+
+### Logs/
+
+Data logs are stored here.
+
+![](../assets/system-filemanager-menu-sort-options-desc.png)
+
+To view the logs, it is most convenient to change the File Manager sort options to ‘Last modification’ and ‘Descending’ order so that the most recent logs are at the top.
+
+Navigate to the logs folder,  then tap on the ‘Sort options’ icon next to the file manager menu icon above, to open the sort options dialog. Tap on sort by ‘Last modification’ and ‘Descending’ order.
+
+![](../assets/system-filemanager-logs.png)
+
+Scroll to the desired recent log file. Note that File Manager displays file details in the right hand pane, including the full file name which is very useful for seeing the complete time stamp if it has been truncated in the view on the left.
+
+Tap on the log file and select ‘Open’ to view it. Please refer to the ‘[Log viewer](../model-setup/special-functions.md)’ section for more details.
+
+### models/
+
+The radio stores model files here. These files cannot be edited by the user, but may be backed up or shared from here. Initially models were simply named from model01.bin onwards, but from Ethos v1.2.11 the model name is used, for example a model named ‘Extra’ will have a filename of ‘Extra.bin’. If there is more than one ‘Extra’, the additional models will be named ‘Extra01.bin’ etc.
+
+When editing the model names in the ‘Edit model’ screen the model filename (.bin) will be changed too. The model filename will be in all lower case (the actual model name with upper and lower case is saved inside the bin). Not all characters are supported for the model file bin name so it might not match the model name exactly.
+
+There are Sub Folders for each user created model category folder.
+
+### screenshots/
+
+Screenshots created by the Screenshot special function are stored here in .png format. Refer to the Model / [Special Functions](#Special Functions section) section.
+
+### scripts/
+
+This folder is used to store Lua scripts. Scripts may be organized into individual folders, and have support files included in a folder structure.
+
+**Caution**! Please note that Lua scripts increase the startup time of the radio. If they are implemented correctly the delay should not be noticeable, but if it is not the case, then the delay may be almost indefinite.
+
+Lua script types include widgets, tasks, sources and tools. They are also used for controlling external modules.
+
+#### Widgets
+
+Widgets are used in the main views to display desired information such as telemetry and radio status etc. Please refer to the [Configure Screens](../configure-screens/index.md) section for more details.
+
+#### Tasks and sources
+
+Using Lua scripts it is possible to create custom sources such as for example custom sensors, or to create tasks that perform custom actions such as for example logging data to a file after flight is over. Once installed under the scripts/ folder, the Lua menu appears in the Model section to manage the task or source for each model. Please refer to the [Lua](../model-setup/lua.md) menu for more details.
+
+#### Tools
+
+For example the stabilized receiver configuration tools that appear in the System menus.
+
+#### Scripts for external modules
+
+Each third-party external module has its own individual Lua file, and should be stored in its own folder.
+
+scripts/multi
+
+scripts/elrs
+
+scripts/ghost
+
+scripts/crossfire
+
+Please refer to the [Third-Party External Modules](https://www.rcgroups.com/forums/showpost.php?p=49550649&postcount=18844) post on the X20 and Ethos thread on rcgroups for more information.
+
+### radio.bin
+
+This file is in the root folder and is created by the radio system when it initializes and holds the system settings. It should be backed up together with the models folder above before updating the firmware, to allow downgrading to the earlier version if required.
+
+The firmware update file firmware.bin should be saved here in the root folder of the SD card or eMMC when doing a radio firmware update. After saving the new firmware.bin file, the update will automatically be flashed into the radio when it is disconnected from the PC. (Please note that you also may need to update the SD card or eMMC drive contents at the same time.)
+
+### sdcard.version
+
+This file holds the sdcard version and is used and maintained by Ethos Suite.
 
 ## Sharing files via Bluetooth
 
-Ethos can transfer files radio-to-radio over Bluetooth. On the
-**receiving** radio, navigate to the destination folder in File Manager,
-long-press `ENT`, and choose **Receive file here**:
+ETHOS has a radio-to-radio Bluetooth file transfer feature.
 
-![Bluetooth receive](../assets/system-filemanager-bluetooth-receive.png)
+![](../assets/system-filemanager-bluetooth-receive.png)
 
-On the **sending** radio, tap the file, choose **Send file**, and follow
-the prompts on both radios:
+On the receiving radio, using File Manager navigate to the model folder that you wish to receive the file or model into. Then tap on the ‘File manager menu’ icon the top line (or scroll backwards and press \[ENT\] on the icon). Then select ‘Receive file here’.
 
-![Bluetooth send](../assets/system-filemanager-bluetooth-send.png)
+![](../assets/system-filemanager-bluetooth-send.png)
 
-If either radio already has an active Bluetooth connection (telemetry,
-trainer link, or — on X20S/Pro — audio), it'll ask whether to disconnect
-that device first.
+On the sending radio, navigate to the file you want to send and tap on it. Then select ‘Send file’ and follow the prompts on both radios.
+
+If the radio is already connected to another Bluetooth device under Telemetry / Bluetooth or Trainer / Link mode / Bluetooth or General / Audio / Bluetooth (X20S/Pro only) you will be asked whether you wish to disconnect that device.

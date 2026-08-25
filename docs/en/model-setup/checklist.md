@@ -1,70 +1,67 @@
 # Checklist
 
-![Checklist](../assets/model-checklist.png)
+![](../assets/model-icon-checklist.png)
 
-A set of preflight safety checks that run when the radio powers up and/or
-a model is loaded. Built-in checks include silent mode, failsafe not set,
-switch/pot positions, radio and RTC battery — the switches check shows
-which direction each switch needs to move, marked with red dots on the
-warning screen:
+The Checklist function provides for a set of preflight checks. This is a group of safety features that take effect when powering up the radio and/or loading a model from the model list.
 
-![Checklist at startup](../assets/model-checklist-at_start.png)
+![](../assets/model-checklist-at_start.png)
 
-!!! note
-    Either `OK` or `RTN` skips the preflight checks entirely, regardless
-    of what the on-screen warning implies.
+The default checks include radio is in silent mode, failsafe not set, switches and pots check, radio low battery, RTC battery low, etc. The switches check shows the direction the switch should be moved, please refer to the red dots in the warning screen example above.
+
+Please note that contrary to the alert above, either the OK or RTN key will skip the preflight checks.
+
+Additional checks can be set below.
+
+![](../assets/model-checklist.png)
 
 ## Throttle check
 
-![Check function](../assets/model-checklist-check_function.png)
+![](../assets/model-checklist-check_function.png)
 
-Enable and choose an operator — `<` (less than), `~` (approximately
-equal), or `>` (greater than) — against a value; warns if the throttle
-stick is outside what that comparison allows.
+To enable throttle check, select the operator to be used. The options are ‘<’ less than, ‘~’ approximately equal, or ‘>’ greater than. The preflight check will warn you if the throttle stick is outside of the value set in the value parameter.
 
 ## Failsafe check
 
-Warns if [failsafe](rf-system.md#failsafe) hasn't been set for the current
-model.
-
-!!! tip
-    Strongly recommended to leave this enabled.
+When enabled, it will warn you if Failsafe has not been set for the current model. It is highly advisable to leave this enabled!
 
 ## Switches check
 
-![Switches](../assets/model-checklist-switches.png)
-![Switch check options](../assets/model-checklist-switches-options.png)
+![](../assets/model-checklist-switches.png)
 
-Per switch, request a specific position at startup (switches with custom
-names from [System Setup →
-Hardware](../system-setup/hardware.md#switches-settings) show those
-names). **Load all switch positions** captures the *current* physical
-positions as the desired ones for every switch not marked **No check**.
+For each switch, you can define whether the radio requests that switches to be in the desired predefined positions. If switches have been given user defined names in System / Hardware / ‘Switches settings’, the names will be displayed.
+
+The ‘Load all switch positions’ option can be used to read the desired positions from the current switch positions except for those marked ‘No check’.
+
+![](../assets/model-checklist-switches-options.png)
+
+The check options are shown above.
 
 ## Function switches check
 
-![Function switches](../assets/model-checklist-function-switches.png)
-![Function switch check options](../assets/model-checklist-function-switches-options.png)
+![](../assets/model-checklist-function-switches.png)
 
-The same idea, for the six [function
-switches](model-edit.md#function-switches). **Load all function switch
-positions** works the same way as above.
+![](../assets/model-checklist-function-switches-options.png)
+
+For each function switch, you can define whether the radio requests that switches to be in the desired predefined positions. The options are shown above.
+
+The ‘Load all function switch positions’ option can be used to read the desired positions from the current function switch positions except for those marked ‘No check’.
 
 ## Pots / Sliders check
 
-![Pots](../assets/model-checklist-pots.png)
-![Pot check options](../assets/model-checklist-pots-options.png)
+![](../assets/model-checklist-pots.png)
 
-Requests specific pot/slider positions at startup, individually per
-control (`~`/`<`/`>`, same as the throttle check). **Load all pot
-positions** captures current positions automatically — check the
-auto-selected operators carefully afterward, since `~` vs. `<`/`>` may
-not match what you actually intended.
+Defines whether the radio requests the pots and sliders to be in predefined positions at startup. The desired pot values can be entered for each pot.
+
+The ‘Load all pot positions’ option can be used to read the desired positions from the current pot positions except for those marked ‘No check’. A careful check must be made to ensure that the automatically selected operators are as desired (i.e. ‘~’ vs ‘<’ or ‘>’).
+
+![](../assets/model-checklist-pots-options.png)
+
+Alternatively, the check functions may be set individually (i.e. ‘~’ vs ‘<’ or ‘>’).
 
 ## User defined text
 
-![User checklist text](../assets/model-checklist-user-checklist.png)
+The Checklist function can also display user defined text. The text can be plain text or enhanced text.
 
-Displays a plain- or enhanced-text file as part of the startup checklist,
-once installed for the model. See [How-To: User Defined Text
-Checklist](../how-to/user-defined-checklist.md) for the full setup.
+![](../assets/model-checklist-user-checklist.png)
+
+Once the text file is installed for a given model and that model is loaded the radio will display the Checklist as part of the startup routine. Please refer to [How to set up a User Defined Text Checklist](../programming-tutorials/how-to-section.md) in the How To section.

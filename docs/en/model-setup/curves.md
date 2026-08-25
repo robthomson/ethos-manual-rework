@@ -1,99 +1,145 @@
 # Curves
 
-![Curve types](../assets/model-curves-type.png)
+![](../assets/model-icon-curves.png)
 
-Reusable response curves for [Mixes](mixes.md#anatomy-of-a-mix) or
-[Outputs](outputs.md#editing-a-channel) — the built-in Expo is available
-directly in both, but anything more elaborate is defined here (or via
-**Add curve**, reachable directly from either edit screen). Up to 50
-curves are available; none exist by default (Expo is always built in
-regardless). Add one with **+**; tap an existing curve for
-**Edit**/**Move**/**Copy-paste**/**Clone**/**Delete**.
+Curves may be used to modify the control response in the Mixes or Channels. While the standard Expo curve is available directly in those sections, this section is used to define any custom curves that may be required. The 'Add curve' function may also be reached from the Mixes and Channels edit screens directly.
 
-![Add curve](../assets/model-curves-add.png)
+There are 50 curves available.
 
-## Curve types
+![](../assets/model-curves-add.png)
 
-- **Expo** — default value 40; positive softens the response around
-  center, negative sharpens it. Softening around mid-stick helps avoid
-  over-controlling, especially for less experienced pilots.
+There are no default curves (except Expo which is built in). Tap on the ‘+’ button to add a new curve.
 
-  ![Expo](../assets/model-curves-expo.png)
+![](../assets/model-curves-edit-options.png)
 
-- **Function** — a small set of fixed mathematical shapes:
+Once curves have been defined, tapping on one will bring up a popup menu, allowing you to edit, move, copy/paste, clone or delete that curve.
 
-  ![Function types](../assets/model-curves-fn-types.png)
+![](../assets/model-curves-edit.png)
 
-  - **x > 0** — passes the source through unchanged while positive;
-    outputs 0 while negative.
+The initial screen allows you to name your curve, and to select the curve type.
 
-    ![x > 0](../assets/model-curves-fn-xgt0.png)
+![](../assets/model-curves-type.png)
 
-  - **x < 0** — the mirror: passes through while negative, 0 while
-    positive.
+The available curve types are:
 
-    ![x < 0](../assets/model-curves-fn-xlt0.png)
+## Expo
 
-  - **|x|** — passes the source through as its absolute value (always
-    positive).
+The default exponential curve has value of 40.
 
-    ![|x|](../assets/model-curves-fn-barx.png)
+![](../assets/model-curves-expo.png)
 
-  - **f > 0** — outputs 100% while the source is positive, 0 while
-    negative (a hard switch, not a pass-through).
+A positive value will soften the response around 0, while a negative value will sharpen the response around 0. Softening the response around mid stick helps to avoid over controlling the model, especially for beginners.
 
-    ![f > 0](../assets/model-curves-fn-fgt0.png)
+## Function
 
-  - **f < 0** — outputs −100% while negative, 0 while positive.
+![](../assets/model-curves-fn-types.png)
 
-    ![f < 0](../assets/model-curves-fn-flt0.png)
+The following mathematical function curves are available:
 
-  - **|f|** — outputs −100% while negative, +100% while positive.
+### x > 0
 
-    ![|f|](../assets/model-curves-fn-barf.png)
+![](../assets/model-curves-fn-xgt0.png)
 
-  Every curve type — Function included — also has an **Offset**, shifting
-  it up or down on the Y axis (one decimal place precision, same as Y
-  values generally):
+If the source value is positive, then the curve output follows the source.
 
-  ![Function offset](../assets/model-curves-fn-xgt0-offset.png)
+If the source value is negative, then the curve output is 0.
 
-- **Custom** — a point-based curve, 5 points by default, up to 21.
+#### Offset
 
-  ![5-point custom curve](../assets/model-curves-custom5.png)
+![](../assets/model-curves-fn-xgt0-offset.png)
 
-  - **Smooth** — runs a smooth curve through all points instead of
-    straight segments between them.
+Note that all curves can have a positive or negative offset which will shift the curve upwards or downwards on the Y axis. Curves offsets and Y value have a one decimal precision.
 
-    ![Smoothed curve](../assets/model-curves-custom5-2-smooth.png)
+### x < 0
 
-  - **Easy mode** — **On** restricts editing to evenly-spaced Y
-    coordinates only (X is fixed); **Off** allows editing both X and Y
-    per point, except the −100%/+100% endpoints, which are locked since
-    the curve must always cover the full signal range.
+![](../assets/model-curves-fn-xlt0.png)
 
-    ![Easy mode off](../assets/model-curves-custom-easy-off.png)
+If the source value is negative, then the curve output follows the source.
 
-  **Editor controls** (same pattern as the [Outputs balance curve
-  editor](outputs.md#balance-channels)):
+If the source value is positive, then the curve output is 0.
 
-  - **Source** — the curve's own mix source(s) by default, or **Auto
-    analog input** to pick up the first stick/slider/pot moved.
-  - Nearest-point snapping to the rotary encoder, and a **Lock** toggle
-    to freeze inputs while observing the resulting control surface
-    movement.
-  - A live cursor shows the current input value driving the curve, to
-    help line it up with a point before adjusting.
+### |x|
 
-## Driving a curve from a Var
+![](../assets/model-curves-fn-barx.png)
 
-Both a Function curve's **Offset** and an individual **Custom** curve
-point can be driven by a [Var](variables.md) instead of a fixed value —
-and that Var can in turn be adjusted in flight via a repurposed trim:
+The curve output follows the source, but is always positive (also called ‘absolute value’).
 
-![Function offset from a Var](../assets/model-curves-fn-offset-var.png)
-![Custom curve point from a Var](../assets/model-curves-custom-with-var.png)
+### f > 0
 
-See [Variables](variables.md) and [How-To: In-Flight Adjustable
-Compensation Curve](../how-to/in-flight-compensation-curve.md) for a full
-worked example of this pattern.
+![](../assets/model-curves-fn-fgt0.png)
+
+If the source value is negative, then the curve output is 0.
+
+If the source value is positive, then the curve output is 100%.
+
+### f < 0
+
+![](../assets/model-curves-fn-flt0.png)
+
+If the source value is negative, then the curve output is -100%.
+
+If the source value is positive, then the curve output is 0.
+
+### |f|
+
+![](../assets/model-curves-fn-barf.png)
+
+If the source value is negative, then the curve output is -100%.
+
+If the source value is positive, then the curve output is +100%.
+
+## Custom
+
+### Points count
+
+![](../assets/model-curves-custom5.png)
+
+The default custom curve has 5 points. You may have up to 21 points on your curve.
+
+##### Menu buttons
+
+![](../assets/Pictures/1000000000000018000000181B9B646A.png) The source(s) configured in the curve’s mixes may be used, or optionally any other convenient analog input. If you select this 'Auto analog input' option, the first stick, slider or pot you move will be used as the source for X.
+
+Please note that this input button only appears if the curve is attached to a mix.
+
+![](../assets/Pictures/10000000000000280000001EF06CB86B.png)When selected, the nearest curve point on the X axis will be automatically selected for adjustment with the rotary encoder.
+
+The input must be adjusted to align the X value with a curve point before adjustment is made.
+
+![](../assets/Pictures/100000000000001500000019F279C5CD.png) Tapping on this icon, or pressing the ENTER key while in graph edit mode will toggle Lock mode on and off. When enabled, all inputs are locked so that you can release the stick input, allowing you to observe the control surfaces while you adjust your curve.
+
+To assist in setup, the cursor will be active, showing the value of the input that is driving the curve.
+
+![](../assets/model-curves-custom5-2.png)
+
+Curves offsets and Y value have a one decimal precision.
+
+### Smooth
+
+![](../assets/model-curves-custom5-2-smooth.png)
+
+If enabled a smooth curve is created through all points.
+
+### Easy mode = On
+
+Easy mode has equidistant fixed values on the X axis, and only allows the Y coordinates for the curve to be programmed.
+
+### Easy mode = Off
+
+![](../assets/model-curves-custom-easy-off.png)
+
+#### Points
+
+With ‘Easy mode’ Off, both the X and Y coordinates may be configured, (see example above).  Note that the -100% and +100% X coordinates for the curve end-points cannot be edited, because the curve must cover the full signal range.
+
+## Function curve ***offset*** change in flight
+
+![](../assets/model-curves-fn-offset-var.png)
+
+The above example shows the Offset parameter of a curve of type “Function" driven by a Var, which could possibly be adjusted in flight by a reassigned Trim.
+
+## Curve point change in flight
+
+![](../assets/model-curves-custom-with-var.png)
+
+In this example above the middle curve point is being driven by a Var, which again could be adjusted in flight by a reassigned Trim. Please refer to the [VARs](../model-setup/variables-vars.md) section for more details.

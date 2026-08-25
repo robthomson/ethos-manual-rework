@@ -1,0 +1,7 @@
+# X20/X20S Layouts
+
+![](../assets/Pictures/10000001000007D90000068B95A2EA23.png)
+
+![](../assets/Pictures/1000000100000704000005D82534BFA9.png)
+
+![](../assets/Pictures/100000010000066F000005D3E0D00C71.png)

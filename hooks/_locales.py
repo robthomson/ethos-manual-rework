@@ -71,12 +71,13 @@ def fully_covered_locales(docs_dir: Path) -> list[str]:
 
 # Which locales render their PDF manual via the LaTeX/pandoc pipeline
 # (scripts/build_pdf_latex.py) instead of the default Playwright one
-# (scripts/build_pdfs.py). A per-locale choice, not a global switch -- French
-# is first because it's the locale that already had a LaTeX-based manual in
-# the predecessor repo (C:\GitHub\ethos-manual's french/forge/pdf.py) to
-# model this on. Add a locale here once its PDF should switch pipelines;
-# nothing else needs to change to do so.
-PDF_LATEX_LOCALES = {"fr"}
+# (scripts/build_pdfs.py). A per-locale choice, not a global switch --
+# empty for now: French (the original reason this pipeline exists at all,
+# modeled on the predecessor repo's french/forge/pdf.py) was removed along
+# with every other locale that had no real .odt source to sync content
+# from (see ethos-tools/manual-sync/) -- add a locale here once its PDF
+# should switch pipelines; nothing else needs to change to do so.
+PDF_LATEX_LOCALES = set()
 
 
 def pdf_build_method(locale: str) -> str:

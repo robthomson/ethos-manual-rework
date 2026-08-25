@@ -1,95 +1,317 @@
 # Trainer
 
-![Trainer](../assets/model-trainer.png)
+![](../assets/model-icon-trainer.png)
 
-Off by default. Set the radio as **Master** (the instructor's radio,
-receiving up to 16 controls from the student) or **Slave** (the student's
-radio, sending a configurable number of channels to the instructor).
+The Trainer function can be configured as master or slave. In master mode, up to 16 controls may be transferred from the slave or student radio to the master or tutor radio when the 'Active condition' is active. In slave mode a configurable number of channels are transferred to the master.
 
-## Master mode
+There are 5 methods for configuring trainer links, which can be used simultaneously in any direction using:
 
-![Master mode](../assets/model-trainer-master.png)
-![Trainer options](../assets/model-trainer-options.png)
+- Trainer cable
+    - Bluetooth
+    - SBUS on the external module connector 
+    - PPM on the external module connector (this one cannot be used at the same time as SBUS on external module)
+    - SBUS on the radio’s S.Port connector
 
-### Link mode
+The above can also be used for other applications like a head tracker module sending signals which the radio uses to control an FPV camera view.
 
-![Link mode options](../assets/model-trainer-link-mode-options.png)
+![](../assets/model-trainer-add.png)
 
-- **Trainer cable** — a 3.5mm mono audio lead between the two radios.
-- **Bluetooth** —
+There are no default trainer links. Tap on the ‘+’ button to add a new trainer link.
 
-  ![Bluetooth link](../assets/model-trainer-link-mode-bt.png)
+![](../assets/model-trainer-options.png)
 
-  - **Mode** — normal or high speed; use high speed for lower latency if
-    both radios support it.
+Choose the connection method from the four options listed.
 
-    ![Bluetooth mode](../assets/model-trainer-link-mode-bt-mode.png)
+## Trainer cable
 
-  - **Local name** — the BT name shown to other devices (default
-    `FrSkyBT`, editable).
-  - **Local address** — this radio's Bluetooth address.
-  - **Distant address** — the paired radio's address, once linked.
-  - **Search devices** (Master mode only) — scans for nearby devices:
+![](../assets/model-trainer-cable-select.png)
 
-    ![Searching](../assets/model-trainer-link-mode-bt-search.png)
-    ![Waiting](../assets/model-trainer-link-mode-bt-search-waiting.png)
-    ![Select device](../assets/model-trainer-link-mode-bt-select-device.png)
-    ![Connected](../assets/model-trainer-link-mode-bt-device-connected.png)
+Tap on the ‘Trainer cable’ option to configure a trainer link using a physical cable, which should be a 3.5mm mono audio lead.
 
-  - **Connect Last Device** / **Reset Module** — reconnect to the
-    previous pairing, or wipe the Bluetooth module's configuration
-    entirely.
+### State
 
-- **SBUS external module** — an SBUS input on the PXX-IN pin of the
-  external module bay, for fitting an SBUS-output FrSky receiver (e.g.
-  Archer RS) as the receiving end of a wireless link — letting **any**
-  FrSky radio act as the student (buddy box) side, bound to that
-  receiver.
-- **CPPM external module** — the same idea via a CPPM input, for a legacy
-  receiver with CPPM output.
+The trainer cable function may be disabled. This allows the user to enable only one trainer tab at a time, while preserving the different configurations.
 
-### Active condition
+### Trainer mode
 
-![Active condition](../assets/model-trainer-active-condition.png)
+#### Slave
 
-A switch/button, function switch, logical switch, trim position, or
-flight mode that hands control to the student while active.
+![](../assets/model-trainer-cable-slave.png)
 
-### Trainer channels
+The default mode for a trainer cable is Slave.
 
-![Active condition edit](../assets/model-trainer-active-condition-edit.png)
+##### Channel range
 
-Up to 16 channels can transfer from student to master while Active
-condition is true. Tap a channel to configure it individually:
+Eight channels are transmitted, with the starting channel number configurable.
 
-- **Active condition** — a per-channel override, e.g. to disable just the
-  student's elevator input for part of a session.
-- **Mode** — **OFF** (disabled for trainer use), **Add** (master and
-  student signals sum together, so both can act on the control at once),
-  or **Replace** (the normal mode — student has full control of this
-  channel while active).
-- **Percent** — scales the student's input, normally 100%.
-- **Destination** — which function the student's channel maps to.
+#### Master
 
-See [How-To: Instant Take-Back](../how-to/instant-takeback.md) for a
-worked example of an instructor reclaiming control instantly via a
-switch, and [Ignore trainer
-input](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-for excluding the student's stick movement from a logical switch that's
-watching the instructor's own sticks.
+![](../assets/model-trainer-cable-master-select.png)
 
-## Slave mode
+The trainer cable mode may be changed to Master to configure the radio for the tutor.
 
-![Slave mode](../assets/model-trainer-slave-mode.png)
+![](../assets/model-trainer-cable-master.png)
 
-- **Link Mode** — the same choice of trainer cable, Bluetooth, or
-  SBUS/CPPM external module as Master (same Bluetooth **Mode**/**Local
-  Name**/**Local Address**/**Dist Address** fields).
+##### Trainer master configuration
 
-  ![Slave link mode](../assets/model-trainer-slave-link-mode.png)
+Please refer to the [Trainer master configuration](../model-setup/trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
 
-- **Channel Range** — which range of this radio's channels is sent to the
-  master.
+#### Trainer cable options
 
-  ![Slave channels](../assets/model-trainer-slave-channels.png)
-  ![Slave channel edit](../assets/model-trainer-slave-channel-edit.png)
+![](../assets/model-trainer-cable-master-delete-select.png)
+
+Tapping on the ‘Trainer cable’ tab brings up the tab options.
+
+If a trainer cable master has been configured, then the copy followed by the paste options become available. This allows the trainer master settings to be copied and pasted between the trainer methods.
+
+Finally a delete option is available to delete the trainer cable configuration tab.
+
+## Bluetooth
+
+![](../assets/model-trainer-bt-select.png)
+
+Select the ‘Bluetooth’ option to configure a trainer link using Bluetooth.
+
+### State
+
+The Bluetooth trainer function may be disabled. This allows the user to enable only one trainer tab at a time, while preserving the different configurations.
+
+### Trainer mode
+
+#### Slave
+
+![](../assets/model-trainer-bt-slave.png)
+
+The default trainer mode for Bluetooth is Slave.
+
+##### Local name
+
+##### Local address
+
+This is the local Bluetooth address of the radio.
+
+This is the local BT name that will be displayed in devices being connected. The default name is the radio model, but may be edited here.
+
+##### Device
+
+Details of the Bluetooth connection.
+
+##### Channel range
+
+By default the first eight channels are transmitted, but this is configurable.
+
+#### Master
+
+![](../assets/model-trainer-bt-master-select.png)
+
+The Bluetooth trainer mode may be changed to Master to configure the radio for the tutor.
+
+![](../assets/model-trainer-bt-master.png)
+
+##### Local name
+
+##### Local address
+
+This is the local Bluetooth address of the radio.
+
+This is the local BT name that will be displayed in devices being connected. The default name is the radio model, but may be edited here.
+
+##### Device
+
+##### Search
+
+![](../assets/model-trainer-bt-master-search.png)
+
+Tap on 'Search devices' to put the radio into BT search mode.
+
+![](../assets/model-trainer-bt-master-alice.png)
+
+Found devices are listed in a popup dialog with a request to select a device. Select the BT address that matches the radio to be used as training mate.
+
+![](../assets/model-trainer-bt-master-connected-ok.png)
+
+The selected BT device has been connected.
+
+![](../assets/model-trainer-bt-master-connected.png)
+
+Once a Bluetooth device has been found and linked, the remote device's Bluetooth address is displayed on the Device line.
+
+![](../assets/model-trainer-bt-master-disconnect-select.png)
+
+##### Disconnect
+
+Tap on the Device to bring up a Disconnect option.
+
+#### Trainer master configuration
+
+##### Active condition
+
+![](../assets/model-trainer-bt-master-active-condition.png)
+
+Control of the model can be transferred to the student radio by a switch or button, a function switch, logic switch, trim position, or flight mode.
+
+##### Trainer channels
+
+![](../assets/model-trainer-bt-master-channels.png)
+
+Up to 16 controls may be transferred from the student radio to the master radio when the 'Active condition' set above is active.
+
+![](../assets/model-trainer-bt-master-channel-edit.png)
+
+Tap on each channel to configure it individually.
+
+##### Active condition
+
+Each individual slave channel can also be controlled by the selected source. So for example the student’s elevator input can be disabled during a session.
+
+##### Mode
+
+##### OFF
+
+Disables the channel for trainer use.
+
+##### Add
+
+Selects additive mode, where both master and slave signals are added so both teacher and student can act upon the function.
+
+##### Replace
+
+Replaces the master radio's control with the student's, so the student has full control while the 'Active condition' is active. This is the normal mode of use.
+
+##### Percent
+
+Normally set to 100%, but can be used to scale the Slave input.
+
+##### Destination
+
+Maps the slave radio's channel to the corresponding function.
+
+### Option to Ignore Trainer Input
+
+![](../assets/trainer-take-back-ailinput-ignore.png)
+
+In logic switches the sources may have this option set to ignore sources coming from the trainer input. A typical application is where a logic switch is configured to detect movement of the master trainer’s sticks (e.g. Aileron stick) to allow for instant intervention if things go wrong. This option is needed to prevent the student stick inputs from triggering the logic switch.
+
+![](../assets/trainer-take-back-ailinput-ignore-enabled.png)
+
+The little ‘crossed-out circle’ icon shows that the Aileron source will ignore Aileron inputs from the student radio.
+
+### Bluetooth trainer options
+
+![](../assets/model-trainer-bt-master-options.png)
+
+Tapping on the ‘Bluetooth’ tab brings up the Bluetooth tab options.
+
+If a Bluetooth master has been configured, then the copy followed by the paste options become available. This allows the trainer master settings to be copied and pasted between the trainer methods.
+
+![](../assets/model-trainer-bt-master-delete-select.png)
+
+Finally a delete option is available to delete the Bluetooth configuration tab.
+
+## External module
+
+![](../assets/model-trainer-ext-select.png)
+
+Select the ‘External module’ option to configure a trainer link using an external module.
+
+### State
+
+The external module trainer function may be disabled. This allows the user to enable only one trainer tab at a time, while preserving the different configurations.
+
+### Trainer mode
+
+#### Slave
+
+![](../assets/model-trainer-ext-slave.png)
+
+The default trainer mode for an external module is Slave.
+
+##### Protocol
+
+![](../assets/model-trainer-ext-slave-protocol-select.png)
+
+There are 2 protocol options for a for slave trainer link using the external module interface on the back of the radio:
+
+##### SBUS
+
+Please refer to the [SBUS](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for an SBUS trainer connection.
+
+##### PPM\`
+
+Please refer to the [PPM](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for a PPM trainer connection.
+
+##### Channel range
+
+With SBUS 16 channels are transmitted. With PPM eight channels are transmitted, but the starting channel number is configurable.
+
+#### Master
+
+![](../assets/model-trainer-ext-master.png)
+
+##### Protocol
+
+![](../assets/model-trainer-ext-master-protocol-select.png)
+
+There are 2 protocol options for a for master trainer link using the external module interface on the back of the radio:
+
+##### Trainer master (SBUS)
+
+Please refer to the [Trainer master (SBUS)](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for an SBUS trainer connection.
+
+##### Trainer master (PPM)
+
+Please refer to the [Trainer master (PPM)](../model-setup/rf-system.md) section in Model /RF for details on configuring the external module interface for a PPM trainer connection.
+
+##### Trainer master configuration
+
+Please refer to the [Trainer master configuration](../model-setup/trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
+
+#### Trainer cable options
+
+Tapping on the ‘S.Port connector’ tab brings up the tab options.
+
+If a master trainer has been configured, then the copy followed by the paste options become available. This allows the trainer master settings to be copied and pasted between the trainer methods.
+
+Finally a delete option is available to delete the external module configuration tab.
+
+## S.Port connector
+
+![](../assets/model-trainer-sport-select.png)
+
+Select the ‘S.Port connector’ option to configure a trainer link using the S.Port connector at the top of the radio.
+
+### State
+
+The S.Port connector trainer function may be disabled. This allows the user to enable only one trainer tab at a time, while preserving the different configurations.
+
+### Trainer mode
+
+#### Slave
+
+![](../assets/model-trainer-sport-slave.png)
+
+The default mode for an S.Port connector trainer is Slave.
+
+##### Channel range
+
+By default the first eight channels are transmitted, but this is configurable.
+
+#### Master
+
+![](../assets/model-trainer-sport-master-select.png)
+
+The S.Port connector trainer mode may be changed to Master to configure the radio for the tutor.
+
+![](../assets/model-trainer-sport-master.png)
+
+##### Trainer master configuration
+
+Please refer to the [Trainer master configuration](../model-setup/trainer.md) section below for details on configuring the Trainer master mode ‘Active condition’ and slave channels.
+
+#### Trainer cable options
+
+Tapping on the ‘S.Port connector’ tab brings up the tab options.
+
+If a master trainer has been configured, then the copy followed by the paste options become available. This allows the trainer master settings to be copied and pasted between the trainer methods.
+
+Finally a delete option is available to delete the S.Port connector configuration tab.

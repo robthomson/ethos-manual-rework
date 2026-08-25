@@ -1,130 +1,160 @@
 # Hardware
 
-![Hardware check](../assets/system-hardware-check-x20s.png)
+![](../assets/system-icon-hardware.png)
 
-Testing and calibrating the radio's physical controls, switch type
-definitions, and the home key map.
+The Hardware section is used to test all inputs, perform analog and gyro calibration, and set switch types and the ‘home key’ map.
 
-## Hardware check {: #hardware-check }
+![](../assets/system-hardware.png)
 
-Exercises every physical input so you can confirm each one registers
-correctly.
+## Hardware check
 
-![X20 Pro hardware check](../assets/system-hardware-check-x20pro.png)
-![X18S hardware check](../assets/system-hardware-check-x18s.png)
+![](../assets/system-hardware-check-x20s.png)
 
-- **X20 Pro/R/RS** — also checks the two latching pushbutton switches **K**
-  and **L** on the rear shoulders, plus the additional trims **T5**/**T6**.
-- **X18** — also checks the additional trims **T5**/**T6**.
+The Hardware check allows all the inputs to be checked for operation.
 
-## Analogs calibration {: #analogs-calibration }
+### X20 Pro/R/RS
 
-![Analog calibration](../assets/system-hardware-analogs-calibration.png)
+![](../assets/system-hardware-check-x20pro.png)
 
-Teaches the radio exactly where the center and limits of each gimbal, pot,
-and slider are. Runs automatically on first startup; repeat it after
-replacing a gimbal, pot, or slider.
+The Hardware check for the X20 Pro/R/RS radios includes the two latching pushbutton switches K and L on the rear shoulders, as well as the additional Trims T5 and T6.
+
+### X18
+
+![](../assets/system-hardware-check-x18s.png)
+
+The X18 radios also have the additional Trims T5 and T6.
+
+## Analogs calibration
+
+![](../assets/system-hardware-analogs-calibration.png)
+
+Analogs calibration is be performed so that the radio knows exactly where the centers and limits of each gimbal, pot, and slider are. It is automatically run at initial startup. It should be repeated after replacement of a gimbal, pot or slider.
 
 ## Gyro calibration
 
-![Gyro calibration](../assets/system-hardware-gyro-calibration.png)
+![](../assets/system-hardware-gyro-calibration.png)
 
-Calibrates the built-in gyro so tilt-based inputs respond correctly to
-tilting the radio — the "level" position becomes however you normally hold
-it. Also runs automatically on first startup.
+Gyro calibration can be performed so that the gyro sensor outputs respond correctly to tilting the radio. It is automatically run at initial startup. For example, the radio 'level' position would be the angle at which you normally hold the radio.
 
 ## Analogs filter
 
-An on/off ADC filter for the sticks, on by default — reduces jitter around
-stick center. This is the **global** setting; there's also a **per-model**
-Analogs Filter override under [Model Edit](../model-setup/model-edit.md).
+The analog to digital converter filter for the sticks can be turned on/off with this setting. The default value is ON, which may improve jitter around stick centre. This is a global setting here on the Hardware page. There is a model specific option available in the ‘Edit model’ section under [Analogs Filter](../model-setup/edit-model.md).
 
-## Pots/Sliders settings {: #potssliders-settings }
+## Pots/Sliders settings
 
-Rename the pots and sliders. The **X20 Pro/R/RS** additionally supports two
-extra pots, **Ext1**/**Ext2**, typically used for 3-axis gimbals.
+![](../assets/system-hardware-pots-x20s.png)
 
-![ADC values, pots](../assets/system-hardware-pots-x20s.png)
-![ADC values, pots (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
+The pots and sliders can be given custom names here.
 
-## Switches settings {: #switches-settings }
+### X20 Pro/R/RS
 
-![Switches](../assets/system-hardware-switches.png)
+![](../assets/system-hardware-pots-x20pro.png)
 
-- **Switch middle detect delay** — prevents a fast up→down (or down→up)
-  flip of a 3-position switch from momentarily registering the middle
-  position; the middle should only register when the switch actually stops
-  there. Default is 0ms, chosen to suit FrSky stabilized receivers'
-  "self-check" detection on CH12.
-- **Switch type** — SA–SJ can each be defined as **None**, **Momentary**,
-  **2 POS**, or **3 POS**, letting you swap functionality between physical
-  switches (e.g. give momentary switch SH the role normally played by
-  2-position SF) — subject to what the radio's wiring actually supports
-  (a 3-position role generally can't be assigned to hardware that isn't
-  wired for it).
+The X20 Pro/R/RS has the facility for two additional pots Ext1 and Ext2. These may typically be used when installing 3-axis gimbals.
 
-  ![Switch options](../assets/system-hardware-switches-options.png)
-  ![Additional switches](../assets/system-hardware-switches-2.png)
+## Switches settings
 
-- **Renaming** — switches can be renamed from SA–SJ to custom names;
-  names are global across all models.
-- **X20 Pro** — adds pushbutton switches **K**/**L** on the rear
-  shoulders, plus positions **M**/**N** if wired (typically for stick-end
-  switches).
-- **XE series** — physical switches are marked **S1**–**S14**, mapped by
-  default to Ethos's **SA**–**SN** — relabel them to **S1**–**S14** (to
-  match the radio's own silkscreen) or any other naming, as preferred. The
-  XE series' extra abstraction layer means any physical switch can be
-  mapped to any Ethos switch position.
+![](../assets/system-hardware-switches.png)
+
+![](../assets/system-hardware-switches-2.png)
+
+### Switch middle detect delay
+
+This setting ensures that the switch middle position on three way switches is not detected when the switch is flipped from the up to the down position in one movement, and vice versa. It should only be detected when the switch stops in the middle position. The default has been changed to 0ms to suit the FrSky stabilized receivers when detecting 'Self check' on CH12.
+
+![](../assets/system-hardware-switches-options.png)
+
+Switches SA to SJ may be defined as:
+
+- None
+- Momentary
+- 2 POS
+- 3 POS
+
+This allows for switches to be swapped over, for example the momentary switch SH could be swapped over with the 2 position switch SF. Note that it may not be possible to replace a momentary or 2 position with a 3 position switch if the radio wiring does not allow for it.
+
+Switches may also be renamed from the default names SA through SJ to custom names. Note that these names will be global across all models.
+
+### X20 Pro
+
+![](../assets/system-hardware-switches-x20pro.png)
+
+The X20 Pro has two additional latching pushbutton switches SK and SL on the rear shoulders. In addition, switch positions M and N may be wired to the circuit board, typically used for stick end switches.
+
+### XE series only
+
+![](../assets/xers-hw-switches.png)
+
+On the XE series the switches are marked S1 to S14, which by default map to SA to SN in Ethos. If desired the Ethos labels may be changed to S1 to S14 to reflect the markings on the radio, or any other desired naming.
+
+Note that due to its additional abstraction layer any switch may be mapped to any Ethos switch position.
 
 ## Home keymap
 
-Reassigns what the `SYS`, `MDL`, and `DISP` (`TELE` on older radios) home
-keys jump to.
+![](../assets/system-hardware-shortcuts.png)
 
-- **`DISP`** — both short- and long-press can be reassigned to any Model
-  page, System page, Configure Screens, Home, or the Flight Data Record.
-  For consistency with the X10 series, `DISP` long-press is conventionally
-  set to Configure Screens.
-- **`SYS`/`MDL`** — only the long-press is reassignable (to the same set
-  of destinations); a short press always opens the System or Model section
-  respectively.
+The \[SYS\], \[MDL\] and \[DISP\] (TELE on older models) home keys can be re-assigned to suit the user.
 
-## Radio-specific hardware options {: #radio-specific-hardware-options }
+### \[DISP\] key
 
-- **Bluetooth audio option** (X20, X20R, X20RS) — enables an optional
-  Bluetooth audio module for these radios, for use with Bluetooth
-  earbuds/headsets. This isn't plug-and-play hardware — the module has to
-  be surface-mount soldered in — this setting just enables it once fitted.
+![](../assets/system-hardware-shortcuts-options.png)
 
-  ![Bluetooth audio option](../assets/system-hardware-bt-audio-options.png)
+For the \[DISP\] key both short and long press options may be reassigned to any Model page, System page, the ‘Configure screens’ page, the Home page or the Flight Data Record. For consistency with the X10 series, the \[DISP\_long\] may be conventionally assigned to the ‘Configure screens’ page.
 
-- **Enabling haptic gimbal upgrades** (X20 Pro, X20R) — the X20 Pro AW and
-  X20RS ship with MC20R gimbals that have haptic stick-shaker motors; if
-  MC20R gimbals have been retrofitted to an X20 Pro or X20R, enable them
-  here (see [Special Functions](../model-setup/special-functions.md) for
-  configuring the haptic patterns themselves).
+### \[SYS\] and \[MDL\] keys
 
-  ![Haptic (X20 Pro)](../assets/system-hardware-haptic-x20pro.png)
-  ![Haptic (X20 Pro AW)](../assets/system-hardware-haptic-x20proaw.png)
+For the \[SYS\] and \[MDL\] keys only the long-press options may be re-assigned to any Model page, System page, the ‘Configure screens’ page, the Home page or the Flight Data Record. A short press calls either the System or Model section respectively.
 
-- **Encoder option** (X20 Pro AW, X20R/RS) — these radios have a more
-  sensitive rotary encoder; enable **half steps** to tone it down.
+## Bluetooth audio option (X20, X20R, X20RS)
 
-  ![Encoder option (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
+![](../assets/system-hardware-bt-audio-options.png)
 
-## ADC value inspector {: #adc-value-inspector }
+A Bluetooth audio module may be added to the X20, X20R or X20RS to allow the use of Bluetooth earbuds (for example). This hardware selection option will enable it if installed.
 
-Shows the raw analog-to-digital conversion values the CPU reads for each
-analog input:
+Please note that the module is not plug and play, it has to be surface mount soldered.
 
-![ADC check (X20S)](../assets/system-hardware-adc-check-x20s.png)
-![ADC check (X20 Pro)](../assets/system-hardware-adc-check-x20pro.png)
+## Enabling haptic gimbal upgrades (X20 Pro and X20R)
 
-**X20S**: 1 left stick horizontal, 2 left stick vertical, 3 right stick
-vertical, 4 right stick horizontal, 5 Pot 1, 6 Pot 2, 7 middle slider, 8
-left slider, 9 right slider.
+![](../assets/system-hardware-haptic-x20pro.png)
 
-**X20 Pro**: as above, but with two extra external-pot channels (7 Ext1,
-8 Ext2 — e.g. stick-mounted pots) inserted before the sliders, which shift
-to 9 middle slider, 10 left slider, 11 right slider.
+The X20 Pro AW and X20RS have MC20R gimbals with haptic feedback motors (stick shakers). If MC20R gimbals have been retrofitted to X20 Pro or X20R as an option, you can enable the gimbal motors here. Please refer to the ‘[Select haptic motors](../model-setup/special-functions.md)’ section for details on configuring them.
+
+## Encoder option (X20 Pro AW and X20R/RS)
+
+![](../assets/system-hardware-x20proaw-encoder-option.png)
+
+The X20 Pro AW and X20R/RS models have an improved rotary encoder which is more sensitive. The ‘half steps’ option may be enabled to reduce the sensitivity.
+
+## ADC value inspector
+
+![](../assets/system-hardware-adc-check-x20s.png)
+
+Shows the analog to digital conversion (ADC) values for the analog inputs read by the CPU.
+
+1. Left stick horizontal
+2. Left stick vertical
+3. Right stick vertical
+4. Right stick horizontal
+5. Pot 1
+6. Pot 2
+7. Middle slider
+8. Left slider
+9. Right slider
+
+### X20 Pro
+
+![](../assets/system-hardware-adc-check-x20pro.png)
+
+The (ADC) index for the X20 Pro is:
+
+1. Left stick horizontal
+2. Left stick vertical
+3. Right stick vertical
+4. Right stick horizontal
+5. Pot 1
+6. Pot 2
+7. Ext1 (external pot, e.g. stick mounted)
+8. Ext1 (external pot, e.g. stick mounted)
+9. Middle slider
+10. Left slider 
+11. Right slider
