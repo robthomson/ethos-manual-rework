@@ -1,0 +1,5481 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User manual for the FrSky Ethos radio firmware">
+      
+      
+      
+        <link rel="canonical" href="https://manual.rt-rc.com/it/model-setup/rf-system/">
+      
+      
+        <link rel="prev" href="../trims/">
+      
+      
+        <link rel="next" href="../curves/">
+      
+      
+        
+          <link rel="alternate" href="../../../model-setup/rf-system/" hreflang="en">
+        
+          <link rel="alternate" href="../../../cs/model-setup/rf-system/" hreflang="cs">
+        
+          <link rel="alternate" href="../../../he/model-setup/rf-system/" hreflang="he">
+        
+          <link rel="alternate" href="../../../nl/model-setup/rf-system/" hreflang="nl">
+        
+          <link rel="alternate" href="../../../nb/model-setup/rf-system/" hreflang="nb">
+        
+          <link rel="alternate" href="../../../pl/model-setup/rf-system/" hreflang="pl">
+        
+          <link rel="alternate" href="../../../es/model-setup/rf-system/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="it">
+        
+          <link rel="alternate" href="../../../pt-BR/model-setup/rf-system/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../../zh/model-setup/rf-system/" hreflang="zh">
+        
+          <link rel="alternate" href="../../../de/model-setup/rf-system/" hreflang="de">
+        
+          <link rel="alternate" href="../../../fr/model-setup/rf-system/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Sistema RF - Ethos Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sistema-rf" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../" title="Ethos Manual" class="md-header__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ethos Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sistema RF
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleziona la lingua">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../model-setup/rf-system/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../cs/model-setup/rf-system/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../he/model-setup/rf-system/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nl/model-setup/rf-system/" hreflang="nl" class="md-select__link">
+              Nederlands
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nb/model-setup/rf-system/" hreflang="nb" class="md-select__link">
+              Norsk Bokmål
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pl/model-setup/rf-system/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../es/model-setup/rf-system/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pt-BR/model-setup/rf-system/" hreflang="pt-BR" class="md-select__link">
+              Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh/model-setup/rf-system/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../de/model-setup/rf-system/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/model-setup/rf-system/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    <a href="https://github.com/robthomson/ethos-manual-rework/releases" title="Download PDF manuals" class="md-header__button md-icon" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg>
+    </a>
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robthomson/ethos-manual-rework" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Per iniziare
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../system-setup/" class="md-tabs__link">
+          
+  
+  
+  Configurazione di sistema
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Configurazione del modello
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../displays/" class="md-tabs__link">
+          
+  
+  
+  Display
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lua-scripts/" class="md-tabs__link">
+          
+  
+  
+  Script Lua
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
+          
+  
+  
+  Guide pratiche
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../radio-notes/" class="md-tabs__link">
+          
+  
+  
+  Note sulla radio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ethos-suite/" class="md-tabs__link">
+          
+  
+  
+  Ethos Suite
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  Riferimento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contribuire
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Ethos Manual" class="md-nav__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    Ethos Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robthomson/ethos-manual-rework" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Per iniziare
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Per iniziare
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Per iniziare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/main-views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Viste principali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/user-interface-and-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaccia utente e navigazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usb-connection-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modalità di connessione USB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modalità di emergenza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione di sistema
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configurazione di sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/file-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestione file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avvisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/date-and-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data e ora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/battery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batteria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dispositivi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione del modello
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configurazione del modello
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-select/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selezione modello
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modifica modello
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flight-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fasi di volo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mixes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uscite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Timer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema RF
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema RF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disabilitare-luscita-rf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disabilitare l'uscita RF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-di-registrazione-del-proprietario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID di registrazione del proprietario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-interno-td-isrm-x18-e-x20shd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulo interno TD-ISRM (X18 e X20/S/HD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-interno-td-isrm-pro-x20-prorrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulo interno TD-ISRM Pro (X20 Pro/R/RS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-rf-esterno-frsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulo RF esterno - FrSky
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modulo RF esterno - FrSky">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramma-pinout-del-modulo-esterno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramma Pinout del modulo esterno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moduli-rf-esterni-terze-parti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moduli RF esterni - Terze parti
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logical-switches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interruttori logici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funzioni speciali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variabili
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telemetria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glasses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Lua (modello)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rearranging-the-model-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rearranging the Model Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Display
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configura le schermate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/configuring-the-main-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring the Main Screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/standard-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-additional-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Additional Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/managing-main-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Main Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-custom-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Custom Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Lua
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Script Lua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/lua-interpreter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interprete Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/ethos-lua-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentazione Lua di Ethos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/example-script-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posizione degli script di esempio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/configuration-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limiti di configurazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/basic-widget-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layout base di un widget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/alternative-display-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alternative Display Themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial di programmazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/initial-radio-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione iniziale della radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-fixed-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esempio base per aeromodello ad ala fissa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flying-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esempio base di ala volante (elevoni)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flybarless-heli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esempio base di elicottero flybarless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide pratiche
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide pratiche
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide pratiche
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/low-battery-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avviso di tensione batteria bassa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/battery-capacity-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avviso di capacità della batteria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione modello SR8/SR10 e riordino dei canali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixer Butterfly (Corvo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurare un sistema FBUS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testare una configurazione con ricevitore ridondante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist con testo definito dall'utente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curva di compensazione regolabile in volo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ripresa istantanea del controllo per la funzione Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trovare il bootloader più recente o altri componenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/converting-1.6-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converting 1.6.x Models to 26.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/gear-door-sequencer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gear Door and Landing Gear Sequencer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note sulla radio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Note sulla radio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radio Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-x20s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20/X20S
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro-aw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro AW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20r-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20R/RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x18-x18se/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X18/X18SE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/xe-xes-xe-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XE/XES/XE RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x14-x14rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X14/X14RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/twin-xlite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TWIN XLite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Suite
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ethos Suite
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FrSky Suite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilizzo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/web-simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Web Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/command-line-operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Operation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riferimento
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Riferimento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riferimento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/toolbars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Barre degli strumenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuire
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contribuire
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/screenshot-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline degli screenshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-a-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a New Language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/translation-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disabilitare-luscita-rf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disabilitare l'uscita RF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-di-registrazione-del-proprietario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID di registrazione del proprietario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-interno-td-isrm-x18-e-x20shd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulo interno TD-ISRM (X18 e X20/S/HD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-interno-td-isrm-pro-x20-prorrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulo interno TD-ISRM Pro (X20 Pro/R/RS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-rf-esterno-frsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulo RF esterno - FrSky
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modulo RF esterno - FrSky">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramma-pinout-del-modulo-esterno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramma Pinout del modulo esterno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moduli-rf-esterni-terze-parti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moduli RF esterni - Terze parti
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/it/model-setup/rf-system.md" title="Modifica" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="sistema-rf">Sistema RF<a class="headerlink" href="#sistema-rf" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07EC5A0F7.png" /></p>
+<p>Questa sezione serve a configurare i moduli RF interni e/o esterni, compreso l'ID di registrazione del proprietario.</p>
+<h2 id="disabilitare-luscita-rf">Disabilitare l'uscita RF<a class="headerlink" href="#disabilitare-luscita-rf" title="Permanent link">&para;</a></h2>
+<p>I moduli RF interni ed esterni possono essere disattivati tenendo premuto il tasto Page durante l'accensione del sistema. Riceverai un avviso che indica che l'HF è permanentemente spento. Tuttavia, lo stato dei moduli RF rimane attivo. Se riavvii il trasmettitore, viene ripristinato lo stato normale.</p>
+<h2 id="id-di-registrazione-del-proprietario">ID di registrazione del proprietario<a class="headerlink" href="#id-di-registrazione-del-proprietario" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E034D8557B.png" /></p>
+<p>L'"ID di registrazione del proprietario" è un ID di 8 caratteri che contiene un codice univoco casuale, che può essere modificato se lo si desidera. Questo ID diventa l'"ID di registrazione" quando si registra un ricevitore (vedi sotto). Inserisci lo stesso codice nel campo "ID di registrazione del proprietario" degli altri trasmettitori con cui vuoi utilizzare la funzione Smart Share. Questa operazione deve essere eseguita prima di creare il modello su cui si vuole utilizzare la funzione.</p>
+<p>Nota sulla compatibilità con OpenTX e EdgeTX</p>
+<p>L'"ID di registrazione del proprietario" è compatibile con EdgeTX ma solo in parte con OpenTX. Deve essere composto da otto caratteri; può contenere un mix di lettere maiuscole, minuscole e numeri, ma non caratteri speciali.</p>
+<h2 id="modulo-interno-td-isrm-x18-e-x20shd">Modulo interno TD-ISRM (X18 e X20/S/HD)<a class="headerlink" href="#modulo-interno-td-isrm-x18-e-x20shd" title="Permanent link">&para;</a></h2>
+<p>Per il modulo RF TD ISRM Pro consulta la sezione <a href="./">Modulo interno TD-ISRM Pro</a>.</p>
+<p>Panoramica</p>
+<p>Il modulo RF interno delle radio X18 e X20/S/HD è di nuova concezione e fornisce percorsi RF in tandem a 2,4GHz e 900MHz. Può funzionare in 3 modalità: ACCESS, ACCST D16 o TD MODE.</p>
+<p><strong>Attenzione</strong>! In questo manuale e nei menu della radio "900M" è un termine generico che indica la banda VHF utilizzata. Le frequenze operative effettive sono 915Mhz per la FCC o 868Mhz per la LBT, a seconda del paese in cui l'utente opera.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E022897443.png" /></p>
+<p>Stato</p>
+<p>Il modulo RF interno può essere acceso o spento.</p>
+<p>Tipo</p>
+<p>Modalità di trasmissione del modulo RF interno. I modelli X20/X20S operano sulla banda 2.4GHz e/o 900MHz. Le modalità ACCESS e TD (Tandem) possono funzionare contemporaneamente (o singolarmente) sulla banda 2.4GHz e/o 900MHz, mentre l'ACCST D16 funziona solo sulla banda 2.4GHz. La modalità deve corrispondere al tipo supportato dal ricevitore, altrimenti il modello non si aggancia! Dopo il cambio di modalità, controlla attentamente il funzionamento del modello (soprattutto il Failsafe!) e verifica che tutti i canali del ricevitore funzionino come previsto.</p>
+<p>Modalita ACCESS</p>
+<p>In modalità ACCESS i percorsi RF 2.4G e 900M lavorano in tandem con un unico set di controlli ACCESS. Possono esserci tre ricevitori 2.4G registrati e vincolati o tre ricevitori 900M registrati e vincolati o una combinazione di 2.4G e 900M per un totale di tre ricevitori.</p>
+<p>In modalità ACCESS con una combinazione di ricevitori 2.4G e 900M, la telemetria dei collegamenti RF 2.4G e 900M è attiva contemporaneamente. I sensori sono identificati nella telemetria come 2.4G o 900M. Si noti che la banda 2.4G supporta 24 canali, mentre la banda 900M supporta 16 canali.</p>
+<p>Esiste una nuova funzione di fonte di ricezione telemetrica di ETHOS chiamata RX. RX fornisce il numero del ricevitore attivo che invia la telemetria. RX è disponibile in telemetria come qualsiasi altro sensore per la visualizzazione in tempo reale, gli interruttori logici, le funzioni speciali e la registrazione dei dati.</p>
+<p>Per i dettagli sulla configurazione, consulta la sezione ACCESS qui sotto.</p>
+<p>Modalità ACCST D16</p>
+<p>Nell'ACCST D16 il modulo RF diventa un unico percorso RF 2.4G.</p>
+<p>Consulta la sezione <a href="./">ACCST D16 </a>qui di seguito.</p>
+<p>Modalità TD</p>
+<p>In modalità TD il modulo RF è in modalità long range a bassa latenza e utilizza i collegamenti RF 2.4G e 900M in Tandem per lavorare con i nuovi ricevitori Tandem. Tandem supporta 24 canali su entrambe le bande.</p>
+<p>Consulta la sezione <a href="./">Modalità TD </a>di seguito.</p>
+<p>Opzioni del firmware Flex</p>
+<p>Quando si tratta di scegliere la versione del firmware, la maggior parte degli utenti utilizza semplicemente una delle due:</p>
+<p>(a) la versione LBT (Listen Before Talk) se nell'UE, che comunica a 868Mhz in modalità 900M, oppure</p>
+<p>(b) la versione FCC nel resto del mondo, che comunica a 915Mhz in modalità 900M.</p>
+<p>Tuttavia, la versione Flex offre la possibilità di passare da una all'altra quando si utilizzano le modalità ACCESS, ACCST D16 o TD.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0EBF29DFB.png" /></p>
+<p>Le schermate di configurazione cambiano come mostrato sopra.  Alla voce Tipo sono presenti due colonne. La prima serve a selezionare il protocollo FrSky (ACCESS, ACCST D16 o modalità TD).</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E0CCDA7FC9.png" /></p>
+<p>La seconda colonna serve per selezionare FLEX915M o FLEX 868M.</p>
+<p>Quando selezioni FLEX915M, la banda 2.4G passa alla modulazione FCC. Quando selezioni FLEX868M, la banda 2.4G passa alla modulazione europea LBT.</p>
+<p>Le antenne devono essere cambiate per adattarsi alla frequenza selezionata.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E084A184F6.png" /></p>
+<p>Entrambe le versioni consentono di configurare diversi livelli di potenza.</p>
+<p><strong>Nota per gli utenti dell'UE</strong>: L'uso di 200mW e 500 mW è consentito nella banda degli 868 MHz. Con l'ultimo aggiornamento TD e l'aggiornamento RF, questi livelli di potenza funzionano anche con la telemetria. Per la conformità, se selezioni 25mW i dati di telemetria saranno inviati tramite 868MHz, mentre con 200mW o 500 mW i dati di telemetria saranno inviati tramite 2.4G.</p>
+<p>Note:</p>
+<p>a) con ACCESS puoi avere un mix di fino a tre ricevitori 900M o 2.4G</p>
+<p>b) l'opzione ACCST D16 è solo 2.4G</p>
+<p>c) con la modalità TD puoi avere tre ricevitori TD</p>
+<p>Tipo: ACCESS</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E01F068EF6.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E06E3BDF4B.png" /></p>
+<p>ACCESS cambia il modo in cui i ricevitori sono legati e collegati al trasmettitore. Il processo è suddiviso in due Fasi. La prima fase consiste nel registrare il ricevitore alla radio o alle radio con cui deve essere utilizzato. La registrazione deve essere eseguita una sola volta per ogni coppia ricevitore/trasmettitore. Una volta registrato, un ricevitore può essere collegato e rilegato in modalità wireless con qualsiasi radio con cui è registrato, senza utilizzare il pulsante di collegamento sul ricevitore.</p>
+<p>Dopo aver selezionato la modalità ACCESS, è necessario impostare i seguenti parametri:</p>
+<p>Modello ID</p>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Smart Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'abbinamento del ricevitore è ancora importante come lo era prima di ACCESS.</p>
+<p>L'ID del modello può essere modificato manualmente da 00 a 63, mentre l'ID predefinito è 1.</p>
+<p>Nota anche che l'ID del modello viene modificato quando il modello viene clonato.</p>
+<p>Gamma di canali:</p>
+<p>Dato che ACCESS supporta fino a 24 canali, normalmente si sceglie Ch1-8, Ch1-16 o Ch1-24 per il numero di canali da trasmettere. Nota che Ch1-16 è il valore predefinito. I canali ricevuti da un ricevitore sono configurati nelle opzioni del ricevitore per ciascun ricevitore.</p>
+<p>La scelta della gamma di canali del trasmettitore influisce anche sulla frequenza di aggiornamento trasmessa. Otto canali vengono trasmessi ogni 7 ms. Se si utilizzano più di 8 canali, le frequenze di aggiornamento dei canali sono le seguenti:</p>
+<table>
+<thead>
+<tr>
+<th>Gamma di canali</th>
+<th>escursione/rate di aggiornamento</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-24</td>
+<td>21ms</td>
+<td>Ch1-8, poi Ch9-16, poi Ch17-24 inviati a rotazione</td>
+</tr>
+<tr>
+<td>1-16</td>
+<td>14ms</td>
+<td>Ch1-8, Ch9-16, inviati alternativamente</td>
+</tr>
+<tr>
+<td>1-8</td>
+<td>7ms</td>
+<td>Ch1-8</td>
+</tr>
+<tr>
+<td>Modalità Racemode</td>
+<td>4ms</td>
+<td>Solo servi digitali</td>
+</tr>
+</tbody>
+</table>
+<p>Modalità corsa</p>
+<p>La modalità Racing offre una latenza molto bassa, pari a 4 ms, con ricevitori come l'RS. Il modulo RF e il ricevitore RS devono essere in versione 2.1.7 o successiva.</p>
+<p>Se l'intervallo di canali è impostato su Ch1-8, è possibile selezionare una sorgente (ad esempio un interruttore) che abilita la modalità gara. Una volta che il ricevitore RS è stato collegato (vedi sotto) e la modalità gara è stata abilitata, il ricevitore RS deve essere alimentato nuovamente affinché la modalità gara abbia effetto.</p>
+<p>2.4G</p>
+<p>Abilita o disabilita il modulo RF 2.4G.</p>
+<p><strong>Antenna</strong>: seleziona Antenna interna o esterna (sul connettore ANT1). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p>900M</p>
+<p>Abilita o disabilita il modulo RF 900M.</p>
+<p><strong>Antenna</strong>:</p>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT2). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p><strong>Potenza</strong>:</p>
+<p>FCC: Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW, 1000mW.</p>
+<p>LBT: seleziona la potenza RF desiderata tra 25mW (telemetria via 868MHz), 200mW o 500mW (telemetria via 2.4GHz).</p>
+<p>In modalità ACCESS i percorsi RF 2,4g e 900m lavorano in tandem con un unico set di controlli ACCESS. Ci possono essere tre ricevitori 2.4G registrati e vincolati o tre ricevitori 900M registrati e vincolati o una combinazione di 2.4G e 900M per un totale di tre ricevitori.</p>
+<p>Fase uno: registrazione</p>
+<p>Registro</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E044EB23F4.png" /></p>
+<ol>
+<li>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. In caso contrario, passa alla sezione Bind.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0A631C74B.png" /></p>
+<p>Verrà visualizzata una casella di messaggio con scritto "In attesa del destinatario..." e un avviso vocale ripetuto "Registra".</p>
+<ol>
+<li>Tenendo premuto il pulsante di collegamento del ricevitore, accendilo e attendi che i LED rosso e verde si attivino.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0AEB27AD1.png" /></p>
+<p>Il messaggio "In attesa del ricevitore..." cambia in "Ricevitore connesso" e il campo Nome Rx viene compilato automaticamente.</p>
+<ol>
+<li>
+<p>In questa fase è possibile impostare l'ID Reg. e l'UID:</p>
+</li>
+<li>
+<p>ID di registrazione: l'ID di registrazione è a livello del proprietario o del trasmettitore. Deve essere un codice unico per la tua radio e per gli altri trasmettitori da utilizzare con Smart Share. Il valore predefinito è quello dell'impostazione "ID di registrazione del proprietario" descritta all'inizio di questa sezione, ma può essere modificato qui. Se due radio hanno lo stesso ID di registrazione, puoi spostare i ricevitori (con lo stesso numero di ricevitore per un determinato modello) da una radio all'altra semplicemente utilizzando il processo di collegamento all'accensione.</p>
+</li>
+<li>
+<p>Nome RX: viene compilato automaticamente, ma il nome può essere modificato se lo si desidera. Questo può essere utile se stai utilizzando più di un ricevitore e devi ricordare, ad esempio, che RX4R1 è per i canali 1-8 o RX4R2 è per i canali 9-16 o RX4R3 è per i canali 17-24 quando fai un nuovo collegamento. Qui è possibile inserire un nome per il ricevitore.</p>
+</li>
+<li>
+<p>L'UID viene utilizzato per distinguere tra più ricevitori utilizzati contemporaneamente in un unico modello. Può essere lasciato al valore predefinito di 0 per un singolo ricevitore. Quando si utilizza più di un ricevitore nello stesso modello, l'UID deve essere modificato: di solito è 0 per i Ch1-8, 1 per i Ch9-16 e 2 per i Ch17-24. Tieni presente che questo UID non può essere letto dal ricevitore, quindi è bene etichettare il ricevitore.</p>
+</li>
+<li>
+<p>Premi [Registra] per completare l'operazione. Viene visualizzata una finestra di dialogo con scritto "Registrazione ok". Premi [OK] per continuare.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0071D5EA4.png" /></p>
+<ol>
+<li>Spegni il ricevitore. A questo punto il ricevitore è registrato, ma deve ancora essere collegato al trasmettitore da utilizzare. Ora è pronto per il binding.</li>
+</ol>
+<p>Fase due - Opzioni di Binding - Collegamento e moduli</p>
+<p>Bind /collegamento</p>
+<p>Il binding del ricevitore consente a un ricevitore registrato di essere collegato a uno dei trasmettitori con cui è stato registrato nella fase 1, e risponderà a quel trasmettitore fino a quando non sarà nuovamente collegato a un altro trasmettitore. Assicurati di eseguire un Controllo portata (Range Check) prima di far volare il modello.</p>
+<p>Avvertenza: molto importante</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<ol>
+<li>
+<p>Spegni il ricevitore.</p>
+</li>
+<li>
+<p>Conferma di essere in modalità ACCESS.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E040AD3936.png" /></p>
+<ol>
+<li>Ricevitore 1 [Bind]: Avvia il processo di binding selezionando [RX1], quindi seleziona Bind dall'elenco a discesa.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0009B9D36.png" /></p>
+<p>Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "In attesa del ricevitore....".</p>
+<ol>
+<li>Accendi il ricevitore senza toccare il pulsante di collegamento F/S. Verrà visualizzato un messaggio "Seleziona dispositivo" e il nome del ricevitore che hai appena acceso.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E050F9AC93.png" /></p>
+<ol>
+<li>Scorri fino al nome del ricevitore e selezionalo.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0B248282F.png" /></p>
+<p>Verrà visualizzato un messaggio che indica che il collegamento è avvenuto con successo. Clicca su OK.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0DBB7F641.png" /></p>
+<p>Il ricevitore selezionato mostrerà ora il nome RX1 accanto ad esso.</p>
+<ol>
+<li>
+<p>Spegni il trasmettitore e il ricevitore.</p>
+</li>
+<li>
+<p>Accendi il trasmettitore e poi il ricevitore. Se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito.</p>
+</li>
+</ol>
+<p>Il ricevitore è ora pronto per essere utilizzato. Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è legato.</p>
+<p>Ripeti l'operazione per il Ricevitore 2 e 3, se applicabile.</p>
+<p>Consulta anche la sezione Telemetria per una discussione sull'<a href="../telemetry/">RSSI</a>.</p>
+<p>Opzioni del ricevitore</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0DBB7F641.png" /></p>
+<p>Con il ricevitore acceso, tocca il pulsante RX1, 2 o 3 per visualizzare le opzioni del ricevitore e altre operazioni:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E04FEE7ECD.png" /></p>
+<p>Tocca Opzioni:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E04B4D7075.png" /></p>
+<ul>
+<li>Opzioni</li>
+</ul>
+<p><em>Telemetria</em>: La telemetria può essere disabilitata per questo ricevitore.</p>
+<p><em>Potenza telemetria ridotta 25mW</em>: casella di controllo per limitare la potenza della telemetria a 25mW (normalmente 100mW), eventualmente necessaria se, ad esempio, i servi subiscono interferenze a causa delle radiofrequenze inviate vicino a loro.</p>
+<p><em>Alta velocità PWM</em>: la velocità di aggiornamento del servo è completamente determinata dal ricevitore.  Questa casella di controllo abilita una velocità di aggiornamento PWM di 7 ms (contro i 18 ms standard). Assicurati che i tuoi servi siano in grado di gestire questa velocità di aggiornamento.</p>
+<p>maggiori dettagli sulla frequenza di aggiornamento impostata sul trasmettitore, consulta la <a href="./">sezione Gamma di canali (ACCESS)</a>.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0763FFB50.png" /></p>
+<p><em>Porta di telemetria</em>: Consente di selezionare la SmartPort del ricevitore per utilizzare il protocollo S.Port, F.Port o FBUS (F.Port2). Il protocollo F.Port è stato sviluppato con il team Betaflight per integrare i segnali SBUS e S.Port separati. FBUS (F.Port2) consente inoltre a un dispositivo Host di comunicare con diversi dispositivi Slave sulla stessa linea. Per maggiori informazioni sul protocollo delle porte, consulta la spiegazione del protocollo sul sito ufficiale di FrSky.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E36221CB.png" /></p>
+<p><em>SBUS</em><em>:</em> consente di selezionare la modalità SBUS-16 canali o SBUS-24 canali. Tieni presente che tutti i dispositivi SBUS collegati devono supportare la modalità SBUS-24 per poter attivare il nuovo protocollo. SBUS-24 è uno sviluppo di FrSky del protocollo SBUS-16 di Futaba.</p>
+<p><em>Mappatura dei canali</em>: La finestra di dialogo Opzioni del ricevitore offre anche la possibilità di riattribuire i canali ai pin del ricevitore.</p>
+<ul>
+<li>Condividi</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09E46142E.png" /></p>
+<p>La funzione Condividi permette di spostare il ricevitore su un'altra radio ACCESS con un diverso "ID di registrazione del proprietario". Quando si tocca l'opzione Condividi, il LED verde del ricevitore si spegne.</p>
+<p>Sulla radio di destinazione B, vai alla sezione Sistema RF e Ricevitore(n) e seleziona Collega. Nota che il processo di condivisione salta la fase di registrazione sulla radio B, perché l'"ID di registrazione del proprietario" viene trasferito dalla radio A. Viene visualizzato il nome del ricevitore della radio sorgente. Seleziona il nome, il ricevitore si legherà e il suo LED diventerà verde.</p>
+<p>Verrà visualizzato il messaggio "Bind successful".</p>
+<p>Tocca OK. La radio B ora controlla il ricevitore. Il ricevitore rimarrà legato a questa radio finché non deciderai di cambiarla.</p>
+<p>Premi il pulsante EXIT sulla Radio A per interrompere il processo di condivisione.</p>
+<p>Il ricevitore può essere riportato alla radio A effettuando un nuovo collegamento alla radio A.</p>
+<p>Nota: non è necessario utilizzare la funzione "Condividi" se tutte le radio utilizzano lo stesso numero di "ID di registrazione del proprietario". Puoi semplicemente mettere la radio che vuoi usare in modalità bind, accendere il ricevitore, selezionare il ricevitore nella radio e questo si legherà a quella radio. Puoi passare a un'altra radio nello stesso modo. Quando si copiano i modelli, è meglio mantenere i numeri dei ricevitori uguali.</p>
+<ul>
+<li>Reset - Azzeramento del binding</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CF0F1EBE.png" /></p>
+<p>Se cambi idea sulla condivisione di un modello, seleziona "Ripristina il binding" per ripulire e ripristinare il binding. Spegni il ricevitore e sarà collegato al tuo trasmettitore.</p>
+<ul>
+<li>Reset di fabbrica</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E00B9E2D19.png" /></p>
+<p>Tocca il pulsante Reset per ripristinare le impostazioni di fabbrica del ricevitore e cancellare l'UID. Il ricevitore non è registrato con X20. Nota bene che un ripristino di fabbrica cancellerà anche i dati della calibrazione 6-assi su riceventi stabilizzate</p>
+<p>Opzioni del ricevitore (con Rx spento)</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0EFF4E597.png" /></p>
+<p>Con il ricevitore spento, tocca il pulsante RX1, 2 o 3 per visualizzare le opzioni del ricevitore.</p>
+<p>Se tocchi Opzioni, la radio tenterà di connettersi e attenderà il ricevitore.</p>
+<p>Se tocchi Bind, puoi ad esempio riBind /collegamento un modello che era stato legato a un altro trasmettitore.</p>
+<p>Se tocchi Clear, verrà eseguito un Reset Bind.</p>
+<p>Aggiunta di un ricevitore ridondante</p>
+<p>Un secondo ricevitore può essere collegato a uno slot non utilizzato, ad esempio RX2 o RX3, per garantire la ridondanza in caso di problemi di ricezione. Un ricevitore 2.4G o 900M può essere il backup per la ridondanza. Il nostro esempio qui sotto mostra l'aggiunta di un ricevitore 900M.</p>
+<ol>
+<li>Collega la porta SBUS Out del ricevitore ridondante alla porta SBUS IN del ricevitore principale.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0178CB4E5.png" /></p>
+<ol>
+<li>Abilita il modulo RF interno del 900M.</li>
+</ol>
+<p>2a. Configura l'antenna e le opzioni di potenza RF.</p>
+<p><strong>Antenna</strong>:</p>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT2). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p><strong>Potenza</strong>:</p>
+<p>FCC: Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW, 1000mW.</p>
+<p>LBT: seleziona la potenza RF desiderata tra 25mW (telemetria via 868MHz), 200mW o 500mW (telemetria via 2.4GHz).</p>
+<ol>
+<li>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. In caso contrario, passa alla sezione Legami.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E03C50D5E9.png" /></p>
+<ol>
+<li>
+<p>Registra il nuovo ricevitore, ad esempio l'R9MINI-O di cui sopra.</p>
+</li>
+<li>
+<p>Spegni i ricevitori.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C3026F71.png" /></p>
+<ol>
+<li>Tocca il pulsante RX2 o RX3.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0BF7F54AD.png" /></p>
+<p>Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "Waiting for receiver....".</p>
+<ol>
+<li>Accendi i ricevitori.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E005E9B24F.png" /></p>
+<ol>
+<li>Seleziona il ricevitore ridondante R9.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E04D957E60.png" /></p>
+<ol>
+<li>Tocca OK. Assicurati che il LED verde del ricevitore ridondante sia acceso. Il ricevitore ridondante è ora collegato.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E021248C45.png" /></p>
+<ol>
+<li>Il ricevitore ridondante sarà ora elencato.</li>
+</ol>
+<p>Nota: sebbene sia possibile associare allo stesso UID sia il ricevitore principale che quello ridondante accendendoli singolarmente, non avrai accesso alle Opzioni Rx quando entrambi sono accesi.</p>
+<p>Failsafe</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E02274E993.png" /></p>
+<p>La modalità Failsafe determina cosa succede al ricevitore quando il segnale del trasmettitore viene perso.</p>
+<p>I dati di failsafe vengono inviati dal trasmettitore ogni 10 secondi circa. Si noti che per i ricevitori TD, TW, AP e AP Plus i dati di failsafe sono ora salvati sul ricevitore, il che significa che le impostazioni di failsafe sono immediatamente disponibili se il ricevitore si riavvia per qualsiasi motivo. Si noti che la funzione Failsafe deve essere reimpostata e controllata dopo aver aggiornato i ricevitori con questa funzione.</p>
+<p>Tocca la casella a discesa per visualizzare le opzioni di sicurezza:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0B7CA1B68.png" /></p>
+<ul>
+<li>Tieni</li>
+</ul>
+<p>Hold manterrà le ultime posizioni ricevute.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09B3E077A.png" /></p>
+<ul>
+<li>Ad Hoc - Personalizzato</li>
+</ul>
+<p>Custom permette di spostare i servi in posizioni personalizzate e predefinite. La posizione per ogni canale può essere definita separatamente. Ogni canale ha le opzioni Non impostato, Mantieni, Personalizzato o Nessun impulso. Se si seleziona Personalizzato, viene visualizzato il valore del canale. Se si tocca l'icona di impostazione con una freccia, viene utilizzato il valore corrente del canale. In alternativa, è possibile inserire un valore fisso per quel canale toccando il valore.</p>
+<ul>
+<li>Nessun impulso</li>
+</ul>
+<p>No Pulses disattiva gli impulsi (da utilizzare con i controllori di volo dotati di GPS di ritorno a casa in caso di perdita del segnale).</p>
+<ul>
+<li>Ricevitore</li>
+</ul>
+<p>Scegliendo "Ricevitore" sui ricevitori della serie X o successivi è possibile impostare il failsafe nel ricevitore.</p>
+<p><strong><em>Attenzione</em></strong>:  Assicurati di testare con attenzione le impostazioni Failsafe scelte, in particolare i canali che controllano il giroscopio sui ricevitori stabilizzati.</p>
+<p>Controllo portata (Range Check)</p>
+<p>Un Controllo portata (Range Check) deve essere effettuato sul campo quando il modello è pronto per volare.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E007DE3CF8.png" /></p>
+<p>Il controllo dell'intervallo si attiva selezionando "Controllo dell'intervallo".</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CF770060.png" /></p>
+<p>Un avviso vocale annuncerà "Range Check" ogni pochi secondi per confermare che sei in modalità range check. Un popup visualizzerà il numero del ricevitore e i valori VFR% e RSSI per valutare la qualità della ricezione. Quando il Range Check è attivo, riduce la potenza del trasmettitore, che a sua volta riduce il raggio d'azione per i test di portata. In condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo, dovresti ricevere un allarme critico solo a circa 30 metri di distanza.</p>
+<p>Attualmente ACCESS in modalità di Controllo portata (Range Check) fornisce i dati di Controllo portata (Range Check) per un ricevitore alla volta sul link 2.4G e per un ricevitore alla volta sul link 900M. Se hai tre ricevitori 2.4G registrati e vincolati come Ricevitore 1, 2 e 3, uno dei ricevitori sarà il ricevitore di telemetria attivo e il suo numero verrà visualizzato dal sensore RX come 0, 1 o 2. Questo sarà il ricevitore che sta inviando i dati RSSI e VFR. Sarà il ricevitore che invia i dati RSSI e VFR. Se spegni quel ricevitore, il successivo diventerà il ricevitore di telemetria attivo con una priorità di 0, 1 e poi 2. Ciascuno dei tre ricevitori può essere controllato spegnendo gli altri.</p>
+<p>Sensore RX 0 = Ricevitore 1</p>
+<p>Sensore RX 1 = Ricevitore 2</p>
+<p>Sensore RX 2 = Ricevitore 3</p>
+<p>Consulta anche la sezione Telemetria per una discussione sui valori <a href="../telemetry/">VFR e RSSI</a>.</p>
+<p>Tipo: ACCST D16</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08E3EAA8B.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08DD90DC2.png" /></p>
+<p>La modalità ACCST D16 è per la trasmissione full duplex bidirezionale ACCST a 16 canali, nota anche come modalità "X". Da utilizzare con i ricevitori della serie "X".</p>
+<p>Modello ID</p>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Model Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'ID modello può essere modificato manualmente.</p>
+<p>Gamma dei canali</p>
+<p>Scelta di quali canali interni della radio vengono effettivamente trasmessi via etere. In modalità D16 puoi scegliere tra 8 canali con dati inviati ogni 9ms e 16 canali con dati inviati ogni 18ms.</p>
+<p>Tieni presente che la velocità di aggiornamento del servo è completamente determinata dal ricevitore. Per ACCST, consulta il manuale del ricevitore per i dettagli sulla selezione della modalità HS (High PWM Speed) da 9ms. Assicurati che i tuoi servi siano in grado di gestire questa frequenza di aggiornamento.</p>
+<p>2.4G</p>
+<p>L'ACCST D16 funziona su 2.4G, quindi la sezione RF 2.4G è attiva per impostazione predefinita.</p>
+<ul>
+<li>Antenna</li>
+</ul>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT1). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p>Bind /collegamento</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C4B7CC2F.png" /></p>
+<ol>
+<li>Inizia il processo di binding selezionando [Bind]. Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità Bind. In modalità D16, durante il binding si apre un menu a comparsa che consente di selezionare la modalità di funzionamento del ricevitore. Le opzioni si riferiscono alle uscite PWM e si applicano ai ricevitori che supportano la scelta tra queste 4 opzioni tramite i ponticelli. Assicurati che il firmware del ricevitore e del modulo RF supportino questa opzione. In caso contrario, è necessario eseguire un normale collegamento con il pulsante F/S (consulta il manuale del ricevitore).</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0146B52B5.png" /></p>
+<p>Sono disponibili 4 modalità con combinazioni di Telemetria on/off e canale 1-8 o 9-16. Questo è utile quando si utilizzano due ricevitori per la ridondanza o per collegare più di 8 servi utilizzando due ricevitori.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E048488057.png" /></p>
+<ol>
+<li>
+<p>Accendi il ricevitore, mettendolo in modalità bind secondo le istruzioni del ricevitore. (In genere si fa tenendo premuto il pulsante Failsafe sul ricevitore durante l'accensione).</p>
+</li>
+<li>
+<p>I LED rosso e verde si accendono. Il LED verde si spegnerà e il LED rosso lampeggerà al termine del processo di Binding - Collegamento.</p>
+</li>
+<li>
+<p>Tocca OK sul trasmettitore per terminare il processo di collegamento e riaccendi il ricevitore.</p>
+</li>
+<li>
+<p>Se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito. Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è collegato.</p>
+</li>
+</ol>
+<p>Avvertenze - Molto importanti</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<p>Failsafe</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E018BAB785.png" /></p>
+<p>La modalità Failsafe determina cosa succede al ricevitore quando il segnale del trasmettitore viene perso.</p>
+<p>I dati del Failsafe vengono inviati dal trasmettitore ogni 10 secondi circa.</p>
+<p>Tocca la casella a discesa per visualizzare le opzioni di sicurezza:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E038B910B3.png" /></p>
+<ul>
+<li>Tieni</li>
+</ul>
+<p>Hold manterrà le ultime posizioni ricevute.</p>
+<ul>
+<li>Ad Hoc - Personalizzato</li>
+</ul>
+<p>Custom permette di spostare i servi in posizioni personalizzate e predefinite. La posizione per ogni canale può essere definita separatamente. Ogni canale ha le opzioni Non impostato, Mantieni, Personalizzato o Nessun impulso. Se si seleziona Personalizzato, viene visualizzato il valore del canale. Se si tocca l'icona di impostazione con una freccia, viene utilizzato il valore corrente del canale. In alternativa, è possibile inserire un valore fisso per quel canale toccando il valore.</p>
+<ul>
+<li>Nessun impulso</li>
+</ul>
+<p>No Pulses disattiva gli impulsi (da utilizzare con i controllori di volo dotati di GPS di ritorno a casa in caso di perdita del segnale).</p>
+<ul>
+<li>Ricevitore</li>
+</ul>
+<p>Scegliendo "Ricevitore" sui ricevitori della serie X o successivi è possibile impostare il failsafe nel ricevitore.</p>
+<p><strong><em>Attenzione</em></strong>:  Assicurati di testare con attenzione le impostazioni Failsafe scelte, in particolare i canali che controllano il giroscopio sui ricevitori stabilizzati.</p>
+<p>Controllo portata (Range Check)</p>
+<p>Un Controllo portata (Range Check) deve essere effettuato sul campo quando il modello è pronto per volare.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07166D02F.png" /></p>
+<p>Il controllo dell'intervallo si attiva selezionando "Controllo dell'intervallo".</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E040A24638.png" /></p>
+<p>Un avviso vocale annuncerà "Controllo portata (Range Check)" ogni pochi secondi per confermare che sei in modalità di Controllo portata (Range Check). Un popup visualizzerà il numero del ricevitore e i valori VFR% e RSSI per valutare la qualità della ricezione. Quando il Controllo portata (Range Check) è attivo, riduce la potenza del trasmettitore e di conseguenza il raggio d'azione per il test del raggio d'azione. In condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo, dovresti ricevere un allarme critico solo a circa 30 metri di distanza.</p>
+<p>Consulta la sezione Telemetria per una discussione sui valori <a href="../telemetry/">VFR e RSSI</a>.</p>
+<p>Tipo: Modalità TD</p>
+<p>In modalità TD i ricevitori operano contemporaneamente su due bande. Durante la trasmissione del segnale e della telemetria viene effettuato un confronto costante della qualità del pacchetto dati tra le due bande, per cui il pacchetto dati migliore di una delle due bande verrà applicato in ogni momento per assicurarsi che la trasmissione sia sempre la migliore.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0736C5597.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08A916DBE.png" /></p>
+<p>ACCESS e TD MODE cambiano il modo in cui i ricevitori sono legati e collegati al trasmettitore. Il processo è suddiviso in due Fasi. La prima fase consiste nel registrare il ricevitore alla radio o alle radio con cui deve essere utilizzato. La registrazione deve essere eseguita una sola volta per ogni coppia ricevitore/trasmettitore. Una volta registrato, un ricevitore può essere collegato e rilegato in modalità wireless con qualsiasi radio con cui è registrato, senza utilizzare il pulsante di collegamento sul ricevitore.</p>
+<p>Dopo aver selezionato la modalità TD, è necessario impostare i seguenti parametri:</p>
+<p>Modello ID</p>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Smart Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'abbinamento del ricevitore è ancora importante come lo era prima di ACCESS.</p>
+<p>L'ID del modello può essere modificato manualmente. Nota anche che l'ID modello viene modificato quando il modello viene clonato.</p>
+<p>Gamma di canali:</p>
+<p>Dato che Tandem supporta 24 canali, di solito si sceglie Ch1-8, Ch1-16, Ch1-24, Ch9-16 o Ch17-24 per il ricevitore che si sta configurando. Nota che il Ch1-16 è quello predefinito.</p>
+<p>Modalità corsa</p>
+<p>La modalità Racing offre una latenza molto bassa di 4ms con ricevitori come TD MX.</p>
+<p>Se l'intervallo di canali è impostato su Ch1-8, è possibile selezionare una sorgente (ad esempio un interruttore) che abiliti la modalità Corsa. Una volta che il ricevitore è stato collegato (vedi sotto) e la modalità Gara è stata abilitata, il ricevitore deve essere riacceso perché la modalità Gara abbia effetto.</p>
+<p>2.4G</p>
+<p>Il modulo RF 2.4G è già abilitato.</p>
+<p><strong>Antenna</strong>: seleziona Antenna interna o esterna (sul connettore ANT1). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p>900M</p>
+<p>Il modulo RF 900M è già abilitato.</p>
+<p><strong>Antenna</strong>:</p>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT2). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p>Potenza</p>
+<p>FCC: Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW, 1000mW.</p>
+<p>LBT: seleziona la potenza RF desiderata tra 25mW (telemetria via 868MHz), 200mW o 500mW (telemetria via 2.4GHz).</p>
+<p>In modalità TD MODE i percorsi RF 2,4g e 900m lavorano in tandem con un unico set di controlli di ACCESS. Possono essere registrati tre ricevitori Tandem.</p>
+<p>Fase uno: registrazione</p>
+<p>Registrati:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E7B1FDC4.png" /></p>
+<ol>
+<li>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. In caso contrario, passa alla sezione Bind.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D3678F0F.png" /></p>
+<p>Verrà visualizzata una casella di messaggio con scritto "In attesa del destinatario..." e un avviso vocale ripetuto "Registra".</p>
+<ol>
+<li>Tenendo premuto il tasto bind, accendi il ricevitore e attendi che i LED rosso e verde si attivino.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0595AF48C.png" /></p>
+<p>Il messaggio "In attesa del ricevitore..." cambia in "Ricevitore connesso" e il campo Nome Rx viene compilato automaticamente.</p>
+<ol>
+<li>
+<p>In questa fase è possibile impostare l'ID di registrazione e l'UID:</p>
+</li>
+<li>
+<p>ID di registrazione: l'ID di registrazione è a livello del proprietario o del trasmettitore. Deve essere un codice unico per i tuoi X20/X20S e trasmettitori da utilizzare con Smart Share. Il valore predefinito è quello dell'impostazione "ID di registrazione del proprietario" descritta all'inizio di questa sezione, ma può essere modificato qui. Se due radio hanno lo stesso ID, puoi spostare i ricevitori (con lo stesso numero di ricevitore per un determinato modello) da una all'altra semplicemente utilizzando il processo di collegamento all'accensione.</p>
+</li>
+<li>
+<p>Nome RX: viene compilato automaticamente, ma il nome può essere cambiato se lo si desidera. Questo può essere utile se utilizzi più di un ricevitore e devi ricordare quale è legato a quali canali.</p>
+</li>
+<li>
+<p>L'UID viene utilizzato per distinguere tra più ricevitori utilizzati contemporaneamente in un unico modello. Può essere lasciato al valore predefinito di 0 per un singolo ricevitore. Quando si vuole utilizzare più di un ricevitore nello stesso modello, l'UID deve essere modificato. Tieni presente che questo UID non può essere letto dal ricevitore, quindi è bene etichettare il ricevitore.</p>
+</li>
+<li>
+<p>Premi [Registra] per completare l'operazione. Viene visualizzata una finestra di dialogo con scritto "Registrazione OK". Premi [OK] per continuare.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CD005CB7.png" /></p>
+<ol>
+<li>Spegni il ricevitore. A questo punto il ricevitore è registrato, ma deve ancora essere collegato al trasmettitore da utilizzare. Ora è pronto per il binding.</li>
+</ol>
+<p>Fase due - Opzioni di Binding - Collegamento e moduli</p>
+<p>Bind /collegamento</p>
+<p>Il binding del ricevitore consente a un ricevitore registrato di essere collegato a uno dei trasmettitori con cui è stato registrato nella fase 1, e risponderà a quel trasmettitore fino a quando non sarà nuovamente collegato a un altro trasmettitore. Assicurati di eseguire un Controllo portata (Range Check) prima di far volare il modello.</p>
+<p>Avvertenza: molto importante</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<ol>
+<li>
+<p>Spegni il ricevitore.</p>
+</li>
+<li>
+<p>Conferma di essere in modalità TD.</p>
+</li>
+<li>
+<p>Ricevitore 1 [Bind]:</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0B036806D.png" /></p>
+<p>Inizia il processo di Binding - Collegamento selezionando RX1.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E094AD7240.png" /></p>
+<p>Poi seleziona Bind dall'elenco a discesa</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0BC8F7DDA.png" /></p>
+<ol>
+<li>
+<p>Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "In attesa del ricevitore...".</p>
+</li>
+<li>
+<p>Accendi il ricevitore senza toccare il pulsante di collegamento F/S.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C98FDC86.png" /></p>
+<ol>
+<li>Verrà visualizzato un messaggio "Seleziona dispositivo" e il nome del ricevitore che hai appena acceso. Scorri fino al nome del ricevitore e selezionalo.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E02E5E58A0.png" /></p>
+<p>Verrà visualizzato un messaggio che indica che il collegamento è avvenuto con successo.</p>
+<ol>
+<li>
+<p>Spegni il trasmettitore e il ricevitore.</p>
+</li>
+<li>
+<p>Accendi il trasmettitore e poi il ricevitore. Se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito.</p>
+</li>
+</ol>
+<p>Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è legato.</p>
+<p>Il ricevitore selezionato mostrerà ora il nome RX1 accanto ad esso.</p>
+<p>Nota che entrambe le bande 2.4G e 900M si legano in un'unica operazione. Il ricevitore è ora pronto per essere utilizzato.</p>
+<p>Ripeti l'operazione per il Ricevitore 2 e 3, se applicabile.</p>
+<p>Consulta anche la sezione Telemetria per una discussione sull'<a href="../telemetry/">RSSI</a>.</p>
+<p>Opzioni del ricevitore</p>
+<p>Tocca RX1, RX2 o RX3 per visualizzare le Opzioni del ricevitore:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0AA361BDC.png" /></p>
+<p>Tocca Opzioni:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E044CADFA5.png" /></p>
+<ul>
+<li>Opzioni</li>
+</ul>
+<p><em>Telemetria</em>: La telemetria può essere disabilitata per questo ricevitore.</p>
+<p><em>Potenza telemetria ridotta 25mW</em>: casella di controllo per limitare la potenza della telemetria a 25mW (normalmente 100mW), eventualmente necessaria se, ad esempio, i servi subiscono interferenze a causa delle radiofrequenze inviate vicino a loro.</p>
+<p><em>Alta velocità PWM</em>: Seleziona la casella di controllo per abilitare una velocità di aggiornamento PWM di 7 ms (rispetto ai 20 ms standard). Assicurati che i tuoi servi siano in grado di gestire questa velocità di aggiornamento.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0A6F2F093.png" /></p>
+<p><em>SBUS</em><em>:</em> consente di selezionare la modalità SBUS-16 canali o SBUS-24 canali. Ricorda che tutti i dispositivi SBUS collegati devono supportare la modalità SBUS-24 per poter attivare il nuovo protocollo. SBUS-24 è uno sviluppo di FrSky del protocollo SBUS-16 di Futaba.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E081C95F43.png" /></p>
+<p><em>Pin1 a Pin(nn)</em>: La finestra di dialogo Opzioni ricevitore offre anche la possibilità di riattribuire i canali ai pin del ricevitore. Inoltre, ogni porta di uscita può essere riassegnata ai protocolli Smart Port, SBUS Out o FBUS (precedentemente noto come F.Port2). Inoltre, la porta di uscita 1 può essere riassegnata come porta SBUS In.</p>
+<p>Il protocollo F.Port è stato sviluppato con il team Betaflight per integrare i segnali SBUS e S.Port separati. FBUS (F.Port2) consente inoltre a un dispositivo Host di comunicare con più dispositivi Slave sulla stessa linea. Per maggiori informazioni sul protocollo delle porte, consulta la spiegazione del protocollo sul sito ufficiale di FrSky.</p>
+<ul>
+<li>Registrazione dei dati di volo (scatola nera del ricevitore)</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E087DB7203.png" /></p>
+<p>Fornisce un registro dello stato di salute del ricevitore.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E070B23E99.png" /></p>
+<p>Reset dell'accensione, reset del pin di uscita e risultati del wakeup, del watchdog timer, del rilevamento del blocco e del rilevamento del brown out dell'alimentazione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E093796A31.png" /></p>
+<p>Valori minimi e massimi delle tensioni del Ricevitore 1 e 2 (se presenti) dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E021CADDAF.png" /></p>
+<p>Valori minimi e massimi dei livelli RSSI 2.4G e VFR (Valid Frame Rate) dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0A060FFB7.png" /></p>
+<p>Valori minimi e massimi dei livelli RSSI e VFR (Valid Frame Rate) di 900M dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09EB85D12.png" /></p>
+<p>Valori minimi e massimi della porta di ingresso analogica AIN e corrente della scheda di ricezione dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E079150C78.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E0CDF1B34D.png" /></p>
+<p>Tocca "Salva su file" per salvare i dati in un file .csv nella cartella Logs. Il file può essere letto da un editor di testo o più comodamente da LibreOffice.</p>
+<p>Tocca il pulsante Aggiorna per aggiornare i dati del Flight Data Record.</p>
+<ul>
+<li>Condividi</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E095582A42.png" /></p>
+<p>La funzione Condividi consente di spostare il ricevitore su un'altra radio Tandem con un diverso "ID di registrazione del proprietario". Quando si tocca l'opzione Condividi, il LED verde del ricevitore si spegne.</p>
+<p>Sulla radio di destinazione B, vai alla sezione Sistema RF e Ricevitore(n) e seleziona Collega. Nota che il processo di condivisione salta la fase di registrazione sulla radio B, perché l'"ID di registrazione del proprietario" viene trasferito dalla radio A. Viene visualizzato il nome del ricevitore della radio sorgente. Seleziona il nome, il ricevitore si legherà e il suo LED diventerà verde.</p>
+<p>Verrà visualizzato il messaggio "Bind successful".</p>
+<p>Tocca OK. La radio B ora controlla il ricevitore. Il ricevitore rimarrà legato a questa radio finché non deciderai di cambiarla.</p>
+<p>Premi il pulsante EXIT sulla Radio A per interrompere il processo di condivisione.</p>
+<p>Il ricevitore può essere riportato alla radio A effettuando un nuovo collegamento alla radio A.</p>
+<p>Nota: non è necessario utilizzare la funzione "Condividi" se tutte le radio utilizzano lo stesso numero di "ID di registrazione del proprietario". Puoi semplicemente mettere la radio che vuoi usare in modalità bind, accendere il ricevitore, selezionare il ricevitore nella radio e questo si legherà a quella radio. Puoi passare a un'altra radio nello stesso modo. Quando si copiano i modelli, è meglio mantenere i numeri dei ricevitori uguali.</p>
+<ul>
+<li>Reset - Azzeramento del binding</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E6EE77F4.png" /></p>
+<p>Se cambi idea sulla condivisione di un modello, seleziona "Ripristina il binding" per ripulire e ripristinare il binding. Spegni il ricevitore e sarà collegato al tuo trasmettitore.</p>
+<ul>
+<li>Reset di fabbrica</li>
+</ul>
+<p>Tocca il pulsante Reset per ripristinare le impostazioni di fabbrica del ricevitore e cancellare l'UID. Il ricevitore viene deregistrato con X20.</p>
+<p>Opzioni del ricevitore (con Rx spento)</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0EFF4E597.png" /></p>
+<p>Con il ricevitore spento, tocca il pulsante RX1, 2 o 3 per visualizzare le opzioni del ricevitore.</p>
+<p>Se tocchi Opzioni, la radio tenterà di connettersi e attenderà il ricevitore.</p>
+<p>Se tocchi Bind, puoi ad esempio riBind /collegamento un modello che era stato legato a un altro trasmettitore.</p>
+<p>Se tocchi Clear, verrà eseguito un Reset Bind.</p>
+<p>Failsafe</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E096E78C20.png" /></p>
+<p>La modalità Failsafe determina cosa succede al ricevitore quando il segnale del trasmettitore viene perso.</p>
+<p>I dati di failsafe vengono inviati dal trasmettitore ogni 10 secondi circa. Si noti che per i ricevitori TD, TW, AP e AP Plus i dati di failsafe sono ora salvati sul ricevitore, il che significa che le impostazioni di failsafe sono immediatamente disponibili se il ricevitore si riavvia per qualsiasi motivo. Si noti che la funzione Failsafe deve essere reimpostata e controllata dopo aver aggiornato i ricevitori con questa funzione.</p>
+<p>Tocca la casella a discesa per visualizzare le opzioni di sicurezza:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E056DC36D3.png" /></p>
+<p>Tieni</p>
+<p>Hold manterrà le ultime posizioni ricevute.</p>
+<p>Ad Hoc - Personalizzato</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0BC56BC55.png" /></p>
+<p>Custom permette di spostare i servi in posizioni personalizzate e predefinite. La posizione per ogni canale può essere definita separatamente. Ogni canale ha le opzioni Non impostato, Mantieni, Ad Hoc - Personalizzato o Nessun impulso. Se si seleziona Personalizzato, viene visualizzato il valore del canale. Se si tocca l'icona di impostazione con una freccia, viene utilizzato il valore corrente del canale. In alternativa, è possibile inserire un valore fisso per quel canale toccando il valore.</p>
+<p>Nessun impulso</p>
+<p>No Pulses disattiva gli impulsi (da utilizzare con i controllori di volo dotati di GPS di ritorno a casa in caso di perdita del segnale).</p>
+<p>Ricevitore</p>
+<p>Scegliendo "Ricevitore" sui ricevitori della serie X o successivi è possibile impostare il failsafe nel ricevitore.</p>
+<p><strong><em>Attenzione</em></strong>:  Assicurati di testare con attenzione le impostazioni Failsafe scelte, in particolare i canali che controllano il giroscopio sui ricevitori stabilizzati.</p>
+<p>Controllo portata (Range Check)</p>
+<p>Un Controllo portata (Range Check) deve essere effettuato sul campo quando il modello è pronto per volare.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0F1562248.png" /></p>
+<p>Il controllo dell'intervallo si attiva selezionando "Controllo dell'intervallo".</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0F69F6298.png" /></p>
+<p>Un avviso vocale annuncerà "Controllo portata (Range Check)" ogni pochi secondi per confermare che sei in modalità di Controllo portata (Range Check). Un popup visualizzerà il numero del ricevitore e i valori VFR% e RSSI per valutare la qualità della ricezione. Quando il Controllo portata (Range Check) è attivo, riduce la potenza del trasmettitore e di conseguenza il raggio d'azione per il test del raggio d'azione. In condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo, dovresti ricevere un allarme critico solo a circa 30 metri di distanza.</p>
+<p>Attualmente TD MODE in modalità di Controllo portata (Range Check) fornisce dati di Controllo portata (Range Check) per un ricevitore alla volta sul link 2.4G e per un ricevitore alla volta sul link 900M. Se hai tre ricevitori 2.4G registrati e vincolati come Ricevitore 1, 2 e 3, uno dei ricevitori sarà il ricevitore di telemetria attivo e il suo numero sarà visualizzato dal sensore RX come 0, 1 o 2. Questo sarà il ricevitore che sta inviando RSSI e VFR. Sarà il ricevitore che invia i dati RSSI e VFR. Se spegni quel ricevitore, il successivo diventerà il ricevitore di telemetria attivo con una priorità di 0, 1 e poi 2. Ciascuno dei tre ricevitori può essere controllato spegnendo gli altri.</p>
+<p>Sensore RX 0 = Ricevitore 1</p>
+<p>Sensore RX 1 = Ricevitore 2</p>
+<p>Sensore RX 2 = Ricevitore 3</p>
+<p>Consulta anche la sezione Telemetria per una discussione sui valori <a href="../telemetry/">VFR e RSSI</a>.</p>
+<h2 id="modulo-interno-td-isrm-pro-x20-prorrs">Modulo interno TD-ISRM Pro (X20 Pro/R/RS)<a class="headerlink" href="#modulo-interno-td-isrm-pro-x20-prorrs" title="Permanent link">&para;</a></h2>
+<p>Per il modulo TD ISRM RF consulta la sezione <a href="./">Modulo interno TD-ISRM</a>.</p>
+<p>Panoramica</p>
+<p>La scheda TD-ISRM Pro RF offre una tripla ridondanza del percorso RF utilizzando 2,4G FSK, 2,4G LoRa e 900M (LoRa), il che rappresenta un nuovo traguardo per le prestazioni RF.</p>
+<p>FSK</p>
+<p>La FSK è un tipo di FM (modulazione di frequenza) in cui il segnale modulante assume valori discreti e sposta la frequenza di uscita su una serie di valori di frequenza discreti predeterminati. Se le informazioni sono costituite da due soli valori (binari), questi vengono talvolta indicati come frequenze di marcatura e di spazio.</p>
+<p>LoRa</p>
+<p>LoRa è una tecnica di modulazione wireless derivata dalla tecnologia Chirp Spread Spectrum (CSS). Codifica le informazioni sulle onde radio utilizzando impulsi chirp, simili al modo in cui comunicano delfini e pipistrelli! La trasmissione modulata LoRa è robusta contro i disturbi e può essere ricevuta a grandi distanze.</p>
+<p>Ci sono tre sezioni RF schermate separate sulla scheda ISRM:</p>
+<ul>
+<li>La sezione RF del TWIN ha una capacità di 2,4G FSK e 2,4G LoRa. </li>
+<li>La sezione 2.4G ACCESS RF supporta ACCESS e ACCST D16 ed è utilizzata anche per il Tandem. </li>
+<li>La sezione RF dell'ACCESS 900M viene utilizzata anche per il Tandem, oltre a fornire ridondanza ad altri ricevitori.</li>
+</ul>
+<p>Con tre sezioni RF, è possibile selezionare diverse modalità e configurazioni.</p>
+<p><strong>Attenzione</strong>! In questo manuale e nei menu della radio "900M" è un termine generico che indica la banda VHF utilizzata. Le frequenze operative effettive sono 915Mhz per la FCC o 868Mhz per la LBT, a seconda del paese in cui l'utente opera.</p>
+<p>Modalità TD-ISRM Pro</p>
+<ul>
+<li>ACCESS/ACCESS D16</li>
+</ul>
+<p>In modalità ACCESS i percorsi RF 2.4G e 900M lavorano in tandem con un unico set di controlli ACCESS. Possono esserci tre ricevitori 2.4G registrati e vincolati o tre ricevitori 900M registrati e vincolati o una combinazione di 2.4G e 900M per un totale di tre ricevitori.</p>
+<p>In modalità ACCESS con una combinazione di ricevitori 2.4G e 900M, la telemetria dei collegamenti RF 2.4G e 900M è attiva contemporaneamente. I sensori sono identificati nella telemetria come 2.4G o 900M. Si noti che la banda 2.4G supporta 24 canali, mentre la banda 900M supporta 16 canali.</p>
+<p>L'opzione ACCST offre l'ACCST D16 con un ricevitore 900M per la ridondanza.</p>
+<p>Consulta la sezione ACCESS/ACCST D16 qui sotto.</p>
+<ul>
+<li>TD Tandem Dual Band 2.4G/900M</li>
+</ul>
+<p>In modalità TD il modulo RF è in modalità long range a bassa latenza e utilizza i collegamenti RF 2.4G e 900M in Tandem per lavorare con un massimo di tre ricevitori Tandem. Tandem supporta 24 canali su entrambe le bande.</p>
+<p>Questa modalità è simile alla modalità TD dell'X20. Per i dettagli sull'impostazione, consulta la sezione <a href="./">Modalità TD</a>.</p>
+<ul>
+<li>TW 2.4G TWIN/900M.</li>
+</ul>
+<p>In modalità TW c'è un collegamento RF 2.4G FSK e uno 2.4G LoRa da utilizzare con un massimo di tre ricevitori TWIN. È disponibile un ricevitore 900M per la ridondanza, tramite le porte SBUS IN/OUT. Questo migliora ulteriormente l'affidabilità del segnale RF, soprattutto in scenari che prevedono operazioni RC a lunga distanza.</p>
+<p>Consulta la sezione <a href="./">Modalità TW </a>qui di seguito.</p>
+<ul>
+<li>TD-Pro</li>
+</ul>
+<p>Da utilizzare con i futuri ricevitori FrSky TD-Pro.</p>
+<p>Esiste una funzione di fonte del ricevitore di telemetria di ETHOS chiamata RX. RX fornisce il numero del ricevitore attivo che invia la telemetria. RX è disponibile in telemetria come qualsiasi altro sensore per la visualizzazione in tempo reale e in Interruttori logici, Funzioni speciali e registrazione dei dati.</p>
+<p>Per i dettagli sulla configurazione, consulta le sezioni seguenti.</p>
+<p>ACCESS/ACCESS D16</p>
+<p>In modalità ACCESS/ACCST D16 i percorsi RF 2.4G e 900M possono lavorare in tandem con un unico set di controlli.</p>
+<p>ACCESS 2.4G con un ricevitore 900M opzionale per la ridondanza</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07D045559.png" /></p>
+<p>Questa modalità è simile alla modalità ACCESS dell'X20. È possibile collegare fino a un totale di tre ricevitori ACCESS o 900M. Per maggiori dettagli sulla configurazione, consulta la sezione <a href="./">ACCESS dell'X20</a>.</p>
+<p>ACCST D16 con un ricevitore 900M opzionale per la ridondanza</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E017BA2FB6.png" /></p>
+<p>Questa modalità è supportata solo da X20 Pro. Un ricevitore ACCST D16 può essere utilizzato insieme a un ricevitore ridondante 900M.</p>
+<ul>
+<li>Modello ID</li>
+</ul>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Model Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'ID modello può essere modificato manualmente.</p>
+<ul>
+<li>Gamma dei canali</li>
+</ul>
+<p>Scelta di quali canali interni della radio vengono effettivamente trasmessi via etere. In modalità D16 puoi scegliere tra 8 canali con dati inviati ogni 9ms e 16 canali con dati inviati ogni 18ms.</p>
+<p>Tieni presente che la velocità di aggiornamento del servo è completamente determinata dal ricevitore. Per ACCST, consulta il manuale del ricevitore per i dettagli sulla selezione della modalità HS (High PWM Speed) da 9ms. Assicurati che i tuoi servi siano in grado di gestire questa frequenza di aggiornamento.</p>
+<ul>
+<li>Modalità Corsa</li>
+</ul>
+<p>La modalità Corsa non è supportata per ACCST.</p>
+<ul>
+<li>2.4G FSK</li>
+</ul>
+<p>Abilita o disabilita il modulo RF 2.4G.</p>
+<p>Seleziona ACCST D16.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C9860CC9.png" /></p>
+<p>Tieni presente che il modulo 900M è acceso.</p>
+<ol>
+<li>Inizia il processo di binding selezionando [Bind]. Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E066792A64.png" /></p>
+<p>In modalità D16, durante il collegamento si apre un menu a comparsa che consente di selezionare la modalità di funzionamento del ricevitore. Ci sono 4 modalità con le combinazioni di Telemetria on/off e canale 1-8 o 9-16. Questo è utile quando si utilizzano due ricevitori per la ridondanza o per collegare più di 8 servi utilizzando due ricevitori.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E016CA82F1.png" /></p>
+<ol>
+<li>
+<p>Accendi il ricevitore, mettendolo in modalità bind secondo le istruzioni del ricevitore. (In genere si fa tenendo premuto il pulsante Failsafe sul ricevitore durante l'accensione).</p>
+</li>
+<li>
+<p>I LED rosso e verde si accendono. Il LED verde si spegnerà e il LED rosso lampeggerà al termine del processo di Binding - Collegamento.</p>
+</li>
+<li>
+<p>Tocca OK sul trasmettitore per terminare il processo di collegamento e riaccendi il ricevitore.</p>
+</li>
+<li>
+<p>Se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito. Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è collegato.</p>
+</li>
+</ol>
+<p>Avvertenze - Molto importanti</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT2). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p>Seleziona la potenza RF desiderata tra 25 e 100mW.</p>
+<ul>
+<li>Aggiunta di un ricevitore 900M ridondante.
+            - 900M</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D9A5788A.png" /></p>
+<p>Collega la porta SBUS Out del ricevitore ridondante alla porta SBUS IN del ricevitore principale.</p>
+<p>Assicurati che il modulo 900M RF sia abilitato.</p>
+<p>FCC: Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW, 1000mW.</p>
+<p>LBT: seleziona la potenza RF desiderata tra 25mW (telemetria via 868MHz), 200mW o 500mW (telemetria via 2.4GHz).</p>
+<ul>
+<li>Registro</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0F124A04C.png" /></p>
+<p>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. I passaggi sono gli stessi descritti nella sezione <a href="./">ACCESS</a>.</p>
+<p>Spegni i ricevitori.</p>
+<ul>
+<li>Bind /collegamento</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C079AFC2.png" /></p>
+<p>Tocca 'Bind' per avviare il binding del ricevitore 900M.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0529030CD.png" /></p>
+<p>Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "In attesa del ricevitore...".</p>
+<p>Accendi i ricevitori.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09637EE50.png" /></p>
+<p>Seleziona il ricevitore ridondante R9.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E013CA7859.png" /></p>
+<p>Tocca OK. Assicurati che il LED verde del ricevitore ridondante sia acceso. Il ricevitore ridondante è ora collegato.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0ACA05E1E.png" /></p>
+<p>Il ricevitore ridondante sarà ora elencato.</p>
+<ul>
+<li>Opzioni del ricevitore</li>
+</ul>
+<p>Le opzioni del ricevitore sono simili a quelle descritte nella sezione ACCESS.</p>
+<ul>
+<li>Reset di fabbrica</li>
+</ul>
+<p>Tocca il pulsante Reset per ripristinare le impostazioni di fabbrica del ricevitore e cancellare l'UID. Il ricevitore è ora non registrato.</p>
+<p>Failsafe</p>
+<p>Le opzioni di sicurezza sono simili a quelle descritte nella sezione ACCESS.</p>
+<p>Controllo portata (Range Check)</p>
+<p>Le opzioni di controllo dell'intervallo sono simili a quelle descritte nella sezione ACCESS.</p>
+<p>Solo ACCST D16</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07A7DCBAB.png" /></p>
+<p>Con l'opzione 900M disattivata, è attiva solo la modalità ACCST D16.</p>
+<ul>
+<li>Modello ID</li>
+</ul>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Model Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'ID modello può essere modificato manualmente.</p>
+<ul>
+<li>Gamma dei canali</li>
+</ul>
+<p>Scelta di quali canali interni della radio vengono effettivamente trasmessi via etere. In modalità D16 puoi scegliere tra 8 canali con dati inviati ogni 9ms e 16 canali con dati inviati ogni 18ms.</p>
+<p>Tieni presente che la velocità di aggiornamento del servo è completamente determinata dal ricevitore. Per ACCST, consulta il manuale del ricevitore per i dettagli sulla selezione della modalità HS (High PWM Speed) da 9ms. Assicurati che i tuoi servi siano in grado di gestire questa frequenza di aggiornamento.</p>
+<ul>
+<li>Modalità Corsa</li>
+</ul>
+<p>La modalità Corsa non è supportata per ACCST.</p>
+<ul>
+<li>2.4G FSK</li>
+</ul>
+<p>Abilita il modulo RF 2.4G.</p>
+<p>Seleziona ACCST D16.</p>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT2). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<ul>
+<li>900M</li>
+</ul>
+<p>Il modulo RF interno del 900M è spento.</p>
+<ul>
+<li>Failsafe</li>
+</ul>
+<p>Le opzioni di sicurezza sono simili a quelle descritte nella sezione ACCESS.</p>
+<ul>
+<li>Azioni</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E04D6EE3B8.png" /></p>
+<ol>
+<li>Inizia il processo di binding selezionando [Bind]. Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0BAAAF13F.png" /></p>
+<p>In modalità D16, durante il collegamento si apre un menu a comparsa che consente di selezionare la modalità di funzionamento del ricevitore. Ci sono 4 modalità con le combinazioni di Telemetria on/off e canale 1-8 o 9-16. Questo è utile quando si utilizzano due ricevitori per la ridondanza o per collegare più di 8 servi utilizzando due ricevitori.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0976B2D7E.png" /></p>
+<ol>
+<li>
+<p>Accendi il ricevitore, mettendolo in modalità bind secondo le istruzioni del ricevitore. (In genere si fa tenendo premuto il pulsante Failsafe sul ricevitore durante l'accensione).</p>
+</li>
+<li>
+<p>I LED rosso e verde si accendono. Il LED verde si spegnerà e il LED rosso lampeggerà al termine del processo di Binding - Collegamento.</p>
+</li>
+<li>
+<p>Tocca OK sul trasmettitore per terminare il processo di collegamento e riaccendi il ricevitore.</p>
+</li>
+<li>
+<p>Se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito. Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è collegato.</p>
+</li>
+</ol>
+<p>Avvertenze - Molto importanti</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D83E5C7D.png" /></p>
+<p>Il controllo dell'intervallo si attiva selezionando "Controllo dell'intervallo".</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E05C2EE676.png" /></p>
+<p>Un avviso vocale annuncerà "Controllo portata (Range Check)" ogni pochi secondi per confermare che sei in modalità di Controllo portata (Range Check). Un popup visualizzerà il numero del ricevitore e i valori VFR% e RSSI per valutare la qualità della ricezione. Quando il Controllo portata (Range Check) è attivo, riduce la potenza del trasmettitore e di conseguenza il raggio d'azione per il test del raggio d'azione. In condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo, dovresti ricevere un allarme critico solo a circa 30 metri di distanza.</p>
+<p>Consulta la sezione Telemetria per una discussione sui valori <a href="../telemetry/">VFR e RSSI</a>.</p>
+<p>Modalità <strong><em>TW</em></strong></p>
+<p>In modalità TW c'è un collegamento RF 2.4G FSK e uno 2.4G LoRa da utilizzare con un massimo di tre ricevitori TWIN più un ricevitore 900M opzionale per la ridondanza (tramite le porte SBUS IN/OUT).</p>
+<p>Possono esserci tre ricevitori TW registrati e vincolati o tre ricevitori 900M registrati e vincolati o una combinazione di TW e 900M per un totale di tre ricevitori.</p>
+<p>In modalità TW con una combinazione di ricevitori 2.4G FSK e 2.4G LoRa e 900M, la telemetria per i collegamenti RF 2.4G e 900M è attiva contemporaneamente. I sensori sono identificati nella telemetria come 2.4G o 900M. Si noti che la banda 2.4G supporta 24 canali, mentre la banda 900M supporta 16 canali.</p>
+<p>Per i dettagli sulla configurazione, consulta le sezioni seguenti.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08B0CF22A.png" /></p>
+<p>Tipo</p>
+<p>Modalità di trasmissione del modulo RF interno. La modalità deve corrispondere al tipo supportato dal ricevitore o il modello non si collegherà! Dopo il cambio di modalità, controlla attentamente il funzionamento del modello (soprattutto il Failsafe!) e verifica che tutti i canali del ricevitore funzionino come previsto.</p>
+<p>Tipo: <strong><em>Modalità TW</em></strong></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D64958CC.png" /></p>
+<p>Il modo in cui i ricevitori vengono legati e collegati al trasmettitore si divide in due Fasi. La prima fase consiste nel registrare il ricevitore alla radio o alle radio con cui deve essere utilizzato. La registrazione deve essere eseguita una sola volta per ogni coppia ricevitore/trasmettitore. Una volta registrato, un ricevitore può essere collegato e rilegato in modalità wireless con qualsiasi radio con cui è registrato, senza utilizzare il pulsante di collegamento sul ricevitore.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08B0CF22A.png" /></p>
+<p>Dopo aver selezionato la modalità TW, è necessario impostare i seguenti parametri:</p>
+<p>Modello ID</p>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Smart Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'abbinamento del ricevitore è sempre molto importante.</p>
+<p>L'ID del modello può essere modificato manualmente da 00 a 63, mentre l'ID predefinito è 1.</p>
+<p>Nota anche che l'ID del modello viene modificato quando il modello viene clonato.</p>
+<p>Gamma di canali:</p>
+<p>Dato che TW supporta fino a 24 canali, normalmente si sceglie Ch1-8, Ch1-16 o Ch1-24 per il numero di canali da trasmettere. Nota che Ch1-16 è il valore predefinito. I canali ricevuti da un ricevitore sono configurati nelle opzioni del ricevitore per ciascun ricevitore.</p>
+<p>La scelta della gamma di canali del trasmettitore influisce anche sulla frequenza di aggiornamento trasmessa. Otto canali vengono trasmessi ogni 7 ms. Se si utilizzano più di 8 canali, le frequenze di aggiornamento dei canali sono le seguenti:</p>
+<table>
+<thead>
+<tr>
+<th>Gamma di canali</th>
+<th>Tasso di aggiornamento</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-24</td>
+<td>21ms</td>
+<td>Ch1-8, poi Ch9-16, poi Ch17-24 inviati a rotazione</td>
+</tr>
+<tr>
+<td>1-16</td>
+<td>14ms</td>
+<td>Ch1-8, Ch9-16, inviati alternativamente</td>
+</tr>
+<tr>
+<td>1-8</td>
+<td>7ms</td>
+<td>Ch1-8</td>
+</tr>
+<tr>
+<td>Modalità Racemode</td>
+<td>4ms</td>
+<td>Solo servi digitali</td>
+</tr>
+</tbody>
+</table>
+<p>Modalità corsa</p>
+<p>La modalità Racing offre una latenza molto bassa di 4ms con ricevitori come TW MX.</p>
+<p>Se l'intervallo di canali è impostato su Ch1-8, è possibile selezionare una sorgente (ad esempio un interruttore) che abilita la modalità Corsa. Una volta che il ricevitore è stato collegato (vedi sotto) e la modalità Gara è stata abilitata, il ricevitore deve essere alimentato nuovamente affinché la modalità Gara abbia effetto.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E06ED253CD.png" /></p>
+<p>2.4G FSK</p>
+<p>Abilita o disabilita la sezione 2.4G FSK del modulo RF interno.</p>
+<ul>
+<li>Antenna</li>
+</ul>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT2). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<p>900M</p>
+<p>Abilita o disabilita la sezione 900M del modulo RF interno.</p>
+<ul>
+<li>Antenna</li>
+</ul>
+<p>Il modulo 900M RF funziona solo con l'antenna interna.</p>
+<p><strong>Potenza</strong>:</p>
+<p>FCC: Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW, 1000mW.</p>
+<p>LBT: seleziona la potenza RF desiderata tra 25mW (telemetria via 868MHz), 200mW o 500mW (telemetria via 2.4GHz).</p>
+<p>2.4G <strong><em>LoRa</em></strong></p>
+<p>Abilita o disabilita la sezione 2.4G del modulo RF interno.</p>
+<ul>
+<li>Antenna</li>
+</ul>
+<p>Seleziona l'antenna interna o esterna (sul connettore ANT1). Sebbene lo stadio RF abbia una protezione integrata, è buona norma assicurarsi che sia stata montata un'antenna esterna prima di selezionare l'antenna esterna. Tieni presente che la selezione dell'antenna avviene per modello, quindi ogni volta che si cambia modello ETHOS imposta la modalità di antenna per il modello in questione.</p>
+<ul>
+<li>Potenza</li>
+</ul>
+<p>Seleziona la potenza RF desiderata tra 25 e 100mW.</p>
+<p>In modalità TW i percorsi 2.4G FSK e 2.4G LoRa e 900m RF lavorano in tandem con un unico set di controlli. Possono esserci tre ricevitori TW registrati e vincolati o tre ricevitori 900M registrati e vincolati o una combinazione di TW e 900M per un totale di tre ricevitori.</p>
+<p>Fase uno: registrazione</p>
+<p>Registro</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E03F4FE032.png" /></p>
+<ol>
+<li>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. In caso contrario, passa alla sezione Bind.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09CD3DB02.png" /></p>
+<p>Verrà visualizzata una casella di messaggio con scritto "In attesa del destinatario..." e un avviso vocale ripetuto "Registra".</p>
+<ol>
+<li>Tenendo premuto il tasto bind, accendi il ricevitore e attendi che i LED rosso e verde si attivino.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D8502DA6.png" /></p>
+<p>Il messaggio "In attesa del ricevitore..." cambia in "Ricevitore connesso" e il campo Nome Rx viene compilato automaticamente.</p>
+<ol>
+<li>
+<p>In questa fase è possibile impostare l'ID di registrazione e l'UID:</p>
+</li>
+<li>
+<p>ID di registrazione: L'ID di registrazione è a livello del proprietario o del trasmettitore. Deve essere un codice unico per la tua radio e per gli altri trasmettitori da utilizzare con Smart Share. Il valore predefinito è quello dell'impostazione "ID di registrazione del proprietario" descritta all'inizio di questa sezione, ma può essere modificato qui. Se due radio hanno lo stesso ID, puoi spostare i ricevitori (con lo stesso numero di ricevitore per un determinato modello) da una radio all'altra semplicemente utilizzando il processo di collegamento all'accensione.</p>
+</li>
+<li>Nome RX: Compilato automaticamente, ma il nome può essere modificato se lo si desidera. Questo può essere utile se stai utilizzando più di un ricevitore e devi ricordare, ad esempio, che RX4R1 è per i canali 1-8 o RX4R2 è per i canali 9-16 o RX4R3 è per i canali 17-24 quando fai un nuovo collegamento. Qui è possibile inserire un nome per il ricevitore.</li>
+<li>
+<p>L'UID viene utilizzato per distinguere tra più ricevitori utilizzati contemporaneamente in un unico modello. Può essere lasciato al valore predefinito di 0 per un singolo ricevitore. Quando si utilizza più di un ricevitore nello stesso modello, l'UID deve essere modificato: di solito è 0 per i Ch1-8, 1 per i Ch9-16 e 2 per i Ch17-24. Tieni presente che questo UID non può essere letto dal ricevitore, quindi è bene etichettare il ricevitore.</p>
+</li>
+<li>
+<p>Premi [Registra] per completare l'operazione. Viene visualizzata una finestra di dialogo con scritto "Registrazione ok". Premi [OK] per continuare.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E66E892D.png" /></p>
+<ol>
+<li>Spegni il ricevitore. A questo punto il ricevitore è registrato, ma deve ancora essere collegato al trasmettitore da utilizzare. Ora è pronto per il binding.</li>
+</ol>
+<p>Fase due - Opzioni di Binding - Collegamento e moduli</p>
+<p>Bind /collegamento</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09037F464.png" /></p>
+<p>Il binding del ricevitore consente a un ricevitore registrato di essere collegato a uno dei trasmettitori con cui è stato registrato nella fase 1, e risponderà a quel trasmettitore fino a quando non sarà nuovamente collegato a un altro trasmettitore. Assicurati di eseguire un Controllo portata (Range Check) prima di far volare il modello.</p>
+<p>Avvertenza: molto importante</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<ol>
+<li>
+<p>Spegni il ricevitore.</p>
+</li>
+<li>
+<p>Conferma di essere in modalità TW.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09037F464.png" /></p>
+<ol>
+<li>Ricevitore 1 [Bind]: Avvia il processo di binding selezionando [RX1], quindi seleziona Bind dall'elenco a discesa. Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "In attesa del ricevitore....".</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E1E84ABF.png" /></p>
+<ol>
+<li>Accendi il ricevitore senza toccare il pulsante di collegamento F/S. Verrà visualizzato un messaggio "Seleziona dispositivo" e il nome del ricevitore che hai appena acceso.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0872BE451.png" /></p>
+<ol>
+<li>Scorri fino al nome del ricevitore e selezionalo.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E044417249.png" /></p>
+<p>Verrà visualizzato un messaggio che indica che il collegamento è avvenuto con successo.</p>
+<ol>
+<li>
+<p>Spegni il trasmettitore e il ricevitore.</p>
+</li>
+<li>
+<p>Accendi il trasmettitore e poi il ricevitore. Se il LED blu del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito.</p>
+</li>
+</ol>
+<p>Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è legato.</p>
+<p>Il ricevitore selezionato mostrerà ora il nome RX1 accanto ad esso:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0647A7851.png" /></p>
+<p>Il ricevitore è ora pronto per essere utilizzato.</p>
+<p>Ripeti l'operazione per il Ricevitore 2 e 3, se applicabile.</p>
+<p>Consulta anche la sezione Telemetria per una discussione sull'<a href="../telemetry/">RSSI</a>.</p>
+<p>Opzioni del ricevitore</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0647A7851.png" /></p>
+<p>Tocca il pulsante RX1, RX2 o RX3 per visualizzare le Opzioni del ricevitore:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E02370D9B2.png" /></p>
+<p>Tocca Opzioni:</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E042F3B19F.png" /></p>
+<ul>
+<li>Opzioni</li>
+</ul>
+<p><em>Telemetria</em>: La telemetria può essere disabilitata per questo ricevitore</p>
+<p><em>Potenza telemetria ridotta 25mW</em>: casella di controllo per limitare la potenza della telemetria a 25mW (normalmente 100mW), eventualmente necessaria se, ad esempio, i servi subiscono interferenze a causa delle radiofrequenze inviate vicino a loro.</p>
+<p><em>Alta velocità PWM</em>: la velocità di aggiornamento del servo è completamente determinata dal ricevitore.  Questa casella di controllo abilita una velocità di aggiornamento PWM di 7 ms (contro i 18 ms standard). Assicurati che i tuoi servi siano in grado di gestire questa velocità di aggiornamento.</p>
+<p>maggiori dettagli sulla frequenza di aggiornamento impostata sul trasmettitore, consulta la <a href="./">sezione Gamma di canali (TW)</a>.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0A55085F5.png" /></p>
+<p><em>SBUS</em><em>:</em> consente di selezionare la modalità SBUS-16 canali o SBUS-24 canali. Ricorda che tutti i dispositivi SBUS collegati devono supportare la modalità SBUS-24 per poter attivare il nuovo protocollo. SBUS-24 è uno sviluppo di FrSky del protocollo SBUS-16 di Futaba.</p>
+<p><em>Mappatura dei canali</em>: La finestra di dialogo Opzioni del ricevitore offre anche la possibilità di rimappare i canali radio sui pin del ricevitore.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E081909F6B.png" /></p>
+<p><em>Opzioni Pin1-12</em>: Permette di rimappare i canali radio sui pin del ricevitore. Inoltre, ogni porta di uscita può essere riassegnata ai protocolli Smart Port, SBUS Out o FBUS (precedentemente noto come F.Port2).</p>
+<p>Il protocollo F.Port è stato sviluppato con il team Betaflight per integrare i segnali SBUS e S.Port separati. FBUS (F.Port2) consente inoltre a un dispositivo Host di comunicare con più dispositivi Slave sulla stessa linea. Per maggiori informazioni sul protocollo delle porte, consulta la spiegazione del protocollo sul sito ufficiale di FrSky.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07AF1FCF2.png" /></p>
+<p>Il pin 1 può anche essere impostato come SBUS IN. Nell'esempio precedente, i canali sono stati ridotti di uno per fare spazio all'SBUS IN sulla porta 1 (il CH1 Aileron1 è sul pin 2).</p>
+<ul>
+<li>Registrazione dei dati di volo (scatola nera del ricevitore)</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0100B4C78.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E05828C37D.png" /></p>
+<p>Fornisce un registro dello stato di salute del ricevitore, compreso il reset all'accensione, il reset dei pin di uscita e i risultati del wakeup, del watchdog timer, del rilevamento del blocco e del rilevamento del brown out dell'alimentazione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0056D26B9.png" /></p>
+<p>Valori minimi e massimi delle tensioni del Ricevitore 1 e 2 (se presenti) dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0FAD76284.png" /></p>
+<p>Valori minimi e massimi dei livelli RSSI 2.4G e VFR (Valid Frame Rate) dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E03E5A55D3.png" /></p>
+<p>Valori minimi e massimi dei livelli RSSI e VFR (Valid Frame Rate) di 900M dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D49075ED.png" /></p>
+<p>Valori minimi e massimi della porta di ingresso analogica AIN e corrente della scheda di ricezione dall'accensione.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C30C49C2.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08EC2CD1C.png" /></p>
+<p>Tocca "Salva su file" per salvare i dati in un file .csv nella cartella Logs. Il file può essere letto da un editor di testo o più comodamente da LibreOffice.</p>
+<p>Tocca il pulsante Aggiorna per aggiornare i dati del Flight Data Record.</p>
+<ul>
+<li>Condividi</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D19A74C4.png" /></p>
+<p>La funzione Condividi consente di spostare il ricevitore su un'altra radio in modalità TW con un diverso "ID di registrazione del proprietario". Quando si tocca l'opzione Condividi, il LED verde del ricevitore si spegne.</p>
+<p>Sulla radio di destinazione B, vai alla modalità RF System TW e a Receiver(n) e seleziona Bind. Nota che il processo di condivisione salta la fase di registrazione sulla radio B, perché l'"ID di registrazione del proprietario" viene trasferito dalla radio A. Viene visualizzato il nome del ricevitore della radio sorgente. Seleziona il nome, il ricevitore si legherà e il suo LED diventerà verde.</p>
+<p>Verrà visualizzato il messaggio "Bind successful".</p>
+<p>Tocca OK. La radio B ora controlla il ricevitore. Il ricevitore rimarrà legato a questa radio finché non deciderai di cambiarla.</p>
+<p>Premi il pulsante EXIT sulla Radio A per interrompere il processo di condivisione.</p>
+<p>Il ricevitore può essere riportato alla radio A effettuando un nuovo collegamento alla radio A.</p>
+<p>Nota: non è necessario utilizzare la funzione "Condividi" se tutte le radio utilizzano lo stesso numero di "ID di registrazione del proprietario". Puoi semplicemente mettere la radio che vuoi usare in modalità bind, accendere il ricevitore, selezionare il ricevitore nella radio e questo si legherà a quella radio. Puoi passare a un'altra radio nello stesso modo. Quando si copiano i modelli, è meglio mantenere i numeri dei ricevitori uguali.</p>
+<ul>
+<li>Reset - Azzeramento del binding</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0254C96FE.png" /></p>
+<p>Se cambi idea sulla condivisione di un modello, seleziona "Ripristina il binding" per ripulire e ripristinare il binding. Spegni il ricevitore e sarà collegato al tuo trasmettitore.</p>
+<ul>
+<li>Reset di fabbrica</li>
+</ul>
+<p>Tocca il pulsante Reset per ripristinare le impostazioni di fabbrica del ricevitore e cancellare l'UID. Il ricevitore non è registrato con X20.</p>
+<p>Aggiunta di un ricevitore ridondante</p>
+<p>Un secondo ricevitore può essere collegato a uno slot non utilizzato, ad esempio RX2 o RX3, per fornire una ridondanza in caso di problemi di ricezione. L'esempio seguente mostra l'aggiunta di un ricevitore 900M.</p>
+<ol>
+<li>Collega la porta SBUS Out del ricevitore ridondante alla porta SBUS IN del ricevitore principale.</li>
+</ol>
+<p>Tieni presente che potrebbe essere necessario riassegnare una porta del ricevitore alla funzione SBUS IN. Consulta la sezione <a href="./">Mappatura dei canali</a>.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E06ED253CD.png" /></p>
+<ol>
+<li>Abilita il modulo RF interno 900M. Nota che il modulo RF 900M funziona solo con l'antenna interna.</li>
+</ol>
+<p>2a. Configura le opzioni di potenza RF.</p>
+<p><strong>Potenza</strong>:</p>
+<p>FCC: Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW, 1000mW.</p>
+<p>LBT: seleziona la potenza RF desiderata tra 25mW (telemetria via 868MHz), 200mW o 500mW (telemetria via 2.4GHz).</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0910A8828.png" /></p>
+<ol>
+<li>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. In caso contrario, passa alla sezione Legami.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0808D490B.png" /></p>
+<ol>
+<li>
+<p>Registra il nuovo ricevitore, ad esempio l'R9MINI-O di cui sopra.</p>
+</li>
+<li>
+<p>Spegni i ricevitori.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0340F9A41.png" /></p>
+<ol>
+<li>Tocca "Bind" sulla linea RX2 o RX3.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E066E9DE24.png" /></p>
+<p>Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "In attesa del ricevitore...".</p>
+<ol>
+<li>Accendi i ricevitori.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E06875B496.png" /></p>
+<ol>
+<li>Seleziona il ricevitore ridondante R9.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C34695A4.png" /></p>
+<ol>
+<li>Tocca OK. Assicurati che il LED verde del ricevitore ridondante sia acceso. Il ricevitore ridondante è ora collegato.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C48442BE.png" /></p>
+<ol>
+<li>A questo punto verrà elencato il ricevitore ridondante, ad esempio l'R9MINI di cui sopra.</li>
+</ol>
+<p>Nota: sebbene sia possibile associare allo stesso UID sia il ricevitore principale che quello ridondante accendendoli singolarmente, non avrai ACCESS alle Opzioni Rx quando entrambi sono accesi.</p>
+<p>Failsafe</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C7D42768.png" /></p>
+<p>La modalità Failsafe determina cosa succede al ricevitore quando il segnale del trasmettitore viene perso.</p>
+<p>I dati di failsafe vengono inviati dal trasmettitore ogni 10 secondi circa. Si noti che per i ricevitori TD, TW, AP e AP Plus i dati di failsafe sono ora salvati sul ricevitore, il che significa che le impostazioni di failsafe sono immediatamente disponibili se il ricevitore si riavvia per qualsiasi motivo.</p>
+<p>Tocca la casella a discesa per visualizzare le opzioni di sicurezza:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07ABBA943.png" /></p>
+<p>Tieni</p>
+<p>Hold manterrà le ultime posizioni ricevute.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0187F0607.png" /></p>
+<p>Personalizzato</p>
+<p>Custom permette di spostare i servi in posizioni personalizzate e predefinite. La posizione per ogni canale può essere definita separatamente. Ogni canale ha le opzioni Non impostato, Mantieni, Ad Hoc - Personalizzato o Nessun impulso. Se si seleziona Personalizzato, viene visualizzato il valore del canale. Se si tocca l'icona di impostazione con una freccia, viene utilizzato il valore corrente del canale. In alternativa, è possibile inserire un valore fisso per quel canale toccando il valore.</p>
+<p>Nessun impulso</p>
+<p>No Pulses disattiva gli impulsi (da utilizzare con i controllori di volo dotati di GPS di ritorno a casa in caso di perdita del segnale).</p>
+<p>Ricevitore</p>
+<p>Scegliendo "Ricevitore" sui ricevitori della serie X o successivi è possibile impostare il failsafe nel ricevitore.</p>
+<p><em>Attenzione</em>: Assicurati di testare attentamente le impostazioni di Failsafe scelte.</p>
+<p>Controllo portata (Range Check)</p>
+<p>Un Controllo portata (Range Check) deve essere effettuato sul campo quando il modello è pronto per volare.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E27EF203.png" /></p>
+<p>Il controllo dell'intervallo si attiva selezionando "Controllo dell'intervallo".</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E00891885B.png" /></p>
+<p>Un avviso vocale annuncerà "Range Check" ogni pochi secondi per confermare che sei in modalità range check. Un popup visualizzerà il numero del ricevitore e i valori VFR% e RSSI per valutare la qualità della ricezione. Quando il Controllo portata (Range Check) è attivo, riduce la potenza del trasmettitore e di conseguenza il raggio d'azione per il test del raggio d'azione. In condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo, dovresti ricevere un allarme critico solo a circa 30 metri di distanza.</p>
+<p>Attualmente TW in modalità di Controllo portata (Range Check) fornisce i dati di Controllo portata (Range Check) per un ricevitore alla volta sul link 2.4G e per un ricevitore alla volta sul link 900M. Se hai tre ricevitori 2.4G registrati e vincolati come Ricevitore 1, 2 e 3, uno dei ricevitori sarà il ricevitore di telemetria attivo e il suo numero sarà visualizzato dal sensore RX come 0, 1 o 2. Sarà il ricevitore che sta inviando i dati RSSI e VFR. Sarà il ricevitore che invia i dati RSSI e VFR. Se spegni quel ricevitore, il successivo diventerà il ricevitore di telemetria attivo con una priorità di 0, 1 e poi 2. Ciascuno dei tre ricevitori può essere controllato spegnendo gli altri.</p>
+<p>Sensore RX 0 = Ricevitore 1</p>
+<p>Sensore RX 1 = Ricevitore 2</p>
+<p>Sensore RX 2 = Ricevitore 3</p>
+<p>Consulta anche la sezione Telemetria per una discussione sui valori <a href="../telemetry/">VFR e RSSI</a>.</p>
+<h2 id="modulo-rf-esterno-frsky">Modulo RF esterno - FrSky<a class="headerlink" href="#modulo-rf-esterno-frsky" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07D51439F.png" /></p>
+<p>Attualmente sono supportati i seguenti moduli esterni FrSky: XJT Lite, R9M Lite, R9M Lite Access, R9M Lite Pro Access, TWIN Lite Pro e PPM e SBUS. Per i moduli di terze parti, consulta la sezione successiva.</p>
+<p>I moduli esterni possono funzionare in modalità ACCESS, ACCST D16, TD MODE, ELRS o TWIN MODE. Per i dettagli sulla configurazione, consulta le sezioni seguenti.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0198A7063.png" /></p>
+<p>Stato</p>
+<p>Il modulo esterno può essere acceso o spento.</p>
+<p>Tipo</p>
+<p>XJT Lite</p>
+<p>Protocollo</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E09199F2FB.png" /></p>
+<p>L'XJT Lite può funzionare in modalità D16 (fino a 16 canali), D8 (fino a 8 canali) o LR12 (fino a 12 canali).</p>
+<p>Tipo</p>
+<p>R9M Lite</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E3D45091.png" /></p>
+<p>Protocollo</p>
+<p>L'R9M Lite può funzionare nelle seguenti modalità:</p>
+<table>
+<thead>
+<tr>
+<th>Modalità</th>
+<th>Frequenza operativa RF</th>
+<th>Potenza RF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FCC</td>
+<td>915MHz</td>
+<td>100mW (con telemetria)</td>
+</tr>
+<tr>
+<td>UE</td>
+<td>868MHz</td>
+<td>25mW (con telemetria) /<br>100mW (senza telemetria)</td>
+</tr>
+<tr>
+<td>FLEX 868MHz</td>
+<td>Regolabile</td>
+<td>100mW (con telemetria)</td>
+</tr>
+<tr>
+<td>FLEX 915MHz</td>
+<td>Regolabile</td>
+<td>100mW (con telemetria)</td>
+</tr>
+</tbody>
+</table>
+<p>Tipo</p>
+<p>R9M Lite ACCESS</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D760ECCF.png" /></p>
+<p>Protocollo</p>
+<p>L'R9M Lite ACCESS funziona in modalità ACCESS.</p>
+<p>Tipo</p>
+<p>R9M Lite Pro ACCESS</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E054445B38.png" /></p>
+<p>Protocollo</p>
+<p>L'R9M Lite Pro ACCESS funziona in modalità ACCESS.</p>
+<table>
+<thead>
+<tr>
+<th>Modalità</th>
+<th>Frequenza operativa RF</th>
+<th>Potenza RF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FCC</td>
+<td>915MHz</td>
+<td>10mW /<br>100mW /<br>500mW /<br>100mW~1W (autoadattativo)</td>
+</tr>
+<tr>
+<td>UE</td>
+<td>868MHz</td>
+<td>Modalità telemetrica (25mW) /<br>Modalità non telemetrica (200mW / 500mW)</td>
+</tr>
+</tbody>
+</table>
+<p>Tipo</p>
+<p>TWIN Lite Pro</p>
+<p>Twin Lite PRO è un potente modulo RF che consente alle radio ETHOS di collegarsi ai ricevitori della serie TW e di supportare le doppie frequenze 2.4G del protocollo TW contemporaneamente sullo stesso ricevitore. Il protocollo TW attivo-attivo è diverso dalle soluzioni generali di ridondanza attiva-standby (in cui un ricevitore assume il controllo del segnale solo quando l'altro è in modalità Failsafe), con il protocollo TW, le bande di frequenza 2.4G doppie sono attive sul modulo della serie TW e sul ricevitore allo stesso tempo.</p>
+<p>Il modulo RF è dotato di due antenne esterne 2.4G montate in RF per fornire una copertura multidirezionale e più ampia per la trasmissione dei segnali rispetto a un design a singola antenna. Sfruttando queste caratteristiche, il sistema Twin è in grado di fornire una minore latenza e una maggiore affidabilità a una velocità di trasmissione dati più elevata.</p>
+<p>Oltre alla modalità TW, questo modulo supporta anche le modalità ACCST D16, ACCESS e ELRS 2.4G. Ciò significa che gli utenti possono beneficiare di un'ampia gamma di opzioni di ricevitori compatibili da scegliere e a cui legarsi durante la costruzione del modello RC. Il modulo Twin Lite Pro offre opzioni di potenza RF fino a 500mW; grazie al guscio del modulo in metallo lavorato a CNC che favorisce la dissipazione del calore, questo sistema è in grado di garantire un controllo stabile a lungo raggio per decine di chilometri durante le lunghe ore di lavoro.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0C9B6A516.png" /></p>
+<p>Stato</p>
+<p>Il modulo esterno può essere acceso o spento.</p>
+<p>Protocollo</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E03BB13710.png" /></p>
+<p>Modalità di trasmissione del modulo TWIN Lite Pro RF. Oltre alla modalità TW, questo modulo supporta anche le modalità ACCST D16, ACCESS e ELRS 2.4G.</p>
+<p>La modalità deve corrispondere al tipo supportato dal ricevitore, altrimenti il modello non si collegherà! Dopo un cambio di modalità, controlla attentamente il funzionamento del modello (soprattutto il Failsafe!) e verifica che tutti i canali del ricevitore funzionino come previsto.</p>
+<p>Protocollo: Modalità TW</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E04557F389.png" /></p>
+<p>In termini di connessione, la modalità TW è simile ad ACCESS per quanto riguarda il modo in cui i ricevitori vengono connessi al trasmettitore. Il processo è suddiviso in due Fasi. La prima fase consiste nel registrare il ricevitore alla radio o alle radio con cui deve essere utilizzato. La registrazione deve essere eseguita una sola volta per ogni coppia ricevitore/trasmettitore. Una volta registrato, un ricevitore può essere collegato e rilegato in modalità wireless con qualsiasi radio con cui è registrato, senza utilizzare il pulsante di collegamento sul ricevitore.</p>
+<p>Dopo aver selezionato la modalità TW, è necessario impostare i seguenti parametri:</p>
+<ul>
+<li>Modello ID</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0BAB9AC56.png" /></p>
+<p>Quando crei un nuovo modello, l'ID modello viene assegnato automaticamente. L'ID modello deve essere un numero univoco perché la funzione Smart Match assicura che solo l'ID modello corretto venga associato. Questo numero viene inviato al ricevitore durante il binding, in modo che risponda solo al numero a cui è stato associato. L'ID modello può essere modificato manualmente. Si noti anche che l'ID modello viene modificato quando il modello viene clonato.</p>
+<ul>
+<li>Gamma di canali:</li>
+</ul>
+<p>Poiché la modalità TW supporta fino a 24 canali, di solito si sceglie Ch1-8, Ch1-16 o Ch1-24 per il numero di canali da trasmettere. Nota che Ch1-16 è il valore predefinito. I canali ricevuti da un ricevitore sono configurati nelle opzioni del ricevitore per ciascun ricevitore.</p>
+<p>La scelta della gamma di canali del trasmettitore influisce anche sulla frequenza di aggiornamento trasmessa. Otto canali vengono trasmessi ogni 7 ms. Se si utilizzano più di 8 canali, le frequenze di aggiornamento dei canali sono le seguenti:</p>
+<table>
+<thead>
+<tr>
+<th>Gamma di canali</th>
+<th>Tasso di aggiornamento</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-24</td>
+<td>21ms</td>
+<td>Ch1-8, poi Ch9-16, poi Ch17-24 inviati a rotazione</td>
+</tr>
+<tr>
+<td>1-16</td>
+<td>14ms</td>
+<td>Ch1-8, Ch9-16, inviati alternativamente</td>
+</tr>
+<tr>
+<td>1-8</td>
+<td>7ms</td>
+<td>Ch1-8</td>
+</tr>
+<tr>
+<td>Modalità Racemode</td>
+<td>4ms</td>
+<td>Solo servi digitali</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Modalità corsa</li>
+</ul>
+<p>La modalità Racing offre una latenza molto bassa di 4 ms con ricevitori come TW MX. Il modulo RF e il ricevitore RS devono essere in versione 2.1.7 o successiva.</p>
+<p>Se l'intervallo dei canali è impostato su Ch1-8, è possibile selezionare una sorgente (ad esempio un interruttore) che abiliti la modalità Corsa. Una volta che il ricevitore RS è stato collegato (vedi sotto) e la modalità Corsa è stata abilitata, il ricevitore RS deve essere alimentato nuovamente affinché la modalità Corsa abbia effetto.</p>
+<ul>
+<li>Potenza</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CF5E914D.png" /></p>
+<p>Seleziona la potenza RF desiderata tra 10, 25, 100, 200, 500mW.</p>
+<ul>
+<li>
+<p>Fase uno: registrazione
+            - <img alt="" src="../../assets/Pictures/1000000000000320000001E0CDF41928.png" /></p>
+</li>
+<li>
+<p>Se il tuo ricevitore non è ancora stato registrato, avvia il processo di registrazione selezionando [Registra]. In caso contrario, passa alla sezione Legami.</p>
+</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E093957A27.png" /></p>
+<p>Verrà visualizzata una casella di messaggio con scritto "Waiting...." e un avviso vocale ripetuto "Register".</p>
+<ol>
+<li>Tenendo premuto il tasto bind, accendi il ricevitore e attendi che i LED rosso e verde si attivino.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D2A6E4BE.png" /></p>
+<p>Il messaggio "In attesa..." cambia in "Ricevitore connesso" e il campo Nome Rx viene compilato automaticamente.</p>
+<ol>
+<li>
+<p>In questa fase è possibile impostare l'ID di registrazione e l'UID:</p>
+</li>
+<li>
+<p>ID di registrazione: L'ID di registrazione è a livello del proprietario o del trasmettitore. Deve essere un codice unico per la tua radio e per gli altri trasmettitori da utilizzare con Smart Share. Il valore predefinito è quello dell'impostazione ID di registrazione del proprietario descritta all'inizio di questa sezione, ma può essere modificato qui. Se due radio hanno lo stesso ID, puoi spostare i ricevitori (con lo stesso numero di ricevitore per un determinato modello) da una all'altra semplicemente utilizzando la procedura di accensione.</p>
+</li>
+<li>Nome RX: Compilato automaticamente, ma il nome può essere modificato se lo si desidera. Questo può essere utile se stai utilizzando più di un ricevitore e devi ricordare, ad esempio, che RX4R1 è per i canali 1-8 o RX4R2 è per i canali 9-16 o RX4R3 è per i canali 17-24 quando fai un nuovo collegamento. Qui è possibile inserire un nome per il ricevitore.</li>
+<li>
+<p>L'UID viene utilizzato per distinguere tra più ricevitori utilizzati contemporaneamente in un unico modello. Può essere lasciato al valore predefinito di 0 per un singolo ricevitore. Quando si utilizza più di un ricevitore nello stesso modello, l'UID deve essere modificato: di solito è 0 per i Ch1-8, 1 per i Ch9-16 e 2 per i Ch17-24. Tieni presente che questo UID non può essere letto dal ricevitore, quindi è bene etichettare il ricevitore.</p>
+</li>
+<li>
+<p>Premi [Registra] per completare l'operazione.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0A0BB8F53.png" /></p>
+<ol>
+<li>
+<p>Viene visualizzata una finestra di dialogo con scritto "Registrazione ok". Premi [OK] per continuare.</p>
+</li>
+<li>
+<p>Spegni il ricevitore. A questo punto il ricevitore è registrato, ma deve ancora essere collegato al trasmettitore per essere utilizzato.</p>
+</li>
+<li>
+<p>Fase due - Opzioni di Binding - Collegamento e moduli</p>
+</li>
+</ol>
+<p>Il binding del ricevitore consente a un ricevitore registrato di essere collegato a uno dei trasmettitori con cui è stato registrato nella fase 1, e risponderà a quel trasmettitore fino a quando non sarà nuovamente collegato a un altro trasmettitore. Assicurati di eseguire un Controllo portata (Range Check) prima di far volare il modello.</p>
+<p>Numero del ricevitore: conferma il numero del ricevitore con cui il modello deve funzionare. L'abbinamento del ricevitore è ancora importante come lo era prima di ACCESS.  Il numero del ricevitore definisce il comportamento della funzione Smart Match. Questo numero viene inviato al ricevitore durante l'abbinamento, che risponderà solo al numero a cui è stato abbinato. L'ID del modello può essere modificato manualmente.</p>
+<ul>
+<li>Bind /collegamento</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E03E3AD2AF.png" /></p>
+<p>Avvertenza: molto importante</p>
+<p>Non eseguire l'operazione di Binding - Collegamento con un motore elettrico collegato o un motore a combustione interna acceso.</p>
+<ol>
+<li>
+<p>Spegni il ricevitore.</p>
+</li>
+<li>
+<p>Conferma di essere in modalità ACCESS.</p>
+</li>
+<li>
+<p>Ricevitore 1 [Bind]: Avvia il processo di binding selezionando [RX1], quindi seleziona Bind dall'elenco a discesa. Un avviso vocale annuncerà "Bind" ogni pochi secondi per confermare che sei in modalità bind. Un popup visualizzerà "In attesa del ricevitore....".</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E1E84ABF.png" /></p>
+<ol>
+<li>Accendi il ricevitore senza toccare il pulsante di collegamento F/S. Verrà visualizzato un messaggio "Seleziona dispositivo" e il nome del ricevitore che hai appena acceso.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0872BE451.png" /></p>
+<ol>
+<li>Scorri fino al nome del ricevitore e selezionalo. Verrà visualizzato un messaggio che indica che il collegamento è avvenuto con successo.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E044417249.png" /></p>
+<ol>
+<li>
+<p>Spegni il trasmettitore e il ricevitore.</p>
+</li>
+<li>
+<p>Accendi il trasmettitore e poi il ricevitore. Se il LED verde del ricevitore è acceso e il LED rosso è spento, il ricevitore è collegato al trasmettitore. Il collegamento del modulo ricevitore/trasmettitore non dovrà essere ripetuto, a meno che uno dei due non venga sostituito.</p>
+</li>
+</ol>
+<p>Il ricevitore sarà controllato (senza essere influenzato da altri trasmettitori) solo dal trasmettitore a cui è legato.</p>
+<p>Il ricevitore selezionato mostrerà ora per RX1 il nome accanto ad esso: TDMX</p>
+<p>Il ricevitore è ora pronto per essere utilizzato.</p>
+<p>Ripeti l'operazione per il Ricevitore 2 e 3, se applicabile.</p>
+<p>Consulta anche la sezione Telemetria per una discussione sull'<a href="../telemetry/">RSSI</a>.</p>
+<ul>
+<li>Opzioni del ricevitore</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0647A7851.png" /></p>
+<p>Tocca il pulsante RX1, RX2 o RX3 per visualizzare le Opzioni del ricevitore:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E02370D9B2.png" /></p>
+<p>Tocca Opzioni:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E02EB07B5F.png" /></p>
+<p><em>Telemetria 25mW</em>: casella di controllo per limitare la potenza della telemetria a 25mW (normalmente 100mW), eventualmente necessaria se, ad esempio, i servi subiscono interferenze a causa delle radiofrequenze inviate vicino a loro.</p>
+<p><em>Alta velocità PWM</em>: la velocità di aggiornamento del servo è completamente determinata dal ricevitore.  Questa casella di controllo abilita una velocità di aggiornamento PWM di 7 ms (contro i 18 ms standard). Assicurati che i tuoi servi siano in grado di gestire questa velocità di aggiornamento.</p>
+<p>maggiori dettagli sulla frequenza di aggiornamento impostata sul trasmettitore, consulta la <a href="./">sezione Gamma di canali (ACCESS)</a>.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0FDCA0F39.png" /></p>
+<p><em>Porta</em>: Consente di selezionare la SmartPort del ricevitore in modo da utilizzare il protocollo S.Port, F.Port o FBUS (F.Port2). Il protocollo F.Port è stato sviluppato con il team Betaflight per integrare i segnali SBUS e S.Port separati. FBUS (F.Port2) consente inoltre a un dispositivo Host di comunicare con diversi dispositivi Slave sulla stessa linea. Per maggiori informazioni sul protocollo delle porte, consulta la spiegazione del protocollo sul sito ufficiale di FrSky.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CD7F5DCC.png" /></p>
+<p><em>SBUS</em><em>:</em> permette di selezionare la modalità SBUS-16 canali o SBUS-24 canali. Tieni presente che tutti i dispositivi SBUS collegati devono supportare la modalità SBUS-24 per poter attivare il nuovo protocollo. SBUS-24 è uno sviluppo di FrSky del protocollo SBUS-16 di Futaba.</p>
+<p><em>Mappatura dei canali</em>: La finestra di dialogo Opzioni del ricevitore offre anche la possibilità di riattribuire i canali ai pin del ricevitore.</p>
+<p>Registro dello stato di salute del ricevitore, compreso il reset all'accensione, il reset dei pin di uscita e i risultati di wakeup, watchdog timer, rilevamento del blocco e rilevamento del brown out dell'alimentazione.</p>
+<p>La funzione Condividi permette di spostare il ricevitore su un'altra radio ACCESS con un diverso "ID di registrazione del proprietario". Quando si tocca l'opzione Condividi, il LED verde del ricevitore si spegne.</p>
+<p>Sulla radio di destinazione B, vai alla sezione Sistema RF e Ricevitore(n) e seleziona Collega. Nota che il processo di condivisione salta la fase di registrazione sulla radio B, perché l'"ID di registrazione del proprietario" viene trasferito dalla radio A. Viene visualizzato il nome del ricevitore della radio sorgente. Seleziona il nome, il ricevitore si legherà e il suo LED diventerà verde.</p>
+<p>Verrà visualizzato il messaggio "Bind successful".</p>
+<p>Tocca OK. La radio B ora controlla il ricevitore. Il ricevitore rimarrà legato a questa radio finché non deciderai di cambiarla.</p>
+<p>Premi il pulsante EXIT sulla Radio A per interrompere il processo di condivisione.</p>
+<p>Il ricevitore può essere riportato alla radio A effettuando un nuovo collegamento alla radio A.</p>
+<p>Nota: non è necessario utilizzare la funzione "Condividi" se tutte le radio utilizzano lo stesso numero di "ID di registrazione del proprietario". Puoi semplicemente mettere la radio che vuoi usare in modalità bind, accendere il ricevitore, selezionare il ricevitore nella radio e questo si legherà a quella radio. Puoi passare a un'altra radio nello stesso modo. Quando si copiano i modelli, è meglio mantenere i numeri dei ricevitori uguali.</p>
+<p>Se cambi idea sulla condivisione di un modello, seleziona "Ripristina il binding" per ripulire e ripristinare il binding. Spegni il ricevitore e sarà collegato al tuo trasmettitore.</p>
+<p>Tocca il pulsante Reset per ripristinare le impostazioni di fabbrica del ricevitore e cancellare l'UID. Il ricevitore non è registrato con X20.</p>
+<p>Failsafe</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E08409204D.png" /></p>
+<p>La modalità Failsafe determina cosa succede al ricevitore quando il segnale del trasmettitore viene perso.</p>
+<p>Tocca la casella a discesa per visualizzare le opzioni di sicurezza:</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E098D2CA7D.png" /></p>
+<ul>
+<li>Mantieni</li>
+</ul>
+<p>Hold manterrà le ultime posizioni ricevute.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E033A63FCE.png" /></p>
+<ul>
+<li>Personalizzato</li>
+</ul>
+<p>Custom permette di spostare i servi in posizioni personalizzate e predefinite. La posizione per ogni canale può essere definita separatamente. Ogni canale ha le opzioni Non impostato, Mantieni, Personalizzato o Nessun impulso. Se si seleziona Personalizzato, viene visualizzato il valore del canale. Se si tocca l'icona di impostazione con una freccia, viene utilizzato il valore corrente del canale. In alternativa, è possibile inserire un valore fisso per quel canale toccando il valore.</p>
+<ul>
+<li>Nessun impulso</li>
+</ul>
+<p>No Pulses disattiva gli impulsi (da utilizzare con i controllori di volo dotati di GPS di ritorno a casa in caso di perdita del segnale).</p>
+<ul>
+<li>Ricevitore</li>
+</ul>
+<p>Scegliendo "Ricevitore" sui ricevitori della serie X o successivi è possibile impostare il failsafe nel ricevitore.</p>
+<p><strong><em>Attenzione</em></strong>: Assicurati di testare attentamente le impostazioni di Failsafe scelte.</p>
+<ul>
+<li>Controllo portata (Range Check)</li>
+</ul>
+<p>Un Controllo portata (Range Check) deve essere effettuato sul campo quando il modello è pronto per volare.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E06F5C30C1.png" /></p>
+<p>Il Controllo portata (Range Check) si attiva selezionando "Controllo portata (Range Check)". Un avviso vocale annuncerà "Range Check" ogni pochi secondi per confermare che sei in modalità range check. Un popup visualizzerà il numero del ricevitore e i valori VFR% e RSSI per valutare la qualità della ricezione. Quando il Range Check è attivo, riduce la potenza del trasmettitore, che a sua volta riduce il raggio d'azione per i test di portata. In condizioni ideali, con la radio e il ricevitore a 1 metro dal suolo, dovresti ricevere un allarme critico solo a circa 30 metri di distanza.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E00ED595EE.png" /></p>
+<p>Attualmente la Modalità TW in modalità di Controllo portata (Range Check) fornisce i dati di Controllo portata (Range Check) per un ricevitore alla volta, mostrando entrambi i collegamenti 2.4G. Se hai tre ricevitori registrati e vincolati come Ricevitore 1, 2 e 3, uno dei ricevitori sarà quello attivo per la telemetria e il suo numero sarà visualizzato dal sensore RX come 0, 1 o 2. Sarà il ricevitore che sta inviando i dati RSSI e VFR. Sarà il ricevitore che invia i dati RSSI e VFR. Se spegni quel ricevitore, il successivo diventerà il ricevitore di telemetria attivo con una priorità di 0, 1 e poi 2. Ciascuno dei tre ricevitori può essere controllato spegnendo gli altri.</p>
+<p>Sensore RX 0 = Ricevitore 1</p>
+<p>Sensore RX 1 = Ricevitore 2</p>
+<p>Sensore RX 2 = Ricevitore 3</p>
+<p>Consulta anche la sezione Telemetria per una discussione sui valori <a href="../telemetry/">VFR e RSSI</a>.</p>
+<p>Tipo: ELRS</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E03D90201F.png" /></p>
+<p>Il protocollo ELRS supporta il progetto open-source ExpressLRS. ExpressLRS 2.4G mira a ottenere prestazioni complete in termini di velocità, latenza e portata.</p>
+<p>Se utilizzi un modulo ELRS vero e proprio (piuttosto che il modulo TWIN Lite Pro RF in modalità ELRS), devi installare lo script ELRS Lua in scripts/elrs, prima di ottenere l'opzione ELRS come modulo.</p>
+<ul>
+<li>Gamma di canali</li>
+</ul>
+<p>Sono supportati dodici canali. Per maggiori dettagli sulle opzioni di configurazione, consulta la sezione Modalità di commutazione.</p>
+<ul>
+<li>Imposta - Config</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E05C6A7DB8.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E6EBA408.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E03DB59642.png" /></p>
+<p>La velocità dei pacchetti consente di raggiungere un compromesso tra portata e latenza. Una frequenza di pacchetti più elevata comporta una latenza inferiore, ma a costo di ridurre la portata.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0E703CE60.png" /></p>
+<p>Il rapporto di telemetria determina la frequenza di invio dei dati di telemetria. Ad esempio, 1:64 significa che i dati di telemetria vengono inviati ogni 64 fotogrammi. Le opzioni sono: 1:128, 1:64, 1:32, 1:16, 1:8, 1:4 e 1:1.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0D40BD880.png" /></p>
+<p>L'impostazione della modalità di commutazione controlla il modo in cui i canali AUX1-AUX8 (canale da 5 a 12) vengono inviati al ricevitore. I primi 4 canali principali sono sempre a 10 bit. Le opzioni sono Hybrid e Wide.</p>
+<p>Con la modalità ibrida, la maggior parte dei canali sarà a 2 o 3 posizioni, questo per ridurre la latenza.</p>
+<p>L'opzione "Wide" rende i canali a 64 o 128 bit, una risoluzione sufficiente per la maggior parte delle cose.</p>
+<p>Nota che AUX1 (canale 5) è destinato all'armamento, quindi è sempre a 2 posizioni. Posizione bassa (1000) per disarmare e posizione alta (2000) per armare.</p>
+<p>Se abilitata, la funzione Model Match assicura che sia stato selezionato il modello corretto.</p>
+<p>Attivando l'opzione Dynamic Power, il sistema regola automaticamente la potenza di uscita in base al VFR e all'RSSI, risparmiando così la durata della batteria. Tuttavia, per farlo è necessario che la telemetria sia abilitata.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0DFF147D2.png" /></p>
+<p>Le impostazioni di potenza disponibili sono 10mW, 25mW, 50mW, 100mW, 250mW, 500mW o 1000mW.</p>
+<ul>
+<li>Telemetria ELRS</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E098705EB0.png" /></p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0939E77B3.png" /></p>
+<p>Le due schermate qui sopra mostrano i sensori tipici ricevuti da un ricevitore ELRS.</p>
+<p>Tipo</p>
+<p>PPM</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0AB9AA6C4.png" /></p>
+<p>Il modulo RF esterno può funzionare in modalità PPM. Please refer to the <a href="../trainer/">External module</a> section in Model / Trainer for details on configuring a slave trainer using PPM Out on the PXX OUT pin in the external module bay.</p>
+<p>Gamma di canali</p>
+<p>By default channels 1 to 8 are transmitted.</p>
+<p>Tipo</p>
+<p>SBUS</p>
+<p>Il modulo RF esterno può funzionare in modalità SBUS. Per ulteriori dettagli sulla configurazione di un trainer slave tramite l'uscita SBUS sul pin PXX OUT nell'alloggiamento del modulo esterno, consultare la sezione dedicata al modulo esterno in “Modello / Trainer.</p>
+<p>Range Canali</p>
+<p>SBUS trasmette 16 canali come default</p>
+<p>Tipo</p>
+<p>Trainer master (PPM)</p>
+<p>Il modulo RF esterno può essere configurato per funzionare come “Trainer master” in modalità PPM.</p>
+<p>Configurazione Allievo Maestro</p>
+<p>Si prega di fare riferimento alla sezione Configurazione <a href="../trainer/">Trainer master</a> per maggiori dettagli sulla configurazione del modo allievo maestro.</p>
+<p>Connesioni Moduli Esterni</p>
+<p>Per l'opzione SBUS (Trainer master), fare riferimento ai dettagli di connessione del modulo esterno riportati di seguito.</p>
+<p>Analogamente, l'opzione Trainer master PPM fornisce un ingresso PPM sul pin PXX IN nell'alloggiamento del modulo esterno, da utilizzare con un ricevitore legacy dotato di uscita CPPM in modo simile all'opzione SBUS riportata di seguito.</p>
+<p>Tipo</p>
+<p>Allievo Maestro (SBUS)</p>
+<p>Il Modulo esterno di trsmissione può essere configurato per operare come allievo maestro in modo SBUS.</p>
+<p>Configurazione Allievo Maestro</p>
+<p>Si prega di far riferimento alla sezione configurazione <a href="../trainer/">Trainer master </a> per dettagli su come configurare il modo allievo maestro.</p>
+<p>Connessioni Modulo Esterno</p>
+<p>Questa opzione fornisce un ingresso SBUS sul pin PXX IN nell'alloggiamento del modulo esterno. Ciò consente l'installazione di un ricevitore FrSky con uscita SBUS (ad esempio Archer RS o simili) nell'alloggiamento del modulo per fungere da ricevitore di un collegamento wireless trainer per collegare QUALSIASI radio FrSky a X20 come buddy box.</p>
+<p>La radio slave o dello studente viene quindi collegata a questo ricevitore e trasmette normalmente. Mentre la funzione master trainer è attiva, i canali ricevuti possono controllare il modello.</p>
+<h5 id="diagramma-pinout-del-modulo-esterno">Diagramma Pinout del modulo esterno<a class="headerlink" href="#diagramma-pinout-del-modulo-esterno" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/Pictures/1000000100000AE30000063AE77D570D.png" /></p>
+<h2 id="moduli-rf-esterni-terze-parti">Moduli RF esterni - Terze parti<a class="headerlink" href="#moduli-rf-esterni-terze-parti" title="Permanent link">&para;</a></h2>
+<p>Tipo</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E035E24C23.png" /></p>
+<p>Attualmente sono supportati i moduli RF esterni Ghost, Multimodule, Express LRS e Crossfire. In futuro saranno supportati altri moduli di terze parti.</p>
+<p>Il supporto di moduli di terze parti deve essere installato dall'utente e si ottiene installando uno script Lua che aggiunge il supporto del modulo a ETHOS. Questo meccanismo sarà sempre necessario per utilizzare moduli di terze parti e gli script Lua installati dall'utente. La selezione dei moduli di terze parti appare nella schermata RF solo dopo l'installazione dello script Lua.</p>
+<p>Per ulteriori informazioni, consulta il post sui <a href="https://www.rcgroups.com/forums/showpost.php?p=49550649&amp;postcount=18844">moduli esterni di terze parti </a>nella discussione su X20 ed Ethos su rcgroups e la sezione <a href="../../system-setup/file-manager/">script per i moduli esterni </a>per i dettagli sulla posizione in cui memorizzare gli script Lua per l'installazione dei moduli di terze parti supportati.</p>
+<p>Multimodulo</p>
+<p>Ethos supporta il flashing del Multimodulo IRX4 Lite.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0642CF722.png" /></p>
+<p>Copia il file del firmware del multimodulo nella cartella Firmware della radio, poi usa File Manager per cercare il file. Tocca il nome del file evidenziato e seleziona "Flash multimodulo esterno". Il flash inizierà con un grafico a barre che mostrerà il progresso.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../trims/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Trim">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Trim
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../curves/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Curve">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                Curve
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": {"provider": "mike"}}</script>
+    
+    
+  <script src="../../../javascripts/locale-scope.js"></script>
+  
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+
+  </body>
+</html>

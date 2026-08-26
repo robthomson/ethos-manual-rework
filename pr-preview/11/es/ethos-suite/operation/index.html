@@ -1,0 +1,6284 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User manual for the FrSky Ethos radio firmware">
+      
+      
+      
+        <link rel="canonical" href="https://manual.rt-rc.com/es/ethos-suite/operation/">
+      
+      
+        <link rel="prev" href="../migration/">
+      
+      
+        <link rel="next" href="../web-simulator/">
+      
+      
+        
+          <link rel="alternate" href="../../../ethos-suite/operation/" hreflang="en">
+        
+          <link rel="alternate" href="../../../cs/ethos-suite/operation/" hreflang="cs">
+        
+          <link rel="alternate" href="../../../he/ethos-suite/operation/" hreflang="he">
+        
+          <link rel="alternate" href="../../../nl/ethos-suite/operation/" hreflang="nl">
+        
+          <link rel="alternate" href="../../../nb/ethos-suite/operation/" hreflang="nb">
+        
+          <link rel="alternate" href="../../../pl/ethos-suite/operation/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../../it/ethos-suite/operation/" hreflang="it">
+        
+          <link rel="alternate" href="../../../pt-BR/ethos-suite/operation/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../../zh/ethos-suite/operation/" hreflang="zh">
+        
+          <link rel="alternate" href="../../../de/ethos-suite/operation/" hreflang="de">
+        
+          <link rel="alternate" href="../../../fr/ethos-suite/operation/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Funcionamiento - Ethos Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../" title="Ethos Manual" class="md-header__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ethos Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funcionamiento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../ethos-suite/operation/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../cs/ethos-suite/operation/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../he/ethos-suite/operation/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nl/ethos-suite/operation/" hreflang="nl" class="md-select__link">
+              Nederlands
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nb/ethos-suite/operation/" hreflang="nb" class="md-select__link">
+              Norsk Bokmål
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pl/ethos-suite/operation/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../it/ethos-suite/operation/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pt-BR/ethos-suite/operation/" hreflang="pt-BR" class="md-select__link">
+              Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh/ethos-suite/operation/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../de/ethos-suite/operation/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/ethos-suite/operation/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    <a href="https://github.com/robthomson/ethos-manual-rework/releases" title="Download PDF manuals" class="md-header__button md-icon" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg>
+    </a>
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robthomson/ethos-manual-rework" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Primeros pasos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../system-setup/" class="md-tabs__link">
+          
+  
+  
+  Configuración del sistema
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../model-setup/" class="md-tabs__link">
+          
+  
+  
+  Configuración del modelo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../displays/" class="md-tabs__link">
+          
+  
+  
+  Pantallas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lua-scripts/" class="md-tabs__link">
+          
+  
+  
+  Scripts Lua
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutoriales
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
+          
+  
+  
+  Guías prácticas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../radio-notes/" class="md-tabs__link">
+          
+  
+  
+  Notas de la emisora
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Ethos Suite
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  Referencia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contribuir
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Ethos Manual" class="md-nav__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    Ethos Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robthomson/ethos-manual-rework" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeros pasos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Primeros pasos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeros pasos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/main-views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vistas principales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/user-interface-and-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaz de usuario y navegación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usb-connection-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modos de conexión USB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modo de emergencia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración del sistema
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración del sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/file-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administrador de archivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alertas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/date-and-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fecha y hora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/battery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batería
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dispositivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Información
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración del modelo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración del modelo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descripción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/model-select/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selección de modelo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/model-edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edición del modelo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/flight-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fases de vuelo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/mixes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mezclas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/timers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temporizadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/trims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trims
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema RF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/curves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/logical-switches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interruptores lógicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funciones especiales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/trainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telemetría
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista de verificación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/glasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glasses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripts Lua (Modelo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rearranging-the-model-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rearranging the Model Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pantallas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pantallas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurar pantallas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/configuring-the-main-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring the Main Screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/standard-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-additional-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Additional Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/managing-main-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Main Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-custom-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Custom Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripts Lua
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scripts Lua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lua Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/lua-interpreter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intérprete Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/ethos-lua-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación de Lua para Ethos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/example-script-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubicación de los scripts de ejemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/configuration-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Límites de configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/basic-widget-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura básica de un widget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/alternative-display-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alternative Display Themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriales
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriales
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriales de Programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/initial-radio-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración inicial de la emisora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-fixed-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejemplo básico de ala fija
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flying-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejemplo básico de ala volante (elevones)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flybarless-heli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejemplo básico de helicóptero flybarless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guías prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guías prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guías prácticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/low-battery-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aviso de batería baja
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/battery-capacity-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aviso de capacidad de batería
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de modelo y reordenación de canales para SR8/SR10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mezclador Butterfly (Cuervo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurar un sistema FBUS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probar una configuración de receptor redundante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista de verificación con texto definido por el usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curva de compensación ajustable en vuelo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recuperación instantánea del control para la función Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encontrar el bootloader más reciente u otro componente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/converting-1.6-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converting 1.6.x Models to 26.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/gear-door-sequencer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gear Door and Landing Gear Sequencer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de la emisora
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notas de la emisora
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radio Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-x20s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20/X20S
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro-aw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro AW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20r-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20R/RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x18-x18se/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X18/X18SE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/xe-xes-xe-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XE/XES/XE RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x14-x14rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X14/X14RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/twin-xlite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TWIN XLite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Suite
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ethos Suite
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suite Frsky
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funcionamiento
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funcionamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-de-dispositivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección de dispositivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección de dispositivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ethos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacion-de-la-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Información de la radio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información de la radio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conectada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-de-seguridad-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copia de seguridad y recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestionar-ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestionar Ethos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realizando-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Realizando actualizaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-de-actualizar-con-versiones-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opción de actualizar con versiones de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecionar-las-opciones-de-actualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecionar las opciones de actualización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalar-los-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar los updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-la-radio-desde-un-archivo-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar la radio desde un archivo local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-desde-un-archivo-local-frsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar desde un archivo local .frsk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expulsar-unidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expulsar unidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-rf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo RF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo RF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestionar-modulo-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestionar módulo interno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-de-seguridad-y-recuperacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copia de seguridad y recuperación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Copia de seguridad y recuperación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advertencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¡Advertencia!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacion-de-la-copia-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubicación de la copia de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-copia-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iniciar copia de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restaurar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historial-de-copias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historial de copias de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noticias-sobre-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noticias sobre actualizaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethosfrsky-rccom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ethos.frsky-rc.com
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulador-ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulador Ethos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulador Ethos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración simple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración recomendada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barra-de-tareas-del-simulador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barra de tareas del simulador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Barra de tareas del simulador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panel controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controles Macro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gimbals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gimbals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interruptores-momentaneos-y-botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruptores momentáneos y botones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biblioteca-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biblioteca Lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-desarrollo-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas de desarrollo Lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas de desarrollo Lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentos-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentos Lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripts-lua-de-demostracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts LUA de demostración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquete-ethos-lua-archivo-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paquete Ethos lua (archivo ZIP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestor-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestor de imágenes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestor de imágenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-para-ser-transcodificada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista para ser transcodificada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantener-relacion-de-aspecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mantener relación de aspecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transparente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transparente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-de-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta de salida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-carpeta-despues-de-la-transcodificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abrir carpeta después de la transcodificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcodificar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transcodificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestor-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestor de Audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestor de Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-para-ser-transcodificada_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista para ser transcodificada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-de-salida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta de salida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcodificar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transcodificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ECOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ECOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puerto-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puerto Com
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccione-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seleccione firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aegis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aegis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visor-de-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visor de registros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visor de registros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seleccionar-archivo-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seleccionar archivo CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-de-productos-frsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Página de productos Frsky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfu-flasher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFU Flasher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-de-reparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramienta de reparación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-de-otros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección de otros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección de otros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manuales-ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuales Ethos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethos-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ethos Github
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajustes-de-la-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajustes de la Suite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajustes de la Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idioma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idioma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localizacion-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localización del Servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-de-la-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versión de la Suite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versión de la Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizacion-de-la-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualización de la Suite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mas-ajustes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Más ajustes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Más ajustes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones de depuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acerca-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acerca de
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Web Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-line-operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Operation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referencia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/toolbars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Barras de herramientas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuir
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contribuir
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/screenshot-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flujo de generación de capturas de pantalla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-a-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a New Language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/translation-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-de-dispositivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección de dispositivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección de dispositivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ethos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacion-de-la-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Información de la radio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información de la radio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conectada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-de-seguridad-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copia de seguridad y recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestionar-ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestionar Ethos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realizando-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Realizando actualizaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcion-de-actualizar-con-versiones-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opción de actualizar con versiones de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecionar-las-opciones-de-actualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecionar las opciones de actualización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalar-los-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar los updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-la-radio-desde-un-archivo-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar la radio desde un archivo local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-desde-un-archivo-local-frsk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar desde un archivo local .frsk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expulsar-unidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expulsar unidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-rf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo RF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo RF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestionar-modulo-interno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestionar módulo interno
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-de-seguridad-y-recuperacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copia de seguridad y recuperación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Copia de seguridad y recuperación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advertencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¡Advertencia!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacion-de-la-copia-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubicación de la copia de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iniciar-copia-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iniciar copia de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restaurar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historial-de-copias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historial de copias de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noticias-sobre-actualizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noticias sobre actualizaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethosfrsky-rccom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ethos.frsky-rc.com
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulador-ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulador Ethos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulador Ethos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración simple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración recomendada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barra-de-tareas-del-simulador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barra de tareas del simulador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Barra de tareas del simulador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panel-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panel controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controles Macro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controls Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gimbals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gimbals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interruptores-momentaneos-y-botones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interruptores momentáneos y botones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biblioteca-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biblioteca Lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-desarrollo-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas de desarrollo Lua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas de desarrollo Lua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentos-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentos Lua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripts-lua-de-demostracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts LUA de demostración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquete-ethos-lua-archivo-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paquete Ethos lua (archivo ZIP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestor-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestor de imágenes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestor de imágenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-para-ser-transcodificada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista para ser transcodificada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantener-relacion-de-aspecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mantener relación de aspecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transparente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transparente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-de-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta de salida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-carpeta-despues-de-la-transcodificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abrir carpeta después de la transcodificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcodificar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transcodificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestor-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestor de Audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestor de Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-para-ser-transcodificada_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista para ser transcodificada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-de-salida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta de salida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcodificar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transcodificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ECOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ECOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puerto-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puerto Com
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccione-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seleccione firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aegis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aegis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visor-de-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visor de registros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visor de registros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seleccionar-archivo-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seleccionar archivo CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualizar datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-de-productos-frsky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Página de productos Frsky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfu-flasher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFU Flasher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-de-reparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramienta de reparación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-de-otros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección de otros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección de otros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manuales-ethos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manuales Ethos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethos-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ethos Github
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajustes-de-la-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajustes de la Suite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajustes de la Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idioma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idioma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localizacion-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localización del Servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-de-la-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versión de la Suite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versión de la Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizacion-de-la-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actualización de la Suite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mas-ajustes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Más ajustes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Más ajustes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opciones-de-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opciones de depuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acerca-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acerca de
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/es/ethos-suite/operation.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="operacion">Operación<a class="headerlink" href="#operacion" title="Permanent link">&para;</a></h1>
+<h2 id="seccion-de-dispositivos">Sección de dispositivos<a class="headerlink" href="#seccion-de-dispositivos" title="Permanent link">&para;</a></h2>
+<p>FrSky Suite admite tres tipos de dispositivos FrSky, es decir, radios Ethos, radios ECOS y controladores de vuelo Aegis. Por favor, consulte sus secciones respectivas a continuación para más detalles.</p>
+<h3 id="ethos">Ethos<a class="headerlink" href="#ethos" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CFE000008AE77D4FB6A.png" /></p>
+<p>FrSky Suite se abre por defecto en la sección de dispositivos Ethos, con la vista que se muestra arriba si no se ha detectado ninguna radio Ethos al iniciar.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CA2000008B092289A41.png" /></p>
+<p>Puede conectar la radio en modo bootloader o mientras está encendida en modo ‘FrSky Suite’. Por favor, para más información consulte la sección <a href="#USB Connection To PC modes">Modos de Conexión USB a PC</a>.</p>
+<p>Una vez que se detecta una radio Ethos, sus detalles se mostrarán como en el ejemplo de arriba. El mensaje de estado 'Conexión de radio no detectada' ha sido reemplazado por 'Conectado a X20 Pro' para mostrar que hay un X20 Pro conectada.</p>
+<h4 id="informacion-de-la-radio">Información de la radio<a class="headerlink" href="#informacion-de-la-radio" title="Permanent link">&para;</a></h4>
+<h5 id="conectada">Conectada<a class="headerlink" href="#conectada" title="Permanent link">&para;</a></h5>
+<p>Las versiones actuales del firmware y del bootloader están listadas, con etiquetas rojas de ‘Desactualizado’ o verdes de ‘Actualizado’.</p>
+<p>Debajo de eso, un mensaje confirma la compatibilidad del firmware y del bootloader. Por ejemplo, si solo actualizó el firmware, podría recibir mensajes que indiquen que el firmware requiere una versión más nueva del bootloader.</p>
+<p>El estado del módulo RF se mostrará junto al panel de 'Información de radio', por favor consulte la sección del módulo RF más abajo.</p>
+<h5 id="copia-de-seguridad-y-recuperacion">Copia de seguridad y recuperación<a class="headerlink" href="#copia-de-seguridad-y-recuperacion" title="Permanent link">&para;</a></h5>
+<p>Antes de realizar actualizaciones, es prudente hacer clic en la opción  ‘<a href="./">Copia de seguridad y recuperación</a>’ para hacer copias del estado actual de su radio.</p>
+<h5 id="gestionar-ethos">Gestionar Ethos<a class="headerlink" href="#gestionar-ethos" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/Pictures/1000000100000CFE000008AE89DDB0BD.png" /></p>
+<p>Haga clic en el botón 'Administrar Ethos' para abrir la página de actualización.</p>
+<p>El ejemplo de arriba muestra que una X20 Pro está conectado en modo Bootloader. Si quiere, haga clic en el botón ‘Cambiar a Ethos’ para cambiar el modo, por ejemplo, para flashear un receptor o módulo. En general, no es necesario preocuparse por el modo en el que se está, porque Suite cambiará automáticamente entre modos cuando sea necesario.</p>
+<p>Se muestran las versiones del firmware, del bootloader y de los archivos de audio (ya sea en la tarjeta SD o en el almacenamiento interno de la radio). La versión del firmware aparece como desactualizada. Las versiones del bootloader y de los archivos de audio están al día.</p>
+<p>Por favor, tenga en cuenta que los archivos del sistema en la memoria Flash ahora se actualizan junto con el firmware, así que ya no es necesario gestionarlos por separado.</p>
+<h5 id="realizando-actualizaciones">Realizando actualizaciones<a class="headerlink" href="#realizando-actualizaciones" title="Permanent link">&para;</a></h5>
+<h5 id="opcion-de-actualizar-con-versiones-de-prueba">Opción de actualizar con versiones de prueba<a class="headerlink" href="#opcion-de-actualizar-con-versiones-de-prueba" title="Permanent link">&para;</a></h5>
+<p>Si quiere actualizar a versiones de prueba del firmware, la configuración del servidor en ‘Ajustes de Suite’ debe cambiarse de ‘Servidor FrSky’ a ‘GitHub’. Por favor, consulta la sección  <a href="#Server location">Ubicación del servidor</a> más abajo.</p>
+<h5 id="selecionar-las-opciones-de-actualizacion">Selecionar las opciones de actualización<a class="headerlink" href="#selecionar-las-opciones-de-actualizacion" title="Permanent link">&para;</a></h5>
+<p>Si la radio no está al día, podrá:</p>
+<ol>
+<li>Seleccionar la versión que desea, primero eligiendo la rama que prefiera, 'Estable' o 'Versión de prueba', y luego seleccionando la versión deseada, así como los idiomas de pantalla y audio.</li>
+<li>Entonces puedes 'Escribir todos los componentes' haciendo clic en el botón 'Escribir todos los componentes'.</li>
+<li>Alternativamente, hacer clic en el botón de flecha hacia abajo a la derecha, que abrirá una lista desplegable en la que se mostrarán las opciones alternativas para escribir todos los componentes obsoletos, o solo escribir individualmente el firmware y los archivos del sistema (necesarios para ejecutar el firmware), el bootloader o los archivos de audio. <img alt="" src="../../assets/Pictures/100000010000005900000059BAB763C8.png" /></li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/10000001000002DA0000021CAB3864D7.png" /></p>
+<h5 id="instalar-los-updates">Instalar los updates<a class="headerlink" href="#instalar-los-updates" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC7BD758E8.png" /></p>
+<p>Una vez que se hayan seleccionado el alcance deseado de la actualización, haga clic en la opción elegida para continuar. En el ejemplo de arriba hemos seleccionado la opción 'Escribir firmware y archivos del sistema'.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC4791947C.png" /></p>
+<p>Después de hacer clic en la opción 'Escribir firmware y archivos del sistema', se le pedirá que primero vaya a la página de copias de seguridad y realice una copia de seguridad completa antes de continuar. Por favor, consulte la sección de <a href="./">Copia de seguridad y recuperación</a>.</p>
+<p>Esto es especialmente importante porque después de la actualización, sus archivos de modelo se actualizarán a la nueva versión en cuanto se carguen. Este proceso es irreversible, así que una vez actualizados, los modelos ya no se podrán cargar si decide volver a una versión anterior de su radio. Después de degradar su firmware, necesitará recuperar sus modelos, etc., desde tus copias de seguridad.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000D0A000008CC62A7B789.png" /></p>
+<p>Habiendo hecho una copia de seguridad, vuelva a la página 'Administrar Ethos' y haga clic en la opción 'Escribir firmware y archivos del sistema', luego selecciona la opción 'Continuar actualizando'.</p>
+<p>Si tu módulo RF interno no está en la versión 3.0.1 o posterior, necesitará actualizar el módulo RF antes de poder continuar con la instalación de la versión 1.6.0 o superior. Haga clic en ‘Administrar módulo interno’ en la página principal para actualizar el módulo RF interno, luego regrese a esta página para continuar.</p>
+<p>Se mostrará una barra de progreso en la página, así como en la radio.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000D0A000008CCF8B6EB27.png" /></p>
+<p>Al completarse, se mostrará un mensaje de ‘Actualización con éxito’. La versión del firmware ahora aparecerá como actualizada.</p>
+<p>De manera similar, se pueden ejecutar las opciones alternativas para escribir de manera individual los componentes obsoletos, el cargador de arranque, o los archivos de audio.</p>
+<p>Siempre es prudente expulsar las unidades manualmente con el botón 'Expulsar unidades' antes de desconectar el cable USB.</p>
+<h5 id="actualizar-la-radio-desde-un-archivo-local">Actualizar la radio desde un archivo local<a class="headerlink" href="#actualizar-la-radio-desde-un-archivo-local" title="Permanent link">&para;</a></h5>
+<h5 id="actualizar-desde-un-archivo-local-frsk">Actualizar desde un archivo local .frsk<a class="headerlink" href="#actualizar-desde-un-archivo-local-frsk" title="Permanent link">&para;</a></h5>
+<h5 id="expulsar-unidades">Expulsar unidades<a class="headerlink" href="#expulsar-unidades" title="Permanent link">&para;</a></h5>
+<p>Haga clic en el botón ‘Expulsar unidades’ para desconectar la radio.</p>
+<h4 id="modulo-rf">Módulo RF<a class="headerlink" href="#modulo-rf" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/Pictures/1000000100000CA2000008B092289A41.png" /></p>
+<p>El administrador del módulo RF se usa para actualizar el firmware del módulo RF.</p>
+<h5 id="gestionar-modulo-interno">Gestionar módulo interno<a class="headerlink" href="#gestionar-modulo-interno" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/Pictures/1000000100000D0A000008CCF19DB02E.png" /></p>
+<p>Selecciona la versión que se desee (normalmente la más reciente). Los detalles del firmware de la versión seleccionada se muestran en el panel de la derecha.</p>
+<p>Haga clic en ‘Flash’ para escribir el firmware en el módulo RF interno.</p>
+<p>Al finalizar el proceso aparecerá un cuadro de diálogo 'FRSK se ha actualizado correctamente'.</p>
+<h4 id="copia-de-seguridad-y-recuperacion_1">Copia de seguridad y recuperación<a class="headerlink" href="#copia-de-seguridad-y-recuperacion_1" title="Permanent link">&para;</a></h4>
+<p>Usando la función de 'Copia de seguridad y recuperación', se puede guardar en el disco una copia de seguridad de los modelos y configuraciones del radio, o se puede restaurar una copia de seguridad previamente guardada al radio. Los modelos no son compatibles con versiones anteriores, así que los archivos de modelos más antiguos tienen que restaurarse desde el PC haciendo una degradación a un firmware más antiguo.</p>
+<h5 id="advertencia">¡Advertencia!<a class="headerlink" href="#advertencia" title="Permanent link">&para;</a></h5>
+<p>¡La recuperación NO restaura el firmware! Después de recuperar sus modelos y configuraciones, todavía tienes que usar Suite para reescribir el firmware usando la versión que coincida con su copia de seguridad. Por favor, consulte la sección  ‘<a href="#Updating the Firmware">Actualizar el firmware</a>’ descrita más arriba.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC82EAF5BE.png" /></p>
+<h5 id="ubicacion-de-la-copia-de-seguridad">Ubicación de la copia de seguridad<a class="headerlink" href="#ubicacion-de-la-copia-de-seguridad" title="Permanent link">&para;</a></h5>
+<p>Haga clic en el ícono de la carpeta para buscar y seleccionar la ubicación de respaldo deseada. La ruta de respaldo se guardará para cada tipo de radio.</p>
+<p>La fecha y hora de la última copia de seguridad se muestra debajo de la ubicación.</p>
+<h5 id="iniciar-copia-de-seguridad">Iniciar copia de seguridad<a class="headerlink" href="#iniciar-copia-de-seguridad" title="Permanent link">&para;</a></h5>
+<p>Selecciona los modelos y las áreas de 'Almacenamiento interno' que se van a respaldar, y agrega algunos comentarios relevantes.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC2032D090.png" /></p>
+<p>Haga clic en ‘Iniciar copia de seguridad’ para crear una copia de los archivos de modelo y las áreas de almacenamiento seleccionadas en la radio. La versión actual de Ethos se registrará al crear la copia de seguridad.</p>
+<h5 id="restaurar-datos">Restaurar datos<a class="headerlink" href="#restaurar-datos" title="Permanent link">&para;</a></h5>
+<p>Haga clic en 'Restaurar datos' para restaurar los archivos de modelo previamente guardados en la radio. Esto puede ser necesario cuando se degrade el firmware de la radio a una versión anterior.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC183A4DEA.png" /></p>
+<h5 id="historial-de-copias-de-seguridad">Historial de copias de seguridad<a class="headerlink" href="#historial-de-copias-de-seguridad" title="Permanent link">&para;</a></h5>
+<p>El historial de copias de seguridad muestra todas las copias encontradas en la ubicación de respaldo seleccionada. Seleccione una para revisar sus datos de respaldo.</p>
+<p>El panel derecho mostrará los detalles como la fecha de la copia de seguridad, la versión de Ethos en la que se creó, la opción de copia de seguridad, el tamaño de la copia y los comentarios guardados de la copia de seguridad.</p>
+<p>También se listarán los componentes guardados en la copia de seguridad.</p>
+<h5 id="recuperacion">Recuperación<a class="headerlink" href="#recuperacion" title="Permanent link">&para;</a></h5>
+<p>Los componentes seleccionados con la opción ‘Avanzado’ se restaurarán en la radio. Tenga en cuenta que los archivos existentes con el mismo nombre se sobrescribirán durante el proceso de recuperación.  </p>
+<p>Haga clic en ‘Iniciar restauración’ para restaurar los archivos de respaldo seleccionados en su radio.</p>
+<h4 id="noticias-sobre-actualizaciones">Noticias sobre actualizaciones<a class="headerlink" href="#noticias-sobre-actualizaciones" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/Pictures/1000000100000CFE000008AEE5EFE3E1.png" /></p>
+<p>Haga clic en 'Noticias sobre actualizaciones' para ver el historial de actualizaciones de firmware de Ethos y las notas de la versión.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CFE000008AEEBB90774.png" /></p>
+<p>Active ‘Pre-lanzamientos’ en la parte superior de la página para incluir versiones de prueba en el historial de actualizaciones y notas del firmware Ethos.</p>
+<h4 id="ethosfrsky-rccom">ethos.frsky-rc.com<a class="headerlink" href="#ethosfrsky-rccom" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/Pictures/1000000100000CFE000008AE53FF0A4D.png" /></p>
+<p>Haz clic en el botón ‘ethos.frsky-rc.com’ para visitar el sitio web oficial de Ethos.</p>
+<p>El sitio web incluye las siguientes categorías:</p>
+<ul>
+<li>Una introducción a Ethos, 
+        - Una sección de ‘Primeros Pasos’ que incluye información sobre el proceso de actualización de Ethos y enlaces de descarga para FrSky Suite, etc.
+        - Una sección de ‘Cómo usar Ethos’ que incluye guías importantes, preguntas frecuentes y un sistema de tickets para soporte
+        - El 'Centro de Recursos Ethos', que incluye Plantillas de Modelo, Scripts LUA, Widgets, etc.
+        - El proceso de colaboración con terceros y los detalles de la aplicación</li>
+</ul>
+<h3 id="simulador-ethos">Simulador Ethos<a class="headerlink" href="#simulador-ethos" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC54494868.png" /></p>
+<p>El simulador Ethos le permite explorar las capacidades de radio y probar la funcionalidad o las mejoras planeadas del modelo sin necesidad de tener la radio real. También le permite explorar las nuevas versiones antes de actualizar su radio.  </p>
+<p>Para comenzar, seleccione el tipo de radio a simular, la versión de lanzamiento de Ethos deseada y el protocolo RF. Luego haga clic en ‘Iniciar Simulador’.</p>
+<p>Tenga en cuenta que las versiones Nightly previas al lanzamiento solo se ofrecerán si se ha seleccionado 'GitHub' como la <a href="#Server location">Ubicación del servidor</a> en la pestaña 'Configuración de la suite'.</p>
+<h4 id="configuracion-simple">Configuración simple<a class="headerlink" href="#configuracion-simple" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CCE5D2DF49.png" /></p>
+<p>Si no se encuentra información de radio válida, se c0omenzará una secuencia de inicialización.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CCAA075993.png" /></p>
+<p>For a quick exploration simply use the new model wizard that starts after clicking OK. This will allow you to explore the simulator with minimum effort or to evaluate Ethos before purchasing an FrSky radio.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CC6A3DFB29.png" /></p>
+<p>En el ejemplo de arriba, el asistente para el nuevo modelo se ha completado y el modelo se llama ‘TestModel’.</p>
+<p>El panel 'Pantalla' a la izquierda imita la pantalla LCD de la radio, mientras que el panel ‘<a href="#Controls Panel">Controles</a>’ imita los controles físicos de la radio elegida.</p>
+<p>En la parte superior de la ventana se muestra el 'directorio local actual del simulador'.</p>
+<h4 id="configuracion-recomendada">Configuración recomendada<a class="headerlink" href="#configuracion-recomendada" title="Permanent link">&para;</a></h4>
+<p>Es mejor replicar la configuración de su radio en el simulador. Esto proporcionará la misma funcionalidad que tiene en su radio, facilitando probar mejoras en sus modelos sin afectar su entorno de vuelo o de modelismo hasta que todo funcione como planeado.</p>
+<p>Alternativamente, puede crear y probar un modelo completamente nuevo, quizás basándolo en una de sus plantillas, o haciendo un clon de un modelo existente y modificándolo. Estos enfoques maximizan la reutilización sin tener que programar un modelo desde cero. Una vez completado, el archivo de modelo .bin se puede copiar desde la carpeta /models en la ruta del simulador a la carpeta /models del radio, siempre que el simulador no esté ejecutándose en una versión de firmware Ethos más reciente.</p>
+<p>Los pasos recomendados para configurarlo son:</p>
+<ol>
+<li>
+<p>Haga una copia de seguridad de su radio usando la función  <a href="./">Copia de Seguridad y recuperación</a> de la Suite.</p>
+</li>
+<li>
+<p>Es mejor completar primero el asistente de nuevo modelo para un modelo simple. Esto facilita encontrar y reemplazar esta configuración con la copia de seguridad de su radio. Consulta la sección ‘Configuración simple’ arriba.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008CCEFA5ECD4.png" /></p>
+<ol>
+<li>Determine la ruta del archivo del simulador haciendo clic en el ícono de ayuda. El cuadro de diálogo emergente de ayuda explica la estructura de la ruta del archivo del simulador (mire arriba).  </li>
+</ol>
+<p>También se muestra el ‘Directorio local actual del simulador’ en la parte superior de la ventana.</p>
+<p><img alt="" src="../../assets/Pictures/10000001000009DA0000055020B2E11F.png" /></p>
+<ol>
+<li>
+<p>Usando el Explorador de Windows, busque y navegue hasta la carpeta de la radio elegida en la estructura de archivos del simulador. Un ejemplo de estructura se muestra arriba.</p>
+</li>
+<li>
+<p>Importante: Cierre FrSky Suite antes de continuar.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/10000001000009DA00000554ADC8AD54.png" /></p>
+<p>Dentro de la carpeta de la radio que elegió, reemplace el contenido actual (es decir, la carpeta de modelos y radio.bin) con su copia de seguridad de la radio. (Si deja la carpeta de modelos en su lugar, el contenido se combinará con los modelos de su copia de seguridad de la radio). Arriba se muestra un ejemplo de la estructura, que debería resultarle muy familiar ya que es la misma que la de su radio.</p>
+<ol>
+<li>Reinicie FrSky Suite y el simulador.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000100000C9E000008CC651070E1.png" /></p>
+<p>Debería comenzar con el modelo que estaba en su radio cuando hizo la copia de seguridad. En este ejemplo, un Spitfire era el modelo actual.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000C9E000008CC38355128.png" /></p>
+<ol>
+<li>Abra el panel de la consola haciendo clic en el ícono ‘Abrir panel de consola’. Se abrirá junto al panel de visualización.</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000100000C9E000008CCE83A193B.png" /></p>
+<ol>
+<li>Arrastre la pestaña del panel 'Consola' hacia la parte inferior de la ventana de la Suite hasta que aparezca una barra sombreada delgada a lo largo de ambos paneles justo en la parte inferior. El panel 'Consola' debería ocupar ahora la mitad inferior del simulador, lo que facilita leer líneas largas en el registro, mientras se mantiene visible el panel de Pantalla y Controles. La consola es útil para confirmar la secuencia de inicio del simulador y para monitorear eventos y mensajes de error.</li>
+</ol>
+<h4 id="barra-de-tareas-del-simulador">Barra de tareas del simulador<a class="headerlink" href="#barra-de-tareas-del-simulador" title="Permanent link">&para;</a></h4>
+<p>La barra de tareas del simulador tiene los siguientes controles:</p>
+<p><img alt="" src="../../assets/icon-sim-taskbar.png" /></p>
+<h5 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/icon-sim-help.png" />    Ayuda</p>
+<p><img alt="" src="../../assets/icon-sim-mute.png" />    Silenciar/Activar altavoz</p>
+<p><img alt="" src="../../assets/icon-sim-reload-sim.png" />  Recargar simulador</p>
+<h5 id="panel-controls">Panel controls<a class="headerlink" href="#panel-controls" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/icon-sim-display.png" /> Abrir panel de pantalla (imita el LCD de la radio)</p>
+<p><img alt="" src="../../assets/icon-sim-controls.png" />    Abre el panel de controles (imita los controles de radio)</p>
+<p><img alt="" src="../../assets/icon-sim-console.png" /> Abre el panel de la Consola que muestra un registro de texto de la ejecución del simulador</p>
+<p><img alt="" src="../../assets/icon-sim-clear-console.png" />   Borrar la salida de la consola</p>
+<h5 id="controles-macro">Controles Macro<a class="headerlink" href="#controles-macro" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/icon-sim-run-macro.png" />   Ejecutar macro - Pide la ruta de sus macros, luego muestra cualquier macro encontrada y ofrece ejecutar una o más.</p>
+<p><img alt="" src="../../assets/icon-sim-play-macro.png" />  Se empezará a ejecutar la macro cargada</p>
+<p><img alt="" src="../../assets/icon-sim-single-step.png" /> Ejecutará una línea de la macro a la vez</p>
+<p><img alt="" src="../../assets/icon-sim-pause-macro.png" /> Pausará la macro</p>
+<p><img alt="" src="../../assets/icon-sim-stop-macro.png" />  Detiene la ejecución de la macro</p>
+<h5 id="salir">Salir<a class="headerlink" href="#salir" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/icon-sim-stop.png" />    Cierra el simulador</p>
+<h4 id="controls-panel">Controls Panel<a class="headerlink" href="#controls-panel" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/Pictures/1000000100000636000003361B5456A3.png" /></p>
+<p>El panel de 'Controles' imita los controles físicos de la radio elegida.</p>
+<h5 id="gimbals">Gimbals<a class="headerlink" href="#gimbals" title="Permanent link">&para;</a></h5>
+<p>Las palancas se pueden manejar arrastrándolos con el ratón. Durante la depuración es útil limitar o restringir el movimiento de las palancas.</p>
+<p><img alt="" src="../../assets/icon-sim-center.png" />  Centrará automáticamente el joystick en uno o ambos ejes.</p>
+<p><img alt="" src="../../assets/icon-sim-vertical.png" />    Restringirá únicamente el movimiento de la palanca al plano vertical.</p>
+<p><img alt="" src="../../assets/icon-sim-horizontal.png" />  Restringirá únicamente el movimiento de la palanca al plano horizontal.</p>
+<h5 id="interruptores-momentaneos-y-botones">Interruptores momentáneos y botones<a class="headerlink" href="#interruptores-momentaneos-y-botones" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/icon-sim-locked.png" />  Bloqueará los interruptores y los botones momentáneos para que puedan alternarse entre encendido y apagado, pero permanecerán en el estado seleccionado de encendido o apagado para depuración.</p>
+<h3 id="biblioteca-lua">Biblioteca Lua<a class="headerlink" href="#biblioteca-lua" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000C9E000008CC35EFB4BC.png" /></p>
+<p>La biblioteca Lua contiene enlaces de descarga y opciones de instalación para varios herramientas y scripts Lua.</p>
+<p>También puede instalar scripts Lua desde un archivo zip local en su radio.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000D20000008CC698E8F8D.png" /></p>
+<p>Una vez que haya instalado algunos scripts en la radio, la herramienta de la biblioteca Lua mostrará los scripts instalados en el panel izquierdo y la biblioteca remota en el panel derecho.</p>
+<h3 id="herramientas-de-desarrollo-lua">Herramientas de desarrollo Lua<a class="headerlink" href="#herramientas-de-desarrollo-lua" title="Permanent link">&para;</a></h3>
+<p>Esta sección le permite ver la documentación de Ethos Lua, acceder a los scripts Lua de demostración, preparar un paquete Lua y también proporciona una terminal para depuración.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000C94000008CC9BB469E7.png" /></p>
+<h4 id="documentos-lua">Documentos Lua<a class="headerlink" href="#documentos-lua" title="Permanent link">&para;</a></h4>
+<p>Proporciona un enlace a la guía de referencia Lua de Ethos.</p>
+<p>También consulte el hilo de <a href="https://www.rcgroups.com/forums/showthread.php?4018791-FrSky-ETHOS-Lua-Script-Programming">Programación de Scripts Lua de FrSky - ETHOS Programming</a> en rcgroups para obtener información adicional y scripts y widgets de usuarios.</p>
+<h4 id="scripts-lua-de-demostracion">Scripts LUA de demostración<a class="headerlink" href="#scripts-lua-de-demostracion" title="Permanent link">&para;</a></h4>
+<p>Este botón abre la página web de la comunidad Ethos-Feedback en Github, donde se pueden encontrar enlaces a algunos scripts Lua de demostración que proporcionan ejemplos de programación.</p>
+<h4 id="paquete-ethos-lua-archivo-zip">Paquete Ethos lua (archivo ZIP)<a class="headerlink" href="#paquete-ethos-lua-archivo-zip" title="Permanent link">&para;</a></h4>
+<p>Este botón abre la página web que describe cómo preparar un paquete ZIP de script Lua para ETHOS que pueda ser reconocido e instalado correctamente por el instalador de la biblioteca Lua.</p>
+<h4 id="depuracion">Depuración<a class="headerlink" href="#depuracion" title="Permanent link">&para;</a></h4>
+<p>La función de depuración proporciona una ventana de registro de depuración para mostrar los rastros Lua de depuración enviados por USB-Serial mientras la radio está en modo Serial.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000C6E000008CCC5AD51A3.png" /></p>
+<ol>
+<li>
+<p>Primero conecte el transmisor a la Suite como de costumbre.</p>
+</li>
+<li>
+<p>Cambie al modo Ethos. Ahora puede editar su lua directamente en la radio, usando el Explorador de Windows o el Finder de macOS y su editor de código favorito.</p>
+</li>
+<li>
+<p>Abra la pestaña de Herramientas Lua de Desarrollo.</p>
+</li>
+<li>
+<p>Haga clic en ‘INICIAR DEPURACIÓN’, con esto se cambiará el transmisor al ‘modo de depuración’, que es el modo serial.</p>
+</li>
+<li>
+<p>Su transmisor se reiniciará y volverá a inicializar los scripts lua. Todas las salidas de impresión de los scripts lua que estén activos en su modelo se envían a la ventana de terminal integrada de Suite a través del modo serial.</p>
+</li>
+<li>
+<p>Si se ha detectado un problema o un error, se utiliza la herramienta de desarrollo para volver al modo Ethos haciendo clic en ‘STOP DEBUG’.</p>
+</li>
+<li>
+<p>El script lua se puede editar de nuevo.</p>
+</li>
+</ol>
+<p><img alt="" src="../../assets/Pictures/1000000100000C6E000008CC96C7F336.png" /></p>
+<ol>
+<li>El error que se muestra en el ejemplo de arriba ha sido corregido, y se puede confirmar que funciona normalmente.</li>
+</ol>
+<h3 id="gestor-de-imagenes">Gestor de imágenes<a class="headerlink" href="#gestor-de-imagenes" title="Permanent link">&para;</a></h3>
+<p>El gestor de imágenes se puede usar para recortar una imagen y ajustar su tamaño antes de transcodificarla al formato Ethos.</p>
+<p>Dimensiones:    Como el usuario especifique, pero manteniendo la relación de aspecto.</p>
+<p>Formato:    32bit BMP</p>
+<p>Espacio de Color:   RGB</p>
+<p>Canal Alpha:    Solo se añadirá alfa si es necesario y si la opción está marcada.</p>
+<p>Tenga en cuenta que las imágenes a pantalla completa para la X20 son de 800x480 píxeles, y para X18 son de 480x320.</p>
+<p>Consulte la sección <a href="#bitmaps">bitmaps</a> en el Administrador de Archivos para las reglas de nombrado de archivos.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CA2000008B0C51485D5.png" /></p>
+<h4 id="lista-para-ser-transcodificada">Lista para ser transcodificada<a class="headerlink" href="#lista-para-ser-transcodificada" title="Permanent link">&para;</a></h4>
+<p>Crea la lista de imágenes que se van a transcodificar en el panel izquierdo.  </p>
+<p>El botón 'Borrar todo' borrará la lista.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CA2000008B084EFFBA7.png" /></p>
+<h4 id="configuracion-de-resolucion">Configuración de resolución<a class="headerlink" href="#configuracion-de-resolucion" title="Permanent link">&para;</a></h4>
+<p>Introduzca o seleccione el tamaño de imagen deseado. Generalmente, Ethos redimensionará la imagen automáticamente</p>
+<h4 id="mantener-relacion-de-aspecto">Mantener relación de aspecto<a class="headerlink" href="#mantener-relacion-de-aspecto" title="Permanent link">&para;</a></h4>
+<p>La relación de aspecto puede estar bloqueada.</p>
+<h4 id="transparente">Transparente<a class="headerlink" href="#transparente" title="Permanent link">&para;</a></h4>
+<p>Se añadirá un canal alfa para transparencia solo si aún no está presente.</p>
+<h4 id="ruta-de-salida">Ruta de salida<a class="headerlink" href="#ruta-de-salida" title="Permanent link">&para;</a></h4>
+<p>Introduzca o busque la carpeta de salida que desee.</p>
+<h4 id="abrir-carpeta-despues-de-la-transcodificacion">Abrir carpeta después de la transcodificación<a class="headerlink" href="#abrir-carpeta-despues-de-la-transcodificacion" title="Permanent link">&para;</a></h4>
+<p>Es una opción para abrir el directorio (carpeta) después de la transcodificación.</p>
+<h4 id="transcodificar">Transcodificar<a class="headerlink" href="#transcodificar" title="Permanent link">&para;</a></h4>
+<p>El gestor de imágenes transcodificará las imágenes al tamaño deseado y a la opción de Relleno/Ajuste/Estirado seleccionada, y guardará la(s) imagen(es) en la ruta de salida seleccionada.  </p>
+<p>Nota: Cualquier cambio realizado encima de "Ruta de salida" está vinculado a la imagen seleccionada actualmente. Incluso si cambia a otra imagen en la lista de la izquierda y luego vuelve, esos cambios se mantendrán hasta que la imagen se transcodifique y se exporte.</p>
+<h3 id="gestor-de-audio">Gestor de Audio<a class="headerlink" href="#gestor-de-audio" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000D20000008CC468BCE50.png" /></p>
+<p>El administrador de audio convertirá tus archivos de audio al siguiente formato:</p>
+<p>Formato:    PCM lineal</p>
+<p>Tasa de muestreo:   32kHz</p>
+<p>Canales:    1 (mono)</p>
+<p>Bits por muestra:   16 bits, low endian (pcm_s16le)</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000D20000008CCF2A3F59B.png" /></p>
+<h4 id="lista-para-ser-transcodificada_1">Lista para ser transcodificada<a class="headerlink" href="#lista-para-ser-transcodificada_1" title="Permanent link">&para;</a></h4>
+<p>Crea la lista de archivos de audio que se van a transcodificar en el panel izquierdo.  </p>
+<p>El botón 'Borrar todo' limpiará la lista.</p>
+<h4 id="ruta-de-salida_1">Ruta de salida<a class="headerlink" href="#ruta-de-salida_1" title="Permanent link">&para;</a></h4>
+<p>Introduzca o busque la carpeta de salida que desee.</p>
+<h4 id="transcodificar_1">Transcodificar<a class="headerlink" href="#transcodificar_1" title="Permanent link">&para;</a></h4>
+<p>El gestor de audio convertirá los archivos de sonido al tamaño deseado y guardará la(s) imagen(es) en la ruta de salida seleccionada.</p>
+<h4 id="opciones">Opciones<a class="headerlink" href="#opciones" title="Permanent link">&para;</a></h4>
+<p>Finalmente hay una opción para abrir el directorio (carpeta) después de la conversión.</p>
+<h3 id="ecos">ECOS<a class="headerlink" href="#ecos" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD4000008CC24EB7A68.png" /></p>
+<p>ECOS es un sistema operativo totalmente nuevo y simplificado desarrollado por FrSky e introducido con el transmisor FrSky EX14. Es una versión más simple y básica derivada del ETHOS OS con pantalla a color táctil, diseñada específicamente para radios con pantalla en blanco y negro, pensadas para principiantes y programas educativos.</p>
+<p>Descargue el manual de instrucciones de la radio desde la sección de Descargas de frsky-rc.com para obtener orientación sobre el sistema ECOS.</p>
+<h4 id="puerto-com">Puerto Com<a class="headerlink" href="#puerto-com" title="Permanent link">&para;</a></h4>
+<p>Conecte su radio ECOS al PC con un cable USB. Seleccione el puerto COM al que se conecta. (Puede que necesite revisarlo en el Administrador de dispositivos.)</p>
+<h4 id="seleccione-firmware">Seleccione firmware<a class="headerlink" href="#seleccione-firmware" title="Permanent link">&para;</a></h4>
+<p>Usando la ‘Página de productos Frsky’ de abajo, descargue la actualización de firmware que quiera para su radio ECOS. Descomprima la descarga e identifique la versión que necesita, ya sea EU, FCC o SRRC. Seleccione o arrastre ese archivo al área designada en la página.</p>
+<h4 id="flash">Flash<a class="headerlink" href="#flash" title="Permanent link">&para;</a></h4>
+<p>Después de seleccionar el puerto COM y el archivo de firmware, haga clic en Flash para escribir el archivo en la radio.</p>
+<h3 id="aegis">Aegis<a class="headerlink" href="#aegis" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD4000008CC2C87D0C5.png" /></p>
+<p>Aegis es un nuevo controlador de vuelo de FrSky.  </p>
+<p>Siga el flujo de la guía en la página de Aegis para actualizar su FC.</p>
+<h2 id="herramientas">Herramientas<a class="headerlink" href="#herramientas" title="Permanent link">&para;</a></h2>
+<h3 id="visor-de-registros">Visor de registros<a class="headerlink" href="#visor-de-registros" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD4000008CC1D2F38C4.png" /></p>
+<p>El visor de registros se usa para ver los archivos de registro que genera Ethos cuando está activada la función especial 'Escribir registros'.</p>
+<h4 id="seleccionar-archivo-csv">Seleccionar archivo CSV<a class="headerlink" href="#seleccionar-archivo-csv" title="Permanent link">&para;</a></h4>
+<p>Seleccione el archivo de registro csv que quiere ver.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000D0A000008CC00F2CED5.png" /></p>
+<p>Todo el registro se cargará y se mostrará.</p>
+<h4 id="canales">Canales<a class="headerlink" href="#canales" title="Permanent link">&para;</a></h4>
+<p>A la izquierda, seleccione los canales que quiera ver.</p>
+<h4 id="display">Display<a class="headerlink" href="#display" title="Permanent link">&para;</a></h4>
+<p>Estos controles se pueden usar para enfocarse en el área de interés:<br />
+    Desplazarse para hacer zoom en el eje X (tiempo)<br />
+    Ctrl + desplazamiento para hacer zoom en el eje Y (o cambiar 'Intercambiar zoom con la rueda')<br />
+    Haga clic y arrastre para mover el gráfico<br />
+    Coloque el cursor para leer todos los valores en ese instante (doble clic para bloquear)</p>
+<h4 id="actualizar-datos">Actualizar datos<a class="headerlink" href="#actualizar-datos" title="Permanent link">&para;</a></h4>
+<p>Haz clic en ‘Actualizar datos’ para recargar el archivo. Esto también eliminará el cursor si lo tiene bloqueado.</p>
+<h3 id="pagina-de-productos-frsky">Página de productos Frsky<a class="headerlink" href="#pagina-de-productos-frsky" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD4000008CC4CE8DC13.png" /></p>
+<p>La página de productos Frsky se puede usar para descargar cualquier firmware desde el sitio de descargas de FrSky, y para usar la radio como un proxy para actualizar directamente cualquier módulo, sensor, servo o receptor desde FrSky Suite.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD4000008CC5BBD4DFE.png" /></p>
+<p>En la lista de productos, navegue para seleccionar el dispositivo que se va a actualizar. En el ejemplo de arriba, se ha seleccionado un receptor TW SR8. Luego, el centro de descargas mostrará los 'recursos' disponibles.</p>
+<p><img alt="" src="../../assets/Pictures/10000001000007AA0000048C93A0B379.png" /></p>
+<p>Haciendo clic en el botón de Descargar se abrirá una ventana para elegir la carpeta de destino y descargar el archivo.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD4000008CCC30CA103.png" /></p>
+<p>El archivo se ha descargado con éxito.</p>
+<h3 id="dfu-flasher">DFU Flasher<a class="headerlink" href="#dfu-flasher" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD60000091EB94C11FD.png" /></p>
+<p>Haga clic en la pestaña ‘DFU Flasher’.   </p>
+<p>Conecte su radio apagada al PC con un cable USB. Debería ver un mensaje verde que dice ‘Dispositivo DFU conectado’.   </p>
+<p>Haga clic en el botón “Seleccionar binario” para buscar el archivo del bootloader que descargó y selecciónelo. FrSky Suite evaluará el archivo seleccionado y le dirá su versión y si es adecuado.  </p>
+<p>Haga clic en el botón ‘Iniciar flasheo’ para flashear el bootloader seleccionado. Se le informará del éxito cuando haya terminado.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000CD6000008CC18F82692.png" /></p>
+<p>En caso de que aparezca un error de color rojo ‘No hay dispositivo DFU’, necesitará instalar el driver DFU correcto. Puede usar los botones ‘Actualizar estado del driver DFU’ e ‘Instalar driver DFU’ para instalar un driver DFU.  </p>
+<p>En la mayoría de los PCs con Windows 10 o superior, los sistemas Tandem se conectan usando el driver DFU USB de Windows por defecto y ya están listos para actualizar el bootloader. Sin embargo, las actualizaciones de Windows a menudo reemplazan los drivers con drivers genéricos que pueden no funcionar con la radio.</p>
+<p><img alt="" src="../../assets/Pictures/100000010000061A000004A250065622.png" /></p>
+<p>Revise el Administrador de dispositivos para ver si su dispositivo DFU (es decir, su radio) es reconocido y funciona. Si FrSky Suite no pudo instalar un controlador DFU, otra opción podría ser ver si se puede usar el Impulse Driver Fixer para corregir el controlador. Se puede descargar desde <a href="https://impulserc.com/pages/downloads">https://impulserc.com/pages/downloads</a>. Para más información, también puede ia al post <a href="https://www.rcgroups.com/forums/showpost.php?p=48919119&amp;postcount=15884">Ethos Suite Update</a> post.</p>
+<p>Nota para los usuarios de Horus X10: Windows 10 no instalará por defecto el controlador de dispositivo USB STM32bootloader que se necesita para los sistemas Horus. Será necesario instalarlo con un programa como Impulse Driver Fixer o Zadig.</p>
+<h3 id="herramienta-de-reparacion">Herramienta de reparación<a class="headerlink" href="#herramienta-de-reparacion" title="Permanent link">&para;</a></h3>
+<p>La herramienta de reparación es para los radios X18/S, TW Lite, XE, X20 Pro/R/RS. Si tu radio no puede leer del NAND o no se pueden guardar los ajustes, esta herramienta reformateará el almacenamiento interno.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000944000006B257D825EC.png" /></p>
+<h2 id="seccion-de-otros">Sección de otros<a class="headerlink" href="#seccion-de-otros" title="Permanent link">&para;</a></h2>
+<h3 id="documentacion">Documentación<a class="headerlink" href="#documentacion" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000CCA000008BEF62FA6B4.png" /></p>
+<p>La sección de documentación tiene enlaces a los Manuales de Ethos y a la Comunidad Ethos-Feedback en Github.</p>
+<h4 id="manuales-ethos">Manuales Ethos<a class="headerlink" href="#manuales-ethos" title="Permanent link">&para;</a></h4>
+<p>El manual más actualizado de Ethos se puede descargar aquí.</p>
+<h4 id="ethos-github">Ethos Github<a class="headerlink" href="#ethos-github" title="Permanent link">&para;</a></h4>
+<p>El botón abrirá la página web de la comunidad Ethos-Feedback en Github, donde podrá acceder a las versiones de Ethos o informar de un problema si cree que ha encontrado un error. Sin embargo, para evitar duplicados, por favor haga una búsqueda previa entre los problemas existentes antes de publicar.</p>
+<h3 id="ajustes-de-la-suite">Ajustes de la Suite<a class="headerlink" href="#ajustes-de-la-suite" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/Pictures/1000000100000D0A000008CC6E5B33E0.png" /></p>
+<h5 id="idioma">Idioma<a class="headerlink" href="#idioma" title="Permanent link">&para;</a></h5>
+<p>El idioma de la Suite se puede seleccionar entre checo, alemán, inglés, español, francés, hebreo, italiano, neerlandés, noruego, portugués, esloveno y chino.</p>
+<h5 id="localizacion-del-servidor">Localización del Servidor<a class="headerlink" href="#localizacion-del-servidor" title="Permanent link">&para;</a></h5>
+<p>La ubicación del servidor puede ser Github o el servidor de FrSky. Para la Suite v1.6.0, el servidor se restableció al servidor de FrSky (solo esta vez). Cualquier cambio se guardará después de la modificación.</p>
+<h4 id="version-de-la-suite">Versión de la Suite<a class="headerlink" href="#version-de-la-suite" title="Permanent link">&para;</a></h4>
+<h5 id="version">Versión<a class="headerlink" href="#version" title="Permanent link">&para;</a></h5>
+<p>Muestra la versión actual de Suite.</p>
+<h5 id="actualizacion-de-la-suite">Actualización de la Suite<a class="headerlink" href="#actualizacion-de-la-suite" title="Permanent link">&para;</a></h5>
+<p>Se indicará ‘Actualizado’ si está al día, o de lo contrario haga clic en el botón para buscar actualizaciones de Suite.</p>
+<h4 id="mas-ajustes">Más ajustes<a class="headerlink" href="#mas-ajustes" title="Permanent link">&para;</a></h4>
+<h5 id="proxy">Proxy<a class="headerlink" href="#proxy" title="Permanent link">&para;</a></h5>
+<p>Aquí se pueden actualizar las configuraciones del proxy.</p>
+<h5 id="opciones-de-depuracion">Opciones de depuración<a class="headerlink" href="#opciones-de-depuracion" title="Permanent link">&para;</a></h5>
+<ul>
+<li>• Se puede habilitar o deshabilitar un cuadro de diálogo emergente cuando ocurre un error fatal.<br />
+• El modo de depuración de la Suite registrará todas las trazas (no solo los bloqueos) en Suite.<br />
+• Abre la carpeta de registros para revisar los registros de fallos.</li>
+</ul>
+<h3 id="acerca-de">Acerca de<a class="headerlink" href="#acerca-de" title="Permanent link">&para;</a></h3>
+<p>Muestra la versión y la información de copyright.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../migration/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Migración">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Migración
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../web-simulator/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Ethos Web Simulator">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Ethos Web Simulator
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+  <script src="../../../javascripts/locale-scope.js"></script>
+  
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+
+  </body>
+</html>

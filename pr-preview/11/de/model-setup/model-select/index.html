@@ -1,0 +1,4429 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User manual for the FrSky Ethos radio firmware">
+      
+      
+      
+        <link rel="canonical" href="https://manual.rt-rc.com/de/model-setup/model-select/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../model-edit/">
+      
+      
+        
+          <link rel="alternate" href="../../../model-setup/model-select/" hreflang="en">
+        
+          <link rel="alternate" href="../../../cs/model-setup/model-select/" hreflang="cs">
+        
+          <link rel="alternate" href="../../../he/model-setup/model-select/" hreflang="he">
+        
+          <link rel="alternate" href="../../../nl/model-setup/model-select/" hreflang="nl">
+        
+          <link rel="alternate" href="../../../nb/model-setup/model-select/" hreflang="nb">
+        
+          <link rel="alternate" href="../../../pl/model-setup/model-select/" hreflang="pl">
+        
+          <link rel="alternate" href="../../../es/model-setup/model-select/" hreflang="es">
+        
+          <link rel="alternate" href="../../../it/model-setup/model-select/" hreflang="it">
+        
+          <link rel="alternate" href="../../../pt-BR/model-setup/model-select/" hreflang="pt-BR">
+        
+          <link rel="alternate" href="../../../zh/model-setup/model-select/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../../fr/model-setup/model-select/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Modellauswahl - Ethos Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelle" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../" title="Ethos Manual" class="md-header__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ethos Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modellauswahl
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../model-setup/model-select/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../cs/model-setup/model-select/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../he/model-setup/model-select/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nl/model-setup/model-select/" hreflang="nl" class="md-select__link">
+              Nederlands
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../nb/model-setup/model-select/" hreflang="nb" class="md-select__link">
+              Norsk Bokmål
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pl/model-setup/model-select/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../es/model-setup/model-select/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../it/model-setup/model-select/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pt-BR/model-setup/model-select/" hreflang="pt-BR" class="md-select__link">
+              Português (Brasil)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh/model-setup/model-select/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/model-setup/model-select/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    <a href="https://github.com/robthomson/ethos-manual-rework/releases" title="Download PDF manuals" class="md-header__button md-icon" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg>
+    </a>
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robthomson/ethos-manual-rework" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Erste Schritte
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../system-setup/" class="md-tabs__link">
+          
+  
+  
+  Systemeinstellungen
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Modellkonfiguration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../displays/" class="md-tabs__link">
+          
+  
+  
+  Anzeigen
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lua-scripts/" class="md-tabs__link">
+          
+  
+  
+  Lua-Skripte
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
+          
+  
+  
+  Anleitungen
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../radio-notes/" class="md-tabs__link">
+          
+  
+  
+  Senderhinweise
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ethos-suite/" class="md-tabs__link">
+          
+  
+  
+  Ethos Suite
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  Referenz
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Mitwirken
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Ethos Manual" class="md-nav__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    Ethos Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robthomson/ethos-manual-rework" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Erste Schritte
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/main-views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hauptansichten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/user-interface-and-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benutzeroberfläche & Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usb-connection-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USB-Verbindungsmodi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notfallmodus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemeinstellungen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systemeinstellungen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht (Seite 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/file-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dateimanager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warnungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/date-and-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datum & Uhrzeit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/battery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Akku
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedienelemente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geräte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informationen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modellkonfiguration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modellkonfiguration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modellauswahl
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modellauswahl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modellordner-verwalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modellordner verwalten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinzufugen-eines-neuen-modells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinzufügen eines neuen Modells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hinzufügen eines neuen Modells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keiselstabilisierte-empfanger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keiselstabilisierte Empfänger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktualisierung-der-modelle-auf-ethos-2610" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktualisierung der Modelle auf Ethos 26.1.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delta-flugel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delta-Flügel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benennung-der-ausgabekanale-im-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benennung der Ausgabekanäle im Wizard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auswahl-eines-modells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auswahl eines Modells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auswahl eines Modells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schnellauswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnellauswahl
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-modellverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menü Modellverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menü Modellverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktuelles-modell-auswahlen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktuelles Modell auswählen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ein-modell-klonen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ein Modell klonen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordner-wechseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordner wechseln
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modell-empfangen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modell empfangen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modell-senden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modell senden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loschen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Löschen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfang-eines-modells-von-einem-anderen-ethos-sender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfang eines Modells von einem anderen Ethos-Sender
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modell bearbeiten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flight-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flugphasen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mixes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mischer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ausgänge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Timer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trimmungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF-System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kurven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logical-switches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logische Schalter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonderfunktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variablen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telemetrie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checkliste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glasses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lua-Skripte (Modell)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rearranging-the-model-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rearranging the Model Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anzeigen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anzeigen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildschirme konfigurieren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/configuring-the-main-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring the Main Screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/standard-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-additional-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Additional Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/managing-main-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Main Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-custom-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Custom Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lua-Skripte
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lua-Skripte
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LUA Scripte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/lua-interpreter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lua-Interpreter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/ethos-lua-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Lua-Dokumentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/example-script-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Speicherorte für Beispielskripte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/configuration-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurationsgrenzen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/basic-widget-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grundlegender Widget-Aufbau
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/alternative-display-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alternative Display Themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programmier-Beispiele
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/initial-radio-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erste Einrichtung des Senders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-fixed-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beispiel für ein einfaches Flächenmodell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flying-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beispiel: Einfacher Nurflügler (Elevon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flybarless-heli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beispiel: Einfacher Flybarless-Heli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anleitungen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anleitungen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abschnitt „Gewusst wie“
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/low-battery-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warnung bei niedriger Akkuspannung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/battery-capacity-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warnung bei verbrauchter Akkukapazität
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SR8/SR10 – Modellkonfiguration und Kanalreihenfolge ändern
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Butterfly-Mischer (Krähe)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ein FBUS-System konfigurieren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Redundante Empfängerkonfiguration testen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benutzerdefinierte Text-Checkliste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Im Flug einstellbare Kompensationskurve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sofortige Steuerübernahme für die Trainer-Funktion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aktuellen Bootloader oder andere Komponenten finden
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/converting-1.6-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converting 1.6.x Models to 26.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/gear-door-sequencer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gear Door and Landing Gear Sequencer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senderhinweise
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Senderhinweise
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radio Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-x20s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20/X20S
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro-aw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro AW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20r-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20R/RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x18-x18se/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X18/X18SE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/xe-xes-xe-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XE/XES/XE RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x14-x14rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X14/X14RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/twin-xlite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TWIN XLite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Suite
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ethos Suite
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FrSky Suite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedienung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/web-simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Web Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/command-line-operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Operation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referenz
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referenz
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referenz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/toolbars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Symbolleisten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mitwirken
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mitwirken
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mitwirken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/screenshot-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Screenshot-Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-a-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a New Language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/translation-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modellordner-verwalten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modellordner verwalten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinzufugen-eines-neuen-modells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinzufügen eines neuen Modells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hinzufügen eines neuen Modells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keiselstabilisierte-empfanger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keiselstabilisierte Empfänger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktualisierung-der-modelle-auf-ethos-2610" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktualisierung der Modelle auf Ethos 26.1.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delta-flugel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delta-Flügel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benennung-der-ausgabekanale-im-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benennung der Ausgabekanäle im Wizard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auswahl-eines-modells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auswahl eines Modells
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auswahl eines Modells">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schnellauswahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnellauswahl
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-modellverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menü Modellverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menü Modellverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktuelles-modell-auswahlen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktuelles Modell auswählen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ein-modell-klonen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ein Modell klonen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordner-wechseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordner wechseln
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modell-empfangen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modell empfangen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modell-senden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modell senden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loschen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Löschen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empfang-eines-modells-von-einem-anderen-ethos-sender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empfang eines Modells von einem anderen Ethos-Sender
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/de/model-setup/model-select.md" title="Seite editieren" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="modelle"><strong>Model</strong><strong>le</strong><a class="headerlink" href="#modelle" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-modelselect.png" /></p>
+<p>Die Option „Modellauswahl“ wird über das Menü „Modell“ aufgerufen. Sie dient dazu, das aktuelle Modell auszuwählen, ein neues Modell hinzuzufügen, ein Modell zu klonen, ein Modell über Bluetooth zu senden, zu empfangen oder es zu löschen.</p>
+<h2 id="modellordner-verwalten">Modellordner verwalten<a class="headerlink" href="#modellordner-verwalten" title="Permanent link">&para;</a></h2>
+<p>Mit Ethos können Sie Ihre eigenen Modellordner erstellen, um Ihre Modelle zu kategorisieren und zu gruppieren. Typische Modellordnernamen sind z.B. Flugzeug, Segelflugzeug, Heli, Quad, Warbird, Boot, Auto, Vorlage, Archiv usw.</p>
+<p><img alt="" src="../../assets/model-modelselect-folders.png" /></p>
+<p>Bis Sie Ihre Ordner erstellt und organisiert haben, erstellt Ethos automatisch den Ordner 'keine Kategorie'. Dies geschieht, wenn Sie auf Ethos Version 1.1.0 alpha 17 oder höher aktualisieren, oder wenn Sie ein Modell aus dem Netz oder von einem Freund in den Ordner \Models auf der SD- oder eMMC-Karte kopieren. Ethos löscht den Ordner 'keine Kategorie' automatisch, wenn er nicht mehr benötigt wird.</p>
+<p>Um Ihren ersten Ordner zu erstellen, tippen Sie auf das „+“ rechts neben der Bezeichnung „keine Kategorie“ oder drücken Sie lange auf die Taste „Seite nach oben/unten“ (PG Up/Down).</p>
+<p><img alt="" src="../../assets/model-modelselect-create-airplane-folder.png" /></p>
+<p>Geben Sie den Namen in das Dialogfeld „Ordner erstellen“ ein und tippen Sie auf „OK“. Die Ordnernamen können bis zu 15 Zeichen lang sein. Wiederholen Sie diesen Vorgang für Ihre anderen Kategorien. Beachten Sie, dass diese Ordner als Unterordner unter dem Ordner „\models“ auf der SD-Karte oder eMMC angezeigt werden.</p>
+<p>Die Ordner der Modellkategorien sind alphabetisch sortiert, aber der Ordner 'keine Kategorie' erscheint immer als letzter in der Liste.</p>
+<p><img alt="" src="../../assets/model-modelselect-folder-options.png" /></p>
+<p>Wenn Sie auf einen Ordnernamen tippen und die Taste PgUp/Dn lang drücken, erscheint ein Dialog, in dem Sie den Ordner umbenennen oder löschen können. Wenn sich in dem zu löschenden Ordner Modelle befanden, legt Ethos diese automatisch im Ordner „'keine Kategorie'“ ab.</p>
+<h2 id="hinzufugen-eines-neuen-modells">Hinzufügen eines neuen Modells<a class="headerlink" href="#hinzufugen-eines-neuen-modells" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-modelselect-folder-airplane-select.png" /></p>
+<p>Um ein neues Modell hinzuzufügen, wählen Sie die Modellkategorie aus, unter der Sie das Modell erstellen möchten, und tippen Sie dann auf das [+] -Symbol, um ein neues Modell zu erstellen oder um ein Modell von einem anderen Ethos Sender über Bluetooth zu empfangen.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-create.png" /></p>
+<p>Tippen Sie auf „Modell erstellen“, um den Assistenten für neue Modelle zu starten. (möglicherweise müssen Sie zuerst Ihre Modellkategorien erstellen, siehe oben).</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-airplane.png" /></p>
+<p>Wählen Sie die Art des Modells aus, das Sie erstellen möchten, und folgen Sie den Anweisungen.</p>
+<p>Es gibt Assistenten für:</p>
+<ul>
+<li>Motorflugzeug</li>
+<li>Segelflugzeug</li>
+<li>Hubschrauber</li>
+<li>Multirotor</li>
+<li>Sonstiges</li>
+</ul>
+<p>Der Assistent unterstützen Sie bei der grundlegenden Einrichtung für den jeweiligen Modelltyp.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-rx.png" /></p>
+<p>Der Wizard bieten die Möglichkeit, zusätzliche voreingestellte Mischer für stabilisierte FrSky-Empfänger einzurichten, z. B. Verstärkung und Stabilisierungsmodus.</p>
+<h3 id="keiselstabilisierte-empfanger">Keiselstabilisierte Empfänger<a class="headerlink" href="#keiselstabilisierte-empfanger" title="Permanent link">&para;</a></h3>
+<p>Die stabilisierten Empfänger von FrSky erfordern eine bestimmte Kanalreihenfolge, nämlich AETR. Daher sollte die „Kanalreihenfolge” im Menü „Sticks” auf der Standardeinstellung AETR belassen und die Option „Erste vier Kanäle fest” aktiviert werden, um sicherzustellen, dass die vom Assistenten erstellte Kanalreihenfolge zum Empfänger passt.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-engine.png" /></p>
+<p>Bei einem Modell vom Typ Motorflugzeug wird als Nächstes die Anzahl der Querruder- und Klappenkanäle ausgewählt.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-ail-and-flaps.png" /></p>
+<p>Bei einem Modell vom Typ Flugzeug wird als Nächstes die Anzahl der Querruder- und Klappenkanäle ausgewählt.</p>
+<p>Ab Ethos 1.7.0 weisen die neuen Wizards die Kanäle beginnend von links und abwechselnd von außen nach innen zu, wodurch sie mit der Dokumentation des FrSky-Empfängers übereinstimmen.</p>
+<p>Für ein einfaches Modell mit 2 Querrudern, 1 Höhenruder, 1 Seitenruder und 1 Motor lautet die Kanalreihenfolge daher wie folgt (vorausgesetzt, die Standard-„Kanalreihenfolge” von AETR und die Option „Erste vier Kanäle fest” sind aktiviert):</p>
+<p>CH1 Querruder links</p>
+<p>CH2 Höhenruder</p>
+<p>CH3 Gas</p>
+<p>CH4 Seitenruder</p>
+<p>CH5 Querruder rechts</p>
+<h3 id="aktualisierung-der-modelle-auf-ethos-2610">Aktualisierung der Modelle auf Ethos 26.1.0<a class="headerlink" href="#aktualisierung-der-modelle-auf-ethos-2610" title="Permanent link">&para;</a></h3>
+<p>Während des Upgrades auf Ethos 26.1.0 können bestehende Modelle an das neue Schema der Zählung von links angepasst werden.</p>
+<p>Es gibt drei Szenarien:</p>
+<p>a) Bei bestehenden Modellen mit der Standard-Kanalreihenfolge 1.6.x, die von rechts gezählt wird, werden die Mischer neu angeordnet, um sie an das neue Schema anzupassen, bei dem von links gezählt wird. Die Zuweisung der Ausgangskanäle bleibt jedoch unverändert, sodass keine Änderungen an der Verkabelung des Modells erforderlich sind. Nur die Mischer werden in einer neuen Reihenfolge angeordnet, aber die ursprünglichen Zuweisungen der Ausgangskanäle bleiben erhalten, damit das Modell weiterhin korrekt funktioniert. Die Reihenfolge der Mischer lautet beispielsweise:</p>
+<p>von</p>
+<p>CH1 Querruder rechts</p>
+<p>CH2 Höhenruder</p>
+<p>CH3 Gas</p>
+<p>CH4 Seitenruder</p>
+<p>CH5 Querruder links</p>
+<p>zu</p>
+<p>CH5 Querruder links</p>
+<p>CH2 Höhenruder</p>
+<p>CH3 Gas</p>
+<p>CH4 Seitenruder</p>
+<p>CH1 Querruder rechts</p>
+<p>b) Bei bestehenden Modellen, deren Kanäle so vertauscht wurden, dass die Zählung von links beginnt, werden die Mischer neu angeordnet, um sicherzustellen, dass die Querruderdifferenzierung weiterhin korrekt funktioniert; die Kanalbelegungen bleiben dabei jedoch unverändert.</p>
+<p>c) Bestehende Modelle, deren Kanäle durch Umkehrung der Querruder-Mischung und Umbenennung der Ausgangskanäle vertauscht wurden, funktionieren nach dem Upgrade zwar korrekt, es kommt jedoch zu einem Konflikt bei der Kanalbenennung. Um dies zu beheben, müssen Sie die zuvor vorgenommenen Änderungen zur Umkehrung der Mischung rückgängig machen:</p>
+<p>I) Kehren Sie die Querruder-Mischung mit positiven Werten für Gewicht und Differential um.</p>
+<p>II) Tauschen Sie die Querruder-Ausgangskanäle mithilfe der „Kanäle tauschen-Funktion” im Menü „Kanäle” gegeneinander aus.</p>
+<p>III) Benennen Sie auch die beiden Kanäle entsprechend ihrer korrekten linken und rechten Funktion um.</p>
+<p>IV) <strong>Achtung!</strong> Überprüfen Sie nach den Änderungen, ob die Mischer und Ausgangskanäle in der richtigen Reihenfolge funktionieren, wenn der/die Propeller entfernt sind.</p>
+<p>Für eine detailliertere Betrachtung der drei Konversionsszenarien verweisen wir auf  Anhang <a href="../../how-to/converting-1.6-models/">A – Konvertierung von Ethos-Modellen von 1.6.3 auf 1.7.0</a></p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-tail.png" /></p>
+<p>Bei einem Flugzeugmodell wird die Leitwerkskonfiguration zwischen traditionellem Kreuzleitwerk, V-Leitwerk oder keinem Leitwerk (z. B. bei einem Delta- oder Nurflügel) gewählt.</p>
+<h3 id="delta-flugel">Delta-Flügel<a class="headerlink" href="#delta-flugel" title="Permanent link">&para;</a></h3>
+<p>Ein Höhenruder-Setup kann erreicht werden, indem ein neues Flugzeugmodell mit 2 Querrudern und ohne Leitwerk erstellt wird, was dazu führt, dass die Höhenrudermischung automatisch erstellt wird. Die voreingestellten Mischungsgewichte betragen 50 %, so dass bei gleichzeitiger Anwendung von Quer- und Höhenruder insgesamt 100 % erreicht werden.</p>
+<p>Bei einem Deltamodell, das sowohl Quer- als auch Höhenruderflächen hat, lassen Sie den Wizard so arbeiten, als hätte das Modell ein Leitwerk. Er konfiguriert die benötigten Quer- und Höhenruderkanäle, je nach Bedarf mit oder ohne Seitenruder.</p>
+<p>Alternativ kann bei Verwendung eines stabilisierten Empfängers die Deltamischung vom Empfänger durchgeführt werden. Im Wizard sollten Sie für diese Situation 1 Querruder und 1 Höhenruder auswählen, da die Höhenrudermischung im Empfänger erfolgt. Bitte lesen Sie das Handbuch für stabilisierte Empfänger für weitere Details.</p>
+<p>Bei einem Deltaflügelmodell mit Quer- und Höhenruder, lassen Sie den Wizard so arbeiten, als hätte das Modell ein Heck. Er konfiguriert die benötigten Quer- und Höhenruderkanäle, je nach Bedarf mit oder ohne Seitenruder.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-ele-and-rudder.png" /></p>
+<p>Bei einem Flugzeugmodell, bei dem beispielsweise ein traditionelles Kreuzleitwerk gewählt wurde, kann die Anzahl der Höhenruder- und Seitenruderkanäle konfiguriert werden.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-ch-reassignment.png" /></p>
+<p>Nachdem Sie die Kanaloptionen eingerichtet haben, können Sie mit dem oben gezeigten Schritt die Modellfunktionen verschiedenen Kanälen neu zuweisen. Der Wizard befolgt die im Menü „Knüppelmodus“ konfigurierte „Kanalreihenfolge“, aber auf diesem Bildschirm können Sie die Kanäle neu zuweisen, wobei zu beachten ist, dass stabilisierte FrSky-Empfänger eine bestimmte Reihenfolge der stabilisierten Kanäle erfordern. Weitere Informationen finden Sie in der Anleitung des Empfängers.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-name.png" /></p>
+<p>IIm letzten Schritt kann der Modellname definiert und ein Modellbild verknüpft werden. Beachten Sie, dass Modellnamen bis zu 15 Zeichen lang sein können.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-wizard-ultimate.png" /></p>
+<p>Das neue Modell wurde erstellt.</p>
+<p><img alt="" src="../../assets/model-modelselect-model-airplane-category.png" /></p>
+<p>Das erstellte Modell wird in dem benutzerdefinierten Modellkategorie-Ordner angezeigt, der beim Start des Assistenten aktiv war, und wird innerhalb jeder Gruppe alphabetisch sortiert.</p>
+<p>Bitte beachten Sie auch das Beispiel „<a href="../../tutorials/basic-fixed-wing/">Grundlegendes Beispiel für ein Flächenflugzeug</a>“ im Abschnitt „Programmier-Anleitungen“ für ein ausgearbeitetes Beispiel.</p>
+<h2 id="benennung-der-ausgabekanale-im-wizard">Benennung der Ausgabekanäle im Wizard<a class="headerlink" href="#benennung-der-ausgabekanale-im-wizard" title="Permanent link">&para;</a></h2>
+<p>Die neuen Modell-Assistenten verwenden die folgenden Regeln für die Kanalbenennung:</p>
+<ul>
+<li>Wenn der Mischer nur einen Ausgang hat, erfolgt keine Nummerierung und kein Namenszusatz.<ul>
+<li>Wenn dier Mischer an den Ausgängen ein abweichendes Verhalten zeigt, benötigen die Ausgangskanäle einen expliziten Namen (z. B. „links“ / „rechts“ für die Querruder).</li>
+<li>Wenn der Mischer auf allen Ausgängen exakt dieselben Berechnungen durchführt, dann enthält der Name lediglich eine Nummer als Suffix.</li>
+</ul>
+</li>
+</ul>
+<h2 id="auswahl-eines-modells">Auswahl eines Modells<a class="headerlink" href="#auswahl-eines-modells" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-icon-modelselect.png" /></p>
+<p>Tippen Sie auf „Modelle“, um eine Liste Ihrer Modelle anzuzeigen.</p>
+<p><img alt="" src="../../assets/model-modelselect-folders.png" /></p>
+<p>Bitte beachten Sie, dass nach einem Ethos-Versions-Upgrade ETHOS die Modelle einzeln konvertiert, wenn sie über den Modellauswahl-Bildschirm ausgewählt werden. Es ist nicht notwendig, jedes Modell nach einem Update auszuwählen, da die Konvertierung zu einem späteren Zeitpunkt erfolgen kann, wenn sie ausgewählt werden, selbst bei einer späteren Version von Ethos. Es gibt keine spürbare Verzögerung im Konvertierungsprozess, wenn ein Modell ausgewählt wird. Wenn die Konvertierung stattfindet, wird das Datum der letzten Änderung am unteren Rand des Modellauswahlbildschirms auf das aktuelle Datum geändert. Wenn keine Konvertierung erforderlich ist, ändert sich das Datum nur, wenn Sie das Modell bearbeiten.</p>
+<h3 id="schnellauswahl">Schnellauswahl<a class="headerlink" href="#schnellauswahl" title="Permanent link">&para;</a></h3>
+<p>Durch langes Berühren oder langes Drücken auf ein Modell-Symbol wird sofort zu diesem Modell gewechselt. Siehe auch „Aktuelles Modell festlegen“ weiter unten.</p>
+<h2 id="menu-modellverwaltung">Menü Modellverwaltung<a class="headerlink" href="#menu-modellverwaltung" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-modelselect-folders-2.png" /></p>
+<p>Tippen Sie auf ein Modell, um es zu markieren, und tippen Sie dann erneut darauf, um das Modellverwaltungsmenü aufzurufen.</p>
+<h3 id="aktuelles-modell-auswahlen">Aktuelles Modell auswählen<a class="headerlink" href="#aktuelles-modell-auswahlen" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-modelselect-model-set.png" /></p>
+<p>Tippen Sie auf „Modell auswählen“, um das markierte Modell zum aktuellen Modell zu machen.</p>
+<p>Alternativ können Sie auch die oben beschriebene Methode „Schnellauswahl“ verwenden.</p>
+<h3 id="ein-modell-klonen">Ein Modell klonen<a class="headerlink" href="#ein-modell-klonen" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-modelselect-clone-select.png" /></p>
+<p>Tippen Sie auf „klonen“, um eine Kopie des markierten Modells zu erstellen.</p>
+<p><img alt="" src="../../assets/model-modelselect-clone-options.png" /></p>
+<p>Es öffnet sich ein Dialogfeld, in dem Sie den Klon anpassen können.</p>
+<p>Standardmäßig wird das HF-System nicht geklont, d. h. das RF-Modul wird im Klon deaktiviert, aber mit einer anderen Modellnummer versehen. Wenn die Option „HF-System“ ausgewählt ist, wird die HF-Konfiguration einschließlich der Modellnummer geklont.</p>
+<p>Die Modellmischer, T Stoppuhren und Kurven werden nicht geklont, wenn diese Option deaktiviert ist. Tippen Sie auf „OK“, um fortzufahren. Nach Abschluss des Vorgangs wird ein Bestätigungsdialogfeld mit der Meldung „Modell erfolgreich geklont!“ angezeigt.</p>
+<h3 id="ordner-wechseln">Ordner wechseln<a class="headerlink" href="#ordner-wechseln" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-modelselect-folder-change-select.png" /></p>
+<p>Um ein Modell in einen anderen Ordner zu verschieben, tippen Sie auf das Symbol des Modells und wählen Sie dann im Dialogfeld „Ordner wechseln“ aus.</p>
+<p><img alt="" src="../../assets/model-modelselect-folder-change-glider.png" /></p>
+<p>Tippen Sie auf den Ordner, in den Sie ihn verschieben möchten.</p>
+<h3 id="modell-empfangen">Modell empfangen<a class="headerlink" href="#modell-empfangen" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-modelselect-receive-model-select.png" /></p>
+<p>Tippen Sie auf „Modell empfangen“, um den Vorgang zum Empfangen eines Modells von einem anderen Ethos-Sender über Bluetooth zu starten. Bitte beachten Sie, dass „Modell empfangen“ vor „Modell senden“ im sendenden Funkgerät gestartet werden muss.</p>
+<p><img alt="" src="../../assets/model-modelselect-receive-model-waiting.png" /></p>
+<p>Bis eine Bluetooth-Verbindung gefunden wird, wird der Dialog „Warten auf Verbindung“ angezeigt.</p>
+<p><img alt="" src="../../assets/model-modelselect-receive-model-dialog.png" /></p>
+<p>Sobald eine Verbindung hergestellt wurde, wird ein Dialogfeld „Bestätigen“ angezeigt, das auf eine Bestätigung wartet, um fortzufahren.</p>
+<p><img alt="" src="../../assets/model-modelselect-receive-model-receiving.png" /></p>
+<p>Die Dateiübertragung beginnt und ein Fortschrittsbalken wird angezeigt, gefolgt von einer Erfolgsmeldung nach Abschluss.</p>
+<h3 id="modell-senden">Modell senden<a class="headerlink" href="#modell-senden" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-modelselect-send-model-select.png" /></p>
+<p>Tippen Sie auf „Modell senden“, um die Übertragung eines Modells über Bluetooth an einen anderen Ethos-Sender zu starten. Bitte beachten Sie, dass „Modell empfangen“ vor „Modell senden“ im sendenden Funkgerät gestartet werden muss.</p>
+<p><img alt="" src="../../assets/model-modelselect-send-model-waiting-devices.png" /></p>
+<p>Bis eine Bluetooth-Verbindung gefunden wird, wird der Dialog „Warten auf Geräte“ angezeigt.</p>
+<p><img alt="" src="../../assets/model-modelselect-send-model-dialog.png" /></p>
+<p>Sobald Geräte gefunden wurden, wird ein Dialogfeld zur Geräteauswahl angezeigt. Wählen Sie das Gerät aus, an das das Modell gesendet werden soll.</p>
+<p><img alt="" src="../../assets/model-modelselect-send-model-sending.png" /></p>
+<p>Die Dateiübertragung beginnt und ein Fortschrittsbalken wird angezeigt. Nach Abschluss der Übertragung erscheint eine Erfolgsmeldung.</p>
+<h3 id="loschen">Löschen<a class="headerlink" href="#loschen" title="Permanent link">&para;</a></h3>
+<p>Tippen Sie auf „Löschen“, um ein Modell zu löschen. <strong>Diese Option ist für das aktive Modell nicht verfügbar</strong>.</p>
+<h2 id="empfang-eines-modells-von-einem-anderen-ethos-sender">Empfang eines Modells von einem anderen Ethos-Sender<a class="headerlink" href="#empfang-eines-modells-von-einem-anderen-ethos-sender" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-modelselect-folder-airplane-select.png" /></p>
+<p>Um ein Modell zu erhalten, wählen Sie die Modellkategorie aus, unter der Sie das Modell erstellen möchten, und tippen Sie dann auf das Symbol [+].</p>
+<p><img alt="" src="../../assets/model-modelselect-model-receive.png" /></p>
+<p>Tippen Sie auf „Modell empfangen“, um den Vorgang zum Empfangen eines Modells von einem anderen Ethos-Sender über Bluetooth zu starten.</p>
+<p>Weitere Informationen finden Sie im Abschnitt „<a href="./">Modell empfangen</a>“ oben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Übersicht">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                Übersicht
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../model-edit/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Modell bearbeiten">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Modell bearbeiten
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": {"provider": "mike"}}</script>
+    
+    
+  <script src="../../../javascripts/locale-scope.js"></script>
+  
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+
+  </body>
+</html>
