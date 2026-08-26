@@ -101,11 +101,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#manual-de-ethos" class="md-skip">
-          Saltar a contenido
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -633,26 +628,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inicio
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -670,47 +645,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#por-donde-empezar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Por dónde empezar
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emisoras-cubiertas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Emisoras cubiertas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -977,7 +911,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1314,7 +1248,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1903,7 +1837,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2381,7 +2315,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -2999,7 +2933,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3308,7 +3242,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3768,38 +3702,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#por-donde-empezar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Por dónde empezar
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emisoras-cubiertas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Emisoras cubiertas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -3824,41 +3726,16 @@
   
 
 
-<h1 id="manual-de-ethos">Manual de Ethos<a class="headerlink" href="#manual-de-ethos" title="Permanent link">&para;</a></h1>
-<p><strong>Ethos</strong> es el sistema operativo que funciona en las emisoras de FrSky de la familia Ethos
-(X20S, X20 Pro, X20 Pro AW, X18S y otras). Este manual abarca la configuración de
-un modelo desde cero, el ajuste de los parámetros del sistema de la emisora,
-la creación de pantallas de telemetría personalizadas y el entorno de scripting Lua que
-se asienta sobre todo ello.</p>
-<h2 id="por-donde-empezar">Por dónde empezar<a class="headerlink" href="#por-donde-empezar" title="Permanent link">&para;</a></h2>
-<ul>
-<li>¿Es tu primer contacto con Ethos? Empieza por <a href="getting-started/">Primeros pasos</a> —
-  la disposición de la pantalla principal y el funcionamiento de la navegación antes de tocar
-  cualquier ajuste.</li>
-<li>¿Estás configurando una emisora nueva? Consulta <a href="system-setup/">Configuración del sistema</a> para los
-  ajustes globales de la emisora que solo se realizan una vez (calibración del hardware, alertas, batería).</li>
-<li>¿Vas a programar un modelo? <a href="model-setup/">Configuración del modelo</a> abarca las mezclas,
-  las salidas, las fases de vuelo y todo lo demás que se guarda por modelo, y los
-  <a href="tutorials/">Tutoriales</a> recorren de principio a fin la creación de modelos de ala fija, ala
-  volante y helicóptero.</li>
-<li>¿Quieres crear una pantalla de telemetría? Consulta <a href="displays/">Pantallas</a>.</li>
-<li>¿Buscas resolver una tarea concreta rápidamente? Revisa las <a href="how-to/">Guías
-  prácticas</a>.</li>
-<li>¿Vas a escribir o instalar scripts/widgets Lua? Consulta <a href="lua-scripts/">Scripts Lua</a>.</li>
-</ul>
-<h2 id="emisoras-cubiertas">Emisoras cubiertas<a class="headerlink" href="#emisoras-cubiertas" title="Permanent link">&para;</a></h2>
-<p>Este manual está redactado principalmente en base a la <strong>X20S</strong>, indicando las
-diferencias específicas de cada emisora (X20 Pro, X20 Pro AW, X18S) en las
-<a href="radio-notes/">Notas de la emisora</a> allí donde la interfaz difiere.</p>
+  <h1>Inicio</h1>
+
+<p><img alt="" src="assets/Pictures/1000000100000E42000004E2FB3EBC6C.png" /></p>
+<p>Manual de usuario del Sistema Operativo</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

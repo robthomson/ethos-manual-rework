@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lista-de-verificacion" class="md-skip">
+        <a href="#lista-de-comprobacion-checklist" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1252,7 +1252,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1739,7 +1739,7 @@
   <a href="#comprobacion-del-failsafe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación del failsafe
+        Comprobación del Failsafe
       
     </span>
   </a>
@@ -1758,10 +1758,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-de-interruptores-de-funcion" class="md-nav__link">
+  <a href="#comprobacion-de-los-interruptores-de-funcion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación de interruptores de función
+        Comprobación de los interruptores de función
       
     </span>
   </a>
@@ -1769,10 +1769,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-de-potenciometros-deslizadores" class="md-nav__link">
+  <a href="#comprobacion-de-los-pots-sliders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación de potenciómetros / deslizadores
+        Comprobación de los Pots / Sliders
       
     </span>
   </a>
@@ -1954,7 +1954,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2432,7 +2432,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -3050,7 +3050,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3359,7 +3359,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3843,7 +3843,7 @@
   <a href="#comprobacion-del-failsafe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación del failsafe
+        Comprobación del Failsafe
       
     </span>
   </a>
@@ -3862,10 +3862,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-de-interruptores-de-funcion" class="md-nav__link">
+  <a href="#comprobacion-de-los-interruptores-de-funcion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación de interruptores de función
+        Comprobación de los interruptores de función
       
     </span>
   </a>
@@ -3873,10 +3873,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comprobacion-de-potenciometros-deslizadores" class="md-nav__link">
+  <a href="#comprobacion-de-los-pots-sliders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comprobación de potenciómetros / deslizadores
+        Comprobación de los Pots / Sliders
       
     </span>
   </a>
@@ -3919,72 +3919,46 @@
   
 
 
-<h1 id="lista-de-verificacion">Lista de verificación<a class="headerlink" href="#lista-de-verificacion" title="Permanent link">&para;</a></h1>
-<p><img alt="Lista de verificación" src="../../assets/model-checklist.png" /></p>
-<p>Un conjunto de comprobaciones de seguridad previas al vuelo que se ejecutan
-al encender la emisora y/o al cargar un modelo. Las comprobaciones
-integradas incluyen el modo silencioso, el failsafe sin configurar, las
-posiciones de los interruptores/potenciómetros y las baterías de la emisora
-y del RTC: la comprobación de interruptores indica en qué dirección debe
-moverse cada interruptor, señalado con puntos rojos en la pantalla de
-advertencia:</p>
-<p><img alt="Lista de verificación al arrancar" src="../../assets/model-checklist-at_start.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Tanto <code>OK</code> como <code>RTN</code> omiten por completo las comprobaciones previas al
-vuelo, independientemente de lo que sugiera la advertencia en pantalla.</p>
-</div>
+<h1 id="lista-de-comprobacion-checklist">Lista de Comprobación (Checklist)<a class="headerlink" href="#lista-de-comprobacion-checklist" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-checklist.png" /></p>
+<p>La función Lista de Comprobación proporciona un conjunto de Comprobaciones Previas al Vuelo. Se trata de un grupo de características de seguridad que se comprueban al encender la radio y/o cargar un modelo de la lista de modelos.</p>
+<p><img alt="" src="../../assets/model-checklist-at_start.png" /></p>
+<p>Las comprobaciones por defecto incluyen que la radio está en modo silencioso, el failsafe no está activado, comprobación de posiciones de interruptores y potenciómetros, batería baja de la radio, batería RTC baja, etc. La comprobación de interruptores muestra la dirección en la que debe moverse el interruptor, que se ve en los puntos rojos en el ejemplo de la pantalla de advertencia anterior.</p>
+<p>Tenga en cuenta que, contrariamente a la alerta, sólo la tecla OK o RTN permitirán omitir las deficiencias en las comprobaciones previas al vuelo.</p>
+<p>Se pueden establecer comprobaciones adicionales, como se muestra más abajo.</p>
+<p><img alt="" src="../../assets/model-checklist.png" /></p>
 <h2 id="comprobacion-del-acelerador">Comprobación del acelerador<a class="headerlink" href="#comprobacion-del-acelerador" title="Permanent link">&para;</a></h2>
-<p><img alt="Función de comprobación" src="../../assets/model-checklist-check_function.png" /></p>
-<p>Actívela y elija un operador — <code>&lt;</code> (menor que), <code>~</code> (aproximadamente igual)
-o <code>&gt;</code> (mayor que) — respecto a un valor; avisa si la palanca del acelerador
-está fuera de lo que permite esa comparación.</p>
-<h2 id="comprobacion-del-failsafe">Comprobación del failsafe<a class="headerlink" href="#comprobacion-del-failsafe" title="Permanent link">&para;</a></h2>
-<p>Avisa si no se ha configurado el <a href="../rf-system/#failsafe">failsafe</a> para el
-modelo actual.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Se recomienda encarecidamente dejar esta opción activada.</p>
-</div>
+<p><img alt="" src="../../assets/model-checklist-check_function.png" /></p>
+<p>Para activar la comprobación del acelerador, seleccione el operador que debe utilizarse. Las opciones son '&lt;' menor que, '~' aproximadamente igual, o '&gt;' mayor que. La comprobación previa al vuelo le avisará si la palanca del acelerador está fuera del valor establecido en el parámetro de valor.</p>
+<h2 id="comprobacion-del-failsafe">Comprobación del Failsafe<a class="headerlink" href="#comprobacion-del-failsafe" title="Permanent link">&para;</a></h2>
+<p>Cuando está activada, le avisará si no se ha configurado el Failsafe para el modelo actual. Es muy recomendable dejar esta opción activada.</p>
 <h2 id="comprobacion-de-interruptores">Comprobación de interruptores<a class="headerlink" href="#comprobacion-de-interruptores" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruptores" src="../../assets/model-checklist-switches.png" />
-<img alt="Opciones de comprobación de interruptores" src="../../assets/model-checklist-switches-options.png" /></p>
-<p>Permite exigir una posición concreta al arrancar para cada interruptor (los
-interruptores con nombres personalizados definidos en <a href="../../system-setup/hardware/#switches-settings">Configuración del
-sistema → Hardware</a> muestran
-esos nombres). <strong>Cargar todas las posiciones de los interruptores</strong> captura
-las posiciones físicas <em>actuales</em> como posiciones deseadas para todos los
-interruptores que no estén marcados como <strong>Sin comprobación</strong>.</p>
-<h2 id="comprobacion-de-interruptores-de-funcion">Comprobación de interruptores de función<a class="headerlink" href="#comprobacion-de-interruptores-de-funcion" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruptores de función" src="../../assets/model-checklist-function-switches.png" />
-<img alt="Opciones de comprobación de interruptores de función" src="../../assets/model-checklist-function-switches-options.png" /></p>
-<p>La misma idea, aplicada a los seis <a href="../model-edit/#function-switches">interruptores de
-función</a>. <strong>Cargar todas las posiciones de
-los interruptores de función</strong> funciona igual que en el caso anterior.</p>
-<h2 id="comprobacion-de-potenciometros-deslizadores">Comprobación de potenciómetros / deslizadores<a class="headerlink" href="#comprobacion-de-potenciometros-deslizadores" title="Permanent link">&para;</a></h2>
-<p><img alt="Potenciómetros" src="../../assets/model-checklist-pots.png" />
-<img alt="Opciones de comprobación de potenciómetros" src="../../assets/model-checklist-pots-options.png" /></p>
-<p>Exige posiciones concretas de los potenciómetros/deslizadores al arrancar,
-de forma individual para cada mando (<code>~</code>/<code>&lt;</code>/<code>&gt;</code>, igual que en la
-comprobación del acelerador). <strong>Cargar todas las posiciones de los
-potenciómetros</strong> captura automáticamente las posiciones actuales; revise
-después con atención los operadores seleccionados automáticamente, ya que
-<code>~</code> frente a <code>&lt;</code>/<code>&gt;</code> puede no corresponder con lo que realmente pretendía.</p>
+<p><img alt="" src="../../assets/model-checklist-switches.png" /></p>
+<p>Para cada interruptor, puede definir que la radio solicite que los interruptores estén en las posiciones predefinidas deseadas. Si los interruptores han recibido nombres definidos por el usuario en Sistema / Hardware / Configuración de interruptores, se mostrarán los nombres asignados.</p>
+<p>La opción "Cargar todas las posiciones de los interruptores" permite leer las posiciones deseadas a partir de las posiciones actuales de los interruptores, excepto aquellas marcadas para no comprobarse (‘No Check’).</p>
+<p><img alt="" src="../../assets/model-checklist-switches-options.png" /></p>
+<p>Las opciones a comprobarse se muestran arriba.</p>
+<h2 id="comprobacion-de-los-interruptores-de-funcion">Comprobación de los interruptores de función<a class="headerlink" href="#comprobacion-de-los-interruptores-de-funcion" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-function-switches.png" /></p>
+<p><img alt="" src="../../assets/model-checklist-function-switches-options.png" /></p>
+<p>Para cada interruptor de función, puede definir que la radio solicite que los interruptores estén en las posiciones predefinidas deseadas. Las opciones disponibles se muestran en la imagen de arriba.</p>
+<p>La opción "Cargar todas las posiciones de los interruptores de función" permite leer las posiciones deseadas a partir de las posiciones actuales de los interruptores de función, excepto para aquellos marcados con la opción ‘No comprobar’.</p>
+<h2 id="comprobacion-de-los-pots-sliders">Comprobación de los Pots / Sliders<a class="headerlink" href="#comprobacion-de-los-pots-sliders" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-pots.png" /></p>
+<p>Define si la radio comprueba que los potenciómetros y deslizadores estén en posiciones predefinidas al encender la radio. Se pueden introducir los valores deseados para cada potenciómetro y deslizador.</p>
+<p>La opción 'Cargar todas las posiciones de los pots' puede utilizarse para leer las posiciones deseadas a partir de las posiciones actuales de los pots, excepto para aquellos marcados como ‘No comprobar’. Debe comprobarse cuidadosamente que los operadores seleccionados automáticamente son los deseados (por ejemplo, '~' frente a '&lt;' o '&gt;').</p>
+<p><img alt="" src="../../assets/model-checklist-pots-options.png" /></p>
+<p>Alternativamente, las funciones de comprobación se pueden ajustar individualmente (por ejemplo, ‘~’ vs ‘&lt;’ o ‘&gt;’).</p>
 <h2 id="texto-definido-por-el-usuario">Texto definido por el usuario<a class="headerlink" href="#texto-definido-por-el-usuario" title="Permanent link">&para;</a></h2>
-<p><img alt="Texto de lista de verificación del usuario" src="../../assets/model-checklist-user-checklist.png" /></p>
-<p>Muestra un archivo de texto plano o de texto enriquecido como parte de la
-lista de verificación de arranque, una vez instalado para el modelo. Consulte
-<a href="../../how-to/user-defined-checklist/">Guía práctica: lista de verificación con texto definido por el
-usuario</a> para la configuración completa.</p>
+<p>La función ‘Checklist’ puede también mostrar un texto definido por el usuario. El texto puede ser normal o mejorado.</p>
+<p><img alt="" src="../../assets/model-checklist-user-checklist.png" /></p>
+<p>Una vez que hemos instalado un texto para un modelo determinado, cuando se seleccione este modelo la radio lo presentará como parte de la rutina de encendido de la radio. Para más detalle, vaya a la sección Cómo hacer un texto definido por el usuario para aprender a añadir un texto definido por el usuario.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

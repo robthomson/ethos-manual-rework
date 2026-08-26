@@ -51,7 +51,7 @@
     
     
       
-        <title>Anzeigen - Ethos Manual</title>
+        <title>Bildschirme konfigurieren - Ethos Manual</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#anzeigen" class="md-skip">
+        <a href="#bildschirme-konfigurieren" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anzeigen
+              Bildschirme konfigurieren
             
           </span>
         </div>
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1843,24 +1843,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anzeigen
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1868,7 +1850,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -1877,58 +1859,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ein-widget-hinzufugen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ein Widget hinzufügen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#widget-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Widget-Typen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optionen-auf-bildschirmebene" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optionen auf Bildschirmebene
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2146,7 +2076,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -3017,7 +2947,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3326,7 +3256,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3789,47 +3719,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ein-widget-hinzufugen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ein Widget hinzufügen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#widget-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Widget-Typen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optionen-auf-bildschirmebene" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optionen auf Bildschirmebene
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3853,107 +3742,18 @@
   
 
 
-<h1 id="anzeigen">Anzeigen<a class="headerlink" href="#anzeigen" title="Permanent link">&para;</a></h1>
-<p><img alt="Startbildschirm der Anzeige" src="../assets/display-home.png" /></p>
-<p>Der Startbildschirm besteht aus einem oder mehreren <strong>Anzeigebildschirmen</strong>, die jeweils aus
-<strong>Widgets</strong> aufgebaut sind, die Sie selbst platzieren und konfigurieren. Ein Druck auf <code>DISP</code> öffnet den
-Anzeigeeditor für den aktuellen Bildschirm.</p>
-<p>Es stehen bis zu <strong>acht</strong> Bildschirme zur Verfügung, die jeweils auf einem von
-<strong>dreizehn</strong> Layouts basieren (mit bis zu <strong>neun</strong> Widget-Feldern). Widgets können
-Telemetriewerte anzeigen, aber auch jede von siebzehn weiteren Informationskategorien —
-Modell-/Senderstatus, Timer, Kanäle und mehr. Konfigurierte Bildschirme erreichen Sie
-per Wischgeste oder mit <code>PAGE</code> auf/ab; die obere und die untere Leiste bleiben
-auf jedem Bildschirm sichtbar, außer bei einem Vollbild-Layout.</p>
-<h2 id="ein-widget-hinzufugen">Ein Widget hinzufügen<a class="headerlink" href="#ein-widget-hinzufugen" title="Permanent link">&para;</a></h2>
-<p><img alt="Widget-Typen" src="../assets/display-widget-types.png" /></p>
-<p>Jeder Bildschirm ist ein Raster; durch Antippen eines leeren Feldes öffnen Sie die Widget-Auswahl.
-Die Widgets reichen von einfachen Text- und Zahlenanzeigen bis hin zu Instrumenten, Diagrammen und
-vollständigen Telemetrieprotokollen. Nach dem Platzieren öffnet erneutes Antippen eines Widgets dasselbe
-Optionsmenü, mit dem Sie es in der Größe ändern, verschieben oder entfernen können:</p>
-<p><img alt="Widget-Konfigurationsoptionen" src="../assets/display-widget-config-options.png" /></p>
-<p>Wählen Sie die widgeteigenen Einstellungen aus, wird ein widgetspezifisches Konfigurationsformular geöffnet.
-Das Feld <strong>Quelle</strong> — also der Wert, den das Widget anzeigt — verwendet dieselbe
-<a href="../getting-started/user-interface-and-navigation/#choosing-a-source">Quellenauswahl</a>
-wie überall sonst in Ethos:</p>
-<p><img alt="Widget-Quelle ändern" src="../assets/display-change-source.png" /></p>
-<h2 id="widget-types">Widget-Typen<a class="headerlink" href="#widget-types" title="Permanent link">&para;</a></h2>
-<p><strong>Value</strong> — ein einzelner Zahlen- oder Telemetriewert, als Text dargestellt:</p>
-<p><img alt="Konfiguration des Value-Widgets" src="../assets/display-widget-value-config.png" /></p>
-<p>Die meisten Quellen lassen sich zusätzlich auf einen laufenden <strong>Min</strong>- oder <strong>Max</strong>-Wert reduzieren — wählen Sie
-dazu die Quelle aus, drücken Sie lange darauf und wählen Sie Min oder Max — nützlich zum Beispiel
-für den schlechtesten RSSI-Wert während eines Fluges:</p>
-<p><img alt="Value-Widget Min" src="../assets/display-widget-value-min.png" />
-<img alt="Value-Widget Min RSSI" src="../assets/display-widget-value-min-rssi.png" /></p>
-<p>Nach dem Platzieren wird der Wert als einfache Anzeige auf dem Bildschirm dargestellt:</p>
-<p><img alt="Telemetrie-Value-Widget" src="../assets/display-widget-value-telemetry.png" /></p>
-<p><strong>Bitmap</strong> — zeigt ein festes Bild an (z. B. ein Modellfoto) oder mehrere
-Bilder, die je nach Wert einer Quelle gewechselt werden (z. B. ein Akkusymbol, das sich
-mit der Spannung ändert):</p>
-<p><img alt="Konfiguration des Bitmap-Widgets" src="../assets/display-widget-bitmap-config.png" />
-<img alt="Bitmap-Widget-Typ" src="../assets/display-widget-bitmap-type.png" /></p>
-<p><strong>LiPo</strong> — eine speziell für Akkus ausgelegte Anzeige, die einen Sensor wie das
-FLVSS ausliest: Gesamtspannung des Akkupacks, Zellenzahl und jede einzelne Zellenspannung.
-Wird die eingestellte Schwelle <strong>Low voltage</strong> unterschritten, wechselt die Anzeige auf
-Rot — im folgenden Beispiel löst eine Schwelle von 3,3 V bei der niedrigsten Zelle aus:</p>
-<p><img alt="Konfiguration des LiPo-Widgets" src="../assets/display-widget-lipo-config.png" />
-<img alt="LiPo-Widget" src="../assets/display-widget-lipo.png" /></p>
-<p><strong>Channels</strong> — bis zu 8 Ausgangskanäle als Balkendiagramm, waagerecht oder
-senkrecht:</p>
-<p><img alt="Konfiguration des Channels-Widgets" src="../assets/display-widget-channels-config.png" />
-<img alt="Channels-Widget" src="../assets/display-widget-channels.png" /></p>
-<p><strong>Line Chart</strong> — stellt den Wert einer Quelle über die Zeit dar und wird bei einem Flight
-Reset zurückgesetzt:</p>
-<p><img alt="Konfiguration des Liniendiagramm-Widgets" src="../assets/display-widget-line-chart-config.png" />
-<img alt="Liniendiagramm-Widget" src="../assets/display-widget-line-chart.png" /></p>
-<ul>
-<li><strong>Source</strong> — der Wert, der aufgezeichnet wird.</li>
-<li><strong>Pause condition</strong> — eine Quelle, die die Aufzeichnung anhält bzw. fortsetzt (oder tippen Sie einfach
-  auf das laufende Widget, falls dafür keine Quelle frei ist).</li>
-<li><strong>Log period</strong> — das Abtastintervall; 500 ms decken etwa 6 Minuten ab,
-  bevor gescrollt wird, 1 s etwa 12 Minuten.</li>
-<li><strong>Inverted</strong> — spiegelt das Diagramm senkrecht.</li>
-<li><strong>Auto range</strong> — skaliert die senkrechte Achse automatisch passend zu den Daten;
-  ist die Option ausgeschaltet, werden stattdessen feste <strong>Min</strong>-/<strong>Max</strong>-Werte verwendet (z. B. ein konstanter
-  Bereich von −100 %…+100 %).</li>
-</ul>
-<p>Durch Antippen eines laufenden Diagramms erscheinen <strong>Pause/resume</strong>, <strong>Reset</strong> (löschen und
-neu starten), <strong>Configure widget</strong> oder der Sprung zu <strong>Bildschirme konfigurieren</strong>:</p>
-<p><img alt="Optionen des Liniendiagramms" src="../assets/display-widget-line-chart-options.png" /></p>
-<p><strong>Text</strong> — gibt den Inhalt einer Markdown-Textdatei wieder (gelesen aus
-<code>documents/user/</code> — siehe <a href="../system-setup/file-manager/#top-level-folders">Datei-Manager</a>):</p>
-<p><img alt="Konfiguration des Text-Widgets" src="../assets/display-widget-text-config.png" />
-<img alt="Text-Widget" src="../assets/display-widget-text.png" /></p>
-<p><strong>Timer Log</strong> — ein scrollbares Protokoll der bisherigen Werte eines ausgewählten Timers, das
-bei jedem Zurücksetzen dieses Timers geschrieben wird (nützlich, um den Verbrauch der Flugakkus
-über einen Flugtag hinweg zu verfolgen); mit <strong>Reverse</strong> steht der neueste Eintrag oben:</p>
-<p><img alt="Konfiguration des Timer-Log-Widgets" src="../assets/display-widget-timer-logs-config.png" />
-<img alt="Timer-Log-Widget" src="../assets/display-widget-timer-log.png" /></p>
-<p>Ein langer Druck auf einen Eintrag (oder auf das Widget) bietet <strong>Clear logs</strong>, das Bearbeiten bzw. Zurücksetzen des
-zugehörigen Timers oder den Sprung zur Widget- bzw. Bildschirmkonfiguration:</p>
-<p><img alt="Menü eines Timer-Log-Eintrags" src="../assets/display-widget-timer-log-menu.png" /></p>
-<p><strong>GPS Map</strong> — stellt die aktuelle GPS-Position als Spur dar, für Modelle mit einem GPS-Sensor
-(weitere Einzelheiten speziell zu diesem Widget finden Sie im Thread <em>FrSky - ETHOS Lua Script Programming</em>
-auf rcgroups, Beitrag #8854):</p>
-<p><img alt="Konfiguration des GPS-Map-Widgets" src="../assets/display-widget-gps-map-config.png" /></p>
-<h2 id="optionen-auf-bildschirmebene">Optionen auf Bildschirmebene<a class="headerlink" href="#optionen-auf-bildschirmebene" title="Permanent link">&para;</a></h2>
-<p>Über die einzelnen Widgets hinaus verfügt jeder Bildschirm über eigene Einstellungen — die Rastergröße des Layouts,
-den Hintergrund und die Frage, welche Bildschirme im <code>PAGE</code>-Durchlauf enthalten sind:</p>
-<p><img alt="Bildschirm-Konfigurationsoptionen" src="../assets/display-screen-config-options.png" /></p>
-<p>Ein vollständig konfigurierter Startbildschirm vereint mehrere Widgets zu einem Layout, das alles
-auf einen Blick zeigt:</p>
-<p><img alt="Hauptansicht" src="../assets/display-main-view.png" /></p>
-<p>Siehe <a href="additional-displays/">Weitere Anzeigen</a> zum Hinzufügen weiterer Bildschirme
-über den Standard hinaus und <a href="custom-widgets/">Benutzerdefinierte Widgets</a> für
-Lua-skriptbasierte Widgets jenseits der integrierten Auswahl.</p>
+<h1 id="bildschirme-konfigurieren">Bildschirme konfigurieren<a class="headerlink" href="#bildschirme-konfigurieren" title="Permanent link">&para;</a></h1>
+<p>Die Hauptansichten werden über die Funktion „Bildschirme konfigurieren“ auf der obersten Ebene angepasst und konfiguriert, die über das Symbol „Mehrere Bildschirme“ in der unteren Menüleiste aufgerufen wird.</p>
+<p>Die Hauptansichten können vom Benutzer konfiguriert werden, indem Widgets ausgewählt werden, um die gewünschten Informationen wie Telemetrie, Funkstatus usw. anzuzeigen. Es kann bis zu acht benutzerdefinierten Bildschirme geben. Der Benutzer kann aus fünfzehn verschiedenen Konfigurationen von Bildschirm-Widgets für jeden neuen Bildschirm mit bis zu neun Zellen für die Anzeige von Widgets wählen. Die Widgets können Telemetriewerte, aber auch Informationen aus siebzehn anderen Kategorien anzeigen. Sobald die Bildschirme mit Widgets konfiguriert sind, kann auf sie mit einer Touch-Wisch-Geste oder den Navigationssteuerelementen „Seite auf/ab“ zugegriffen werden. Die obere und untere Leiste mit ihren aktiven Symbolen bleiben auf allen Bildschirmen (außer dem Vollbild) angezeigt.</p>
+<p><img alt="" src="../assets/display-main-view.png" /></p>
+<p>Standardmäßig zeigt der Hauptbildschirm (erster Bildschirm) links ein großes Widget zur Darstellung der Modell-Bitmap und rechts drei Widgets zur Anzeige von drei Stoppuhren an. Diese Widgets können neu konfiguriert werden, um andere Parameter anzuzeigen, oder das gesamte Bildschirm-Layout kann durch einen neu definierten Bildschirm mit einer anderen Anzahl von Zellen oder einem anderen Zellen-Layout ersetzt werden.</p>
+<p>Durch Antippen des Symbols „Mehrere Bildschirme“ in der Mitte der unteren Leiste des Hauptbildschirms wird der erste Bildschirm zur Konfiguration der Bildschirme aufgerufen.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

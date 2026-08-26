@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#warnungen" class="md-skip">
+        <a href="#alarme" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -915,7 +915,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -973,6 +973,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warnungen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -989,6 +1007,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stummer-modus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stummer Modus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senderakku-kalibriert-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Senderakku -kalibriert?-
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uhrdat-batterie-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uhr/Dat.-Batterie-
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensorkonflikt-warnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensorkonflikt-Warnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inaktivitats-warnung-nach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inaktivitäts-Warnung nach
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1262,7 +1354,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1851,7 +1943,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2076,7 +2168,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -2947,7 +3039,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3256,7 +3348,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3719,6 +3811,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stummer-modus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stummer Modus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senderakku-kalibriert-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Senderakku -kalibriert?-
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uhrdat-batterie-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uhr/Dat.-Batterie-
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensorkonflikt-warnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensorkonflikt-Warnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inaktivitats-warnung-nach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inaktivitäts-Warnung nach
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3742,43 +3897,27 @@
   
 
 
-<h1 id="warnungen">Warnungen<a class="headerlink" href="#warnungen" title="Permanent link">&para;</a></h1>
-<p><img alt="Warnungen" src="../../assets/system-alerts.png" /></p>
-<p>Vier senderweite Warnungen, jede einzeln zuschaltbar – unabhängig von den
-modellspezifischen <a href="../../model-setup/special-functions/">Sonderfunktionen</a>
-und <a href="../../model-setup/logical-switches/">logischen Schaltern</a>, die Sie
-selbst anlegen.</p>
-<ul>
-<li><strong>Stummer Modus</strong> – eine Sprachansage beim Einschalten, wenn diese
-  Prüfung aktiviert ist und <a href="../general/">Allgemein → Audio-Modus</a> auf
-  Stumm steht, als Erinnerung daran, dass der Sender stummgeschaltet ist.</li>
-<li><strong>Hauptspannung</strong> – „Radio battery is low“, wenn der Hauptakku des
-  Senders unter den in <a href="../battery/">Akku</a> eingestellten Schwellwert
-  <strong>Unterspannung</strong> fällt.</li>
-<li><strong>RTC-Spannung</strong> – „RTC battery is low“, wenn die Spannung der
-  RTC-Batterie (Real Time Clock) unter 2,5 V fällt (Standardschwelle).
-  Die Datenaufzeichnung ist auf die Echtzeituhr angewiesen; eine
-  ungültige Zeit macht die Logdateien schwer lesbar, insbesondere beim
-  Unterscheiden einzelner Flugsitzungen. Diese Warnung kann vorübergehend
-  abgeschaltet werden, während man auf den Austausch der Batterie wartet,
-  sollte aber nicht dauerhaft deaktiviert bleiben.</li>
-<li><strong>Warnung bei Sensorkonflikt</strong> – erkennt sich überschneidende
-  Telemetrie-Sensor-IDs. Ein Deaktivieren lohnt sich nur, wenn Sie
-  Sensoren verwenden, die nicht der S.Port-Spezifikation entsprechen.</li>
-<li><strong>Inaktivität</strong> – eine Sprachansage „Prolonged inactivity“ (zusätzlich
-  ein Vibrationsimpuls, falls die Lautstärke heruntergeregelt ist),
-  nachdem der Sender länger als die eingestellte Zeit ungenutzt geblieben
-  ist – standardmäßig 10 Minuten.</li>
-</ul>
+<h1 id="alarme">Alarme<a class="headerlink" href="#alarme" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/system-icon-alerts.png" /></p>
+<p><img alt="" src="../../assets/system-alerts.png" /></p>
+<p>Die Systemwarnungen sind:</p>
+<h2 id="stummer-modus">Stummer Modus<a class="headerlink" href="#stummer-modus" title="Permanent link">&para;</a></h2>
+<p>Ein ‚Stummer Modus'-Alarm wird beim Start ausgegeben, wenn ‚Stummer Modus' aktiviert ist und der 'Audio Mode' unter System / Allgemein / <a href="../general/">Audio / Modus</a> auf lautlos gesetzt wurde.</p>
+<h2 id="senderakku-kalibriert-">Senderakku -kalibriert?-<a class="headerlink" href="#senderakku-kalibriert-" title="Permanent link">&para;</a></h2>
+<p>Eine Sprachmeldung 'Funkbatterie ist schwach' wird ausgegeben, wenn die Überprüfung der 'Hauptspannung' eingeschaltet ist und die Hauptbatterie des Senders unter dem Schwellenwert liegt, der im Parameter 'Niedrige Spannung' unter System / Batterie eingestellt ist.</p>
+<h2 id="uhrdat-batterie-">Uhr/Dat.-Batterie-<a class="headerlink" href="#uhrdat-batterie-" title="Permanent link">&para;</a></h2>
+<p>Ein Sprachalarm „RTC-Batterie ist schwach“ wird ausgegeben, wenn die Überprüfung der RTC-Spannung eingeschaltet ist und die RTC-Uhrenbatterie unter 2,5 V liegt, dem Standardwert für die RTC-Batterie. Der Alarm kann ausgeschaltet werden, bis die RTC-Batterie ausgetauscht wurde, sollte aber nicht auf unbestimmte Zeit ausgeschaltet bleiben. Die Echtzeit wird bei der Datenaufzeichnung verwendet, und eine ungültige Zeit führt zu Schwierigkeiten beim Lesen der Aufzeichnungen, insbesondere bei der Unterscheidung von Flugphasen.</p>
+<h2 id="sensorkonflikt-warnung">Sensorkonflikt-Warnung<a class="headerlink" href="#sensorkonflikt-warnung" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E0CB41EFB6.png" /></p>
+<p>Die Sensor-Konflikterkennung kann deaktiviert werden. Dies sollte nur erforderlich sein, wenn Sie Sensoren haben, die nicht der S.Port-Spezifikation entsprechen.</p>
+<h2 id="inaktivitats-warnung-nach">Inaktivitäts-Warnung nach<a class="headerlink" href="#inaktivitats-warnung-nach" title="Permanent link">&para;</a></h2>
+<p>Ein Sprachalarm „Sender eingeschaltet. Längere Zeit ohne Aktivität“ wird ausgegeben, wenn das Funkgerät länger als die „Inaktivität“-Zeit nicht benutzt wurde, und auch ein haptischer Alarm, falls die Lautstärke des Senders ganz herunter gedreht wird. Die Standardeinstellung ist 10 Minuten und kann bis zu 120 Minuten betragen.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

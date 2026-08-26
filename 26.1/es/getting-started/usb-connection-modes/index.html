@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modos-de-conexion-usb" class="md-skip">
+        <a href="#modos-de-conexion-usb-al-pc" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -855,10 +855,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modo-apagada" class="md-nav__link">
+  <a href="#modo-con-emisora-apagada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo apagada
+        Modo con emisora apagada
       
     </span>
   </a>
@@ -866,7 +866,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bootloader-mode" class="md-nav__link">
+  <a href="#modo-bootloader" class="md-nav__link">
     <span class="md-ellipsis">
       
         Modo bootloader
@@ -877,10 +877,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modo-encendida" class="md-nav__link">
+  <a href="#modo-con-emisora-encendida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo encendida
+        Modo con emisora encendida
       
     </span>
   </a>
@@ -995,7 +995,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1332,7 +1332,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1921,7 +1921,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2399,7 +2399,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -3017,7 +3017,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3326,7 +3326,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3796,10 +3796,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modo-apagada" class="md-nav__link">
+  <a href="#modo-con-emisora-apagada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo apagada
+        Modo con emisora apagada
       
     </span>
   </a>
@@ -3807,7 +3807,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bootloader-mode" class="md-nav__link">
+  <a href="#modo-bootloader" class="md-nav__link">
     <span class="md-ellipsis">
       
         Modo bootloader
@@ -3818,10 +3818,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modo-encendida" class="md-nav__link">
+  <a href="#modo-con-emisora-encendida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modo encendida
+        Modo con emisora encendida
       
     </span>
   </a>
@@ -3853,34 +3853,31 @@
   
 
 
-<h1 id="modos-de-conexion-usb">Modos de conexión USB<a class="headerlink" href="#modos-de-conexion-usb" title="Permanent link">&para;</a></h1>
-<p><img alt="Menú USB" src="../../assets/usbmenu.png" /></p>
-<p>Lo que hace una conexión USB a un PC depende de cómo estuviera alimentada
-la radio en el momento de conectarla.</p>
-<h2 id="modo-apagada">Modo apagada<a class="headerlink" href="#modo-apagada" title="Permanent link">&para;</a></h2>
-<p>Conectar la radio a un PC mediante USB <strong>estando apagada</strong> la pone en modo
-DFU, que se utiliza para grabar el propio bootloader.</p>
-<h2 id="bootloader-mode">Modo bootloader<a class="headerlink" href="#bootloader-mode" title="Permanent link">&para;</a></h2>
-<p>Encienda la radio <strong>manteniendo pulsado <code>ENT</code></strong> para arrancar en modo
-bootloader (la pantalla muestra "Bootloader"). Al conectar el USB en ese
-momento, el estado cambia a "USB Plugged" y el PC monta <strong>dos</strong> unidades:
-la memoria flash interna de la radio y el contenido de la SD card/eMMC.
-Este es el modo para leer y escribir archivos directamente en cualquiera de
-las dos áreas de almacenamiento, y también es la forma en que <a href="../../ethos-suite/">Ethos
-Suite</a> actualiza el firmware de la radio —
-consulte la sección Modo bootloader de Ethos Suite.</p>
-<h2 id="modo-encendida">Modo encendida<a class="headerlink" href="#modo-encendida" title="Permanent link">&para;</a></h2>
-<p>Conectar el USB con la radio <strong>encendida normalmente</strong> hace que aparezca un
-selector de modo:</p>
+<h1 id="modos-de-conexion-usb-al-pc">Modos de conexión USB al PC<a class="headerlink" href="#modos-de-conexion-usb-al-pc" title="Permanent link">&para;</a></h1>
+<h2 id="modo-con-emisora-apagada">Modo con emisora apagada<a class="headerlink" href="#modo-con-emisora-apagada" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Joystick</strong> — presenta la radio como un joystick USB HID, para manejar
-  simuladores de vuelo en el PC.</li>
-<li><strong>FrSky Suite</strong> — pone la radio en "modo Ethos" para la comunicación
-  con <a href="../../ethos-suite/">Ethos Suite</a>.</li>
-<li><strong>Serial</strong> — envía las trazas de depuración de Lua por USB-serie
-  (115200 bps). La pestaña Lua Development Tools de Ethos Suite dispone de
-  un terminal integrado para mostrarlas; puede que sea necesario un
-  controlador de puerto COM virtual en Windows.</li>
+<li>Conectando la radio apagada a un PC mediante un cable USB, se entra en el modo DFU que sirve para flashear el bootloader.</li>
+</ul>
+<h2 id="modo-bootloader">Modo bootloader<a class="headerlink" href="#modo-bootloader" title="Permanent link">&para;</a></h2>
+<ul>
+<li>La radio se pone en modo bootloader encendiendo la radio con la tecla Enter pulsada. En la pantalla aparecerá el mensaje de estado 'Bootloader'. </li>
+<li>A continuación, la radio puede conectarse a un PC mediante un cable de datos USB. El mensaje de estado cambiará a 'USB Plugged', y el PC debería mostrar dos unidades externas conectadas. La primera es para la memoria flash de la radio, y la segunda es el contenido de la tarjeta SD o eMMC.</li>
+<li>Este modo se utiliza para leer y escribir archivos en la tarjeta SD o eMMC y/o en la memoria flash de la radio.</li>
+<li>Este modo también se utiliza para conectar la radio a la Ethos Suite para actualizarla. Encontrará más detalles sobre el <a href="#Bootloader Mode">Modo Bootloader</a> en la sección de Ethos Suite.</li>
+</ul>
+<h2 id="modo-con-emisora-encendida">Modo con emisora encendida<a class="headerlink" href="#modo-con-emisora-encendida" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Si la radio está conectada a un PC mediante un cable de datos USB mientras está encendida normalmente, se muestran las opciones siguientes:</li>
+</ul>
+<p><img alt="" src="../../assets/usbmenu.png" /></p>
+<ul>
+<li>En modo ‘Joystick’, la radio puede configurarse para controlar simuladores RC.</li>
+<li>
+<p>En el modo ‘Ethos Suite’, la radio entrará en "Modo Ethos" para la comunicación con Ethos Suite. Consulte el <a href="#Ethos Mode">Modo Ethos</a> en la sección Ethos Suite.</p>
+</li>
+<li>
+<p>En modo ‘Serie’ las trazas de depuración Lua se envían a un puerto USB-Serie si está presente. La pestaña Herramienta de desarrollo Lua de Ethos Suite integra una ventana de terminal que es capaz de visualizar las trazas. La tasa de baudios es 115200bps. Puede encontrar un controlador adecuado para un puerto COM virtual para Windows <a href="https://www.st.com/en/development-tools/stsw-stm32102.html">aqu</a>í.</p>
+</li>
 </ul>
 
 
@@ -3888,9 +3885,6 @@ selector de modo:</p>
 
 
 
-
-  
-  
 
 
 

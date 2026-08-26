@@ -51,7 +51,7 @@
     
     
       
-        <title>Ethos Suite - Ethos Manual</title>
+        <title>FrSky Suite - Ethos Manual</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ethos-suite" class="md-skip">
+        <a href="#frsky-suite" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ethos Suite
+              FrSky Suite
             
           </span>
         </div>
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1836,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2061,7 +2061,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -2932,7 +2932,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3248,24 +3248,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ethos Suite
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3273,7 +3255,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3282,36 +3264,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#verbindungsmodi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verbindungsmodi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3767,25 +3719,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#verbindungsmodi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verbindungsmodi
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3809,68 +3742,13 @@
   
 
 
-<h1 id="ethos-suite">Ethos Suite<a class="headerlink" href="#ethos-suite" title="Permanent link">&para;</a></h1>
-<p>Die Ethos Suite ist die begleitende Windows-/Mac-Anwendung zur Verwaltung
-eines Senders, auf dem Ethos läuft und der über USB angeschlossen ist.</p>
-<p><img alt="Registerkarte Radio in Ethos Suite" src="../../assets/ethos-suite-radio-tab.png" /></p>
-<p>Nach dem Verbinden kann die Ethos Suite:</p>
-<ol>
-<li>Typ, ID und installierte Versionen des Senders auslesen — Firmware,
-   Bootloader, internes HF-Modul, Dateien im Flash-Speicher sowie Dateien
-   auf SD card/eMMC.</li>
-<li>Den Sender vom Bootloader-Modus in den Ethos-Modus umschalten, mit der
-   Möglichkeit, wieder zurückzuschalten.</li>
-<li>Installierte Versionen mit den aktuellen vergleichen und automatisch
-   aktualisieren — nur veraltete Komponenten, alle Komponenten unabhängig
-   vom Stand oder einzelne Komponenten.</li>
-<li>Modelle über die <strong>Modell Verwaltung</strong> auf der Festplatte sichern oder
-   eine zuvor gespeicherte Sicherung wiederherstellen (erforderlich, da
-   Modelldateien zwischen Firmware-Versionen nicht abwärtskompatibel sind).</li>
-<li>Über das <strong>Download-Center</strong> jede Firmware von der FrSky Download-Seite
-   herunterladen und den Sender als Proxy verwenden, um ein Modul, einen
-   Sensor, ein Servo oder einen Empfänger direkt zu flashen.</li>
-<li>Bilder und Audiodateien in die Ethos-eigenen Formate umwandeln.</li>
-<li><strong>Lua-Entwicklungswerkzeuge</strong> bereitstellen — API-Dokumentation,
-   Demo-Skripte und ein Debug-Terminal.</li>
-<li>Den Bootloader des Senders im DFU-Modus über eine ausgeschaltete
-   Verbindung flashen, unabhängig davon, ob die Firmware des Senders noch
-   läuft.</li>
-<li>Den internen Speicher der Sendertypen X18/S, TW Lite, XE und
-   X20 Pro/R/RS über die <strong>Reparatur-Werkzeuge</strong> reparieren, wenn der
-   Sender nicht vom NAND lesen kann oder die Einstellungen nicht
-   gespeichert werden können.</li>
-<li>Die USB-Laufwerke des Senders sauber auswerfen.</li>
-<li>Beim Start benachrichtigen, wenn ein Update für die Suite selbst
-    verfügbar ist (wird beim Beenden installiert).</li>
-</ol>
-<h2 id="verbindungsmodi">Verbindungsmodi<a class="headerlink" href="#verbindungsmodi" title="Permanent link">&para;</a></h2>
-<p>Neben ihren Hilfsprogrammen arbeitet die Suite in drei verschiedenen
-Verbindungszuständen des Senders:</p>
-<ul>
-<li><strong>Sender im Bootloader-Modus</strong> — die Registerkarte <strong>Sender</strong> prüft und
-  aktualisiert die Firmware sowie die Dateien in Flash/SD card/eMMC; die
-  <strong>Modell Verwaltung</strong> sichert den Sender oder stellt ihn wieder her.</li>
-<li><strong>Sender im Ethos-Modus</strong> — die Suite verwendet den Sender als Proxy
-  (über die Werkzeuge <strong>FRSK Flasher</strong>/Download-Center), um das interne
-  Modul oder einen beliebigen angeschlossenen Sensor, ein Servo oder einen
-  Empfänger direkt zu flashen.</li>
-<li><strong>Sender im DFU-Modus</strong> — Verbindung bei ausgeschaltetem Sender,
-  verwendet vom <strong>DFU Flasher</strong>, um den Bootloader selbst zu flashen,
-  z. B. wenn eine beschädigte Firmware das normale Einschalten des Senders
-  verhindert.</li>
-</ul>
-<p>Siehe <a href="migration/">Migration</a> für die erstmalige Umstellung eines
-vorhandenen Senders auf die Ethos Suite und <a href="operation/">Bedienung</a> für
-die Oberfläche der Suite selbst.</p>
+<h1 id="frsky-suite">FrSky Suite<a class="headerlink" href="#frsky-suite" title="Permanent link">&para;</a></h1>
 
 
 
 
 
 
-
-  
-  
 
 
 

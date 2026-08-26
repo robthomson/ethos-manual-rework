@@ -915,7 +915,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -973,6 +973,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alertas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -989,6 +1007,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modo-silencio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo silencio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voltaje-principal-de-la-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltaje principal de la radio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voltaje-rtc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltaje RTC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aviso-de-conflicto-de-sensores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aviso de conflicto de sensores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inactividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inactividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1262,7 +1354,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1851,7 +1943,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2329,7 +2421,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -2947,7 +3039,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3256,7 +3348,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3719,6 +3811,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modo-silencio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo silencio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voltaje-principal-de-la-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltaje principal de la radio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voltaje-rtc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltaje RTC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aviso-de-conflicto-de-sensores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aviso de conflicto de sensores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inactividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inactividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3743,40 +3898,25 @@
 
 
 <h1 id="alertas">Alertas<a class="headerlink" href="#alertas" title="Permanent link">&para;</a></h1>
-<p><img alt="Alertas" src="../../assets/system-alerts.png" /></p>
-<p>Cuatro avisos que afectan a toda la emisora, cada uno activable de forma
-independiente, distintos de las <a href="../../model-setup/special-functions/">funciones especiales</a>
-y de los <a href="../../model-setup/logical-switches/">interruptores lógicos</a> de cada modelo
-que configura usted mismo.</p>
-<ul>
-<li><strong>Modo silencioso</strong> — un aviso hablado al encender la radio cuando esta
-  comprobación está activada y <a href="../general/">General → Modo de audio</a> está
-  ajustado a Silencioso, como recordatorio de que la emisora está silenciada.</li>
-<li><strong>Tensión principal</strong> — "Radio battery is low" cuando la batería principal de
-  la emisora cae por debajo del umbral de <strong>Tensión baja</strong> establecido en
-  <a href="../battery/">Batería</a>.</li>
-<li><strong>Tensión RTC</strong> — "RTC battery is low" cuando la pila de botón del RTC cae por
-  debajo de 2,5 V (el umbral predeterminado). El registro de datos depende del
-  reloj en tiempo real; una hora no válida dificulta la lectura de los registros,
-  sobre todo a la hora de distinguir unas sesiones de vuelo de otras. Este aviso
-  puede silenciarse temporalmente mientras se espera a sustituir la pila, pero no
-  debería dejarse desactivado indefinidamente.</li>
-<li><strong>Aviso de conflicto de sensores</strong> — detecta ID de sensores de telemetría en
-  conflicto. Solo conviene desactivarlo si tiene sensores que no cumplen la
-  especificación S.Port.</li>
-<li><strong>Inactividad</strong> — un aviso hablado "Prolonged inactivity" (más una vibración
-  háptica, por si el volumen está bajado) cuando la emisora ha permanecido sin
-  usarse durante más tiempo del configurado: 10 minutos por defecto.</li>
-</ul>
+<p><img alt="" src="../../assets/system-icon-alerts.png" /></p>
+<p><img alt="" src="../../assets/system-alerts.png" /></p>
+<p>Las Alertas del Sistema son:</p>
+<h2 id="modo-silencio">Modo silencio<a class="headerlink" href="#modo-silencio" title="Permanent link">&para;</a></h2>
+<p>Se emitirá una Alerta de Modo Silencio al iniciar la radio cuando la Comprobación de Modo Silencio esté ACTIVADA y el Audio se haya configurado en modo Silencio en System / General / <a href="#Audio mode">Audio mode</a></p>
+<h2 id="voltaje-principal-de-la-radio">Voltaje principal de la radio<a class="headerlink" href="#voltaje-principal-de-la-radio" title="Permanent link">&para;</a></h2>
+<p>Se emitirá una alerta de voz "Batería de radio baja" cuando la alerta de comprobación del voltaje de la batería principal esté activada y la batería de la radio principal esté por debajo del umbral establecido en el parámetro "Bajo voltaje" en Sistema / Batería.</p>
+<h2 id="voltaje-rtc">Voltaje RTC<a class="headerlink" href="#voltaje-rtc" title="Permanent link">&para;</a></h2>
+<p>Se emitirá una alerta de voz que indica que la pila del ‘Batería RTC está baja’ cuando la comprobación del voltaje de la batería del RTC está activada y la pila de botón del RTC está por debajo de 2,5 V, umbral predeterminado de la batería del RTC. Se puede apagar hasta que se haya sustituido la pila del RTC, pero no se debe apagar indefinidamente. La hora real se utiliza en el registro de datos, y una hora no válida causará dificultades en la lectura de los registros, especialmente cuando se quiera distinguir entre las sesiones de vuelo.</p>
+<h2 id="aviso-de-conflicto-de-sensores">Aviso de conflicto de sensores<a class="headerlink" href="#aviso-de-conflicto-de-sensores" title="Permanent link">&para;</a></h2>
+<p>La detección de conflictos entre sensores puede desactivarse, pero sólo debería necesitarse si tiene sensores que no cumplen las especificaciones del S.Port.</p>
+<h2 id="inactividad">Inactividad<a class="headerlink" href="#inactividad" title="Permanent link">&para;</a></h2>
+<p>Cuando la radio no se haya utilizado durante más tiempo que el establecido en "Inactividad", se emitirá una alerta de voz "Inactividad detectada" y también una alerta háptica en caso de que se baje el volumen de la radio. El tiempo predeterminado es de 10 minutos.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

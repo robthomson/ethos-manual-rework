@@ -101,11 +101,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#ethos-benutzerhandbuch" class="md-skip">
-          Zum Inhalt
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -633,26 +628,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Start
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -670,47 +645,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wo-anfangen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wo anfangen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behandelte-sender" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behandelte Sender
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -977,7 +911,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1314,7 +1248,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1903,7 +1837,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2128,7 +2062,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -2999,7 +2933,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3308,7 +3242,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3768,38 +3702,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhaltsverzeichnis
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wo-anfangen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wo anfangen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#behandelte-sender" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behandelte Sender
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -3824,41 +3726,21 @@
   
 
 
-<h1 id="ethos-benutzerhandbuch">Ethos Benutzerhandbuch<a class="headerlink" href="#ethos-benutzerhandbuch" title="Permanent link">&para;</a></h1>
-<p><strong>Ethos</strong> ist das Betriebssystem, das auf den Sendern der Ethos-Familie von FrSky
-(X20S, X20 Pro, X20 Pro AW, X18S und weitere) läuft. Dieses Handbuch behandelt die
-Einrichtung eines Modells von Grund auf, die Konfiguration der senderweiten
-Systemeinstellungen, den Aufbau eigener Telemetrieanzeigen sowie die
-Lua-Skriptumgebung, die auf all dem aufsetzt.</p>
-<h2 id="wo-anfangen">Wo anfangen<a class="headerlink" href="#wo-anfangen" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Neu bei Ethos? Beginnen Sie mit <a href="getting-started/">Erste Schritte</a> —
-  dem Aufbau der Hauptansicht und der Funktionsweise der Navigation, bevor Sie
-  Einstellungen ändern.</li>
-<li>Sie richten einen neuen Sender ein? Siehe <a href="system-setup/">System einrichten</a>
-  für die einmaligen, senderweiten Einstellungen (Hardware-Kalibrierung, Alarme, Akku).</li>
-<li>Sie programmieren ein Modell? <a href="model-setup/">Modell-Einstellung</a> behandelt
-  Mischer, Ausgänge, Flugphasen und alles Weitere, was pro Modell gespeichert wird, und
-  die <a href="tutorials/">Programmier-Beispiele</a> führen Schritt für Schritt durch den
-  Aufbau von Flächenflugzeugen, Nurflüglern und Hubschraubern.</li>
-<li>Sie erstellen einen Telemetriebildschirm? Siehe <a href="displays/">Bildschirme konfigurieren</a>.</li>
-<li>Sie möchten eine bestimmte Aufgabe schnell lösen? Sehen Sie im Abschnitt
-  <a href="how-to/">Gewusst wie</a> nach.</li>
-<li>Sie schreiben oder installieren Lua-Skripte bzw. Widgets? Siehe <a href="lua-scripts/">Lua-Skripte</a>.</li>
-</ul>
-<h2 id="behandelte-sender">Behandelte Sender<a class="headerlink" href="#behandelte-sender" title="Permanent link">&para;</a></h2>
-<p>Dieses Handbuch bezieht sich in erster Linie auf den <strong>X20S</strong>; senderspezifische
-Abweichungen (X20 Pro, X20 Pro AW, X18S) werden in den
-<a href="radio-notes/">Senderhinweisen</a> dort aufgeführt, wo die Bedienoberfläche abweicht.</p>
+  <h1>Start</h1>
+
+<p><img alt="" src="assets/Pictures/1000000100000E42000004E21F97CA76.png" /></p>
+<p>Benutzerhandbuch</p>
+<p>des Betriebssystems ETHOS von FrSky</p>
+<p>Deutsche Anleitung zu Ethos 26.1</p>
+<p>Übersetzung der von Lothar Thole verfassten</p>
+<p>englischen Dokumentation.</p>
+<p>Stand 16.August 2026</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

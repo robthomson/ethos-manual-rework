@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-line-operation" class="md-skip">
+        <a href="#operacion-de-linea-de-comandos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1836,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2314,7 +2314,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -2932,7 +2932,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3246,7 +3246,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3734,7 +3734,7 @@
 
 
   
-    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/en/ethos-suite/command-line-operation.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/es/ethos-suite/command-line-operation.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3742,40 +3742,38 @@
   
 
 
-<h1 id="command-line-operation">Command line operation<a class="headerlink" href="#command-line-operation" title="Permanent link">&para;</a></h1>
-<p>FrSky Suite can be run from a terminal command line.</p>
-<p>The following command line options are available:</p>
+<h1 id="operacion-de-linea-de-comandos">Operación de línea de comandos<a class="headerlink" href="#operacion-de-linea-de-comandos" title="Permanent link">&para;</a></h1>
+<p>FrSky Suite se puede ejecutar desde la línea de comandos del terminal.</p>
+<p>Las siguientes opciones de línea de comandos están disponibles:</p>
 <table>
 <thead>
 <tr>
 <th>--help</th>
-<th>help text for the FrSky Suite command line tool.</th>
+<th>texto de ayuda para la herramienta de línea de comandos FrSky Suite.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>--version</td>
-<td>show the version of the installed FrSky Suite.</td>
+<td>muestra la versión del FrSky Suite instalado.</td>
 </tr>
 <tr>
 <td>--list-radios</td>
-<td>list all the supported FrSky radios.</td>
+<td>lista todas las radios FrSky compatibles.</td>
 </tr>
 <tr>
 <td>--radio-components<br>--radio {RADIO}<br>--radio auto</td>
-<td>list all the components and their paths. <br>If multiple radios are connected to your computer, you can use [--radio {RADIO}] to specify one. <br>Otherwise, you can omit [--radio {RADIO}] or use  [--radio auto] for automatic detection.</td>
+<td>lista todos los componentes y sus rutas. <br>Si hay varias radios conectadas a su computador. Puede usar [--radio {RADIO}] para especificar una. <br>De lo contrario, puede omitir [--radio {RADIO}] o usar [--radio auto] para la detección automática.</td>
 </tr>
 <tr>
 <td COMPONENT="COMPONENT">--get-path</td>
-<td>get the path of the given component. <br>Currently supported components: BITMAPS, SCRIPTS, SCREENSHOTS, AUDIO, I18N.</td>
-</tr>
-<tr>
-<td>--serial start|stop</td>
-<td>enable / disable the serial debug mode.</td>
+<td>obtiene la ruta del componente dado.</td>
 </tr>
 </tbody>
 </table>
-<p>Notice: The Suite app will not start unless it successfully recognizes a command.</p>
+<p>Componentes actualmente soportados: BITMAPS, SCRIPTS, SCREENSHOTS, AUDIO, I18N. |
+| --serial start|stop | activa / desactiva el modo de depuración serie. |</p>
+<p>Aviso: La app de la Suite no se iniciará a menos que reconozca un comando correctamente.</p>
 
 
 

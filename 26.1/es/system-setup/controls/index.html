@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#controles" class="md-skip">
+        <a href="#palancas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -915,7 +915,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1164,17 +1164,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modo-de-palancas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modo de palancas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#orden-de-canales" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1186,10 +1175,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-four-channels-fixed" class="md-nav__link">
+  <a href="#primeros-4-canales-fijos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Primeros cuatro canales fijos
+        Primeros 4 canales fijos
       
     </span>
   </a>
@@ -1332,7 +1321,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1921,7 +1910,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2399,7 +2388,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -3017,7 +3006,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3326,7 +3315,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3796,17 +3785,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modo-de-palancas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modo de palancas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#orden-de-canales" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3818,10 +3796,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-four-channels-fixed" class="md-nav__link">
+  <a href="#primeros-4-canales-fijos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Primeros cuatro canales fijos
+        Primeros 4 canales fijos
       
     </span>
   </a>
@@ -3853,46 +3831,23 @@
   
 
 
-<h1 id="controles">Controles<a class="headerlink" href="#controles" title="Permanent link">&para;</a></h1>
-<p><img alt="Palancas" src="../../assets/system-sticks.png" /></p>
-<p>En el menú aparece como <strong>Sticks</strong>: define el modo de palancas y el orden
-predeterminado de asignación de canales.</p>
-<h2 id="modo-de-palancas">Modo de palancas<a class="headerlink" href="#modo-de-palancas" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Modo 1</strong>: motor y alerones en la palanca derecha, profundidad y
-  dirección en la izquierda.</li>
-<li><strong>Modo 2</strong>: motor y dirección en la palanca izquierda, alerones y
-  profundidad en la derecha.</li>
-</ul>
-<p>Por defecto, las palancas se nombran según los modos estándar del sector,
-aunque se pueden renombrar.</p>
+<h1 id="palancas">Palancas<a class="headerlink" href="#palancas" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/system-icon-sticks.png" /></p>
+<p><img alt="" src="../../assets/system-sticks.png" /></p>
+<p>Selecciona el modo de las palancas que prefiera. El modo 1 tiene el acelerador y el alerón en el mando derecho, y el elevador y el timón en el izquierdo. El modo 2 tiene el acelerador y el timón en la palanca de la izquierda, y el alerón y el elevador en la derecha.</p>
+<p>Por defecto, las palancas se denominan como se indica más arriba para los modos de palanca estándar de la industria. Se les puede cambiar el nombre según se desee.</p>
 <h2 id="orden-de-canales">Orden de canales<a class="headerlink" href="#orden-de-canales" title="Permanent link">&para;</a></h2>
-<p>Define el orden en que las cuatro entradas de las palancas se asignan a los
-canales cuando se crea un modelo nuevo con los asistentes de <a href="../../model-setup/model-select/">Selección de
-modelo</a>. El valor predeterminado es
-<strong>AETR</strong>. Cuando una aeronave tiene más de una superficie del mismo tipo,
-estas se agrupan entre sí, salvo que <a href="#first-four-channels-fixed">Primeros cuatro canales
-fijos</a> esté activado; por ejemplo, con 2
-alerones queda <strong>AAETR</strong>.</p>
-<p><img alt="Orden de canales del receptor" src="../../assets/system-sticks-rx-order.png" /></p>
-<h2 id="first-four-channels-fixed">Primeros cuatro canales fijos<a class="headerlink" href="#first-four-channels-fixed" title="Permanent link">&para;</a></h2>
-<p>Con esta opción activada, los cuatro primeros canales nunca se agrupan. Con
-el orden <strong>AETR</strong> y una aeronave con 2 alerones, 1 profundidad, 1 motor, 1
-dirección y 2 flaps, el asistente genera <strong>AETRAFF</strong> (los canales 1–4 se
-mantienen exactamente como A-E-T-R, y el segundo alerón y los dos flaps se
-añaden a continuación) en lugar de <strong>AAETRFF</strong>. Este es el ajuste que hace
-que el asistente cree modelos adecuados para los receptores estabilizados
-SRx, que requieren esa disposición fija.</p>
-<p><img alt="Orden fijo de 4 canales" src="../../assets/system-sticks-4ch-fixed.png" /></p>
+<p><img alt="" src="../../assets/system-sticks-rx-order.png" /></p>
+<p>El orden de canales define el orden en que las cuatro entradas de las palancas se asignan a los canales de las mezclas cuando se crea un nuevo modelo a través de los asistentes. El orden por defecto es AETR. Si hay más de un canal para cada tipo de superficie, se agruparán a menos que los cuatro primeros canales sean fijos, ver más abajo. Por ejemplo, para 2 alerones el orden de los canales será AAETR.</p>
+<h2 id="primeros-4-canales-fijos">Primeros 4 canales fijos<a class="headerlink" href="#primeros-4-canales-fijos" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/system-sticks-4ch-fixed.png" /></p>
+<p>Cuando opción está activada, la agrupación de canales no se producirá en los cuatro primeros canales. Si el orden de los canales es AETR, entonces el asistente creará un modelo adecuado a los receptores estabilizados SRx. Por ejemplo, un modelo con 2 Alerones, 1 Elevador, 1 Motor, 1 Timón y 2 Flaps se creará con un orden de canales AETRAFF. Si esta opción no está activada, el orden de canales sería AAETRFF.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

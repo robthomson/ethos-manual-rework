@@ -15726,6 +15726,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/displays/adding-additional-screens/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/adding-additional-screens/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/adding-additional-screens/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/displays/additional-displays/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -15741,6 +15758,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/additional-displays/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/additional-displays/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/additional-displays/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/displays/configuring-the-main-screen/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/configuring-the-main-screen/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/configuring-the-main-screen/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/de/displays/custom-widgets/</loc>
@@ -15760,6 +15794,40 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/custom-widgets/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/displays/managing-main-screens/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/managing-main-screens/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/managing-main-screens/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/displays/standard-widgets/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/standard-widgets/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/standard-widgets/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -15775,6 +15843,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/command-line-operation/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/command-line-operation/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/command-line-operation/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/migration/</loc>
@@ -15809,6 +15894,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/operation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/operation/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/web-simulator/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/de/getting-started/</loc>
@@ -15945,6 +16047,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/butterfly-mixer/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/butterfly-mixer/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/butterfly-mixer/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/de/how-to/fbus-setup/</loc>
@@ -16100,6 +16219,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/lua-scripts/basic-widget-layout/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -16253,6 +16389,23 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/flight-modes/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/model-setup/glasses/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/model-setup/logical-switches/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -16353,6 +16506,23 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/outputs/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/outputs/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/outputs/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/model-setup/rearranging-the-model-menu/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/rearranging-the-model-menu/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/rearranging-the-model-menu/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/de/model-setup/rf-system/</loc>
@@ -16491,6 +16661,57 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/"/>
     </url>
     <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/twin-xlite/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/twin-xlite/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/twin-xlite/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x14-x14rs/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x14-x14rs/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x14-x14rs/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x18-x18se/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x18-x18se/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x18-x18se/"/>
+    </url>
+    <url>
         <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x18s/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -16523,6 +16744,91 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-pro-and-aw/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-pro-and-aw/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-pro-and-aw/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro-aw/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-pro-aw/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-pro-aw/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-pro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-pro/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20-x20s/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-x20s/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-x20s/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20r-rs/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20r-rs/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20r-rs/"/>
+    </url>
+    <url>
+        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/xe-xes-xe-rs/</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/xe-xes-xe-rs/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/xe-xes-xe-rs/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/de/reference/</loc>
@@ -16865,23 +17171,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/contributing/translation-status/"/>
     </url>
     <url>
-        <loc>https://manual.rt-rc.com/26.1/de/displays/adding-additional-screens/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/adding-additional-screens/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/adding-additional-screens/"/>
-    </url>
-    <url>
         <loc>https://manual.rt-rc.com/26.1/de/displays/adding-custom-widgets/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -16899,108 +17188,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/adding-custom-widgets/"/>
     </url>
     <url>
-        <loc>https://manual.rt-rc.com/26.1/de/displays/configuring-the-main-screen/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/configuring-the-main-screen/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/configuring-the-main-screen/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/displays/managing-main-screens/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/managing-main-screens/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/managing-main-screens/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/displays/standard-widgets/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/displays/standard-widgets/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/displays/standard-widgets/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/command-line-operation/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/command-line-operation/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/command-line-operation/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/ethos-suite/web-simulator/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/ethos-suite/web-simulator/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/ethos-suite/web-simulator/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/converting-1.6-models/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/converting-1.6-models/"/>
-    </url>
-    <url>
         <loc>https://manual.rt-rc.com/26.1/de/how-to/gear-door-sequencer/</loc>
         <lastmod>2026-08-26</lastmod>
         <changefreq>daily</changefreq>
@@ -17016,193 +17203,6 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/how-to/gear-door-sequencer/"/>
         <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/how-to/gear-door-sequencer/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/how-to/gear-door-sequencer/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/lua-scripts/alternative-display-themes/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/lua-scripts/alternative-display-themes/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/model-setup/glasses/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/glasses/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/glasses/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/model-setup/rearranging-the-model-menu/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/model-setup/rearranging-the-model-menu/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/model-setup/rearranging-the-model-menu/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/twin-xlite/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/twin-xlite/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/twin-xlite/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x14-x14rs/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x14-x14rs/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x14-x14rs/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x18-x18se/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x18-x18se/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x18-x18se/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro-aw/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-pro-aw/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-pro-aw/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-pro/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-pro/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20-x20s/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20-x20s/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20-x20s/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/x20r-rs/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/x20r-rs/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/x20r-rs/"/>
-    </url>
-    <url>
-        <loc>https://manual.rt-rc.com/26.1/de/radio-notes/xe-xes-xe-rs/</loc>
-        <lastmod>2026-08-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://manual.rt-rc.com/26.1/de/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="cs" href="https://manual.rt-rc.com/26.1cs/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://manual.rt-rc.com/26.1radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="https://manual.rt-rc.com/26.1es/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://manual.rt-rc.com/26.1fr/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="he" href="https://manual.rt-rc.com/26.1he/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://manual.rt-rc.com/26.1it/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="nb" href="https://manual.rt-rc.com/26.1nb/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="nl" href="https://manual.rt-rc.com/26.1nl/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://manual.rt-rc.com/26.1pl/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="pt-BR" href="https://manual.rt-rc.com/26.1pt-BR/radio-notes/xe-xes-xe-rs/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://manual.rt-rc.com/26.1zh/radio-notes/xe-xes-xe-rs/"/>
     </url>
     <url>
         <loc>https://manual.rt-rc.com/26.1/fr/</loc>

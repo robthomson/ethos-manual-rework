@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1252,7 +1252,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1417,10 +1417,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#anatomy-of-a-mix" class="md-nav__link">
+  <a href="#ubersicht-uber-den-kontrollpfad-auf-hoher-ebene" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aufbau eines Mischers
+        Übersicht über den Kontrollpfad auf hoher Ebene
       
     </span>
   </a>
@@ -1428,35 +1428,1588 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#der-gas-mischer" class="md-nav__link">
+  <a href="#querruder-hohenruder-seitenrudermischer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Der Gas-Mischer
+        Querruder-, Höhenruder-, Seitenrudermischer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Querruder-, Höhenruder-, Seitenrudermischer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mix-libraries" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#aktiver-zustand" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mischerbibliotheken
+        Aktiver Zustand
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#per-channel-view" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kanalweise Ansicht
+        Flugphasen
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gewichtung-anteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gewichtung / Anteile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differenzierung-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differenzierung (Diff.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trim
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzahl-der-kanale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anzahl der Kanäle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-links-ausgang-rechts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang links, Ausgang rechts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gasmischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gasmischer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gasmischer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eingang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eingang
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eingang">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eingabeoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eingabeoptionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trim
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leerlauf-trimmung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerlauf-Trimmung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-aus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor AUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motor AUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktive-bedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktive Bedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sr-flipflop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SR FlipFlop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger-Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leerlauf-wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerlauf-Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gasstellung-halten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gasstellung halten
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gasstellung halten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktiviert-durch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiviert durch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flugphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzahl-der-kanale_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anzahl der Kanäle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-ansicht-pro-kanal-gruppierung-von-mischern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option „Ansicht pro Kanal“ (Gruppierung von Mischern)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option „Ansicht pro Kanal“ (Gruppierung von Mischern)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verwaltung-der-anzeige-ansicht-pro-kanal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwaltung der Anzeige 'Ansicht pro Kanal'
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verwaltung der Anzeige &#39;Ansicht pro Kanal&#39;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-wechsel-zwischen-den-kanalen-in-ansicht-pro-kanal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Wechsel zwischen den Kanälen in 'Ansicht pro Kanal'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-zuruckschalten-auf-tabellenansicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Zurückschalten auf 'Tabellenansicht'
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mischer-bibliotheken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mischer-Bibliotheken
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mischer-Bibliotheken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motorflugzeug-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motorflugzeug-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motorflugzeug-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mischer-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mischer hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Freier Mischer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktiviert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aktiviert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flugphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellenkategorien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellenkategorien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moglichkeit-eine-variable-in-der-quellenauswahl-hinzuzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Möglichkeit, eine Variable in der „Quellenauswahl“ hinzuzufügen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelle-als-fester-wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quelle als fester Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Addition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplizieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        multiplizieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ersetzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ersetzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sperren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sperren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktion-gewichtung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktion Gewichtung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-fur-mehrere-expo-raten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel für mehrere Expo-'Raten'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differential (Diff.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinzufugen-einer-funktion-zu-einem-freien-mischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinzufügen einer Funktion zu einem Freien Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langsam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langsam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimmung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trimmung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neuordnung-von-freien-mischeraktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neuordnung von freien Mischeraktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzahl-der-kanale_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anzahl der Kanäle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invertiert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        invertiert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgänge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es-kann-ein-beliebiger-kanal-ausgewahlt-werden-um-den-ausgang-dieses-mischers-zu-belegen-wenn-die-anzahl-der-kanale-oben-groer-als-eins-ist-muss-fur-jeden-ausgang-ein-kanal-konfiguriert-werden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Es kann ein beliebiger Kanal ausgewählt werden, um den Ausgang dieses Mischers zu belegen. Wenn die Anzahl der Kanäle oben größer als eins ist, muss für jeden Ausgang ein Kanal konfiguriert werden.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortsetzung-der-flugzeug-mischerbibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fortsetzung der Flugzeug-Mischerbibliothek
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-wolbklappe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Wölbklappe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-seitenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bremsklappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bremsklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#butterfly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Butterfly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappe-zu-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappe zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hohenruder-zu-wolbklappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Höhenruder zu Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-querruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Querruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snap Roll
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-seitenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testmischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testmischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequencer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequencer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktiviert-durch_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiviert durch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flugphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schleifenmodus-dauerbetrieb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schleifenmodus (Dauerbetrieb)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorwartsbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorwärtsbedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anfang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anfang
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckwartsbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rückwärtsbedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anfang_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anfang
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pausenbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pausenbedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laufzeit-vorwarts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laufzeit vorwärts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laufzeit-ruckwarts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laufzeit rückwärts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-1-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang 1 Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurvenoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurvenoptionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eine-ruckwartskurve-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eine Rückwärtskurve hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorwartskurve-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorwärtskurve bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckwartskurve-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rückwärtskurve bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nur-eine-kurve-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nur eine Kurve verwenden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-entfernen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang entfernen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neuen-ausgang-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neuen Ausgang hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segelflugzeug-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segelflugzeug-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segelflugzeug-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitte-beachten-sie-die-detaillierte-beschreibung-der-quer-hohen-seitenruder-mischer-oben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitte beachten Sie die detaillierte Beschreibung der Quer-Höhen-Seitenruder-Mischer oben.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klappen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-wolbklappe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Wölbklappe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-seitenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klappen-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klappen-Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#butterfly_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Butterfly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappen-zum-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappen zum Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hohenruder-zu-wolbklappen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Höhenruder zu Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-querruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Querruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-hohenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-hohenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-seitenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servotester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servotester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heli-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heli-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heli-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kreisel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kreisel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitch-zu-heck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch zu Heck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servotester_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servotester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multicopter-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multicopter-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multicopter-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bank_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servotester_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servotester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1932,7 +3485,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2157,7 +3710,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -3028,7 +4581,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3337,7 +4890,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3807,10 +5360,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#anatomy-of-a-mix" class="md-nav__link">
+  <a href="#ubersicht-uber-den-kontrollpfad-auf-hoher-ebene" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aufbau eines Mischers
+        Übersicht über den Kontrollpfad auf hoher Ebene
       
     </span>
   </a>
@@ -3818,35 +5371,1588 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#der-gas-mischer" class="md-nav__link">
+  <a href="#querruder-hohenruder-seitenrudermischer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Der Gas-Mischer
+        Querruder-, Höhenruder-, Seitenrudermischer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Querruder-, Höhenruder-, Seitenrudermischer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mix-libraries" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#aktiver-zustand" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mischerbibliotheken
+        Aktiver Zustand
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#per-channel-view" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kanalweise Ansicht
+        Flugphasen
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gewichtung-anteile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gewichtung / Anteile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differenzierung-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differenzierung (Diff.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trim
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzahl-der-kanale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anzahl der Kanäle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-links-ausgang-rechts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang links, Ausgang rechts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gasmischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gasmischer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gasmischer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eingang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eingang
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eingang">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eingabeoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eingabeoptionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trim
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leerlauf-trimmung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerlauf-Trimmung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-aus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor AUS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motor AUS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktive-bedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktive Bedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sr-flipflop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SR FlipFlop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger-Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leerlauf-wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leerlauf-Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gasstellung-halten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gasstellung halten
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gasstellung halten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aktiviert-durch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiviert durch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flugphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzahl-der-kanale_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anzahl der Kanäle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-ansicht-pro-kanal-gruppierung-von-mischern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option „Ansicht pro Kanal“ (Gruppierung von Mischern)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option „Ansicht pro Kanal“ (Gruppierung von Mischern)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verwaltung-der-anzeige-ansicht-pro-kanal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwaltung der Anzeige 'Ansicht pro Kanal'
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verwaltung der Anzeige &#39;Ansicht pro Kanal&#39;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-wechsel-zwischen-den-kanalen-in-ansicht-pro-kanal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Wechsel zwischen den Kanälen in 'Ansicht pro Kanal'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-zuruckschalten-auf-tabellenansicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Zurückschalten auf 'Tabellenansicht'
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mischer-bibliotheken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mischer-Bibliotheken
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mischer-Bibliotheken">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motorflugzeug-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motorflugzeug-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motorflugzeug-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mischer-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mischer hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Freier Mischer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktiviert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aktiviert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flugphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quellenkategorien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellenkategorien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moglichkeit-eine-variable-in-der-quellenauswahl-hinzuzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Möglichkeit, eine Variable in der „Quellenauswahl“ hinzuzufügen.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelle-als-fester-wert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quelle als fester Wert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Addition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplizieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        multiplizieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ersetzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ersetzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sperren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sperren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktion-gewichtung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktion Gewichtung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-fur-mehrere-expo-raten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel für mehrere Expo-'Raten'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differential (Diff.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hinzufugen-einer-funktion-zu-einem-freien-mischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinzufügen einer Funktion zu einem Freien Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langsam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langsam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trimmung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trimmung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neuordnung-von-freien-mischeraktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neuordnung von freien Mischeraktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzahl-der-kanale_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anzahl der Kanäle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invertiert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        invertiert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgänge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es-kann-ein-beliebiger-kanal-ausgewahlt-werden-um-den-ausgang-dieses-mischers-zu-belegen-wenn-die-anzahl-der-kanale-oben-groer-als-eins-ist-muss-fur-jeden-ausgang-ein-kanal-konfiguriert-werden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Es kann ein beliebiger Kanal ausgewählt werden, um den Ausgang dieses Mischers zu belegen. Wenn die Anzahl der Kanäle oben größer als eins ist, muss für jeden Ausgang ein Kanal konfiguriert werden.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortsetzung-der-flugzeug-mischerbibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fortsetzung der Flugzeug-Mischerbibliothek
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-wolbklappe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Wölbklappe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-seitenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bremsklappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bremsklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#butterfly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Butterfly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappe-zu-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappe zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hohenruder-zu-wolbklappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Höhenruder zu Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-querruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Querruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snap Roll
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-seitenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testmischer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testmischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequencer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequencer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequencer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aktiviert-durch_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aktiviert durch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flugphasen_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flugphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schleifenmodus-dauerbetrieb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schleifenmodus (Dauerbetrieb)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorwartsbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorwärtsbedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anfang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anfang
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckwartsbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rückwärtsbedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anfang_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anfang
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pausenbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pausenbedingung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laufzeit-vorwarts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laufzeit vorwärts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laufzeit-ruckwarts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laufzeit rückwärts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-1-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang 1 Menü
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurvenoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurvenoptionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurve-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurve bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eine-ruckwartskurve-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eine Rückwärtskurve hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vorwartskurve-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorwärtskurve bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruckwartskurve-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rückwärtskurve bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nur-eine-kurve-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nur eine Kurve verwenden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ausgang-entfernen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausgang entfernen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neuen-ausgang-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neuen Ausgang hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segelflugzeug-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segelflugzeug-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segelflugzeug-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitte-beachten-sie-die-detaillierte-beschreibung-der-quer-hohen-seitenruder-mischer-oben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitte beachten Sie die detaillierte Beschreibung der Quer-Höhen-Seitenruder-Mischer oben.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klappen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-wolbklappe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Wölbklappe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-zu-seitenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#klappen-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Klappen-Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#butterfly_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Butterfly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wolbklappen-zum-hohenruder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wölbklappen zum Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hohenruder-zu-wolbklappen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Höhenruder zu Wölbklappen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-querruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Querruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seitenruder-zu-hohenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seitenruder zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-hohenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Höhenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-zu-seitenruder_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas zu Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servotester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servotester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heli-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heli-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heli-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kreisel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kreisel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pitch-zu-heck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitch zu Heck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servotester_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servotester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multicopter-bibliothek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multicopter-Bibliothek
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multicopter-Bibliothek">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#freier-mischer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Freier Mischer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querruder-hohenruder-seitenruder_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Querruder, Höhenruder, Seitenruder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bank_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servotester_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servotester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3876,144 +6982,507 @@
 
 
 <h1 id="mischer">Mischer<a class="headerlink" href="#mischer" title="Permanent link">&para;</a></h1>
-<p><img alt="Mischer-Symbol" src="../../assets/model-icon-mixes.png" /></p>
-<p>Mischer sind der Kern der Modellprogrammierung in Ethos – hier werden Eingänge
-(Knüppel, Schalter, Sensoren, alles, was eine <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
-erreichen kann) auf Ausgangskanäle geleitet, geformt und kombiniert. Pro Modell
-können bis zu 120 Mischer definiert werden.</p>
-<p><img alt="Mischertabelle" src="../../assets/model-mixes.png" /></p>
-<p>Wurde ein Modell mit dem Assistenten der <strong>Modellauswahl</strong> erstellt, sind die
-grundlegenden Mischer (Querruder, Höhenruder, Gas, Seitenruder und was die
-Zelle sonst noch benötigt) hier bereits angelegt. Wenn Sie einen Mischer
-auswählen und <code>ENT</code> drücken, öffnet sich ein Kontextmenü, um ihn zu bearbeiten,
-einen neuen Mischer hinzuzufügen, in die <a href="#per-channel-view">kanalweise Ansicht</a>
-zu wechseln, ihn zu verschieben, zu klonen oder zu löschen. Inaktive Mischer
-werden ausgegraut dargestellt, und vor dem Löschen wird stets eine Bestätigung
-verlangt.</p>
-<h2 id="anatomy-of-a-mix">Aufbau eines Mischers<a class="headerlink" href="#anatomy-of-a-mix" title="Permanent link">&para;</a></h2>
-<p>Jeder Mischer verfügt über denselben Satz an Feldern, unabhängig davon, aus
-welcher Kategorie er stammt. Der <strong>Querruder</strong>-Mischer dient hier als
-repräsentatives Beispiel – Höhenruder- und Seitenruder-Mischer sind identisch
-aufgebaut.</p>
-<p><img alt="Querruder-Mischer" src="../../assets/model-mixes-ail-edit.png" /></p>
-<p><img alt="Querruder-Mischer-Editor" src="../../assets/model-mixes-ail.png" /></p>
-<p><strong>Name</strong> – standardmäßig der Mischertyp; es kann ein beschreibender Name
-eingegeben werden.</p>
-<p><strong>aktiviert</strong> – die standardmäßig aktive Bedingung ist <em>Immer an</em>. Sie kann
-durch die Auswahl von Schalter- oder Tastenpositionen, Funktionsschaltern,
-Logikschaltern, Flugmodi, einem Systemereignis wie Gasabschaltung oder -haltung
-oder Trimmpositionen bedingt werden; der Mischer wirkt dann nur, solange die
-Bedingung erfüllt ist.</p>
-<p><strong>Flugphasen</strong> – wenn Flugmodi definiert wurden, kann der Mischer zusätzlich von
-einem oder mehreren Flugmodi abhängig gemacht werden.</p>
-<p><strong>Kurve</strong> – standardmäßig steht eine <strong>Expo</strong>-Kurve zur Verfügung (0 = linear;
-ein positiver Wert macht die Reaktion um 0 herum weicher, ein negativer Wert
-macht sie schärfer):</p>
-<p><img alt="Expo-Kurve" src="../../assets/model-mixes-ail-expo.png" /></p>
-<p>Anstelle der Expo-Kurve kann auch jede zuvor unter <a href="../curves/">Kurven</a>
-definierte Kurve ausgewählt werden. Sie können bis zu 6 Kurven mit jeweils einer
-Bedingung festlegen – wenn mehrere Bedingungen zutreffen, hat die Kurve mit der
-höheren Position in der Liste Vorrang. Kurven werden <strong>vor</strong> den Gewichtungen
-angewendet.</p>
-<p><strong>Gewichtung / Anteile</strong> – eine oder mehrere Gewichtungszeilen, die jeweils
-optional durch einen Schalter, einen Funktionsschalter, einen Logikschalter,
-eine Trimmposition oder einen Flugmodus bedingt sind. Die erste Zeile ist der
-Standardwert und immer dann aktiv, wenn die Bedingung keiner anderen Zeile
-zutrifft:</p>
-<p><img alt="Querruder-Gewichtungen" src="../../assets/model-mixes-ail-weight.png" /></p>
-<p>Statt eines festen Prozentwerts kann eine Gewichtung auch von einer
-<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">Quelle</a>
-gesteuert werden – beispielsweise von einem Poti, um die Gewichtung im Flug
-anzupassen:</p>
-<p><img alt="Von einer Quelle gesteuerte Gewichtung" src="../../assets/model-mixes-ail-diff.png" /></p>
-<p><strong>Differenzierung</strong> (-100 bis 100, Standardwert 0) – ergibt in der einen
-Richtung mehr Hub als in der anderen. Bei Querrudern ist dies der klassische
-Kniff, mehr Aufwärtshub als Abwärtshub zu geben, um das negative Wendemoment zu
-verringern. Wird erst angezeigt, wenn der Mischer mehr als einen Ausgangskanal
-besitzt; sinnvoll ist die Differenzierung nur bei einer Ausgangskonfiguration im
-Stil eines V-Leitwerks oder zweier getrennter Querruder.</p>
-<p><strong>Anzahl der Kanäle / Ausgänge</strong> – die Kanalanzahl legt fest, wie viele
-Ausgangskanäle dieser Mischer ansteuert und welchen physischen Ausgängen sie
-zugewiesen werden:</p>
-<p><img alt="Kanalanzahl" src="../../assets/model-mixes-ail-ch-count.png" /></p>
-<p>Ein langer Druck auf <code>ENT</code> bei einem Ausgangskanal an anderer Stelle in der
-Oberfläche (z. B. unter <a href="../outputs/">Ausgänge</a>) springt direkt auf diese Seite
-zurück.</p>
-<h2 id="der-gas-mischer">Der Gas-Mischer<a class="headerlink" href="#der-gas-mischer" title="Permanent link">&para;</a></h2>
-<p>Der Gas-Mischer entspricht einem Querruder-/Höhenruder-/Seitenruder-Mischer
-zuzüglich motorspezifischer Sicherheitsoptionen.</p>
-<p><img alt="Gas-Mischer" src="../../assets/model-mixes-thr.png" /></p>
-<p><strong>Eingang</strong> – die Gasquelle, normalerweise der Gasknüppel, austauschbar gegen
-ein Poti, einen Schieberegler, einen Schalter, einen Trimmtaster, einen Kanal,
-eine Kreiselachse, einen Trainerkanal, einen Zeitgeber oder jede andere Quelle.</p>
-<p><strong>Leerlauftrimmung</strong> – erlaubt bei Verbrennungsmotoren, die Leerlaufdrehzahl
-über eine eigene Trimmung einzustellen, ohne die Vollgasstellung zu verändern.
-Bei aktivierter Leerlauftrimmung liegt der Gaskanal bei -75 %, wenn der Knüppel
-im unteren Leerlauf steht; die Gastrimmung stellt den Leerlauf dann zwischen
--100 % und -50 % ein:</p>
-<p><img alt="Menü Leerlauftrimmung" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
-<p><img alt="Leerlauftrimmung in unterer Position" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
-<p><strong>Gasabschaltung</strong> – eine harte Sicherheitsverriegelung: Der Kanal wird erst
-aktiv, nachdem der Gasknüppel den Leerlauf durchlaufen hat, sodass ein
-versehentliches Umlegen eines Schalters den Motor nicht aus einer
-Vollgasstellung heraus anlaufen lassen kann:</p>
-<p><img alt="Gasabschaltung" src="../../assets/model-mixes-thr-cut.png" /></p>
-<p><strong>Gashaltung</strong> – hält den Kanal unabhängig von der Knüppelstellung auf einem
-festen Wert, allerdings ohne die Sicherheitsverriegelung der Gasabschaltung:</p>
-<p><img alt="Gashaltung" src="../../assets/model-mixes-thr-hold.png" /></p>
-<p>Auch der Gas-Mischer verfügt über eine eigene Kanalanzahl, genau wie jeder
-andere Mischer:</p>
-<p><img alt="Kanalanzahl Gas" src="../../assets/model-mixes-thr-ch-count.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Gas-Verriegelung</p>
-<p>Ethos verlangt, dass der Eingang des Gas-Mischers unabhängig von den
-Einstellungen für Gasabschaltung bzw. -haltung einmal -100 % durchläuft,
-bevor scharfgeschaltet wird – ein über den Modellauswahl-Assistenten
-erstelltes Modell berücksichtigt dies bereits, von Hand erstellte
-Gas-Mischer sollten es ebenfalls tun.</p>
-</div>
-<h2 id="mix-libraries">Mischerbibliotheken<a class="headerlink" href="#mix-libraries" title="Permanent link">&para;</a></h2>
-<p>Die Bibliothek vordefinierter Mischer im Dialog <strong>Mischer hinzufügen</strong> richtet
-sich nach der Modellkategorie, die bei der Modellerstellung gewählt wurde –
-Flächenmodell, Segler, Hubschrauber und Multicopter bieten jeweils einen
-eigenen Satz:</p>
-<p><img alt="Mischerbibliothek Flächenmodell" src="../../assets/model-mixes-library-airplane.png" /></p>
-<p><img alt="Mischerbibliothek Segler" src="../../assets/model-mixes-library-glider.png" /></p>
-<p><img alt="Mischerbibliothek Hubschrauber" src="../../assets/model-mixes-library-heli.png" /></p>
-<p><img alt="Mischerbibliothek Multicopter" src="../../assets/model-mixes-library-multirotor.png" /></p>
-<p>Jede Bibliothek enthält außerdem den <strong>Freien Mischer</strong> – einen
-Allzweck-Mischertyp ohne vorgegebenen Ein-/Ausgang, flexibler als die
-spezialisierten Einträge, aber mit mehr Einrichtungsaufwand verbunden, um
-dasselbe Ergebnis zu erzielen.</p>
-<h2 id="per-channel-view">Kanalweise Ansicht<a class="headerlink" href="#per-channel-view" title="Permanent link">&para;</a></h2>
-<p>Sind viele Mischer auf denselben Ausgang gelegt, lässt sich ihre Gesamtwirkung
-in der einfachen Tabelle oben nur schwer erkennen. Wählen Sie einen Mischer aus
-und rufen Sie <strong>Nach Kanal anzeigen</strong> auf, so werden stattdessen alle Mischer,
-die einen Ausgang beeinflussen, gemeinsam gruppiert:</p>
-<p><img alt="Zur Kanalansicht wechseln" src="../../assets/model-mixes-chview-select.png" /></p>
-<p><img alt="Eingeklappter Kanal" src="../../assets/model-mixes-chview-collapsed.png" /></p>
-<p><img alt="Höhenruderkanal aufgeklappt" src="../../assets/model-mixes-chview-elevator.png" /></p>
-<p>Das Aufklappen der Übersichtszeile eines Kanals zeigt jeden daran beteiligten
-Mischer mit seiner aktuellen numerischen und grafischen Ausgabe – nützlich, um
-genau zu prüfen, wie viel ein zusätzlicher Mischer (z. B. eine
-Klappen-Höhenruder-Kompensation) über den primären Knüppeleingang hinaus
-beisteuert:</p>
-<p><img alt="Detail der Höhenruder-Kanalansicht" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
-<p><img alt="Höhenruderkanal, Mischer hervorgehoben" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
-<p>Wählen Sie einen Untermischer anstelle der Übersichtszeile aus, so öffnet sich
-dasselbe Kontextmenü wie in der Tabelle (Bearbeiten, zurück zur Tabellenansicht
-wechseln, Löschen):</p>
-<p><img alt="Tabellenansicht aus der Kanalansicht wählen" src="../../assets/model-mixes-chview-table-view-select.png" /></p>
-<p><img alt="Zurück zur Tabellenansicht" src="../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
+<p><img alt="" src="../../assets/model-icon-mixes.png" /></p>
+<p>Die Funktion Mischer ist das Herzstück des Senders. Hier werden die Steuerfunktionen des Modells konfiguriert. Die Mischer-Sektion ermöglicht es, jede der vielen Eingangsquellen nach Wunsch zu mischen oder zu kombinieren und einem der Ausgangskanäle zuzuordnen.</p>
+<h2 id="ubersicht-uber-den-kontrollpfad-auf-hoher-ebene">Übersicht über den Kontrollpfad auf hoher Ebene<a class="headerlink" href="#ubersicht-uber-den-kontrollpfad-auf-hoher-ebene" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/control_flow.png" /></p>
+<p>Der Steuerpfad beginnt bei den Hardware-Steuerungen, durchläuft die Programmierlogik in den Mischern und wird schließlich im Menü Kanäle an die mechanischen Eigenschaften des Modells angepasst. Dieser Ansatz geht von einem physikalischen Modell zu einem logischen Modell und dann wieder zurück zu einem physikalischen Modell.</p>
+<p>Im Abschnitt Mischer legen wir fest, was unsere verschiedenen Steuerelemente tun sollen. Wir können die Eingänge mit Hilfe von Gewichten, Offsets, Kurven, Differenzierungen oder Langsamkeit transformieren und sie dann nach Bedarf mischen oder kombinieren, wie es erforderlich ist</p>
+<p>Das Menü Kanäle ermöglicht dann die Anpassung dieser rein logischen Ausgänge an die mechanischen Eigenschaften des Modells. Er ist die Schnittstelle zwischen der „Logik“ des Setups und der realen Welt mit Servos, Anlenkungen und Steuerflächen sowie Motoren und Messwertgebern.</p>
+<p>Ethos verfügt über 120 Mischer für die Programmierung Ihres Modells und 64 Ausgangskanäle. Normalerweise werden die Kanäle mit den niedrigsten Nummern den Servos zugewiesen, da die Kanalnummern direkt den Kanälen im Empfänger zugeordnet sind. Das interne HF-Modul (Radio Frequency) verfügt über bis zu 24 Ausgangskanäle.</p>
+<p>Die oberen Kanäle können bei fortgeschrittener Programmierung als „virtuelle Kanäle“ oder bei Verwendung mehrerer HF-Module (intern + extern) und SBus als echte Kanäle verwendet werden. Die Kanalreihenfolge ist eine Frage der persönlichen Vorliebe oder Konvention, oder sie kann vom Empfänger vorgegeben werden. In unserem Beispiel verwenden wir QR HR Gas SR (Querruder, Höhen, Gas, Seitenruder).</p>
+<p>Die Quelle oder der Eingang für einen Mischer kann aus analogen Eingängen wie den Knüppeln, Potis und Schiebereglern, den Kippschaltern oder Tastern, beliebigen definierten Logikschaltern, den Trimmschaltern, beliebigen definierten Kanälen, einer Kreiselachse, einem Trainerkanal, eine Stoppuhr, einem Telemetriesensor, einem Systemwert wie der Hauptfunkspannung oder der RTC-Batteriespannung oder einem „speziellen“ Wert wie „Minimum“, „Maximum“ oder 0 gewählt werden.</p>
+<p>In diesem Abschnitt kann die Quelle auch konditioniert werden, indem Gewichte/Raten und Offsets definiert und Kurven (z. B. Expo) hinzugefügt werden. Der Mischer kann einem Schalter und/oder Flugphase unterworfen werden, und es kann eine Langsam-Funktion hinzugefügt werden. (Beachten Sie, dass Verzögerungen in den Logikschaltern implementiert sind, da sie mit Schaltern verbunden sind).</p>
+<p>Der Mischer-Editor enthält kontextbezogene Hilfeinformationen, die sich dynamisch ändern, wenn die Mischer-Optionen berührt werden. In der ersten Zeile wird die Art des verwendeten Mischers angezeigt, z. B. 'Querruder', 'Höhenruder' oder 'Freier Mischer usw.</p>
+<p>Es können bis zu 120 Mischer definiert werden.</p>
+<p><img alt="" src="../../assets/model-mixes.png" /></p>
+<p>Wenn Ihr Modell mit einem der Assistenten zur Modellerstellung in der Funktion „Modellauswahl“ im Systemmenü erstellt wurde, werden die Basismischer angezeigt, wenn Sie auf „Mischer“ tippen.</p>
+<p>Darüber hinaus können die gängigsten vordefinierten Mischer sowie frei konfigurierbare Mischer hinzugefügt werden. Im Hauptbildschirm für Mischer (siehe oben) können neue Mischer hinzugefügt werden, indem Sie auf das Symbol „+“ neben den Spaltenüberschriften tippen.</p>
+<p>Für jede Steuerung gibt es einen Mischer und eine grafische Anzeige für ihn.</p>
+<p><img alt="" src="../../assets/model-mixes-ail-edit.png" /></p>
+<p>Um einen Mischer zu bearbeiten, tippen Sie auf den Mischer und  erneut, um das Popup-Menü aufzurufen, und wählen Sie dann „bearbeiten“. Weitere Optionen sind das Hinzufügen eines neuen Mischers, das Umschalten auf <a href="./">die Gruppierungsansicht „Ansicht pro Kanal“</a> (in einem Abschnitt weiter unten beschrieben), das Verschieben des Mischers nach oben oder unten, das Klonen eines Mischers oder dessen Löschen.</p>
+<p>Bitte beachten Sie, dass inaktive Mischer ausgegraut dargestellt werden, um die Fehlersuche zu erleichtern.</p>
+<p>Der Sender bittet um eine Bestätigung, bevor es einen Mix löscht, für den Fall, dass eine versehentliche Auswahl getroffen wurde.</p>
+<h2 id="querruder-hohenruder-seitenrudermischer">Querruder-, Höhenruder-, Seitenrudermischer<a class="headerlink" href="#querruder-hohenruder-seitenrudermischer" title="Permanent link">&para;</a></h2>
+<p>Wir werden die Querruder als Beispiel verwenden, aber die Mischer für Höhen- und Seitenruder sind sehr ähnlich.</p>
+<p><img alt="" src="../../assets/model-mixes-ail.png" /></p>
+<h3 id="name">Name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
+<p>Querruder wurde als Standardname eingegeben, kann aber geändert werden.</p>
+<h3 id="aktiver-zustand">Aktiver Zustand<a class="headerlink" href="#aktiver-zustand" title="Permanent link">&para;</a></h3>
+<p>Die aktive Standardbedingung ist „Immer an“, was für Querruder geeignet ist. Die Bedingung kann durch die Auswahl von Schalter- oder Tastenpositionen, Funktionsschaltern, Flugphasen, Logikschaltern, einem Systemereignis wie Gasabschaltung oder -haltung oder Trimmpositionen festgelegt werden.</p>
+<h3 id="flugphasen">Flugphasen<a class="headerlink" href="#flugphasen" title="Permanent link">&para;</a></h3>
+<p>Wenn im Abschnitt „Flugphasen“ Flugphasen definiert wurden, wird dieser Parameter verfügbar. Der Mischer kann dann von einem oder mehreren Flugphasen abhängig gemacht werden. Klicken Sie auf „Bearbeiten“ und markieren Sie die Kästchen für die Flugphase, in denen diese Mischung aktiv sein muss.</p>
+<h3 id="kurve">Kurve<a class="headerlink" href="#kurve" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-ail-expo.png" /></p>
+<p>Eine Standardkurvenoption ist Expo, die standardmäßig einen Wert von 0 hat, was bedeutet, dass die Reaktion linear ist (d. h. keine Kurve). Ein positiver Wert macht die Reaktion um 0 herum weicher, während ein negativer Wert die Reaktion schärfer macht. Das obige Beispiel zeigt einen Expo-Wert von 30 %.</p>
+<p>Es kann auch eine beliebige zuvor definierte Kurve ausgewählt werden. Der Mischerausgang wird dann durch diese Kurve verändert. Alternativ kann auch eine neue Kurve hinzugefügt werden.</p>
+<p>Sie können bis zu 6 Kurven festlegen, jede mit einer Bedingung. Wenn mehr als eine Bedingung erfüllt ist, hat die in der Liste weiter obenstehende Kurve Vorrang. Beachten Sie, dass die Kurve vor der Gewichtung angewendet wird.</p>
+<h3 id="gewichtung-anteile">Gewichtung / Anteile<a class="headerlink" href="#gewichtung-anteile" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-ail-weight.png" /></p>
+<p>Es können mehrere Gewichtungen oder Anteile definiert werden, die von einer Schalterstellung, einem Funktionsschalter, einem Logikschalter, einer Trimmposition oder einer Flugphase abhängen. Für jede Gewichtung wird eine Zeile hinzugefügt. Die Standardgewichtung (d. h. die erste Zeile) ist aktiv, wenn keiner der anderen Gewichtungen aktiv ist. Auf der linken Seite der definierten Gewichtung befindet sich ein kleines Kreuz innerhalb eines Pfeils, mit dem Sie eine Zeile löschen können. Im obigen Beispiel wurden am Schalter SB drei Gewichtungen eingerichtet.</p>
+<h3 id="differenzierung-diff">Differenzierung (Diff.)<a class="headerlink" href="#differenzierung-diff" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-ail-diff.png" /></p>
+<p>Die Differenzierung ermöglicht unterschiedliche Wege für beide Laufrichtungen der Ruder. Zum Beispiel wird beim Querruder in der Regel ein größerer Querruderausschlag nach oben als nach unten verwendet, um ungünstiges Gieren zu reduzieren und die Kurvenflug-/Handling Eigenschaften zu verbessern. Ein positiver Wert führt dazu, dass die Querruder einen geringeren Abwärtsweg haben, wie in der obigen Grafik zu sehen ist. (Voreinstellung = 0. Bereich -100 bis +100).</p>
+<p>In diesem Beispiel wurde mit einem langen Druck auf die Eingabetaste das Dialogfeld zur Auswahl einer Quelle anstelle des voreingestellten festen Werts aufgerufen, in diesem Fall wurde „Drehg. re.“ ausgewählt. Das Diagramm auf der rechten Seite zeigt, dass der Drehgeber auf 50% steht, dies wäre also das Gewicht für die Querruderraten, aber im Flug einstellbar.</p>
+<p>Eine Höhenruderdifferenzierung kann für Flugzeuge verwendet werden, die weniger Höhenruder nach unten als nach oben benötigen, typischerweise im Schnellflug.</p>
+<p>Beachten Sie, dass der Differential-Parameter nur vorhanden ist, wenn Sie mehr als einen Ausgangskanal haben.</p>
+<p>Der Seitenrudermischer hat nur dann den Parameter Differential, wenn das Modell für V-Leitwerk konfiguriert ist.</p>
+<h3 id="trim">Trim<a class="headerlink" href="#trim" title="Permanent link">&para;</a></h3>
+<p>Bietet die Möglichkeit, den zugehörigen Trimmer eines Mischers zu trennen, ohne ihn zu deaktivieren, damit er anderweitig verwendet werden kann.</p>
+<h3 id="anzahl-der-kanale">Anzahl der Kanäle<a class="headerlink" href="#anzahl-der-kanale" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-ail-ch-count.png" /></p>
+<p>Die Kanalanzahl legt fest, wie viele Ausgangskanäle zugewiesen werden. In diesem Beispiel wurden im Assistenten zur Modellerstellung zwei Querruder konfiguriert.</p>
+<h3 id="ausgang-links-ausgang-rechts">Ausgang links, Ausgang rechts<a class="headerlink" href="#ausgang-links-ausgang-rechts" title="Permanent link">&para;</a></h3>
+<p>Der Modellerstellungsassistent weist den Ausgang links dem Kanal CH1 (Querruder links) zu, da die Standardkanalreihenfolge im Menü „System – Steuerknüppel“ auf AETR (Querruder, Höhenruder, Gas, Seitenruder) eingestellt und „Erste vier Kanäle fixiert“ aktiviert war. Anschließend weist der Wizzard den Ausgang rechts dem Kanal CH5 (Querruder rechts) zu.</p>
+<p>Die Standardeinstellung kann bei Bedarf geändert werden. Dabei ist jedoch darauf zu achten, ob und welche Auswirkungen eine Änderung haben könnte. Wenn die Option „Erste vier Kanäle fixiert“ deaktiviert ist, gruppiert der Assistent ähnliche Kanäle, z. B. AAETR statt AETRA.</p>
+<p>Beachten Sie, dass Sie mit [ENT_lang] auf dem ausgewählten Ausgangskanal direkt zu dieser Seite in den Abschnitt „Kanäle“  gelangen.</p>
+<p>Beachten Sie außerdem, dass die Grafik farblich nach den Ausgängen kodiert ist. Im obigen Beispiel ist Ausgang links rot, was der roten Kurve in der Grafik entspricht, und Ausgang rechts ist orange, was der orangen Kurve in der Grafik entspricht.</p>
+<h2 id="gasmischer">Gasmischer<a class="headerlink" href="#gasmischer" title="Permanent link">&para;</a></h2>
+<p>Der Gasmischer verfügt über Parameter zur Steuerung von Drosselklappenabschaltung und Drosselklappenhaltung. Die Drosselklappe verfügt über eine Sicherheitssperre für die Drosseleingabe, während die Drosselklappe eine einfache Ein/Aus-Funktion hat.</p>
+<p><img alt="" src="../../assets/model-mixes-thr.png" /></p>
+<h3 id="eingang">Eingang<a class="headerlink" href="#eingang" title="Permanent link">&para;</a></h3>
+<p>Hier kann die Quelle für den Gasmischer ausgewählt werden. Standardmäßig ist dies der Gasknüppel, kann aber auf einen Analog-, Schalter-, Trimm-, Kanal-, Kreiselachsen-, Trainerkanal-, Stoppuhr- oder Sonderwert geändert werden.</p>
+<p>Tippen Sie lange auf [ENT] am Eingang, um die Gasoptionen aufzurufen:</p>
+<h4 id="eingabeoptionen">Eingabeoptionen<a class="headerlink" href="#eingabeoptionen" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/model-mixes-thr-options.png" /></p>
+<ul>
+<li>Wenn „positiv“ aktiviert ist, wird nur die positive Hälfte des Eingangsreglers in den Mischer eingespeist.</li>
+<li>Wenn „negativ“ aktiviert ist, wird nur die negative Hälfte des Eingangsreglers in den Mischer eingespeist.</li>
+</ul>
+<p>Die beiden oben genannten Optionen werden häufig in Oberflächenmodellen verwendet, bei denen der Auslöser sowohl das Gaspedal (positive Hälfte) als auch die Bremse (negative Hälfte) betätigt.</p>
+<ul>
+<li>Aktivieren Sie „invers“, um die Eingabesteuerung umzukehren.</li>
+<li>Durch Aktivieren von „Schülerwert gesperrt“ wird verhindert, dass der Sender des Schülers den Mischer beeinflusst. Weitere Informationen finden Sie im Abschnitt „<a href="../logical-switches/">Schülerwert gesperrt</a>“.</li>
+</ul>
+<p>Lesen Sie bitte auch den Abschnitt „Optionen“ unter <a href="../../getting-started/user-interface-and-navigation/">Quellenoptionen</a>.</p>
+<h3 id="trim_1">Trim<a class="headerlink" href="#trim_1" title="Permanent link">&para;</a></h3>
+<p>Ermöglicht die Änderung des Gas-Trimmverhaltens gegenüber der Standardeinstellung.</p>
+<p><img alt="" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
+<p>Sie kann so geändert werden, dass der Gasausgang durch die Trimmtaster für Seitenruder, Höhenruder, Gas und Querruder getrimmt werden kann. Bei der X20 Pro/R/RS und der X18 können auch die Trimmtaster T5 oder T6 zugewiesen werden.</p>
+<h4 id="leerlauf-trimmung">Leerlauf-Trimmung<a class="headerlink" href="#leerlauf-trimmung" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
+<p>Bei Glüh- und Benzinmotoren wird die Leerlaufdrehzahl mit der „Leerlauf-Trimmung“ eingestellt. Die Leerlaufdrehzahl kann je nach Wetterlage usw. variieren, daher ist es wichtig, eine Möglichkeit zu haben, die Leerlaufdrehzahl anzupassen, ohne die Vollgasposition zu beeinflussen.</p>
+<p>Wenn die 'Leerlauf-Trimmung' aktiviert ist, geht der Gaskanal auf eine Leerlaufposition von -75%, wenn der Gasknüppel in der unteren Position steht (siehe die Kanalanzeige unten im Screenshot oben). Mit dem Drosselklappen-Trimmhebel kann dann die Leerlaufdrehzahl zwischen -100% und -50% eingestellt werden. Motor AUS kann dann konfiguriert werden, um den Motor mit einem Schalter abzuschalten.</p>
+<h3 id="motor-aus">Motor AUS<a class="headerlink" href="#motor-aus" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-thr-cut.png" /></p>
+<p>Die Drosselklappenabschaltung verfügt über eine Drosseleingangs-Sicherheitsverriegelung, die sicherstellt, dass der Motor oder die Drosselklappe nur in einer niedrigen Leerlaufposition startet.</p>
+<p>In Kombination mit der „Leerlauf-Trimmung“ (siehe oben) kann sie zur Steuerung der Gas- und Leerlaufeinstellungen bei Modellen mit Glüh- oder Benzinantrieb verwendet werden.</p>
+<h4 id="aktive-bedingung">Aktive Bedingung<a class="headerlink" href="#aktive-bedingung" title="Permanent link">&para;</a></h4>
+<p>Der aktive Zustand kann aus Schalter- oder Tastenpositionen, Funktionsschaltern, Flugphasen, Logikschaltern oder Trimmpositionen gewählt werden.</p>
+<h4 id="sr-flipflop">SR FlipFlop<a class="headerlink" href="#sr-flipflop" title="Permanent link">&para;</a></h4>
+<p>Wenn SR FlipFlop auf EIN steht, wird der Ausgang des Gaskanals auf den Leerlaufausgangswert (Standard -100%) umgeschaltet, sobald die Gasabschaltung aktiv wird.</p>
+<p>Wenn der SR FlipFlop auf AUS steht, wird der Ausgang des Gaskanals nur dann auf den 'Leerlauf-Ausgangswert' (Standard -100%) umgeschaltet, wenn der Gasknüppel unter den Auslösewert (Standard -85%) fällt.</p>
+<h4 id="trigger-wert">Trigger-Wert<a class="headerlink" href="#trigger-wert" title="Permanent link">&para;</a></h4>
+<p>Der Triggerwert bestimmt den Wert, bei dessen Unterschreitung der Gas-Eingang die Gas-Sicherheitsverriegelung auslöst.</p>
+<h4 id="leerlauf-wert">Leerlauf-Wert<a class="headerlink" href="#leerlauf-wert" title="Permanent link">&para;</a></h4>
+<p>Sobald die Gas-Abschaltung inaktiv wird, verlässt der Ausgang des Gaskanals den „Leerlaufausgangswert“ nur dann, wenn der Gas-Eingang unter dem Auslösewert liegt. Dadurch wird sichergestellt, dass der Motor nur bei einem niedrigen Gas-Eingangswert anläuft.</p>
+<p>Beachten Sie, dass Ethos beim Einschalten sicher startet, auch wenn die Bedingung „Gasabschaltung“ nicht aktiv ist und der Gaseingang nicht auf Minimum steht. Sie müssen den Gaseingang unter den Auslösewert bringen, bevor der Gaskanal aktiviert wird und der Motor bei einem niedrigen Gaseingangswert anlaufen kann.</p>
+<h3 id="gasstellung-halten">Gasstellung halten<a class="headerlink" href="#gasstellung-halten" title="Permanent link">&para;</a></h3>
+<p>Diese Funktion bietet eine einfache Gasfunktion ohne die Sicherheitsverriegelung der obigen Gas-Abschaltung.</p>
+<p>Aus Sicherheitsgründen wird bei Elektromotoren dringend empfohlen, anstelle von „Gasstellung halten“ die Option „Motor AUS“ mit ihrer Sicherheitsverriegelung zu verwenden.</p>
+<p><img alt="" src="../../assets/model-mixes-thr-hold.png" /></p>
+<h4 id="aktiviert-durch">Aktiviert durch<a class="headerlink" href="#aktiviert-durch" title="Permanent link">&para;</a></h4>
+<p>Der aktive Zustand kann aus Schalter- oder Tastenpositionen, Funktionsschaltern, Flugphasen, Logikschaltern oder Trimmpositionen gewählt werden.</p>
+<h4 id="wert">Wert<a class="headerlink" href="#wert" title="Permanent link">&para;</a></h4>
+<p>Sobald die Gasstellung-Haltefunktion aktiv ist, wird der eingestellte Wert auf dem Gaskanal ausgegeben. Bei elektrisch betriebenen Modellen ist der Wert für die Drosselklappe normalerweise (-100%).</p>
+<p>Der Wert für das Halten des Gaskanals kann auch von einer Quelle stammen.</p>
+<h3 id="flugphasen_1">Flugphasen<a class="headerlink" href="#flugphasen_1" title="Permanent link">&para;</a></h3>
+<p>Wenn im Abschnitt „Flugphasen“ Flugphasen definiert wurden, wird dieser Parameter verfügbar. Der Mischer kann dann an einen oder mehrere Flugphasen geknüpft werden.  Klicken Sie auf „Bearbeiten“ und aktivieren Sie die Kontrollkästchen für die Flugphasen, in denen dieser Mischer aktiv sein soll.</p>
+<h3 id="kurve_1">Kurve<a class="headerlink" href="#kurve_1" title="Permanent link">&para;</a></h3>
+<p>Es kann eine Kurve definiert werden, um das Ausgangssignal des Gaskanals anzupassen. Dabei kann auch jede bereits zuvor definierte Kurve ausgewählt werden. Eine typische Anwendung besteht darin, eine Kurve mit Totzone zu definieren, sodass das Ausgangssignal bei -100 verharrt, bis der Gassteuerknüppel ein Stück weit bewegt wurde. Auf diese Weise lassen sich etwaige Probleme bei der Knüppelkalibrierung beheben.</p>
+<h3 id="anzahl-der-kanale_1">Anzahl der Kanäle<a class="headerlink" href="#anzahl-der-kanale_1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-thr-ch-count.png" /></p>
+<p>Die Kanalanzahl legt fest, wie viele Ausgangskanäle zugewiesen werden, standardmäßig 1 für Gas.</p>
+<h2 id="option-ansicht-pro-kanal-gruppierung-von-mischern">Option „Ansicht pro Kanal“ (Gruppierung von Mischern)<a class="headerlink" href="#option-ansicht-pro-kanal-gruppierung-von-mischern" title="Permanent link">&para;</a></h2>
+<p>Bei komplexen Mischern kann es schwierig sein, die Auswirkungen anderer Mischer auf einen bestimmten Kanal zu erkennen. Die Option „Ansicht pro Kanal“ ist besonders nützlich bei der Fehlersuche in Ihren Mischern, da alle Mischer, die sich auf den ausgewählten Kanal auswirken, in Gruppen zusammengefasst werden.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator.png" /></p>
+<p>In diesem Beispiel werden wir uns den Höhenruderkanal ansehen. Aus der obigen „Tabellenansicht“ der Mischer können wir ersehen, dass das Höhenruder auf Kanal 2 liegt, und dass es weiter unten einen Mischer aus Klappen und Höhenruder gibt, die ebenfalls Kanal 2 als Ausgang hat.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-select.png" /></p>
+<p>Um die Auswirkungen aller Mischer auf den Höhenruderkanal zu sehen, tippen Sie auf die Höhenrudermischer und wählen Sie im Popup-Dialogfeld „Ansicht pro Kanal“.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p>Die obige Beispielansicht zeigt, dass zwei Mischer auf diesen Kanal wirken: der eigentliche Höhenruder-Mischer (gesteuert über den Höhenruderknüppel) und ein Butterfly-Mischer, der beim Ausfahren der Wölbklappen eine Höhenruder-Kompensation hinzufügt. Betrachtet man die hervorgehobene Übersichtszeile für Kanal 2 (Höhenruder), so ist zu erkennen, dass der Ausgangswert des Höhenruderkanals bei 12 % liegt. Die Teilmischer zeigen, dass der Höhenruderknüppel aktuell bei -3 % steht, der Butterfly-Mischer jedoch +15 % zum Kanal beisteuert. Eine Betätigung des Wölbklappen-Bedienelements führt zu einer Änderung dieses Kompensationsmischers.</p>
+<p>Mit diesem „Ansicht pro Kanal“-Layout lässt sich der Beitrag der verschiedenen Mischungen, die einen Kanal beeinflussen, leicht erkennen, da der Wert jeder Mischung sowohl in grafischer als auch in numerischer Form angezeigt wird.</p>
+<h3 id="verwaltung-der-anzeige-ansicht-pro-kanal">Verwaltung der Anzeige 'Ansicht pro Kanal'<a class="headerlink" href="#verwaltung-der-anzeige-ansicht-pro-kanal" title="Permanent link">&para;</a></h3>
+<h4 id="a-wechsel-zwischen-den-kanalen-in-ansicht-pro-kanal">a) Wechsel zwischen den Kanälen in 'Ansicht pro Kanal'<a class="headerlink" href="#a-wechsel-zwischen-den-kanalen-in-ansicht-pro-kanal" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p>Wenn Sie auf die Zusammenfassungszeile (oben hervorgehoben) klicken, werden die Sub-Mischer des Kanals ausgeblendet.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-collapsed.png" /></p>
+<p>Wie oben zu sehen ist, wurden die Sub-Mischer für CH2 HR eingeklappt. Sie können nun nach oben oder unten blättern und einen anderen Kanal auswählen, der erweitert werden soll, um die Mischer anzuzeigen, die zu diesem Kanal beitragen.</p>
+<h4 id="b-zuruckschalten-auf-tabellenansicht">b) <strong><em>Zurückschalten auf 'Tabellenansicht'</em></strong><a class="headerlink" href="#b-zuruckschalten-auf-tabellenansicht" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
+<p>Wenn Sie stattdessen auf einen Submischer klicken, z. B. auf die oben hervorgehobene Zeile, wird ein Popup-Dialogfeld angezeigt, in dem Sie den Mischer bearbeiten, in die Tabellenansicht wechseln oder den Mischer löschen können.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-table-view-select.png" /></p>
+<p>Wenn Sie Tabellenansicht wählen, kehren Sie zur normalen Mischeransicht im Tabellenformat zurück. Alternativ können Sie den markierten Mischer auch bearbeiten oder löschen.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
+<p>Wir sind zurück in der Tabellenansicht der Mischer.</p>
+<h2 id="mischer-bibliotheken">Mischer-Bibliotheken<a class="headerlink" href="#mischer-bibliotheken" title="Permanent link">&para;</a></h2>
+<h3 id="motorflugzeug-bibliothek">Motorflugzeug-Bibliothek<a class="headerlink" href="#motorflugzeug-bibliothek" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-library-airplane.png" /></p>
+<p>Die Liste der verfügbaren vordefinierten Mischer in der Flugzeugbibliothek ist oben dargestellt.</p>
+<p>Bitte beachten Sie, dass einige Mischer nur angezeigt werden, wenn die erforderlichen Kanäle im Modell vorhanden sind. Zum Beispiel werden Mischer mit Klappen als Ziel nur angezeigt, wenn gültige Klappen-Konfigurationen definiert sind.</p>
+<h4 id="mischer-hinzufugen">Mischer hinzufügen<a class="headerlink" href="#mischer-hinzufugen" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/model-mixes.png" /></p>
+<p>Im Hauptbildschirm für Mischer (siehe oben) können neue Mischer hinzugefügt werden, indem Sie auf das Symbol „+“ neben den Spaltenüberschriften tippen.</p>
+<p>Wählen Sie einen Mischer aus der Liste der verfügbaren vordefinierten Mischer in der Flugzeugbibliothek aus (siehe Screenshot der Bibliothek oben).</p>
+<p>In diesem Beispiel wird der freie Mischer verwendet.</p>
+<p><img alt="" src="../../assets/model-mix-free-add-position.png" /></p>
+<p>Als nächstes muss die Position für den neuen Mischer gewählt werden, in diesem Beispiel nach „Letzte Position“.</p>
+<p><img alt="" src="../../assets/model-mix-free-added.png" /></p>
+<p>Normalerweise wird der neue Freie Mischer zur Bearbeitung geöffnet, aber wir sind zur Mischeransicht zurückgekehrt, um zu zeigen, dass der Freie Mischer hinzugefügt wurde.</p>
+<p>Tippen Sie auf „Freier Mischer“, um das Untermenü „Bearbeiten“ aufzurufen.</p>
+<p><img alt="" src="../../assets/model-mix-free-select-edit.png" /></p>
+<p>Wählen Sie „Bearbeiten“, um einen neuen Bildschirm mit den Konfigurationsoptionen für den „Freier Mischer“ zu öffnen.</p>
+<h4 id="freier-mischer">Freier Mischer<a class="headerlink" href="#freier-mischer" title="Permanent link">&para;</a></h4>
+<p>Freie Mischer sind die Allzweckmischer für alles. Die vordefinierten Mischer sind in gewisser Weise leistungsfähiger, aber auch stärker auf ihre spezifische Anwendung beschränkt. Nicht alle Optionen sind notwendigerweise in freien Mischern verfügbar, aber alles kann mit ihnen gemacht werden, es könnte nur mehr als ein freier Mischer erforderlich sein, um einen einzelnen Spezialmischer zu duplizieren.</p>
+<p>Die grafische Anzeige auf der rechten Seite zeigt die Mischerausgabe und die Auswirkungen der vorgenommenen Einstellungsänderungen an.</p>
+<p><img alt="" src="../../assets/model-mix-free-edit.png" /></p>
+<h5 id="name_1">Name<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h5>
+<p>Es kann ein beschreibender Name für den Freien Mischer eingegeben werden.</p>
+<h5 id="aktiviert">aktiviert<a class="headerlink" href="#aktiviert" title="Permanent link">&para;</a></h5>
+<p>Die standardmäßig aktive Bedingung ist „Immer an“. Sie kann durch die Auswahl von Schalter- oder Tastenpositionen, Funktionsschaltern, Flugphasen, Logikschaltern, einem Systemereignis wie Gasabschaltung oder -haltung oder Trimmpositionen bedingt werden.</p>
+<h5 id="flugphasen_2">Flugphasen<a class="headerlink" href="#flugphasen_2" title="Permanent link">&para;</a></h5>
+<p>Wenn im Abschnitt „Flugphasen“ Flugphasen definiert wurden, wird dieser Parameter verfügbar. Der Mischer kann dann von einem oder mehreren Flugphasen abhängig gemacht werden. Klicken Sie auf „Bearbeiten“ und markieren Sie die Kästchen für die Flugphase, in denen diese Mischung aktiv sein muss.</p>
+<h5 id="quelle">Quelle<a class="headerlink" href="#quelle" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-source.png" /></p>
+<p>Der Eingang für den Freien Mischer kann eine beliebige Quelle oder sogar ein fester Wert sein.</p>
+<h5 id="quellenkategorien">Quellenkategorien<a class="headerlink" href="#quellenkategorien" title="Permanent link">&para;</a></h5>
+<p>Die Quelle oder Eingabe für diesen Mischer kann aus den folgenden Kategorien ausgewählt werden:</p>
+<p><img alt="" src="../../assets/model-mix-free-source-categories.png" /></p>
+<p>Bitte beachten Sie, dass Kategorien nun durch ein spezielles Symbolpräfix gekennzeichnet sind, um sie von benutzerdefinierten Elementen in Auswahllisten zu unterscheiden. Sobald Sie ein Mitglied in einer Kategorie ausgewählt haben, wird das Kategorie-Symbol vor den Namen des Mitglieds gesetzt. Siehe dazu das folgende Beispiel „Aileron“.</p>
+<p>Die Quellenkategorien sind:  </p>
+<p>a. analoge Eingaben wie Steuerknüppel, Potentiometer und Schieberegler<br />
+b. Kippschalter oder Taster<br />
+c. Funktionsschalter<br />
+d. beliebige definierte Logikschalter<br />
+e. Trimmerschalter<br />
+f. beliebige definierte Kanäle</p>
+<p><img alt="" src="../../assets/model-mix-free-source-categories-2.png" /></p>
+<h5 id="moglichkeit-eine-variable-in-der-quellenauswahl-hinzuzufugen">Möglichkeit, eine Variable in der „Quellenauswahl“ hinzuzufügen.<a class="headerlink" href="#moglichkeit-eine-variable-in-der-quellenauswahl-hinzuzufugen" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-source-categories-create-var.png" /></p>
+<p>Im Dialogfeld „Quellenauswahl“ kann eine neue Variable angelegt werden.</p>
+<h5 id="quelle-als-fester-wert">Quelle als fester Wert<a class="headerlink" href="#quelle-als-fester-wert" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-source-convert-to-value.png" /></p>
+<p>Durch langes Drücken der Eingabetaste auf dem Parameter „Quelle“ wird das Optionsdialogfeld geöffnet, in dem Sie den freien Mischeingang in einen festen Wert umwandeln können.</p>
+<p><a href="#Variables (VARs) section"></a></p>
+<p>(Dies ist zwar einfach, aber Sie sollten stattdessen lieber eine Variable mit einem festen Wert verwenden. Mit Variablen können Sie alle Ihre zentralen Einstellwerte in einem Menü mit aussagekräftigen Namen zusammenfassen. Weitere Informationen finden Sie unter Variablen.<a href="../variables/">(VARs) </a></p>
+<p><img alt="" src="../../assets/model-mix-free-source-as-value.png" /></p>
+<p>Der feste Wert kann nun angepasst werden.</p>
+<p><img alt="" src="../../assets/model-mix-free-use-a-source.png" /></p>
+<p>Durch langes Drücken auf den festen Wert können Sie zwischen „Maximum“, „0“, „Minimum“ wählen oder zur Verwendung einer Quelle zurückkehren.</p>
+<p><img alt="" src="../../assets/model-mix-free-source.png" /></p>
+<p>Wir sind wieder bei der Option zur Quellenauswahl angelangt.</p>
+<p><img alt="" src="../../assets/model-mix-free-source-ail.png" /></p>
+<p>In diesem Beispiel wurde der Querruder-Steuerknüppel als Quelle ausgewählt. Beachten Sie, dass das Symbol für die Kategorie „Analog“ vor „Querruder“ steht.</p>
+<p>Beachten Sie, dass der Wert der Quelle neben der Quellenauswahl angezeigt wird, was für die Fehlersuche sehr nützlich ist.</p>
+<h5 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">&para;</a></h5>
+<p>Der Operationstyp legt fest, wie der aktuelle Mischer mit den anderen auf demselben Kanal interagiert. Es gibt drei Funktionstypen:</p>
+<h5 id="addition">Addition<a class="headerlink" href="#addition" title="Permanent link">&para;</a></h5>
+<p>Die Ausgabe dieses Mischers wird zu allen anderen Mischern auf demselben Ausgangskanal addiert. Bitte beachten Sie, dass Additionsmischungen in beliebiger Reihenfolge erfolgen können (A+B+C = C+B+A).</p>
+<h5 id="multiplizieren">multiplizieren<a class="headerlink" href="#multiplizieren" title="Permanent link">&para;</a></h5>
+<p>Das Ergebnis dieses Mischers wird mit dem Ergebnis anderem Mischer auf demselben Ausgangskanal multipliziert.</p>
+<h5 id="ersetzen">ersetzen<a class="headerlink" href="#ersetzen" title="Permanent link">&para;</a></h5>
+<p>Die Ausgabe dieses Mischers ersetzt das Ergebnis aller anderen Mischer auf demselben Ausgangskanal.</p>
+<h5 id="sperren">sperren<a class="headerlink" href="#sperren" title="Permanent link">&para;</a></h5>
+<p>Ein Kanal, der „gesperrt“ ist, kann von keinem anderen Mischer verändert werden, solange der gesperrte Mischer aktiv ist. (Dies ist eine gute Alternative zur Override-Funktion (überschreiben) von OpenTX).</p>
+<p>Die Kombination dieser Operationen ermöglicht die Erstellung komplexer mathematischer Operationen.</p>
+<h5 id="aktionen">Aktionen<a class="headerlink" href="#aktionen" title="Permanent link">&para;</a></h5>
+<p>Die freien Mischer sind äußerst flexibel, da bis zu 50 Mischer definiert werden können.</p>
+<p><img alt="" src="../../assets/model-mix-free-add-action.png" /></p>
+<p>Tippen Sie auf „+ Neue Aktion hinzufügen“, um eine Mischer-Aktion hinzuzufügen.</p>
+<p><img alt="" src="../../assets/model-mix-free-action-types.png" /></p>
+<p>Die verfügbaren Aktionen sind:</p>
+<ul>
+<li>Kurve</li>
+<li>Gewicht</li>
+<li>Differenzierung</li>
+<li>Offset</li>
+<li>Langsam</li>
+<li>Trim</li>
+</ul>
+<p>Die Aktionen können kombiniert werden, um z. B. mehrere Gewichtungen mit mehreren Expo-Kurven oder unterschiedliche Gewichte, Differenzierungen usw. zu erstellen.</p>
+<p>Die empfohlene Reihenfolge der Aktionen lautet: Langsam, Kurve, Gewichtung, Differential, Offset und dann Trimmung. Diese Reihenfolge sollte eingehalten werden, es sei denn, es gibt einen bestimmten Grund für eine andere Reihenfolge. Beispielsweise möchten Sie möglicherweise einen Offset aus einer Eingabe entfernen. Informationen zum Ändern der Reihenfolge finden Sie im Abschnitt „<a href="./">Reihenfolge der freien Mischaktionen ändern</a>“ weiter unten.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-active-condition.png" /></p>
+<p>Jede freie Mischeraktion kann ihre eigene „aktive Bedingung“ haben.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-direction-select.png" /></p>
+<p>Die standardmäßig aktive Bedingung ist „EIN“. Sie kann durch die Auswahl von Schalter- oder Tastenpositionen, Funktionsschaltern, Flugphasen, Logikschaltern, einem Systemereignis wie z. B. Gas wegnehmen oder halten oder Trimmerstellungen bedingt werden.</p>
+<p>Darüber hinaus ist in den aktiven Bedingungen für freie Mischer eine „Richtungs“-Beschränkung verfügbar.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-directions.png" /></p>
+<p>Die verfügbaren Richtungsbeschränkungen sind rechts, links, oben und unten.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-directions-summary.png" /></p>
+<p>Für unterschiedliche Aufwärts- und Abwärtsgewichte (um die vorherigen „Gewicht nach oben“ und „Gewicht nach unten“ nachzuahmen) können die Bedingungen auf „Oben“ und die Standardeinstellung „Andernfalls“ gesetzt werden. Siehe auch die Gewichtsaktion unten.</p>
+<h5 id="aktion-gewichtung">Aktion Gewichtung<a class="headerlink" href="#aktion-gewichtung" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight.png" /></p>
+<p>Standardmäßig beginnt der Freie Mischer mit einer „Gewicht“-Aktion von 100 %, die „EIN“ ist. Hinweis: Die Quelle wurde zu Beispielzwecken auf „Querruder“ eingestellt.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-edit-select.png" /></p>
+<p><strong>Das ist wichtig:</strong> Um die Gewichtung des Freien Mischers zu konfigurieren, tippen Sie auf die Standardzeile Gewicht und wählen Sie „bearbeiten“, um Änderungen oder Ergänzungen vorzunehmen. Wenn Sie „eine neue Aktion hinzufügen“ wählen, wird stattdessen eine zweite Aktion „Gewicht“ hinzugefügt.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-add-weight.png" /></p>
+<p>Tippen Sie auf „Gewichtung hinzufügen“, um zusätzliche Gewichtungen hinzuzufügen. Um z.B. mehrere Werte zu erstellen, fügen Sie einfach weitere „Gewichtung“-Aktionen hinzu, die z.B. durch einen Schalter mit 3 Positionen bedingt sind.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-edit-select-SA.png" /></p>
+<p>Das obige Beispiel zeigt, dass der Schalter SA- ausgewählt wurde, um die neue Gewichtung bedingt zu machen.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-edit.png" /></p>
+<p>Im obigen Beispiel wurden mit dem Schalter SA zwei zusätzliche Gewichtungen (oder Raten) hinzugefügt.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-summary.png" /></p>
+<p>Das Gewichtung beträgt 70 %, wenn sich der Schalter SA in der mittleren Position befindet, und 50 %, wenn sich der Schalter in der unteren Position befindet. Das Gewicht beträgt 100 %, wenn sich der Schalter weder in der mittleren noch in der unteren Position befindet.</p>
+<h5 id="kurve_2">Kurve<a class="headerlink" href="#kurve_2" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-action-types.png" /></p>
+<p>Um im Mischer Kurven hinzuzufügen, wählen Sie „Kurve“ aus dem Dropdown-Menü „Aktionen“.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-select.png" /></p>
+<p>Eine Standardkurvenoption ist Expo, die standardmäßig einen Wert von 0 hat, was bedeutet, dass die Reaktion linear ist (d. h. keine Kurve). Ein positiver Wert macht die Reaktion um 0 herum weicher, während ein negativer Wert die Reaktion schärfer macht.</p>
+<h5 id="beispiel-fur-mehrere-expo-raten">Beispiel für mehrere Expo-'Raten'<a class="headerlink" href="#beispiel-fur-mehrere-expo-raten" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-edit.png" /></p>
+<p>In diesem Beispiel wurden 3 Expo-Raten definiert, um die oben definierten Gewichtungsklassen zu ergänzen.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-edit-summary.png" /></p>
+<p>Wenn der SA-Schalter in der mittleren Position steht, beträgt die Gewichtung 70 %, während der Expo 40 % beträgt. Wenn sich der SA-Schalter in der unteren Position befindet, beträgt die Gewichtung 50 % und die Expo-Kurve 30 %. Befindet sich der SA-Schalter in der Standardposition (oben), beträgt die Standardgewichtung 100 % und die Standard-Expo-Kurve 50 %.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-select-move-option.png" /></p>
+<p>Die empfohlene Reihenfolge der Aktionen ist „Langsam“, „Kurve“, „Gewichtung“, „Differenzierung“, „Offset“ und dann „Trim“, daher verschieben wir unsere Kurvenaktion nach oben, sodass sie vor „Gewichtung“ steht. Tippen Sie auf [ENT] auf der markierten Kurvenaktion und wählen Sie dann die Option „verschieben“.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-select-move.png" /></p>
+<p>Tippen Sie auf den hervorgehobenen Aufwärtspfeil oder verwenden Sie den Drehgeber, um die Kurvenaktion über das Gewicht zu verschieben.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-edit-summary-moved.png" /></p>
+<p>Die Kurvenbewegung befindet sich nun in der ersten Position.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-cv1-select.png" /></p>
+<p>Jede zuvor definierte Kurve kann ebenfalls ausgewählt werden (z. B. CV1 im obigen Beispiel). Der Mischer-Ausgang wird dann durch diese Kurve modifiziert.</p>
+<p>Mit dem Freien Mischer und einigen anderen Mischern können Sie bis zu 6 Kurven mit jeweils einer Bedingung festlegen. Wenn mehrere Bedingungen zutreffen, hat die Kurve mit der höheren Position in der Liste Vorrang.</p>
+<p>Beachten Sie, dass Kurven vor der Gewichtung angewendet werden.</p>
+<h5 id="differential-diff">Differential (Diff.)<a class="headerlink" href="#differential-diff" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-differential.png" /></p>
+<p>Um eine Differenzierung hinzuzufügen, wählen Sie „Differenzierung“ aus dem Dropdown-Menü „Aktion“.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-diff-edit.png" /></p>
+<p>Ein positiver Wert führt dazu, dass der Mischerausgang einen geringeren Abwärtshub hat. (Standardwert = 0. Bereich -100 bis +100). Bei einem Wert von 50% ist der Abwärtshub halb so groß wie der Aufwärtshub, wie im obigen Beispiel zu sehen ist.</p>
+<p>Weitere Einzelheiten finden Sie in der Beschreibung der Querrudermischung.</p>
+<h5 id="offset">Offset<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-offset.png" /></p>
+<p>Um im Mischer ein Offset hinzuzufügen, wählen Sie „Offset“ aus dem Dropdown-Menü „Aktion“.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-edit.png" /></p>
+<p>Ein Offset verschiebt den Mischausgang um den hier eingegebenen Offset-Wert nach oben oder unten. Negative Werte sind zulässig.</p>
+<p>Es können zwei Offset-Werte definiert werden, einer für den Fall, dass der Freie Mischer aktiv ist, und ein anderer für den Fall, dass der Freie Mischer inaktiv ist.</p>
+<h5 id="hinzufugen-einer-funktion-zu-einem-freien-mischer">Hinzufügen einer Funktion zu einem Freien Mischer<a class="headerlink" href="#hinzufugen-einer-funktion-zu-einem-freien-mischer" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-use-source.png" /></p>
+<p>Ein Trimmer kann einem Freien Mischer zugewiesen werden, indem der Trimmer als Quelle (langes Drücken auf das Wertefeld) für den Offset-Parameter verwendet wird.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-use-source-thr-trim.png" /></p>
+<p>Im obigen Beispiel wurde die Gas-Trimmung als Quelle für die Einstellung des Offsets ausgewählt.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-use-source-thr-trim-full-range.png" /></p>
+<p>Standardmäßig haben Trimmer einen Bereich von +/- 25 %. Bei Verwendung als Quelle können die Trimmer optional auf den vollen Bereich +/- 100 % geändert werden (drücken Sie lange die Eingabetaste auf der Trimmung).</p>
+<p>Die Trimmrichtung kann durch Auswahl von „invers“ geändert werden.</p>
+<h5 id="langsam">Langsam<a class="headerlink" href="#langsam" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-slow.png" /></p>
+<p>Um eine Aktion hinzuzufügen, die die Reaktion des Mischerausgangs auf die Eingangsänderung verlangsamt, wählen Sie im Dropdown-Menü „Aktionen“ die Option „Langsam“.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-edit.png" /></p>
+<p>„Langsam“ wird z. B. häufig verwendet, um das Ausfahren der Klappen zu verlangsamen, da ein plötzliche Änderung des Auftriebs zu Steuerungsproblemen führen kann.</p>
+<p>Wenn Sie „Langsam“ als erste Aktion angeben, sind die Werte für „Langsam“ die Zeit in Sekunden, die die Ausgabe braucht, um von 0 auf +100% zu gehen (oder sich um 100% zu ändern).</p>
+<p>Zum Beispiel:</p>
+<p>Aktion 1 - Langsam auf/ab=2s/2s</p>
+<p>Aktion 2 - Gewicht=50%</p>
+<p>Wenn sich der Eingang von -100% auf +100% ändert,</p>
+<p>braucht der Ausgang (2+2)=4s, um von -50% auf +50% zu wechseln.</p>
+<p>Folgt hingegen die Aktion „Langsam“ auf die Aktion „Gewichtung/Anteile“, so wird der langsame Übergang proportional kürzer.</p>
+<p>Zum Beispiel:</p>
+<p>Aktion 1 - Gewicht=50%</p>
+<p>Aktion 2 - Langsam auf/ab=2s/2s</p>
+<p>Wenn sich der Eingang von -100% auf +100% ändert,</p>
+<p>braucht der Ausgang nur (2+2)*50% = 2s, um von -50% auf +50% zu wechseln.</p>
+<p>Für die Auf- und Abwärtsrichtung können unterschiedliche Werte festgelegt werden.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-summary.png" /></p>
+<p>Eine Zusammenfassung der Mischer-Aktionen ist oben abgebildet. Siehe auch die Zusammenfassung unten, in der die Aktion „Langsam“ ganz oben steht.</p>
+<h5 id="trimmung">Trimmung<a class="headerlink" href="#trimmung" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-trim.png" /></p>
+<p>Um dem Mischer eine Trimmung hinzuzufügen, wählen Sie „Trimmung“ aus dem Dropdown-Menü „Aktionen“. Dies ist einfacher als das Hinzufügen des Trimmung unter der Aktion „Offset“.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-trim-edit.png" /></p>
+<p>Wählen Sie den zu verwendenden Trimmtaster</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-trim-summary.png" /></p>
+<p>Eine Zusammenfassung aller Mischer-Aktionen finden Sie oben.</p>
+<h5 id="neuordnung-von-freien-mischeraktionen">Neuordnung von freien Mischeraktionen<a class="headerlink" href="#neuordnung-von-freien-mischeraktionen" title="Permanent link">&para;</a></h5>
+<p>Wie bereits erwähnt, ist die empfohlene Reihenfolge der Aktionen Langsam, Kurve, Gewicht, Differenzierung, Offset und dann Trimmung. Diese Reihenfolge sollte eingehalten werden, es sei denn, es gibt einen besonderen Grund für die Verwendung einer anderen Reihenfolge. So kann es beispielsweise sein, dass Sie einen Offset von einer Eingabe entfernen möchten.</p>
+<p>Da „Gewichtung“ die Standardaktion ist, wenn Sie einen freien Mischer erstellen, werden alle weiteren Aktionen in einer niedrigeren Reihenfolge erstellt, es sei denn, Sie löschen zuerst die Aktion „Gewichtung“. Es ist jedoch einfacher, die Reihenfolge der Mischeraktionen zu ändern, indem Sie die Option „Verschieben“ im Untermenü „Bearbeiten“ verwenden.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-move.png" /></p>
+<p>Tippen Sie auf die zu verschiebende Aktion, zum Beispiel die Aktion „Langsam“ im obigen Beispiel, und wählen Sie dann die Option „Verschieben“ im Untermenü „Bearbeiten“. Es erscheinen Verschiebepfeile, mit denen die Aktion in der Reihenfolge nach oben oder unten verschoben werden kann.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-at-top.png" /></p>
+<p>Diese Zusammenfassung zeigt, dass die Aktionen „Langsam“ und „Kurve“ in der Reihenfolge der Aktionen nach oben verschoben wurden.  Beachten Sie, dass „Trimmen“ immer an letzter Stelle stehen sollte.</p>
+<p><img alt="" src="../../assets/model-mix-free-output.png" /></p>
+<h5 id="anzahl-der-kanale_2">Anzahl der Kanäle<a class="headerlink" href="#anzahl-der-kanale_2" title="Permanent link">&para;</a></h5>
+<p>Die Kanalanzahl legt fest, wie viele Ausgangskanäle zugewiesen werden.</p>
+<h5 id="invertiert">invertiert<a class="headerlink" href="#invertiert" title="Permanent link">&para;</a></h5>
+<p>Der Ausgang dieses Mischers kann durch Aktivieren dieser Option umgekehrt oder invertiert werden. Bitte beachten Sie, dass die Servoumkehrung unter „Ausgänge“ erfolgen sollte. Diese Option dient dazu, die Logik der Mischung richtig zu gestalten.</p>
+<h5 id="ausgange">Ausgänge<a class="headerlink" href="#ausgange" title="Permanent link">&para;</a></h5>
+<h5 id="es-kann-ein-beliebiger-kanal-ausgewahlt-werden-um-den-ausgang-dieses-mischers-zu-belegen-wenn-die-anzahl-der-kanale-oben-groer-als-eins-ist-muss-fur-jeden-ausgang-ein-kanal-konfiguriert-werden">Es kann ein beliebiger Kanal ausgewählt werden, um den Ausgang dieses Mischers zu belegen. Wenn die Anzahl der Kanäle oben größer als eins ist, muss für jeden Ausgang ein Kanal konfiguriert werden.<a class="headerlink" href="#es-kann-ein-beliebiger-kanal-ausgewahlt-werden-um-den-ausgang-dieses-mischers-zu-belegen-wenn-die-anzahl-der-kanale-oben-groer-als-eins-ist-muss-fur-jeden-ausgang-ein-kanal-konfiguriert-werden" title="Permanent link">&para;</a></h5>
+<h4 id="fortsetzung-der-flugzeug-mischerbibliothek"><strong><em>Fortsetzung</em></strong> <strong><em>der</em></strong> <strong><em>Flugze</em></strong><strong><em>u</em></strong><strong><em>g-</em></strong><strong><em>Mischerbibliothek</em></strong><a class="headerlink" href="#fortsetzung-der-flugzeug-mischerbibliothek" title="Permanent link">&para;</a></h4>
+<h4 id="querruder-hohenruder-seitenruder"><a href="./">Querruder, Höhenruder, Seitenruder</a><a class="headerlink" href="#querruder-hohenruder-seitenruder" title="Permanent link">&para;</a></h4>
+<p>Bitte beachten Sie die detaillierte Beschreibung der <a href="./">Querruder-Höhenruder-Seitenruder Mischer</a> oben.</p>
+<h4 id="klappen">Klappen<a class="headerlink" href="#klappen" title="Permanent link">&para;</a></h4>
+<p>Der Klappen-Mischer mischt ein Eingangssignal auf einen oder mehrere Kanäle mit individuellen Gewichten. Er bietet auch Optionen zum Verlangsamen und Verringern.</p>
+<h4 id="gas">Gas<a class="headerlink" href="#gas" title="Permanent link">&para;</a></h4>
+<p>Der Gas-Mischer dient der Motorsteuerung und umfasst die Optionen „Gasabschaltung“ und „Gas halten“. Bitte beachten Sie die ausführliche Diskussion über den <a href="./">Gas-Mischer</a> oben.</p>
+<h4 id="querruder-zu-wolbklappe">Querruder zu Wölbklappe<a class="headerlink" href="#querruder-zu-wolbklappe" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer wird häufig bei Segelflugzeugen verwendet, damit sich die Wölbklappen zusammen mit den Querrudern bewegen, um die Querruderreaktion des Modells zu erhöhen.</p>
+<h4 id="querruder-zu-seitenruder">Querruder zu Seitenruder<a class="headerlink" href="#querruder-zu-seitenruder" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer wird in der Regel verwendet, um das seitliche Abdriften in den Kurven zu verringern. Allerdings ist dieser Mischer nur bei einer bestimmten Fluggeschwindigkeit und Ausrichtung richtig. Es ist besser, zu lernen, die Seitendrift durch manuelle Steuerung des Seitenruders zu korrigieren.</p>
+<h4 id="bremsklappen">Bremsklappen<a class="headerlink" href="#bremsklappen" title="Permanent link">&para;</a></h4>
+<p>Der Bremsklappen-Mischer ist ähnlich wie die Butterfly-Mischung unten, außer dass sie durch eine aktive Ein-Aus-Bedingung gesteuert wird.</p>
+<h4 id="butterfly">Butterfly<a class="headerlink" href="#butterfly" title="Permanent link">&para;</a></h4>
+<p>Die Butterfly- oder Krähenbremse wird verwendet, um die Sinkgeschwindigkeit eines Flugzeugs zu steuern. Die Querruder werden so eingestellt, dass sie nur geringfügig nach oben fahren, während die Klappen stark nach unten gehen. Diese Kombination erzeugt einen hohen Luftwiderstand und ist sehr effektiv beim Bremsen und daher ideal für die Steuerung des Landeanflugs. Die Eingabe erfolgt normalerweise über einen Schieberegler (oder den Gasknüppel bei einem Segelflugzeug).</p>
+<p>Eine Kompensation ist auch am Höhenruder erforderlich, um ein Aufbäumen des Flugzeugs beim Ausfahren der Klappen zu vermeiden.</p>
+<p>Bitte beachten Sie, dass der Mischer einen eingebauten Offset hat, so dass dessen Ausgang in der Klappen-Neutralposition Null ist, d.h. wenn der Gasknüppel (oder die alternative Quelle) in der unteren Position ist, und in der voll ausgefahrenen Klappenposition maximal ist, d.h. in der oberen Position des Gasknüppels (oder der alternativen Quelle). Dieser Offset wird deaktiviert, wenn eine Benutzerkurve hinzugefügt wird, um dieser Kurve volle Kontrolle zu geben.</p>
+<h4 id="wolbklappen">Wölbklappen<a class="headerlink" href="#wolbklappen" title="Permanent link">&para;</a></h4>
+<p>Die Wölbklappen-Mischung wird in der Regel verwendet, um eine gewisse Wölbung an den Flügelflächen anzubringen, um den Auftrieb zu erhöhen.</p>
+<h4 id="wolbklappe-zu-hohenruder">Wölbklappe zu Höhenruder<a class="headerlink" href="#wolbklappe-zu-hohenruder" title="Permanent link">&para;</a></h4>
+<p>Der Mischer aus Wölbklappe und Höhenruder ist für die Kompensation von Wölbklappen, Sturz und Krähe nützlich, wenn eine individuelle Kompensationskurve erforderlich ist.</p>
+<h4 id="hohenruder-zu-wolbklappen">Höhenruder zu Wölbklappen<a class="headerlink" href="#hohenruder-zu-wolbklappen" title="Permanent link">&para;</a></h4>
+<p>Diese auch als Snap Flap bezeichnete Mischung fügt dem Flügel beim Ziehen des Höhenruders eine Wölbung hinzu. Dadurch kann der Flügel effizienter Auftrieb erzeugen, wenn das Flugzeug einen Höhenruder-Befehl erhält.</p>
+<h4 id="seitenruder-zu-querruder">Seitenruder zu Querruder<a class="headerlink" href="#seitenruder-zu-querruder" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer wird verwendet, um das durch das Seitenruder verursachte Gieren im Messerflug auszugleichen.</p>
+<h4 id="seitenruder-zu-hohenruder">Seitenruder zu Höhenruder<a class="headerlink" href="#seitenruder-zu-hohenruder" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer kann dazu beitragen, den Messerflug zu verbessern, wenn es Probleme mit der Richtungsstabilität gibt.</p>
+<h4 id="snap-roll">Snap Roll<a class="headerlink" href="#snap-roll" title="Permanent link">&para;</a></h4>
+<p>Die Snap-Rolle ist ein automatisches Rotationsmanöver in einem überzogenen Zustand. Beim Snap Roll wird ein Flügel abgewürgt, während der andere um die Rollachse beschleunigt wird. Dies führt zu einer plötzlichen Rollbeschleunigung, die Sie nicht einfach durch die Eingabe von Querruder erreichen können. Um diesen Zustand in einem Modell zu erreichen, müssen mehrere Eingaben gemacht werden, einschließlich Höhenruder, Seitenruder und Querruder. Sie können zum Beispiel einen „Inside Left Snap“ ausführen, indem Sie den Mix so programmieren, dass Sie 1 bis 2 Sekunden lang gleichzeitig Höhen-, Seiten- und Querruder nach links geben. Erholen Sie sich von dem Manöver, indem Sie die Steuerknüppel neutralisieren und sofort rechtes Seitenruder hinzufügen, um den Kursverlust zu korrigieren.</p>
+<h4 id="gas-zu-hohenruder">Gas zu Höhenruder<a class="headerlink" href="#gas-zu-hohenruder" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer ermöglicht eine Höhenruderkompensation für Flugzeuge, die bei einer Änderung des Gashebels die Neigung ändern.</p>
+<p>Bitte beachten Sie, dass der Mischer einen eingebauten Offset hat, so dass dessen Ausgang Null ist, wenn der Gasknüppel in der unteren Position ist, und maximal, wenn der Gasknüppel in der oberen Position ist. Dieser Offset wird deaktiviert, wenn eine Benutzerkurve hinzugefügt wird, um dieser Kurve volle Kontrolle zu geben.</p>
+<h4 id="gas-zu-seitenruder">Gas zu Seitenruder<a class="headerlink" href="#gas-zu-seitenruder" title="Permanent link">&para;</a></h4>
+<p>Diese Mischung hilft dem Flugzeug, gerade zu fliegen, wenn es Vollgas gibt; sie wird im Allgemeinen benötigt, wenn man eine vertikale Aufwärtslinie fliegt.</p>
+<p>Bitte beachten Sie, dass der Mischer einen eingebauten Offset hat, so dass der Ausgang der Mischung Null ist, wenn der Gasknüppel in der unteren Position ist, und maximal, wenn der Gasknüppel in der oberen Position ist. Dieser Offset wird deaktiviert, wenn eine Benutzerkurve hinzugefügt wird, um dieser Kurve die volle Kontrolle zu geben.</p>
+<h4 id="testmischer">Testmischer<a class="headerlink" href="#testmischer" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer eignet sich hervorragend zum Testen von Servos. Sie enthält eine Bereichseinstellung, sowie Slow Up und Slow Down.</p>
+<p>Aus Sicherheitsgründen vermeidet der Test-Mischer Gaskanäle.</p>
+<h4 id="offset_1">Offset<a class="headerlink" href="#offset_1" title="Permanent link">&para;</a></h4>
+<p>Der Offset-Mischer wird verwendet, um einen festen Wert zur Mischung hinzuzufügen, wenn ein Offset erforderlich ist. Eine häufige Anwendung sind Klappen, bei denen der Servohebel in eine Richtung versetzt wird, um den Klappenweg nach unten zu maximieren. Dies führt dazu, dass sich die Klappen bei Servoneutralstellung auf halbem Weg nach unten befinden. Der Offset-Mischer kann dann verwendet werden, um die Klappen in die „Oberflächen-Neutralstellung“ zu bringen, wenn der Ausgang der Klappenmischung Null ist.</p>
+<h4 id="sequencer">Sequencer<a class="headerlink" href="#sequencer" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../assets/model-mixes-library-seq.png" /></p>
+<p>Der Sequenzer-Mischer ermöglicht es, mehrere Kanäle mithilfe programmierbarer Zeitbasen und Kurven vorwärts und rückwärts zu sequenzieren. Dies ist sehr nützlich für die Programmierung von Dingen wie Fahrwerks- und Fahrwerksklappensequenzen. Der Sequenzer wurde mit den notwendigen Bedienelementen ausgestattet, um die Programmierung der Sequenz zu vereinfachen und gleichzeitig uneingeschränkte Flexibilität zu ermöglichen, die nur durch Ihre Vorstellungskraft begrenzt ist.</p>
+<p>Bevor Sie mit der Programmierung beginnen, sollten Sie sich überlegen, wie der Sequenzer funktionieren soll.</p>
+<p><img alt="" src="../../assets/model-mixes-seq.png" /></p>
+<h5 id="name_2">Name<a class="headerlink" href="#name_2" title="Permanent link">&para;</a></h5>
+<p>Für den Sequenzer-Mischer kann ein beschreibender Name eingegeben werden.</p>
+<h5 id="aktiviert-durch_1">Aktiviert durch<a class="headerlink" href="#aktiviert-durch_1" title="Permanent link">&para;</a></h5>
+<p>Die standardmäßige aktive Bedingung ist „Immer eingeschaltet“. Sie kann durch Auswahl aus Schalter- oder Tastenpositionen, Funktionsschaltern, Flugphasen, Logikschaltern, einem Systemereignis wie Gaswegnahme oder Halten oder Trimmpositionen bedingt gemacht werden.</p>
+<h5 id="flugphasen_3">Flugphasen<a class="headerlink" href="#flugphasen_3" title="Permanent link">&para;</a></h5>
+<p>Wenn im Abschnitt „Flugphasen“ Flugphasen definiert wurden, wird dieser Parameter verfügbar. Der Mischer kann dann an einen oder mehrere Flugphasen geknüpft werden. Klicken Sie auf „Bearbeiten“ und aktivieren Sie die Kontrollkästchen für die Flugphasen, in denen dieser Mischer aktiv sein soll.</p>
+<h5 id="schleifenmodus-dauerbetrieb">Schleifenmodus (Dauerbetrieb)<a class="headerlink" href="#schleifenmodus-dauerbetrieb" title="Permanent link">&para;</a></h5>
+<p>Wenn der Schleifenmodus aktiviert ist, läuft der Sequenzer kontinuierlich vorwärts und rückwärts in einer Schleife. Wenn der Loop-Modus deaktiviert ist, muss die Vorwärts- oder Rückwärtsbedingung erfüllt sein, bevor die entsprechende Sequenz startet.</p>
+<p>Ein gutes Anwendungsbeispiel für den Schleifenmodus ist eine Servotester-Sequenz.</p>
+<h5 id="vorwartsbedingung">Vorwärtsbedingung<a class="headerlink" href="#vorwartsbedingung" title="Permanent link">&para;</a></h5>
+<p>Die Vorwärtsbedingung startet den Sequenzer in Vorwärtsrichtung. Er läuft dann bis zum Ende der unten angegebenen Vorwärtsdauer, es sei denn, der Parameter „Anfang“ ist auf „EIN“ gesetzt.</p>
+<h5 id="anfang">Anfang<a class="headerlink" href="#anfang" title="Permanent link">&para;</a></h5>
+<p>Die Option „Anfang“ ermöglicht es, die Vorwärtslaufsequenz vorzeitig zu beenden, wenn die Rückwärtsbedingung geltend gemacht wird.</p>
+<h5 id="ruckwartsbedingung">Rückwärtsbedingung<a class="headerlink" href="#ruckwartsbedingung" title="Permanent link">&para;</a></h5>
+<p>Der Rückwärtszustand startet den Sequenzer in Rückwärtsrichtung. Er läuft dann bis zum Ende der unten angegebenen Rückwärtsdauer, es sei denn, der Parameter „Anfang“ ist auf „EIN“ gesetzt.</p>
+<h5 id="anfang_1">Anfang<a class="headerlink" href="#anfang_1" title="Permanent link">&para;</a></h5>
+<p>Die Option „Anfang“ ermöglicht es, die Rückwärtslaufsequenz vorzeitig zu beenden, wenn die Vorwärtsbedingung erfüllt ist.</p>
+<h5 id="pausenbedingung">Pausenbedingung<a class="headerlink" href="#pausenbedingung" title="Permanent link">&para;</a></h5>
+<p>Der Sequenzer kann durch Setzen der Pausenbedingung angehalten werden. Er bleibt im Pausenmodus, bis die Pausenbedingung wieder auf „FALSCH“ gesetzt wird.</p>
+<h5 id="laufzeit-vorwarts">Laufzeit vorwärts<a class="headerlink" href="#laufzeit-vorwarts" title="Permanent link">&para;</a></h5>
+<p>Die Zeitbasis für die Vorwärtssequenz kann hier konfiguriert werden.</p>
+<h5 id="laufzeit-ruckwarts">Laufzeit rückwärts<a class="headerlink" href="#laufzeit-ruckwarts" title="Permanent link">&para;</a></h5>
+<p>Die Zeitbasis für die Rückwärtssequenz kann hier konfiguriert werden. Sie kann sich von der Vorwärtsdauer unterscheiden.</p>
+<h5 id="ausgang-1">Ausgang 1<a class="headerlink" href="#ausgang-1" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-menu.png" /></p>
+<p>Jeder Kanal kann ausgewählt werden, um die Ausgabe vom Sequenzer zu empfangen.</p>
+<h5 id="ausgang-1-menu">Ausgang 1 Menü<a class="headerlink" href="#ausgang-1-menu" title="Permanent link">&para;</a></h5>
+<p>Tippen Sie auf die 3 Punkte, um das Menü mit den Kurvenoptionen zu öffnen.</p>
+<h5 id="kurvenoptionen">Kurvenoptionen<a class="headerlink" href="#kurvenoptionen" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-options.png" /></p>
+<h5 id="kurve-bearbeiten">Kurve bearbeiten<a class="headerlink" href="#kurve-bearbeiten" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-curve.png" /></p>
+<p>Die Kurve hat standardmäßig 5 Punkte, kann jedoch bis zu 21 Punkte haben. Sowohl die X- als auch die Y-Koordinaten sind konfigurierbar.</p>
+<h5 id="eine-ruckwartskurve-hinzufugen">Eine Rückwärtskurve hinzufügen<a class="headerlink" href="#eine-ruckwartskurve-hinzufugen" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-options.png" /></p>
+<p>Standardmäßig wird für beide Richtungen dieselbe Kurve verwendet, es kann jedoch eine separate Rückwärtskurve hinzugefügt werden.</p>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-options-2.png" /></p>
+<p>Sobald eine Rückwärtskurve hinzugefügt wurde, können beide Kurven über das Optionsmenü bearbeitet werden.</p>
+<h5 id="vorwartskurve-bearbeiten">Vorwärtskurve bearbeiten<a class="headerlink" href="#vorwartskurve-bearbeiten" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-curve-fwd.png" /></p>
+<p>Die Vorwärtskurve kann bearbeitet werden. Bei zwei Kurven zeigt ein Pfeil an, welche gerade bearbeitet wird.</p>
+<p>Die oben gezeigte Beispielkurve wäre für die Anwendung in einer Servotester-Sequenz geeignet.</p>
+<h5 id="ruckwartskurve-bearbeiten">Rückwärtskurve bearbeiten<a class="headerlink" href="#ruckwartskurve-bearbeiten" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="../../assets/model-mixes-seq-op1-curve-bkwd.png" /></p>
+<p>Die Rückwärtskurve kann bearbeitet werden. Bei zwei Kurven zeigt ein Pfeil an, welche Kurve gerade bearbeitet wird.</p>
+<p>Wenn die Rückwärtskurve <strong>nach</strong> der Konfiguration der Vorwärtskurve erstellt wird, wird die Vorwärtskurve in die Rückwärtskurve kopiert und kann dann geändert werden.</p>
+<h5 id="nur-eine-kurve-verwenden">Nur eine Kurve verwenden<a class="headerlink" href="#nur-eine-kurve-verwenden" title="Permanent link">&para;</a></h5>
+<p>Wenn Sie Ihre Meinung ändern, können Sie die Rückwärtskurve entfernen, indem Sie „Nur eine Kurve verwenden“ auswählen.</p>
+<h5 id="ausgang-entfernen">Ausgang entfernen<a class="headerlink" href="#ausgang-entfernen" title="Permanent link">&para;</a></h5>
+<p>Der Ausgang kann ebenfalls entfernt werden.</p>
+<h5 id="neuen-ausgang-hinzufugen">Neuen Ausgang hinzufügen<a class="headerlink" href="#neuen-ausgang-hinzufugen" title="Permanent link">&para;</a></h5>
+<p>Es können zusätzliche Ausgänge hinzugefügt werden, jeder mit seiner eigenen Kurve(n).</p>
+<p>Dadurch kann beispielsweise ein Ausgang die Fahrwerksklappen steuern, während ein anderer das einziehbare Fahrwerk steuert. Mithilfe der Kurven jedes Ausgangs kann eine Sequenz konfiguriert werden, bei der zuerst die Fahrwerksklappen langsam geöffnet werden, dann das einziehbare Fahrwerk ausgefahren wird und schließlich die Klappen wieder geschlossen werden, wobei die Zeitsteuerung so erfolgt, dass für jeden Schritt die richtige Zeit zur Verfügung steht. Die Kurven können mit einer Steigung konfiguriert werden, um die Geschwindigkeit der Ausgangsänderung zu steuern, oder um sofort zu schalten, wenn beispielsweise der Einziehregler seine eigene Betriebsgeschwindigkeit steuert.</p>
+<p>Ein Beispiel finden Sie unter „So konfigurieren Sie einen Tür- und Fahrwerkssequenzer“.</p>
+<h3 id="segelflugzeug-bibliothek">Segelflugzeug-Bibliothek<a class="headerlink" href="#segelflugzeug-bibliothek" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-library-glider.png" /></p>
+<p>Die Liste der verfügbaren vordefinierten Mischer in der Segelflieger-Bibliothek ist oben aufgeführt.</p>
+<p>Bitte beachten Sie, dass einige Mischer nur angezeigt werden, wenn die erforderlichen Kanäle im Modell vorhanden sind. Beispielsweise werden Mischer mit Klappen als Ziel nur angezeigt, wenn gültige Klappenkonfigurationen definiert sind.  Klappenbezogene Mischer werden in der Mischungsbibliothek angezeigt, wenn Klappen in „Modell bearbeiten“ definiert sind.</p>
+<h4 id="freier-mischer_1">Freier Mischer<a class="headerlink" href="#freier-mischer_1" title="Permanent link">&para;</a></h4>
+<p>Bitte beachten Sie die Beschreibung des <a href="./">Freien Mischers </a>unter dem Abschnitt Flugzeugbibliothek oben.</p>
+<h4 id="querruder-hohenruder-seitenruder_1">Querruder, Höhenruder, Seitenruder<a class="headerlink" href="#querruder-hohenruder-seitenruder_1" title="Permanent link">&para;</a></h4>
+<h4 id="bitte-beachten-sie-die-detaillierte-beschreibung-der-quer-hohen-seitenruder-mischer-oben">Bitte beachten Sie die detaillierte Beschreibung der <a href="./">Quer-Höhen-Seitenruder-Mischer </a>oben.<a class="headerlink" href="#bitte-beachten-sie-die-detaillierte-beschreibung-der-quer-hohen-seitenruder-mischer-oben" title="Permanent link">&para;</a></h4>
+<h4 id="klappen_1">Klappen<a class="headerlink" href="#klappen_1" title="Permanent link">&para;</a></h4>
+<p>Der Klappen-Mischer mischt ein Eingangssignal auf einen oder mehrere Kanäle mit individuellen Gewichten. Er bietet auch Optionen zum Verlangsamen und Verringern.</p>
+<h4 id="gas_1">Gas<a class="headerlink" href="#gas_1" title="Permanent link">&para;</a></h4>
+<p>Der Gasmischer dient der Motorsteuerung und umfasst die Optionen Drosselabschaltung und Drosselhalt. Bitte beachten Sie die ausführliche Beschreibung über die <a href="./">Gasmischung</a> oben.</p>
+<h4 id="querruder-zu-wolbklappe_1">Querruder zu Wölbklappe<a class="headerlink" href="#querruder-zu-wolbklappe_1" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer wird häufig bei Segelflugzeugen verwendet, damit sich die Wölbklappen zusammen mit den Querrudern bewegen, um die Querruderreaktion des Modells zu erhöhen.</p>
+<h4 id="querruder-zu-seitenruder_1">Querruder zu Seitenruder<a class="headerlink" href="#querruder-zu-seitenruder_1" title="Permanent link">&para;</a></h4>
+<p>Diese Mischung wird in der Regel verwendet, um das seitliche Schieben in Kurven zu verringern. Allerdings ist dieser Mischer nur bei einer bestimmten Fluggeschwindigkeit und Ausrichtung richtig. Es ist besser, zu lernen, dies durch manuelle Steuerung des Seitenruders zu korrigieren.</p>
+<h4 id="klappen-offset">Klappen-Offset<a class="headerlink" href="#klappen-offset" title="Permanent link">&para;</a></h4>
+<p>Der Klappen-Offset-Mischer ist ähnlich wie die Butterfly-Mischung unten, außer dass sie durch eine aktive Ein-Aus-Bedingung gesteuert wird.</p>
+<h4 id="butterfly_1">Butterfly<a class="headerlink" href="#butterfly_1" title="Permanent link">&para;</a></h4>
+<p>Die Butterfly- oder Krähenbremse wird verwendet, um die Sinkgeschwindigkeit eines Flugzeugs zu steuern. Die Querruder werden so eingestellt, dass sie nur geringfügig ausschlagen, während die Klappen stark ausschlagen. Diese Kombination erzeugt einen hohen Luftwiderstand und ist sehr effektiv beim Bremsen und daher ideal für die Steuerung des Landeanflugs. Die Eingabe erfolgt normalerweise über einen Schieberegler (oder den Gasknüppel bei einem Segelflugzeug).</p>
+<p>Das Höhenruder muss ebenfalls kompensiert werden, um ein Aufbäumen des Flugzeugs zu verhindern, wenn sich dadurch der Auftrieb erhöht.</p>
+<p>Bitte beachten Sie, dass der Mischer einen eingebauten Offset hat, so dass dessen Ausgang in der Klappen-Neutralstellung Null ist, d.h. wenn sich der Gashebel (oder die alternative Quelle) in der unteren Position befindet, und in der voll ausgefahrenen Klappenposition, d.h. in der oberen Position des Gashebels (oder der alternativen Quelle), maximal ist. Dieser Offset wird deaktiviert, wenn eine Benutzerkurve hinzugefügt wird, um dieser Kurve volle Kontrolle zu geben.</p>
+<h4 id="wolbklappen_1">Wölbklappen<a class="headerlink" href="#wolbklappen_1" title="Permanent link">&para;</a></h4>
+<p>Die Wölbklappen werden in der Regel verwendet, um den Flügeln eine gewisse Wölbung zu verleihen, um den Auftrieb zu erhöhen.</p>
+<h4 id="wolbklappen-zum-hohenruder">Wölbklappen zum Höhenruder<a class="headerlink" href="#wolbklappen-zum-hohenruder" title="Permanent link">&para;</a></h4>
+<p>Der Mischer aus Wölbklappe und Höhenruder ist für die Kompensation setzen von Wölb-, Störklappen und Butterfly nützlich, wenn eine individuelle Kompensationskurve erforderlich ist.</p>
+<h4 id="hohenruder-zu-wolbklappen_1">Höhenruder zu Wölbklappen<a class="headerlink" href="#hohenruder-zu-wolbklappen_1" title="Permanent link">&para;</a></h4>
+<p>Dieser, auch als Snap Flap bezeichnete Mischer, fügt dem Flügel beim Ziehen des Höhenruders eine Wölbung hinzu. Dadurch kann der Flügel effizienter Auftrieb erzeugen, wenn das Flugzeug einen Steigen-Befehl erhält.</p>
+<h4 id="seitenruder-zu-querruder_1">Seitenruder zu Querruder<a class="headerlink" href="#seitenruder-zu-querruder_1" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer kann verwendet werden, um ruderinduziertes Gieren auszugleichen.</p>
+<h4 id="seitenruder-zu-hohenruder_1">Seitenruder zu Höhenruder<a class="headerlink" href="#seitenruder-zu-hohenruder_1" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer kann bei Kopplungsproblemen helfen. Sie kann auch zum Hinzufügen einer V-Leitwerks-Differenzierung verwendet werden.</p>
+<h4 id="gas-zu-hohenruder_1">Gas zu Höhenruder<a class="headerlink" href="#gas-zu-hohenruder_1" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer ermöglicht einen Höhenruderausgleich für Flugzeuge, die bei einer Gasänderung die Neigung ändern.</p>
+<h4 id="gas-zu-seitenruder_1">Gas zu Seitenruder<a class="headerlink" href="#gas-zu-seitenruder_1" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer hilft dem Flugzeug, gerade zu fliegen, wenn es Vollgas gibt; sie wird im Allgemeinen benötigt, wenn man eine vertikale Aufwärtslinie fliegt.</p>
+<h4 id="servotester">Servotester<a class="headerlink" href="#servotester" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer eignet sich hervorragend zum Testen von Servos. Sie enthält eine Bereichseinstellung, sowie eine langsame Verstellbewegung.</p>
+<h4 id="offset_2">Offset<a class="headerlink" href="#offset_2" title="Permanent link">&para;</a></h4>
+<p>Der Offset-Mischer wird verwendet, um einen festen Wert zum Mischer hinzuzufügen, wenn ein Offset erforderlich ist. Eine häufige Anwendung sind Klappen, bei denen der Servohebel in eine Richtung versetzt wird, um den Klappenweg nach unten zu maximieren. Dies führt dazu, dass sich die Klappen bei Servoneutralstellung auf halbem Weg nach unten befinden. Der Offset-Mischer kann dann verwendet werden, um die Klappen in die „Strack-Neutralstellung“ zu bringen, wenn der Ausgang des Klappenmischers Null ist.</p>
+<h3 id="heli-bibliothek">Heli-Bibliothek<a class="headerlink" href="#heli-bibliothek" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-library-heli.png" /></p>
+<h4 id="freier-mischer_2">Freier Mischer<a class="headerlink" href="#freier-mischer_2" title="Permanent link">&para;</a></h4>
+<p>Bitte beachten Sie die Beschreibung des <a href="./">Freien Mischers</a> unter dem Abschnitt Flugzeugbibliothek oben.</p>
+<h4 id="querruder-hohenruder-seitenruder_2">Querruder, Höhenruder, Seitenruder<a class="headerlink" href="#querruder-hohenruder-seitenruder_2" title="Permanent link">&para;</a></h4>
+<p>Bitte beachten Sie die detaillierte Beschreibung der <a href="./">Quer-, Höhen-, Seitenrudermischer</a> oben.</p>
+<h4 id="pitch">Pitch<a class="headerlink" href="#pitch" title="Permanent link">&para;</a></h4>
+<p>Der Pitch-Mischer mischt die Pitch-Steuerung (standardmäßig Gasknüppel) mit dem Pitch-Kanal, der normalerweise Kanal 6 ist. Er steuert die kollektive Verstellung.</p>
+<h4 id="bank">Bank<a class="headerlink" href="#bank" title="Permanent link">&para;</a></h4>
+<p>Bei typischen FBL-Systemen für Hubschrauber ermöglicht der Bank-Modus dem Piloten, während des Fluges zwischen gespeicherten Einstellungen zu wechseln. Durch Zuweisen des Mischer-Eingangs mit einem Dreistellungsschalter können Sie in der Luft zwischen diesen Bänken (in der Regel Bank 0, 1 und 2) wechseln, um Flugparameter schnell zu ändern oder bei Bedarf Rettungsfunktionen zu aktivieren.</p>
+<h4 id="gas_2">Gas<a class="headerlink" href="#gas_2" title="Permanent link">&para;</a></h4>
+<p>Der Gasmischer dient der Motorsteuerung und umfasst die Optionen Drosselabschaltung und Drosselhalt. Bitte beachten Sie die ausführliche Anleitung zum  <a href="./">Gasmischer</a> oben.</p>
+<h4 id="kreisel">Kreisel<a class="headerlink" href="#kreisel" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer wird verwendet, um dem FBL-Regler Verstärkungseinstellungen zu liefern, die z. B. flugphasenabhängig sein können. Der Kreiselkanal ist häufig Kanal 5.</p>
+<h4 id="pitch-zu-heck">Pitch zu Heck<a class="headerlink" href="#pitch-zu-heck" title="Permanent link">&para;</a></h4>
+<p>Damit wird dem Heck-Kanal Pitch beigemischt.</p>
+<h4 id="servotester_1">Servotester<a class="headerlink" href="#servotester_1" title="Permanent link">&para;</a></h4>
+<p>Dieser Mischer eignet sich hervorragend zum Testen von Servos. Sie enthält eine Bereichseinstellung, sowie eine langsame Verstellbewegung.</p>
+<h4 id="offset_3">Offset<a class="headerlink" href="#offset_3" title="Permanent link">&para;</a></h4>
+<p>Der Offset-Mischer wird verwendet, um einen festen Wert zum Mischer hinzuzufügen, wenn ein Offset erforderlich ist.</p>
+<h3 id="multicopter-bibliothek">Multicopter-Bibliothek<a class="headerlink" href="#multicopter-bibliothek" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../assets/model-mixes-library-multirotor.png" /></p>
+<h4 id="freier-mischer_3">Freier Mischer<a class="headerlink" href="#freier-mischer_3" title="Permanent link">&para;</a></h4>
+<p>Bitte beachten Sie die Beschreibung des <a href="./">Freien Mischers</a> unter dem Abschnitt Flugzeugbibliothek oben.</p>
+<h4 id="querruder-hohenruder-seitenruder_3">Querruder, Höhenruder, Seitenruder<a class="headerlink" href="#querruder-hohenruder-seitenruder_3" title="Permanent link">&para;</a></h4>
+<p>Bitte beachten Sie die detaillierte Beschreibung der <a href="./">Quer-, Höhen-, Seitenrudermischer</a> oben.</p>
+<h4 id="bank_1">Bank<a class="headerlink" href="#bank_1" title="Permanent link">&para;</a></h4>
+<p>Bei typischen FBL-Systemen für Hubschrauber ermöglicht der Bank-Modus dem Piloten, während des Fluges zwischen gespeicherten Einstellungen zu wechseln. Durch Zuweisen des Mix-Eingangs zu einem Dreistellungsschalter können Sie in der Luft zwischen diesen Bänken (in der Regel Bank 0, 1 und 2) wechseln, um Flugparameter schnell zu ändern oder bei Bedarf Rettungsfunktionen zu aktivieren.</p>
+<h4 id="gas_3">Gas<a class="headerlink" href="#gas_3" title="Permanent link">&para;</a></h4>
+<p>Der Gasmischer dient der Motorsteuerung und umfasst die Optionen Drosselabschaltung und Drosselhalt. Bitte beachten Sie die ausführliche Anleitung zum  <a href="./">Gasmischer</a> oben.</p>
+<h4 id="servotester_2">Servotester<a class="headerlink" href="#servotester_2" title="Permanent link">&para;</a></h4>
+<p>Diese Mischung eignet sich hervorragend zum Testen von Servos. Sie enthält eine Bereichseinstellung, sowie eine langsame Verstellbewegung.</p>
+<h4 id="offset_4">Offset<a class="headerlink" href="#offset_4" title="Permanent link">&para;</a></h4>
+<p>Der Offset-Mischer wird verwendet, um einen festen Wert zum Mischer hinzuzufügen, wenn ein Offset erforderlich ist.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

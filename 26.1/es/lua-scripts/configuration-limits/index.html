@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#limites-de-configuracion" class="md-skip">
+        <a href="#limites-de-configuracion-de-los-lua-scripts" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1836,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2329,7 +2329,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -2947,7 +2947,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3256,7 +3256,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3742,28 +3742,22 @@
   
 
 
-<h1 id="limites-de-configuracion">Límites de configuración<a class="headerlink" href="#limites-de-configuracion" title="Permanent link">&para;</a></h1>
+<h1 id="limites-de-configuracion-de-los-lua-scripts">Límites de configuración de los Lua scripts<a class="headerlink" href="#limites-de-configuracion-de-los-lua-scripts" title="Permanent link">&para;</a></h1>
 <ul>
-<li><strong>2MB</strong> para mapas de bits (un único mapa de bits a pantalla completa en la
-  X20 consume por sí solo unos 768K).</li>
-<li><strong>2MB</strong> para scripts Lua, un presupuesto generoso en la práctica.</li>
+<li>
+<p>2MB para mapas de bits (un bitmap a pantalla completa en la X20 consume 768K)</p>
+</li>
+<li>
+<p>2MB para scripts Lua (es una cantidad grande)</p>
+</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Mapas de bits en los scripts</p>
-<p>Evite mantener grandes cantidades de datos de mapas de bits en la RAM. Es
-preferible la <strong>carga diferida</strong>: cargue un mapa de bits únicamente cuando
-sea realmente necesario y manténgalo después en la caché de memoria para la
-próxima vez, en lugar de releerlo repetidamente desde la SD card/eMMC.</p>
-</div>
+<p>Evite usar demasiada ram para las imágenes. Se sugiere a los usuarios cargar un bitmap SÓLO cuando sea necesario. Luego mantenerlo en la memoria para siguientes usos, para evitar múltiples lecturas de la tarjeta SD o eMMC.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1252,7 +1252,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1725,10 +1725,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gasprufung" class="md-nav__link">
+  <a href="#gasstellung-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gasprüfung
+        Gasstellung prüfen
       
     </span>
   </a>
@@ -1747,10 +1747,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#schalterprufung" class="md-nav__link">
+  <a href="#schalter-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schalterprüfung
+        Schalter prüfen
       
     </span>
   </a>
@@ -1758,10 +1758,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prufung-der-funktionsschalter" class="md-nav__link">
+  <a href="#funktionsschalter-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prüfung der Funktionsschalter
+        Funktionsschalter prüfen
       
     </span>
   </a>
@@ -1769,10 +1769,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prufung-der-potis-schieberegler" class="md-nav__link">
+  <a href="#potis-sliders-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prüfung der Potis / Schieberegler
+        Potis / Sliders prüfen
       
     </span>
   </a>
@@ -1954,7 +1954,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2179,7 +2179,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -3050,7 +3050,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3359,7 +3359,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3829,10 +3829,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gasprufung" class="md-nav__link">
+  <a href="#gasstellung-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gasprüfung
+        Gasstellung prüfen
       
     </span>
   </a>
@@ -3851,10 +3851,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#schalterprufung" class="md-nav__link">
+  <a href="#schalter-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Schalterprüfung
+        Schalter prüfen
       
     </span>
   </a>
@@ -3862,10 +3862,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prufung-der-funktionsschalter" class="md-nav__link">
+  <a href="#funktionsschalter-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prüfung der Funktionsschalter
+        Funktionsschalter prüfen
       
     </span>
   </a>
@@ -3873,10 +3873,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prufung-der-potis-schieberegler" class="md-nav__link">
+  <a href="#potis-sliders-prufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prüfung der Potis / Schieberegler
+        Potis / Sliders prüfen
       
     </span>
   </a>
@@ -3920,73 +3920,45 @@
 
 
 <h1 id="checkliste">Checkliste<a class="headerlink" href="#checkliste" title="Permanent link">&para;</a></h1>
-<p><img alt="Checkliste" src="../../assets/model-checklist.png" /></p>
-<p>Eine Reihe von Sicherheitsprüfungen vor dem Flug, die beim Einschalten des
-Senders und/oder beim Laden eines Modells ausgeführt werden. Zu den
-integrierten Prüfungen gehören Stummschaltung, nicht gesetztes Failsafe,
-Schalter- und Geberstellungen sowie Sender- und RTC-Batterie — die
-Schalterprüfung zeigt an, in welche Richtung jeder Schalter bewegt werden
-muss, gekennzeichnet durch rote Punkte auf dem Warnbildschirm:</p>
-<p><img alt="Checkliste beim Start" src="../../assets/model-checklist-at_start.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Sowohl <code>OK</code> als auch <code>RTN</code> überspringen die Vorflugprüfungen
-vollständig, unabhängig davon, was die Warnung auf dem Bildschirm
-nahelegt.</p>
-</div>
-<h2 id="gasprufung">Gasprüfung<a class="headerlink" href="#gasprufung" title="Permanent link">&para;</a></h2>
-<p><img alt="Prüffunktion" src="../../assets/model-checklist-check_function.png" /></p>
-<p>Aktivieren Sie die Prüfung und wählen Sie einen Operator — <code>&lt;</code> (kleiner
-als), <code>~</code> (ungefähr gleich) oder <code>&gt;</code> (größer als) — im Vergleich zu einem
-Wert; es wird gewarnt, wenn sich der Gasknüppel außerhalb des von diesem
-Vergleich zugelassenen Bereichs befindet.</p>
+<p><img alt="" src="../../assets/model-icon-checklist.png" /></p>
+<p>Die Checklistenfunktion bietet eine Reihe von Vorflugkontrollen. Dabei handelt es sich um eine Gruppe von Sicherheitsfunktionen, die beim Einschalten des Funkgeräts und/oder beim Laden eines Modells aus der Modellliste wirksam werden.</p>
+<p><img alt="" src="../../assets/model-checklist-at_start.png" /></p>
+<p>Zu den Standardprüfungen gehören: Sender ist im Stummen Modus, Failsafe nicht gesetzt, Schalter und Potis prüfen, Sender mit schwachem Akku, RTC-Batterie schwach, usw. Die Schalterprüfung zeigt die Richtung an, in die der Schalter bewegt werden sollte, siehe die roten Punkte im Beispiel des Warnbildschirms oben.</p>
+<p>Bitte beachten Sie, dass im Gegensatz zur obigen Warnung die OK- oder RTN-Taste die Vorflug-Checks überspringt.</p>
+<p>Zusätzliche Checks können unten eingestellt werden.</p>
+<p><img alt="" src="../../assets/model-checklist.png" /></p>
+<h2 id="gasstellung-prufen">Gasstellung prüfen<a class="headerlink" href="#gasstellung-prufen" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-check_function.png" /></p>
+<p>Um die Gasprüfung zu aktivieren, wählen Sie den zu verwendenden Operator. Die Optionen sind '&lt;' kleiner als, '~' ungefähr gleich, oder '&gt;' größer als. Der Vorflug-Check warnt Sie, wenn der Gasknüppel außerhalb des im Wert-Parameter eingestellten Werts liegt.</p>
 <h2 id="failsafe-prufung">Failsafe-Prüfung<a class="headerlink" href="#failsafe-prufung" title="Permanent link">&para;</a></h2>
-<p>Warnt, wenn für das aktuelle Modell kein <a href="../rf-system/#failsafe">Failsafe</a>
-gesetzt wurde.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Es wird dringend empfohlen, diese Prüfung aktiviert zu lassen.</p>
-</div>
-<h2 id="schalterprufung">Schalterprüfung<a class="headerlink" href="#schalterprufung" title="Permanent link">&para;</a></h2>
-<p><img alt="Schalter" src="../../assets/model-checklist-switches.png" />
-<img alt="Optionen der Schalterprüfung" src="../../assets/model-checklist-switches-options.png" /></p>
-<p>Für jeden Schalter kann eine bestimmte Stellung beim Start verlangt werden
-(Schalter mit eigenen Namen aus <a href="../../system-setup/hardware/#switches-settings">Systemeinstellungen →
-Hardware</a> werden mit diesen
-Namen angezeigt). <strong>Alle Schalterstellungen laden</strong> übernimmt die
-<em>aktuellen</em> physischen Stellungen als Sollstellungen für jeden Schalter,
-der nicht mit <strong>Keine Prüfung</strong> gekennzeichnet ist.</p>
-<h2 id="prufung-der-funktionsschalter">Prüfung der Funktionsschalter<a class="headerlink" href="#prufung-der-funktionsschalter" title="Permanent link">&para;</a></h2>
-<p><img alt="Funktionsschalter" src="../../assets/model-checklist-function-switches.png" />
-<img alt="Optionen der Funktionsschalterprüfung" src="../../assets/model-checklist-function-switches-options.png" /></p>
-<p>Dasselbe Prinzip gilt für die sechs
-<a href="../model-edit/#function-switches">Funktionsschalter</a>. <strong>Alle
-Funktionsschalterstellungen laden</strong> funktioniert genauso wie oben
-beschrieben.</p>
-<h2 id="prufung-der-potis-schieberegler">Prüfung der Potis / Schieberegler<a class="headerlink" href="#prufung-der-potis-schieberegler" title="Permanent link">&para;</a></h2>
-<p><img alt="Potis" src="../../assets/model-checklist-pots.png" />
-<img alt="Optionen der Potiprüfung" src="../../assets/model-checklist-pots-options.png" /></p>
-<p>Verlangt beim Start bestimmte Stellungen der Potis bzw. Schieberegler,
-und zwar einzeln für jedes Bedienelement (<code>~</code>/<code>&lt;</code>/<code>&gt;</code>, wie bei der
-Gasprüfung). <strong>Alle Potistellungen laden</strong> übernimmt die aktuellen
-Stellungen automatisch — prüfen Sie anschließend die automatisch
-gewählten Operatoren sorgfältig, da <code>~</code> gegenüber <code>&lt;</code>/<code>&gt;</code> möglicherweise
-nicht dem entspricht, was Sie tatsächlich beabsichtigt haben.</p>
+<p>Wenn diese Option aktiviert ist, werden Sie gewarnt, wenn Failsafe für das aktuelle Modell nicht eingestellt wurde. Es ist sehr ratsam, dies aktiviert zu lassen!</p>
+<h2 id="schalter-prufen">Schalter prüfen<a class="headerlink" href="#schalter-prufen" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-switches.png" /></p>
+<p>Für jeden Schalter können Sie festlegen, ob der Sender diese Schalter in den gewünschten vordefinierten Positionen anfordert. Wenn den Schaltern in System / Hardware / 'Schaltereinstellungen' benutzerdefinierte Namen gegeben wurden, werden diese Namen angezeigt.</p>
+<p>Mit der Option „Alle Schalter-Stellungen laden“ können Sie die gewünschten Positionen aus den aktuellen Schalterpositionen auslesen, mit Ausnahme derjenigen, die mit „nicht geprüft“ markiert sind.</p>
+<p><img alt="" src="../../assets/model-checklist-switches-options.png" /></p>
+<p>Die Kontrollmöglichkeiten sind oben dargestellt.</p>
+<h2 id="funktionsschalter-prufen">Funktionsschalter prüfen<a class="headerlink" href="#funktionsschalter-prufen" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-function-switches.png" /></p>
+<p><img alt="" src="../../assets/model-checklist-function-switches-options.png" /></p>
+<p>Für jeden Funktionsschalter können Sie festlegen, ob das Funkgerät die Schalter in die gewünschten vordefinierten Positionen bringen soll. Die Optionen sind oben dargestellt.</p>
+<p>Die Option „Alle Funktionsschalter-Positionen laden“ kann verwendet werden, um die gewünschten Positionen aus den aktuellen Funktionsschalterpositionen zu lesen, mit Ausnahme derjenigen, die mit „nicht geprüft“ markiert sind.</p>
+<h2 id="potis-sliders-prufen">Potis / Sliders prüfen<a class="headerlink" href="#potis-sliders-prufen" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-pots.png" /></p>
+<p>Legt fest, ob der Sender die Potis und Schieberegler beim Einschalten in vordefinierten Positionen anfordert. Die gewünschten Potiwerte können für jedes Poti eingegeben werden.</p>
+<p>Mit der Option „Alle Poti-Stellungen laden“ können die gewünschten Positionen aus den aktuellen Potentiometern gelesen werden, mit Ausnahme derjenigen, die mit „nicht geprüft“ markiert sind. Es muss sorgfältig geprüft werden, ob die automatisch gewählten Operatoren wie gewünscht sind (d.h. '~' vs. '&lt;' oder '&gt;').</p>
+<p><img alt="" src="../../assets/model-checklist-pots-options.png" /></p>
+<p>Alternativ können die Prüffunktionen auch einzeln eingestellt werden (d. h. '~' gegenüber '&lt;' oder '&gt;').</p>
 <h2 id="benutzerdefinierter-text">Benutzerdefinierter Text<a class="headerlink" href="#benutzerdefinierter-text" title="Permanent link">&para;</a></h2>
-<p><img alt="Benutzerdefinierter Checklistentext" src="../../assets/model-checklist-user-checklist.png" /></p>
-<p>Zeigt eine Datei mit einfachem oder erweitertem Text als Teil der
-Startcheckliste an, sobald sie für das Modell eingerichtet ist. Die
-vollständige Einrichtung finden Sie unter <a href="../../how-to/user-defined-checklist/">Anleitung: Benutzerdefinierte
-Text-Checkliste</a>.</p>
+<p>Die Funktion Checkliste kann auch benutzerdefinierten Text anzeigen. Bei dem Text kann es sich um reinen Text oder erweiterten Text handeln.</p>
+<p><img alt="" src="../../assets/model-checklist-user-checklist.png" /></p>
+<p>Sobald die Textdatei für ein bestimmtes Modell installiert ist und dieses Modell geladen wird, zeigt das Funkgerät die Checkliste als Teil der Startroutine an. Bitte lesen Sie im Abschnitt „Anleitung“ nach, wie Sie eine benutzerdefinierte Text-Checkliste einrichten.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

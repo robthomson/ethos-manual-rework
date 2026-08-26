@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#konfigurationsgrenzen" class="md-skip">
+        <a href="#grenzen-der-lua-skript-konfiguration" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1836,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2066,7 +2066,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -2947,7 +2947,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3256,7 +3256,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3742,28 +3742,22 @@
   
 
 
-<h1 id="konfigurationsgrenzen">Konfigurationsgrenzen<a class="headerlink" href="#konfigurationsgrenzen" title="Permanent link">&para;</a></h1>
+<h1 id="grenzen-der-lua-skript-konfiguration">Grenzen der LUA-Skript-Konfiguration<a class="headerlink" href="#grenzen-der-lua-skript-konfiguration" title="Permanent link">&para;</a></h1>
 <ul>
-<li><strong>2 MB</strong> für Bitmaps (allein ein einzelnes bildschirmfüllendes Bitmap
-  belegt auf dem X20 rund 768 K).</li>
-<li><strong>2 MB</strong> für Lua-Skripte — in der Praxis ein großzügiges Budget.</li>
+<li>
+<p>2MB für Bitmaps (ein Vollbild-Bitmap auf X20 verbraucht 768K)</p>
+</li>
+<li>
+<p>2MB für LUA-Skripte (dies ist eine große Menge)</p>
+</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Bitmaps in Skripten</p>
-<p>Vermeiden Sie es, große Mengen an Bitmap-Daten im RAM zu halten. Verwenden
-Sie besser <strong>Lazy Loading</strong> — laden Sie ein Bitmap erst dann, wenn es
-tatsächlich benötigt wird, und behalten Sie es anschließend für das nächste
-Mal im Speicher, anstatt es wiederholt von der SD card/eMMC einzulesen.</p>
-</div>
+<p>Vermeiden Sie es, zu viel Speicherplatz für Bitmaps zu verwenden. Es wird vorgeschlagen, dass die Benutzer „lazy loading“ verwenden = eine Bitmap NUR bei Bedarf laden. Dann wird sie für die nächste Verwendung im Speicher gehalten, um mehrfaches Lesen von der SD-Karte oder eMMC zu vermeiden.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

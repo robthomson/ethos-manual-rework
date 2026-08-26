@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migration" class="md-skip">
+        <a href="#verfahren-fur-die-umstellung-auf-frsky-suite" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1836,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2061,7 +2061,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -2932,7 +2932,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3246,7 +3246,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3742,45 +3742,24 @@
   
 
 
-<h1 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">&para;</a></h1>
-<p>Umstieg eines Senders von den älteren, separaten PC-Update-Werkzeugen auf die
-Ethos Suite – zum ersten Mal.</p>
-<ol>
-<li><strong>Ethos ≥ 1.1.4 sicherstellen</strong> — dies ist die Mindestversion, die den neuen
-   Suite-kompatiblen Bootloader (FRSK-Format) direkt aus dem
-   <a href="../../system-setup/file-manager/">Dateimanager</a> flashen kann. Falls nötig,
-   zunächst manuell auf 1.1.4 aktualisieren.</li>
-<li><strong>SD card/eMMC sichern</strong> — den gesamten Inhalt in einen Ordner auf dem
-   PC kopieren.</li>
-<li><strong>Den aktuellen Bootloader herunterladen</strong> von den
-   <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">ETHOS-Feedback-Community Releases</a>
-   und entpacken. Zu jedem Release gehört eine Datei <code>components.json</code>, in der die
-   aktuelle Version jeder Komponente aufgeführt ist — wie diese zu lesen ist, steht
-   unter <a href="../../how-to/find-latest-bootloader/">Anleitung: Den aktuellen Bootloader finden</a>.</li>
-<li>Den Sender unter dem Eintrag <code>targets</code> in dieser Datei suchen, um die genau
-   zu verwendende Bootloader-Version zu ermitteln, und die passende Datei in den
-   Assets dieses Releases heraussuchen.</li>
-<li>Den Sender in den <a href="../../getting-started/usb-connection-modes/#bootloader-mode">Bootloader-Modus</a>
-   starten (<code>ENT</code> gedrückt halten, dann einschalten) und über USB verbinden.</li>
-<li>Die Bootloader-Datei auf die SD card/eMMC kopieren (normalerweise in den Ordner
-   <code>Firmware/</code>), anschließend die Laufwerke auswerfen und die Verbindung trennen.</li>
-<li>Den Sender normal starten, zu <strong>System → Dateimanager</strong> wechseln, die soeben kopierte
-   Datei <code>bootloader.frsk</code> antippen und <strong>Bootloader flashen</strong> wählen.</li>
-<li>Die Ethos Suite herunterladen und installieren — <a href="../operation/">Bedienung</a> beschreibt
-   ab hier das Aktualisieren von Firmware und Dateien sowie die übrigen Funktionen der Suite.</li>
-<li>Wenn die Ethos Suite dies nicht automatisch erledigt, muss der Ordner <code>bitmaps/user</code>
-   auf der SD card/eMMC gegebenenfalls in <code>bitmaps/models</code> umbenannt werden (dort werden
-   die Modellbilder des Benutzers abgelegt).</li>
-</ol>
+<h1 id="verfahren-fur-die-umstellung-auf-frsky-suite">Verfahren für die Umstellung auf FrSky Suite<a class="headerlink" href="#verfahren-fur-die-umstellung-auf-frsky-suite" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Vergewissern Sie sich, dass Sie mindestens die Ethos-Version 1.1.4 verwenden, die Mindestversion, die zum Flashen des neuen, mit der FrSky Suite kompatiblen Bootloaders (FRSK-Format) über den Dateimanager des Senders erforderlich ist. Ist dies nicht der Fall, müssen Sie manuell auf 1.1.4 aktualisieren, um auf FrSky Suite für automatische Updates umsteigen zu können.</li>
+<li>Erstellen Sie eine Sicherungskopie Ihrer SD-Karte oder eMMC (es ist ratsam, alles in einen Ordner auf Ihrem Computer zu kopieren).</li>
+<li>Laden Sie die Zip-Datei für den neuesten Bootloader von <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases</a> für Ihren Sender herunter und entpacken Sie sie. Die aktuellen Bootloader-Versionen sind in einer Datei namens components.json aufgeführt, die alle in einer Version verwendeten Komponenten auflistet. Die Datei wird mit jeder neuen Firmware-Version veröffentlicht und kann mit einem Texteditor wie Notepad geöffnet werden.</li>
+<li>Suchen Sie einfach Ihren Sender unter den Überschriften „Ziele“, dann wird die entsprechende Bootloader-Versionsnummer darunter aufgeführt. Sie finden den Bootloader in den Assets der Ethos-Version mit dieser Nummer.</li>
+<li>Schalten Sie den Sender im Bootloader-Modus ein (halten Sie die Eingabetaste gedrückt und drücken Sie dann auf ON) und verbinden Sie das System über ein USB-Datenkabel mit dem PC.</li>
+<li>Kopieren Sie den Bootloader in einen Ordner auf Ihrer SD-Karte oder eMMC (normalerweise in den Ordner Firmware), werfen Sie dann die Laufwerke sicher aus und trennen Sie den Sender vom PC.</li>
+<li>Starten Sie den Sender, gehen Sie zu System / Dateimanager, tippen Sie auf die Datei bootloader.frsk, die Sie soeben kopiert haben, und wählen Sie die Option „Flash bootloader“.</li>
+<li>Laden Sie die FrSky Suite herunter und installieren Sie sie. Sie sollten nun in der Lage sein, die nachstehenden Abschnitte zu befolgen, um Ihre Sender-Firmware und die Flash- und SD-Karten- oder eMMC-Dateien auf die neuesten Versionen zu aktualisieren und die anderen Funktionen der FrSky Suite zu nutzen.</li>
+<li>Bitte beachten Sie, dass Sie möglicherweise den Ordner bitmaps/user auf der SD-Karte oder eMMC in bitmaps/models umbenennen müssen, wenn FrSky Suite dies nicht für Sie tut. Dies ist der Ordner, in dem die Benutzer-Bitmaps gespeichert werden.</li>
+</ul>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -3810,7 +3789,7 @@ Ethos Suite – zum ersten Mal.</p>
       <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Ethos Suite">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Zurück: FrSky Suite">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3820,7 +3799,7 @@ Ethos Suite – zum ersten Mal.</p>
                 Zurück
               </span>
               <div class="md-ellipsis">
-                Ethos Suite
+                FrSky Suite
               </div>
             </div>
           </a>

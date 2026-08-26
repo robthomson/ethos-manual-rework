@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#estructura-basica-de-un-widget" class="md-skip">
+        <a href="#estructura-de-un-widget-lua" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del sistema
+    Visión general
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Configuración del modelo
+    Descripción
   
 
     
@@ -1836,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Pantallas
+    Configurar pantallas
   
 
     
@@ -2208,6 +2208,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura básica de un widget
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2224,6 +2242,225 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initfuncion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init(función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodo-systemregisterwidget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Método system.registerWidget()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clave-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clave (cadena)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-cadena-o-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nombre (cadena o función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crear (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crear (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destruir-funcion-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        destruir (función, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurar-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configurar (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="configurar (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construir-funcion-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construir (función, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wakeup-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wakeup (función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evento-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        evento (función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pintar-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pintar (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pintar (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menu-funcion-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        menu (función, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leer-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        leer (function)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escribir-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escribir (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="escribir (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persistente-booleano-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        persistente (booleano, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#titulo-booleano-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        titulo (booleano, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2329,7 +2566,7 @@
   <span class="md-ellipsis">
     
   
-    Tutoriales
+    Tutoriales de Programación
   
 
     
@@ -2947,7 +3184,7 @@
   <span class="md-ellipsis">
     
   
-    Notas sobre las emisoras
+    Radio Notes
   
 
     
@@ -3256,7 +3493,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    Suite Frsky
   
 
     
@@ -3719,6 +3956,214 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initfuncion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init(función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodo-systemregisterwidget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Método system.registerWidget()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clave-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clave (cadena)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-cadena-o-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nombre (cadena o función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        crear (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="crear (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destruir-funcion-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        destruir (función, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurar-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configurar (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="configurar (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construir-funcion-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construir (función, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wakeup-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wakeup (función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evento-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        evento (función)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pintar-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pintar (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pintar (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menu-funcion-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        menu (función, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leer-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        leer (function)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escribir-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escribir (función)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="escribir (función)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persistente-booleano-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        persistente (booleano, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#titulo-booleano-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        titulo (booleano, opcional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3742,68 +4187,63 @@
   
 
 
-<h1 id="estructura-basica-de-un-widget">Estructura básica de un widget<a class="headerlink" href="#estructura-basica-de-un-widget" title="Permanent link">&para;</a></h1>
-<p>Un widget Lua personalizado (consulte <a href="../../displays/custom-widgets/">Widgets personalizados</a>
-para instalar uno) se construye a partir de un pequeño conjunto de campos/manejadores con nombre:</p>
-<ul>
-<li><strong><code>key</code></strong> <em>(cadena)</em> — un identificador único para el widget.</li>
-<li><strong><code>name</code></strong> <em>(cadena o función)</em> — el nombre visible del widget. Puede ser una
-  cadena simple o una función que no recibe argumentos y devuelve una —
-  útil para un nombre que varíe según el idioma.</li>
-<li><strong><code>create</code></strong> <em>(función)</em> — se llama una única vez cuando se crea el widget,
-  sin recibir argumentos. Devuelve una <strong>tabla del widget</strong>, que a su vez se pasa
-  a todos los demás manejadores descritos a continuación — inicialice aquí su estado y almacénelo
-  en esa tabla.</li>
-<li><strong><code>configure</code></strong> <em>(función)</em> — se llama cuando el usuario abre la pantalla de
-  configuración del widget, recibiendo como único argumento la tabla del widget devuelta por
-  <code>create()</code> y sin devolver nada. Construya aquí el formulario de configuración y
-  utilícelo para actualizar los valores de la tabla del widget.</li>
-<li><strong><code>wakeup</code></strong> <em>(función)</em> — se llama en cada ciclo (aproximadamente cada 50 ms),
-  recibiendo la tabla del widget y sin devolver nada. Compruebe aquí si algo
-  ha cambiado; en tal caso, llame a <code>invalidateWindow()</code> para provocar un repintado mediante
-  <code>paint()</code>. Mantenga este manejador rápido — idealmente sin hacer nada en absoluto la mayoría
-  de las veces que se le llama.</li>
-<li><strong><code>event</code></strong> <em>(función)</em> — se llama cuando el widget recibe un evento;
-  Ethos encamina eventos arbitrarios hacia el widget a través de este manejador.</li>
-<li><strong><code>paint</code></strong> <em>(función)</em> — dibuja el widget, recibiendo la tabla del widget y
-  sin devolver nada. Se llama automáticamente siempre que se haya disparado <code>lcd.invalidate()</code>.
-  Puede ser comparativamente lento, pero aun así solo debería redibujar realmente
-  cuando algo haya cambiado.</li>
-<li><strong><code>read</code></strong> <em>(función, opcional)</em> — lee el almacenamiento persistente del widget.</li>
-<li><strong><code>write</code></strong> <em>(función, opcional)</em> — escribe el almacenamiento persistente del widget.</li>
-<li><strong><code>init</code></strong> <em>(función)</em> — registra el widget y sus retrollamadas en
-  Ethos. Normalmente es lo último del script:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
-<span class="w">  </span><span class="nv">system</span><span class="p">.</span><span class="nf">registerWidget</span><span class="p">({</span>
-<span class="w">    </span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"unique"</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">create</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">create</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">configure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">configure</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">wakeup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">wakeup</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">paint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">paint</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">read</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">read</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">write</span><span class="p">,</span>
-<span class="w">  </span><span class="p">})</span>
-<span class="kr">end</span>
-
-<span class="kr">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div>
-<p><code>key</code> debe ser único entre todos los widgets instalados; los demás campos se
-integran en el ciclo de vida del widget tal como se describe más arriba.</p>
-<p>Los scripts se ubican en <code>scripts/</code> en la SD card/eMMC, idealmente organizados en
-carpetas por widget (consulte <a href="../../system-setup/file-manager/#top-level-folders">Gestor de archivos</a> y <a href="../example-script-locations/">Ubicaciones
-de ejemplo para scripts</a>). Consulte el hilo <em>FrSky ETHOS Lua
-Script Programming</em> en rcgroups para más ejemplos desarrollados.</p>
+<h1 id="estructura-de-un-widget-lua">Estructura de un widget Lua<a class="headerlink" href="#estructura-de-un-widget-lua" title="Permanent link">&para;</a></h1>
+<p>Todos los scripts de Lua, incluidos los widgets, utilizan manejadores (también conocidos como módulos de código) para realizar tareas específicas como el procesamiento de datos en segundo plano, controlar/dibujar la pantalla, configurar widgets, leer o guardar configuraciones, capturar y evaluar eventos, etc.</p>
+<h2 id="initfuncion">init(función)<a class="headerlink" href="#initfuncion" title="Permanent link">&para;</a></h2>
+<p>La función del controlador init se utiliza para registrar el widget durante el inicio del transmisor. Utiliza el método system.registerWidget() para declarar el widget. También especifica qué controladores adicionales se utilizan en el script.</p>
+<p>Un ejemplo de un manejador de inicialización para un widget podría ser:</p>
+<p>local function init()</p>
+<p>system.registerWidget({</p>
+<p>key = "unique",</p>
+<p>name = “Example”,</p>
+<p>create = create,</p>
+<p>configure = configure,</p>
+<p>wakeup = wakeup,</p>
+<p>paint = paint,</p>
+<p>read = read,</p>
+<p>write = write,</p>
+<p>})</p>
+<p>end</p>
+<p>Tenga en cuenta que 'key' es un identificador único para su widget. Las diversas funciones enumeradas se utilizan en el ciclo de vida del widget.</p>
+<h2 id="metodo-systemregisterwidget">Método system.registerWidget()<a class="headerlink" href="#metodo-systemregisterwidget" title="Permanent link">&para;</a></h2>
+<p>El método system.registerWidget() puede tener los siguientes parámetros:</p>
+<h2 id="clave-cadena">clave (cadena)<a class="headerlink" href="#clave-cadena" title="Permanent link">&para;</a></h2>
+<p>El widget debe tener una clave única que no tenga más de 7 caracteres.</p>
+<h2 id="nombre-cadena-o-funcion">nombre (cadena o función)<a class="headerlink" href="#nombre-cadena-o-funcion" title="Permanent link">&para;</a></h2>
+<p>El nombre de una función no tiene argumentos y devuelve el nombre del widget como una cadena. El nombre del widget puede ser simplemente una cadena o el resultado de una función. Por ejemplo, el nombre puede estar en un idioma diferente según la configuración regional.</p>
+<h2 id="crear-funcion">crear (función)<a class="headerlink" href="#crear-funcion" title="Permanent link">&para;</a></h2>
+<p>La función ‘create handler’ se usa al crear el widget. No tiene argumentos y cuando termine devolverá la tabla del widget que luego se utilizará en todas las otras funciones. Inicialice sus variables aquí y almacene su estado en la tabla que devuelve el widget.</p>
+<h3 id="destruir-funcion-opcional">destruir (función, opcional)<a class="headerlink" href="#destruir-funcion-opcional" title="Permanent link">&para;</a></h3>
+<p>La función destruir se usa cuando se borra un widget.</p>
+<h2 id="configurar-funcion">configurar (función)<a class="headerlink" href="#configurar-funcion" title="Permanent link">&para;</a></h2>
+<p>La función ‘configurar manejador’ se activa cuando el usuario entra en la configuración del widget. Toma la tabla creada por el widget anterior y sólo sus argumentos y no devuelve nada. De esta forma, puede crearse el formato de la configuración y cambiarse dentro de la tabla.</p>
+<h3 id="construir-funcion-opcional">Construir (función, opcional)<a class="headerlink" href="#construir-funcion-opcional" title="Permanent link">&para;</a></h3>
+<p>El manejador de construir se llama en cada cambio de diseño cuando el widget se construye en la pantalla de inicio, y después de la creación y configuración.</p>
+<h2 id="wakeup-funcion">wakeup (función)<a class="headerlink" href="#wakeup-funcion" title="Permanent link">&para;</a></h2>
+<p>La función ‘wakeup handler’ funciona en cada ciclo. Por ejemplo cada 50ms. Maneja el contenido de la tabla y sus argumentos, pero no devuelve nada.</p>
+<p>La función wakeup() debería comprobar si algo ha cambiado. En caso afirmativo, se necesita un refresco por lo que se debe llamar a la función invalidateWindow(). Esto hará que se llame a la función paint(). Debe asegurarse de que esta función sea rápida, idealmente que no tenga que hacer nada durante el mayor tiempo posible.</p>
+<h2 id="evento-funcion">evento (función)<a class="headerlink" href="#evento-funcion" title="Permanent link">&para;</a></h2>
+<p>La función ‘event handler’ se usa cuando se recibe un evento. ETHOS ofrece la posibilidad de capturar cualquier evento en un widget, a través de esta función.</p>
+<h2 id="pintar-funcion">pintar (función)<a class="headerlink" href="#pintar-funcion" title="Permanent link">&para;</a></h2>
+<p>La función ‘paint’ dibuja el widget. Maneja el contenido de la tabla y sus argumentos y no devuelve nada. También debe usarse cuando se necesita una actualización, y es llamada automáticamente siempre que se llama a lcd.invalidate(). Puede ser muy lenta, así que se debe llamar sólo si algo ha cambiado.</p>
+<h3 id="menu-funcion-opcional">menu (función, opcional)<a class="headerlink" href="#menu-funcion-opcional" title="Permanent link">&para;</a></h3>
+<p>El manejador de menú opcional se llama cuando se crea un menú contextual, para permitir agregar más opciones al menú. El manejador debe devolver una tabla de pares { nombre, función }.</p>
+<h2 id="leer-function">leer (function)<a class="headerlink" href="#leer-function" title="Permanent link">&para;</a></h2>
+<p>Esta función ‘read handler’ es opcional. En ETHOS es posible utilizar el almacenamiento como se desee.</p>
+<h2 id="escribir-funcion">escribir (función)<a class="headerlink" href="#escribir-funcion" title="Permanent link">&para;</a></h2>
+<p>La función ‘write handler’ también es opcional. En ETHOS es posible utilizar el almacenamiento como se desee.</p>
+<h3 id="persistente-booleano-opcional">persistente (booleano, opcional)<a class="headerlink" href="#persistente-booleano-opcional" title="Permanent link">&para;</a></h3>
+<p>Manejador de datos persistentes opcional.</p>
+<h3 id="titulo-booleano-opcional">titulo (booleano, opcional)<a class="headerlink" href="#titulo-booleano-opcional" title="Permanent link">&para;</a></h3>
+<p>Manejador de título opcional. El título del widget se fuerza ENCENDIDO / APAGADO.</p>
+<p>Los scripts Lua se almacenan en la carpeta scripts/ de la tarjeta SD o eMMC, preferiblemente organizadas en carpetas.</p>
+<p>Consulte el hilo de rcgroups 'FrSky ETHOS Lua Script Programming' para más información.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

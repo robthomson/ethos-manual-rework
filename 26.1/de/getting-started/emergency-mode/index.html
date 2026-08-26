@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notfallmodus" class="md-skip">
+        <a href="#notfall-modus-emergency-mode" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -883,10 +883,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notfallmodus-testen" class="md-nav__link">
+  <a href="#test-des-notfallmodus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notfallmodus testen
+        Test des Notfallmodus
       
     </span>
   </a>
@@ -973,7 +973,7 @@
   <span class="md-ellipsis">
     
   
-    Systemeinstellungen
+    Übersicht (Seite 1)
   
 
     
@@ -1310,7 +1310,7 @@
   <span class="md-ellipsis">
     
   
-    Modellkonfiguration
+    Übersicht
   
 
     
@@ -1899,7 +1899,7 @@
   <span class="md-ellipsis">
     
   
-    Anzeigen
+    Bildschirme konfigurieren
   
 
     
@@ -2124,7 +2124,7 @@
   <span class="md-ellipsis">
     
   
-    Lua-Skripte
+    LUA Scripte
   
 
     
@@ -2995,7 +2995,7 @@
   <span class="md-ellipsis">
     
   
-    Senderhinweise
+    Radio Notes
   
 
     
@@ -3304,7 +3304,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3774,10 +3774,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notfallmodus-testen" class="md-nav__link">
+  <a href="#test-des-notfallmodus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notfallmodus testen
+        Test des Notfallmodus
       
     </span>
   </a>
@@ -3809,21 +3809,24 @@
   
 
 
-<h1 id="notfallmodus">Notfallmodus<a class="headerlink" href="#notfallmodus" title="Permanent link">&para;</a></h1>
-<p>Der Notfallmodus ist die Reaktion von Ethos auf einen unerwarteten Fehler auf unterer Systemebene, beispielsweise einen Watchdog-Reset. Der Watchdog ist ein Timer, der von verschiedenen Teilen des Systems fortlaufend neu gestartet wird; wird dieser Neustart durch irgendetwas verhindert, läuft der Timer ab und erzwingt einen Hardware-Reset. Der Notfallmodus startet den Sender daraufhin so schnell wie möglich neu und überspringt dabei sämtliche üblichen Startprüfungen, sodass die Kontrolle über das Modell mit minimaler Verzögerung wieder zur Verfügung steht. Auf die SD card bzw. den eMMC-Speicher wird in diesem Modus überhaupt nicht zugegriffen.</p>
-<p>Verfügbar sind ausschließlich die wesentlichen Funktionen, die zur weiteren Steuerung des Modells erforderlich sind — keine der höheren Funktionen. Der Bildschirm bleibt leer bis auf den Schriftzug <strong>EMERGENCY MODE</strong>, begleitet von einem alle 3 Sekunden wiederholten Signalton von 300 ms Dauer; Sprachansagen, Lua-Skripte, Datenaufzeichnung und Telemetrie werden vollständig eingestellt. Tritt dies im Flug auf, landen Sie so schnell wie möglich.</p>
-<p>Die häufigste Ursache ist ein Ausfall der SD card.</p>
-<h2 id="notfallmodus-testen">Notfallmodus testen<a class="headerlink" href="#notfallmodus-testen" title="Permanent link">&para;</a></h2>
-<p>Es kann ein <strong>Systemtool</strong> hinzugefügt werden, mit dem sich der Notfallmodus zu Testzwecken gezielt auslösen lässt, damit man ihn nicht erst im Flug zum ersten Mal erlebt. Ein Tippen auf das Symbol „Emergency Test“ fordert zunächst eine Bestätigung an und versetzt den Sender anschließend genau so in den Notfallmodus, wie es bei einem echten Fehler geschehen würde.</p>
+<h1 id="notfall-modus-emergency-mode">Notfall-Modus (Emergency Mode)<a class="headerlink" href="#notfall-modus-emergency-mode" title="Permanent link">&para;</a></h1>
+<p>Der Notfallmodus ist die Reaktion des Senders auf ein unerwartetes Ereignis wie das Zurücksetzen des Watchdogs. Der Watchdog ist ein Zeitgeber, der von verschiedenen Teilen von Ethos ständig neu gestartet wird. Wenn ein Fehler jeglicher Art verhindert, dass der Watchdog-Timer neu gestartet werden kann, läuft die Zeit ab und führt zu einem Hardware-Reset des Senders. In diesem Notfallmodus startet der Sender extrem schnell neu, ohne die normalen Startprüfungen, damit Sie so schnell wie möglich wieder die Kontrolle über Ihr Modell erhalten. Auf die SD-Karte oder eMMC wird im Notfallmodus nicht zugegriffen.</p>
+<p>Im Notfallmodus stehen nur die wesentlichen Funktionen zur Steuerung Ihres Modells zur Verfügung, jedoch keine der übergeordneten Funktionen. Der Bildschirm wird leer und zeigt die Worte 'EMERGENCY MODE' an, begleitet von einem 300ms langen Piepton, der sich alle 3 Sekunden wiederholt. Sprachalarme, Skripte, Protokollierung usw. werden nicht mehr ausgeführt. Wenn der Notfallmodus eintritt, sollten Sie natürlich so schnell wie möglich landen.</p>
+<p>Die häufigste Ursache für den Notfallmodus ist ein Ausfall der SD-Karte.</p>
+<h2 id="test-des-notfallmodus">Test des Notfallmodus<a class="headerlink" href="#test-des-notfallmodus" title="Permanent link">&para;</a></h2>
+<p>In einigen Fällen kann es für die Benutzer hilfreich sein, den Notfallmodus testen zu können.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CAE58A4D.png" /></p>
+<p>Zum Testen des Notfallmodus kann ein Systemtool hinzugefügt werden. Tippen Sie auf das Symbol Notfalltest, um den Test zu starten.</p>
+<p><img alt="" src="../../assets/Pictures/1000000100000320000001E08E7E1C65.png" /></p>
+<p>In diesem Dialogfeld werden Sie um Bestätigung gebeten, um fortzufahren.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0FC0300AF.png" /></p>
+<p>Der Sender wechselt in den Notfallmodus.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -3870,13 +3873,13 @@
         
         
           
-          <a href="../../system-setup/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Systemeinstellungen">
+          <a href="../../system-setup/" class="md-footer__link md-footer__link--next" aria-label="Weiter: Übersicht (Seite 1)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Weiter
               </span>
               <div class="md-ellipsis">
-                Systemeinstellungen
+                Übersicht (Seite 1)
               </div>
             </div>
             <div class="md-footer__button md-icon">
