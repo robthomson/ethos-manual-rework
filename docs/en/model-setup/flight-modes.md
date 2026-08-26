@@ -1,62 +1,49 @@
-# Flight Modes
+# Flight modes
 
-![Flight modes](../assets/model-fm.png)
+![](../assets/model-icon-fm.png)
 
-Flight modes (flight phases) let a switch select between distinct
-behaviors for the same model — gliders might use Launch/Cruise/Speed/
-Thermal, power planes Normal/Take Off/Landing, helicopters Normal (spool
-up, take off/landing) / Idle Up 1 (aerobatics) / Idle Up 2 (3D). They take
-most of the manual switching and re-trimming burden off the pilot: a
-flight mode can carry its own independent trims, and can gate both
-[Vars](variables.md) and [Mixes](mixes.md) — combined, that's enough for
-real complexity. See [Basic Fixed-Wing
-Example](../tutorials/basic-fixed-wing.md) for flight modes applied to a
-real model.
+Flight modes bring incredible flexibility to a model setup, because they allow models to be set up for switch selectable specific tasks or flight behavior. For example, gliders may be set up to have switch selectable modes such as Launch, Cruise, Speed and Thermal. Power planes may have flight modes for Normal precision flying, Take Off, and Landing with either half or full flaps deployed. Helicopters have modes such as Normal for spool up and take off/landing, Idle Up 1 for aerobatic flying, and Idle Up 2 for perhaps 3D.
 
-No flight modes are defined by default. Tap the default flight mode and
-choose **Edit** to rename it, or **Add** to create a new one — up to 20
-in total.
+Flight modes remove much of the switching and trimming burden from the pilot.
+
+The great power of flight modes is that they support independent trims and can also be used to enable Vars and Mixes. Together, these features allow for great flexibility. Please refer to the [Introduction to Flight Modes](../tutorials/basic-fixed-wing.md) in the Tutorials section to see examples of these features applied.
+
+![](../assets/model-fm.png)
+
+There are no default flight modes defined. Tap on the default flight mode, and select Edit if you wish to rename it, otherwise select Add to define a new flight mode. There may be up to 20 flight modes.
+
+![](../assets/model-fm-form.png)
 
 ## Name
 
-A descriptive name — Cruise, Speed, Thermal, Take Off, Landing, whatever
-fits.
+Allows the flight mode to be named.
 
 ## Active condition
 
-![Flight mode form](../assets/model-fm-form.png)
+When adding a flight mode the default active condition is inactive, i.e ‘---’. Flight modes may be controlled by switch or button positions, function switches, logic switches, a system event such as throttle cut or hold, or trim positions.
 
-A new flight mode starts inactive (`---`). Once set, it can be driven by a
-switch or button position, a function switch, a logical switch, a system
-event (throttle cut/hold), or a trim position.
+Note that the default flight mode does not have an ‘Active condition’ parameter, because this is the flight mode that is always active when no other flight mode is active. The first flight mode that has its switch ON is the active one. Note that only one flight mode is active at a time.
 
-The **default** flight mode has no Active condition at all — it's what's
-active whenever no other flight mode's condition is true. Only ever one
-flight mode is active at a time: the first one (in priority order) whose
-condition is currently true. The active mode is shown in bold.
-
-!!! warning "Adding a flight mode to an existing model"
-    A newly added flight mode is, by default, active in every mix that's
-    already flight-mode-dependent — check each such mix still behaves
-    correctly, particularly a **Lock** mix locking a channel to a specific
-    flight mode.
+The active flight mode is shown in bold.
 
 ## Fade in, out
 
-Transition times for smoothly blending between flight modes (e.g. 1
-second each way) — this only has an effect on mixes that are themselves
-flight-mode dependent.
+The times assigned for smooth transitions between flight modes. The example shows one second assigned to each. Please note that flight mode fade in / fade out only works if the mix is flight mode dependent.
+
+![](../assets/model-fm-0to3.png)
+
+Once programed the flight mode selections are displayed in the mixes. Up to 100 flight modes can be programmed. Like most functions in ETHOS the user can program descriptive text flight mode names such as Cruise, Speed, Thermal or Normal, Take Off, Landing.
+
+Please note when adding a new flight mode to a model all mixes using flight modes must be checked for correct operation, because the new flight mode will by default be active in all mixes using flight modes. This is an issue for example when using a Lock mix to lock a specific channel in a specific FM.
 
 ## Flight mode management
 
-![Move flight mode](../assets/model-fm-move.png)
-![Select for move](../assets/model-fm-move-select.png)
-![Modes 0-3](../assets/model-fm-0to3.png)
+![](../assets/model-fm-move-select.png)
 
-Tap a flight mode for **Edit**, **Add**, **Clone**, or **Delete**. A
-**cloned** flight mode inherits its parent's settings in every mix that
-uses flight modes — same behavior, same active/inactive state — so a
-clone is added as the last flight mode by default, to avoid interfering
-with existing ones. **Move** changes a flight mode's priority: priority
-runs in ascending order, and (as above) the first one with its condition
-true is the one that's active.
+Tap on a flight mode to bring up a menu which allows you to edit, add a new flight mode, clone or delete flight modes.
+
+A cloned flight mode will inherit the parent’s flight mode settings in mixes, so the mixes will behave the same and also be active (or not) when the cloned flight mode is active. The new clone should be added as the last FM so that it can't interfere with any existing FM.
+
+![](../assets/model-fm-move.png)
+
+You can use the 'Move' option to change the priority of a flight mode. The priority of flight modes is in ascending order, and the first one that has its switch ON is the active one.

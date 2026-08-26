@@ -1,33 +1,13 @@
-# Additional Displays
+# Adding additional **screens**
 
-![Screen config options](../assets/display-screen-config-options.png)
+![](../assets/display-home.png)
 
-The default model comes with one screen (a model bitmap plus three timer
-widgets), but up to **eight** screens total are supported. Tap the **+**
-next to "Screen1" to add another:
+Tap on the ‘+’ button next to ‘Screen1’ to add an additional screen.
 
-- Choose from **15** layouts, including two dedicated home-screen layouts
-  and a full-screen option, holding up to 9 widgets — configured exactly
-  like the first screen.
-- Screens can be reordered or deleted from their own edit dialog (tap
-  Screen1, Screen2, etc.).
+![](../assets/Pictures/10000001000001B50000033DF84D718D.png)
 
-## Worked example
+You can select from 15 different layouts (including full screen and a choice of two home screens) having up to 9 widgets. These can then be configured as for screen 1.
 
-![Main view](../assets/display-main-view.png)
+![](../assets/display-screen-config-options.png)
 
-A typical layout: the model bitmap (configured in [Model Edit →
-Picture](../model-setup/model-edit.md)) on the left, with receiver
-battery voltage, RSSI, and a "Throttle ACTIVE" Status widget (a
-community-built Lua widget from the *FrSky - ETHOS Lua Script
-Programming* rcgroups thread) stacked on the right. Tapping any widget
-opens its configuration, or jumps to the main Configure Screens function.
-
-## Screen-level options
-
-Beyond individual widgets, each screen has its own settings — layout grid
-size, background, and which screens are included in the `PAGE` cycle.
-
-See [Displays](index.md) for the widgets themselves, and [Custom
-Widgets](custom-widgets.md) for adding Lua-scripted widgets beyond the
-built-in set.
+Screens may be re-ordered or even deleted. The screen editing dialog is invoked by tapping on Screen1, or Screen2, etc.

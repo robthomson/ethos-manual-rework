@@ -1,13 +1,9 @@
-# Lua Interpreter
+# ETHOS Lua interpreter
 
-Ethos embeds an interpreter based on **Lua 5.4.3**, packaged with:
+The Lua interpreter embedded inside ETHOS is based on LUA 5.4.3. and is packaged with these libraries:
 
-- the basic library
-- the table library
-- the io library
-- the os library
-- the math library
-
-Scripts run against this environment whether they're implementing a
-[display widget](../displays/custom-widgets.md) or a per-model
-[source/task](../model-setup/lua-scripts.md).
+- basic library
+  - table library
+  - io library
+  - os library
+  - math library

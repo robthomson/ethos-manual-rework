@@ -1,27 +1,7 @@
-# Lua Scripts
+# **Lua** **Scripts**
 
-Lua scripts let you build custom [display widgets](../displays/custom-widgets.md)
-to show information Ethos doesn't natively cover, and (per model) custom
-[sources and tasks](../model-setup/lua-scripts.md) — a foundation planned
-to grow further, toward specialized custom functions and flight
-controller integration.
+Lua scripts allow you to create custom widgets to display information in the Ethos main views. In future it will also allow you to modify the behavior of the radio to add specialized functions for custom tasks, and to interface with flight controllers and the like.
 
-Lua itself is a lightweight, embeddable general-purpose scripting
-language (used everywhere from games to web apps); Ethos embeds it for
-exactly this kind of on-radio customization.
+The Lua scripting language is a lightweight embeddable scripting language and is designed to be used for all sorts of applications from games to web applications and image processing, and in this case for implementing custom functions in the radio.
 
-!!! warning
-    Lua scripts add to the radio's startup time. A well-written script's
-    delay should be unnoticeable — a poorly written one can delay startup
-    almost indefinitely.
-
-- [Lua Interpreter](lua-interpreter.md) — which Lua version and libraries
-  Ethos embeds.
-- [Ethos Lua Documentation](ethos-lua-documentation.md) — where the full
-  API reference lives.
-- [Example Script Locations](example-script-locations.md) — where to find
-  and download working examples.
-- [Configuration Limits](configuration-limits.md) — memory budgets for
-  bitmaps and scripts.
-- [Basic Widget Layout](basic-widget-layout.md) — the code structure a
-  custom widget script needs.
+Please note that Lua scripts increase the startup time of the radio. If they are implemented correctly the delay should not be noticeable, but if it is not the case, then the delay may be almost indefinite.

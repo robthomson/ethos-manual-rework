@@ -1,11 +1,7 @@
-# Configuration Limits
+# Lua scripting configuration limits
 
-- **2MB** for bitmaps (a single full-screen bitmap on the X20 alone uses
-  roughly 768K).
-- **2MB** for Lua scripts — a generous budget in practice.
+- 2MB for bitmaps (one full screen bitmap on X20 consumes 768K)
 
-!!! tip "Bitmaps in scripts"
-    Avoid holding large amounts of bitmap data in RAM. Prefer **lazy
-    loading** — load a bitmap only when it's actually needed, then keep
-    it cached in memory for next time rather than re-reading it from the
-    SD card/eMMC repeatedly.
+- 2MB for Lua scripts (this is a large amount)
+
+Avoid using too much ram for bit maps. It is suggested the users use lazy loading = load a bitmap ONLY when needed. Then keep it in memory for the next use, to avoid multiple reads from the SD card or eMMC.
