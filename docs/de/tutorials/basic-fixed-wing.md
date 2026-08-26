@@ -1,237 +1,291 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # Grundlegendes Beispiel für ein Flächenflugzeug
 
-Eine vollständige Schritt-für-Schritt-Anleitung für ein Flugzeug mit Motor + 2 Querrudern + 2 Klappen + Höhenruder + Seitenruder, mit einem Servo für jede Fläche, komplett mit dem Assistenten aufgebaut.
-Führen Sie zuvor die [Ersteinrichtung des Senders](initial-radio-setup.md) durch.
+Dieses einfache Beispiel für ein Flugzeug umfasst die Konfiguration eines Modells mit einem Motor, 2 Querrudern (und optional Einziehfahrwerken und 2 Klappen) und einem Servo für jede Fläche.
 
 ## Schritt 1. Bestätigen Sie die Systemeinstellungen
 
-Für dieses Beispiel verwenden wir die standardmäßige Kanalreihenfolge **AETR**.
+Beginnen Sie mit dem obigen „Beispiel für die Ersteinrichtung des Senders“, das zur Konfiguration der Teile des Senders dient, die allen Modellen gemeinsam sind. Für dieses Beispiel verwenden wir die standardmäßige AETR (Querruder, Höhenruder, Gas, Seitenruder) Kanalreihenfolge.
 
 ## Schritt 2. Identifizieren Sie die benötigten Servos/Kanäle
 
-Die [Mischer-Funktion](../model-setup/mixes.md) bildet das Herzstück des Senders — bis zu 100
-Mischer-Kanäle, wobei normalerweise die Kanäle mit der niedrigsten Nummer den Servos zugewiesen werden (da
-die Kanalnummern direkt den Kanälen im Empfänger zugeordnet sind; das interne HF-Modul des X20
-hat bis zu 24 Ausgangskanäle zur Verfügung). Die oberen Kanäle stehen als
-virtuelle Kanäle oder als zusätzliche echte Kanäle unter Verwendung mehrerer HF-Module und
-SBus zur Verfügung. Unser Beispielflugzeug:
+Die Mischer-Funktionen bildet das Herzstück des Senders. Sie ermöglicht es, jede der vielen Eingangsquellen nach Belieben zu kombinieren und einem der Ausgangskanäle zuzuordnen. Ethos verfügt über 100 Mischer-Kanäle für die Programmierung Ihres Modells. Normalerweise werden die Kanäle mit der niedrigsten Nummer den Servos zugewiesen, da die Kanalnummern direkt den Kanälen im Empfänger zugeordnet sind. Das X20 Interne HF- (Radio Frequency) Modul hat bis zu 24 Ausgangskanäle zur Verfügung.
 
-| Funktion | Kanäle |
-|---|---|
-| Motor | 1 |
-| Querruder | 2 |
-| Klappen | 2 |
-| Höhenruder | 1 |
-| Seitenruder | 1 |
+Die oberen Mischer-Kanäle können als 'virtuelle Kanäle' in einer fortgeschrittenen Programmierung oder als echte Kanäle unter Verwendung mehrerer HF-Module (intern + extern) und SBus verwendet werden. Die Kanalreihenfolge ist eine Frage der persönlichen Vorliebe oder Konvention, oder sie kann vom Empfänger vorgegeben werden. Für unser Beispiel werden wir AETR verwenden.
 
-(Einziehfahrwerke werden später eingebaut, in [Schritt 10](#step-10-add-a-mix-for-retracts).)
+Unser Beispielflugzeug hat die folgenden Servos/Kanäle:
 
-## Schritt 3. Erstellen Sie ein neues Modell
+1 Motor
 
-![Flugzeugmodell erstellen](../assets/tut-fw-eg-wiz-create-airplane.png)
+2 Querruder
 
-Wählen Sie in der [Modellauswahl](../model-setup/model-select.md) die Modellkategorie,
-tippen Sie auf **+** und starten Sie den Assistenten **Airplane**. Für dieses Beispiel wählen wir die Option **Non stabilized
-receiver** (nicht stabilisierter Empfänger).
+2 Klappen
 
-![Motorkanäle](../assets/tut-fw-eg-wiz-engine.png)
-![Querruder-/Klappenkanäle](../assets/tut-fw-eg-wiz-ail-flaps.png)
+1 Höhenruder
 
-Übernehmen Sie die Voreinstellung von 1 Kanal für den Motor, akzeptieren Sie dann die Standardeinstellung von 2 Kanälen für Querruder und wählen Sie 2 Kanäle für Klappen.
+1 Seitenruder
 
-![Leitwerk-Typ](../assets/tut-fw-eg-wiz-tail.png)
-![Höhen-/Seitenruderkanäle](../assets/tut-fw-eg-wiz-ele-rudd.png)
+Später werden wir auch Einziehfahrwerke hinzufügen.
 
-Akzeptieren Sie die Voreinstellung **Traditional Tail** (traditionelles Heck) mit 1 Kanal für Höhenruder und 1 Kanal für Seitenruder.
+## Schritt 3. Erstellen Sie ein neues Modell.
 
-![Modellname](../assets/tut-fw-eg-wiz-name.png)
-![Empfänger](../assets/tut-fw-eg-wiz-rx.png)
+Lesen Sie den Abschnitt Modell-Setup / Modellauswahl, um Ihr neues Modell zu erstellen. Lesen Sie auch den Abschnitt „Menü-Navigation“, um sich mit der Benutzeroberfläche des Senders vertraut zu machen, so dass Sie die benötigten Funktionen leicht finden können.
 
-Vergeben Sie einen Namen (z. B. "FWexample" — Modellnamen können bis zu 15 Zeichen lang sein) und folgen Sie dem Assistenten bis zum Ende. Das Modell wird in der Kategorie Airplane erstellt und zum aktiven Modell gemacht.
+Tippen Sie auf die Registerkarte Modell (Flugzeugsymbol), und wählen Sie die Funktion Modellauswahl. Um ein neues Modell zu erstellen, wählen Sie die Modellkategorie, unter der Sie das Modell erstellen möchten, und tippen Sie dann auf das Symbol \[+\], um den Assistenten zum Erstellen eines Modells zu starten. Möglicherweise müssen Sie zuerst Ihre Modellkategorien erstellen. Weitere Informationen hierzu finden Sie im Abschnitt [Neues Modell](../model-setup/model-select.md) hinzufügen.
+
+![](../assets/tut-fw-eg-wiz-create-airplane.png)
+
+In unserem Beispiel tippen Sie auf das Flugzeugsymbol, um den Wizard zur Modellerstellung zu starten.
+
+![](../assets/tut-fw-eg-wiz-rx.png)
+
+Der Wizard bietet die Möglichkeit, voreingestellte Mischer für stabilisierte FrSky-Empfänger einzurichten. Für dieses Beispiel wählen wir die Option „Nicht stabilisierter Empfänger“.
+
+![](../assets/tut-fw-eg-wiz-engine.png)
+
+Übernehmen Sie die Voreinstellung von 1 Kanal für den Motor, in dem sie auf den Pfeil rechts unten drücken. Mit dem linken Pfeil kann man die vorherige Seite erneut aufrufen.
+
+![](../assets/tut-fw-eg-wiz-ail-flaps.png)
+
+Akzeptieren Sie die Standardeinstellung von 2 Kanälen für Querruder und wählen Sie 2 Kanäle für Klappen.
+
+![](../assets/tut-fw-eg-wiz-tail.png)
+
+Akzeptieren Sie die Voreinstellung Traditionelles Heck (mit Höhen- und Seitenruder).
+
+![](../assets/tut-fw-eg-wiz-ele-rudd.png)
+
+Übernehmen Sie die Standardeinstellung 1 Kanal für Höhenruder und 1 Kanal für Seitenruder.
+
+![](../assets/tut-fw-eg-wiz-name.png)
+
+Wir werden das Modell „FWexample“ nennen und dem Assistenten bis zum Ende folgen, was dazu führt, dass das Modell „FWexample“ in der Gruppe „Flugzeuge“ erstellt wird. Beachten Sie, dass Modellnamen bis zu 15 Zeichen lang sein können. Es wird auch zum aktiven Modell gemacht, so dass wir mit der Konfiguration seiner Funktionen fortfahren können. Zusätzlich kann man hier ein Modellbild auswählen.
 
 ## Schritt 4. Überprüfung und Konfiguration der Mischer
 
-![Mischerübersicht](../assets/tut-fw-eg-mixes.png)
+![](../assets/tut-fw-eg-mixes-icon.png)
 
-Der Assistent hat bereits die Mischer für Querruder (Kanäle 1 und 5), Höhenruder,
-Gas, Seitenruder und Klappen erstellt (bei den Klappen bedeutet das `---`, dass ihnen noch keine
-Steuerquelle zugewiesen wurde).
+Tippen Sie auf das Symbol Mischer, um die vom Flugzeug-Assistenten erstellten Mischer zu überprüfen.
 
-### Querruder {: #ailerons }
+Hier eine Liste der
 
-![Querrudermischer](../assets/tut-fw-eg-mixes-ail-mix.png)
-![Querrudermischer bearbeiten](../assets/tut-fw-eg-mixes-ail-edit.png)
+![](../assets/tut-fw-eg-mixes.png)
 
-**Gewichtung/Anteile** — es ist eine gute Idee, verschiedene Gewichtungen einzustellen, bevor Sie ein neues Modell fliegen: relativ geringe Ausschläge
-(z. B. 30 %) eignen sich für sportliches Fliegen, volle 100 % für das 3D-Fliegen. Fügen Sie eine Rate von 60 % für
-den Schalter SB in der mittleren Position und 30 % für SB in der unteren Position hinzu — die Voreinstellung (SB oben) bleibt
-bei 100 %:
+Der Assistent hat zwei Querruder auf den Kanälen 1 und 5 erstellt, gefolgt von den Kanälen für Höhenruder, Gas, Seitenruder und Klappen. Beachten Sie bei den Klappen, dass das „--“ bedeutet, dass ihnen noch keine Steuerquelle zugewiesen wurde.
 
-![Gewichtungen](../assets/tut-fw-eg-mixes-ail-weight-rates.png)
+![](../assets/tut-fw-eg-mixes-ail-edit.png)
 
-**Expo** — bei linearem Ausgangsverhalten kann die Reaktion in der Knüppelmitte zu unruhig sein; fügen Sie Expo-Raten
-hinzu (z. B. 60 %/40 %/20 % an denselben SB-Schalterpositionen), um die Reaktion in der Knüppelmitte abzuflachen,
-ohne den maximalen Ausschlag zu verringern:
+### Querruder
 
-![Expo-Raten](../assets/tut-fw-eg-mixes-ail-expo-rates.png)
+Um den Querrudermischer zu überprüfen, tippen Sie auf die Zeile „Querruder“ und wählen Sie im Popup-Menü „Bearbeiten“.
 
-**Differenzierung** — bewegen sich linkes und rechtes Querruder um den gleichen Betrag nach oben oder unten, verursacht das sich nach unten
-bewegende Querruder mehr Widerstand als das sich nach oben bewegende, wodurch der Flügel in die entgegengesetzte
-Richtung der Kurve giert ("negatives Gieren"). Ein positiver Wert in der Differenzialeinstellung (50 % ist üblich) führt zu einer
-geringeren Abwärtsbewegung des Querruders gegenüber der Aufwärtsbewegung und wirkt dem entgegen:
+![](../assets/tut-fw-eg-mixes-ail-mix.png)
 
-![50 % Differenzierung](../assets/tut-fw-eg-mixes-ail-diff-50.png)
+#### Gewichtung/Anteile
 
-Um die Differenzierung im Flug zu optimieren, drücken Sie lange `ENT` auf dem Wert, wählen **Use a
-source** (Signalquelle verwenden) und dann Pot1:
+Es ist eine gute Idee, verschiedene Gewichtungen für Ihr Modell einzustellen, besonders wenn Sie es noch nicht geflogen haben. Mit den Gewichtungen wird das Verhältnis der Knüppelbewegung zur Kanalbewegung festgelegt. Beim sportlichen Fliegen wollen Sie zum Beispiel normalerweise relativ geringe Ausschläge auf den Steuerflächen haben, so dass Sie den Weg auf etwa 30 % reduzieren sollten. Für das 3D-Fliegen hingegen wollen Sie so viel Weg wie möglich, d.h. 100%.
 
-![Use a source](../assets/tut-fw-eg-mixes-ail-diff-use-source.png)
-![Pot1 ausgewählt](../assets/tut-fw-eg-mixes-ail-diff-use-pot1.png)
+![](../assets/tut-fw-eg-mixes-ail-weight-rates.png)
 
-Nachdem Sie den Wert im Flug optimiert haben, drücken Sie erneut lange und wählen **Convert to
-value** (in Wert umwandeln), um ihn dauerhaft zu Ihrer Einstellung zu machen:
+Klicken Sie auf „Gewichtung hinzufügen” und stellen Sie eine Rate von 60 % für den Schalter SB in der mittleren Position ein.
 
-![Convert to value](../assets/tut-fw-eg-mixes-ail-diff-convert-to-value.png)
+Klicken Sie erneut auf „Neues Gewicht hinzufügen” und stellen Sie eine Rate von 30 % für den Schalter SB in der unteren Position ein. „SB-“ wird fett dargestellt, was bedeutet, dass dies die aktuelle Position ist. Die vertikale Achse im Diagramm auf der rechten Seite zeigt nun, dass in dieser mittleren Position des Schalters nur 60 % des Hubs verfügbar sind. Beachten Sie, dass die Rate bei Schalter SB in der oberen Position 100 % beträgt.
 
-**Trim** — bietet die Möglichkeit, den zugehörigen Trimmer eines Mischers zu trennen, ohne ihn
-zu deaktivieren, damit er anderweitig verwendet werden kann:
+#### Expo
 
-![Querrudertrimmung](../assets/tut-fw-eg-mixes-ail-trim.png)
+![](../assets/tut-fw-eg-mixes-ail-expo-rates.png)
+
+In den obigen Beispielen für die Steuerknüppel können Sie sehen, dass das Ausgangsverhalten linear ist. Um zu vermeiden, dass die Reaktion in der Knüppelmitte zu unruhig ist, können Sie eine Expo-Kurve verwenden, um die Ruderbewegung in der Knüppelmitte zu reduzieren und sie zu erhöhen, wenn sich der Knüppel weiter von der Mitte entfernt. Für dieses Beispiel haben wir drei Expo-Raten auf 60 %, 40 % und 25 % an den entsprechenden SB-Schalterpositionen eingestellt, und die Grafik zeigt nun eine gekrümmte Reaktion, die in der Knüppelmitte flacher ist.
+
+#### Differenzierung
+
+![](../assets/tut-fw-eg-mixes-ail-diff-50.png)
+
+Für die Querruder gibt es eine weitere spezielle Einstellung, die Differenzierung genannt wird. Wenn sich das linke und das rechte Querruder um den gleichen Betrag nach oben oder unten bewegt, verursacht das sich nach unten bewegendem Querruder mehr Widerstand als das sich nach oben bewegende Querruder, wodurch der Flügel in die entgegengesetzte Richtung der Kurve giert. Dies wird als negatives Gieren bezeichnet. Um dies zu verringern, führt ein positiver Wert in der Differenzialeinstellung zu einer geringeren Abwärtsbewegung des Querruders, wie in der Grafik zu sehen ist. Dadurch wird das ungünstige Gieren reduziert und die Kurvenflug- und Handlingseigenschaften werden verbessert. Eine übliche Einstellung für die Querruderdifferenz ist 50%.
+
+![](../assets/tut-fw-eg-mixes-ail-diff-use-source.png)
+
+Sie können die Differenz jedoch einem Poti zuweisen, um den Wert im Flug zu optimieren. Drücken Sie lange die Eingabetaste, um das Dialogfeld „Optionen“ aufzurufen, und wählen Sie „Signalquelle verwenden“ aus.
+
+![](../assets/tut-fw-eg-mixes-ail-diff-use-pot1.png)
+
+Wählen Sie Pot1 aus der Liste der Quellen. Die Auswirkung von Pot1 können Sie im Diagramm rechts sehen.
+
+![](../assets/tut-fw-eg-mixes-ail-diff-convert-to-value.png)
+
+Nachdem Sie die Querruderdifferenz im Flug optimiert haben, können Sie den Wert des Potentiometers ganz einfach zu Ihrer dauerhaften Einstellung machen. Drücken Sie lange die Eingabetaste, um das Dialogfeld „Optionen“ aufzurufen, und wählen Sie „In Wert umwandeln“.
+
+#### Trim
+
+![](../assets/tut-fw-eg-mixes-ail-trim.png)
+
+Bietet die Möglichkeit, den zugehörigen Trimmer eines Mischers zu trennen, ohne ihn zu deaktivieren, damit er anderweitig verwendet werden kann.
 
 ### Höhen- und Seitenruder
 
-Ähnlich wie bei den Querrudern dreifache Raten und Expo, hier am Schalter SC:
+![](../assets/tut-fw-eg-mixes-ele-expo-rates.png)
 
-![Höhenruder-Expo-Raten](../assets/tut-fw-eg-mixes-ele-expo-rates.png)
+Ähnlich wie bei den Querrudern können wir auch für die Höhen- und Seitenruder am Schalter SC dreifache Raten und Expositionszeiten einstellen. Im Gegensatz zum Seitenruder ist beim Höhenrudermischer zusätzlich eine Differenzierung möglich.
 
 ### Gas
 
-![Gasmischer](../assets/tut-fw-eg-mixes-thr-edit.png)
+![](../assets/tut-fw-eg-mixes-thr-edit.png)
 
-Für das Gas belassen wir den Eingang auf dem Gasknüppel — wir brauchen keine Raten oder Expo —, aber wir brauchen einen
-Sicherheitsschalter; das ist extrem wichtig, denn ein unerwartet anspringender Modellmotor
-kann zu schweren Verletzungen führen.
+Für das Gas werden wir den Eingang auf dem Gasknüppel belassen. Wir brauchen keine Raten oder Expo, aber wir brauchen einen Sicherheitsschalter, damit der Motor nicht unerwartet anspringt. Das ist extrem wichtig, denn Modellmotoren können zu schweren Verletzungen oder zum Tod führen.
 
-**Leerlauf-Trimmung** (Glüh- und Benzinmotoren) — stellt die Leerlaufdrehzahl
-ein, ohne die Vollgasposition zu beeinflussen:
+#### Leerlauf-Trimmung
 
-![Leerlauf-Trimmung](../assets/tut-fw-eg-mixes-thr-low-pos-trim.png)
+![](../assets/tut-fw-eg-mixes-thr-low-pos-trim.png)
 
-Ist sie aktiviert, geht der Gaskanal auf −75 %, wenn der Gasknüppel in der unteren Position steht;
-mit dem Gasknüppel-Trimmhebel kann die Leerlaufdrehzahl dann zwischen −100 % und −50 % eingestellt werden.
+Bei Glüh- und Benzinmotoren verwenden wir die „Leerlauf-Trimmung“, um die Leerlaufdrehzahl einzustellen. Die Leerlaufdrehzahl kann je nach Wetterlage usw. variieren, daher ist es wichtig, eine Möglichkeit zu haben, die Leerlaufdrehzahl anzupassen, ohne die Vollgasposition zu beeinflussen.
 
-**Motor AUS** — ein Sicherheitsverriegelungsmechanismus. Ist der Schalter SA unten die aktive
-Bedingung (fett dargestellt, wenn er aktiv ist), wird der Gasausgang auf −100 % gehalten, sobald
-der Knüppel unter −85 % fällt:
+Wenn die „Leerlauf-Trimmung“ aktiviert ist, geht der Gaskanal auf eine Leerlaufposition von -75%, wenn der Gasknüppel in der unteren Position steht, wie im obigen Beispiel gezeigt. Mit dem Gasknüppel-Trimmhebel kann dann die Leerlaufdrehzahl zwischen -100% und -50% eingestellt werden. Gas AUS kann dann so konfiguriert werden, dass der Motor mit einem Schalter abgeschaltet wird.
 
-![Motor AUS](../assets/tut-fw-eg-mixes-thr-cut.png)
+#### Motor AUS
 
-Ist stattdessen **Sticky** (SR FlipFlop) aktiviert, wird das Gas in dem Moment abgeschaltet, in dem der Schalter SA nach unten
-geht, unabhängig von der Knüppelstellung:
+![](../assets/tut-fw-eg-mixes-thr-cut.png)
 
-![Motor AUS mit Sticky](../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png)
+Die Gasabschaltung bietet einen Sicherheitsverriegelungsmechanismus für das Gas. Sobald die aktive Bedingung in unserem Beispiel mit dem Schalter SA in der unteren Position erfüllt ist (der Schalter SA unten ist fett dargestellt, um anzuzeigen, dass er aktiv ist), wird der Gasausgang auf -100% gehalten, sobald der Gaswert unter -85% fällt. (Vergleichen Sie das erste Diagramm oben mit dem zweiten).
 
-In beiden Fällen muss der Gasknüppel, sobald der aktive Zustand aufgehoben ist, wieder unter
-−85 % gebracht werden, bevor das Gas erhöht werden kann — dadurch wird verhindert, dass der Motor
-unerwartet in einer hohen Gasposition anläuft, wenn der Abschaltschalter zurückgeschaltet wird.
+![](../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png)
 
-**Gasstellung halten** — eine Notabschaltung aus *jeder* Knüppelstellung heraus, die den Ausgang
-sofort auf −100 % (oder den eingegebenen Wert) reduziert, sobald die Bedingung erfüllt ist:
+Wenn jedoch „SR FlipFlop“ aktiviert ist, wird das Gas in dem Moment abgeschaltet, in dem der Schalter SA nach unten geht, wie im obigen Beispiel gezeigt.
 
-![Gasstellung halten](../assets/tut-fw-eg-mixes-thr-hold.png)
+Sobald der aktive Zustand aufgehoben ist (d.h. der Schalter SA nicht in der unteren Position), muss der Gasknüppel oder der Regler unter -85% gebracht werden, bevor er erhöht werden kann. Dadurch wird verhindert, dass der Motor unerwartet in einer hohen Gasposition anläuft, wenn der Schalter SA zurückgeschaltet wird.
+
+#### Gasstellung halten
+
+![](../assets/tut-fw-eg-mixes-thr-hold.png)
+
+„Gasstellung halten“ wird verwendet, um den Motor im Notfall von jeder Gasposition aus abzuschalten. Wenn die „Gaststellung halten“-Bedingung erfüllt ist, wird der Gasausgang sofort auf -100% (oder den eingegebenen Wert) reduziert. Wie in der obigen Grafik zu sehen ist, wurde der Gasausgang auf -100% reduziert, obwohl sich der Gasknüppel z.B. auf Halbgas steht.
 
 ### Klappen
 
-![Klappeneingang](../assets/tut-fw-eg-mixes-flaps-input.png)
+![](../assets/tut-fw-eg-mixes-flaps-input.png)
 
-Weisen Sie die Klappen dem Schalter SE zu und erhöhen Sie die Gewichtung beider Ausgangskanäle auf 100 %:
+In diesem Beispiel weisen wir die Klappen dem Schalter SE zu.
 
-![Klappengewichtungen](../assets/tut-fw-eg-mixes-flaps-weights.png)
+![](../assets/tut-fw-eg-mixes-flaps-weights.png)
 
-## Schritt 5. Binden des Empfängers
+Erhöhen Sie außerdem die Gewichtung beider Ausgangskanäle auf 100 %.
 
-Verwenden Sie die Funktion [HF-System](../model-setup/rf-system.md), um Ihren Empfänger zu registrieren (wenn Ihr Empfänger ACCESS ist) und zu binden.
-Bevor Sie mit den Ausgängen fortfahren, wäre es ratsam, die Servoanlenkungen zu trennen oder
-den Servoweg vorübergehend zu reduzieren, um Schäden durch versehentliches Übersteuern zu vermeiden, während Sie die Min/Max-Grenzen konfigurieren.
+## ***Schritt 5. Binden*** ***des*** ***Empfänger******s***
 
-## Schritt 6. Konfigurieren der Ausgänge
+Verwenden Sie die Funktion [HF-System](../model-setup/rf-system.md), um Ihren Empfänger zu registrieren (wenn Ihr Empfänger ACCESS ist) und zu binden, um die Konfiguration der Kanäle vorzubereiten.
 
-![Ausgänge](../assets/tut-fw-eg-outputs.png)
+Bitte lesen Sie den nächsten Abschnitt über die Konfiguration der Kanäle durch, bevor Sie fortfahren. Um Schäden durch versehentliches Übersteuern Ihrer Servos zu vermeiden, wäre es ratsam, die Servoanlenkungen zu trennen oder den Servoweg zu reduzieren, bis Sie bereit sind, die Servo-Min/Max-Grenzen zu konfigurieren.
 
-Der Abschnitt [Ausgänge](../model-setup/outputs.md) passt die Logik des Mischers an die tatsächlichen
-mechanischen Eigenschaften des Modells an.
+## Schritt 6. Konfigurieren der  Kanäle
 
-**Querruder 1** — beginnen Sie mit der Einstellung des Servo-Mittelpunkts über **PWM Mitte**, nachdem Sie die
-mechanische Anlenkung optimiert haben, und konfigurieren Sie dann **Min**/**Max**. Zur Vereinfachung können Sie vorübergehend
-ein Potentiometer für Min (und danach Max, wie im obigen Beispiel für die Querruderdifferenzierung gezeigt) zuweisen:
+Der Abschnitt „Kanäle“ ist die Schnittstelle zwischen der „Logik“ des Setups und der realen Welt mit Servos, Anlenkungen und Rudern sowie Motoren oder Triebwerken. Bisher haben wir die Logik für die Funktionen der einzelnen Steuerelemente festgelegt. Jetzt können wir sie an die mechanischen Eigenschaften des Modells anpassen. Die verschiedenen Kanäle sind Ausgänge, z.B. entspricht CH1 dem Servostecker #1 an Ihrem Empfänger.
 
-![Querruderausgang bearbeiten](../assets/tut-fw-eg-outputs-edit-ail.png)
+![](../assets/tut-fw-eg-outputs-icon.png)
 
-**Klappen** — Klappen benötigen normalerweise einen großen Ausschlag nach unten, um wirksam zu bremsen;
-dafür können Sie bei der Herstellung der Anlenkungen einen Teil des Ausschlags nach oben opfern, sodass die Klappe in der Servomitte
-halb ausgefahren steht, und anschließend mit Min/Max die gewünschte Klappenstellung nach oben
-und die volle Klappenstellung einstellen. Eine 5-Punkt-Kurve ist ein übliches Mittel, um einen daraus resultierenden
-Versatz zwischen Klappen und Querrudern zu korrigieren. Verwenden Sie abschließend **[Kanäle
-ausgleichen](../model-setup/outputs.md#balance-channels)**, um die Bewegung von linken und rechten Querrudern und Klappen zu synchronisieren.
+Tippen Sie auf das Symbol „Kanäle“, um die Ausgänge zu konfigurieren.
+
+![](../assets/tut-fw-eg-outputs.png)
+
+Tippen Sie auf einen Ausgangskanal, um ihn zu konfigurieren.
+
+### Beispiel 1: Querruder links
+
+![](../assets/tut-fw-eg-outputs-edit-ail.png)
+
+Beginnen Sie mit der Einstellung der Servo-Mittelpunkte mit Hilfe der PWM Mitte-Einstellung, nachdem Sie die mechanischen Anlenkungen optimiert haben.
+
+Die Servo- oder Kanalgrenzen sollten dann mit den Einstellungen Min und Max konfiguriert werden. Zur Vereinfachung können Sie vorübergehend ein Potentiometer für Min und Max zuweisen. Drücken Sie lange auf den Wert und wählen Sie dann „Quelle verwenden“, wie im obigen Beispiel für die Querruderdifferenzierung gezeigt.
+
+### Klappen
+
+Beachten Sie, dass Klappen normalerweise einen großen Ausschlag nach unten benötigen, um wirksam zu bremsen. Um diesen großen Ausschlag nach unten zu erreichen, können Sie bei der Herstellung der Anlenkungen einen Teil des Ausschlags nach oben opfern. Dies bedeutet, dass sich die Klappen in der Servomitte in einer halb ausgefahrenen Position befinden. Die Min- und Max-Werte werden so eingestellt, dass die gewünschte Klappenstellung nach oben und die volle Klappenstellung erreicht wird.
+
+Die Kurven können auch dazu dienen, Probleme mit dem Ansprechverhalten in der Praxis zu korrigieren, z.B. um sicherzustellen, dass Querruder und Wölbklappen einander richtig folgen. Eine 5-Punkt-Kurve wird üblicherweise auf einer Seite verwendet, damit die Flächenbewegungen an 5 Punkten angepasst werden können.
+
+### Balancierung der Kanäle
+
+Schließlich können Sie die Kanalausgleichsfunktion in den Kanälen verwenden, um die Bewegung von linken und rechten Flächen wie Querruder und Klappen zu synchronisieren. Bitte lesen Sie den Abschnitt [Kanäle ausgleichen](../model-setup/outputs.md)
 
 ## Schritt 7. Einführung in die Flugphasen
 
-[Flugphasen](../model-setup/flight-modes.md) sind eine hervorragende Möglichkeit, ein Modell für verschiedene
-Aufgaben zu konfigurieren — ein bisschen wie das Schalten beim Auto. Von den 20 verfügbaren nutzt dieses
-Beispiel drei: **Default**, **Flaps Half** (Schalter SE Mitte) und
-**Flaps Full** (SE oben). Die erste Flugphase, bei der die aktive Bedingung eingeschaltet ist, ist der aktive Modus; der
-Standardmodus **Default** hat überhaupt keine Bedingung und ist immer dann aktiv, wenn keine andere zutrifft —
-dies erklärt, warum er nicht über eine Schalterauswahloption verfügt. Ein- und Ausblendzeiten von 1 Sekunde verlangsamen den Übergang beim Ausfahren der Klappen.
+Flugphasen sind eine hervorragende Möglichkeit, ein Modell für verschiedene Aufgaben zu konfigurieren. Zum Beispiel kann ein Segelflugzeug Flugphasen für Aufgaben wie Normalflug, Speed, Thermik, Start und Landung haben. Jede Flugphase kann sich seine eigenen Trimmeinstellungen merken. Wenn Sie das Flugzeug also einmal so getrimmt haben, dass es in jedem Modus gut fliegt, müssen Sie Ihre Trimmungen während des Fluges nicht mehr ändern, wenn Sie die Aufgaben wechseln. Der Flugphasen-Schalter ist ein bisschen wie das Schalten beim Auto. Die Flugphasen werden in anderer Firmware manchmal als „Bedingungen“ bezeichnet.
+
+Der Einfachheit halber werden in diesem Beispiel nur die Flugphasen Normal, Klappen halb und Klappen voll gezeigt.
+
+Es gibt 20 Flugphasen, einschließlich des Standardmodus, die verwendet werden können. Die erste Flugphase, bei dem die aktive Bedingung eingeschaltet ist, ist der aktive Modus. Wenn keiner dieser Modi aktiviert ist, ist der Standardmodus aktiv. Dies erklärt, warum der Standardmodus nicht über eine Schalterauswahloption verfügt.
+
+![](../assets/model-fm-0to3.png)
+
+Für unser Beispiel haben wir de Standard-Flugphase als Normal konfiguriert und zwei zusätzliche Flugphasen namens Klappe Halb (Schalter SE-Mitte) und Klappen Voll (Schalter SE-oben) hinzugefügt.
+
+![](../assets/model-fm-form.png)
+
+Bei den Klappen möchten Sie vielleicht den Übergang zwischen den Flugphasen verlangsamen. Das obige Beispiel zeigt Ein- und Ausblendzeiten von 1 Sekunde.
 
 ## Schritt 8. Konfigurieren Sie die Trimmungen
 
-Es gibt zwei Möglichkeiten, eine mit der Klappenstellung wechselnde Höhenrudertrimmung zu handhaben:
+### Option - Unabhängige Trimmungen
 
-**Unabhängige Trimmungen pro Flugmodus** — die einfachste Variante: Die Höhenrudertrimmung wird
-pro Flugphase völlig unabhängig und schaltet automatisch um, wenn Sie SE betätigen. Da Sie in jedem
-Flugmodus sozusagen "von Grund auf" trimmen müssen, hilft die Funktion [Sofortige Trimmung](../model-setup/trims.md#instant-trim) — trimmen Sie
-zuerst für den Normalflug, landen Sie dann und nutzen Sie diesen Wert als Starttrimmwert für die Klappenmodi.
+![](../assets/model-trims-mode-option-fm.png)
 
-**Basis Trimmung mit Offset** — einmal in Default trimmen, wobei die Höhenruderkompensation jeder
-Klappenstellung als Offset darübergelegt wird:
+Als nächstes gehen wir in den Bereich Trimmungen. Die erste Option ist die Änderung des Höhenruder-Knüppels auf 'Unabhängige Trimmungen pro Flugphase'. Dies ermöglicht Ihnen eine unabhängige Höhenruderkompensation für die beiden ausgefahrenen Klappeneinstellungen. Die Taster für die Höhenrudertrimmung schalten automatisch zwischen den unabhängigen Einstellungen um, wenn Sie die Klappen am Schalter SE betätigen.
 
-1. Stellen Sie die Trimm-**Schrittweite** auf Mittel (damit es einfacher ist, die gewünschte Trimmung schnell zu
-   erreichen; für die Feinabstimmung später verringern), den **Mode** auf Benutzerdefiniert und fügen Sie ein neues Verhalten hinzu.
-2. **Aktive Bedingung**: `FM1(Flaps Half)`, Modus **Offset + Default** —
-   der Trimmwert für Flaps Half ist dann die Summe aus der Basistrimmung plus der Offset-Trimmung, die sich
-   aus den Trimmeinstellungen in diesem Flugmodus ergibt:
+Da die Trimmungen völlig unabhängig sind, müssen Sie das Höhenruder in jeder Flugphase sozusagen „von Grund auf“ trimmen. Sie können die Funktion „Sofortige Trimmung“ verwenden, um zunächst die Trimmung für den Normalflug und dann die Trimmung für jede Klappenposition vorzunehmen. Sie könnten auch nach der Trimmung für den Normalflug landen, um den Trimmwert auf die Klappenmodus-Trimmung zu übertragen, als Starttrimmwert für diese Modi.
 
-   ![Verhalten hinzufügen](../assets/tut-fw-eg-trims-ele-add-behavior.png)
-   ![Offset + Default, FM1](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png)
+### Option - Basis Trimmung mit Offset
 
-3. Wiederholen Sie dies für `FM2(Flaps Full)`:
+Eine weitere Möglichkeit besteht darin, die beiden Klappenmodi so zu konfigurieren, dass eine Basistrimmung mit einem Offset für jede Klappenposition verwendet wird. Auf diese Weise trimmen Sie für den Normalflug in der Flugphase 'FM0 Basis', und wenn Sie zu den Klappenpositionen wechseln, wird wieder diese Basistrimmung verwendet, aber jetzt werden alle Trimmeinstellungen für den Höhenruderausgleich als Offset zur Basistrimmung hinzugefügt.
 
-   ![Flugphase auswählen](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png)
-   ![Offset + Default, FM2](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png)
+![](../assets/tut-fw-eg-trims-ele-add-behavior.png)
 
-Jede Klappenstellung kann nun unabhängig getrimmt werden, doch wird die im Flugmodus Default verwendete
-Basistrimmung später verstellt (z. B. um thermische Drift des Servos auszugleichen), werden auch beide
-Klappenmodus-Trimmungen automatisch um den gleichen Betrag verändert.
+Wir beginnen mit der Einstellung der Schrittweite auf Mittel, damit es einfacher ist, die gewünschte Trimmung schnell zu erreichen. Die Schrittgröße kann dann für die Feinabstimmung verringert werden.
 
-![Auswahl der benutzerdefinierten Trimmung](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png)
+Stellen Sie als Nächstes den Modus auf Benutzerdefiniert und klicken Sie auf „Neue Aktion hinzufügen“.
+
+![](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png)
+
+Für die 'Aktive Bedingung' wählen Sie die Flugphase 'FM1 Flaps Half'.
+
+![](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png)
+
+Wählen Sie als nächstes für den Modus „Offset + Standard“.
+
+![](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png)
+
+Das erste Verhalten wurde bereits konfiguriert. In der Flugphase 1 'FM1 Flaps Half' (halbe Klappenstellung) ist der Trimmwert die Summe aus der Basis- oder Standardtrimmung plus der Offset-Trimmung, die sich aus den Trimmeinstellungen ergibt, die in der Flugphase 1 'FM1 Flaps Half' vorgenommen wurden.
+
+![](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png)
+
+Wiederholen Sie dies für die Flugphase 2 'FM2 Flaps Full' (volle Klappenstellung).
+
+Der Höhenruderausgleich kann nun unabhängig voneinander für die Flugphasen 'Flaps Half' und 'Flaps Full' getrimmt werden. Wird jedoch die in der Flugphase 'FM0 Basis' verwendete Basis- oder Standardtrimmung verstellt, werden auch die beiden Trimmungen für den Klappenausgleich um den gleichen Betrag verändert. Dies kann nützlich sein, wenn z.B. die Standard-Trimmung aufgrund von thermischer Drift des Servos angepasst werden muss.
 
 ## Schritt 9. Einrichten einer Motorlaufzeit-Zeitschaltuhr
 
-Bearbeiten Sie unter [Stoppuhren](../model-setup/timers.md) den Timer 1: Modus **Down** (abwärts zählend), Startwert fünf
-Minuten, laufend, wenn das Systemereignis **Throttle active** (Drossel aktiv) wahr ist (vorausgesetzt, er wird nicht in der Reset-Stellung gehalten).
-Optional können Sie eine proportionale Zeitquelle zuweisen (z. B. den Gasknüppel), sodass der Timer bei
-Vollgas in Echtzeit zählt und langsamer wird, wenn das Gas reduziert wird.
+![](../assets/model-timer1-edit.png)
 
-## Schritt 10. Hinzufügen eines Mischers für Einziehfahrwerke {: #step-10-add-a-mix-for-retracts }
+Tippen Sie auf Stoppuhr 1 im Bereich Modell / Stoppuhren, wählen Sie Bearbeiten. In diesem Beispiel konfigurieren wir einen abwärts zählende Stoppuhr mit einem Startwert von fünf Minuten. Sie wird immer dann laufen, wenn das Systemereignis „Drossel aktiv“ wahr ist, vorausgesetzt, er wird nicht in der Reset-Stellung gehalten.
 
-![Quelle des Fahrwerksmischers](../assets/tut-fw-eg-retracts-source.png)
+Wenn Sie eine proportionale Zeitquelle zuweisen, dann hängt die Geschwindigkeit der Stoppuhr von der Position des Gasknüppels ab (zum Beispiel). Bei Vollgas zählt die Stoppuhr in Echtzeit, wird aber langsamer, wenn der Gashebel reduziert wird.
 
-Tippen Sie auf einen Mischer und wählen Sie **Add Mix** → **Free Mix** (Freier Mischer), benennen Sie ihn "Retracts", setzen Sie die
-Bedingung auf Always (immer eingeschaltet) und die Quelle auf den Schalter SF. Die Standard-Mischaktion von Weight = 100 % ist
-in Ordnung — damit wird dem Einziehfahrwerk z. B. Kanal 8 zugewiesen:
+![](../assets/model-timer1-actions-summary.png)
 
-![Fahrwerksausgang](../assets/tut-fw-eg-retracts-outputs.png)
+Einzelheiten zur Konfiguration der übrigen Stoppuhr-Parameter finden Sie im Abschnitt [Stoppuhren](../model-setup/timers.md).
+
+## Schritt 10. Hinzufügen eines Mischers für Einziehfahrwerke
+
+![](../assets/tut-fw-eg-mixes.png)
+
+Im Hauptbildschirm für die Mischer (siehe unten) können neue Mischungen hinzugefügt werden, indem Sie auf das Symbol „+“ neben den Spaltenüberschriften tippen.
+
+![](../assets/tut-fw-eg-mixes-library.png)
+
+Dadurch wird die Mischer-Bibliothek geöffnet. Wählen Sie „Freien Mischer“ aus.
+
+![](../assets/tut-fw-eg-retracts-source.png)
+
+Benennen Sie in diesem Beispiel den Freien Mischer mit „Retracts“ (Fahrwerk). Der Mischer kann immer eingeschaltet sein, und die Quelle kann mit Schalter SF umgeschaltet werden.
+
+![](../assets/tut-fw-eg-retracts-outputs.png)
+
+Die Standard-Mischer-Aktion von Gewicht = 100 % ist in Ordnung.
+
+Die untere Hälfte der Freien Mischer-Einstellungen zeigt, dass Kanal 8 den Einziehvorrichtungen zugewiesen wurde.

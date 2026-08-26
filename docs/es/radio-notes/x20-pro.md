@@ -1,0 +1,7 @@
+# X20 Pro Diseño
+
+![](../assets/Pictures/1000000100000377000002BFB7ED9D50.png)
+
+![](../assets/Pictures/100000010000033E00000294D2EDE799.png)
+
+![](../assets/Pictures/10000001000002EB0000028A52F9DC87.png)

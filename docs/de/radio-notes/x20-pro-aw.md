@@ -1,0 +1,7 @@
+# **Ansicht** X20 Pro AW
+
+![](../assets/Pictures/10000001000002FA00000231EAF58BAC.png)
+
+![](../assets/Pictures/1000000100000277000001FA237BD6DE.png)
+
+![](../assets/Pictures/100000010000027D000002151A0B5186.png)

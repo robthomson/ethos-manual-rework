@@ -1,33 +1,18 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Ubicación de archivos Lua de ejemplo para uso con ETHOS
 
-# Ubicación de los scripts de ejemplo
+Los archivos de script de ejemplo para uso con ETHOS están almacenados en [https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/main/lua](https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/main/lua). Para descargar un archivo:
 
-Los scripts de ejemplo oficiales se publican en
-[github.com/FrSkyRC/ETHOS-Feedback-Community](https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/main/lua)
-(en particular `/lua/examples/task` y `/lua/examples/source`). La mayoría de
-los ejemplos son widgets Lua (que se configuran en [Configurar
-pantallas](../displays/custom-widgets.md)); el ejemplo **`servo`**
-concretamente demuestra una **Herramienta del sistema**: un script que aparece
-después de **Info** en el menú System, en lugar de como widget de pantalla.
+- Abra el enlace anterior en un navegador web.
+- Navegue hasta la carpeta y luego hasta el archivo main.lua que quieras descargar.
+- Haz clic en main.lua para abrirlo y ver el código.
+- Haz clic en "Raw".
+- Haz clic con el botón derecho del ratón en la página y haz clic en "Guardar página como". A continuación, guarda el archivo como main.lua en la ubicación de descarga que desee.
+- Para evitar conflictos con otros archivos main.lua, mueve el archivo main.lua descargado a una carpeta con el nombre adecuado (se sugiere utilizar el mismo nombre de carpeta que el de origen del archivo).
 
-## Descargar un script
+Para otros archivos, como pueden ser imágenes:
 
-1. Abra el enlace del repositorio anterior en un navegador y navegue hasta la
-   carpeta y, a continuación, hasta el archivo `main.lua` que desee.
-2. Haga clic en el archivo para verlo y luego en **Raw**.
-3. Haga clic con el botón derecho en la página → **Guardar página como…**, y guárdela como `main.lua`.
-4. Para evitar conflictos con el `main.lua` de otros scripts, muévalo a una
-   carpeta con un nombre acorde: el propio nombre de la carpeta de origen es
-   una opción razonable.
+- Haz clic en el archivo.
+- Haga clic en "Descargar". Se descargará en su navegador.
+- Haz clic con el botón derecho del ratón en la imagen y pulsa "Guardar imagen como". A continuación, guarda el archivo (por ejemplo, servo.png) en la ubicación de descarga.
 
-Para cualquier otro archivo que necesite el script (imágenes, etc.): haga clic
-en el archivo, haga clic en **Download** y después haga clic con el botón derecho y
-**Guardar imagen como…** (o equivalente) para guardarlo junto al script.
-
-Los scripts se instalan en `scripts/` en la SD card/eMMC — consulte [Gestor de
-archivos](../system-setup/file-manager.md#top-level-folders).
-
-Consulte también el hilo *FrSky ETHOS Lua Script Programming* en rcgroups para
-scripts de la comunidad y debates más allá de los ejemplos oficiales.
+La mayoría de los ejemplos son para widgets Lua, que se configuran en la sección [Configurar Pantallas](../displays/index.md). Otra aplicación para los scripts Lua es crear Herramientas del Sistema, que aparecen después de 'Info' en la sección Sistema de los menús. Consulte el ejemplo 'servo' para ver un ejemplo de Herramienta del Sistema.

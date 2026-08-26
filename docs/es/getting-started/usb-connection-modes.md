@@ -1,40 +1,23 @@
----
-translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
----
+# Modos de conexión USB al PC
 
-# Modos de conexión USB
+## Modo con emisora apagada
 
-![Menú USB](../assets/usbmenu.png)
+- Conectando la radio apagada a un PC mediante un cable USB, se entra en el modo DFU que sirve para flashear el bootloader.
 
-Lo que hace una conexión USB a un PC depende de cómo estuviera alimentada
-la radio en el momento de conectarla.
+## Modo bootloader
 
-## Modo apagada
+- La radio se pone en modo bootloader encendiendo la radio con la tecla Enter pulsada. En la pantalla aparecerá el mensaje de estado 'Bootloader'. 
+- A continuación, la radio puede conectarse a un PC mediante un cable de datos USB. El mensaje de estado cambiará a 'USB Plugged', y el PC debería mostrar dos unidades externas conectadas. La primera es para la memoria flash de la radio, y la segunda es el contenido de la tarjeta SD o eMMC.
+- Este modo se utiliza para leer y escribir archivos en la tarjeta SD o eMMC y/o en la memoria flash de la radio.
+- Este modo también se utiliza para conectar la radio a la Ethos Suite para actualizarla. Encontrará más detalles sobre el [Modo Bootloader](#Bootloader Mode) en la sección de Ethos Suite.
 
-Conectar la radio a un PC mediante USB **estando apagada** la pone en modo
-DFU, que se utiliza para grabar el propio bootloader.
+## Modo con emisora encendida
 
-## Modo bootloader {: #bootloader-mode }
+- Si la radio está conectada a un PC mediante un cable de datos USB mientras está encendida normalmente, se muestran las opciones siguientes:
 
-Encienda la radio **manteniendo pulsado `ENT`** para arrancar en modo
-bootloader (la pantalla muestra "Bootloader"). Al conectar el USB en ese
-momento, el estado cambia a "USB Plugged" y el PC monta **dos** unidades:
-la memoria flash interna de la radio y el contenido de la SD card/eMMC.
-Este es el modo para leer y escribir archivos directamente en cualquiera de
-las dos áreas de almacenamiento, y también es la forma en que [Ethos
-Suite](../ethos-suite/index.md) actualiza el firmware de la radio —
-consulte la sección Modo bootloader de Ethos Suite.
+![](../assets/usbmenu.png)
 
-## Modo encendida
+- En modo ‘Joystick’, la radio puede configurarse para controlar simuladores RC.
+- En el modo ‘Ethos Suite’, la radio entrará en "Modo Ethos" para la comunicación con Ethos Suite. Consulte el [Modo Ethos](#Ethos Mode) en la sección Ethos Suite.
 
-Conectar el USB con la radio **encendida normalmente** hace que aparezca un
-selector de modo:
-
-- **Joystick** — presenta la radio como un joystick USB HID, para manejar
-  simuladores de vuelo en el PC.
-- **FrSky Suite** — pone la radio en "modo Ethos" para la comunicación
-  con [Ethos Suite](../ethos-suite/index.md).
-- **Serial** — envía las trazas de depuración de Lua por USB-serie
-  (115200 bps). La pestaña Lua Development Tools de Ethos Suite dispone de
-  un terminal integrado para mostrarlas; puede que sea necesario un
-  controlador de puerto COM virtual en Windows.
+- En modo ‘Serie’ las trazas de depuración Lua se envían a un puerto USB-Serie si está presente. La pestaña Herramienta de desarrollo Lua de Ethos Suite integra una ventana de terminal que es capaz de visualizar las trazas. La tasa de baudios es 115200bps. Puede encontrar un controlador adecuado para un puerto COM virtual para Windows [aqu](https://www.st.com/en/development-tools/stsw-stm32102.html)í.

@@ -1,79 +1,67 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Lista de Comprobación (Checklist)
 
-# Lista de verificación
+![](../assets/model-icon-checklist.png)
 
-![Lista de verificación](../assets/model-checklist.png)
+La función Lista de Comprobación proporciona un conjunto de Comprobaciones Previas al Vuelo. Se trata de un grupo de características de seguridad que se comprueban al encender la radio y/o cargar un modelo de la lista de modelos.
 
-Un conjunto de comprobaciones de seguridad previas al vuelo que se ejecutan
-al encender la emisora y/o al cargar un modelo. Las comprobaciones
-integradas incluyen el modo silencioso, el failsafe sin configurar, las
-posiciones de los interruptores/potenciómetros y las baterías de la emisora
-y del RTC: la comprobación de interruptores indica en qué dirección debe
-moverse cada interruptor, señalado con puntos rojos en la pantalla de
-advertencia:
+![](../assets/model-checklist-at_start.png)
 
-![Lista de verificación al arrancar](../assets/model-checklist-at_start.png)
+Las comprobaciones por defecto incluyen que la radio está en modo silencioso, el failsafe no está activado, comprobación de posiciones de interruptores y potenciómetros, batería baja de la radio, batería RTC baja, etc. La comprobación de interruptores muestra la dirección en la que debe moverse el interruptor, que se ve en los puntos rojos en el ejemplo de la pantalla de advertencia anterior.
 
-!!! note
-    Tanto `OK` como `RTN` omiten por completo las comprobaciones previas al
-    vuelo, independientemente de lo que sugiera la advertencia en pantalla.
+Tenga en cuenta que, contrariamente a la alerta, sólo la tecla OK o RTN permitirán omitir las deficiencias en las comprobaciones previas al vuelo.
+
+Se pueden establecer comprobaciones adicionales, como se muestra más abajo.
+
+![](../assets/model-checklist.png)
 
 ## Comprobación del acelerador
 
-![Función de comprobación](../assets/model-checklist-check_function.png)
+![](../assets/model-checklist-check_function.png)
 
-Actívela y elija un operador — `<` (menor que), `~` (aproximadamente igual)
-o `>` (mayor que) — respecto a un valor; avisa si la palanca del acelerador
-está fuera de lo que permite esa comparación.
+Para activar la comprobación del acelerador, seleccione el operador que debe utilizarse. Las opciones son '<' menor que, '~' aproximadamente igual, o '>' mayor que. La comprobación previa al vuelo le avisará si la palanca del acelerador está fuera del valor establecido en el parámetro de valor.
 
-## Comprobación del failsafe
+## Comprobación del Failsafe
 
-Avisa si no se ha configurado el [failsafe](rf-system.md#failsafe) para el
-modelo actual.
-
-!!! tip
-    Se recomienda encarecidamente dejar esta opción activada.
+Cuando está activada, le avisará si no se ha configurado el Failsafe para el modelo actual. Es muy recomendable dejar esta opción activada.
 
 ## Comprobación de interruptores
 
-![Interruptores](../assets/model-checklist-switches.png)
-![Opciones de comprobación de interruptores](../assets/model-checklist-switches-options.png)
+![](../assets/model-checklist-switches.png)
 
-Permite exigir una posición concreta al arrancar para cada interruptor (los
-interruptores con nombres personalizados definidos en [Configuración del
-sistema → Hardware](../system-setup/hardware.md#switches-settings) muestran
-esos nombres). **Cargar todas las posiciones de los interruptores** captura
-las posiciones físicas *actuales* como posiciones deseadas para todos los
-interruptores que no estén marcados como **Sin comprobación**.
+Para cada interruptor, puede definir que la radio solicite que los interruptores estén en las posiciones predefinidas deseadas. Si los interruptores han recibido nombres definidos por el usuario en Sistema / Hardware / Configuración de interruptores, se mostrarán los nombres asignados.
 
-## Comprobación de interruptores de función
+La opción "Cargar todas las posiciones de los interruptores" permite leer las posiciones deseadas a partir de las posiciones actuales de los interruptores, excepto aquellas marcadas para no comprobarse (‘No Check’).
 
-![Interruptores de función](../assets/model-checklist-function-switches.png)
-![Opciones de comprobación de interruptores de función](../assets/model-checklist-function-switches-options.png)
+![](../assets/model-checklist-switches-options.png)
 
-La misma idea, aplicada a los seis [interruptores de
-función](model-edit.md#function-switches). **Cargar todas las posiciones de
-los interruptores de función** funciona igual que en el caso anterior.
+Las opciones a comprobarse se muestran arriba.
 
-## Comprobación de potenciómetros / deslizadores
+## Comprobación de los interruptores de función
 
-![Potenciómetros](../assets/model-checklist-pots.png)
-![Opciones de comprobación de potenciómetros](../assets/model-checklist-pots-options.png)
+![](../assets/model-checklist-function-switches.png)
 
-Exige posiciones concretas de los potenciómetros/deslizadores al arrancar,
-de forma individual para cada mando (`~`/`<`/`>`, igual que en la
-comprobación del acelerador). **Cargar todas las posiciones de los
-potenciómetros** captura automáticamente las posiciones actuales; revise
-después con atención los operadores seleccionados automáticamente, ya que
-`~` frente a `<`/`>` puede no corresponder con lo que realmente pretendía.
+![](../assets/model-checklist-function-switches-options.png)
+
+Para cada interruptor de función, puede definir que la radio solicite que los interruptores estén en las posiciones predefinidas deseadas. Las opciones disponibles se muestran en la imagen de arriba.
+
+La opción "Cargar todas las posiciones de los interruptores de función" permite leer las posiciones deseadas a partir de las posiciones actuales de los interruptores de función, excepto para aquellos marcados con la opción ‘No comprobar’.
+
+## Comprobación de los Pots / Sliders
+
+![](../assets/model-checklist-pots.png)
+
+Define si la radio comprueba que los potenciómetros y deslizadores estén en posiciones predefinidas al encender la radio. Se pueden introducir los valores deseados para cada potenciómetro y deslizador.
+
+La opción 'Cargar todas las posiciones de los pots' puede utilizarse para leer las posiciones deseadas a partir de las posiciones actuales de los pots, excepto para aquellos marcados como ‘No comprobar’. Debe comprobarse cuidadosamente que los operadores seleccionados automáticamente son los deseados (por ejemplo, '~' frente a '<' o '>').
+
+![](../assets/model-checklist-pots-options.png)
+
+Alternativamente, las funciones de comprobación se pueden ajustar individualmente (por ejemplo, ‘~’ vs ‘<’ o ‘>’).
 
 ## Texto definido por el usuario
 
-![Texto de lista de verificación del usuario](../assets/model-checklist-user-checklist.png)
+La función ‘Checklist’ puede también mostrar un texto definido por el usuario. El texto puede ser normal o mejorado.
 
-Muestra un archivo de texto plano o de texto enriquecido como parte de la
-lista de verificación de arranque, una vez instalado para el modelo. Consulte
-[Guía práctica: lista de verificación con texto definido por el
-usuario](../how-to/user-defined-checklist.md) para la configuración completa.
+![](../assets/model-checklist-user-checklist.png)
+
+Una vez que hemos instalado un texto para un modelo determinado, cuando se seleccione este modelo la radio lo presentará como parte de la rutina de encendido de la radio. Para más detalle, vaya a la sección Cómo hacer un texto definido por el usuario para aprender a añadir un texto definido por el usuario.

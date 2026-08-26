@@ -1,191 +1,374 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Spezial-Funktionen
 
-# Spezialfunktionen
+![](../assets/model-icon-sf.png)
 
-![Menü der Spezialfunktionen](../assets/model-sf-menu.png)
+Spezialfunktionen können für die Wiedergabe von Werten, Tönen usw. konfiguriert werden. Es werden bis zu 100 Spezialunktionen unterstützt.
 
-Spezialfunktionen lösen eine Aktion aus – Audio abspielen, Screenshot,
-Logs schreiben, haptisches Feedback und mehr –, sobald eine Bedingung
-wahr wird. Es werden bis zu 100 Spezialfunktionen unterstützt; es gibt
-keine voreingestellten. Mit **+** fügen Sie eine hinzu; tippen Sie eine
-vorhandene an, um sie zu **bearbeiten**/**verschieben**/**kopieren und
-einzufügen**/**klonen**/**löschen**.
+![](../assets/model-sf-add.png)
 
-![Spezialfunktion hinzufügen](../assets/model-sf-add.png)
-![Verschieben](../assets/model-sf-move.png)
+Es gibt keine voreingestellten Spezialfunktionen. Tippen Sie auf die Schaltfläche „+“ im anfänglich leeren Menü, um eine Spezialfunktion hinzuzufügen.
 
-## Felder, die alle Aktionen gemeinsam haben
+![](../assets/model-sf-menu.png)
 
-- **Zustand** – aktiviert oder deaktiviert diese Sonderfunktion, ohne sie
-  zu löschen.
-- **Aktiviert durch** – **Immer an** (EIN), oder aktiviert durch
-  Schalterstellungen, Funktionsschalter, Logikschalter, Trimmstellungen
-  oder Flugmodi. Drücken Sie lange `ENT` auf dem Schalternamen und
-  aktivieren Sie das Kontrollkästchen **Negativ**, um den Schalter zu
-  invertieren (z. B. wird aus `SG-up` dann `!SG-up`, aktiv also immer
-  dann, wenn sich SG *nicht* in der oberen Position befindet).
-- **Global** – fügt diese Funktion **allen** bestehenden Modellen und
-  allen neuen Modellen hinzu, die in Zukunft erstellt werden. Wenn ein
-  bestehendes Modell eine identisch konfigurierte lokale Funktion bereits
-  hat, wird die globale Funktion als neue Funktion hinzugefügt; wenn Sie
-  die globale Funktion wieder deaktivieren, wird die Funktion von allen
-  Modellen mit Ausnahme des aktuell ausgewählten Modells entfernt.
-  Globale Spezialfunktionen werden in der Datei `radio.bin` gespeichert,
-  lokale Funktionen in der Modelldatei.
+Sobald Sonderfunktionen definiert wurden, wird durch Antippen einer dieser Funktionen das oben abgebildete Popup-Menü angezeigt, über das Sie diese Sonderfunktion bearbeiten, verschieben, kopieren/einfügen, klonen oder löschen können.
 
-## Aktionen {: #actions }
+Wenn Sie „Verschieben“ wählen, werden Pfeiltasten angezeigt, mit denen Sie die Sonderfunktion nach oben oder unten verschieben können.
 
-**Zurücksetzen** – setzt **Flugdaten** (Telemetrie und Timer),
-**Stoppuhren alle** oder **Telemetrie gesamt** zurück.
+![](../assets/model-sf-move.png)
 
-![Zurücksetzen](../assets/model-sf-reset.png)
+## Vorhandene Funktionen
 
-**Screenshot** – speichert einen Screenshot im Ordner `screenshots/` auf
-der SD card oder dem eMMC.
+Derzeit werden die folgenden Sonderfunktionen unterstützt:
 
-![Screenshot](../assets/model-sf-screenshot.png)
+- zurücksetzen
+- Screenshot
+- Failsafe
+- Audio abspielen
+- Haptik
+- schreibe Logs
+- Text abspielen (nur Sender mit Text to Speech- (TTS) Funktion)
+- Weiter zum Bildschirm
+- Bildschirm sperren
+- Modell laden
+- Vario abspielen
 
-**Failsafe setzen** – übernimmt die aktuellen Kanalpositionen als
-Failsafe, entweder über das interne oder das externe HF-**Modul**.
+### SF – Allgemeine Parameter
 
-![Failsafe setzen](../assets/model-sf-set-failsafe.png)
+Die folgenden Parameter sind allen Spezialfunktionen gemeinsam:
 
-**AUDIO abspielen** – die umfangreichste Aktion, die eine vollständige
-Sequenz unterstützt:
+#### Zustand
 
-![AUDIO abspielen](../assets/model-sf-play-audio.png)
+Diese Spezialfunktion aktivieren oder deaktivieren.
 
-- **Stimme** – welche der bis zu 3 konfigurierten Stimmen verwendet werden
-  soll (siehe [Allgemein](../system-setup/general.md#audio-settings)).
-- **wiederholen** – einmal abspielen oder in einem einstellbaren Intervall
-  wiederholen (bis zu 10 Minuten).
-- **Nicht beim Start** – verhindert, dass diese Funktion beim Starten
-  ausgelöst wird.
-- **Sequenz** – bis zu 100 Schritte, jeweils einer von:
+#### Aktiviert durch
 
-  - **Datei abspielen** – gibt die ausgewählte Audiodatei wieder.
+Die Spezialfunktion kann dauerhaft aktiviert sein oder durch Schalterstellungen, Funktionsschalter, Flugphasen, Logikschalter, Trimmpositionen oder Flugphasen ausgelöst werden.  
+  
+Um beispielsweise die Umkehrung des Schalters “SG-nach oben” auszuwählen, halten Sie die Eingabetaste gedrückt, während Sie den Schalternamen auswählen, und aktivieren Sie im Popup das Kontrollkästchen „negativ“. Der Schalterwert ändert sich dann zu „!SG-nach oben“. Dies bedeutet, dass die Sonderfunktion aktiv ist, wenn sich der Schalter SG nicht in der oberen Position befindet.
 
-    ![Datei abspielen](../assets/model-sf-play-audio-add-play-file.png)
+#### Global
 
-  - **Wert ansagen** – gibt den Wert der ausgewählten Quelle wieder:
-    Analogwerte, Schalter, Logische Schalter, Trimmungen, Kanäle, Kreisel,
-    Systemuhr, Trainer, Stoppuhren oder Telemetrie.
+Bei Auswahl der Option „Global“ wird die Spezialfunktion allen bestehenden Modellen sowie jedem künftig neu erstellten Modell hinzugefügt. Sollte ein bestehendes Modell bereits über diese Funktion verfügen, wird die globale Funktion als zusätzliche, neue Funktion ergänzt. Das Deaktivieren der globalen Funktion bei einem beliebigen Modell entfernt diese Funktion ausnahmslos von allen Modellen – mit Ausnahme des aktuell ausgewählten Modells.  
+  
+Globale Spezialfunktionen werden in der Datei „radio.bin“ gespeichert, wohingegen lokale Funktionen in der jeweiligen Modelldatei abgelegt sind. Folglich bleiben sie auch nach dem Löschen eines Modells erhalten und kennen kein Konzept eines „Originals“.
 
-    ![Wert ansagen](../assets/model-sf-play-audio-add-play-value.png)
+### Aktion: zurücksetzen
 
-  - **Wartezeit** – fügt eine feste Verzögerung von bis zu 10 Minuten ein.
-  - **Bedingung abwarten** – hält die Sequenz an, bis die Wartebedingung
-    erfüllt ist.
+![](../assets/model-sf-reset.png)
 
-  ![Sequenzzeile hinzufügen](../assets/model-sf-play-audio-add-line.png)
-  ![Typ der Sequenzzeile](../assets/model-sf-play-audio-add-line-type.png)
+Bitte beachten Sie auch die oben aufgeführten „Vorhandene Funktionen“.
 
-  Zum Beispiel: `vfrlow.wav` abspielen, sobald der Logikschalter
-  `VFRlow` aktiv wird, und anschließend den (von der Telemetrie)
-  aufgezeichneten minimalen VFR-Wert ansagen –
+#### zurücksetzen
 
-  ![Wert nach Datei ansagen](../assets/model-sf-play-audio-add-play-value-add-line.png)
+Die folgenden Kategorien können zurückgesetzt werden:
 
-  – oder eine Sequenz anhalten, bis der Schalter SH in die untere Position
-  gebracht wird, bevor es weitergeht:
+-	Flugdaten: setzt sowohl die Telemetrie als auch die Stoppuhren zurück
 
-  ![Sequenz mit Wartebedingung](../assets/model-sf-play-audio-add-sequence.png)
+-   Stoppuhren alle: Setzt alle 8 Stoppuhren zurück.
 
-  Wenn Sie auf eine Sequenzzeile tippen, können Sie die Zeile bearbeiten,
-  eine neue Zeile hinzufügen, die Reihenfolge ändern oder die Zeile
-  löschen:
+-   Stoppuhr: Einzelne Stoppuhren können zurückgesetzt werden.
 
-  ![Verwaltung der Sequenzen](../assets/model-sf-play-audio-add-sequence-management.png)
+-   Telemetrie: Einzelne Sensoren können zurückgesetzt werden.
 
-**Haptik** – haptische Vibrationen als Rückmeldung:
+Bitte beachten Sie, dass die Optionen „Zurücksetzen: Flugdaten“, „Zurücksetzen: Gesamte Telemetrie“ und „Zurücksetzen: Telemetriesensor“ auch sämtliche roten Punkt-Warnungen für „Sensor verloren“ oder „Sensorkonflikt“ löschen. Bitte beachten Sie die [Warnmeldungen zu verlorenen Sensoren / Konflikten](telemetry.md).
 
-![Haptik](../assets/model-sf-haptic.png)
+### Aktion: Screenshot
 
-- **Muster** – einfach, doppelt, dreifach, fünffach oder sehr kurz.
+![](../assets/model-sf-screenshot.png)
 
-  ![Vibrationsmuster](../assets/model-sf-haptic-pattern.png)
+Speichert einen Screenshot im PNG-Format an folgendem Speicherort:
 
-- **Intensität** – 1 bis 10 (Standardeinstellung 5).
-- **wiederholen** – einmalig oder in der hier eingegebenen Häufigkeit.
-- **Haptikmotoren auswählen** – bei Sendern mit Haptikmotoren in den
-  Steuerknüppeln (X20 Pro AW, X20RS oder ein X20 Pro/X20R, der mit
-  MC20R-Gimbals nachgerüstet wurde – siehe
-  [Hardware](../system-setup/hardware.md#radio-specific-hardware-options)):
-  **Standard** (interne Haptik), **Alle Motoren**, **Haptik linker
-  Knüppel** oder **Haptik rechter Knüppel**.
+SD-Karte (Laufwerksbuchstabe)/Screenshots/ oder
 
-  ![Haptik beim X20 Pro AW](../assets/model-sf-haptic-x20proaw.png)
+RADIO (Laufwerksbuchstabe)/Screenshots/
 
-**Logs schreiben** – schreibt Protokolldateien im „.csv“-Format in den
-Ordner `Logs/` auf der SD card oder dem eMMC. Die Zeit und das Datum der
-RTC werden zusammen mit den Daten protokolliert und sind wichtig, um die
-Flugsitzungen später auseinanderhalten zu können:
+Bitte beachten Sie auch die oben aufgeführten „Vorhandene Funktionen “.
 
-![Logs schreiben](../assets/model-sf-write-logs.png)
+### Aktion: Failsafe
 
-- **Schreibe Intervall** – 100 bis 500 ms.
-- **Steuerknüppel/Potis/Sliders**, **Schalter**, **Logische Schalter**,
-  **Kanäle** – unabhängig voneinander schaltbare
-  Protokollierungskategorien.
+![](../assets/model-sf-set-failsafe.png)
 
-  **Log Viewer**: Um Protokolldateien anzuzeigen, öffnen Sie im
-  Datei-Manager eine Protokolldatei im Ordner `/Logs`. Wählen Sie die
-  Kanäle aus, die dargestellt werden sollen (RSSI ist standardmäßig
-  ausgewählt); die Anzeige kann mit dem Drehgeber oder durch Wischen
-  verschoben und durch Drehen des Drehgebers bei gedrückter
-  `PAGE`-Taste vergrößert oder verkleinert werden. Mit `DISP` wird der
-  Fokus auf die erste Schaltfläche in der rechten Spalte gesetzt.
+Bitte beachten Sie auch die oben aufgeführten „Vorhandene Funktionen“.
 
-**Text abspielen** (nur X20 Pro) – erzeugt gesprochenen Text direkt im
-Sender, anstatt eine zuvor vorbereitete Datei abzuspielen:
+#### Zustand
 
-![Text abspielen](../assets/model-sf-x20pro-play-text.png)
+Sobald die Funktion aktiviert wird, werden alle aktuellen Kanalwerte aus dem Menü „Kanäle“ in die Failsafe-Einstellungen kopiert, an den Empfänger gesendet und anschließend etwa alle 10 Sekunden erneut übertragen.
 
-- **Text** – die vom Benutzer angegebene Textfolge, die gesprochen werden
-  soll. Die Verwendung von Großbuchstaben führt dazu, dass das Wort
-  Buchstabe für Buchstabe buchstabiert wird (z. B. wird „OFF“ als
-  „O-F-F“ wiedergegeben); Kleinbuchstaben werden als Wort ausgesprochen
-  („off“).
-- **wiederholen**, **Nicht beim Start** – wie oben.
+Bitte beachten Sie auch die [Failsafe](rf-system.md)-Einstellungen.
 
-**Weiter zum Bildschirm** – schaltet die Anzeige auf eine ausgewählte
-Bildschirmseite um, z. B. auf den Flugdatensatz eines Empfängers, wenn
-eine Drucktaste gedrückt wird:
+#### Modul
 
-![Weiter zum Bildschirm](../assets/model-sf-go-to-screen.png)
-![Bildschirmoptionen](../assets/model-sf-go-to-screen-options.png)
+Wählen Sie aus, ob die Failsafe-Funktion über das interne oder das externe HF-Modul eingestellt werden soll.
 
-**Bildschirm sperren** – sperrt den Touchscreen, um eine versehentliche
-Bedienung zu verhindern (auch direkt verfügbar durch gleichzeitiges
-Drücken von `ENT` und `PAGE` für 1 Sekunde auf dem Startbildschirm):
+### Aktion: ***AUDIO abspielen***
 
-![Bildschirm sperren](../assets/model-sf-lock-touchscreen.png)
+![](../assets/model-sf-play-audio.png)
 
-**Modell laden** – lädt beim Auslösen ein bestimmtes **Modell**, optional
-mit einer **Bestätigung**, bevor tatsächlich umgeschaltet wird:
+Diese Spezialfunktion dient dazu, Audiodateien oder die Werte ausgewählter Quellen mithilfe eines Sequenzers wiederzugeben. Es lässt sich eine Sequenz von bis zu 100 „Datei abspielen“- und/oder „Wert ansagen“-Befehlen konfigurieren, die nacheinander ausgeführt werden.
 
-![Modell laden](../assets/model-sf-load-model.png)
+Bitte beachten Sie auch die oben aufgeführten „Vorhandene Funktionen “.
 
-**Vario abspielen** – steuert die Vario-Tonausgabe anhand einer
-ausgewählten Quelle (normalerweise der VSpeed-Sensor eines FrSky-Varios,
-es funktioniert aber jeder Sensor mit der Einheit m/s):
+#### Stimme
 
-![Vario abspielen](../assets/model-sf-play-vario.png)
-![Vario-Quelle: VSpeed](../assets/model-sf-play-vario-vspeed.png)
+In Ethos können bis zu 3 Stimmen konfiguriert werden. Wählen Sie die Stimme aus, die für dieses „Audio abspielen“ verwendet werden soll.
 
-- **Bereich** – die Steig-/Sinkrate, die auf die Tonhöhe abgebildet wird,
-  standardmäßig ±10 m/s (bis zu ±100 m/s). Oberhalb der **Mitte** steigt
-  die Tonhöhe linear mit der Steigrate bis zum maximalen Bereichswert an
-  (die Tonhöhe bei maximaler Rate wird unter [Allgemein →
-  Vario](../system-setup/general.md#vario) eingestellt); beim Sinken
-  ertönt ein durchgehender Ton, dessen Tonhöhe zum minimalen
-  Bereichswert hin abfällt.
-- **Mitte** – der Bereich für „kein Steigen“, standardmäßig ±0,3 m/s (bis
-  zu ±2 m/s); innerhalb dieses Bereichs bleibt die Tonhöhe konstant (die
-  Tonhöhe bei Rate null wird ebenfalls unter Allgemein → Vario
-  eingestellt). Schalten Sie von **Ton** auf **Stumm** um, um den Ton
-  vollständig abzuschalten.
+Weitere Informationen zur Konfiguration von benutzerdefinierten Stimmen und Systemstimmen finden Sie im Abschnitt [Auswahl der Stimmen](../system-setup/general.md) unter Allgemein.
 
-  ![Optionen für Vario-Bereich/Mitte](../assets/model-sf-play-vario-options.png)
+#### Priorität
+
+Die Prioritätsfunktion in „Audio abspielen“ stellt sicher, dass alle „Systemwarnungen“ sofort wiedergegeben werden.
+
+Die Einträge „Audio abspielen“ haben standardmäßig die Priorität 1 (Standard). Daher unterbrechen alle Systemwarnungen mit der Priorität 0 alle Vorgänge mit einer niedrigeren Priorität (d. h. einer höheren Zahl).
+
+#### wiederholen
+
+Der Audiodatei kann einmal abgespielt oder mit der hier eingegebenen Frequenz bis zu 600s wiederholt werden.
+
+#### Nicht beim Start
+
+Wenn diese Option aktiviert ist, wird der Sprachtext beim Starten nicht abgespielt.
+
+#### zurücksetzen
+
+Wenn diese Option aktiviert ist und sich eine Sequenz im Status „Wartezeit“ oder „Wartebedingung“ befindet (oder diesen erreicht), wird die Sequenz zurückgesetzt. Wenn die „Aktive Bedingung“ weiterhin „Wahr“ ist, wird die Sequenz erneut abgespielt.
+
+#### Sequenz
+
+![](../assets/model-sf-play-audio-add-line.png)
+
+Bitte beachten Sie auch die oben aufgeführten „Vorhandene Funktionen “.
+
+Die verfügbaren Aktionen sind:
+
+![](../assets/model-sf-play-audio-add-line-type.png)
+
+##### Datei abspielen
+
+![](../assets/model-sf-play-audio-add-play-file.png)
+
+Datei abspielen gibt die ausgewählte Audiodatei wieder.
+
+Einzelheiten über den Speicherort der Dateien usw. finden Sie im Abschnitt „Benutzer-Sounddateien“ unter „[Auswahl der Stimmen](../system-setup/general.md)“.
+
+##### Wert ansagen
+
+![](../assets/model-sf-play-audio-add-play-value.png)
+
+Wert ansagen gibt den Wert der ausgewählten Quelle wieder. Die Quelle kann aus einer der folgenden Quellen stammen:
+
+-   Analog, d. h. Knüppel, Taster oder Schieberegler
+    -   Schalter
+    -   Logische Schalter
+    -   Trimmungen
+    -   Kanäle
+    -   Kreisel
+    -   L/S Konfiguration
+    -   Trainer
+    -   Stoppuhren
+    -   Telemetrie
+
+##### Wartezeit
+
+Wartezeit fügt eine Verzögerung für die erforderliche Zeit ein, bis zu 10 Minuten.
+
+##### Bedingung abwarten
+
+Die Wartebedingung hält an, bis die Wartebedingung erfüllt ist.
+
+#### Beispiele
+
+![](../assets/model-sf-play-audio-add-play-value-add-line.png)
+
+Im obigen Beispiel ist die aktive Bedingung der Logikschalter VFRlow. Wenn er aktiv wird, wird mit „Datei abspielen“ eine VFR-Niedrigwarnungs-Tondatei namens „vfrlow.wav“ abgespielt, gefolgt von „Wert abspielen“, die den (von der Telemetrie) aufgezeichneten minimalen VFR-Wert wiedergibt.
+
+![](../assets/model-sf-play-audio-add-sequence.png)
+
+Dieses Beispiel zeigt die Verwendung der „Wartebedingung“, um die Sequenz anzuhalten, bis der Schalter SH in die untere Position gebracht wird.
+
+#### Verwaltung der Sequenzen
+
+![](../assets/model-sf-play-audio-add-sequence-management.png)
+
+Wenn Sie auf eine Sequenzzeile tippen, wird ein Dialogfeld angezeigt, in dem Sie die Zeile bearbeiten, eine neue Zeile hinzufügen, klonen, die Zeile nach oben oder unten verschieben oder die Zeile löschen können.
+
+### Aktion: Haptik
+
+![](../assets/model-sf-haptic.png)
+
+Diese spezielle Funktion weist haptische Vibrationen zu.
+
+Bitte beachten Sie auch die oben aufgeführten „Vorhandene Funktionen “.
+
+#### Vibrationsmuster
+
+![](../assets/model-sf-haptic-pattern.png)
+
+Legt das Muster der Haptik fest. Die Optionen sind einfach, doppelt, dreifach, fünffach und sehr kurz.
+
+#### Intensität
+
+Wählen Sie die Stärke der haptischen Vibration, zwischen 1 und 10. Die Standardeinstellung ist 5.
+
+#### Repeat
+
+Die Haptik kann einmalig oder in der hier eingegebenen Häufigkeit wiederholt werden.
+
+#### Haptikmotoren auswählen
+
+![](../assets/model-sf-haptic-x20proaw.png)
+
+Der X20 Pro AW und der X20RS verfügen über Optionen für haptische Feedback-Motoren für die Steuerknüppel.
+
+Beachten Sie, dass der X20 Pro und der X20R durch den Einbau von MC20R-Haptik-Steuerknüppel aufgerüstet werden können. Informationen zum Aktivieren dieser Option finden Sie unter „Aktivieren von Haptik-Steuerknüppel-Upgrades“.
+
+Sie können zwischen folgenden Optionen wählen:
+
+• Standard (interne haptische Rückmeldung)
+
+• Alle Motoren
+
+• Haptische Rückmeldung für linken Steuerknüppel
+
+• Haptische Rückmeldung für rechten Steuerknüppel
+
+### Aktion: Logs schreiben
+
+![](../assets/model-sf-write-logs.png)
+
+Diese Spezialfunktion dient dazu, die periodische Protokollierung von Steuerknüppeln/Potentiometern/Schiebereglern, Schaltern, Logikschaltern und Kanalwerten in eine .csv-Datei zu konfigurieren.
+
+Logdateien werden im „.csv“-Format im Ordner „Logs“ auf der SD-Karte oder dem eMMC-Speicher abgelegt. Uhrzeit und Datum der Systemuhr werden gemeinsam mit den Daten protokolliert; sie sind von entscheidender Bedeutung, um die Daten durch eine Unterteilung der Log-Einträge in Sitzungen sinnvoll interpretieren zu können.
+
+#### Schreibe Intervall
+
+Das Schreibintervall für die Protokolle ist vom Benutzer zwischen 50 und 1000 ms einstellbar.
+
+#### Steuerknüppel/Potis/Sliders
+
+Ermöglicht die Protokollierung von Knüppel/Potis/Sliders.
+
+#### Schalter
+
+Aktiviert die Protokollierung von Schaltern.
+
+#### Logische Schalter
+
+Ermöglicht die Protokollierung der Logikschalter.
+
+#### Kanäle
+
+Ermöglicht die Protokollierung der an das HF-Modul gesendeten Kanäle.
+
+#### Log Viewer
+
+![](../assets/Pictures/1000000100000320000001E042258130.png)
+
+Um Protokolldateien anzuzeigen, navigieren Sie mit dem Datei-Explorer zum Ordner /Logs auf der eMMC oder der SD-Karte, tippen Sie dann auf die gewünschte Protokolldatei und wählen Sie öffnen.
+
+1. Die Protokolldatei wird in den Speicher eingelesen, kann aber während des Lesens abgebrochen werden.
+
+![](../assets/Pictures/1000000100000320000001E0D4435589.png)
+
+2. Wählen Sie die Kanäle aus, die auf der rechten Seite angezeigt werden sollen. In diesem Beispiel wurden die Kanäle „Gas“ und „Höhenruder“ ausgewählt. RSSI ist standardmäßig ausgewählt.
+
+Mit der Taste \[DISP\] wird der Fokus auf die erste Schaltfläche in der rechten Spalte gesetzt.
+
+![](../assets/Pictures/1000000100000320000001E0D2541765.png)
+
+3. Die Anzeige kann mit dem Drehgeber oder durch Wischen nach links oder rechts verschoben werden. Der obige Screenshot wurde im Vergleich zum vorherigen Screenshot nach links verschoben.
+
+![](../assets/Pictures/1000000100000320000001E03C46F784.png)
+
+4. Die Anzeige kann durch Drehen des Drehgebers bei gedrückter PgUp/Dn-Taste (Seitentaste) vergrößert oder verkleinert werden.
+
+### Aktion: Text abspielen (nur Sender mit Text to Speech- (TTS) Funktion)
+
+![](../assets/model-sf-x20pro-play-text.png)
+
+Diese Spezialfunktion nutzt einen internen Hardware-TTS-Prozessor (Text-To-Speech), um aus dem vom Benutzer eingegebenen Text gesprochenen Text zu erzeugen, anstatt zuvor vorbereitete .wav-Dateien abzuspielen.
+
+Bitte beachten Sie auch die oben aufgeführten „Allgemeine Parameter“.
+
+#### Text
+
+Die vom Benutzer angegebene Textfolge, die in Sprache umgewandelt und abgespielt werden soll. Die Verwendung von Großbuchstaben führt dazu, dass das Wort Buchstabe für Buchstabe buchstabiert wird, z. B. wird „OFF“ als O-F-F wiedergegeben. Wenn Sie Kleinbuchstaben verwenden, sagt TTS, dass Sie das Wort „aus“ sagen möchten.
+
+#### wiederholen
+
+Der Sprachtext kann einmal abgespielt oder in der hier eingegebenen Häufigkeit wiederholt werden.
+
+#### Nicht beim Start
+
+Wenn diese Option aktiviert ist, wird der Sprachtext beim Starten nicht abgespielt.
+
+### Aktion: Weiter zum Bildschirm
+
+![](../assets/model-sf-go-to-screen.png)
+
+Mit dieser Spezialfunktion wird die Anzeige auf eine ausgewählte Seite umgeschaltet.
+
+Bitte beachten Sie auch die oben aufgeführten „Allgemeine Parameter“.
+
+#### Bildschirm
+
+Wählen Sie die anzuzeigende Sender-Bildschirmseite aus.
+
+![](../assets/model-sf-go-to-screen-options.png)
+
+Der Zielbildschirm kann eine beliebige Modell-, System- oder Konfigurationsbildschirmseite, die Startseite oder die „Flugdatenaufzeichnung“ für den ausgewählten Empfänger sein.
+
+### Action: Bildschirm sperren
+
+![](../assets/model-sf-lock-touchscreen.png)
+
+Mit dieser Spezialfunktion wird der Touchscreen gesperrt, um eine versehentliche Bedienung zu verhindern.
+
+Bitte beachten Sie, dass die Funktion „Bildschirm sperren“ auch durch gleichzeitiges Drücken von \[ENT\] und \[Page\] für 1 Sekunde auf dem Startbildschirm verfügbar ist.
+
+Bitte beachten Sie auch die oben aufgeführten „Allgemeine Parameter“.
+
+### Action: Modell laden
+
+![](../assets/model-sf-load-model.png)
+
+Mit dieser Spezialfunktion wird ein bestimmtes Modell geladen, wenn die „Aktiv-Bedingung“ erfüllt ist.
+
+Bitte beachten Sie auch die oben aufgeführten „Allgemeine Parameter“.
+
+#### Modell
+
+Wählen Sie das gewünschte Modell, das geladen werden soll und bestätigen Sie mit ‚Enter’
+
+#### Bestätigung
+
+Wählen Sie aus, ob und wie die Bestätigung erfolgen soll.
+
+### Aktion: Vario abspielen
+
+![](../assets/model-sf-play-vario.png)
+
+Ermöglicht die Auswahl einer Quelle für das Vario.
+
+![](../assets/model-sf-play-vario-options.png)
+
+Die Vorgabe ist normalerweise der VSpeed-Sensor des FrSky Varios, aber jeder Sensor mit der Einheit m/s kann verwendet werden.
+
+![](../assets/model-sf-play-vario-vspeed.png)
+
+Sobald die Quelle ausgewählt wurde, erscheinen die Parameter Bereich und Zentrum.
+
+#### Bereich
+
+Die voreingestellte Steig- oder Sinkgeschwindigkeit beträgt +/- 10m/s, kann aber auf bis zu +/- 17m/s erhöht werden.
+
+Wenn die Steigrate über dem unten angegebenen Mittelwert liegt, erhöht sich die Tonhöhe der Vario-Pieptöne linear, bis der maximale Bereichswert erreicht ist. Die Tonhöhe bei maximaler Steigrate kann im [Abschnitt Vario](../system-setup/general.md) der Audioeinstellungen konfiguriert werden.
+
+Der Ton ist kontinuierlich, wenn die Steigrate sinkt. Die Tonhöhe nimmt linear ab, bis der minimale Reichweitenwert erreicht ist.
+
+#### Mittelstellung
+
+Der Standardbereich, der eine Steigrate von Null definiert, beträgt +/- 0,3m/s, kann aber auf bis zu +/- 2m/s erhöht werden.
+
+Die Tonhöhe der Vario-Pieptöne ist konstant, wenn die Steigrate zwischen diesen Mittelwerten liegt. Die Tonhöhe bei einer Steigrate von Null kann im [Abschnitt Vario](../system-setup/general.md) der Audioeinstellungen konfiguriert werden.
+
+Die Signaltöne können durch Umschalten von 'Piepton' auf 'lautlos' stumm geschaltet werden.

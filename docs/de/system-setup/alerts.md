@@ -1,33 +1,29 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Alarme
 
-# Warnungen
+![](../assets/system-icon-alerts.png)
 
-![Warnungen](../assets/system-alerts.png)
+![](../assets/system-alerts.png)
 
-Vier senderweite Warnungen, jede einzeln zuschaltbar – unabhängig von den
-modellspezifischen [Sonderfunktionen](../model-setup/special-functions.md)
-und [logischen Schaltern](../model-setup/logical-switches.md), die Sie
-selbst anlegen.
+Die Systemwarnungen sind:
 
-- **Stummer Modus** – eine Sprachansage beim Einschalten, wenn diese
-  Prüfung aktiviert ist und [Allgemein → Audio-Modus](general.md) auf
-  Stumm steht, als Erinnerung daran, dass der Sender stummgeschaltet ist.
-- **Hauptspannung** – „Radio battery is low“, wenn der Hauptakku des
-  Senders unter den in [Akku](battery.md) eingestellten Schwellwert
-  **Unterspannung** fällt.
-- **RTC-Spannung** – „RTC battery is low“, wenn die Spannung der
-  RTC-Batterie (Real Time Clock) unter 2,5 V fällt (Standardschwelle).
-  Die Datenaufzeichnung ist auf die Echtzeituhr angewiesen; eine
-  ungültige Zeit macht die Logdateien schwer lesbar, insbesondere beim
-  Unterscheiden einzelner Flugsitzungen. Diese Warnung kann vorübergehend
-  abgeschaltet werden, während man auf den Austausch der Batterie wartet,
-  sollte aber nicht dauerhaft deaktiviert bleiben.
-- **Warnung bei Sensorkonflikt** – erkennt sich überschneidende
-  Telemetrie-Sensor-IDs. Ein Deaktivieren lohnt sich nur, wenn Sie
-  Sensoren verwenden, die nicht der S.Port-Spezifikation entsprechen.
-- **Inaktivität** – eine Sprachansage „Prolonged inactivity“ (zusätzlich
-  ein Vibrationsimpuls, falls die Lautstärke heruntergeregelt ist),
-  nachdem der Sender länger als die eingestellte Zeit ungenutzt geblieben
-  ist – standardmäßig 10 Minuten.
+## Stummer Modus
+
+Ein ‚Stummer Modus'-Alarm wird beim Start ausgegeben, wenn ‚Stummer Modus' aktiviert ist und der 'Audio Mode' unter System / Allgemein / [Audio / Modus](general.md) auf lautlos gesetzt wurde.
+
+## Senderakku -kalibriert?-
+
+Eine Sprachmeldung 'Funkbatterie ist schwach' wird ausgegeben, wenn die Überprüfung der 'Hauptspannung' eingeschaltet ist und die Hauptbatterie des Senders unter dem Schwellenwert liegt, der im Parameter 'Niedrige Spannung' unter System / Batterie eingestellt ist.
+
+## Uhr/Dat.-Batterie-
+
+Ein Sprachalarm „RTC-Batterie ist schwach“ wird ausgegeben, wenn die Überprüfung der RTC-Spannung eingeschaltet ist und die RTC-Uhrenbatterie unter 2,5 V liegt, dem Standardwert für die RTC-Batterie. Der Alarm kann ausgeschaltet werden, bis die RTC-Batterie ausgetauscht wurde, sollte aber nicht auf unbestimmte Zeit ausgeschaltet bleiben. Die Echtzeit wird bei der Datenaufzeichnung verwendet, und eine ungültige Zeit führt zu Schwierigkeiten beim Lesen der Aufzeichnungen, insbesondere bei der Unterscheidung von Flugphasen.
+
+## Sensorkonflikt-Warnung
+
+![](../assets/Pictures/1000000100000320000001E0CB41EFB6.png)
+
+Die Sensor-Konflikterkennung kann deaktiviert werden. Dies sollte nur erforderlich sein, wenn Sie Sensoren haben, die nicht der S.Port-Spezifikation entsprechen.
+
+## Inaktivitäts-Warnung nach
+
+Ein Sprachalarm „Sender eingeschaltet. Längere Zeit ohne Aktivität“ wird ausgegeben, wenn das Funkgerät länger als die „Inaktivität“-Zeit nicht benutzt wurde, und auch ein haptischer Alarm, falls die Lautstärke des Senders ganz herunter gedreht wird. Die Standardeinstellung ist 10 Minuten und kann bis zu 120 Minuten betragen.

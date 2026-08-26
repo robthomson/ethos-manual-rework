@@ -1,38 +1,43 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Übersicht (Seite 1)
 
-# Systemeinstellungen
+![](../assets/system-icon-filemanager.png)
 
-Im Menü „System“ werden die Einstellungen vorgenommen, die für alle Modelle
-gelten — Sie erreichen es über die Registerkarte **Zahnrad** am unteren Rand des
-Startbildschirms (oder über die Taste `SYS`). Alles, was nur ein bestimmtes
-Modell betrifft, wird dagegen unter [Modell-Einstellung](../model-setup/index.md)
-konfiguriert (Registerkarte **Flugzeug** / Taste `MDL`) — insbesondere ist die
-Frage, welches HF-Modul ein Modell verwendet (internes oder externes), eine
-modellspezifische Einstellung unter [HF-System](../model-setup/rf-system.md) und
-nicht hier zu finden.
+Berühren Sie im System-Setup eine Kachel, um den ausgewählten Bereich zu konfigurieren, oder verwenden Sie den Drehgeber, um die Markierung auf die gewünschte Kachel zu bewegen, und drücken Sie dann Enter. Sie können nach links wischen, um auf die zweite Seite der Funktionen zuzugreifen, oder die Markierung mit dem Drehwähler auf die zweite Seite verschieben. Alternativ können Sie auch die Seitentaste verwenden, um zwischen den Seiten zu wechseln.
 
-Berühren Sie eine Kachel, um den ausgewählten Bereich zu konfigurieren, oder
-verwenden Sie den Drehwähler, um die Markierung auf die gewünschte Kachel zu
-bewegen, und drücken Sie dann `ENT`. Es gibt eine zweite Seite mit Kacheln — Sie
-können nach links wischen, die Markierung mit dem Drehwähler auf die zweite Seite
-verschieben oder die Taste `PAGE` verwenden, um zwischen den Seiten zu wechseln.
+## Dateimanager
 
-- [Datei Manager](file-manager.md) — Dateien und Ordner sowie das Flashen von
-  Firmware auf das interne HF-Modul, auf S.Port-Geräte, über OTA und auf externe
-  Module.
-- [Alarme](alerts.md) — Stummer Modus, Senderakku und Uhr/Dat.-Batterie,
-  Sensorkonflikt-Warnung und Inaktivitäts-Warnung.
-- [Datum & Uhrzeit](date-and-time.md) — die Systemuhr und ihre Anzeige.
-- [General](general.md) — Sprache, Anzeige, Audio, Vario, Haptik, Symbolleiste
-  oben, Modell beim Einschalten auswählen und Vorwahl des USB-Modus.
-- [TX-Akku](battery.md) — Verwaltung der Senderbatterien.
-- [Hardware](hardware.md) — Prüfen und Kalibrieren der Bedienelemente, Festlegen
-  der Schaltertypen und die Startseite-Tastaturbelegung.
-- [Knüppel Modus](controls.md) — Steuerknüppelmodus und Standard-Kanalreihenfolge
-  (im Menü „Knüppel Modus“ genannt).
-- [Geräte](devices.md) — Sensoren, Empfänger, Gas Suite, Servos und Video-Sender
-  (im Menü „Geräte Konfig.“ genannt).
-- [Info](information.md) — Firmware-Version, Steuerknüppel-Typ, Angaben zum
-  HF-Modul, Sender-Laufzeit und Fehlermeldungen.
+Der Dateimanager dient der Verwaltung von Dateien und dem Zugriff auf Flash-Firmware für das interne HF-Modul, den externen S.Port, OTA (Over The Air) und externe Module.
+
+## Warnungen
+
+Konfiguration des Ruhemodus, der Batteriespannung von Sender und RTC, Sensorkonflikte und Inaktivitätswarnungen.
+
+## Datum und Uhrzeit
+
+Konfiguration der Systemuhr und der Zeitanzeigeoptionen.
+
+## General
+
+Zur Konfiguration des Menüstils, der Systemsprache und den LCD-Display-Werten wie Helligkeit und Hintergrundbeleuchtung sowie der Audio-, Vario- und haptischen Modi und Einstellungen. Darüber hinaus können die Optionen der oberen Symbolleiste, die Modellauswahl beim Einschalten und die Vorwahl des USB-Modus konfiguriert werden.
+
+## TX-Akku & Sp. B…
+
+Konfiguration der Einstellungen für die Batterieverwaltung.
+
+## Hardware
+
+Dieser Abschnitt ermöglicht die Überprüfung der physischen Hardware-Eingabegeräte sowie der Analog- und Kreiselkalibrierung. Außerdem können hier die Definitionen der Schaltertypen geändert und die Zuordnung der „Home-Taste“ festgelegt werden.
+
+## Knüppel Mode
+
+Konfiguration des Knüppelmodus und der Standard-Kanalreihenfolge. Die 4 Knüppelsteuerungen können auch umbenannt werden.
+
+## Sensor Konfig.
+
+Werkzeuge zur Konfiguration von Geräten wie Sensoren, Empfängern, der Gas-Suite, Servos und Video-Sendern.
+
+## Info
+
+Systeminformationen zu Ethos-Firmware-Version, Knüppel-Typen, Systemzeit, HF-Modulen, den angeschlossenen Empfängern mit ihrem FW-Stand und der Senderlaufzeit seit letzten Reset.
+
+Des Weiteren sind hier alle LUAs aufgeführt.

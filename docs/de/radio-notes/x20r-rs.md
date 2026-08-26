@@ -1,0 +1,7 @@
+# **Ansicht** X20R/RS
+
+![](../assets/Pictures/10000001000002BA0000021E05856E7F.png)
+
+![](../assets/Pictures/1000000100000283000001F63EA86EE5.png)
+
+![](../assets/Pictures/100000010000021A000001F67748233E.png)

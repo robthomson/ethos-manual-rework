@@ -1,90 +1,132 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Configurar dispositivos
 
-# Dispositivos
+![](../assets/system-icon-devices.png)
 
-![Dispositivos](../assets/system-devices.png)
+‘Configurar dispositivos’ contiene herramientas para configuración sensores, receptores, la suite de gasolina, servos y transmisores de vídeo.
 
-En el menú aparece como **Device config**: son las herramientas para configurar
-los dispositivos periféricos conectados por S.Port/FBUS, es decir, sensores,
-receptores, el «gas suite», servos, VTX y ESC. **DIY sensors** aparece
-automáticamente en cuanto se detecta un sensor DIY. Consulte el manual propio
-de cada dispositivo para más detalles; esta página trata lo que es común a
-todos ellos.
+![](../assets/system-devices.png)
 
-!!! note
-    Esto no tiene nada que ver con elegir el módulo RF (interno o externo) con
-    el que transmite un *modelo*: ese es un ajuste propio de cada modelo, que
-    se explica en [Sistema RF](../model-setup/rf-system.md).
+Actualmente, ya están incluidos los siguientes dispositivos:
 
-Device config es ampliable: tanto los usuarios como FrSky pueden añadir
-páginas aquí mediante Lua.
+- Sensores
+- Seguridad de vuelo
+- Servos
+- Receptores
+- VTX
+- ESC
+- Sensores DIY (Sólo aparecerá la opción DIY si uno de ellos se detecta).
 
-## Reasignación de los ID de los sensores
+Vaya al manual de cada dispositivo para detalles adicionales.
 
-Las pantallas de Device config de Ethos permiten cambiar directamente el
-**Physical ID** y el **Application ID** de S.Port de un dispositivo. Si tiene
-más de un dispositivo con la misma función, conéctelos **de uno en uno**:
-detecte cada uno en
-[Telemetría → Descubrir nuevos sensores](../model-setup/telemetry.md), cambie
-aquí, en Device config, su Physical ID y su Application ID, y después vuelva
-atrás y vuelva a detectarlo con el nuevo ID.
+Tenga en cuenta que en ETHOS los menús de ‘Configurar dispositivos’ permiten cambiar la ID física y la ID de las aplicaciones. Si dispone de más de un sensor que haga la misma función, necesitará conectar uno cada vez, detectarlos en Telemetría / ‘Descubrir nuevos sensores’, y después cambiar su ID física y la ID de aplicación en ‘Configuración de dispositivos’, y luego volver a redescubrirlos con la nueva ID. Para más detalles, vaya a la sección de [Telemetria SmartPort](#Physical ID section).
+
+La Configuración de dispositivos es ahora ampliable y el usuario (y Frsky) puede añadir nuevas páginas a través de Lua.
 
 ## Ejemplo con receptores
 
-![Elección de módulo](../assets/system-devices-module-choice.png)
+![](../assets/Pictures/1000000000000320000001E0FB5EF710.png)
 
-Los receptores estabilizados de FrSky pueden configurarse aquí una vez
-instalado su script Lua de configuración (con un solo clic, desde la Lua
-Library de Ethos Suite). Hay dos vías de configuración según la generación del
-receptor:
+Los receptores estabilizados de FrSky se pueden configurar a través de ‘Configuración de dispositivos’ mediante la instalación de los Scripts Lua que sean necesarios. Son fácilmente instalables mediante un click, desde la biblioteca Lua en la Suite ETHOS. Para más detalles, vaya a la sección [Biblioteca Lua](../ethos-suite/operation.md).
 
-- **Stabilizer config**: para los receptores más recientes, con
-  «estabilización avanzada» (control de ganancia en el canal 13). Se muestran
-  dos grupos de estabilización independientes: el grupo 1 abarca los canales
-  1–6 y el grupo 2 los 7–11; desactive el grupo 2 si no utiliza los pines 7–11
-  para estabilización. Incluye una calibración de 6 ejes que debe ejecutarse
-  una vez en un receptor nuevo, y de nuevo tras cualquier actualización al
-  firmware v3.0.x (después de un restablecimiento de fábrica). En la
-  calibración de cada grupo, el antiguo paso de «autocomprobación» se ha
-  sustituido por la calibración independiente del nivel del modelo, del centro
-  de los canales y de sus recorridos máximos, y cada canal puede activarse o
-  desactivarse individualmente. Las configuraciones (no los datos de
-  calibración) pueden guardarse en un PC y restaurarse desde él.
-- **SxR**: para los receptores más antiguos, incluidas las unidades heredadas
-  y los Archer/Archer Pro, además de receptores como el SR10 Pro que, a pesar
-  del nombre «SRx», tienen la ganancia en el canal 9 en lugar del 13.
+### Descripción general
 
-  ![Dispositivo actual](../assets/system-devices-current.png)
+Existe la opción de elegir entre «Configuración de estabilizador» para los receptores más recientes y «SxR» para los receptores más antiguos.
 
-!!! warning "Después de actualizar al firmware de receptor v3.0.x"
-    Haga un restablecimiento de fábrica (se encuentra en las opciones del
-    receptor, dentro de la configuración RF), después vuelva a vincular y
-    reconfigure por completo, especialmente las funciones Stab y la
-    calibración de 6 ejes. Así lo exige la nueva función de guardado de los
-    datos de failsafe de la v3.0.x; compruebe cuidadosamente la función de
-    failsafe al terminar.
+#### Opción de configuración de la estabilizador
 
-FrSky North America publica una guía detallada de configuración de receptores
-estabilizados, y existe también un vídeo explicativo del piloto del equipo
-FrSky Juan Sánchez García que cubre lo mismo.
+La opción «Configuración de estabilizador» se utiliza para los receptores más recientes, como el TD SR12, TD SR18, TD SR10, TD SR6, TW SR12, TW SR8, TW SR10, Archer+ SR10+, Archer+ SR8, Archer+ SR12+, SR6 Mini, SR6 Mini E, SR6BL15A y SR6Lite.
 
-## Configuración mediante el conector S.Port de la emisora
+#### Opción SxR
 
-Los dispositivos S.Port y FBUS también pueden configurarse directamente a
-través del conector S.Port situado en la parte superior de la emisora, sin
-pasar por un receptor vinculado.
+La opción SxR se utiliza para los receptores más antiguos, como el ACCST D16 S6R,  
+ACCST D16 S8R, Archer SR6, Archer SR8 Pro, Archer SR10 Pro, R9 Stab, R9 Stab OTA, así como el RB30S y el RB40S. Consulte la [Opción SxR](#SxR option) más abajo para obtener detalles adicionales.
 
-1. Conecte el dispositivo al conector S.Port de la emisora (el cable
-   blanco/amarillo hacia el lado con la muesca).
-2. Vaya a **System → Device config**, desplácese hasta el dispositivo (por
-   ejemplo, un sensor de corriente FAS40 ADV) y pulse `ENT`.
-3. En la página de configuración, ajuste **Module** a **S.Port connector**.
-4. Haga los cambios necesarios (el Physical ID y el Application ID deben ser
-   únicos cada uno) y, a continuación, desplácese hacia abajo y pulse **Save
-   to flash**.
+### Opción de configuración del estabilizador
 
-Esto sirve tanto para los dispositivos FBUS (véase también [Guía práctica:
-Configurar un sistema FBUS](../how-to/fbus-setup.md)) como para los
-dispositivos S.Port sencillos, como un variómetro.
+Esta opción se utiliza para los receptores más recientes, como los modelos mencionados anteriormente.
+
+### Nota para la v3.0.x
+
+Tenga en cuenta que, tras actualizar el firmware del receptor a la versión 3.0.x, deberá realizar un restablecimiento de fábrica. Posteriormente, se requerirá la reconfiguración y el reajuste de todas las funciones (especialmente las de estabilización, incluida la calibración de 6 ejes). Esto se debe a la incorporación de la nueva función de guardado de datos a prueba de fallos en el receptor. Recuerde que la función a prueba de fallos debe restablecerse y comprobarse cuidadosamente después de actualizar el receptor. La opción de restablecimiento de fábrica del receptor se encuentra en Opciones del receptor, dentro de la configuración de RF.
+
+El proceso de configuración del estabilizador se ha simplificado, pero le resultará familiar de inmediato si ya ha utilizado Lua para SxR o Srx.
+
+![](../assets/Pictures/1000000000000320000001E0ACD120A4.png)
+
+Se pueden guardar configuraciones completas en su PC, o se pueden restaurar backups. Esto no incluye los datos de calibración.
+
+Los nuevos modelos de receptores tienen dos grupos de estabilización. El Grupo 1 cubre los canales 1-6, y el grupo 2 los canales 7-11. Si no se están usando los pines del 7 al 11 para la estabilización, debería desactivar el Grupo 2 de estabilización.
+
+La función de calibración de los 6 ejes está ahora integrada. Sólo se tiene que efectuar una vez en los nuevos receptores y cuando se hayan actualizado a la versión v3.0.x (después de un reseteo de fábrica).
+
+#### Calibración de los Grupos 1 y 2
+
+![](../assets/Pictures/1000000000000320000001E023AC18D8.png)
+
+En la función de calibración de los grupos 1 y 2, el paso de autocomprobación se ha sustituido por una calibración independiente mucho más precisa de la actitud deseada para el ‘modo de autonivelación’, centro del canal y sus extremos. Además, ahora es posible activar o desactivar cada canal individualmente.
+
+#### Configuración de los Grupos 1 y 2
+
+![](../assets/Pictures/1000000000000320000001E0CBA2378A.png)
+
+Los ajustes de estabilización se hacen ahora en esta sección.
+
+Se pueden guardar en su PC las configuraciones realizadas, o restaurar los backups. Esta acción no incluye los datos de calibración.
+
+FrSky en Norte America ha compilado [una guía comprehensiva](https://docs.google.com/document/d/1...it?usp=sharing) para ajustar los receptores estabilizados, que cubre todo esto en detalle.
+
+También se puede ver un [video del proceso de ajuste](https://youtu.be/0pKSzxyJrB8?si=PFuby_4TNiMnONvM) realizado por el piloto del equipo FrSky Juan Sanchez Garcia. Hace un trabajo excelente explicando con todo detalle el proceso de ajuste.
+
+### Opción SxR
+
+Los receptores más antiguos (como el ACCST D16 S6R y el ACCST D16 S8R), los receptores Archer y Archer Pro (como el Archer SR6, el Archer SR8 Pro y el Archer SR10 Pro) el R9 Stab, el R9 Stab OTA, así como los RB30S y RB40S, utilizan la opción SxR.
+
+Aunque los receptores Archer se denominan SRx en lugar de SxR y tienen la ganancia asignada al canal 9, siguen utilizando la opción SxR.
+
+Los receptores más recientes con "Estabilización avanzada" y el control de ganancia en el canal 13 utilizan la opción  ‘[Configuracion del estabilizador](devices.md)’.
+
+![](../assets/Pictures/1000000000000320000001E0530F45FB.png)
+
+Los viejos receptores SxR pueden calibrarse y configurarse a través de la opción ‘SxR’.
+
+## Configuración a través del conector S.Port de la emisora
+
+La configuración de dispositivos S.Port y FBUS directamente desde el transmisor está disponible a través del conector S.Port del transmisor.
+
+### Configuración de dispositivos FBUS
+
+Conecte el dispositivo FBUS en la conexión S.Port que se encuentra encima de la radio. El cable blanco o amarillo va en el lado de la hendidura.
+
+![](../assets/Pictures/1000000000000320000001E052548783.png)
+
+Vaya a Sistema / Configuración de dispositivos y encuentre su dispositivo FBUS, por ejemplo un FAS40 ADV sensor de consumo. Presione Enter.
+
+![](../assets/Pictures/1000000000000320000001E0DF721D21.png)
+
+Una vez abierta la página de configuración, haga click en Módulo y seleccione ‘S.Port connector’.
+
+![](../assets/Pictures/1000000000000320000001E0A3897F6F.png)
+
+Haga los cambios que desee en la configuración, recordando que la ID Física y la ID de Aplicación deben ser únicas.
+
+Después, vaya más hacia abajo y seleccione el botón ‘Save to flash’.
+
+Para más ejemplos, vaya a la sección ‘Cómo hacer’ y mire “[Cómo configurar un sistema FBUS](#How to configure an FBUS system)”.
+
+### Configurar dispositivos S.Port
+
+Conecte el dispositivo S.Port en la conexión S.Port de encima de la radio. El cable blanco o amarillo va en el lado de la hendidura.
+
+![](../assets/Pictures/1000000000000320000001E0300EAF26.png)
+
+Vaya a Sistema / Configuración de dispositivos y encuentre su dispositivo S.Port, por ejemplo un Variómetro. Presione Enter.
+
+![](../assets/Pictures/1000000000000320000001E03C0E02A8.png)
+
+Una vez abierta la página de configuración, haga click en Módulo y seleccione ‘S.Port connector’.
+
+![](../assets/Pictures/1000000000000320000001E0A3897F6F.png)
+
+Haga los cambios que desee en la configuración, recordando que la ID Física y la ID de Aplicación deben ser únicas.
+
+Después, vaya más hacia abajo y seleccione el botón ‘Save to flash’.

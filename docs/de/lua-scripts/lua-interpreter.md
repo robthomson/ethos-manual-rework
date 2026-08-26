@@ -1,17 +1,9 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# ETHOS LUA Interpreter
 
-# Lua-Interpreter
+Der in ETHOS eingebettete Lua-Interpreter basiert auf LUA 5.4.3. und wird mit diesen Bibliotheken ausgeliefert:
 
-Ethos enthält einen Interpreter auf Basis von **Lua 5.4.3**, der Folgendes umfasst:
-
-- die Basis-Bibliothek
-- die table-Bibliothek
-- die io-Bibliothek
-- die os-Bibliothek
-- die math-Bibliothek
-
-Skripte laufen in dieser Umgebung – unabhängig davon, ob sie ein
-[Anzeige-Widget](../displays/custom-widgets.md) oder eine modellbezogene
-[Quelle bzw. Aufgabe](../model-setup/lua-scripts.md) umsetzen.
+-  Basisbibliothek
+  -  Tabellenbibliothek
+  -  io-Bibliothek
+  -  os Bibliothek
+  -  mathematische Bibliothek

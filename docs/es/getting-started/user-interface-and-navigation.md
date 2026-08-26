@@ -1,189 +1,206 @@
----
-translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
----
+# Interfaz de usuario y Navegación
 
-# Interfaz de usuario y navegación
+La radio tiene una pantalla táctil, lo que hace que la interfaz de usuario sea bastante intuitiva. Tocando las pestañas Configuración del Modelo (icono del avión) [Configurar Pantallas](../displays/index.md) (icono de varias pantallas) y Configuración del Sistema (icono de un engranaje) le llevan directamente a esas funciones, que se describen en sus correspondientes secciones de este manual. También se puede acceder a ellas mediante las teclas \[MDL\], \[DISP\] y \[SYS\] respectivamente.
 
-Ethos puede manejarse por completo con el **selector rotatorio** de la derecha
-(gírelo para mover el remarcado, presiónelo para `ENT`) y la tecla `RTN` para
-salir de un menú: la pantalla táctil, en las radios que la incorporan, es un
-atajo para las mismas acciones, no una forma de trabajo distinta. `MDL`,
-`DISP` y `SYS` acceden directamente a Configuración del modelo, Configurar
-pantallas y Configuración del sistema respectivamente (los mismos tres
-cuadrados de la barra inferior); una pulsación larga de `RTN` desde cualquier
-lugar devuelve directamente a la pantalla de inicio.
+Alternativamente, se puede usar el selector rotatorio para mover la selección para resaltar la pestaña o el parámetro deseados, apretando Enter para seleccionarlo.
 
-## El menú de reinicio
+Una pulsación larga de la tecla \[RTN\] te devolverá a la pantalla de inicio desde cualquier submenú.
 
-![Menú contextual](../assets/resetmenu.png)
+Tocando la hora del sistema a la derecha de la barra inferior se accede a la sección Fecha y hora, que permite ajustar la hora y la fecha de la radio.
 
-Una pulsación larga de `ENT` desde la pantalla de inicio abre un menú de
-reinicio:
+Si toca los iconos del altavoz o de la batería en la barra superior, aparecerán los paneles de control correspondientes a “Sonido y vibración” y “Batería”.
 
-- **Reset flight** — reinicia la telemetría, los cronómetros y los
-  interruptores de función, y vuelve a ejecutar la [lista de
-  comprobación](../model-setup/checklist.md) previa al vuelo.
-- **Reset telemetry** — reinicia únicamente la telemetría.
-- **Reset timers** — reinicia únicamente los cronómetros.
-- **Lock touchscreen** — también accesible presionando `ENT` + `PAGE`
-  simultáneamente durante un segundo desde la pantalla de inicio, o como
-  disparador de una [función
-  especial](../model-setup/special-functions.md).
+## Menú restablecer
+
+![](../assets/resetmenu.png)
+
+Una pulsación larga de la tecla \[ENT\] lleva a un menú de en el que se puede reiniciar:
+
+### Reiniciar vuelo
+
+Pondrá a cero simultáneamente la telemetría, los cronómetros y todos los interruptores de función. Tenga en cuenta que las comprobaciones previas al vuelo se volverán a realizar después de un 'Reinicio del Vuelo'.
+
+### Reiniciar telemetría
+
+Restablecerá la telemetría y borrará cualquier alerta de punto rojo de 'sensor perdido' o 'conflicto de sensor'. Por favor, consulte las alertas de sensor perdido / conflicto. [Sensor perdido / alertas de conflicto](#Sensor lost - conflict alerts).
+
+### Reiniciar cronómetros
+
+Pondrá a cero los cronómetros
+
+## Blocaje de la pantalla táctil
+
+La pantalla táctil LCD puede blocarse y desbloquearse para prevenir su operación inadvertida. Si se presionan simultáneamente las teclas \[ENT\] y \[Page\] por más de 1 segundo cuando se está en la pantalla inicial. También es posible hacerlo como una función especial.
 
 ## Controles de edición
 
-**Añadir elementos funcionales** — pueden crearse nuevos elementos
-funcionales, como cronómetros, interruptores lógicos, funciones especiales,
-curvas o variables, seleccionando el símbolo **+** situado junto a la cabecera
-de la columna del menú correspondiente. En las radios sin pantalla táctil,
-seleccione un elemento existente, presione `ENT` y elija **Add** en el diálogo
-que se habrá abierto; por supuesto, esta forma de hacerlo también funciona en
-las radios con pantalla táctil.
+### Añadir elementos funcionales
+
+Pueden crearse nuevos elementos funcionales, como pueden ser cronómetros, interruptores lógicos, funciones especiales curvas o variables, seleccionando el símbolo ‘+’ situado junto a la cabecera de la columna de los menús principales relevantes.
+
+En las radios sin pantalla táctil, use el selector rotatorio hasta llegar a símbolo ‘+’ y presione \[Enter\].
 
 ### Teclado virtual
 
-![Teclado de texto](../assets/keyboard-text-azerty.png)
+Ethos dispone de un teclado virtual para editar campos de texto.
 
-Basta con tocar cualquier campo de texto (o presionar `ENT` sobre él) para que
-aparezca el teclado en pantalla. La tecla de borrado hacia atrás borra los
-caracteres a la izquierda del cursor; `PAGE` borra los caracteres a la derecha
-del cursor y, una vez que se llega al final del texto, empieza a borrar los
-restantes que estén a la izquierda. Toque el propio campo de texto para mover
-el cursor a la posición deseada; alternativamente, use `SYS`/`DISP` para
-moverlo hacia la izquierda o hacia la derecha sin pantalla táctil. La tecla
-**?123**/**abc** alterna con el teclado numérico, que también incluye
-caracteres especiales:
+![](../assets/keyboard-text-azerty.png)
 
-![Teclado numérico](../assets/keyboard-text-numbers.png)
+Basta con tocar en cualquier campo de texto (o hacer clic en \[ENT\]) para que aparezca el teclado.
 
-En las **radios sin pantalla táctil**, presione `ENT` en un campo de texto
-para entrar directamente en el modo de edición: rote el selector rotatorio
-para moverse a través de las minúsculas, las mayúsculas y los números,
-seguidos de los caracteres especiales, y presione `ENT` para insertar cada
-carácter. `MDL` cambia la caja del carácter que esté inmediatamente a la
-derecha del cursor (y cualquier carácter que se introduzca a partir de ahí
-mantendrá ese estado hasta que se cambie de nuevo). `PAGE` borra los
-caracteres a la derecha del cursor; `SYS`/`DISP` mueven el cursor hacia la
-izquierda o hacia la derecha.
+Toque la techa de borrado hacia atrás (encima del botón de Enter) para retroceder une spacio, borrando caracteres a la izquierda del curso. Presione la tecla \[Page\] para borrar caracteres a la derecha del cursor. Una vez que llegue al final hacia el lado derecho, la tecla \[Page\] empezará a borrar los restantes que estén a la izquierda del cursor.
 
-## Controles de valores numéricos
+Toque el campo de texto para mover el cursor a la posición deseada. Alternativamente, presione la tecla \[SYS\] para mover el cursos hacia la izquierda, o la de \[DISP\] para moverlo hacia la derecha.
 
-![Introducción de números](../assets/keyboard-numbers.png)
+![](../assets/keyboard-text-numbers.png)
 
-Al tocar un campo que contenga un valor numérico, aparece en la parte de abajo
-de la pantalla un cuadro de diálogo con controles: las teclas **`<`**/**`>`**
-cambian el tamaño de cada paso (en decimales, por ejemplo 0,01/0,1/1,0/10,0),
-las teclas **`-`**/**`+`** (o el selector rotatorio) incrementan o reducen el
-valor en función del tamaño del paso, y **More** proporciona opciones
-adicionales:
+Pulse '?123' o 'abc' para alternar entre los teclados alfabético y numérico. El teclado numérico incluye caracteres especiales. También hay un bloqueo de mayúsculas para introducir letras mayúsculas.
 
-![Opciones de introducción de números](../assets/keyboard-numbers-options.png)
+#### Radios sin pantalla táctil
 
-- El valor por defecto del campo
-- Ajuste al mínimo / ajuste al máximo
-- Reemplazar los controles con un **slider**
+En aquellas radios que no dispongan de pantalla táctil, presione la tecla \[ENT\] en cualquier campo de texto para entrar en el modo de edición.
 
-![Introducción con deslizador](../assets/keyboard-numbers-slider.png)
+Rote el selector rotatorio para moverse a través de los alfabetos con minúsculas y mayúsculas y a los números, seguidos de los caracteres especiales. Presione \[ENT\] para insertar el carácter. La tecla \[MDL\] cambiará la caja del carácter que esté inmediatamente a la derecha del cursos. Cualquier carácter que se introduzca a partir de ahí mantendrá el último estado (mayúsculas o minúsculas) hasta que se cambie de nuevo.
 
-El slider (que también se puede ajustar con el selector rotatorio) permite
-ajustar los valores más rápidamente; **Disable slider** vuelve a los controles
-de ajuste normales. Los valores de Rango de Telemetría se editan de forma
-similar:
+Presione la tecla \[PAGE\] para borrar caracteres a la derecha del cursor.
 
-![Deslizador desactivado](../assets/keyboard-numbers-options-disable-slider.png)
+Presione la tecla \[SYS\] para mover el cursor a la izquierda, o la de \[DISP\] para moverlo hacia la derecha.
 
-## La característica Options {: #the-options-feature }
+### Controles para valores numéricos
 
-Casi en cualquier lugar en el que se espere introducir un valor o una
-[fuente](#choosing-a-source), una pulsación larga de `ENT` hará aparecer un
-cuadro de diálogo de **Options**: los campos con esta función se identifican
-por el pequeño icono de menú (símbolo de hamburguesa) en la esquina superior
-izquierda del campo.
+![](../assets/keyboard-numbers.png)
 
-### Opciones con valor
+Al tocar un campo que contenga un valor numérico, aparece en la parte de debajo de la pantalla un cuadro de diálogo con los siguientes controles:
 
-![Opciones de fuente](../assets/source-with-options.png)
+- a) Los botones ‘<’ y ‘>’ cambian el tamaño de cada paso entre el mínimo (cuando sea apropiado) hacia arriba en decimales, por ejemplo 0,01%, 0,1%, 1,0%, ó 10%.
+- 
+- b) Los botones ‘-’ y ‘+’ incrementan o reducen el valor, en función del tamaño del paso que se tenga. También se puede usar el selector rotatorio para ajustarlo.
+- 
+- c) También hay una tecla con tres puntos verticales \[‘More’\] a la derecha que proporciona más opciones adicionales. Mire las imágenes de abajo.
 
-El cuadro de diálogo para Opciones con valor muestra qué parámetro se está
-configurando y ofrece la opción de configurarlo al mínimo o al máximo, o bien
-utilizar una **fuente** (por ejemplo, un pot, lo que permitiría ajustar el
-valor en vuelo). Si mantiene pulsado en un campo que ya ha sido modificado
-para utilizar una fuente, aparecerá en su lugar un cuadro de diálogo que le
-permitirá convertir el valor actual de la fuente en un valor fijo:
+![](../assets/keyboard-numbers-options.png)
 
-![Convertir fuente en valor](../assets/source-convert-to-value.png)
+Al seleccionar ese botón ‘More’, se abre otro cuadro de diálogo para opciones adicionales:
 
-### Elegir una fuente {: #choosing-a-source }
+- d) El valor por defecto
+- e) Ajuste al mínimo
+- f) Ajuste al máximo
 
-Al seleccionar **Choose a source** se abre un selector de dos columnas:
-primero una **categoría** (analógicos, interruptores, interruptores lógicos,
-compensadores, canales, un eje del giróscopo, un canal de entrenador, un
-cronómetro, un sensor de telemetría o un puñado de valores especiales) y
-después el elemento concreto dentro de ella:
+g) Reemplazar los controles con un slider, como se muestra en las imágenes de abajo
 
-![Menú de fuentes](../assets/source-menu.png)
+![](../assets/keyboard-numbers-slider.png)
 
-Una vez definida la fuente, la misma pulsación larga abre opciones específicas
-según el tipo de fuente:
+El slider permite ajustar los valores más rápidamente. También se puede usar el selector rotatorio.
 
-**Cualquier fuente** —
+![](../assets/keyboard-numbers-options-disable-slider.png)
 
-- **Invert** — permite negar o invertir la fuente (por ejemplo, estaría activa
-  cuando el interruptor *no* está arriba, en lugar de cuando sí lo está).
-- **Edge** — efectúa una única acción cuando la fuente pasa de Falso a
-  Verdadero o de Verdadero a Falso, en lugar de actuar sobre todo el estado;
-  un símbolo `†` aparecerá delante de la fuente. Estará disponible en los
-  interruptores en general y, en particular, en la condición de activación del
-  [interruptor lógico Sticky](../model-setup/logical-switches.md).
+Para volver otra vez a los controles de ajuste normales, seleccione ‘Desactivar slider’.
 
-**Fuentes de palanca** — opciones de tipo calibración/subtrim:
+![](../assets/keyboard-numbers-on-telemetry.png)
 
-![Opciones de fuente de palanca](../assets/source-stick-options.png)
+Otro ejemplo son los valores de Rango de Telemetría, que pueden editarse de forma similar.
 
-**Opciones de fuentes para interruptores** —
+### Características para opciones
 
-![Opciones de interruptor de 2 posiciones](../assets/source-2pos-options.png)
-![Opciones de interruptor](../assets/switch-options.png)
+Ethos dispone de una potente característica para "Opciones". Casi en cualquier lugar en el que se espere introducir un valor o una fuente, una pulsación larga de la tecla Enter hará aparecer un cuadro de diálogo con opciones.
 
-- **Negative** — la opción negativo permite invertir la acción del
-  interruptor.
-- **HalfRange** — estará disponible cuando se use un interruptor de 2
-  posiciones o un interruptor lógico como fuente: el movimiento será de
-  0–100 % en lugar de ±100 %.
+![](../assets/source-with-options.png)
 
-**Fuentes de compensador** —
+Los campos con esta función se identifican por el icono de menú (símbolo de hamburguesa) en la esquina superior izquierda del campo.
 
-![Opciones de fuente de compensador](../assets/source-trim-options.png)
+Para ajustes a nivel de radio , como pueden ser el volumen principal, silencio del altavoz, volumen del vario, brillo de la pantalla y brillo en modo suspensión, no se puede seleccionar una fuente que dependa del modelo (como un interruptor lógico, interruptor de función o un modo de vuelo).
 
-- **Negative** — permite invertir la acción del compensador, útil en las
-  mezclas con Actions.
-- **Full range** — los compensadores tienen un régimen de movimiento por
-  defecto de ±25 %; cuando se seleccionan como fuente, se pueden cambiar para
-  que tengan un recorrido total de ±100 %.
-- **Ignore trainer input** — en un [interruptor
-  lógico](../model-setup/logical-switches.md), las fuentes pueden tener esta
-  opción configurada para ignorar las fuentes procedentes de la entrada del
-  alumno. Una aplicación típica es cuando se configura un interruptor lógico
-  para que detecte el movimiento de las palancas del maestro (por ejemplo,
-  para permitir la intervención instantánea si las cosas van mal) sin que las
-  entradas de palanca del alumno activen el interruptor lógico.
+#### Opciones con valor
 
-**Fuentes de variable** —
+![](../assets/source-menu.png)
 
-![Opciones de fuente de variable](../assets/source-var-options.png)
+El cuadro de diálogo muestra, para opciones con valor, qué parámetro se está configurando. En este ejemplo tiene la opción de configurar el Peso/Ratio al máximo, a 0 (cero) ó al mínimo, o bien utilizar una fuente. Usar una fuente (por ejemplo, un Pot) permitiría ajustar el Peso/Rate en vuelo.
 
-- **Negative** — convierte el valor del Var a negativo para esa selección.
-- **Ignore range** — algunos parámetros tienen rangos asimétricos, como los
-  parámetros Mín/Max en las Salidas, que tienen márgenes de −150 % a 0 % y de
-  0 % a +150 % respectivamente. A menos que la
-  [variable](../model-setup/variables.md) usada como fuente de ese campo tenga
-  unos márgenes idénticos, active esta opción para que se ignoren y así evitar
-  valores inesperados debidos a la conversión de esos márgenes.
+![](../assets/source-convert-to-value.png)
 
-**Fuentes de sensor de telemetría** — en una fuente de Telemetría, el cuadro
-de diálogo de Opciones permite utilizar los valores máximo o mínimo del sensor
-en lugar de la lectura instantánea (algunos sensores tendrán opciones
-adicionales específicas para ese sensor):
+Si mantiene pulsado Enter en un campo tipo Valor que ya ha sido modificado para utilizar una fuente, aparecerá un cuadro de diálogo que le permitirá convertir el valor actual de la fuente en un valor fijo.
 
-![Opciones de mínimo/máximo del sensor](../assets/source-sensor-options.png)
-![Máximo del sensor seleccionado](../assets/source-sensor-maxi.png)
+Al hacer clic en "Opciones" aparecerán opciones para la fuente, vea el punto siguiente.
+
+#### Opciones con fuente
+
+#### 	Opciones con fuente para interruptores lógicos
+
+![](../assets/switch-options.png)
+
+##### Invertir
+
+Invertir permite negar o invertir una fuente, como la posición de un interruptor. Por ejemplo, en lugar de estar activa cuando el interruptor SA está arriba, estaría activa cuando el interruptor SA no está arriba, es decir, en las posiciones media o baja de ese interruptor.
+
+##### Borde
+
+Puede seleccionar la opción "Borde" si necesita efectuar una única acción cuando la fuente pasa de Falso a Verdadero o de Verdadero a Falso. Solo se actúa sobre la transición, no sobre el estado Verdadero o Falso.
+
+Un símbolo ‘†’ aparecerá en la pantalla delante de la fuente para indicar que se ha seleccionado la opción borde.
+
+Tenga en Cuenta que la opción ‘Edge’ estará disponible en los interruptores, dependiendo del contexto. También estará disponible en las condiciones de activación de interruptores lógicos [Sticky](#Sticky).
+
+##### Opciones de fuentes para interruptores físicos
+
+![](../assets/source-2pos-options.png)
+
+###### Invertir
+
+La opción Invertir permite invertir la acción del interruptor.
+
+###### Mitad de rango
+
+La opción ‘Mitad de rango’ estará disponible cundo se use un interruptor de 2 posiciones o un interruptor lógico como fuente. El movimiento será de: \[0-100%\] en lugar de \[-100% hasta +100%\].
+
+##### Opciones de fuente para entradas del acelerador
+
+![](../assets/Pictures/1000000000000320000001E09CECD961.png)
+
+- Si se activa la opción ‘Positivo’, sólo la mitad positiva del recorrido del control de entrada alimentaría la mezcla.
+- Si se activa ‘Negativo’ Solo la mitad negativa del recorrido del control de entrada alimentaría la mezcla.
+
+Las dos opciones de arriba se usan normalmente en modelos de superficie donde el gatillo opera a la vez el acelerador (parte positiva) y los frenos (parte negativa).
+
+- Active ‘Invertir’ para revertir el control de entrada.
+- Si se activa ‘Ignorar entrada entrenador’ se previene que la radio del estudiate afecte a la mezcla. Vaya a la sección ‘Ignorar entrada de entrenador’ para más detalles.
+-
+
+##### Opciones de fuentes para compensadores
+
+![](../assets/source-trim-options.png)
+
+###### Invertir
+
+La opción ‘Invertir’ permite invertir la acción del compensador, util en las mezclas con Acciones.
+
+###### Todo el rango
+
+Los compensadores tienen un régimen de movimiento por defecto de +/- 25%. Cuando se seleccionan como Fuente, se pueden opcionalmente cambiar para que tengan un recorrido total de +/- 100% (manteniendo pulsada la tecla Enter en el compensador).
+
+##### Ignorar entrada del entrenador
+
+![](../assets/model-lsw-ignore-trainer-input.png)
+
+En los Interruptores Lógicos, las fuentes pueden tener esta opción configurada para ignorar las fuentes procedentes de las entradas del alumno. Una aplicación típica es cuando se configura un interruptor lógico para que detecte el movimiento de las palancas del maestro (por ejemplo, la palanca del elevador) para permitir la intervención instantánea si las cosas van mal. Esta opción es necesaria para evitar que las entradas de palanca del alumno activen el interruptor lógico.
+
+#### Opciones con Var
+
+![](../assets/source-var-options.png)
+
+##### Invertir
+
+Activando ‘Invertir’ hará que el valor del Var sea negativo para esa situación.
+
+##### Ignorar rango
+
+Algunos parámetros tienen rangos asimétricos, como pudieran ser los parámetros Mín/Max en la sección de canales, que tienen márgenes de (-150% hasta 0%) y (0% hasta +150%) respectivamente. Cuando se usan VARs como fuente para ajustar los parámetros Mín/Max, a menos que el Var tenga unos márgenes idénticos, será necesario ajustar los márgenes para ‘Ignorar rango’ al objeto de evitar valores inesperados debidos a la conversión de esos márgenes.
+
+#### Opciones de sensores
+
+![](../assets/source-sensor-options.png)
+
+En una fuente de Telemetría, el cuadro de diálogo de Opciones permite utilizar los valores máximo o mínimo del sensor.
+
+![](../assets/source-sensor-maxi.png)
+
+Algunos sensores tendrán opciones adicionales específicas para ese sensor.

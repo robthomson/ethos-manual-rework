@@ -1,0 +1,7 @@
+# X20 Pro AW Diseño
+
+![](../assets/Pictures/10000001000003FB000002BC72EB9C1E.png)
+
+![](../assets/Pictures/10000001000003300000027ADC5EE733.png)
+
+![](../assets/Pictures/100000010000036600000308BCCE1367.png)

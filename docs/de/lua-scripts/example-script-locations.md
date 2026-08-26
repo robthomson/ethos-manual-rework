@@ -1,35 +1,24 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Speicherort der ETHOS-LUA-Beispielskriptdateien
 
-# Speicherorte für Beispielskripte
+Die ETHOS-Lua-Beispielskriptdateien sind auf [https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/main/lua](https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/1.4/lua) gespeichert. Um eine Datei herunterzuladen, folgen Sie den untenstehenden Anweisungen oder verwenden Sie alternativ ein Online-Download-Tool wie „DownGit“.
 
-Offizielle Beispielskripte werden unter
-[github.com/FrSkyRC/ETHOS-Feedback-Community](https://github.com/FrSkyRC/ETHOS-Feedback-Community/tree/main/lua)
-veröffentlicht (insbesondere `/lua/examples/task` und `/lua/examples/source`). Die
-meisten Beispiele sind Lua-Widgets (konfiguriert unter [Bildschirme
-konfigurieren](../displays/custom-widgets.md)); das Beispiel **`servo`** zeigt
-dagegen ein **System-Tool** — also ein Skript, das im System-Menü nach
-**Info** erscheint und nicht als Anzeige-Widget.
+- Öffnen Sie den obigen Link in einem Webbrowser.
+- Navigieren Sie zu dem Ordner und dann zu der Datei main.lua, die Sie herunterladen möchten.
+- Klicken Sie auf die Datei „main.lua“, um sie zu öffnen und den Code anzuzeigen.
+- Falls ein Download-Symbol vorhanden ist, klicken Sie darauf, um die Datei herunterzuladen.
+- Falls nicht, klicken Sie auf „Raw“, klicken Sie anschließend mit der rechten Maustaste auf die Seite und wählen Sie „Seite speichern unter“; speichern Sie die Datei dann als main.lua an Ihrem Speicherort.
+- Um Überschneidungen mit anderen main.lua-Dateien zu vermeiden, verschieben Sie die heruntergeladene main.lua-Datei in einen entsprechend benannten Ordner (am besten unter demselben Namen wie der Ordner, aus dem die Datei stammt).
 
-## Ein Skript herunterladen
+Für andere Dateien wie Bilder:
 
-1. Öffnen Sie den obigen Link zum Repository in einem Browser und navigieren Sie
-   zum gewünschten Ordner und anschließend zur gewünschten Datei `main.lua`.
-2. Klicken Sie auf die Datei, um sie anzuzeigen, und danach auf **Raw**.
-3. Klicken Sie mit der rechten Maustaste auf die Seite → **Seite speichern
-   unter…** und speichern Sie sie als `main.lua`.
-4. Um Konflikte mit der Datei `main.lua` anderer Skripte zu vermeiden,
-   verschieben Sie sie in einen passend benannten Ordner — der Name des
-   Quellordners ist dafür eine sinnvolle Wahl.
+-  Klicken Sie auf die Datei.
+-  Klicken Sie auf „Herunterladen“. Sie wird in Ihren Browser heruntergeladen.
+-  Klicken Sie mit der rechten Maustaste auf das Bild und klicken Sie auf „Bild speichern unter“, dann speichern Sie die Datei (z. B. als servo.png) in Ihrem Download-Verzeichnis.
 
-Für alle weiteren Dateien, die ein Skript benötigt (Bilder usw.): Klicken Sie
-auf die Datei, klicken Sie auf **Download** und speichern Sie sie anschließend
-per Rechtsklick und **Bild speichern unter…** (oder entsprechend) neben dem
-Skript ab.
+Ein Online-Download-Tool wie „DownGit“ verwenden.
 
-Skripte werden auf der SD card/eMMC im Ordner `scripts/` installiert — siehe
-[Dateimanager](../system-setup/file-manager.md#top-level-folders).
+- Öffnen Sie den obigen Link zu den Lua-Dateien in einem Webbrowser.
+- Navigieren Sie zu dem Ordner oder der Datei, die Sie herunterladen möchten.
+- Kopieren Sie die URL der Seite und fügen Sie sie in das dafür vorgesehene Feld ein, sobald Sie das „DownGit“-Tool öffnen.
 
-Siehe außerdem den Thread *FrSky ETHOS Lua Script Programming* auf rcgroups für
-Community-Skripte und Diskussionen über die offiziellen Beispiele hinaus.
+Die meisten Beispiele beziehen sich auf Lua-Widgets, die im Abschnitt „[Bildschirme konfigurieren](../displays/index.md)“ konfiguriert werden. Eine weitere Anwendung für LUA-Skripte ist die Erstellung von Systemtools, die nach „Info“ im Abschnitt „System“ in den Menüs erscheinen. Ein Beispiel für ein Systemtool finden Sie im Beispiel „servo“.

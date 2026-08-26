@@ -1,174 +1,205 @@
----
-translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
----
-
 # Benutzeroberfläche und Navigation
 
-Ethos lässt sich vollständig mit dem rechten **Drehwähler** bedienen (drehen,
-um die Markierung zu bewegen, drücken für `ENT`) sowie mit der Taste `RTN`,
-um ein Menü wieder zu verlassen — der Touchscreen ist, sofern vorhanden,
-lediglich eine Abkürzung für dieselben Aktionen und keine eigenständige
-Bedienweise. `MDL`, `DISP` und `SYS` führen direkt zu Model Setup, Einstellung
-Ansichten bzw. System Setup (dieselben drei Kacheln wie in der unteren Leiste);
-durch langes Drücken der `RTN`-Taste kehren Sie aus jedem Untermenü direkt zum
-Startbildschirm zurück.
+Die Sender verfügt über einen Touchscreen, wodurch die Benutzeroberfläche recht intuitiv ist. Durch Berühren der Registerkarten „Model Setup“ (Flugzeugsymbol), „[Einstellung Ansichten](../displays/index.md)“ (Symbol für mehrere Bildschirme) und „System Setup“ (Zahnradsymbol) gelangen Sie direkt zu den Funktionen, die in den entsprechenden Abschnitten des Handbuchs beschrieben sind. Sie können auch über die Tasten \[MDL\], \[DISP\] und \[SYS\] aufgerufen werden.
+
+Alternativ kann der Drehwähler verwendet werden, um die Markierung auf die gewünschte Kachel oder den gewünschten Parameter zu setzen und dann die Eingabetaste zu drücken, um sie auszuwählen.
+
+Durch langes Drücken der \[RTN\]-Taste kehren Sie aus jedem Untermenü zum Startbildschirm zurück.
+
+Wenn Sie die Systemzeit rechts in der unteren Leiste antippen, gelangen Sie in den Bereich Datum & Uhrzeit, wo Sie die Uhrzeit und das Datum einstellen können.
+
+Wenn Sie die Lautsprecher- oder Batteriesymbole in der oberen Leiste berühren, werden die entsprechenden Bedienfelder Ton & Vibr. und Batterie angezeigt
 
 ## Reset Menü
 
-![Kontextmenü](../assets/resetmenu.png)
+![](../assets/resetmenu.png)
 
-Durch langes Drücken der `ENT`-Taste auf dem Startbildschirm wird ein
-Rücksetzmenü aufgerufen:
+Durch langes Drücken der \[ENT\]-Taste auf den Startbildschirmen wird ein Rücksetzmenü aufgerufen:
 
-- **Flug zurücksetzen** — setzt die Telemetrie, die Timer und die
-  Funktionsschalter zurück und führt anschließend die
-  Vorflug-[Checkliste](../model-setup/checklist.md) erneut aus.
-- **Telemetrie zurücksetzen** — setzt nur die Telemetriedaten zurück.
-- **Stoppuhren zurücksetzen** — setzt nur die Stoppuhren zurück.
-- **Touchscreen sperren** — ebenfalls erreichbar, indem Sie im Startbildschirm
-  `ENT` und `PAGE` gleichzeitig 1 Sekunde lang drücken, oder als Auslöser einer
-  [Spezialfunktion](../model-setup/special-functions.md).
+### Flug zurücksetzen
+
+„Flug zurücksetzen“ setzt die Telemetrie, die Stoppuhren und die Funktionsschalter zurück. Beachten Sie, dass nach einem „Reset-Flug“ Vorflugprüfungen durchgeführt werden.
+
+### Telemetrie zurücksetzen
+
+Setzt die Telemetrie zurück und löscht alle Warnmeldungen (rote Punkte) zu „Sensor verloren“ oder „Sensorkonflikt“. Bitte beachten Sie den Abschnitt „Warnmeldungen zu Sensor verloren / Konflikt“.
+
+### Stoppuhren zurücksetzen
+
+Setzt die Stoppuhren zurück
+
+## Touchscreen sperren
+
+Der LCD-Touchscreen kann gesperrt werden, um eine versehentliche Bedienung zu verhindern, indem Sie im Startbildschirm \[ENT\] und \[Page\] gleichzeitig 1 Sekunde lang drücken. Diese Funktion ist auch als Spezialfunktion (SF) verfügbar.
 
 ## Bearbeitung von Steuerelementen
 
-**Funktionselemente hinzufügen** — eine Stoppuhr, ein Logischer Schalter, eine
-Spezialfunktion, eine Kurve oder eine Variable wird durch Antippen der
-Schaltfläche **+** neben den Spaltenüberschriften im jeweiligen Menü erstellt.
-Bei einem Sender ohne Touchscreen markieren Sie ein vorhandenes Element,
-drücken `ENT` und wählen im Menü **Hinzufügen** — dieselbe Möglichkeit steht
-auch bei Sendern mit Touchscreen zur Verfügung.
+Sie können ein neues Funktionselement wie einen Stoppuhr, einen Logikschalter, eine Spezialfunktion, eine Kurve oder eine Variable erstellen, indem Sie auf das Symbol „+“ neben den Spaltenüberschriften im entsprechenden Hauptmenü tippen.
+
+Bei Sender ohne Touchscreen scrollen Sie mit dem Drehgeber zur Taste „+“ und drücken Sie dann ENT.
 
 ### Virtuelle Tastatur
 
-![Texttastatur](../assets/keyboard-text-azerty.png)
+Auf Touchscreen-Sendern bietet Ethos eine virtuelle Tastatur zum Bearbeiten von Textfeldern.
 
-Beim Berühren eines Textfeldes (oder Drücken von `ENT` darauf) öffnet sich die
-Bildschirmtastatur. Die Rücktaste löscht links vom Cursor; `PAGE` löscht nach
-rechts und, sobald der Cursor das Textende erreicht hat, weiter von links.
-Ein Berühren des Feldes selbst setzt den Cursor an diese Position — oder
-verwenden Sie `SYS`/`DISP`, um ihn ohne Touchscreen nach links/rechts zu
-bewegen. Die Taste **?123**/**abc** schaltet auf das numerische Tastenfeld um
-(das auch Sonderzeichen enthält):
+![](../assets/keyboard-text-azerty.png)
 
-![Numerische Tastatur](../assets/keyboard-text-numbers.png)
+Berühren Sie einfach ein beliebiges Textfeld (oder klicken Sie auf \[ENT\]), um die Tastatur aufzurufen.
 
-Bei einem **Sender ohne Touchscreen** wechselt ein Druck auf `ENT` in einem
-Textfeld direkt in den Bearbeitungsmodus: Drehen Sie den Drehwähler, um durch
-Kleinbuchstaben, Großbuchstaben, Ziffern und schließlich Sonderzeichen zu
-blättern, und drücken Sie `ENT`, um das jeweilige Zeichen einzufügen. `MDL`
-schaltet die Groß-/Kleinschreibung des Zeichens unmittelbar rechts vom Cursor
-um (und jedes danach eingegebene Zeichen behält diese Schreibweise, bis erneut
-umgeschaltet wird). `PAGE` löscht rechts vom Cursor; `SYS`/`DISP` bewegen ihn
-nach links/rechts.
+Tippen Sie auf die Rücktaste (über der Eingabetaste = ![](../assets/Pictures/100000010000001D00000011004EE99A.png)), um Zeichen links vom Cursor zu löschen. Drücken Sie die \[Page\]-Taste, um Zeichen rechts vom Cursor zu löschen. Sobald Sie das Ende auf der rechten Seite erreicht haben, beginnt die \[Page\]-Taste mit dem Löschen der restlichen Zeichen links vom Cursor.
 
-## Zahlenwerte ändern
+Berühren Sie das Textfeld, um den Cursor an diese Position zu bewegen. Alternativ können Sie auch die Taste \[SYS\] drücken, um den Cursor nach links zu bewegen, oder die Taste \[DISP\], um ihn nach rechts zu bewegen.
 
-![Zahleneingabe](../assets/keyboard-numbers.png)
+![](../assets/keyboard-text-numbers.png)
 
-Beim Berühren eines numerischen Feldes öffnet sich am unteren Bildschirmrand
-eine Bedienleiste: **`<`**/**`>`** ändern die Schrittweite (im Wechsel zwischen
-den Dekaden — z. B. 0,01/0,1/1,0/10,0), **`-`**/**`+`** (oder der Drehwähler)
-verändern den Wert um diese Schrittweite, und **Mehr** öffnet weitere Optionen:
+Tippen Sie auf die Taste '?123' oder 'abc', um zwischen dem alphanumerischen und dem numerischen Tastenfeld umzuschalten. Außerdem gibt es eine Feststelltaste für die Eingabe von Großbuchstaben.
 
-![Optionen der Zahleneingabe](../assets/keyboard-numbers-options.png)
+#### Sender ohne Touchscreen
 
-- Zum Standardwert des Feldes springen
-- Auf Minimum / auf Maximum setzen
-- Die Schrittsteuerung durch einen **Schieberegler** ersetzen
+Bei Sender ohne Touchscreen drücken Sie die \[ENT\]-Taste auf einem beliebigen Textfeld, um in den Bearbeitungsmodus zu gelangen.
 
-![Eingabe per Schieberegler](../assets/keyboard-numbers-slider.png)
+Drehen Sie den Drehgeber, um durch die Groß- und Kleinbuchstaben und die Ziffern zu blättern, gefolgt von den Sonderzeichen. Drücken Sie \[ENT\], um das Zeichen einzufügen. Mit der Taste \[MDL\] wird die Groß-/Kleinschreibung des Zeichens unmittelbar rechts vom Cursor geändert. Alle folgenden Zeichen bleiben in der neuen Groß-/Kleinschreibung, bis die Groß-/Kleinschreibung erneut geändert wird.
 
-Der Schieberegler (ebenfalls mit dem Drehwähler verstellbar) ist bei groben
-Änderungen schneller; **Schieberegler deaktivieren** kehrt zur Schrittsteuerung
-zurück. Telemetrie-Bereichswerte werden auf dieselbe Weise bearbeitet:
+Drücken Sie die Taste \[Page (Seite)\], um die Zeichen rechts vom Cursor zu löschen.
 
-![Schieberegler deaktiviert](../assets/keyboard-numbers-options-disable-slider.png)
+Drücken Sie die Taste \[SYS\], um den Cursor nach links zu bewegen, oder die Taste \[DISP\], um ihn nach rechts zu bewegen.
 
-## Funktion Optionen {: #the-options-feature }
+### Zahlenwerte ändern
 
-Nahezu überall dort, wo ein Wert oder eine [Quelle](#choosing-a-source)
-erwartet wird, öffnet ein langer Druck auf `ENT` einen Dialog **Optionen** —
-das kleine Menüsymbol („Hamburger“) in der oberen linken Ecke eines Feldes
-zeigt an, dass diese Funktion verfügbar ist.
+![](../assets/keyboard-numbers.png)
 
-### Wertoptionen
+Wenn Sie einen Zahlenwert berühren, erscheint am unteren Rand des Bildschirms ein Dialogfeld mit den Steuerelementen für den Zahlenwert:
 
-![Quellenoptionen](../assets/source-with-options.png)
+a) Die Tasten '<' und '>' zum Ändern der Schrittweite zwischen dem Minimum (je nach Bedarf) und dem Anstieg in Dekaden, z.B. 0,01%, 0,1%, 1,0% oder 10,0%.
 
-Der Dialog mit den Wertoptionen benennt den zu bearbeitenden Parameter und
-bietet die Wahl zwischen einem festen Minimum/Maximum und der Steuerung über
-eine **Quelle** (z. B. ein Poti, um den Wert im Flug zu verändern). Verwendet
-das Feld bereits eine Quelle, bietet derselbe lange Druck stattdessen an, den
-aktuellen Wert dieser Quelle in einen festen Wert umzuwandeln:
+b) Die Tasten '-' und '+' erhöhen oder verringern den Wert um die gewählte Schrittweite. Zur Einstellung des Wertes kann auch der Drehgeber verwendet werden.
 
-![Quelle in Wert umwandeln](../assets/source-convert-to-value.png)
+c) eine Schaltfläche „ ![](../assets/Pictures/10000001000000050000001030DDC241.png) “ auf der rechten Seite steht für zusätzliche Optionen, siehe unten.
 
-### Eine Quelle auswählen {: #choosing-a-source }
+![](../assets/keyboard-numbers-options.png)
 
-Die Auswahl von **Quelle wählen** öffnet eine zweispaltige Auswahlliste —
-zuerst eine **Kategorie** (Analoggeber, Schalter, Logische Schalter,
-Trimmungen, Kanäle, eine Gyro-Achse, ein Trainer-Kanal, eine Stoppuhr, ein
-Telemetriesensor oder einige Sonderwerte), danach das konkrete Element daraus:
+Die Schaltfläche „ ![](../assets/Pictures/10000001000000050000001030DDC241.png)“ auf der rechten Seite öffnet einen weiteren Dialog für zusätzliche Optionen:
 
-![Quellenmenü](../assets/source-menu.png)
+d) den Standardwert
 
-Sobald eine Quelle festgelegt ist, öffnet derselbe lange Druck Optionen, die
-sich nach der Art der Quelle richten:
+e) auf das Minimum setzen
 
-**Jede Quelle** —
+f) auf das Maximum gesetzt
 
-- **Invertieren** — negiert die Quelle (z. B. aktiv, wenn ein Schalter *nicht*
-  oben ist, statt wenn er oben ist).
-- **Flanke** — löst einmalig bei einem Übergang aus (falsch→wahr oder
-  wahr→falsch), statt während des gesamten Zustands aktiv zu bleiben;
-  dargestellt mit dem Präfix `†` vor der Quelle. Verfügbar bei Schaltern
-  allgemein sowie speziell bei der Auslösebedingung des
-  [Logischen Schalters „Sticky“](../model-setup/logical-switches.md).
+g) die Bedienelemente durch einen Schieberegler ersetzen, siehe unten
 
-**Knüppel-Quellen** — Optionen im Stil von Kalibrierung/Subtrimmung:
+![](../assets/keyboard-numbers-slider.png)
 
-![Optionen für Knüppelquellen](../assets/source-stick-options.png)
+Mit dem Schieberegler lässt sich der Wert schnell einstellen. Das Drehrad kann ebenfalls zur Feineinstellung verwendet werden.
 
-**Schalter-Quellen** —
+![](../assets/keyboard-numbers-options-disable-slider.png)
 
-![Optionen für 2-Positionen-Schalter](../assets/source-2pos-options.png)
-![Schalteroptionen](../assets/switch-options.png)
+Um zu den Zifferntasten zurückzukehren, wählen Sie „Schiebereg. inaktiv“.
 
-- **Negativ** — invertiert die Schalterwirkung.
-- **HalfRange** — ändert bei einem 2-Positionen-Schalter oder einem Logischen
-  Schalter den Ausgangsbereich von ±100 % auf 0–100 %.
+![](../assets/keyboard-numbers-on-telemetry.png)
 
-**Trimm-Quellen** —
+Ein weiteres Beispiel ist ein Telemetriebereichswert, der auf ähnliche Weise bearbeitet werden kann. Mit den Symbolen < und > kann man die Schrittweite in 10er-Schritten ändern.
 
-![Optionen für Trimmquellen](../assets/source-trim-options.png)
+### Funktion Optionen
 
-- **Negativ** — invertiert die Trimmwirkung (nützlich innerhalb der Aktionen
-  eines freien Mischers).
-- **Voller Bereich** — Trimmungen liegen standardmäßig bei ±25 %; als Quelle
-  kann dies auf ±100 % erweitert werden.
-- **Schülereingaben ignorieren** — schließt bei einem [Logischen
-  Schalter](../model-setup/logical-switches.md) Bewegungen des Schülereingangs
-  vom Auslösen des Schalters aus. Typische Anwendung: die eigene
-  Knüppelbewegung des *Lehrers* erkennen (z. B. um sofort einzugreifen, wenn
-  der Schüler einen Fehler macht), ohne dass die Knüppeleingaben des Schülers
-  den Schalter ebenfalls auslösen.
+Ethos verfügt über eine sehr leistungsfähige „Optionen“-Funktion. Fast überall, wo ein Wert oder eine Quelle erwartet wird, führt ein langer Druck auf die Enter-Taste zu einem Optionsdialog.
 
-**Variablen-Quellen** —
+![](../assets/source-with-options.png)
 
-![Optionen für Variablenquellen](../assets/source-var-options.png)
+Felder mit dieser Funktion sind an dem Menüsymbol (Hamburger-Symbol) in der linken oberen Ecke des Feldes zu erkennen.
 
-- **Negativ** — negiert den Wert der Variablen für diese Verwendung.
-- **Bereich ignorieren** — manche Felder haben asymmetrische Bereiche (z. B.
-  Min/Max bei den Ausgängen, die von −150–0 % bzw. 0–150 % reichen). Sofern
-  eine als Quelle dieses Feldes verwendete
-  [Variable](../model-setup/variables.md) nicht genau denselben Bereich
-  besitzt, aktivieren Sie diese Option, um die automatische
-  Bereichsumrechnung von Ethos zu überspringen und unerwartete Werte zu
-  vermeiden.
+Für Einstellungen auf Sender-Ebene – wie Hauptlautstärke, Lautsprecher-Stummschaltung, Vario-Lautstärke, Display-Helligkeit und Display-Helligkeit im Ruhemodus – können Sie keine modellabhängige Quelle (wie einen Logikschalter, Funktionsschalter oder Flugphasen) auswählen.
 
-**Telemetriesensor-Quellen** — reduzieren die Quelle auf ihr laufendes Minimum
-oder Maximum statt auf den momentanen Messwert (manche Sensoren bieten darüber
-hinaus weitere sensorspezifische Optionen):
+#### Wert-Optionen
 
-![Sensor-Optionen Min/Max](../assets/source-sensor-options.png)
-![Sensor-Maximum ausgewählt](../assets/source-sensor-maxi.png)
+![](../assets/source-menu.png)
+
+Das Dialogfeld „Werteoptionen“ zeigt an, welcher Parameter konfiguriert wird. In diesem Beispiel haben Sie die Wahl, die Gewichtung/Anteile auf Maximum, 0 (Standard) oder Minimum einzustellen, oder eine Quelle zu verwenden. Die Verwendung einer Quelle, z. B. eines Potis, würde eine Anpassung der Gewichtung/Anteile im Flug ermöglichen.
+
+![](../assets/source-convert-to-value.png)
+
+Wenn Sie die Eingabetaste in einem Wertefeld lange drücken, das bereits geändert wurde, um eine Quelle zu verwenden, wird ein Dialogfeld angezeigt, in dem Sie den aktuellen Wert der Quelle in einen festen Wert umwandeln können.
+
+Wenn Sie auf „Optionen“ klicken, werden Optionen für die Quelle angezeigt (siehe unten).
+
+#### Optionen für die Quelle
+
+#### Quelloption für Logikschalter
+
+![](../assets/switch-options.png)
+
+##### Invers
+
+Mit der Funktion „invers“ kann eine Quelle, z. B. eine Schalterstellung, negiert oder invertiert werden. Anstatt aktiv zu sein, wenn der Schalter SA oben ist, wäre er beispielsweise aktiv, wenn der Schalter SA NICHT oben ist, d. h. entweder in der mittleren oder in der unteren Position
+
+##### Impuls/Übergang nach
+
+Sie können die Option „Impuls/Übergang nach“ wählen, wenn Sie eine einmalige Aktion benötigen, wenn die Quelle von FALSCH nach WAHR oder von WAHR  nach FALSCH übergeht. Es wird nur auf den Übergang reagiert, nicht auf den Zustand „Wahr“ oder „Falsch“.
+
+Ein '┼'-Zeichen wird als Präfix vor der Quelle angezeigt, um die Edge-Option anzuzeigen.
+
+Bitte beachten Sie, dass die Option „Flanke“ bei Schaltern verfügbar ist, aber vom Kontext abhängt. Sie ist auch für die Auslösebedingungen des SR FlipFlop-Logik-schalters verfügbar.
+
+##### Quellenoption für Schalter
+
+![](../assets/source-2pos-options.png)
+
+###### Invers
+
+Mit der Option „invers“ kann die Schaltfunktion umgekehrt werden.
+
+###### Halber Bereich
+
+Die Option „Halber Bereich“ ist verfügbar, wenn ein 2-POS-Schalter oder ein Logikschalter als Quelle verwendet wird. Der Bereich wird zu \[0-100%\] anstelle von \[-100%-100%\].
+
+##### Quelle für den Gaseingabe
+
+![](../assets/model-mixes-thr-options.png)
+
+- Wenn „positiv“ aktiviert ist, wird nur die positive Hälfte des Eingangssignals in den Mischer eingespeist.
+- Wenn „negativ“ aktiviert ist, wird nur die negative Hälfte des Eingangsreglers in den Mischer eingespeist.
+
+Die beiden oben genannten Optionen werden häufig in Oberflächenmodellen verwendet, bei denen der Auslöser sowohl die Drosselklappe (positive Hälfte) als auch die Bremse (negative Hälfte) betätigt.
+
+- Aktivieren Sie „invers“, um die Eingabesteuerung umzukehren.
+- Durch Aktivieren von „Schülerwert gesperrt“ wird verhindert, dass der Schülersender den Mischer beeinflusst. Weitere Informationen finden Sie im Abschnitt „Eingaben des Schülers ignorieren“.
+
+##### Quellenoption für Trimmungen
+
+![](../assets/source-trim-options.png)
+
+invers
+
+Die Option „Invertieren“ ermöglicht es, die Trimmung umzukehren, was bei Mischer-Aktionen nützlich ist.
+
+Voller Bereich
+
+Standardmäßig haben Trimmungen einen Bereich von +/- 25 %. Bei Verwendung als Quelle können die Trimmungen optional auf den vollen Bereich +/- 100 % geändert werden (drücken Sie lange die Eingabetaste auf der Trimmung).
+
+##### Eingaben des Schülers ignorieren
+
+![](../assets/model-lsw-ignore-trainer-input.png)
+
+Bei Logikschaltern kann diese Option so eingestellt sein, dass Quellen, die vom Schülereingang kommen, ignoriert werden. Eine typische Anwendung ist, wenn ein Logikschalter so konfiguriert ist, dass er die Bewegung der Steuerknüppel des Trainers (z. B. des Höhenruderknüppels) erkennt, um ein sofortiges Eingreifen zu ermöglichen, wenn etwas schiefläuft. Diese Option wird benötigt, um zu verhindern, dass die Knüppeleingaben der Schüler den Logikschalter auslösen.
+
+#### Var Optionen
+
+![](../assets/source-var-options.png)
+
+##### invers
+
+Wenn Sie die Option invers aktivieren, wird der Var-Wert in diesem Fall negativ.
+
+##### Bereich ignorieren
+
+Einige Parameter haben asymmetrische Bereiche, wie beispielsweise die Min/Max-Parameter im Abschnitt „Kanäle“, die Bereiche von (-150 % bis 0 %) bzw. (0 % bis +150 %) haben. Wenn VARs als Quelle für die Anpassung der Min/Max-Parameter verwendet werden, muss der Var-Bereich ignoriert werden, um unerwartete Werte aufgrund der Bereichsumwandlung zu vermeiden, es sei denn, der Var hat einen identischen Bereich.
+
+#### Sensor-Optionen
+
+![](../assets/source-sensor-options.png)
+
+Bei einer Telemetriequelle kann über den Optionsdialog der Maximal- oder Minimalwert verwendet werden.
+
+![](../assets/source-sensor-maxi.png)
+
+Einige Sensoren verfügen über zusätzliche, für den jeweiligen Sensor spezifische Optionen.

@@ -1,225 +1,303 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Logische Schalter
 
-![Menü der logischen Schalter](../assets/model-lsw-menu.png)
+![](../assets/model-icon-lsw.png)
 
-Logische Schalter sind vom Benutzer programmierte *virtuelle* Schalter —
-keine physischen Bedienelemente, die Sie umlegen können, aber sie können
-wie jeder physische Schalter als Programmauslöser verwendet werden. Jeder
-logische Schalter vergleicht die programmierte Bedingung mit seinen
-Eingängen (andere Schalter, Telemetriewerte, Mischwerte, Timerwerte,
-Kreisel- und Trainerkanäle und weitere) und wird dadurch WAHR oder FALSCH.
-Es werden bis zu 100 logische Schalter unterstützt; es gibt keine
-Standard-Logikschalter. Mit **+** fügen Sie einen hinzu; die Beschriftung
-eines definierten Schalters in der Menüüberschrift ist grün, wenn sein
-Zustand WAHR ist, und rot, wenn er FALSCH ist. Durch Antippen eines
-vorhandenen Schalters erscheint ein Popup-Menü mit
-**bearbeiten**/**verschieben**/**kopieren-einfügen**/**klonen**/**löschen**.
+Logische Schalter sind vom Benutzer programmierte virtuelle Schalter. Sie sind keine physischen Schalter, die Sie von einer Position in eine andere umlegen können, aber sie können, wie jeder physische Schalter, als Programmauslöser verwendet werden. Sie werden ein- und ausgeschaltet (logisch ausgedrückt werden sie WAHR oder FALSCH), indem die Eingangsbedingungen mit der Programmierung für den logischen Schalter verglichen werden. Sie können eine Vielzahl von Eingängen verwenden, z. B. physische Bedienelemente und Schalter, andere logische Schalter und andere Quellen wie Telemetriewerte, Mischwerte, Stoppuhrwerte, Kreisel- und Trainerkanäle. Sie können sogar Werte verwenden, die von einem LUA-Modellskript zurückgegeben werden (muss unterstützt werden).
 
-![Logischen Schalter hinzufügen](../assets/model-lsw-add.png)
+Es werden bis zu 100 logische Schalter unterstützt.
 
-## Funktion
+![](../assets/model-lsw-add.png)
 
-Alle Funktionen können normale oder invertierte Ausgänge haben.
+Es gibt keine Standard-Logikschalter. Markieren Sie die Schaltfläche „+“ oder tippen darauf, um einen Logikschalter hinzuzufügen.
 
-- **A ~ X** — WAHR, wenn der Wert der ausgewählten Quelle `A` *ungefähr*
-  gleich (innerhalb von etwa 10 %) mit `X`, einem benutzerdefinierten Wert,
-  ist. In den meisten Fällen ist es besser, die Funktion „Ungefähr gleich“
-  zu verwenden als die Funktion „Genau gleich“ —
+![](../assets/model-lsw-menu.png)
 
-  ![A ~ X](../assets/model-lsw-A~X.png)
+Sobald Logikschalter definiert wurden, wird durch Antippen eines Logikschalters das oben gezeigte Popup-Menü angezeigt, über das Sie diesen Schalter bearbeiten, verschieben, kopieren/einfügen, klonen oder löschen können.
 
-  — denn bei `A = X` kann der tatsächliche Telemetriewert um einen Zielwert
-  von 8,4 V herum etwa von 8,5 V auf 8,35 V springen, so dass er nie genau
-  8,4 V erreicht, die Bedingung nie erfüllt ist und der logische Schalter
-  nie einschaltet.
-- **A = X** — WAHR nur dann, wenn der Wert von `A` 'genau' gleich `X` ist.
-- **A > X** / **A < X** — WAHR, wenn `A` größer bzw. kleiner ist als `X`.
-- **|A| > X** / **|A| < X** — wie oben, jedoch wird der absolute Wert von
-  `A` verglichen (absolut bedeutet, dass nicht berücksichtigt wird, ob `A`
-  positiv oder negativ ist).
-- **Δ > X** — WAHR, wenn die Änderung des Wertes (Delta) der Quelle `A`
-  innerhalb des **Prüfintervalls** mindestens `X` erreicht. Wird das
-  Prüfintervall auf `---` gesetzt, so wird das Prüfintervall unendlich.
+![](../assets/model-lsw-move.png)
 
-  ![Delta größer als X](../assets/model-lsw-delta-gtX.png)
-  ![Absolutes Delta größer als X](../assets/model-lsw-delta-AgtX.png)
+Wenn Sie „verschieben“ wählen, werden Pfeiltasten angezeigt, mit denen Sie den Logikschalter nach oben oder unten verschieben können.
 
-- **|Δ| > X** — wie oben, jedoch mit dem absoluten Wert der Änderung.
-- **Bereich** — WAHR, wenn der Wert der Quelle `A` innerhalb des
-  angegebenen Bereichs liegt.
+## Hinzufügen von Logischen Schaltern
 
-  ![Bereich](../assets/model-lsw-range.png)
+![](../assets/model-lsw-A~X.png)
 
-- **UND** — WAHR nur dann, wenn alle aufgeführten Quellen (Wert 1 … Wert(n))
-  WAHR sind.
+Beachten Sie, dass die Beschriftung des Logikschalters in der Menüüberschrift grün ist, wenn der Zustand des Logikschalters WAHR ist, oder rot, wenn er FALSCH ist.
 
-  ![UND](../assets/model-lsw-AND.png)
+### Name
 
-- **ODER** — WAHR, wenn mindestens eine der aufgeführten Quellen WAHR ist.
+Ermöglicht die Benennung des Logikschalters.
 
-  ![ODER](../assets/model-lsw-OR.png)
+### Funktion
 
-- **XOR** (Exklusiv-ODER) — WAHR, wenn *nur eine* der aufgeführten Quellen
-  WAHR ist.
+Die verfügbaren Funktionen sind unten aufgeführt. Bitte beachten Sie, dass alle Funktionen normale oder invertierte Ausgänge haben können. Bitte beachten Sie auch den Abschnitt „Gemeinsame Parameter“ sowie die Abschnitte „Telemetrie“ und „Vergleich von Quellen“ im Anschluss an die nachstehenden Funktionsbeschreibungen.
 
-  ![XOR](../assets/model-lsw-XOR.png)
+#### A ~ X
 
-- **Taktgenerator** — schaltet kontinuierlich ein und aus: eingeschaltet
-  für die Zeit **Laufzeit aktiv**, ausgeschaltet für die Zeit **Laufzeit
-  inaktiv**.
+Die Bedingung ist WAHR, wenn der Wert der ausgewählten Quelle 'A' ungefähr gleich (innerhalb von etwa 10 %) mit 'X', einem benutzerdefinierten Wert, ist.
 
-  ![Taktgenerator](../assets/model-lsw-timer-generator.png)
+In den meisten Fällen ist es besser, die Funktion „Ungefähr gleich“ zu verwenden als die Funktion „Genau gleich“.
 
-- **SR FlipFlop** — eine Verriegelung (SR-Flip-Flop); siehe
-  [unten](#sticky).
-- **Impuls/Übergang** — ein Momentanimpuls; siehe [unten](#edge).
+#### A = X
 
-### Sticky
+Die Bedingung ist WAHR, wenn der Wert der ausgewählten Quelle 'A' 'genau' gleich 'X', einem benutzerdefinierten Wert, ist.
 
-![SR FlipFlop](../assets/model-lsw-sticky.png)
+Bei der Verwendung der Funktion „Genau gleich“ ist Vorsicht geboten. Wenn beispielsweise getestet wird, ob eine Spannung gleich einer Einstellung von 8,4 V ist, kann der tatsächliche Telemetriewert von 8,5 V auf 8,35 V springen, so dass die Bedingung nie erfüllt ist und der logische Schalter nie eingeschaltet wird.
 
-Verriegelt auf **WAHR**, sobald die **Trigger-EIN-Bedingung** erfüllt ist,
-und hält seinen Wert, bis er durch die erfüllte **Trigger-AUS-Bedingung**
-auf FALSCH gezwungen wird — optional gesteuert durch den Parameter
-**aktiviert** (solange diese Bedingung FALSCH ist, wird der
-Logikschalterausgang ebenfalls auf FALSCH gehalten; die SR-FlipFlop-Funktion
-arbeitet dabei im Hintergrund weiter und die verriegelte Bedingung wird zum
-Ausgang durchgeschaltet, sobald die aktive Bedingung wieder WAHR wird —
-vorbehaltlich aller Verzögerungen).
+#### A > X
 
-Seit Ethos 1.6.2 akzeptieren beide Trigger-Eingänge zusätzlich die Option
-**Impuls/Übergang nach** (Flanke) — dazu lange die `ENT`-Taste bei der
-Trigger-Bedingung drücken und die Option auswählen, angezeigt mit
-vorangestelltem `†` — was eine deutlich feinere Konfiguration ermöglicht:
+Die Bedingung ist WAHR, wenn der Wert der ausgewählten Quelle 'A' größer ist als 'X', ein benutzerdefinierter Wert.
 
-![SR FlipFlop mit Flanke](../assets/model-lsw-sticky-with-edge.png)
-![Auswahl der Flankenoption](../assets/model-lsw-sticky-edge-select.png)
+#### A < X
 
-- **Trigger EIN `SA` (keine Verzögerung)** — verriegelt in dem Moment auf
-  WAHR, in dem SA auf EIN geht.
-- **Trigger EIN `SA` (Verzögerung = 1 s)** — verriegelt 1 Sekunde,
-  nachdem SA auf EIN gegangen ist, auf WAHR, *sofern* SA während dieser
-  Verzögerung auf EIN bleibt.
-- **Trigger EIN `†SA` (Verzögerung = 1 s)** — schaltet 1 Sekunde, nachdem
-  SA auf EIN gegangen ist, von WAHR auf FALSCH um, **auch wenn** SA während
-  dieser Verzögerung nicht auf EIN bleibt (die Flanke ist bereits
-  aufgetreten; die Verzögerung bestimmt lediglich den zeitlichen Ablauf).
+Die Bedingung ist WAHR, wenn der Wert der ausgewählten Quelle 'A' kleiner ist als 'X', ein benutzerdefinierter Wert.
 
-Die Trigger-AUS-Bedingung verhält sich in umgekehrter Richtung genauso.
-Die Verzögerungen wirken **nach** der aktiven Bedingung — eine Änderung der
-aktiven Bedingung startet die Verzögerungszeit also erneut, bevor der
-verriegelte Wert wieder den Ausgang erreicht. Wechseln beide
-Triggerbedingungseingänge gleichzeitig von FALSCH auf WAHR, so ändert der
-SR-FlipFlop-Ausgang einmal seinen Zustand. Bitte beachten Sie auch die
-[Gemeinsamen Parameter](#shared-parameters) weiter unten.
+#### |A| > X
 
-### Edge
+Die Bedingung ist WAHR, wenn der absolute Wert der ausgewählten Quelle 'A' größer ist als 'X', ein benutzerdefinierter Wert. (Absolut bedeutet, dass nicht berücksichtigt wird, ob 'A' positiv oder negativ ist, und nur der Wert verwendet wird).
 
-![Impuls/Übergang](../assets/model-lsw-edge.png)
+#### |A| < X
 
-Ein Momentanschalter, der für die in **Dauer** angegebene Zeitspanne WAHR
-wird, sobald seine Trigger-Bedingung erfüllt ist. **während** besteht aus
-zwei Teilen `[t1:t2]` und legt genau fest, wann dies geschieht:
+Die Bedingung ist WAHR, wenn der absolute Wert der ausgewählten Quelle 'A' kleiner ist als 'X', ein benutzerdefinierter Wert. (Absolut bedeutet, dass nicht berücksichtigt wird, ob 'A' positiv oder negativ ist, und nur der Wert verwendet wird).
 
-- **Flanke steigend, während = 0,0 s** — löst in dem Moment aus, in dem die
-  Trigger-EIN-Bedingung von FALSCH auf WAHR übergeht.
+#### ∆ > X
 
-  ![Flanke steigend](../assets/model-lsw-edge-rising-edge.png)
-  ![während = 0](../assets/model-lsw-edge-during-eq0.png)
+![](../assets/model-lsw-delta-gtX.png)
 
-- **Flanke steigend, während ≥ 0,0 s (z. B. 5,0 s)** — löst 5 Sekunden
-  nach dem Übergang der Trigger-EIN-Bedingung auf WAHR aus; alle weiteren
-  'Einschaltimpulse' während der Periode t1 werden ignoriert.
+Die Bedingung ist wahr, wenn die Änderung des Wertes 'd' (d. h. Delta) der ausgewählten Quelle 'A' größer oder gleich dem benutzerdefinierten Wert 'X' innerhalb des 'Prüfintervalls' ist. Wird das 'Prüfintervall' auf '---' gesetzt, so wird das Prüfintervall unendlich.
 
-  ![während > 0, Flanke steigend](../assets/model-lsw-edge-during-gt0-rising-edge.png)
-  ![während > 0](../assets/model-lsw-edge-during-gt0.png)
+Ein Beispiel für die Verwendung der Delta-Funktion finden Sie in diesem Abschnitt.
 
-- **Fallende Flanke, während = 0,0 s** — löst in dem Moment aus, in dem die
-  Trigger-EIN-Bedingung von WAHR auf FALSCH übergeht.
-- **Fallende Flanke, während ≥ 0,0 s (z. B. 3,0 s)** — löst beim Übergang
-  von WAHR auf FALSCH aus, jedoch nur, wenn die Bedingung zuvor mindestens
-  3 Sekunden lang WAHR war.
-- **Impuls (sowohl t1 als auch t2 gesetzt)** — löst nur aus, wenn die
-  Trigger-EIN-Bedingung innerhalb dieses Fensters von FALSCH auf WAHR und
-  wieder auf FALSCH wechselt (z. B. nach mindestens 2, aber spätestens
-  nach 5 Sekunden).
+#### |∆| > X
 
-## Gemeinsame Parameter {: #shared-parameters }
+Die Bedingung ist WAHR, wenn der absolute Wert der Änderung '|Δ|' in der ausgewählten Quelle 'A' größer oder gleich dem benutzerdefinierten Wert 'X' ist (absolut bedeutet, dass es keine Rolle spielt, ob 'A' positiv oder negativ ist). Wenn das 'Prüfintervall' auf '---' gesetzt wird, dann wird das Prüfintervall unendlich.
 
-![Gemeinsame Parameter](../assets/model-lsw-common-parameters.png)
+#### Bereich
 
-- **Aktiviert durch** — steuert den Ausgang des Logikschalters auf dieselbe
-  Weise wie oben beim SR FlipFlop beschrieben. Auswählbar sind: EIN,
-  Schalterstellungen, Funktionsschalter, Logik-Schalter, Trimm-Positionen,
-  Telemetrie, Flugmodi oder ein System-Ereignis (Gasstellung halten, Motor
-  aus, Gas aktiv, Telemetrie aktiv, RSSI niedrig, Trainer aktiv, Flug
-  zurücksetzen).
-- **Verzögerung bevor aktiv** / **Verzögerung bevor inaktiv** — bestimmt
-  die Zeit, für die die Logikschalterbedingungen WAHR (bzw. FALSCH) sein
-  müssen, bevor der Logikschalterausgang folgt; die Verzögerung kann bis zu
-  60,0 s betragen. Nicht relevant für Taktgenerator und Impuls/Übergang…
-  (Siehe [Anleitung: Warnung bei Akkukapazität](../how-to/battery-capacity-warning.md)
-  für eine Verzögerung, mit der ein Spannungseinbruch entprellt wird.)
-- **Bestätigung vor Aktivierung** / **vor Inaktivität** — fordert eine
-  Bestätigung des Benutzers an, bevor der Zustand tatsächlich geändert wird
-  (mit einer Option zum Abbrechen für Situationen, in denen der
-  Bestätigungsdialog zu häufig angezeigt wird) — praktisch, bevor man etwas
-  Gefährliches beginnt, z. B. zur Bestätigung, bevor ein Fahrzeug per
-  Fernsteuerung ausgeschaltet wird.
+![](../assets/model-lsw-range.png)
 
-  ![Bestätigung WAHR](../assets/model-lsw-confirm-lsw-true.png)
-  ![Bestätigung FALSCH](../assets/model-lsw-confirm-lsw-false.png)
+Die Bedingung ist WAHR, wenn der Wert der ausgewählten Quelle 'A' innerhalb des angegebenen Bereichs liegt.
 
-- **Min. Laufzeit** — sobald der Logikschalter WAHR wird, bleibt er
-  mindestens für diese Zeit WAHR. Beim Standardwert `---` wird der
-  Logikschalter unter Umständen nur für einen Verarbeitungszyklus des
-  Mischers WAHR, was zu kurz ist, um gesehen zu werden — die Bezeichnung
-  wird dann in der Statuszeile nicht fett.
-- **Max. Laufzeit** — ist eine maximale Dauer festgelegt, wechselt der
-  Logikschalter nach dieser Zeit automatisch wieder auf FALSCH. Beide
-  Zeiten können bis zu 60,0 s betragen.
-- **Kommentar** — freier Text zur Erläuterung der Verwendung oder Funktion.
-  Der Kommentar wird angezeigt, wenn ein Logikschalter zu einem
-  Werte-Widget hinzugefügt wird.
+#### AND
 
-## Verwendung mit Telemetrie
+![](../assets/model-lsw-AND.png)
 
-Das System-Ereignis **Telemetrie aktiv** (oder ein Schalter, dessen Quelle
-ein Telemetriesensor ist und der nur aktiv ist, solange dieser Sensor Daten
-liefert) deckt Bedingungen der Art „wird derzeit Telemetrie empfangen“ ab.
+Die Funktion UND kann bis zu 9 Werte haben. Die Bedingung ist WAHR, wenn alle in Wert (1), Wert (2) ... ausgewählten Quellen WAHR sind (d. h. EIN).
 
-!!! warning
-    Wenn ein [Mischer](mixes.md) über einen telemetriebasierten logischen
-    Schalter freigegeben wird, muss eine **zweite** Aktion mit demselben
-    Logikschalter **invertiert** hinzugefügt werden, um sicherzustellen,
-    dass der Mischer auch bei Ausfall der Telemetrie gültige Werte enthält —
-    denken Sie daran, dass bei einem inaktiven Mischer der Kanalausgang auf
-    Neutral = 0 % = 1500 µs steht bzw. auf **Halbgas** bei einem Gaskanal.
-    Alternativ können Sie eine **Offset**-Aktion verwenden, die bereits über
-    getrennte Werte für aktiv und inaktiv verfügt — z. B. deckt die Quelle
-    **0** (der spezielle Wert) mit einem so eingestellten Offset, dass der
-    Mischer +100 % liefert, während `LS3` aktiv ist, und −100 %, während er
-    inaktiv ist, beide Fälle in einer einzigen Aktion ab.
+#### ODER
 
-## Vergleich von Quellen
+![](../assets/model-lsw-OR.png)
 
-Eine Quelle wird normalerweise mit einem festen Wert verglichen, es können
-aber auch zwei Quellen *desselben* Typs direkt miteinander verglichen
-werden — z. B. zwei Timer, zwei Spannungen oder zwei Drehzahlsensoren.
+Die Bedingung ist WAHR, wenn mindestens eine oder mehrere der in Wert 1, Wert 2 ... Wert(n) ausgewählten Quellen wahr (d. h. EIN) sind.
 
-## Trainer-Eingaben vom Slave ignorieren
+#### XOR (Exklusiv-ODER)
 
-![Trainer-Eingabe ignorieren](../assets/model-lsw-ignore-trainer-input.png)
+![](../assets/model-lsw-XOR.png)
 
-Die [Optionen](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-einer Quelle können Trainer-Eingaben von einem angeschlossenen
-Schüler-Sender (Slave) ausschließen — dies wird typischerweise bei einem
-logischen Schalter verwendet, der die Knüppelbewegung des **Lehrers**
-überwacht (z. B. um sofort eingreifen zu können, wenn etwas schiefgeht),
-ohne dass auch die Eingaben des Schülers ihn auslösen. Häufig wird dies mit
-einem Trainer-Schalter kombiniert, der die aktive Bedingung des Lehrers
-freigibt.
+Die Bedingung ist WAHR, wenn **nur eine** der in Wert 1, Wert 2 ... Wert(n) ausgewählten Quellen wahr (d. h. EIN) ist.
+
+#### Taktgenerator
+
+![](../assets/model-lsw-timer-generator.png)
+
+Der logische Schalter schaltet kontinuierlich ein und aus. Er schaltet für die Zeit „Laufzeit aktiv“ ein und für die Zeit „Laufzeit inaktiv“ aus.
+
+#### SR FlipFlop
+
+![](../assets/model-lsw-sticky.png)
+
+Oder mit Impuls/Übergang nach (┼) -Optionen:
+
+![](../assets/model-lsw-sticky-edge-select.png)
+
+Für die Option Impuls/Übergang drücken Sie lange die \[Ent\]-Taste bei der Bedingung Trigger EIN oder Trigger AUS und wählen es dann.
+
+![](../assets/model-lsw-sticky-with-edge.png)
+
+Der SR FlipFlop-Logikschalter hat eine Verriegelungsfunktion, die auch als SR-Flip-Flop (SR = Set / Reset) bezeichnet wird. Seine Funktionsweise ähnelt der eines JK-Flipflops, sodass sein Ausgang immer eindeutige Zustände aufweist. Er verriegelt EIN (d.h. wird WAHR), wenn die Trigger-EIN-Bedingungen erfüllt sind, und hält seinen Wert, bis er zu FALSCH gezwungen wird, wenn die Trigger-AUS-Bedingungen erfüllt sind. Dies kann durch den optionalen Parameter „aktiviert“ gesteuert werden. Das heißt, wenn die aktive Bedingung WAHR ist, dann folgt der SR FlipFlop-Ausgang der verriegelten Bedingung der SR FlipFlop-Funktion, vorbehaltlich der Verzögerungen. Ist die aktive Bedingung jedoch FALSCH, wird der logische Schaltausgang ebenfalls auf FALSCH gehalten.
+
+**Hinweis:** Die SR FlipFlop-Funktion wurde in Ethos 1.6.2 um die Option „Impuls/Übergang nach“ (Flanke) an den Trigger-Eingängen erweitert, was eine enorme Flexibilität bei der Konfiguration ermöglicht. Um den korrekten Betrieb zu gewährleisten, sollten sorgfältige Tests durchgeführt werden
+
+Auslösebedingung EIN
+
+Wenn die Trigger-EIN-Bedingung z. B. SA↑ (keine Verzögerung) ist, dann schaltet der SR FlipFlop-Ausgang von FALSCH auf WAHR sobald SA auf EIN geht.
+
+Wenn die Trigger-EIN-Bedingung SA↑ (Verzögerung=1s) ist, schaltet der SR FlipFlop-Ausgang 1 Sekunde, nachdem SA auf EIN gegangen ist, von FALSCH auf WAHR um, sofern SA während dieser Verzögerung auf EIN bleibt.
+
+Wenn die Trigger-EIN-Bedingung Impuls/Übergang nach (┼)>SA↑ (Verzögerung=1s) ist, schaltet der SR FlipFlop-Ausgang 1 Sekunde, nachdem SA auf EIN gegangen ist, von WAHR auf FALSCH um, auch wenn SA während dieser Verzögerung nicht auf EIN bleibt.
+
+**Auslösebedingung** **AUS**
+
+Lautet die Trigger-Aus-Bedingung beispielsweise SB↑ (keine Verzögerung), dann schaltet der SR FlipFlop-Ausgang von WAHR auf FALSCH, sobald SB auf EIN geht.
+
+Lautet die Trigger-Aus-Bedingung SB↑ (Verzögerung=1s), dann schaltet der SR FlipFlop-Ausgang 1 Sekunde, nachdem SB auf EIN gegangen ist, von WAHR auf FALSCH, sofern SB während dieser Verzögerung auf EIN bleibt.
+
+Wenn der Trigger OFF <Impuls/Übergang nach Flanke (┼)>SB↑ (Verzögerung=1s) ist, dann wird der SR FlipFlop 1 Sekunde nachdem SB auf EIN gegangen ist, von WAHR auf FALSCH umschalten, auch wenn SB während dieser Verzögerung nicht auf EIN bleibt.
+
+Aktiver Bedingungen
+
+Beachten Sie, dass die SR FlipFlop-Funktion weiterhin arbeitet, auch wenn ihr Ausgang durch den Eingang „Aktive Bedingung“ gesteuert wird. Sobald die aktive Bedingung wieder WAHR wird, wird die verriegelte Bedingung des SR FlipFlop zum Ausgang durchgeschaltet, vorbehaltlich aller Verzögerungen.
+
+Toggle function
+
+Wenn beide Triggerbedingungseingänge gleichzeitig von FALSCH auf WAHR umgeschaltet werden, ändert der SR FlipFlop-Ausgang einmal seinen Zustand.
+
+Hinweis: Bitte beachten Sie auch den Abschnitt „Allgemeine Parameter“ weiter unten.
+
+#### Impuls/Übergang...
+
+![](../assets/model-lsw-edge.png)
+
+„Flanke“ ist ein Momentanschalter, der für die in „Dauer“ angegebene Zeitspanne WAHR wird, wenn seine Flankenauslösebedingungen erfüllt sind.
+
+##### Option „Flanke steigend“
+
+![](../assets/model-lsw-edge-rising-edge.png)
+
+##### Während = '0.0s'
+
+Während besteht aus zwei Teilen \[t1:t2\]. Bei t1 von Während = 0,0s und t2= 'Steigende Flanke' wird der logische Schalter in dem Moment WAHR (für die in 'Dauer' angegebene Zeitspanne), in dem die 'Trigger-Ein-Bedingung' von FALSCH auf WAHR übergeht.
+
+![](../assets/model-lsw-edge-during-gt0-rising-edge.png)
+
+##### Während >= '0,0s
+
+Während besteht aus zwei Teilen \[t1:t2\]. Wenn t1 von ‚Dauer’ ein positiver Wert ist (z. B. 5,0s) und t2= 'Steigende Flanke', wird der logische Schalter 5 Sekunden nach dem Übergang der 'Trigger-EIN-Bedingung' von Falsch auf WAHR (für die unter 'Dauer' angegebene Dauer). Alle weiteren 'Einschaltimpulse' während der Periode t1 werden ignoriert.
+
+##### Option „fallende Flanke
+
+![](../assets/model-lsw-edge.png)
+
+##### während = '0.0s'
+
+Während besteht aus zwei Teilen \[t1:t2\]. Bei ‚während‘ t1=0.0s und t2= '---' (fallende Flanke) wird der logische Schalter in dem Moment WAHR (für die in 'Dauer' angegebene Dauer), in dem die Bedingung für die Auslösung von WAHR auf FALSCH übergeht.
+
+![](../assets/model-lsw-edge-during-eq0.png)
+
+##### Während >= '0,0s
+
+‚während’ besteht aus zwei Teilen \[t1:t2\]. Wenn t1 von ‚während’ ein positiver Wert ist (z.B. 3,0s) und t2= '---' (fallende Flanke), wird der logische Schalter WAHR (für die in 'Dauer angegebene Dauer), wenn die Bedingung für die Auslösung von WAHR zu FALSCH übergeht, nachdem sie mindestens 3 Sekunden lang WAHR war.
+
+##### Option Impuls
+
+‚während’ besteht aus zwei Teilen \[t1:t2\]; wenn sowohl für t1 als auch für t2 Werte eingegeben werden, wird ein Impuls benötigt, um den logischen Schalter auszulösen.
+
+![](../assets/model-lsw-edge-during-gt0.png)
+
+Im obigen Beispiel wird der logische Schalter für den Zeitraum „Dauer“ wahr, wenn die „Trigger-Ein-Bedingung“ von FALSCH auf WAHR wechselt und dann nach mindestens 2 Sekunden, aber spätestens nach 5 Sekunden von WAHR auf FALSCH wechselt.
+
+## Gemeinsame Parameter
+
+![](../assets/model-lsw-common-parameters.png)
+
+Die Logikschalter haben alle eine Reihe von gemeinsamen Parametern:
+
+### Aktiviert durch
+
+Die Logikschalter können durch den optionalen Parameter „aktiviert durch“ gesteuert werden. Das heißt, wenn die aktive Bedingung WAHR ist, folgt der Ausgang des Logikschalters der Bedingung der Funktion. Ist die aktive Bedingung jedoch FALSCH, wird der Ausgang des Logikschalters ebenfalls auf FALSCH gehalten.
+
+Die Bedingung ‚aktiviert durch‘ kann aus einer der folgenden ausgewählt werden:
+
+-   EIN
+-   Schalterstellungen
+-   Funktionsschalter
+-   Logik-Schalter
+-   Trimm-Positionen
+-   Telemetrie
+-    Flugphasen
+-   System-Ereignisse 
+  -    Gasstellung halten
+  -    Motor aus
+  -    Gas aktiv
+  -    Telemetrie aktiv
+  -    RSSI niedrig
+  -    Trainer aktiv
+  -    Flug zurücksetzen
+
+Beachten Sie, dass die RS FlipFlop-Funktion weiterhin arbeitet, auch wenn ihr Ausgang durch den Schalter „Aktiv durch“ gesteuert wird. Sobald die aktive Bedingung wieder WAHR wird, wird die Bedingung der Funktion auf den Logikschalterausgang umgeschaltet.
+
+### Verzögerung bevor aktiv
+
+Dieser Wert bestimmt die Zeit, für die die Logikschalterbedingungen WAHR sein müssen, bevor der Logikschalterausgang WAHR wird (nicht relevant für Taktgenerator und Impuls/Übergang...). Die Verzögerung kann bis zu 60,0s betragen.
+
+Bitte beachten Sie dieses Beispiel, in dem die Spannung des Neuron ESC für mindestens x Sekunden unter 4,2 V fällt.
+
+### Verzögerung bevor Inaktivität
+
+In ähnlicher Weise bestimmt dieser Wert die Zeit, für die die Logikschalterbedingungen FALSCH sein müssen, bevor der Logikschalterausgang FALSCH wird (nicht relevant für Taktgenerator und Impuls/Übergang...). Die Verzögerung kann bis zu 60,0s betragen.
+
+### Bestätigung vor Aktivierung
+
+Wenn ein Logikschalter einen Zustandswechsel zu aktiv erkennt, fordert diese Option eine Bestätigung des Benutzers an, bevor der Zustand geändert wird.
+
+Es gibt eine Option zum Abbrechen für Situationen, in denen der Bestätigungsdialog zu häufig angezeigt wird.
+
+![](../assets/model-lsw-confirm-lsw-true.png)
+
+Einige Beispiele für den Einsatz der Funktion:
+
+1. Für Funktionsmodelle, bei denen man sie benutzen kann, bevor man etwas Gefährliches beginnt.
+
+2. Für den NFC-Schalter, wo Sie das Modell vom Sender ausschalten können, könnte es verwendet werden, um eine Bestätigung vor dem Ausschalten zu haben.
+
+### Bestätigung vor Inaktivität
+
+Wenn ein Logikschalter einen Zustandswechsel zu aktiv erkennt, fordert diese Option eine Bestätigung des Benutzers an, bevor der Zustand geändert wird.
+
+Es gibt eine Option zum Abbrechen für Situationen, in denen der Bestätigungsdialog zu häufig angezeigt wird.
+
+![](../assets/model-lsw-confirm-lsw-false.png)
+
+### Min. Laufzeit
+
+Sobald der Logikschalter WAHR wird, bleibt er mindestens für die angegebene Mindestdauer WAHR. Wenn die Dauer der Standardwert „---“ ist, wird der Logikschalter nur für einen Verarbeitungszyklus des Mischers WAHR, was zu kurz ist, um gesehen zu werden, so dass die Bezeichnung des logischen Schalters in der Statuszeile nicht fett wird. Die Dauer kann bis zu 60,0s betragen.
+
+### Max. Laufzeit
+
+Wenn eine maximale Dauer festgelegt wird, bleibt der logische Schalter, sobald er WAHR wird, nur für die angegebene maximale Dauer WAHR. Die Dauer kann bis zu 60,0s betragen.
+
+### Kommentar
+
+Ein Kommentar kann zur Erläuterung der Verwendung oder Funktion hinzugefügt werden, um das Verständnis zu erleichtern. Der Kommentar wird angezeigt, wenn ein Logikschalter zu einem Werte-Widget hinzugefügt wird.
+
+## Logische Schalter - Verwendung mit Telemetrie
+
+Neben den normalen Aktiv-Kategorien gibt es für Logikschalter und Spezialfunktionen die Bedingung „Telemetrie aktiv“ (unter „Systemereignis“), die aktiv ist, wenn Telemetrie empfangen wird.
+
+Wenn die Quelle eines Logikschalters ein Telemetriesensor ist, wird der Logikschalter aktiv, wenn Ihr Sensor aktiv ist.
+
+Achtung!
+
+Wenn ein Logikschalter mit Telemetrie in einen Mischer verwendet wird, muss eine zusätzliche Aktion mit demselben Logikschalter invertiert (d. h. inaktiv) hinzugefügt werden, um sicherzustellen, dass der Mischer auch bei Ausfall der Telemetrie gültige Werte enthält. Denken Sie daran, dass bei einem inaktiven Mischer der Kanalausgang auf Neutral = 0% = 1500us oder Halbgas bei einem Drosselkanal steht!
+
+![](../assets/model-mix-eg-using-weight.png)
+
+Das obige Beispiel zeigt den hinzugefügten Logikschalter VFRlow sowie dessen Inversen !VFRlow, um sicherzustellen, dass der Mischer immer gültige Werte aufweist.
+
+Alternativ könnten Sie auch eine Offset-Aktion verwenden:
+
+![](../assets/model-mix-eg-using-offset-actions.png)
+
+Offset-Aktionen haben standardmäßig zwei Werte: einen für den Fall, dass die Offset-Aktion aktiv ist, und einen für den Fall, dass die Offset-Aktion inaktiv ist. Dies deckt alle Fälle ab.
+
+![](../assets/model-mix-eg-using-offset.png)
+
+Das obige Beispiel zeigt die Mischer-Zusammenfassungszeile, wobei der Offset immer einen gültigen Wert hat. Die Quelle wurde auf den Sonderwert 0 gesetzt, sodass der Offset zu 0 % hinzugefügt wird und die Mix-Ausgabe +100 % beträgt, wenn VFRlow aktiv ist, oder -100 %, wenn VFRlow inaktiv ist.
+
+## Vergleich der Quellen
+
+![](../assets/model-lsw-delta-AgtX.png)
+
+Normalerweise wird die Quelle (A) mit einem festen Wert (X) verglichen. Der Vergleich von zwei Quellen gleichen Formats (d. h. mit denselben Einheiten) ist jedoch zulässig. Zum Beispiel können zwei Zeitgeber, zwei Spannungen oder zwei Drehzahlquellen verglichen werden.
+
+## Option zum Ignorieren von Schülereingaben
+
+![](../assets/trainer-take-back-ailinput-ignore.png)
+
+Bei Logikschaltern kann für die Quellen die Option „Schülerwert gesperrt“ festgelegt werden, um alle Quellen zu ignorieren, die über den Schülereingang.
+
+Eine typische Anwendung ist die Konfiguration eines Logikschalters zur Erkennung von Steuerknüppelbewegungen des Lehrer-Senders (z. B. für Querruder und Höhenruder), um bei Problemen sofort eingreifen zu können. Diese Option ist erforderlich, um zu verhindern, dass Steuerbefehle des Schüler-Senders (d. h. des Schülers) den Logikschalter auslösen.
+
+Der Logikschalter wird dann typischerweise in Verbindung mit einem Lehrerschalter verwendet, um die „aktive Bedingung“ der Lehrer-Schüler-Funktion zu aktivieren oder zu deaktivieren.
+
+Bitte beachten Sie die Anleitung 11. Wie man beispielsweise die sofortige Rückübernahme für die Lehrer-Schüler-Funktion konfiguriert.
