@@ -1,0 +1,88 @@
+<!--
+  Site navigation, authored here instead of as a YAML nav: block in
+  mkdocs.yml (see the mkdocs-literate-nav plugin entry there). Add a new
+  page by adding one line here, in the section it belongs under -- no
+  other file needs editing for the page to appear in the nav.
+
+  Per-locale nav *titles* are unaffected by this file -- those still come
+  from mkdocs.yml's plugins.i18n.languages[].nav_translations: blocks,
+  exactly as before (this file only supplies the English structure/titles
+  and page ordering that nav_translations maps translations onto).
+
+  A section is a top-level bullet with indented children; its own link is
+  both the section's title and its landing page (docs/en/<section>/index.md
+  by convention, matching how every existing section is laid out). A
+  top-level bullet with no children (just "Home" here) is a plain page.
+-->
+
+* [Home](index.md)
+* [Getting Started](getting-started/index.md)
+    * [Main Views](getting-started/main-views.md)
+    * [User Interface & Navigation](getting-started/user-interface-and-navigation.md)
+    * [USB Connection Modes](getting-started/usb-connection-modes.md)
+    * [Emergency Mode](getting-started/emergency-mode.md)
+* [System Setup](system-setup/index.md)
+    * [File Manager](system-setup/file-manager.md)
+    * [Alerts](system-setup/alerts.md)
+    * [Date & Time](system-setup/date-and-time.md)
+    * [General](system-setup/general.md)
+    * [Battery](system-setup/battery.md)
+    * [Hardware](system-setup/hardware.md)
+    * [Controls](system-setup/controls.md)
+    * [Devices](system-setup/devices.md)
+    * [Information](system-setup/information.md)
+* [Model Setup](model-setup/index.md)
+    * [Model Select](model-setup/model-select.md)
+    * [Model Edit](model-setup/model-edit.md)
+    * [Flight Modes](model-setup/flight-modes.md)
+    * [Mixes](model-setup/mixes.md)
+    * [Outputs](model-setup/outputs.md)
+    * [Timers](model-setup/timers.md)
+    * [Trims](model-setup/trims.md)
+    * [RF System](model-setup/rf-system.md)
+    * [Curves](model-setup/curves.md)
+    * [Logical Switches](model-setup/logical-switches.md)
+    * [Special Functions](model-setup/special-functions.md)
+    * [Variables](model-setup/variables.md)
+    * [Trainer](model-setup/trainer.md)
+    * [Telemetry](model-setup/telemetry.md)
+    * [Checklist](model-setup/checklist.md)
+    * [Lua Scripts (Model)](model-setup/lua-scripts.md)
+* [Displays](displays/index.md)
+    * [Additional Displays](displays/additional-displays.md)
+    * [Custom Widgets](displays/custom-widgets.md)
+* [Lua Scripts](lua-scripts/index.md)
+    * [Lua Interpreter](lua-scripts/lua-interpreter.md)
+    * [Ethos Lua Documentation](lua-scripts/ethos-lua-documentation.md)
+    * [Example Script Locations](lua-scripts/example-script-locations.md)
+    * [Configuration Limits](lua-scripts/configuration-limits.md)
+    * [Basic Widget Layout](lua-scripts/basic-widget-layout.md)
+* [Tutorials](tutorials/index.md)
+    * [Initial Radio Setup](tutorials/initial-radio-setup.md)
+    * [Basic Fixed-Wing Example](tutorials/basic-fixed-wing.md)
+    * [Basic Flying-Wing (Elevon) Example](tutorials/basic-flying-wing.md)
+    * [Basic Flybarless Heli Example](tutorials/basic-flybarless-heli.md)
+* [How-To Guides](how-to/index.md)
+    * [Low Battery Voltage Warning](how-to/low-battery-warning.md)
+    * [Battery Capacity Warning](how-to/battery-capacity-warning.md)
+    * [SR8/SR10 Setup](how-to/sr8-sr10-setup.md)
+    * [Butterfly (Crow) Mixer](how-to/butterfly-mixer.md)
+    * [Configure an FBUS System](how-to/fbus-setup.md)
+    * [Test a Redundant Receiver](how-to/test-redundant-receiver.md)
+    * [User Defined Text Checklist](how-to/user-defined-checklist.md)
+    * [In-Flight Adjustable Compensation Curve](how-to/in-flight-compensation-curve.md)
+    * [Instant Take-Back (Trainer)](how-to/instant-takeback.md)
+    * [Find the Latest Bootloader](how-to/find-latest-bootloader.md)
+* [Radio Notes](radio-notes/index.md)
+    * [X18S](radio-notes/x18s.md)
+    * [X20 Pro / X20 Pro AW](radio-notes/x20-pro-and-aw.md)
+* [Ethos Suite](ethos-suite/index.md)
+    * [Migration](ethos-suite/migration.md)
+    * [Operation](ethos-suite/operation.md)
+* [Reference](reference/index.md)
+    * [Toolbars](reference/toolbars.md)
+* [Contributing](contributing/index.md)
+    * [Screenshot Pipeline](contributing/screenshot-pipeline.md)
+    * [Versioning](contributing/versioning.md)
+    * [Adding a New Language](contributing/adding-a-language.md)
+    * [Translation Status](contributing/translation-status.md)
