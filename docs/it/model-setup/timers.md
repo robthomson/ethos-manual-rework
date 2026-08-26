@@ -1,84 +1,163 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Timer
 
-![Timer](../assets/model-timers.png)
+![](../assets/model-icon-timers.png)
 
-Otto timer completamente programmabili, ciascuno con conteggio crescente o
-decrescente. Puoi aggiungerne uno toccando il simbolo **+** accanto alle
-intestazioni delle colonne, oppure selezionando **Aggiungi** più sotto.
-Toccando un timer si apre un menu a comparsa che consente di azzerare,
-modificare, aggiungere, spostare o copiare/incollare il timer.
+![](../assets/model-timers.png)
 
-![Modifica timer](../assets/model-timer1-edit.png)
+Ci sono 8 timer completamente programmabili che possono contare sia verso l'alto che verso il basso.
 
-## Campi comuni (conteggio decrescente e crescente)
+Nella schermata principale dei timer (vedi sopra) è possibile aggiungere nuovi timer toccando il simbolo “+” accanto alle intestazioni delle colonne.
 
-- **Valore** — il valore attuale del timer.
-- **Nome** — permette di dare un nome al timer.
-- **Modo** — **Up** (crescente) o **Down** (decrescente).
-- **Valore iniziale** (solo conteggio decrescente) — il valore da cui parte il
-  conteggio alla rovescia.
-- **Valore allarme** (solo conteggio crescente) — il valore al quale il timer è
-  considerato scaduto; il conteggio prosegue oltre questo valore, ma nei widget
-  timer viene visualizzato in rosso.
-- **Condizione di avvio** — avvia il timer. Se la **Condizione di arresto** è
-  lasciata al valore predefinito, la sola condizione di avvio controlla sia
-  l'avvio *sia* l'arresto. In caso contrario, il timer parte la prima volta che
-  la condizione di avvio diventa vera e continua a funzionare da quel momento.
-- **Condizione di arresto** — se non lasciata al valore predefinito, controlla
-  il timer una volta avviato: fermo quando è vera, in funzione quando è falsa.
-  Nell'esempio seguente, un timer parte quando `ThrottleActive` diventa vero e
-  si ferma quando la telemetria non è più attiva:
+![](../assets/model-timers-action-select.png)
 
-  ![Condizione di arresto](../assets/model-timer1-edit-stop.png)
+Toccando una riga del timer si apre un popup con le opzioni per resettare o modificare il timer, aggiungere un nuovo timer, spostare o copiare/incollare il timer.
 
-- **Sorgente di temporizzazione proporzionale** — con `---` il conteggio avviene
-  in tempo reale. Qualsiasi altra sorgente (ad esempio lo stick del gas o il
-  canale del gas) modifica la velocità del timer: a −100% il timer è fermo, a
-  +100% procede alla velocità reale e nei valori intermedi varia in modo
-  proporzionale.
-- **Reset** — un interruttore, un interruttore di funzione, un interruttore
-  logico o una posizione di trim che azzera il timer; il timer resta azzerato
-  per tutto il tempo in cui la condizione è vera.
-- **Persistente** — mantiene il valore del timer allo spegnimento o al cambio di
-  modello, ricaricandolo al successivo utilizzo del modello.
-- **Voce** — quale [pacchetto vocale](../system-setup/general.md#audio-settings)
-  annuncia questo timer.
+## Timer per il conto alla rovescia
 
-## Azioni audio
+![](../assets/model-timer1-edit.png)
 
-![Aggiungi azione audio](../assets/model-timer1-add-action.png)
-![Tipo di azione](../assets/model-timer1-action-type-select.png)
-![Azione di conto alla rovescia](../assets/model-timer1-action-countdown.png)
+Valore
 
-Configurazione degli avvisi completamente flessibile, specifica per ciascun
-timer. Ogni azione ha un tipo — **Countdown** (annuncio vocale), **Beep
-countdown** (segnali acustici anziché voce), **Play file** (riproduci file) o
-**Play value** (riproduci valore) — oltre ai seguenti parametri:
+Mostra il valore attuale del timer.
 
-- **Start** — il valore da cui inizia il conto alla rovescia di questa azione.
-- **Step** — intervallo tra gli annunci, fino a 10 minuti (600 s).
-- **Haptic** — accompagna l'annuncio con una vibrazione.
+Nome
 
-Una tipica sequenza di tre azioni:
+Permette di dare un nome al timer.
 
-![Riepilogo azioni](../assets/model-timer1-actions-summary.png)
-![Azioni del timer 2](../assets/model-timer2-actions-summary.png)
+Modalità
 
-1. Conto alla rovescia vocale a partire da 2:00 rimanenti, ogni 30 s, con
-   vibrazione.
-2. Conto alla rovescia acustico a partire da 0:10 rimanenti, ogni 1 s, con
-   vibrazione.
-3. Un file personalizzato (ad esempio `timer-1-elapsed`) riprodotto allo
-   scadere, con vibrazione.
+Il timer può contare su o **giù**.
 
-Puoi aggiungere altre azioni con **Aggiungi**; l'elenco viene eseguito in ordine
-di priorità, con la **priorità più alta per ultima**.
+Valore iniziale
 
-Consulta anche il [widget Timer Log](../displays/index.md#widget-types) per uno
-storico delle esecuzioni precedenti del timer.
+Se il timer è stato impostato per il conteggio alla rovescia, il valore iniziale è il valore a partire dal quale il timer conta alla rovescia fino a zero.
 
-![Widget timer](../assets/model-timers-widget.png)
+Condizione iniziale
+
+La condizione di avvio avvia il timer. Se la condizione di stop sottostante è impostata come predefinita, allora il timer si avvia e si ferma solo con la condizione di avvio. Se la condizione di stop sottostante non è "predefinita", allora il timer si avvia quando la condizione di avvio diventa vera e poi continua a scorrere.
+
+Condizione di stop
+
+Se la condizione di arresto è "predefinita", il timer è controllato solo dalla condizione di avvio.
+
+![](../assets/model-timer1-edit-stop.png)
+
+Se non è "predefinito", una volta che il timer è in funzione, la condizione di stop controlla il timer. Il timer smette di funzionare quando la condizione di stop è vera, ma continua a funzionare quando la condizione di stop è falsa.
+
+Nell'esempio precedente, il timer viene avviato quando ThrottleActive diventa True e si ferma quando la telemetria non è più attiva.
+
+Sorgente di temporizzazione proporzionale
+
+Se è impostato su '---' il timer conta in tempo reale. Se è stata selezionata una fonte di temporizzazione proporzionale, la velocità del timer è controllata da questa fonte, ad esempio lo stick del Gas - Throttle o il canale del Gas - Throttle. Quando il valore del Gas - Throttle è -100%, il timer si ferma. Quando il valore del Gas - Throttle è +100%, il timer conta in tempo reale. Con valori intermedi del Gas - Throttle, il timer conta in modo proporzionale.
+
+![](../assets/model-timer1-add-action.png)
+
+Reset - Azzeramento
+
+Il timer può essere resettato da posizioni di interruttori, interruttori di funzione, interruttori logici o posizioni di interruttori di trim. Si noti che il timer viene mantenuto in reset finché la condizione di reset è valida.
+
+Persistente
+
+L'opzione Persistente su On consente di memorizzare il valore del timer quando la radio viene spenta o il modello viene cambiato. Il valore verrà ricaricato al successivo utilizzo del modello.
+
+Voce
+
+Seleziona la voce da utilizzare per gli annunci vocali. Per maggiori dettagli, consulta la sezione [Scelta delle voci](../system-setup/general.md).
+
+Azioni audio
+
+Le azioni audio sono molto potenti e flessibili e consentono di configurare gli avvisi temporizzati esattamente in base alle esigenze dell'utente.
+
+Clicca su "Aggiungi una nuova azione audio".
+
+![](../assets/model-timer1-action-countdown.png)
+
+Seleziona il tipo di azione audio richiesta, ad esempio "Conto alla rovescia" nell'esempio precedente.
+
+Iniziare
+
+Il valore iniziale è il valore da cui parte l'azione di conto alla rovescia.
+
+Passo
+
+Il valore del passo stabilisce gli intervalli in cui il valore del timer verrà annunciato. Il valore del passo può arrivare fino a 10 minuti (600 secondi).
+
+Aptico
+
+Se abilitato, il feedback aptico accompagnerà gli annunci.
+
+![](../assets/model-timer1-action-type-select.png)
+
+I tipi di azione audio includono "Conta secondi" (con voce), "Conto alla rovescia con bip" (con bip al posto della voce), "Riproduci file" e "Riproduci valore".
+
+![](../assets/model-timer1-actions-summary.png)
+
+In questo esempio sono state configurate tre azioni audio:
+
+- Innanzitutto, ogni 30 secondi verrà emesso un avviso di conto alla rovescia a partire dai 2 minuti rimanenti. L'avviso sarà vocale ed è stato attivato anche un feedback aptico.
+- In secondo luogo un avviso di conto alla rovescia a partire dai 10 secondi rimanenti, dopodiché verrà emesso un segnale acustico ogni secondo. È stato attivato anche il feedback aptico.
+- Infine, un file audio personalizzato "timup" verrà riprodotto quando il timer scade (cioè raggiunge lo zero), accompagnato da un feedback aptico.
+
+Ulteriori azioni audio possono essere aggiunte toccando il pulsante "Aggiungi". Tieni presente che l'elenco deve essere in ordine di priorità, con la priorità più alta alla fine dell'elenco.
+
+## Timer per il conto alla rovescia crescente
+
+![](../assets/model-timer2-edit.png)
+
+Valore
+
+Mostra il valore attuale del timer.
+
+Nome
+
+Permette di dare un nome al timer.
+
+Modalità
+
+Il timer può contare **su** o giù.
+
+Valore dell***'allarme***
+
+![](../assets/model-timers-widget.png)
+
+Se il timer è stato impostato per il conto alla rovescia, il parametro del valore dell'allarme imposta il valore al quale il timer scade. Il timer continua a contare, ma il valore diventa rosso nei widget del timer.
+
+Condizione iniziale
+
+La condizione di avvio avvia il timer. Se la condizione di stop sottostante è impostata come predefinita, allora il timer si avvia e si ferma solo con la condizione di avvio. Se la condizione di stop sottostante non è "predefinita", allora il timer si avvia quando la condizione di avvio diventa vera e poi continua a scorrere.
+
+Condizione di stop
+
+Se la condizione di arresto è "predefinita", il timer è controllato solo dalla condizione di avvio.
+
+Se non è "predefinito", una volta che il timer è in funzione, la condizione di stop controlla il timer. Il timer smette di funzionare quando la condizione di stop è vera, ma continua a funzionare quando la condizione di stop è falsa.
+
+Sorgente di temporizzazione proporzionale
+
+Se è impostato su '---' il timer conta in tempo reale. Se è stata selezionata una fonte di temporizzazione proporzionale, la velocità del timer è controllata da questa fonte, ad esempio lo stick del Gas - Throttle o il canale del Gas - Throttle. Quando il valore del Gas - Throttle è -100%, il timer si ferma. Quando il valore del Gas - Throttle è +100%, il timer conta in tempo reale. Con valori intermedi del Gas - Throttle, il timer conta in modo proporzionale.
+
+Reset - Azzeramento
+
+Il timer può essere resettato da posizioni di interruttori, interruttori di funzione, interruttori logici o posizioni di interruttori di trim. Si noti che il timer viene mantenuto in reset finché la condizione di reset è valida.
+
+Persistente
+
+L'opzione Persistente su On consente di memorizzare il valore del timer quando la radio viene spenta o il modello viene cambiato. Il valore verrà ricaricato al successivo utilizzo del modello.
+
+Voce
+
+Seleziona la voce da utilizzare per gli annunci vocali. Per maggiori dettagli, consulta la sezione [Scelta delle voci](../system-setup/general.md).
+
+Azioni audio
+
+Le azioni audio sono molto potenti e flessibili e consentono di configurare gli avvisi temporizzati esattamente in base alle esigenze dell'utente.
+
+![](../assets/model-timer2-actions-summary.png)
+
+In questo esempio sono state configurate tre azioni audio:
+
+- In primo luogo, ogni 30 secondi verrà emesso un conto alla rovescia verso il valore dell'allarme a partire dai 2 minuti rimanenti. L'allarme sarà vocale ed è stato abilitato anche il feedback aptico.
+- In secondo luogo un conto alla rovescia che parte dai 10 secondi rimanenti, dopodiché verrà emesso un segnale acustico ogni secondo. È stato attivato anche il feedback aptico.
+- Infine, un file audio personalizzato "timsup" verrà riprodotto quando il timer scadrà raggiungendo il valore di allarme, accompagnato da un feedback aptico.
+
+Ulteriori azioni audio possono essere aggiunte toccando il pulsante "Aggiungi". Tieni presente che l'elenco deve essere in ordine di priorità, con la priorità più alta alla fine dell'elenco.

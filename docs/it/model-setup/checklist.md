@@ -1,54 +1,67 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Lista di controllo
 
-# Checklist
+![](../assets/model-icon-checklist.png)
 
-![Checklist](../assets/model-checklist.png)
+La funzione Checklist prevede una serie di controlli pre-volo. Si tratta di un gruppo di funzioni di sicurezza che entrano in vigore quando si accende la radio e/o si carica un modello dall'elenco dei modelli.
 
-Una serie di controlli di sicurezza pre-volo che vengono eseguiti all'accensione della radio e/o al caricamento di un modello. I controlli integrati comprendono modalità silenziosa, failsafe non impostato, posizione di interruttori/potenziometri, batteria della radio e batteria RTC — il controllo degli interruttori indica in quale direzione deve essere spostato ciascun interruttore, segnalandolo con punti rossi nella schermata di avviso:
+![](../assets/model-checklist-at_start.png)
 
-![Checklist all'avvio](../assets/model-checklist-at_start.png)
+I controlli predefiniti includono: la radio è in modalità silenziosa, il failsafe non è impostato, gli interruttori e i potenziometri sono controllati, la batteria della radio è scarica, la batteria dell'RTC è scarica, ecc. Il controllo degli interruttori mostra la direzione in cui deve essere spostato l'interruttore; fai riferimento ai punti rossi nell'esempio di schermata di avviso qui sopra.
 
-!!! note
-    Sia `OK` sia `RTN` saltano completamente i controlli pre-volo, indipendentemente da quanto suggerito dall'avviso a schermo.
+Si noti che, contrariamente all'avviso precedente, il tasto OK o RTN salta i controlli pre-volo.
 
-## Controllo del gas
+Ulteriori controlli possono essere impostati di seguito.
 
-![Funzione di controllo](../assets/model-checklist-check_function.png)
+![](../assets/model-checklist.png)
 
-Attiva il controllo e scegli un operatore — `<` (minore di), `~` (circa uguale) o `>` (maggiore di) — rispetto a un valore; viene emesso un avviso se lo stick del gas si trova al di fuori di quanto consentito dal confronto.
+## Controllo del Gas - Throttle
 
-## Controllo del failsafe
+![](../assets/model-checklist-check_function.png)
 
-Avvisa se il [failsafe](rf-system.md#failsafe) non è stato impostato per il modello corrente.
+Per attivare il controllo del Gas - Throttle, seleziona l'operatore da utilizzare. Le opzioni sono '<' minore di, '~' circa uguale o '>' maggiore di. Il controllo pre-volo ti avviserà se lo stick del Gas - Throttle non rientra nel valore impostato nel parametro valore.
 
-!!! tip
-    Si raccomanda vivamente di lasciare attivo questo controllo.
+## Controllo Failsafe
+
+Se abilitato, ti avvisa se il Failsafe non è stato impostato per il modello corrente. Si consiglia vivamente di lasciarlo abilitato!
 
 ## Controllo degli interruttori
 
-![Interruttori](../assets/model-checklist-switches.png)
-![Opzioni di controllo degli interruttori](../assets/model-checklist-switches-options.png)
+![](../assets/model-checklist-switches.png)
 
-Per ciascun interruttore è possibile richiedere una posizione specifica all'avvio (gli interruttori con nomi personalizzati definiti in [Configurazione di sistema → Hardware](../system-setup/hardware.md#switches-settings) vengono mostrati con tali nomi). **Carica tutte le posizioni degli interruttori** acquisisce le posizioni fisiche *attuali* come posizioni desiderate per ogni interruttore non contrassegnato come **Nessun controllo**.
+Per ogni interruttore, puoi definire se la radio richiede che gli interruttori siano nelle posizioni predefinite desiderate. Se agli interruttori sono stati assegnati dei nomi definiti dall'utente in Sistema / Hardware / 'Impostazioni interruttori', i nomi verranno visualizzati.
+
+L'opzione "Carica tutte le posizioni degli interruttori" può essere utilizzata per leggere le posizioni desiderate dalle posizioni attuali degli interruttori, ad eccezione di quelle contrassegnate con "Nessun controllo".
+
+![](../assets/model-checklist-switches-options.png)
+
+Le opzioni di controllo sono mostrate qui sopra.
 
 ## Controllo degli interruttori di funzione
 
-![Interruttori di funzione](../assets/model-checklist-function-switches.png)
-![Opzioni di controllo degli interruttori di funzione](../assets/model-checklist-function-switches-options.png)
+![](../assets/model-checklist-function-switches.png)
 
-Stesso principio, applicato ai sei [interruttori di funzione](model-edit.md#function-switches). **Carica tutte le posizioni degli interruttori di funzione** funziona allo stesso modo di quanto descritto sopra.
+![](../assets/model-checklist-function-switches-options.png)
 
-## Controllo di potenziometri / cursori
+Per ogni interruttore di funzione, puoi definire se la radio richiede che gli interruttori siano nelle posizioni predefinite desiderate. Le opzioni sono mostrate sopra.
 
-![Potenziometri](../assets/model-checklist-pots.png)
-![Opzioni di controllo dei potenziometri](../assets/model-checklist-pots-options.png)
+L'opzione "Carica tutte le posizioni degli interruttori di funzione" può essere utilizzata per leggere le posizioni desiderate dalle posizioni attuali degli interruttori di funzione, ad eccezione di quelle contrassegnate con "Nessun controllo".
 
-Richiede posizioni specifiche di potenziometri/cursori all'avvio, individualmente per ciascun comando (`~`/`<`/`>`, come per il controllo del gas). **Carica tutte le posizioni dei potenziometri** acquisisce automaticamente le posizioni attuali — verifica poi con attenzione gli operatori selezionati automaticamente, perché `~` rispetto a `<`/`>` potrebbe non corrispondere a quanto effettivamente desiderato.
+## Controllo dei Potenziometro e dei cursori
+
+![](../assets/model-checklist-pots.png)
+
+Definisce se la radio richiede che i potenziometri e i cursori siano in posizioni predefinite all'avvio. Per ogni potenziometro è possibile inserire i valori desiderati.
+
+L'opzione "Carica tutte le posizioni dei Potenziometro" può essere utilizzata per leggere le posizioni desiderate dalle posizioni attuali dei Potenziometro, ad eccezione di quelle contrassegnate con "Nessun controllo". È necessario controllare attentamente che gli operatori selezionati automaticamente siano quelli desiderati (ad esempio, '~' contro '<' o '>').
+
+![](../assets/model-checklist-pots-options.png)
+
+In alternativa, le funzioni di controllo possono essere impostate singolarmente (ad esempio, '~' o '<' o '>').
 
 ## Testo definito dall'utente
 
-![Testo checklist utente](../assets/model-checklist-user-checklist.png)
+La funzione Checklist può anche visualizzare un testo definito dall'utente. Il testo può essere un testo normale o un testo avanzato.
 
-Visualizza un file di testo semplice o formattato come parte della checklist di avvio, una volta installato per il modello. Per la procedura completa consulta [Guida pratica: checklist con testo definito dall'utente](../how-to/user-defined-checklist.md).
+![](../assets/model-checklist-user-checklist.png)
+
+Una volta installato il file di testo per un determinato modello e caricato il modello stesso, la radio visualizzerà la Checklist come parte della routine di avvio. Consulta la sezione [Come impostare una lista di controllo con testo definito dall'utente ](../tutorials/basic-flybarless-heli.md)nella sezione Come fare.

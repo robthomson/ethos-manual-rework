@@ -1,48 +1,53 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Lua
 
-# Script Lua (modello)
+![](../assets/model-icon-lua.png)
 
-![Configurazione Lua](../assets/model-lua-config.png)
+Il menu Lua appare solo se l'utente ha installato uno script sorgente o di attività Lua nella cartella *scripts (*/ sulla scheda SD o eMMC.
 
-Il menu Lua appare solo se è stato installato uno script sorgente o di
-attività Lua nella cartella `scripts/` sulla SD card o eMMC (vedi
-[Gestione file](../system-setup/file-manager.md#top-level-folders)) —
-serve per attivare e configurare selettivamente tali script **per il
-modello attivo**, non per installarli. Una volta installati, i sorgenti o
-le attività Lua sono disponibili globalmente per ogni modello; questa
-pagina è il punto in cui ogni modello li abilita e ne definisce la
-propria configurazione. Alcuni esempi di script sorgente e attività Lua
-sono pubblicati sulla pagina web Ethos-Feedback-Community
-(`/lua/examples/task`, `/lua/examples/source`).
+Utilizzando gli script Lua è possibile creare sorgenti personalizzate, come ad esempio sensori personalizzati, o creare attività che eseguono azioni personalizzate, come ad esempio la registrazione dei dati in un file al termine del volo.
+
+Una volta installati, i sorgenti o le attività Lua sono disponibili globalmente per ogni modello. Questo menu può quindi essere utilizzato per attivare e configurare selettivamente i rispettivi script sorgente e attività per il modello attivo.
+
+Ci sono alcuni esempi di script sorgente e attività Lua nella pagina web ETHOS-Feedback-Community, vedi /lua/examples/task e /lua/examples/source.
+
+![](../assets/model-lua-config.png)
 
 ## Compiti Lua
 
-Vengono elencate tutte le attività disponibili, ciascuna con un
-interruttore di abilitazione per il modello attivo. Se un'attività è
-abilitata, viene mostrato il modulo di configurazione Lua associato (se
-previsto) — lo script dell'attività fornisce una funzione di lettura e
-una di scrittura per consentire a ogni modello di salvare i propri
-parametri di configurazione. Ad esempio, un'attività può esporre un
-intervallo numerico configurabile, impostabile in modo indipendente per
-ciascun modello.
+Per ogni attività:
 
-## Sorgenti Lua
+Abilitazione dell'attività
 
-Per le sorgenti vale lo stesso schema: abilitazione per il modello
-attivo, quindi configurazione tramite il modulo fornito dallo script
-della sorgente. Una sorgente registrata in questo modo diventa
-utilizzabile come una comune
-[sorgente](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-in qualsiasi altra parte di Ethos, esattamente come una sorgente
-integrata.
+Vengono elencati tutti i compiti disponibili. Ogni attività può essere abilitata per il modello attivo.
 
-## Per gli autori di script
+Configurazione dell'attività
 
-Le sorgenti e le attività vengono registrate da Lua tramite
-`system.registerSource()` e `system.registerTask()` — consulta la Ethos
-Lua Reference Guide e la sezione [Script
-Lua](../lua-scripts/index.md) di questo manuale per l'ambiente di
-scripting generale (i widget sono un meccanismo separato ma correlato —
-vedi [Widget personalizzati](../displays/custom-widgets.md)).
+Se un'attività è abilitata, viene mostrato il modulo di configurazione Lua associato per consentire all'attività di essere configurata per il modello attivo. L'attività avrà una funzione di lettura e una di scrittura per consentire all'utente di salvare tutti i parametri di configurazione.
+
+Nell'esempio precedente, l'attività ha un intervallo configurabile che può essere personalizzato per ogni modello che utilizza l'attività.
+
+## ***Sorgenti*** Lua
+
+Per ogni fonte:
+
+Abilitazione ***fonte***
+
+Vengono elencate tutte le fonti Lua disponibili. Ogni sorgente può essere abilitata per il modello attivo.
+
+Configurazione della ***fonte***
+
+Se una sorgente è abilitata, viene mostrato il modulo di configurazione Lua associato per consentire alla sorgente di essere configurata per il modello attivo (come Range nell'esempio della schermata dell’attività sopra). La sorgente avrà una funzione di lettura e una di scrittura per consentire all'utente di salvare tutti i parametri di configurazione.
+
+## Funzioni di script Lua
+
+Le funzioni Lua applicabili sono:
+
+system.registerSource()
+
+system.registerTask()
+
+Per maggiori dettagli, consulta la [Guida di riferimento Ethos Lua](https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/LuaDoc/index.html).
+
+## Installazione
+
+I sorgenti e i task Lua sono installati nella cartella "scripts" sulla scheda SD o eMMC. Consulta la sezione [scripts ](../system-setup/file-manager.md)in Sistema / File manager.

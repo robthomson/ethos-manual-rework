@@ -1,70 +1,49 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Fasi di volo
 
-![Fasi di volo](../assets/model-fm.png)
+![](../assets/model-icon-fm.png)
 
-Le fasi di volo (modalità di volo) permettono a un interruttore di selezionare
-comportamenti distinti per lo stesso modello — un aliante potrebbe usare
-Lancio/Crociera/Velocità/Termica, un modello a motore Normale/Decollo/
-Atterraggio, un elicottero Normale (avviamento rotore, decollo/atterraggio) /
-Idle Up 1 (acrobazia) / Idle Up 2 (3D). Sollevano il pilota dalla maggior parte
-del lavoro di commutazione manuale e di ri-trimmaggio: una fase di volo può
-disporre di trim indipendenti propri e può condizionare sia le
-[Variabili](variables.md) sia i [Mix](mixes.md) — insieme, è sufficiente per
-gestire una complessità reale. Vedi [Esempio base per ala
-fissa](../tutorials/basic-fixed-wing.md) per l'applicazione delle fasi di volo a
-un modello reale.
+Le Fasi di volo offrono un'incredibile flessibilità alla configurazione di un modello, perché permettono di impostare i modelli per compiti specifici o comportamenti di volo selezionabili tramite interruttore. Ad esempio, gli alianti possono essere impostati per avere modalità selezionabili come decollo, Crociera, Velocità e Termica. Gli aerei a motore possono avere Fasi di volo per il volo di precisione normale, il decollo e l'atterraggio con i flap aperti a metà o al massimo. Gli elicotteri hanno modalità come Normal per la messa a punto e il decollo/atterraggio, Idle Up 1 per il volo acrobatico e Idle Up 2 forse per il 3D.
 
-Per impostazione predefinita non è definita alcuna fase di volo. Tocca la fase
-di volo predefinita e seleziona **Modifica** per rinominarla, oppure
-**Aggiungi** per crearne una nuova — fino a un massimo di 20.
+Le Fasi di volo eliminano gran parte dell'onere di commutazione e regolazione del pilota.
+
+La grande forza delle Fasi di volo è che supportano trim indipendenti e possono essere utilizzate anche per attivare Vars e Mix. Insieme, queste caratteristiche consentono una grande flessibilità. Consulta l'[Introduzione alle Fasi di volo ](../tutorials/initial-radio-setup.md)nella sezione Tutorial per vedere esempi di applicazione di queste funzioni.
+
+![](../assets/model-fm.png)
+
+La Fase di volo predefinita rimane inattiva fino alla sua configurazione. Tocca il pulsante “+” per definire una nuova Fase di volo. È possibile definire fino a 20 Fasi di volo.
+
+![](../assets/model-fm-form.png)
 
 ## Nome
 
-Un nome descrittivo — Crociera, Velocità, Termica, Decollo, Atterraggio o
-qualsiasi altro sia appropriato.
+Permette di dare un nome alla fase di volo.
 
 ## Condizione attiva
 
-![Scheda della fase di volo](../assets/model-fm-form.png)
+Quando si aggiunge una fase di volo, la condizione attiva predefinita è inattiva, cioè "---". Le Fasi di volo possono essere controllate da posizioni di interruttori o pulsanti, da interruttori di funzione, da interruttori logici, da un evento di sistema come il taglio o il mantenimento del Gas - Throttle o da posizioni di trim.
 
-Una nuova fase di volo è inizialmente inattiva (`---`). Una volta impostata, può
-essere condizionata scegliendo tra posizioni di interruttori o pulsanti,
-interruttori di funzione, interruttori logici, un evento di sistema come il
-taglio o il mantenimento del Gas - Throttle, oppure le posizioni dei trim.
+Nota che la fase di volo predefinita non ha un parametro "Condizione attiva", perché è la fase di volo che è sempre attiva quando nessun'altra fase di volo è attiva. La prima fase di volo che ha l'interruttore acceso è quella attiva. Si noti che solo una fase di volo è attiva alla volta.
 
-La fase di volo **predefinita** non ha alcuna condizione attiva — è quella
-attiva ogni volta che nessun'altra condizione di fase di volo risulta vera. È
-sempre attiva una sola fase di volo alla volta: la prima (in ordine di priorità)
-la cui condizione è vera in quel momento. La fase di volo attiva è indicata in
-grassetto.
+La fase di volo attiva è indicata in grassetto.
 
-!!! warning "Aggiungere una fase di volo a un modello esistente"
-    Una fase di volo appena aggiunta è, per impostazione predefinita, attiva in
-    ogni mix che già dipende dalle fasi di volo — verifica che ciascuno di questi
-    mix continui a comportarsi correttamente, in particolare un mix **Blocco**
-    che blocca un canale su una specifica fase di volo.
+## Dissolvenza in entrata e in uscita
 
-## Dissolvenza in ingresso e in uscita
+I tempi assegnati per una transizione fluida tra le Fasi di volo. L'esempio mostra un secondo assegnato a ciascuna modalità. Tieni presente che la dissolvenza in entrata e in uscita della fase di volo funziona solo se il mix dipende dalla Fase di volo.
 
-Tempi di transizione per passare in modo graduale da una fase di volo all'altra
-(ad esempio 1 secondo in ciascuna direzione) — hanno effetto solo sui mix che
-dipendono a loro volta dalle fasi di volo.
+![](../assets/model-fm-0to3.png)
 
-## Gestione delle fasi di volo
+Una volta programmate, le Fasi di volo selezionate vengono visualizzate nei mix. È possibile programmare fino a 100 Fasi di volo. Come la maggior parte delle funzioni di ETHOS, l'utente può programmare nomi di Fasi di volo con testo descrittivo come Crociera, Velocità, Termica o Normale, Decollo, Atterraggio.
 
-![Sposta fase di volo](../assets/model-fm-move.png)
-![Selezione per lo spostamento](../assets/model-fm-move-select.png)
-![Fasi 0-3](../assets/model-fm-0to3.png)
+Quando si aggiunge una nuova fase di volo a un modello, tutti i mix che utilizzano le Fasi di volo devono essere controllati per verificarne il corretto funzionamento, perché la nuova fase di volo sarà attiva di default in tutti i mix che utilizzano le Fasi di volo. Questo è un problema, ad esempio, quando si utilizza un mix Lock per bloccare un canale specifico in una specifica FM.
 
-Tocca una fase di volo per **Modifica**, **Aggiungi**, **Clona** o **Cancella**.
-Una fase di volo **clonata** eredita le impostazioni della fase di origine in
-ogni mix che utilizza le fasi di volo — stesso comportamento, stesso stato
-attivo/inattivo — per questo il clone viene aggiunto, per impostazione
-predefinita, come ultima fase di volo, in modo da non interferire con quelle
-esistenti. **Muovi** modifica la priorità di una fase di volo: la priorità segue
-l'ordine crescente e (come indicato sopra) la prima la cui condizione è vera è
-quella attiva.
+## Gestione della Fase di volo
+
+![](../assets/model-fm-move-select.png)
+
+Tocca una fase di volo per visualizzare un menu che ti consente di modificare, spostare, clonare o eliminare le Fasi di volo. È possibile aggiungere nuove Fasi di volo toccando il pulsante “+” nell'intestazione.
+
+Una fase di volo clonata erediterà le impostazioni della fase di volo del genitore nei mix, quindi i mix si comporteranno allo stesso modo e saranno attivi (o meno) quando la fase di volo clonata è attiva. Il nuovo clone deve essere aggiunto come ultima FM in modo che non possa interferire con nessuna FM esistente.
+
+![](../assets/model-fm-move.png)
+
+Puoi utilizzare l'opzione "Sposta" per cambiare la priorità di una fase di volo. La priorità delle Fasi di volo è in ordine crescente e la prima che ha l'interruttore acceso è quella attiva.

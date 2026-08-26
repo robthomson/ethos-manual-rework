@@ -1,108 +1,145 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
-
 # Curve
 
-![Tipi di curva](../assets/model-curves-type.png)
+![](../assets/model-icon-curves.png)
 
-Curve di risposta riutilizzabili per i [Mix](mixes.md#anatomy-of-a-mix) o le
-[Uscite](outputs.md#editing-a-channel) — l'Expo integrato è disponibile
-direttamente in entrambi, ma tutto ciò che è più elaborato si definisce qui
-(oppure tramite **Aggiungi curva**, raggiungibile direttamente da entrambe le
-schermate di modifica). Sono disponibili fino a 50 curve; per impostazione
-predefinita non ne esiste nessuna (l'Expo resta comunque sempre integrato).
-Aggiungine una con **+**; tocca una curva esistente per
-**Modifica**/**Muovi**/**Copia-incolla**/**Clona**/**Cancella**.
+Le curve possono essere utilizzate per modificare la risposta dei controlli nei Mix o nelle Uscite. Mentre la curva Expo standard è disponibile direttamente in queste sezioni, questa sezione è utilizzata per definire le curve personalizzate che potrebbero essere necessarie. La funzione "Aggiungi curva" può essere raggiunta anche direttamente dalle schermate di modifica dei Mix e delle Uscite.
 
-![Aggiungi curva](../assets/model-curves-add.png)
+Sono disponibili 50 curve.
 
-## Tipi di curva
+![](../assets/model-curves-add.png)
 
-- **Expo** — valore predefinito 40; un valore positivo ammorbidisce la risposta
-  intorno al centro, mentre un valore negativo la rende più netta. Ammorbidire
-  la risposta a metà corsa dello stick aiuta a evitare comandi eccessivi,
-  soprattutto per i piloti meno esperti.
+Non ci sono curve predefinite (ad eccezione di Expo che è integrata). Tocca il pulsante "+" per aggiungere una nuova curva.
 
-  ![Expo](../assets/model-curves-expo.png)
 
-- **Funzione** — un piccolo insieme di forme matematiche predefinite:
 
-  ![Tipi di funzione](../assets/model-curves-fn-types.png)
+Toccando un elenco di curve si apre una finestra di dialogo che ti permette di modificare, spostare, copiare, clonare o eliminare la curva evidenziata. Puoi anche aggiungere un'altra curva.
 
-  - **x > 0** — lascia passare la sorgente invariata quando è positiva;
-    restituisce 0 quando è negativa.
+![](../assets/model-curves-edit.png)
 
-    ![x > 0](../assets/model-curves-fn-xgt0.png)
+La schermata iniziale ti permette di dare un nome alla tua curva e di selezionare il tipo di curva.
 
-  - **x < 0** — l'opposto speculare: lascia passare quando è negativa, 0 quando
-    è positiva.
+![](../assets/model-curves-type.png)
 
-    ![x < 0](../assets/model-curves-fn-xlt0.png)
+I tipi di curva disponibili sono:
 
-  - **|x|** — lascia passare la sorgente come valore assoluto (sempre
-    positivo).
+## Expo
 
-    ![|x|](../assets/model-curves-fn-barx.png)
+La curva esponenziale predefinita ha un valore pari a 40.
 
-  - **f > 0** — restituisce 100% quando la sorgente è positiva, 0 quando è
-    negativa (una commutazione netta, non un passaggio diretto).
+![](../assets/model-curves-expo.png)
 
-    ![f > 0](../assets/model-curves-fn-fgt0.png)
+Un valore positivo ammorbidisce la risposta intorno allo 0, mentre un valore negativo la rende più acuta. Ammorbidire la risposta intorno allo stick medio aiuta a non controllare eccessivamente il modello, soprattutto per i principianti.
 
-  - **f < 0** — restituisce −100% quando è negativa, 0 quando è positiva.
+## Funzione
 
-    ![f < 0](../assets/model-curves-fn-flt0.png)
+![](../assets/model-curves-fn-types.png)
 
-  - **|f|** — restituisce −100% quando è negativa, +100% quando è positiva.
+Sono disponibili le seguenti curve di funzioni matematiche:
 
-    ![|f|](../assets/model-curves-fn-barf.png)
+x > 0
 
-  Ogni tipo di curva — Funzione inclusa — dispone anche di un **Offset**, che la
-  sposta verso l'alto o verso il basso sull'asse Y (precisione di un decimale,
-  come per i valori Y in generale):
+![](../assets/model-curves-fn-xgt0.png)
 
-  ![Offset della funzione](../assets/model-curves-fn-xgt0-offset.png)
+Se il valore della sorgente è positivo, l'uscita della curva segue la sorgente.
 
-- **Personalizzata** — una curva definita per punti, 5 punti per impostazione
-  predefinita, fino a un massimo di 21.
+Se il valore della sorgente è negativo, l'uscita della curva è pari a 0.
 
-  ![Curva personalizzata a 5 punti](../assets/model-curves-custom5.png)
+Offset
 
-  - **Smooth** — traccia una curva morbida attraverso tutti i punti anziché
-    segmenti rettilinei tra un punto e l'altro.
+![](../assets/model-curves-fn-xgt0-offset.png)
 
-    ![Curva smussata](../assets/model-curves-custom5-2-smooth.png)
+Nota che tutte le curve possono avere un offset positivo o negativo che sposterà la curva verso l'alto o verso il basso sull'asse Y. Gli offset delle curve e il valore Y hanno una precisione di un decimale.
 
-  - **Modalità semplice** — **On** limita la modifica alle sole coordinate Y
-    equidistanti (la X è fissa); **Off** consente di modificare sia X sia Y per
-    ogni punto, tranne gli estremi −100%/+100%, che restano bloccati poiché la
-    curva deve sempre coprire l'intera escursione del segnale.
+x < 0
 
-    ![Modalità semplice disattivata](../assets/model-curves-custom-easy-off.png)
+![](../assets/model-curves-fn-xlt0.png)
 
-  **Comandi dell'editor** (stesso schema dell'[editor della curva di
-  bilanciamento delle Uscite](outputs.md#balance-channels)):
+Se il valore della sorgente è negativo, l'uscita della curva segue la sorgente.
 
-  - **Sorgente** — per impostazione predefinita la sorgente (o le sorgenti) di
-    mix della curva stessa, oppure **Ingresso analogico automatico** per
-    rilevare il primo stick/slider/potenziometro mosso.
-  - Aggancio al punto più vicino con l'encoder rotativo e un comando **Blocco**
-    per congelare gli ingressi mentre si osserva il movimento risultante della
-    superficie di comando.
-  - Un cursore in tempo reale mostra il valore d'ingresso corrente che pilota la
-    curva, per aiutare ad allinearlo a un punto prima della regolazione.
+Se il valore della sorgente è positivo, l'uscita della curva è pari a 0.
 
-## Pilotare una curva da una Var
+|x|
 
-Sia l'**Offset** di una curva Funzione sia un singolo punto di una curva
-**Personalizzata** possono essere pilotati da una [Var](variables.md) anziché da
-un valore fisso — e quella Var può a sua volta essere regolata in volo tramite un
-trim riutilizzato allo scopo:
+![](../assets/model-curves-fn-barx.png)
 
-![Offset della funzione da una Var](../assets/model-curves-fn-offset-var.png)
-![Punto di curva personalizzata da una Var](../assets/model-curves-custom-with-var.png)
+L'uscita della curva segue la sorgente, ma è sempre positiva (chiamata anche "valore assoluto").
 
-Vedi [Variabili](variables.md) e [Guida pratica: curva di compensazione
-regolabile in volo](../how-to/in-flight-compensation-curve.md) per un esempio
-completo e dettagliato di questo schema.
+f > 0
+
+![](../assets/model-curves-fn-fgt0.png)
+
+Se il valore della sorgente è negativo, l'uscita della curva è pari a 0.
+
+Se il valore della sorgente è positivo, l'uscita della curva è del 100%.
+
+f < 0
+
+![](../assets/model-curves-fn-flt0.png)
+
+Se il valore della sorgente è negativo, l'uscita della curva è -100%.
+
+Se il valore della sorgente è positivo, l'uscita della curva è pari a 0.
+
+|f|
+
+![](../assets/model-curves-fn-barf.png)
+
+Se il valore della sorgente è negativo, l'uscita della curva è -100%.
+
+Se il valore della sorgente è positivo, l'uscita della curva è +100%.
+
+## Ad Hoc - Personalizzato
+
+Conteggio dei punti
+
+![](../assets/model-curves-custom5.png)
+
+La curva personalizzata predefinita ha 5 punti. Puoi avere fino a 21 punti sulla tua curva.
+
+- Pulsanti del menu
+
+![](../assets/Pictures/1000000000000018000000181B9B646A.png) Possono essere utilizzate le sorgenti configurate nei mix della curva o, opzionalmente, qualsiasi altro ingresso analogico comodo. Se selezioni l'opzione "Ingresso analogico automatico", il primo stick, cursore o potenziometro che sposti sarà usato come sorgente per X.
+
+Si prega di notare che questo pulsante di input appare solo se la curva è collegata a un mix.
+
+![](../assets/Pictures/10000000000000280000001EF06CB86B.png)Quando è selezionato, il punto della curva più vicino sull'asse X verrà automaticamente selezionato per la regolazione con l'encoder rotativo.
+
+L'ingresso deve essere regolato per allineare il valore X con un punto della curva prima di effettuare la regolazione.
+
+![](../assets/Pictures/100000000000001500000019F279C5CD.png) Toccando questa icona o premendo il tasto ENTER mentre sei in modalità di modifica del grafico, la modalità di blocco viene attivata o disattivata. Quando è attivata, tutti gli ingressi sono bloccati in modo da poter rilasciare l'input dello stick, consentendoti di osservare le superfici di controllo mentre regoli la curva.
+
+Per facilitare l'impostazione, il cursore sarà attivo e mostrerà il valore dell'ingresso che sta guidando la curva.
+
+![](../assets/model-curves-custom5-2.png)
+
+Gli offset delle curve e il valore Y hanno una precisione di un decimale.
+
+Liscio
+
+![](../assets/model-curves-custom5-2-smooth.png)
+
+Se abilitato, viene creata una curva morbida attraverso tutti i punti.
+
+Modalità facile = On
+
+La modalità Easy ha valori fissi equidistanti sull'asse X e permette di programmare solo le coordinate Y della curva.
+
+Modalità facile = Off
+
+![](../assets/model-curves-custom-easy-off.png)
+
+Punti
+
+Con la modalità "Facile" disattivata, è possibile configurare sia le coordinate X che Y (vedi esempio sopra).  Nota che le coordinate X -100% e +100% per i punti finali della curva non possono essere modificate, perché la curva deve coprire l'intero intervallo del segnale.
+
+## Variazione ***dell'offset*** della curva di funzione in volo
+
+![](../assets/model-curves-fn-offset-var.png)
+
+L'esempio precedente mostra il parametro Offset di una curva di tipo "Function" guidata da una Var, che potrebbe essere regolata in volo da un Trim riassegnato.
+
+## Variazione del punto di curva in volo
+
+![](../assets/model-curves-custom-with-var.png)
+
+In questo esempio il punto centrale della curva è guidato da una Var, che potrebbe essere regolata in volo da un Trim riassegnato. Per maggiori dettagli, consulta la sezione [VAR](variables.md).

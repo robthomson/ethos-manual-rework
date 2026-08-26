@@ -1,25 +1,27 @@
----
-translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
----
+# Modalità di connessione USB al PC
 
-# Modalità di connessione USB
+## Modalità Radio Spenta
 
-![Menu USB](../assets/usbmenu.png)
+- collegare la radio spenta a un PC tramite un cavo USB è la modalità DFU per il flashing del bootloader.
 
-Ciò che avviene collegando la radio a un PC tramite USB dipende da come era alimentata la radio al momento del collegamento.
+## Modalità Bootloader
 
-## Modalità a radio spenta
+- La radio viene messa in modalità bootloader accendendo la radio e tenendo premuto il tasto enter. Sullo schermo verrà visualizzato il messaggio di stato "Bootloader".
 
-Collegando la radio a un PC tramite USB **mentre è spenta**, questa entra in modalità DFU, utilizzata per eseguire il flashing del bootloader stesso.
+- La radio può quindi essere collegata a un PC tramite un cavo dati USB. Il messaggio di stato cambierà in "USB Plugged" e il PC dovrebbe visualizzare due unità esterne collegate. La prima è la memoria flash della radio, mentre la seconda è il contenuto della scheda SD o eMMC.
 
-## Modalità bootloader {: #bootloader-mode }
+- Questa modalità è utilizzata per leggere e scrivere file sulla scheda SD o eMMC e/o sulla memoria flash della radio.
 
-Accendi la radio **tenendo premuto `ENT`** per avviarla in modalità bootloader (lo schermo mostra "Bootloader"). Collegando ora l'USB, lo stato cambia in "USB Plugged" e il PC monta **due** unità: la memoria flash interna della radio e il contenuto della SD card/eMMC. Questa è la modalità che permette di leggere e scrivere i file direttamente in entrambe le aree di memoria ed è anche il modo in cui [Ethos Suite](../ethos-suite/index.md) aggiorna il firmware della radio: consulta la sezione Bootloader Mode di Ethos Suite.
+- Questa modalità può essere utilizzata anche per collegarsi a FrSky Suite per aggiornare la radio. Fai riferimento alla [Modalità Bootloader ](#Bootloader_Mode)nella sezione FrSky Suite.
 
-## Modalità a radio accesa
+## Modalità Radio Accesa
 
-Collegando l'USB mentre la radio è **accesa normalmente** compare un menu di selezione della modalità:
+- Se la radio è collegata a un PC tramite un cavo dati USB mentre è accesa, viene visualizzata la seguente finestra di dialogo:
 
-- **Joystick** — la radio viene riconosciuta come joystick USB HID, per utilizzare i simulatori di volo su PC.
-- **FrSky Suite** — porta la radio in "modalità Ethos" per la comunicazione con [Ethos Suite](../ethos-suite/index.md).
-- **Serial** — invia le tracce di debug Lua tramite USB-seriale (115200 bps). La scheda Lua Development Tools di Ethos Suite dispone di un terminale integrato per visualizzarle; su Windows può essere necessario il driver Virtual COM Port.
+![](../assets/usbmenu.png)
+
+- In modalità joystick la radio può essere configurata per controllare i simulatori RC.
+
+- In modalità FrSky Suite la radio entrerà in "modalità Ethos" per comunicare con FrSky Suite. Fai riferimento alla [Modalità Ethos ](#Ethos_Mode)nella sezione FrSky Suite.
+
+- In modalità Seriale le tracce di debug Lua vengono inviate a USB-Seriale, se presente. La scheda Strumenti di sviluppo Lua di FrSky Suite ha una finestra di terminale integrata per visualizzare le tracce. Il baud rate è di 115200bps. Un driver per la porta COM virtuale di Windows può essere trovato [qui](https://www.st.com/en/development-tools/stsw-stm32102.html).

@@ -1,38 +1,41 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Panoramica
 
-# Configurazione di sistema
+![](../assets/system-icon-filemanager.png)
 
-La Configurazione di sistema imposta le parti della radio comuni a tutti i
-modelli — vi si accede tramite la scheda **Ingranaggio** nella barra inferiore
-(oppure con il tasto `SYS`). Tutto ciò che riguarda un singolo modello si trova
-invece in [Configurazione del modello](../model-setup/index.md) (la scheda
-**Aeroplano** / tasto `MDL`) — in particolare, il modulo RF utilizzato da un
-modello (interno o esterno) è un'impostazione per singolo modello, descritta in
-[Sistema RF](../model-setup/rf-system.md) e non qui.
+All'interno di System Setup, tocca un riquadro per configurare la sezione selezionata oppure usa il selettore rotante per spostare l'evidenziazione sul riquadro desiderato, quindi premi Invio. Puoi scorrere il dito verso sinistra per accedere alla seconda pagina di funzioni o utilizzare il selettore rotante per spostare l'evidenziazione sulla seconda pagina. In alternativa, puoi usare il tasto Pagina per passare da una pagina all'altra.
 
-Tocca un riquadro per aprirlo, oppure sposta l'evidenziazione con il selettore
-rotativo e premi `ENT`. Esiste una seconda pagina di riquadri — scorri verso
-sinistra, sposta l'evidenziazione su di essa oppure premi `PAGE` per cambiare
-pagina.
+## Gestore di file
 
-- [File Manager](file-manager.md) — file e cartelle, e aggiornamento del
-  firmware del modulo RF interno, dei dispositivi S.Port, OTA e dei moduli
-  esterni.
-- [Avvisi](alerts.md) — modalità silenziosa, batteria della radio e batteria
-  RTC, conflitto tra sensori e avviso di inattività.
-- [Data e ora](date-and-time.md) — l'orologio di sistema e la sua
-  visualizzazione.
-- [Generale](general.md) — lingua, display, audio, vario, feedback aptico, barra
-  degli strumenti superiore, selezione del modello all'accensione e preselezione
-  della modalità USB.
-- [Batteria](battery.md) — gestione della batteria della radio.
-- [Hardware](hardware.md) — controllo e calibrazione dei comandi fisici,
-  definizione dei tipi di interruttore e mappa del tasto Home.
-- [Comandi](controls.md) — modo di pilotaggio degli stick e ordine predefinito
-  dei canali (indicato come "Sticks" nel menu).
-- [Dispositivi](devices.md) — sensori, ricevitori, gas suite, servi e
-  trasmettitori video (indicato come "Configura Dispositivi" nel menu).
-- [Informazioni](information.md) — versione del firmware, tipi di gimbal,
-  informazioni sul modulo RF, tempo di funzionamento e log degli errori.
+Il file manager serve a gestire i file e ad accedere al firmware flash del modulo RF interno, della porta S.Port esterna, dei moduli OTA (Over The Air) ed esterni.
+
+## Avvisi
+
+Configurazione della modalità silenziosa, delle tensioni delle batterie della radio e dell'RTC, dei conflitti tra sensori e degli avvisi di inattività.
+
+## Data e ora
+
+Configurazione dell'orologio di sistema e delle opzioni di visualizzazione dell'ora.
+
+## Generale
+
+Per configurare lo stile del menu, la lingua del sistema e gli attributi del display LCD come la luminosità e la retroilluminazione, nonché le modalità e le impostazioni audio, vario e aptico. Inoltre, è possibile configurare le opzioni della barra degli strumenti superiore, la selezione del modello all'accensione e la preselezione della modalità USB.
+
+## Batteria
+
+Configurazione delle impostazioni di gestione della batteria.
+
+## Hardware
+
+Questa sezione permette di controllare i dispositivi di input fisici hardware, la calibrazione degli analogici e del giroscopio. Permette inoltre di modificare la definizione del tipo di interruttore e di definire la mappa del "tasto home".
+
+## Stick
+
+Configurazione della modalità stick e dell'ordine predefinito dei canali. I 4 comandi degli stick possono anche essere rinominati.
+
+## Configurazione del dispositivo
+
+Strumenti per la configurazione di dispositivi come sensori, ricevitori, la suite di gas, servocomandi e trasmettitori video.
+
+## Info
+
+Informazioni sul sistema: versione del firmware, tipi di gimbal e moduli RF.
