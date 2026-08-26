@@ -976,6 +976,7 @@ extra:
     - en
     - de
     - es
+    - it
 
 extra_css:
   - stylesheets/extra.css
