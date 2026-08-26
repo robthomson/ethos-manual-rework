@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-widget-layout" class="md-skip">
+        <a href="#structure-of-a-lua-widget" class="md-skip">
           Skip to content
         </a>
       
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Overview
   
 
     
@@ -1247,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Model Setup
+    Overview
   
 
     
@@ -1737,6 +1737,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model-setup/rearranging-the-model-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rearranging the Model Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1808,7 +1836,7 @@
   <span class="md-ellipsis">
     
   
-    Displays
+    Configure Screens
   
 
     
@@ -1829,14 +1857,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../displays/additional-displays/" class="md-nav__link">
+      <a href="../../displays/configuring-the-main-screen/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Additional Displays
+    Configuring the Main Screen
   
 
     
@@ -1857,14 +1885,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../displays/custom-widgets/" class="md-nav__link">
+      <a href="../../displays/standard-widgets/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Custom Widgets
+    Standard Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-additional-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Additional Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/managing-main-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Main Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-custom-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Custom Widgets
   
 
     
@@ -2096,6 +2208,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Widget Layout
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2112,6 +2242,207 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initfunction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init(function)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemregisterwidget-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        system.registerWidget() method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="system.registerWidget() method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        key (string)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name-string-or-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        name (string or function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroy-function-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        destroy (function, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configure (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-function-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        build (function, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wakeup-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wakeup (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        event (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paint-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        paint (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menu-function-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        menu (function, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        write (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-boolean-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        persistent (boolean, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title-boolean-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title (boolean, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2217,7 +2548,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorials
+    Programming Tutorials
   
 
     
@@ -2856,14 +3187,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio-notes/x18s/" class="md-nav__link">
+      <a href="../../radio-notes/x20-x20s/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    X18S
+    X20/X20S
   
 
     
@@ -2884,14 +3215,182 @@
   
   
     <li class="md-nav__item">
-      <a href="../../radio-notes/x20-pro-and-aw/" class="md-nav__link">
+      <a href="../../radio-notes/x20-pro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    X20 Pro / X20 Pro AW
+    X20 Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro-aw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro AW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20r-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20R/RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x18-x18se/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X18/X18SE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/xe-xes-xe-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XE/XES/XE RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x14-x14rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X14/X14RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/twin-xlite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TWIN XLite
   
 
     
@@ -2976,7 +3475,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3061,6 +3560,34 @@
     
   
     Ethos Web Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/command-line-operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Operation
   
 
     
@@ -3411,6 +3938,196 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initfunction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init(function)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemregisterwidget-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        system.registerWidget() method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="system.registerWidget() method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        key (string)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name-string-or-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        name (string or function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        create (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroy-function-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        destroy (function, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configure (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-function-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        build (function, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wakeup-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        wakeup (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        event (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paint-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        paint (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menu-function-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        menu (function, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        read (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        write (function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-boolean-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        persistent (boolean, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title-boolean-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title (boolean, optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3434,71 +4151,57 @@
   
 
 
-<h1 id="basic-widget-layout">Basic Widget Layout<a class="headerlink" href="#basic-widget-layout" title="Permanent link">&para;</a></h1>
-<p>A custom Lua widget (see <a href="../../displays/custom-widgets/">Custom Widgets</a>
-for installing one) is built from a small set of named fields/handlers:</p>
-<ul>
-<li><strong><code>key</code></strong> <em>(string)</em> — a unique identifier for the widget.</li>
-<li><strong><code>name</code></strong> <em>(string or function)</em> — the widget's display name. Either a
-  plain string, or a function taking no arguments and returning one —
-  useful for a name that varies by locale.</li>
-<li><strong><code>create</code></strong> <em>(function)</em> — called once when the widget is created,
-  taking no arguments. Returns a <strong>widget table</strong>, which is then passed
-  to every other handler below — initialize your state here and store it
-  in that table.</li>
-<li><strong><code>destroy</code></strong> <em>(function, optional)</em> — called when the widget is
-  deleted.</li>
-<li><strong><code>configure</code></strong> <em>(function)</em> — called when the user opens the widget's
-  configuration screen, taking the widget table from <code>create()</code> as its
-  only argument, returning nothing. Build the configuration form here and
-  use it to update values in the widget table.</li>
-<li><strong><code>build</code></strong> <em>(function, optional)</em> — called on every layout change once
-  the widget is placed on a screen, and also right after creation and
-  configuration.</li>
-<li><strong><code>wakeup</code></strong> <em>(function)</em> — called every loop (roughly every 50ms),
-  taking the widget table, returning nothing. Check here whether anything
-  changed; if so, call <code>invalidateWindow()</code> to trigger a repaint via
-  <code>paint()</code>. Keep this handler fast — ideally doing nothing at all most
-  of the time it's called.</li>
-<li><strong><code>event</code></strong> <em>(function)</em> — called when the widget receives an event;
-  Ethos routes arbitrary events to a widget through this handler.</li>
-<li><strong><code>paint</code></strong> <em>(function)</em> — draws the widget, taking the widget table,
-  returning nothing. Called automatically whenever <code>lcd.invalidate()</code> has
-  fired. Can be comparatively slow, but should still only actually redraw
-  when something's changed.</li>
-<li><strong><code>menu</code></strong> <em>(function, optional)</em> — called when the widget's contextual
-  menu is built, to add extra entries beyond the standard ones. Returns a
-  table of <code>{name, function}</code> pairs.</li>
-<li><strong><code>read</code></strong> <em>(function, optional)</em> — reads persisted widget storage.</li>
-<li><strong><code>write</code></strong> <em>(function, optional)</em> — writes persisted widget storage.</li>
-<li><strong><code>persistent</code></strong> <em>(boolean, optional)</em> — enables persistent data
-  storage for the widget.</li>
-<li><strong><code>title</code></strong> <em>(boolean, optional)</em> — forces the widget's title on or off.</li>
-<li><strong><code>init</code></strong> <em>(function)</em> — registers the widget and its callbacks with
-  Ethos. Typically the last thing in the script:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span>
-<span class="w">  </span><span class="nv">system</span><span class="p">.</span><span class="nf">registerWidget</span><span class="p">({</span>
-<span class="w">    </span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"unique"</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">create</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">create</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">configure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">configure</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">wakeup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">wakeup</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">paint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">paint</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">read</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">read</span><span class="p">,</span>
-<span class="w">    </span><span class="nv">write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">write</span><span class="p">,</span>
-<span class="w">  </span><span class="p">})</span>
-<span class="kr">end</span>
-
-<span class="kr">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">init</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div>
-<p><code>key</code> must be unique across installed widgets; the other fields tie into
-the widget's lifecycle as described above.</p>
-<p>Scripts live under <code>scripts/</code> on the SD card/eMMC, ideally organized into
-per-widget folders (see <a href="../../system-setup/file-manager/#top-level-folders">File
-Manager</a> and <a href="../example-script-locations/">Example
-Script Locations</a>). See the <em>FrSky ETHOS Lua
-Script Programming</em> thread on rcgroups for further worked examples.</p>
+<h1 id="structure-of-a-lua-widget">Structure of a Lua widget<a class="headerlink" href="#structure-of-a-lua-widget" title="Permanent link">&para;</a></h1>
+<p>All Lua scripts including widgets use handlers (aka code modules) to perform specific tasks such as background data processing, controlling/drawing the display, configuring widgets, reading or saving configurations, catching and evaluating events, etc.</p>
+<h2 id="initfunction">init(function)<a class="headerlink" href="#initfunction" title="Permanent link">&para;</a></h2>
+<p>The init handler function is used to register the widget during transmitter startup. It uses the system.registerWidget() method to declare the widget. It also specifies which additional handlers are used in the script.</p>
+<p>An example of an init handler for a widget might be:</p>
+<p>local function init()</p>
+<p>system.registerWidget({</p>
+<p>key = "unique",</p>
+<p>name = “Example”,</p>
+<p>create = create,</p>
+<p>configure = configure,</p>
+<p>wakeup = wakeup,</p>
+<p>paint = paint,</p>
+<p>read = read,</p>
+<p>write = write,</p>
+<p>})</p>
+<p>end</p>
+<p>Note that 'key' is a unique identifier for your widget. The various functions listed are used in the widget lifecycle.</p>
+<h2 id="systemregisterwidget-method">system.registerWidget() method<a class="headerlink" href="#systemregisterwidget-method" title="Permanent link">&para;</a></h2>
+<p>The system.registerWidget() method may have the following parameters:</p>
+<h3 id="key-string">key (string)<a class="headerlink" href="#key-string" title="Permanent link">&para;</a></h3>
+<p>The widget must have a unique key of not more than 7 characters.</p>
+<h3 id="name-string-or-function">name (string or function)<a class="headerlink" href="#name-string-or-function" title="Permanent link">&para;</a></h3>
+<p>The name function takes no arguments and returns the widget name as a string. The name can simply be a string, or the result of a function. For example, the name can be in a different language depending on locale.</p>
+<h3 id="create-function">create (function)<a class="headerlink" href="#create-function" title="Permanent link">&para;</a></h3>
+<p>The create handler function is called on widget creation. It takes no arguments and will return the widget table which is then later passed to all functions. Initialize your variables here and store the state in the returned widget table.</p>
+<h3 id="destroy-function-optional">destroy (function, optional)<a class="headerlink" href="#destroy-function-optional" title="Permanent link">&para;</a></h3>
+<p>The destroy handler is called on widget deletion.</p>
+<h3 id="configure-function">configure (function)<a class="headerlink" href="#configure-function" title="Permanent link">&para;</a></h3>
+<p>The configure handler function is called when the user enters widget configuration. It takes the widget table returned by create() as its only argument and returns nothing. It is called when the user enters the widget configuration. Here you can create the configuration form and use it to change values in the widget table.</p>
+<h3 id="build-function-optional">build (function, optional)<a class="headerlink" href="#build-function-optional" title="Permanent link">&para;</a></h3>
+<p>The build handler called on each layout change when the widget is built in the Home screen, and after creation and configuration.</p>
+<h3 id="wakeup-function">wakeup (function)<a class="headerlink" href="#wakeup-function" title="Permanent link">&para;</a></h3>
+<p>The wakeup handler function is called during each loop, i.e. every 50ms. It takes the widget table as its only argument and returns nothing.</p>
+<p>The wakeup() should check if anything has changed. If yes, a refresh is needed so the invalidateWindow() function should be called. This will cause the paint() function to be called. You should make sure this function is very fast, ideally doing nothing most of the time.</p>
+<h3 id="event-function">event (function)<a class="headerlink" href="#event-function" title="Permanent link">&para;</a></h3>
+<p>The event handler function called when an event is received. ETHOS provides the ability to catch any event in a widget, through this event function.</p>
+<h3 id="paint-function">paint (function)<a class="headerlink" href="#paint-function" title="Permanent link">&para;</a></h3>
+<p>The paint function ‘draws’ the widget. It takes the widget table as its only argument and returns nothing. It should be called when a refresh is needed, and is automatically called whenever lcd.invalidate() has been called. It can be slow, so only paint if something has changed.</p>
+<h3 id="menu-function-optional">menu (function, optional)<a class="headerlink" href="#menu-function-optional" title="Permanent link">&para;</a></h3>
+<p>The optional menu handler is called when a contextual menu is created, to allow adding more options to the menu, The handler should return a table of pairs { name, function }.</p>
+<h3 id="read-function">read (function)<a class="headerlink" href="#read-function" title="Permanent link">&para;</a></h3>
+<p>Optional read handler. In ETHOS it is possible to use the storage as the user wishes.</p>
+<h3 id="write-function">write (function)<a class="headerlink" href="#write-function" title="Permanent link">&para;</a></h3>
+<p>Optional write handler. In ETHOS it is possible to use the storage as the user wishes.</p>
+<h3 id="persistent-boolean-optional">persistent (boolean, optional)<a class="headerlink" href="#persistent-boolean-optional" title="Permanent link">&para;</a></h3>
+<p>Optional persistent data handler.</p>
+<h3 id="title-boolean-optional">title (boolean, optional)<a class="headerlink" href="#title-boolean-optional" title="Permanent link">&para;</a></h3>
+<p>Optional title handler. The widget title is forced ON / OFF.</p>
+<p>Lua scripts are stored in the scripts/ folder on the SD card or eMMC, preferably organized in folders.</p>
+<p>Please refer to the rcgroups ‘FrSky ETHOS Lua Script Programming’ thread for more information.</p>
 
 
 
