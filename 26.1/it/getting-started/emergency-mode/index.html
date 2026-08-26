@@ -827,10 +827,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#verifica-della-modalita-di-emergenza" class="md-nav__link">
+  <a href="#test-della-modalita-di-emergenza" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifica della modalità di emergenza
+        Test della modalità di emergenza
       
     </span>
   </a>
@@ -917,7 +917,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1254,7 +1254,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1843,7 +1843,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2321,7 +2321,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2939,7 +2939,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3248,7 +3248,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3718,10 +3718,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#verifica-della-modalita-di-emergenza" class="md-nav__link">
+  <a href="#test-della-modalita-di-emergenza" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifica della modalità di emergenza
+        Test della modalità di emergenza
       
     </span>
   </a>
@@ -3754,20 +3754,23 @@
 
 
 <h1 id="modalita-di-emergenza">Modalità di emergenza<a class="headerlink" href="#modalita-di-emergenza" title="Permanent link">&para;</a></h1>
-<p>La modalità di emergenza è la risposta di Ethos a un guasto imprevisto di basso livello, come un reset del watchdog. Il watchdog è un timer che viene continuamente riavviato da varie parti del sistema; se qualcosa ne impedisce il riavvio, il timer scade e forza un reset hardware. La modalità di emergenza riavvia quindi la radio il più rapidamente possibile, saltando tutti i normali controlli di avvio, in modo che il controllo del modello venga restituito con il minimo ritardo. In questa modalità la SD card/eMMC non viene utilizzata in alcun modo.</p>
-<p>Sono disponibili solo le funzioni essenziali necessarie a mantenere il controllo del modello, nessuna delle funzioni di livello superiore. Lo schermo rimane vuoto, ad eccezione della scritta <strong>EMERGENCY MODE</strong>, accompagnata da un segnale acustico di 300 ms ripetuto ogni 3 secondi; gli avvisi vocali, gli script Lua, la registrazione dei dati e la telemetria si interrompono. Se ciò accade in volo, atterra il prima possibile.</p>
-<p>La causa più frequente è un guasto della SD card.</p>
-<h2 id="verifica-della-modalita-di-emergenza">Verifica della modalità di emergenza<a class="headerlink" href="#verifica-della-modalita-di-emergenza" title="Permanent link">&para;</a></h2>
-<p>È possibile aggiungere uno <strong>strumento di sistema</strong> per attivare deliberatamente la modalità di emergenza a scopo di prova, in modo da non doverla scoprire per la prima volta in volo. Toccando l'icona Emergency Test viene richiesta una conferma, dopodiché la radio entra in modalità di emergenza esattamente come in caso di guasto reale.</p>
+<p>La modalità di emergenza è la risposta della radio a un evento inaspettato come un reset del watchdog. Il watchdog è un timer che viene continuamente riavviato da diverse parti di Ethos. Se un guasto di qualsiasi tipo impedisce il riavvio del timer del watchdog, questo va in tilt e causa un reset hardware della radio. In questa modalità di emergenza la radio si riavvia in modo estremamente rapido, senza i normali controlli di avvio, in modo che tu possa riprendere il controllo del tuo modello il prima possibile. In modalità di emergenza non è possibile accedere alla scheda SD o eMMC.</p>
+<p>La modalità di emergenza fornisce solo le funzioni essenziali per il controllo del modello, ma nessuna delle funzioni di alto livello. Lo schermo diventerà vuoto e visualizzerà la scritta "MODALITÀ EMERGENZA", accompagnata da un segnale acustico di 300 ms che si ripete continuamente ogni 3 secondi. Gli avvisi vocali, l'esecuzione di script, la registrazione ecc. cesseranno di funzionare. Se si verifica la modalità di emergenza, devi ovviamente atterrare il più rapidamente possibile.</p>
+<p>La causa più comune della modalità di emergenza è il guasto della scheda SD.</p>
+<h2 id="test-della-modalita-di-emergenza">Test della modalità di emergenza<a class="headerlink" href="#test-della-modalita-di-emergenza" title="Permanent link">&para;</a></h2>
+<p>In alcuni casi, può essere utile per gli utenti testare la modalità di emergenza.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0CAE58A4D.png" /></p>
+<p>È possibile aggiungere uno strumento di sistema per testare la modalità di emergenza. Tocca l'icona Test di emergenza per avviare il test.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E07840F732.png" /></p>
+<p>Una finestra di dialogo chiederà la conferma per procedere.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E0FC0300AF.png" /></p>
+<p>La radio entrerà in modalità di emergenza.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -3814,13 +3817,13 @@
         
         
           
-          <a href="../../system-setup/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Configurazione di sistema">
+          <a href="../../system-setup/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Panoramica">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Successivo
               </span>
               <div class="md-ellipsis">
-                Configurazione di sistema
+                Panoramica
               </div>
             </div>
             <div class="md-footer__button md-icon">

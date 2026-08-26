@@ -37,7 +37,7 @@
     
     
       
-        <title>Ethos Suite - Ethos Manual</title>
+        <title>FrSky Suite - Ethos Manual</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ethos-suite" class="md-skip">
+        <a href="#frsky-suite" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ethos Suite
+              FrSky Suite
             
           </span>
         </div>
@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1191,7 +1191,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1780,7 +1780,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2258,7 +2258,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2876,7 +2876,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3192,24 +3192,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ethos Suite
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3217,7 +3199,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3226,36 +3208,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Indice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Indice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#modalita-di-connessione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modalità di connessione
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3711,25 +3663,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Indice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#modalita-di-connessione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Modalità di connessione
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3753,62 +3686,13 @@
   
 
 
-<h1 id="ethos-suite">Ethos Suite<a class="headerlink" href="#ethos-suite" title="Permanent link">&para;</a></h1>
-<p>Ethos Suite è l'applicazione companion per Windows/Mac dedicata alla gestione di una radio
-che esegue Ethos, collegata tramite USB.</p>
-<p><img alt="Scheda Radio di Ethos Suite" src="../../assets/ethos-suite-radio-tab.png" /></p>
-<p>Una volta connessa, Ethos Suite può:</p>
-<ol>
-<li>Leggere il tipo di radio, l'ID e le versioni installate — firmware,
-   bootloader, modulo RF interno, file della memoria flash e file della
-   SD card/eMMC.</li>
-<li>Passare la radio dalla modalità bootloader all'esecuzione di Ethos, e viceversa.</li>
-<li>Confrontare le versioni installate con quelle correnti e aggiornarle automaticamente —
-   solo i componenti obsoleti, tutti i componenti indipendentemente dallo stato, oppure i
-   singoli componenti.</li>
-<li>Eseguire il backup dei modelli su disco tramite il <strong>Model Manager</strong>, oppure ripristinare un
-   backup precedente (necessario poiché i file dei modelli non sono retrocompatibili tra le
-   versioni del firmware).</li>
-<li>Scaricare qualsiasi firmware dal sito di download di FrSky tramite la scheda <strong>Download
-   center</strong>, e utilizzare la radio come proxy per eseguire il flash direttamente di un modulo,
-   un sensore, un servo o un ricevitore.</li>
-<li>Convertire immagini e file audio nei formati nativi di Ethos.</li>
-<li>Fornire gli <strong>strumenti di sviluppo Lua</strong> — documentazione API, script dimostrativi e un
-   terminale di debug.</li>
-<li>Eseguire il flash del bootloader della radio in modalità DFU (una connessione a radio spenta),
-   indipendentemente dal fatto che il firmware della radio sia ancora funzionante.</li>
-<li>Riparare la memoria interna delle radio X18/S, TW Lite, XE e X20 Pro/R/RS
-   tramite il <strong>Repair Tool</strong>, se la NAND non può essere letta o le impostazioni non vengono salvate.</li>
-<li>Espellere in modo corretto le unità USB della radio.</li>
-<li>Segnalare all'avvio la disponibilità di un aggiornamento della Suite stessa (che viene
-    installato all'uscita).</li>
-</ol>
-<h2 id="modalita-di-connessione">Modalità di connessione<a class="headerlink" href="#modalita-di-connessione" title="Permanent link">&para;</a></h2>
-<p>Oltre ai suoi strumenti, Suite opera in tre distinti stati di connessione della
-radio:</p>
-<ul>
-<li><strong>Radio in modalità Bootloader</strong> — la scheda <strong>Radio</strong> verifica/aggiorna il
-  firmware e i file della memoria flash/scheda SD/eMMC; il <strong>Model Manager</strong> esegue il backup
-  o il ripristino della radio.</li>
-<li><strong>Radio in modalità Ethos</strong> — Suite utilizza la radio come proxy (tramite gli
-  strumenti <strong>FRSK Flasher</strong>/Download center) per eseguire direttamente il flash del modulo interno,
-  o di qualsiasi sensore/servo/ricevitore collegato.</li>
-<li><strong>Radio in modalità DFU</strong> — connessione a radio spenta, utilizzata dal <strong>DFU
-  Flasher</strong> per eseguire il flash del bootloader stesso, ad esempio quando una corruzione del firmware
-  impedisce alla radio di accendersi normalmente.</li>
-</ul>
-<p>Consulta <a href="migration/">Migrazione</a> per trasferire per la prima volta una radio esistente a Ethos
-Suite, e <a href="operation/">Funzionamento</a> per l'interfaccia della Suite
-vera e propria.</p>
+<h1 id="frsky-suite">FrSky Suite<a class="headerlink" href="#frsky-suite" title="Permanent link">&para;</a></h1>
 
 
 
 
 
 
-
-  
-  
 
 
 

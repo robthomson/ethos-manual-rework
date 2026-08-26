@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1191,7 +1191,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1780,7 +1780,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2273,7 +2273,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2891,7 +2891,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3200,7 +3200,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3687,41 +3687,15 @@
 
 
 <h1 id="script-lua">Script Lua<a class="headerlink" href="#script-lua" title="Permanent link">&para;</a></h1>
-<p>Gli script Lua permettono di creare <a href="../displays/custom-widgets/">widget di visualizzazione personalizzati</a>
-per mostrare informazioni non gestite nativamente da Ethos e, per ciascun modello,
-<a href="../model-setup/lua-scripts/">sorgenti e task</a> personalizzati — una base
-destinata a crescere ulteriormente, verso funzioni personalizzate specializzate e
-l'integrazione con le centraline di volo.</p>
-<p>Lua è di per sé un linguaggio di scripting generico, leggero e integrabile
-(utilizzato ovunque, dai videogiochi alle applicazioni web); Ethos lo integra
-proprio per questo tipo di personalizzazione direttamente sulla radio.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Gli script Lua aumentano il tempo di avvio della radio. Il ritardo introdotto
-da uno script ben scritto dovrebbe essere impercettibile — uno script scritto
-male può invece ritardare l'avvio quasi all'infinito.</p>
-</div>
-<ul>
-<li><a href="lua-interpreter/">Interprete Lua</a> — quale versione di Lua e quali librerie
-  sono integrate in Ethos.</li>
-<li><a href="ethos-lua-documentation/">Documentazione Ethos Lua</a> — dove si trova il
-  riferimento completo delle API.</li>
-<li><a href="example-script-locations/">Dove trovare script di esempio</a> — dove reperire e
-  scaricare esempi funzionanti.</li>
-<li><a href="configuration-limits/">Limiti di configurazione</a> — budget di memoria per
-  bitmap e script.</li>
-<li><a href="basic-widget-layout/">Struttura base di un widget</a> — la struttura di codice
-  necessaria a uno script di widget personalizzato.</li>
-</ul>
+<p>Gli script Lua ti permettono di creare widget personalizzati per visualizzare le informazioni nelle viste principali di Ethos. In futuro ti permetteranno anche di modificare il comportamento della radio per aggiungere funzioni specializzate per compiti personalizzati e per interfacciarti con controllori di volo e simili.</p>
+<p>Il linguaggio di scripting Lua è un linguaggio di scripting leggero e incorporabile, progettato per essere utilizzato per ogni tipo di applicazione, dai giochi alle applicazioni web e all'elaborazione delle immagini, e in questo caso per implementare funzioni personalizzate nella radio.</p>
+<p>Tieni presente che gli script Lua aumentano il tempo di avvio della radio. Se sono implementati correttamente, il ritardo non dovrebbe essere percepibile, ma se non è così, il ritardo potrebbe essere quasi indefinito.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#uscite" class="md-skip">
+        <a href="#canali" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1196,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1389,43 +1389,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#editing-a-channel" class="md-nav__link">
+  <a href="#configurazione-delle-uscite" class="md-nav__link">
     <span class="md-ellipsis">
       
         Configurazione delle uscite
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swap-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scambio di canali
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ripristina-le-impostazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ripristina le impostazioni
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balance-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Canali di bilanciamento
       
     </span>
   </a>
@@ -1876,7 +1843,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2354,7 +2321,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2972,7 +2939,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3281,7 +3248,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3751,43 +3718,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#editing-a-channel" class="md-nav__link">
+  <a href="#configurazione-delle-uscite" class="md-nav__link">
     <span class="md-ellipsis">
       
         Configurazione delle uscite
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swap-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scambio di canali
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ripristina-le-impostazioni" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ripristina le impostazioni
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balance-channels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Canali di bilanciamento
       
     </span>
   </a>
@@ -3819,224 +3753,120 @@
   
 
 
-<h1 id="uscite">Uscite<a class="headerlink" href="#uscite" title="Permanent link">&para;</a></h1>
-<p><img alt="Uscite" src="../../assets/model-outputs.png" /></p>
-<p>La sezione Uscite è l'interfaccia tra la pura "logica" dei <a href="../mixes/">Mix</a> e il
-mondo reale — servi, collegamenti, superfici di controllo, attuatori e
-trasduttori. È qui che i punti finali, l'inversione, la centratura e le curve
-di correzione vengono adattati alle caratteristiche meccaniche del modello.
-Ogni canale di uscita corrisponde a un'uscita servo del ricevitore (CH1 →
-connettore del servo numero 1, con le impostazioni di protocollo predefinite).</p>
-<p>Sebbene Ethos sia configurato utilizzando le percentuali, i servi sono in
-definitiva pilotati da un segnale PWM la cui larghezza d'impulso è espressa in
-microsecondi:</p>
-<table>
-<thead>
-<tr>
-<th>%</th>
-<th>µs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>−150%</td>
-<td>732</td>
-</tr>
-<tr>
-<td>−100%</td>
-<td>988</td>
-</tr>
-<tr>
-<td>0%</td>
-<td>1500</td>
-</tr>
-<tr>
-<td>100%</td>
-<td>2012</td>
-</tr>
-<tr>
-<td>150%</td>
-<td>2268</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Un canale <strong>privo di mix attivi</strong> avrà un'uscita in posizione neutra
-(0% / 1500µs) — lo stesso vale quando il mix o i mix di un canale sono
-inattivi. È quindi necessario prestare attenzione affinché i canali
-utilizzati abbiano sempre un mix attivo. Un canale dell'acceleratore in
-posizione neutra sarà a <strong>metà accelerazione</strong>.</p>
-</div>
-<p>La schermata Uscite mostra due grafici a barre per ogni canale: la barra
-inferiore (verde) mostra il valore dei mix per il canale, mentre quella
-superiore (arancione) mostra il valore effettivo dell'uscita dopo
-l'elaborazione delle uscite, ovvero ciò che viene inviato al ricevitore (in
-termini sia di % che di µs). Le impostazioni minime e massime del canale sono
-indicate dalle sezioni in grigio nella barra superiore (arancione). I canali
-che non vengono trasmessi al modulo RF sono indicati con uno sfondo più scuro.
-Sul display di un canale appaiono delle piccole icone quando sono state
-modificate le impostazioni predefinite per la Direzione, la Curva, il Rallenta
-o il Bilanciamento, così da individuare a colpo d'occhio i canali non
-predefiniti.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Una pressione prolungata di <code>ENT</code> dalle schermate Mix o Fasi di Volo porta
-direttamente qui.</p>
-</div>
-<h2 id="editing-a-channel">Configurazione delle uscite<a class="headerlink" href="#editing-a-channel" title="Permanent link">&para;</a></h2>
-<p><img alt="Modifica uscita elevatore" src="../../assets/model-outputs-elevator-edit.png" />
-<img alt="Modifica uscita gas" src="../../assets/model-outputs-throttle-edit.png" /></p>
-<p>Tocca il canale di uscita da modificare o rivedere. Nella parte superiore
-della schermata viene visualizzata un'anteprima del canale: il valore del mix
-è indicato in verde, mentre il valore dell'uscita del canale è indicato in
-arancione, con un piccolo indicatore bianco che indica i punti Min/Max.</p>
+<h1 id="canali">Canali<a class="headerlink" href="#canali" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-outputs.png" /></p>
+<p>La sezione Uscite è l'interfaccia tra la "logica" di configurazione e il mondo reale con servi, collegamenti e superfici di controllo, nonché attuatori e trasduttori. Nelle Mix abbiamo impostato le azioni che vogliamo far compiere ai nostri diversi controlli. Questa sezione permette di adattare queste uscite logiche pure alle caratteristiche meccaniche del modello. È qui che configuriamo le escursioni minime e massime, l'inversione del servo o del canale e regoliamo il punto centrale del servo o del canale utilizzando la regolazione del centro PPM, oppure aggiungiamo un offset utilizzando il subtrim. Possiamo anche definire una curva per correggere eventuali problemi di risposta nel mondo reale. Esiste anche una funzione di bilanciamento canali. I vari canali sono uscite, ad esempio CH1 corrisponde al connettore del servo numero 1 del ricevitore (con le impostazioni di protocollo predefinite).</p>
+<p>Sebbene la radio sia configurata utilizzando le percentuali come ingresso, i servi e i dispositivi di uscita sono controllati da un segnale PWM (Pulse Width Modulation) in μs (microsecondi). La relazione tra le unità è la seguente:</p>
+<p>-150%   =   732 μs</p>
+<p>-100%   =   988 μs</p>
+<p>0%  =   1500 μs</p>
+<p>100%    =   2012 μs</p>
+<p>150%    =   2268 μs</p>
+<p><img alt="" src="../../assets/model-outputs.png" /></p>
+<p>La schermata Uscite mostra due grafici a barre per ogni canale. La barra inferiore (verde) mostra il valore dei mix per il canale, mentre quella superiore (arancione) mostra il valore effettivo (in termini sia di % che di µS) dell'uscita dopo l'elaborazione delle uscite, ovvero ciò che viene inviato al ricevitore. Nell'esempio precedente puoi vedere che sia i mix che i valori di uscita del canale CH4 Throttle sono a -100%.</p>
+<p>Le impostazioni minime e massime del Canale sono indicate dalle sezioni in grigio nella barra superiore (arancione). Per la loro regolazione, consulta la sezione seguente.</p>
+<p>I canali che non vengono trasmessi al modulo RF sono indicati con uno sfondo più scuro.  Nell'esempio precedente, tutti gli otto canali vengono trasmessi, quindi hanno uno sfondo grigio più chiaro.</p>
+<p>Le icone<img alt="" src="../../assets/icon_inverted.png" />  <img alt="" src="../../assets/icon_curve.png" />  <img alt="" src="../../assets/icon_slow.png" />  <img alt="" src="../../assets/icon_balance.png" />  appaiono sul display di un canale se sono state modificate le impostazioni predefinite per la <a href="./">Direzione </a>di uscita, la <a href="./">Curva </a>di uscita, il <a href="./">Lento su/giù </a>o se è stato configurato <a href="./">il Bilanciamento dei canali</a>. Per maggiori dettagli, consulta le rispettive impostazioni qui di seguito.</p>
+<p>Nota: per accedere rapidamente a questa schermata di monitoraggio, premendo a lungo il tasto Invio dalle schermate "Mix" e "Fasi di volo" si passa alle Uscite.</p>
+<h2 id="configurazione-delle-uscite">Configurazione delle uscite<a class="headerlink" href="#configurazione-delle-uscite" title="Permanent link">&para;</a></h2>
+<p>Tocca il canale di uscita da modificare o rivedere.</p>
+<p><img alt="" src="../../assets/model-outputs-throttle-edit.png" /></p>
+<p>Anteprima del canale</p>
+<p>Nella parte superiore della schermata di impostazione delle uscite viene visualizzata un'anteprima del canale. Il valore del mix è indicato in verde, mentre il valore dell'uscita del canale è indicato in arancione (tema predefinito). I settaggi dei punti min e max del canale sono indicati dalla sezione grigia nella barra superiore gialla(arancione).</p>
+<p>Nome</p>
+<p>Il nome può essere modificato.</p>
+<p>Direzione</p>
+<p>Cambia la direzione dell'uscita del canale, in genere per invertire la direzione del servo.</p>
+<p><img alt="" src="../../assets/icon_inverted.png" />    Quando è abilitata, nella visualizzazione del grafico del canale viene visualizzata un'icona a doppia freccia; fai riferimento a CH7 Flaps2L nella schermata delle uscite qui sopra.</p>
+<p>Tieni presente che questo non influisce sui mix che pilotano l'uscita e non cambia i limiti di min/max (vedi sotto).</p>
+<p>Min/Max</p>
+<p>Le impostazioni minime e massime del Canale sono limiti "rigidi", cioè non potranno mai essere superati. Devono essere impostati in modo da evitare un vincolo meccanico. Si noti che servono come impostazioni di guadagno o "punto finale", quindi la riduzione di questi limiti ridurrà la gittata piuttosto che indurre il clipping. Si noti che i limiti sono predefiniti a +/- 100,0%, ma possono essere aumentati fino a +/- 150,0%.</p>
+<p>Le impostazioni minime e massime del Canale sono indicate dalle sezioni in grigio nella barra superiore (arancione).</p>
+<p>Attenzione:</p>
+<p>Quando si utilizza un sistema di ridondanza con SBUS, non è possibile effettuare movimenti del servo superiori a +/- 125%.</p>
+<p>Nota: i parametri Min/Max hanno intervalli rispettivamente di (-150% a 0%) e (0% a +150%). Quando si utilizzano i VAR come fonte per regolare i parametri Min/Max, a meno che il Var non abbia un intervallo identico, sarà necessario impostare l'intervallo del Var come ignorato per evitare valori inaspettati dovuti alla conversione dell'intervallo. Per maggiori dettagli su questa opzione, consulta la sezione <a href="../../getting-started/user-interface-and-navigation/">Opzioni Var</a>.</p>
+<p><img alt="" src="../../assets/model-outputs-sbus-warning.png" /></p>
+<p>Se si utilizza più del 125% sul ricevitore principale che pilota le uscite PWM e questo ricevitore entra in failsafe, le posizioni del servo ricevute da un ricevitore ridondante via SBUS sono limitate al 125%.</p>
+<p>In particolare, se un'uscita del ricevitore principale supera il 125%, al momento del passaggio al ricevitore ridondante l'uscita passerà al 125%.</p>
+<p>Aiuto per la configurazione</p>
+<p><img alt="" src="../../assets/model-outputs-elevator-edit.png" /></p>
+<p>Quando si regolano i limiti di uscita min/max, l'estremità da regolare è evidenziata in grassetto.</p>
+<p>Ad esempio, se vuoi impostare il punto finale massimo per il canale dell'elevatore, quando sposti leggermente in avanti lo stick dell'elevatore, il valore massimo viene mostrato in grassetto per indicare che è il punto finale da regolare. Se sposti lo stick indietro, il valore minimo sarà in grassetto.</p>
+<p>Centro/Subtrim</p>
+<p>Si usa per introdurre un offset sull'uscita, in genere per centrare un braccio di un servo. Nota che gli endpoint non vengono influenzati.</p>
+<p>Attenzione:</p>
+<p>Non essere tentato di usare il Subtrim per aggiungere grandi offset: si creerà un grande differenziale nella risposta del servo. Il modo corretto è aggiungere un mix di offset.</p>
+<p>Centro PWM</p>
+<p>Si tratta di un'operazione simile al subtrim, con la differenza che una regolazione effettuata qui sposterà l'intera banda di movimento del servo (compresi i limiti rigidi). Questa regolazione non sarà visibile sul monitor del canale perché viene effettivamente effettuata nel servo. Il vantaggio di utilizzare "PWM center" per centrare meccanicamente la superficie di controllo è che in questo modo si separa la funzione di centratura da quella di trimming.</p>
+<p>Curva</p>
+<p>Permette di selezionare una curva Expo o una curva personalizzata per condizionare l'uscita. Il popup permette di selezionare una curva esistente o di aggiungerne una nuova.  Dopo aver configurato la curva, viene aggiunto il pulsante Modifica per poterla modificare facilmente.</p>
+<p><img alt="" src="../../assets/icon_curve.png" />   Quando è abilitata, l'icona di una curva viene visualizzata nel grafico del canale; fai riferimento a CH5 Rudders nella schermata delle uscite qui sopra.</p>
+<p>Rallenta su/giù</p>
+<p>La risposta dell'uscita può essere rallentata rispetto alla variazione dell'ingresso. Slow può essere utilizzato, ad esempio, per rallentare i ritratti che vengono azionati da un normale servo proporzionale. Il valore è il tempo in secondi che l'uscita impiega per passare da 0 a +100%.</p>
+<p><img alt="" src="../../assets/icon_slow.png" /> Quando è configurata, l'icona dell'orologio viene visualizzata nel grafico del canale.</p>
+<p>Ritardo</p>
+<p>Tieni presente che la funzione di ritardo è disponibile tra gli interruttori logici.</p>
+<p>Scambio di canali</p>
+<p><img alt="" src="../../assets/model-outputs-swap-channels-select.png" /></p>
+<p>Questa funzione permette di scambiare due canali di uscita.</p>
+<p><img alt="" src="../../assets/model-outputs-swap-channels.png" /></p>
+<p>La finestra di dialogo di scambio si apre con il primo canale già compilato. Seleziona il canale da scambiare e clicca su OK. Nota che lo scambio avviene immediatamente.  Tutti i mix e così via verranno regolati di conseguenza.</p>
+<p>Ripristina le impostazioni</p>
+<p><img alt="" src="../../assets/model-outputs-reset-select.png" /></p>
+<p>Il reset delle impostazioni cancella tutti i parametri del canale di uscita se il canale non è più necessario. Una finestra di conferma eviterà un reset accidentale.</p>
+<p>In questo modo si eviterà che le impostazioni non siano quelle predefinite se il canale viene riutilizzato per qualcos'altro.</p>
+<p>Bilanciamento Canali</p>
+<p>Questa funzione ti permette di bilanciare coppie selezionate o un gruppo di massimo 4 canali per garantire che si muovano all'unisono. Ad esempio, uno sbilanciamento dei flap può causare un rollio indesiderato, mentre uno sbilanciamento delle manette sui modelli multimotore può causare un'imbardata indesiderata.</p>
+<p>Panoramica</p>
+<p>Questa funzione crea automaticamente una curva di bilanciamento differenziale per ogni canale selezionato. È possibile scegliere il numero di punti di bilanciamento. Confrontando le posizioni fisiche delle superfici di controllo (come i flap) in ogni punto delle curve, è possibile regolarle facilmente in modo che siano uguali. Il risultato finale è un perfetto tracciamento delle superfici.</p>
+<p>Prerequisiti</p>
+<p>Prima di bilanciare i canali, è necessario seguire la procedura consigliata:</p>
 <ul>
-<li><strong>Nome</strong> — può essere modificato.</li>
-<li><strong>Direzione</strong> — cambia la direzione dell'uscita del canale, in genere per
-  invertire la direzione del servo. Quando è abilitata, nella visualizzazione
-  del grafico del canale viene visualizzata un'icona a doppia freccia. Tieni
-  presente che questo <strong>non</strong> influisce sui mix che pilotano l'uscita e
-  <strong>non</strong> cambia i limiti di min/max.</li>
-<li><strong>Min/Max</strong> — sono limiti "rigidi", cioè non potranno mai essere superati:
-  devono essere impostati in modo da evitare un vincolo meccanico. Servono
-  come impostazioni di guadagno o "punto finale", quindi la riduzione di
-  questi limiti ridurrà la corsa piuttosto che indurre il clipping. I limiti
-  sono predefiniti a ±100%, ma possono essere aumentati fino a ±150%. Quando
-  si regolano i limiti di uscita min/max, l'estremità da regolare è
-  evidenziata in grassetto (ad esempio, spostando leggermente in avanti lo
-  stick dell'elevatore, il valore massimo viene mostrato in grassetto per
-  indicare che è il punto finale da regolare).</li>
-</ul>
-<p><img alt="Avviso ridondanza SBUS" src="../../assets/model-outputs-sbus-warning.png" /></p>
-<p>!!! warning "Ridondanza SBUS"
-      Quando si utilizza un sistema di ridondanza con SBUS, non è possibile
-      effettuare movimenti del servo superiori a circa ±125%. I parametri
-      Min/Max hanno di per sé intervalli asimmetrici (da −150% a 0% e da 0% a
-      +150%): se vengono pilotati da una <a href="../variables/">Var</a>, a meno che il
-      Var non abbia un intervallo identico, sarà necessario impostare
-      l'intervallo del Var come <strong>ignorato</strong> (vedi <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">opzioni della
-      sorgente</a>),
-      per evitare valori inaspettati dovuti alla conversione dell'intervallo.
-      Se si utilizza più del 125% sul ricevitore principale e questo entra in
-      failsafe, le posizioni del servo ricevute dal ricevitore ridondante via
-      SBUS sono limitate al 125%.</p>
-<ul>
-<li><strong>Centro/Subtrim</strong> — si usa per introdurre un offset sull'uscita, in genere
-  per centrare un braccio di un servo; nota che gli endpoint non vengono
-  influenzati.</li>
-</ul>
-<p>!!! warning
-      Non essere tentato di usare il Subtrim per aggiungere grandi offset: si
-      creerà un grande differenziale nella risposta del servo. Per qualsiasi
-      cosa oltre la centratura fine, il modo corretto è aggiungere un <strong>mix di
-      offset</strong>.</p>
-<ul>
-<li><strong>Centro PWM</strong> — si tratta di un'operazione simile al subtrim, con la
-  differenza che una regolazione effettuata qui sposterà <em>l'intera</em> banda di
-  movimento del servo (compresi i limiti rigidi). Questa regolazione non sarà
-  visibile sul monitor del canale perché viene effettivamente effettuata nel
-  servo. In questo modo si separa la funzione di centratura da quella di
-  trimming.</li>
-<li><strong>Curva</strong> — permette di selezionare una curva Expo o una curva
-  personalizzata (esistente o nuova, con il pulsante <strong>Modifica</strong> una volta
-  configurata) per condizionare l'uscita e correggere eventuali problemi di
-  risposta nel mondo reale, ad esempio per garantire che i flap destro e
-  sinistro seguano con precisione. Quando è abilitata, l'icona di una curva
-  viene visualizzata nel grafico del canale.</li>
-<li><strong>Rallenta su/giù</strong> — la risposta dell'uscita può essere rallentata rispetto
-  alla variazione dell'ingresso; il valore è il tempo in secondi che l'uscita
-  impiega per passare da 0 a +100%. Può essere utilizzato, ad esempio, per
-  rallentare i carrelli retrattili azionati da un normale servo proporzionale.
-  Quando è configurato, l'icona dell'orologio viene visualizzata nel grafico
-  del canale. (La funzione di <strong>ritardo</strong>, concetto distinto dal rallentamento,
-  è disponibile tra gli <a href="../logical-switches/">interruttori logici</a>.)</li>
-</ul>
-<h2 id="swap-channels">Scambio di canali<a class="headerlink" href="#swap-channels" title="Permanent link">&para;</a></h2>
-<p><img alt="Scambio canali" src="../../assets/model-outputs-swap-channels.png" />
-<img alt="Scelta del canale da scambiare" src="../../assets/model-outputs-swap-channels-select.png" /></p>
-<p>Questa funzione permette di scambiare due canali di uscita. La finestra di
-dialogo di scambio si apre con il primo canale già compilato: seleziona il
-canale da scambiare e conferma — lo scambio avviene immediatamente e tutti i
-mix che fanno riferimento a uno dei due canali verranno regolati di
-conseguenza.</p>
-<h2 id="ripristina-le-impostazioni">Ripristina le impostazioni<a class="headerlink" href="#ripristina-le-impostazioni" title="Permanent link">&para;</a></h2>
-<p><img alt="Reset del canale" src="../../assets/model-outputs-reset-select.png" /></p>
-<p>Il reset delle impostazioni cancella tutti i parametri del canale di uscita
-riportandoli ai valori predefiniti — utile prima di riutilizzare un canale per
-qualcos'altro. Una finestra di conferma eviterà un reset accidentale.</p>
-<h2 id="balance-channels">Canali di bilanciamento<a class="headerlink" href="#balance-channels" title="Permanent link">&para;</a></h2>
-<p><img alt="Scelta dei canali da bilanciare" src="../../assets/model-outputs-balance-choose_channels.png" />
-<img alt="Scelta di CH7/CH6" src="../../assets/model-outputs-balance-choose-ch7-and-ch6.png" /></p>
-<p>Questa funzione ti permette di bilanciare coppie selezionate o un gruppo di
-massimo 4 canali per garantire che si muovano all'unisono — ad esempio, uno
-sbilanciamento dei flap può causare un rollio indesiderato, mentre uno
-sbilanciamento delle manette sui modelli multimotore può causare un'imbardata
-indesiderata. Ethos crea automaticamente una curva di bilanciamento
-differenziale per ogni canale selezionato; confrontando le posizioni fisiche
-delle superfici di controllo in ogni punto delle curve, è possibile regolarle
-facilmente in modo che siano uguali. Il risultato finale è un perfetto
-tracciamento delle superfici.</p>
-<p><strong>Prima di bilanciare i canali</strong>, nell'ordine:</p>
-<ol>
 <li>Imposta le direzioni del servo per una corretta corsa delle superfici.</li>
-<li>Con i mix in posizione neutra, usa facoltativamente il <strong>Centro PWM</strong> per
-   impostare le squadrette dei servi ad angolo retto.</li>
+<li>Con le Mixer in posizione neutra, usa facoltativamente il PWM Center per impostare le squadrette dei servi ad angolo retto.</li>
 <li>Configura i limiti Min/Max e il Subtrim.</li>
 <li>Configura qualsiasi altra curva.</li>
-<li>Configura il Rallenta.</li>
-<li><em>Solo allora</em> procedi a bilanciare ed equalizzare le superfici di controllo
-   in più punti della corsa.</li>
-</ol>
-<p><strong>Come si usa</strong>: scegli i canali da bilanciare e l'ordine in cui desideri
-visualizzarli —</p>
-<p><img alt="CH7/CH6 selezionati" src="../../assets/model-outputs-balance-ch7-and-ch6.png" /></p>
-<p>— le uscite del mix sono visualizzate lungo gli assi X, mentre i valori
-differenziali di regolazione del bilanciamento sono visualizzati sugli assi Y.
-Tocca il grafico di un canale (o scorrilo e premi <code>ENT</code>) per modificare la
-curva di bilanciamento; il tasto <code>PAGE</code> permette di passare da un canale
-all'altro durante la modifica:</p>
-<p><img alt="Editor della curva di bilanciamento" src="../../assets/model-outputs-balance-curve-edit.png" /></p>
-<p>Pulsanti del menu:</p>
-<ul>
-<li><strong>Sorgente</strong> — possono essere utilizzate le sorgenti configurate nei mix dei
-  canali o, opzionalmente, qualsiasi altro ingresso analogico comodo. Se
-  selezioni l'opzione <strong>Ingresso analogico automatico</strong>, il primo stick,
-  cursore o potenziometro che sposti sarà utilizzato come sorgente per X, non
-  solo nel grafico, ma anche nel modello.</li>
-<li><strong>Magnete</strong> — se abilitato, il punto più vicino alla curva sull'asse X verrà
-  selezionato automaticamente per la regolazione con l'encoder rotativo:</li>
+<li>Configura Slow.</li>
+<li>Procedi con i canali di bilanciamento per bilanciare ed equalizzare le superfici di controllo in più punti della corsa.</li>
 </ul>
-<p><img alt="Magnete disattivato" src="../../assets/model-outputs-balance-ch6-magnet-off.png" />
-  <img alt="Magnete attivato" src="../../assets/model-outputs-balance-ch6-magnet-on.png" /></p>
-<p>L'ingresso deve comunque essere regolato per allineare il valore X con un
-  punto della curva prima di effettuare la regolazione.
-- <strong>Blocco</strong> — toccando l'icona o premendo il tasto <code>ENT</code> mentre sei in
-  modalità di modifica del grafico, la modalità di blocco viene attivata o
-  disattivata; tutti gli input sono bloccati in modo da poter rilasciare
-  l'input dello stick, consentendoti di osservare le superfici di controllo
-  mentre regoli la curva.
-- <strong>Configurazione</strong> — permette di modificare il numero di punti di tutte le
-  curve, o solo di alcune, e di scegliere se smussarle o meno.
-- <strong>Aiuto</strong> (<code>?</code>, richiamabile anche con il tasto <code>MDL</code>) — richiama il file di
-  aiuto.</p>
-<p><strong>Opzione multicanale</strong>: è possibile bilanciare fino a 4 canali
-contemporaneamente —</p>
-<p><img alt="Bilanciamento a 4 canali" src="../../assets/model-outputs-balance-ch2-9-8-1.png" /></p>
-<p>Una volta che un canale è stato bilanciato, la sua curva di bilanciamento può
-essere rivista, modificata o cancellata dalla pagina di configurazione del
-canale stesso — sul grafico del canale viene visualizzata un'icona di
-bilanciamento (affiancata anche dall'icona della Direzione, se anch'essa è
-diversa dal valore predefinito).</p>
+<p>Come si usa</p>
+<p><img alt="" src="../../assets/model-outputs-balance-select.png" /></p>
+<p>Apri la pagina Modifica canale per il canale più a sinistra che desideri bilanciare. In questo esempio abbiamo scelto il canale 6 “Flap1 L”. Scorri verso il basso e tocca “Bilancia canali” per iniziare.</p>
+<p><img alt="" src="../../assets/model-outputs-balance-choose_channels.png" />￼</p>
+<p>Quando viene attivata, vengono scelti i canali da bilanciare.</p>
+<p><img alt="" src="../../assets/model-outputs-balance-choose-ch7-and-ch6.png" />￼</p>
+<p>Seleziona i canali nell'ordine in cui desideri visualizzarli. Nel nostro esempio CH6 (Flap1 L) era già selezionato perché abbiamo iniziato su questo canale.<br />
+Sulle radio senza touchscreen, scorrere fino al canale o ai canali desiderati e premere ENT per selezionarli. Infine, premere il tasto Page per evidenziare il pulsante OK, quindi premere ENT per confermare le selezioni.</p>
+<p><img alt="" src="../../assets/model-outputs-balance-ch7-and-ch6.png" /></p>
+<p>I canali verranno visualizzati nell'ordine di selezione. In questo esempio, è stato selezionato prima il CH7 Flap Left e poi il CH6 per il Flap Right. Le uscite del mix sono visualizzate lungo gli assi X, mentre i valori differenziali di regolazione del bilanciamento sono visualizzati sugli assi Y.</p>
+<p><img alt="" src="../../assets/model-outputs-balance-ch6-magnet-on.png" /></p>
+<p>Tocca il grafico di un canale (o scorrilo e premi ENTER) per modificare la curva di bilanciamento. Il tasto PAGE permette di passare da un canale all'altro durante la modifica.</p>
+<ul>
+<li>Pulsanti del menu</li>
+</ul>
+<p><img alt="" src="../../assets/Pictures/1000000000000018000000181B9B646A.png" /> Possono essere utilizzate le sorgenti configurate nei mix dei canali o, opzionalmente, qualsiasi altro ingresso analogico comodo. Se selezioni l'opzione "Ingresso analogico automatico", il primo stick, cursore o potenziometro che sposti sarà utilizzato come sorgente per X, non solo nel grafico, ma anche nel modello.</p>
+<p><img alt="" src="../../assets/Pictures/10000000000000280000001EF06CB86B.png" />Se abilitato, il punto più vicino alla curva sull'asse X verrà selezionato automaticamente per la regolazione con l'encoder rotativo, come nell'esempio precedente.</p>
+<p>L'ingresso deve essere regolato per allineare il valore X con un punto della curva prima di effettuare la regolazione.</p>
+<p><img alt="" src="../../assets/Pictures/100000000000001500000019F279C5CD.png" /> Toccando l'icona o premendo il tasto ENTER mentre sei in modalità di modifica del grafico, la modalità di blocco viene attivata o disattivata. Quando è attivata, tutti gli input sono bloccati in modo da poter rilasciare l'input dello stick, consentendoti di osservare le superfici di controllo mentre regoli la curva.</p>
+<p><img alt="" src="../../assets/Pictures/100000000000001A0000001A796A96C4.png" /> Apri la finestra di configurazione per i canali scelti. È possibile modificare il numero di punti di tutte le curve, o solo di alcune, e scegliere se smussarle o meno.</p>
+<p><strong>?</strong> Questo pulsante richiama il file di aiuto. Può essere richiamato anche con il tasto MDL.</p>
+<p><img alt="" src="../../assets/model-outputs-balance-ch6-magnet-off.png" /></p>
+<p>Nell'esempio precedente, l'opzione Magnete è stata deselezionata. Il punto della curva da regolare è evidenziato e può essere spostato con i tasti "SYS" e "DISP".</p>
+<p>Anche in questo caso, l'ingresso deve essere regolato per allineare il cursore (valore X) con un punto della curva prima di effettuare la regolazione.</p>
+<p>Opzione multicanale</p>
+<p><img alt="" src="../../assets/model-outputs-balance-ch2-9-8-1.png" /></p>
+<p>È possibile bilanciare fino a 4 canali contemporaneamente.</p>
+<p>Anche in questo caso, i canali devono essere selezionati nell'ordine in cui si desidera che vengano visualizzati, normalmente dalle superfici da sinistra a destra. L’esempio di cui sopra mostra un assegnazione canali da una ricevente TD SR12.</p>
+<p>Rivedere, modificare o cancellare la curva di bilanciamento</p>
+<p><img alt="" src="../../assets/model-outputs-balance-curve-edit.png" /></p>
+<p>Una volta che un canale è stato bilanciato, la sua curva di bilanciamento può essere rivista, modificata o cancellata dalla pagina di configurazione del canale.</p>
+<p><img alt="" src="../../assets/Pictures/100000000000001400000014F01B2957.png" />    Nota che sul grafico del canale viene visualizzata un'icona di bilanciamento (barra arancione). Nell'esempio precedente viene visualizzata anche l'icona della direzione, che indica che l'uscita è stata invertita, come si può vedere anche dal grafico che mostra che la direzione dell'uscita è opposta a quella del mixer.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

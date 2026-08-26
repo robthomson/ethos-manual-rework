@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#checklist" class="md-skip">
+        <a href="#lista-di-controllo" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1196,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1669,10 +1669,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#controllo-del-gas" class="md-nav__link">
+  <a href="#controllo-del-gas-throttle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo del gas
+        Controllo del Gas - Throttle
       
     </span>
   </a>
@@ -1680,10 +1680,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-del-failsafe" class="md-nav__link">
+  <a href="#controllo-failsafe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo del failsafe
+        Controllo Failsafe
       
     </span>
   </a>
@@ -1713,10 +1713,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-di-potenziometri-cursori" class="md-nav__link">
+  <a href="#controllo-dei-potenziometro-e-dei-cursori" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo di potenziometri / cursori
+        Controllo dei Potenziometro e dei cursori
       
     </span>
   </a>
@@ -1898,7 +1898,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2376,7 +2376,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2994,7 +2994,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3303,7 +3303,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3773,10 +3773,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#controllo-del-gas" class="md-nav__link">
+  <a href="#controllo-del-gas-throttle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo del gas
+        Controllo del Gas - Throttle
       
     </span>
   </a>
@@ -3784,10 +3784,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-del-failsafe" class="md-nav__link">
+  <a href="#controllo-failsafe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo del failsafe
+        Controllo Failsafe
       
     </span>
   </a>
@@ -3817,10 +3817,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controllo-di-potenziometri-cursori" class="md-nav__link">
+  <a href="#controllo-dei-potenziometro-e-dei-cursori" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controllo di potenziometri / cursori
+        Controllo dei Potenziometro e dei cursori
       
     </span>
   </a>
@@ -3863,47 +3863,46 @@
   
 
 
-<h1 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h1>
-<p><img alt="Checklist" src="../../assets/model-checklist.png" /></p>
-<p>Una serie di controlli di sicurezza pre-volo che vengono eseguiti all'accensione della radio e/o al caricamento di un modello. I controlli integrati comprendono modalità silenziosa, failsafe non impostato, posizione di interruttori/potenziometri, batteria della radio e batteria RTC — il controllo degli interruttori indica in quale direzione deve essere spostato ciascun interruttore, segnalandolo con punti rossi nella schermata di avviso:</p>
-<p><img alt="Checklist all'avvio" src="../../assets/model-checklist-at_start.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Sia <code>OK</code> sia <code>RTN</code> saltano completamente i controlli pre-volo, indipendentemente da quanto suggerito dall'avviso a schermo.</p>
-</div>
-<h2 id="controllo-del-gas">Controllo del gas<a class="headerlink" href="#controllo-del-gas" title="Permanent link">&para;</a></h2>
-<p><img alt="Funzione di controllo" src="../../assets/model-checklist-check_function.png" /></p>
-<p>Attiva il controllo e scegli un operatore — <code>&lt;</code> (minore di), <code>~</code> (circa uguale) o <code>&gt;</code> (maggiore di) — rispetto a un valore; viene emesso un avviso se lo stick del gas si trova al di fuori di quanto consentito dal confronto.</p>
-<h2 id="controllo-del-failsafe">Controllo del failsafe<a class="headerlink" href="#controllo-del-failsafe" title="Permanent link">&para;</a></h2>
-<p>Avvisa se il <a href="../rf-system/#failsafe">failsafe</a> non è stato impostato per il modello corrente.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Si raccomanda vivamente di lasciare attivo questo controllo.</p>
-</div>
+<h1 id="lista-di-controllo">Lista di controllo<a class="headerlink" href="#lista-di-controllo" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-checklist.png" /></p>
+<p>La funzione Checklist prevede una serie di controlli pre-volo. Si tratta di un gruppo di funzioni di sicurezza che entrano in vigore quando si accende la radio e/o si carica un modello dall'elenco dei modelli.</p>
+<p><img alt="" src="../../assets/model-checklist-at_start.png" /></p>
+<p>I controlli predefiniti includono: la radio è in modalità silenziosa, il failsafe non è impostato, gli interruttori e i potenziometri sono controllati, la batteria della radio è scarica, la batteria dell'RTC è scarica, ecc. Il controllo degli interruttori mostra la direzione in cui deve essere spostato l'interruttore; fai riferimento ai punti rossi nell'esempio di schermata di avviso qui sopra.</p>
+<p>Si noti che, contrariamente all'avviso precedente, il tasto OK o RTN salta i controlli pre-volo.</p>
+<p>Ulteriori controlli possono essere impostati di seguito.</p>
+<p><img alt="" src="../../assets/model-checklist.png" /></p>
+<h2 id="controllo-del-gas-throttle">Controllo del Gas - Throttle<a class="headerlink" href="#controllo-del-gas-throttle" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-check_function.png" /></p>
+<p>Per attivare il controllo del Gas - Throttle, seleziona l'operatore da utilizzare. Le opzioni sono '&lt;' minore di, '~' circa uguale o '&gt;' maggiore di. Il controllo pre-volo ti avviserà se lo stick del Gas - Throttle non rientra nel valore impostato nel parametro valore.</p>
+<h2 id="controllo-failsafe">Controllo Failsafe<a class="headerlink" href="#controllo-failsafe" title="Permanent link">&para;</a></h2>
+<p>Se abilitato, ti avvisa se il Failsafe non è stato impostato per il modello corrente. Si consiglia vivamente di lasciarlo abilitato!</p>
 <h2 id="controllo-degli-interruttori">Controllo degli interruttori<a class="headerlink" href="#controllo-degli-interruttori" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruttori" src="../../assets/model-checklist-switches.png" />
-<img alt="Opzioni di controllo degli interruttori" src="../../assets/model-checklist-switches-options.png" /></p>
-<p>Per ciascun interruttore è possibile richiedere una posizione specifica all'avvio (gli interruttori con nomi personalizzati definiti in <a href="../../system-setup/hardware/#switches-settings">Configurazione di sistema → Hardware</a> vengono mostrati con tali nomi). <strong>Carica tutte le posizioni degli interruttori</strong> acquisisce le posizioni fisiche <em>attuali</em> come posizioni desiderate per ogni interruttore non contrassegnato come <strong>Nessun controllo</strong>.</p>
+<p><img alt="" src="../../assets/model-checklist-switches.png" /></p>
+<p>Per ogni interruttore, puoi definire se la radio richiede che gli interruttori siano nelle posizioni predefinite desiderate. Se agli interruttori sono stati assegnati dei nomi definiti dall'utente in Sistema / Hardware / 'Impostazioni interruttori', i nomi verranno visualizzati.</p>
+<p>L'opzione "Carica tutte le posizioni degli interruttori" può essere utilizzata per leggere le posizioni desiderate dalle posizioni attuali degli interruttori, ad eccezione di quelle contrassegnate con "Nessun controllo".</p>
+<p><img alt="" src="../../assets/model-checklist-switches-options.png" /></p>
+<p>Le opzioni di controllo sono mostrate qui sopra.</p>
 <h2 id="controllo-degli-interruttori-di-funzione">Controllo degli interruttori di funzione<a class="headerlink" href="#controllo-degli-interruttori-di-funzione" title="Permanent link">&para;</a></h2>
-<p><img alt="Interruttori di funzione" src="../../assets/model-checklist-function-switches.png" />
-<img alt="Opzioni di controllo degli interruttori di funzione" src="../../assets/model-checklist-function-switches-options.png" /></p>
-<p>Stesso principio, applicato ai sei <a href="../model-edit/#function-switches">interruttori di funzione</a>. <strong>Carica tutte le posizioni degli interruttori di funzione</strong> funziona allo stesso modo di quanto descritto sopra.</p>
-<h2 id="controllo-di-potenziometri-cursori">Controllo di potenziometri / cursori<a class="headerlink" href="#controllo-di-potenziometri-cursori" title="Permanent link">&para;</a></h2>
-<p><img alt="Potenziometri" src="../../assets/model-checklist-pots.png" />
-<img alt="Opzioni di controllo dei potenziometri" src="../../assets/model-checklist-pots-options.png" /></p>
-<p>Richiede posizioni specifiche di potenziometri/cursori all'avvio, individualmente per ciascun comando (<code>~</code>/<code>&lt;</code>/<code>&gt;</code>, come per il controllo del gas). <strong>Carica tutte le posizioni dei potenziometri</strong> acquisisce automaticamente le posizioni attuali — verifica poi con attenzione gli operatori selezionati automaticamente, perché <code>~</code> rispetto a <code>&lt;</code>/<code>&gt;</code> potrebbe non corrispondere a quanto effettivamente desiderato.</p>
+<p><img alt="" src="../../assets/model-checklist-function-switches.png" /></p>
+<p><img alt="" src="../../assets/model-checklist-function-switches-options.png" /></p>
+<p>Per ogni interruttore di funzione, puoi definire se la radio richiede che gli interruttori siano nelle posizioni predefinite desiderate. Le opzioni sono mostrate sopra.</p>
+<p>L'opzione "Carica tutte le posizioni degli interruttori di funzione" può essere utilizzata per leggere le posizioni desiderate dalle posizioni attuali degli interruttori di funzione, ad eccezione di quelle contrassegnate con "Nessun controllo".</p>
+<h2 id="controllo-dei-potenziometro-e-dei-cursori">Controllo dei Potenziometro e dei cursori<a class="headerlink" href="#controllo-dei-potenziometro-e-dei-cursori" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-checklist-pots.png" /></p>
+<p>Definisce se la radio richiede che i potenziometri e i cursori siano in posizioni predefinite all'avvio. Per ogni potenziometro è possibile inserire i valori desiderati.</p>
+<p>L'opzione "Carica tutte le posizioni dei Potenziometro" può essere utilizzata per leggere le posizioni desiderate dalle posizioni attuali dei Potenziometro, ad eccezione di quelle contrassegnate con "Nessun controllo". È necessario controllare attentamente che gli operatori selezionati automaticamente siano quelli desiderati (ad esempio, '~' contro '&lt;' o '&gt;').</p>
+<p><img alt="" src="../../assets/model-checklist-pots-options.png" /></p>
+<p>In alternativa, le funzioni di controllo possono essere impostate singolarmente (ad esempio, '~' o '&lt;' o '&gt;').</p>
 <h2 id="testo-definito-dallutente">Testo definito dall'utente<a class="headerlink" href="#testo-definito-dallutente" title="Permanent link">&para;</a></h2>
-<p><img alt="Testo checklist utente" src="../../assets/model-checklist-user-checklist.png" /></p>
-<p>Visualizza un file di testo semplice o formattato come parte della checklist di avvio, una volta installato per il modello. Per la procedura completa consulta <a href="../../how-to/user-defined-checklist/">Guida pratica: checklist con testo definito dall'utente</a>.</p>
+<p>La funzione Checklist può anche visualizzare un testo definito dall'utente. Il testo può essere un testo normale o un testo avanzato.</p>
+<p><img alt="" src="../../assets/model-checklist-user-checklist.png" /></p>
+<p>Una volta installato il file di testo per un determinato modello e caricato il modello stesso, la radio visualizzerà la Checklist come parte della routine di avvio. Consulta la sezione <a href="../../tutorials/basic-flybarless-heli/">Come impostare una lista di controllo con testo definito dall'utente </a>nella sezione Come fare.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

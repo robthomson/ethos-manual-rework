@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migrazione" class="md-skip">
+        <a href="#procedura-per-la-migrazione-a-frsky-suite" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1191,7 +1191,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1780,7 +1780,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2258,7 +2258,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2876,7 +2876,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3190,7 +3190,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3686,28 +3686,42 @@
   
 
 
-<h1 id="migrazione">Migrazione<a class="headerlink" href="#migrazione" title="Permanent link">&para;</a></h1>
-<p>Passaggio di una radio dai vecchi strumenti di aggiornamento per PC separati a Ethos Suite, per la prima volta.</p>
-<ol>
-<li><strong>Verificare che Ethos sia ≥ 1.1.4</strong> — la versione minima in grado di eseguire il flash del nuovo bootloader compatibile con Suite (formato FRSK) direttamente dal <a href="../../system-setup/file-manager/">File Manager</a>. Se necessario, aggiorna prima manualmente alla 1.1.4.</li>
-<li><strong>Eseguire il backup della SD card/eMMC</strong> — copiarne l'intero contenuto in una cartella sul PC.</li>
-<li><strong>Scaricare l'ultimo bootloader</strong> dalle <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">release di ETHOS-Feedback-Community</a> e decomprimerlo. Ogni release pubblica un file <code>components.json</code> che elenca la versione corrente di ogni componente — vedi <a href="../../how-to/find-latest-bootloader/">Guida pratica: trovare l'ultimo bootloader</a> per sapere come leggerlo.</li>
-<li>Individua la radio nella voce <code>targets</code> di quel file per conoscere l'esatta versione del bootloader da utilizzare e cerca il file corrispondente tra gli asset di quella release.</li>
-<li>Avvia la radio in <a href="../../getting-started/usb-connection-modes/#bootloader-mode">modalità bootloader</a> (tieni premuto <code>ENT</code>, quindi accendi) e collegala via USB.</li>
-<li>Copia il file del bootloader sulla SD card/eMMC (normalmente nella cartella <code>Firmware/</code>), quindi espelli le unità e scollega il cavo.</li>
-<li>Avvia normalmente la radio, vai in <strong>System → File Manager</strong>, tocca il file <code>bootloader.frsk</code> appena copiato e seleziona <strong>Flash bootloader</strong>.</li>
-<li>Scarica e installa Ethos Suite — <a href="../operation/">Funzionamento</a> illustra da qui in avanti l'aggiornamento di firmware e file e le restanti funzionalità di Suite.</li>
-<li>Se Ethos Suite non lo fa automaticamente, potrebbe essere necessario rinominare la cartella <code>bitmaps/user</code> presente sulla SD card/eMMC in <code>bitmaps/models</code> (è qui che risiedono le bitmap utente dei modelli).</li>
-</ol>
+<h1 id="procedura-per-la-migrazione-a-frsky-suite">Procedura per la migrazione a FrSky Suite<a class="headerlink" href="#procedura-per-la-migrazione-a-frsky-suite" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>Assicurati di avere almeno la versione 1.1.4 di Ethos, la versione minima necessaria per flashare il nuovo bootloader compatibile con FrSky Suite (formato FRSK) dal File Manager della radio. In caso contrario, dovrai aggiornare manualmente alla versione 1.1.4 per poter migrare a FrSky Suite per gli aggiornamenti automatici.</p>
+</li>
+<li>
+<p>Fai un backup della tua scheda SD o eMMC (è consigliabile copiare tutto in una cartella del computer).</p>
+</li>
+<li>
+<p>Scarica da <a href="https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases">https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases </a>il file zip del bootloader più recente per la tua radio e decomprimilo. Le versioni attuali del bootloader sono elencate in un file chiamato components.json che elenca tutti i componenti utilizzati in una release. Il file viene pubblicato con ogni nuova versione del firmware e può essere aperto con un editor di testo come Note Pad.</p>
+</li>
+<li>
+<p>Cerca la tua radio tra le voci "obiettivi", quindi il numero di versione del Bootloader sarà elencato sotto. Troverai il Bootloader elencato nelle risorse della release di Ethos con quel numero.</p>
+</li>
+<li>
+<p>Accendi la radio in modalità bootloader (tieni premuto il tasto enter, tienilo premuto e poi premi power ON) e collega il sistema al PC con un cavo USB dati.</p>
+</li>
+<li>
+<p>Copia il bootloader in una cartella della scheda SD o dell'eMMC (di solito la cartella Firmware), quindi espelli le unità e scollega la radio dal PC.</p>
+</li>
+<li>
+<p>Avvia la radio, vai su System / File Manager, tocca il file bootloader.frsk che hai appena copiato e seleziona l'opzione "Flash bootloader".</p>
+</li>
+<li>
+<p>Scarica e installa FrSky Suite. A questo punto dovresti essere in grado di seguire le sezioni seguenti per aggiornare il firmware della radio e i file della scheda Flash e SD o eMMC alle versioni più recenti e per utilizzare le altre funzioni della FrSky Suite.</p>
+</li>
+<li>
+<p>Tieni presente che potrebbe essere necessario rinominare la cartella bitmaps/user sulla scheda SD o eMMC in bitmaps/models se FrSky Suite non lo fa per te. Questa è la cartella in cui sono memorizzate le bitmap degli utenti.</p>
+</li>
+</ul>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -3737,7 +3751,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Piede" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Ethos Suite">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Precedente: FrSky Suite">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3747,7 +3761,7 @@
                 Precedente
               </span>
               <div class="md-ellipsis">
-                Ethos Suite
+                FrSky Suite
               </div>
             </div>
           </a>

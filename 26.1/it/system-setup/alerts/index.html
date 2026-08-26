@@ -859,7 +859,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -917,6 +917,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avvisi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -933,6 +951,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modalita-silenziosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modalità silenziosa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione principale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-rtc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione RTC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avviso-di-conflitto-tra-sensori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avviso di conflitto tra sensori
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inattivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inattività
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1206,7 +1298,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1795,7 +1887,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2273,7 +2365,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2891,7 +2983,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3200,7 +3292,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3663,6 +3755,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modalita-silenziosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modalità silenziosa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione principale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-rtc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione RTC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avviso-di-conflitto-tra-sensori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avviso di conflitto tra sensori
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inattivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inattività
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3687,24 +3842,25 @@
 
 
 <h1 id="avvisi">Avvisi<a class="headerlink" href="#avvisi" title="Permanent link">&para;</a></h1>
-<p><img alt="Avvisi" src="../../assets/system-alerts.png" /></p>
-<p>Quattro avvisi validi per l'intera radio, ciascuno attivabile in modo indipendente — distinti dalle <a href="../../model-setup/special-functions/">funzioni speciali</a> e dagli <a href="../../model-setup/logical-switches/">interruttori logici</a> specifici di ogni modello che si configurano manualmente.</p>
-<ul>
-<li><strong>Modalità silenziosa</strong> — un avviso vocale all'avvio quando questo controllo è attivo e <a href="../general/">Generale → Modalità audio</a> è impostata su Silenzioso, per ricordare che la radio è muta.</li>
-<li><strong>Tensione principale</strong> — "Batteria radio scarica" quando la tensione della batteria principale della radio scende al di sotto della soglia di <strong>Bassa tensione</strong> impostata in <a href="../battery/">Batteria</a>.</li>
-<li><strong>Tensione RTC</strong> — "Batteria RTC scarica" quando la batteria a bottone dell'RTC scende al di sotto di 2,5 V (la soglia predefinita). La registrazione dei dati dipende dall'orologio in tempo reale (RTC); un orario non valido rende difficile la lettura dei log, in particolare la distinzione tra le diverse sessioni di volo. Questo avviso può essere silenziato temporaneamente in attesa di sostituire la batteria, ma non dovrebbe restare disattivato a tempo indeterminato.</li>
-<li><strong>Avviso conflitto sensori</strong> — rileva ID di sensori di telemetria in conflitto. Conviene disattivarlo solo se si utilizzano sensori non conformi alla specifica S.Port.</li>
-<li><strong>Inattività</strong> — un avviso vocale "Inattività prolungata" (accompagnato da una vibrazione, nel caso in cui il volume sia basso) dopo che la radio è rimasta inutilizzata per un tempo superiore a quello impostato — 10 minuti per impostazione predefinita.</li>
-</ul>
+<p><img alt="" src="../../assets/system-icon-alerts.png" /></p>
+<p><img alt="" src="../../assets/system-alerts.png" /></p>
+<p>Gli avvisi di sistema sono:</p>
+<h2 id="modalita-silenziosa">Modalità silenziosa<a class="headerlink" href="#modalita-silenziosa" title="Permanent link">&para;</a></h2>
+<p>All'avvio verrà emesso un avviso di "modalità silenziosa" quando il controllo "modalità silenziosa" è attivo e la "modalità audio" è stata impostata su Silenzioso in Sistema / Generale / <a href="../general/">Modalità audio.</a></p>
+<h2 id="tensione-principale">Tensione principale<a class="headerlink" href="#tensione-principale" title="Permanent link">&para;</a></h2>
+<p>L'avviso vocale "La batteria della radio è scarica" viene emesso quando il controllo "Tensione principale" è attivo e la batteria della radio principale è al di sotto della soglia impostata nel parametro "Bassa tensione" in Sistema / Batteria.</p>
+<h2 id="tensione-rtc"><strong><em>Tensione</em></strong> RTC<a class="headerlink" href="#tensione-rtc" title="Permanent link">&para;</a></h2>
+<p>L'avviso vocale "La batteria RTC è scarica" viene emesso quando il controllo "Tensione RTC" è attivo e la batteria RTC è inferiore a 2,5 V, la soglia predefinita della batteria RTC. L'avviso può essere spento fino alla sostituzione della batteria RTC, ma non deve essere lasciato spento a tempo indeterminato. L'ora reale viene utilizzata per la registrazione dei dati e un'ora non valida causerà difficoltà nella lettura dei registri, soprattutto nel distinguere le sessioni di volo.</p>
+<h2 id="avviso-di-conflitto-tra-sensori">Avviso di conflitto tra sensori<a class="headerlink" href="#avviso-di-conflitto-tra-sensori" title="Permanent link">&para;</a></h2>
+<p>Il rilevamento dei conflitti tra sensori può essere disabilitato. Questo dovrebbe essere necessario solo se hai dei sensori che non soddisfano le specifiche S.Port.</p>
+<h2 id="inattivita">Inattività<a class="headerlink" href="#inattivita" title="Permanent link">&para;</a></h2>
+<p>Un avviso vocale di "Inattività prolungata" verrà emesso quando la radio non viene utilizzata per un periodo superiore al tempo di "Inattività" e anche un avviso aptico nel caso in cui il volume della radio venga abbassato. Il valore predefinito è di 10 minuti.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

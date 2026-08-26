@@ -859,7 +859,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1001,6 +1001,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batteria
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1017,6 +1035,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione principale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bassa-tensione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bassa tensione
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intervallo-di-tensione-del-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intervallo di tensione del display
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-rtc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione RTC
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1206,7 +1287,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1795,7 +1876,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2273,7 +2354,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2891,7 +2972,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3200,7 +3281,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3663,6 +3744,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione principale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bassa-tensione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bassa tensione
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intervallo-di-tensione-del-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intervallo di tensione del display
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensione-rtc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensione RTC
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3687,52 +3820,29 @@
 
 
 <h1 id="batteria">Batteria<a class="headerlink" href="#batteria" title="Permanent link">&para;</a></h1>
-<p><img alt="Impostazioni della batteria della radio" src="../../assets/system-battery.png" /></p>
-<p>Serve per calibrare la lettura della batteria interna della radio e impostare
-le soglie di allarme — funzione distinta dalle impostazioni del pacco batteria
-del modello (vedi <a href="../../how-to/low-battery-warning/">Guida pratica: avviso di tensione batteria bassa</a>).</p>
-<ul>
-<li><strong>Tensione principale</strong> — visualizza la tensione attuale della batteria, ma
-  è anche la regolazione della calibrazione: puoi inserire la tensione
-  effettiva della batteria misurata con un multimetro. Il valore predefinito è
-  8,4V per una batteria al litio a 2 celle carica.</li>
-<li><strong>Bassa tensione</strong> — è la tensione di soglia dell'allarme, con valore
-  predefinito 7,2V (un valore di 7,4V offre un ulteriore margine di
-  sicurezza). Quando l'opzione <a href="../alerts/">Tensione principale</a> è attivata,
-  se la tensione scende al di sotto di questa soglia verrà visualizzata una
-  finestra di dialogo di avviso e ogni minuto verrà emesso un messaggio vocale
-  "Batteria radio scarica", anche se la finestra di avviso è aperta.</li>
-</ul>
-<p>!!! warning
-      Quando viene dato questo allarme, è prudente atterrare e ricaricare la
-      batteria della radio! L'avviso viene ripetuto ogni minuto in ogni caso.
-      Quando la tensione scende a 6,0V, la radio si spegne comunque per
-      proteggere le celle agli ioni di litio (2 x 3,0V).</p>
-<ul>
-<li><strong>Intervallo di tensione del display</strong> — i valori min/max della
-  visualizzazione grafica della batteria in alto a destra dello schermo: il
-  valore MIN corrisponde al punto in cui si spegne la prima barra, MAX è il
-  valore in cui si accende la quarta. I limiti predefiniti per la batteria
-  agli ioni di litio integrata sono 6,4–8,4V; molti piloti aumentano la
-  tensione di rilevamento inferiore per far scattare prima l'avviso di bassa
-  tensione ed evitare di scaricare eccessivamente la batteria. Se la batteria
-  viene sostituita con una di tipo diverso, i limiti devono essere impostati
-  in modo appropriato.</li>
-<li><strong>Tensione RTC</strong> — la tensione della batteria a bottone dell'orologio in
-  tempo reale (Real Time Clock). È di 3,0V per una batteria nuova; se la
-  tensione è inferiore a 2,7V sostituisci la batteria per garantire il
-  corretto funzionamento dell'orologio, e al di sotto di 2,5V verrà emesso
-  l'<a href="../alerts/">avviso di tensione RTC</a>.</li>
-</ul>
+<p><img alt="" src="../../assets/system-icon-battery.png" /></p>
+<p><img alt="" src="../../assets/system-battery.png" /></p>
+<p>La sezione Batteria serve per calibrare le batterie della radio e impostare le soglie di allarme.</p>
+<h2 id="tensione-principale">Tensione principale<a class="headerlink" href="#tensione-principale" title="Permanent link">&para;</a></h2>
+<p>Tensione principale" visualizza la tensione attuale della batteria, ma è anche la regolazione della calibrazione della tensione della batteria. Puoi inserire la tensione effettiva della batteria misurata con un multimetro. Il valore predefinito è 8,4V per una batteria al litio a 2 celle carica.</p>
+<h2 id="bassa-tensione">Bassa tensione<a class="headerlink" href="#bassa-tensione" title="Permanent link">&para;</a></h2>
+<p>È la tensione di soglia dell'allarme. Il valore predefinito è 7,2V. Un valore di 7,4V offre un ulteriore margine di sicurezza.</p>
+<p>L'avviso vocale "La batteria della radio è bassa" viene emesso quando il controllo "Tensione principale" è attivo in Sistema / Avvisi / <a href="../alerts/">Tensione principale </a>e la batteria della radio principale è al di sotto della soglia impostata qui.</p>
+<p>Attenzione!</p>
+<p>Quando viene dato questo allarme, è prudente atterrare e ricaricare la batteria della radio!</p>
+<p>Tieni presente che quando la tensione della batteria della radio scende a 6,0V, la radio si spegne comunque per proteggere la batteria agli ioni di litio (2 x 3,0V)!</p>
+<h2 id="intervallo-di-tensione-del-display">Intervallo di tensione del display<a class="headerlink" href="#intervallo-di-tensione-del-display" title="Permanent link">&para;</a></h2>
+<p>Queste impostazioni definiscono il range della visualizzazione grafica della batteria in alto a destra dello schermo. I limiti predefiniti per la batteria agli ioni di litio integrata sono 6,4 e 8,4V. Molti piloti aumentano la tensione di rilevamento inferiore per far scattare prima l'avviso di bassa tensione TX ed evitare di scaricare eccessivamente la batteria TX.</p>
+<p>Il valore MIN corrisponde al punto in cui si spegne la prima barra e MAX è il valore in cui si accende la quarta barra quando si utilizza la rappresentazione grafica della tensione della batteria.</p>
+<p>Se la batteria viene sostituita con una di tipo diverso, i limiti devono essere impostati in modo appropriato.</p>
+<h2 id="tensione-rtc">Tensione RTC<a class="headerlink" href="#tensione-rtc" title="Permanent link">&para;</a></h2>
+<p>Mostra la tensione della batteria RTC (Real Time Clock) della radio. La tensione è di 3,0v per una batteria nuova. Se il voltaggio è inferiore a 2,7v, sostituisci la batteria all'interno della radio per garantire il corretto funzionamento dell'orologio. Se la tensione scende al di sotto di 2,5 V, verrà emesso un avviso; consulta Avvisi / <a href="../alerts/">Tensione RTC</a>.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

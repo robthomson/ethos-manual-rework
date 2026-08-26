@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variabili" class="md-skip">
+        <a href="#variabili-vars" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1196,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1585,41 +1585,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aggiungere-una-var" class="md-nav__link">
+  <a href="#aggiunta-di-vars" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aggiungere una Var
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aggiungere una Var">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#valori" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Valori
+        Aggiunta di vars
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#azioni" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#rimuovi-vars" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Azioni
+        Rimuovi VARS
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1871,7 +1854,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2349,7 +2332,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2967,7 +2950,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3276,7 +3259,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3746,41 +3729,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aggiungere-una-var" class="md-nav__link">
+  <a href="#aggiunta-di-vars" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aggiungere una Var
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aggiungere una Var">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#valori" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Valori
+        Aggiunta di vars
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#azioni" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#rimuovi-vars" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Azioni
+        Rimuovi VARS
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3809,103 +3775,72 @@
   
 
 
-<h1 id="variabili">Variabili<a class="headerlink" href="#variabili" title="Permanent link">&para;</a></h1>
-<p><img alt="Variabili" src="../../assets/model-vars.png" /></p>
-<p>Le variabili ("Vars") sono contenitori con nome per i valori delle
-impostazioni proprie di un modello, richiamabili in qualsiasi altro punto
-della programmazione — <a href="../mixes/">mix</a> inclusi. Tenerle in una sezione
-dedicata separa i <em>dati di configurazione</em> di un modello dalla sua
-<em>logica di programmazione</em>: invece di passare in rassegna decine di mix
-per trovare e modificare un valore, tutto risiede in un unico punto con
-un nome significativo. Sono disponibili 64 Vars; nessuna esiste per
-impostazione predefinita. Aggiungine una con <strong>+</strong>; tocca una Var
-esistente per <strong>Modifica</strong>/<strong>Sposta</strong>/<strong>Copia</strong>/<strong>Clona</strong>/<strong>Elimina</strong>.</p>
-<p><img alt="Aggiungi variabile" src="../../assets/model-vars-add.png" /></p>
-<p>Una Var può contenere una costante fissa, oppure essere regolabile entro
-limiti definiti dall'utente (per evitare che valori errati provochino un
-incidente), e può assumere un valore <em>diverso</em> per ciascuna condizione
-attiva (ad esempio per ogni modalità di volo). I valori vengono mantenuti
-tra una sessione e l'altra. Una Var sostituisce qualsiasi valore numerico
-ordinario ovunque sia disponibile la <a href="../../getting-started/user-interface-and-navigation/#the-options-feature">funzione
-Opzioni</a>
-(i campi con l'icona a hamburger).</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Su un aliante con alettoni divisi (le sezioni interne fungono anche
-da flap di atterraggio) si vuole un'unica impostazione condivisa del
-differenziale alettoni da utilizzare ovunque tutte e quattro le
-superfici agiscano come alettoni: una Var che contiene quell'unico
-valore, richiamata da ogni mix interessato, lo mantiene coerente e fa
-sì che debba essere regolato in un solo punto.</p>
-</div>
-<h2 id="aggiungere-una-var">Aggiungere una Var<a class="headerlink" href="#aggiungere-una-var" title="Permanent link">&para;</a></h2>
-<p><img alt="Nuova variabile" src="../../assets/model-vars-new_var.png" /></p>
+<h1 id="variabili-vars">Variabili (Vars)<a class="headerlink" href="#variabili-vars" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-vars.png" /></p>
+<p>Le variabili (Vars) possono essere utilizzate per nominare e memorizzare i parametri di impostazione di un modello in modo da potervi fare riferimento in altri punti della programmazione radio, compresi i mix. Le Vars possono essere considerate come dei contenitori di informazioni.</p>
+<p>Sono stati separati in una sezione a sé stante, il che consente una separazione netta tra i dati di configurazione di un modello e la logica di programmazione. Questo significa che puoi centralizzare tutte le impostazioni di configurazione in un unico posto con nomi significativi, dove possono essere trovate e modificate facilmente, senza dover saltare tra decine di mix o altre voci di configurazione e scorrere fino al parametro pertinente.</p>
+<p>Le Var possono contenere valori fissi (cioè costanti) oppure possono essere regolabili con limiti definibili dall'utente per evitare che valori errati possano causare un crash. Ogni Var può contenere più valori a seconda delle condizioni attive (come le Fase di volo) configurate. È possibile configurare delle azioni per alterare il loro valore, come ad esempio utilizzare un trim riattualizzato come regolatore in volo, oppure utilizzare azioni di addizione/sottrazione/moltiplicazione/divisione pilotate dagli input. Le vars sono persistenti tra le sessioni.</p>
+<p>Le vars sono estremamente utili anche quando è auspicabile avere un valore di regolazione da utilizzare in più punti. Ad esempio, un aliante può avere alettoni divisi su ogni ala, in modo da utilizzare quelli interni come flap durante l'atterraggio. Tuttavia, durante il volo normale tutte e quattro le superfici agiscono come alettoni e quindi dovrebbero condividere un'impostazione comune del differenziale per contrastare l'imbardata avversa durante la virata, cosa che può essere ottenuta utilizzando un Var.</p>
+<p>Le vars possono essere sostituiti al normale valore numerico in tutti i parametri con la funzione "Opzioni", identificata dall'icona del menu (simbolo dell'hamburger). Consulta la sezione dedicata alla <a href="../../getting-started/user-interface-and-navigation/">funzione Opzioni</a>.</p>
+<p>Sono disponibili 64 vars.</p>
+<p><img alt="" src="../../assets/model-vars-add.png" /></p>
+<p>Tocca il pulsante "+" per aggiungere un nuovo Var.</p>
+<p><img alt="" src="../../assets/model-vars-actions.png" /></p>
+<p>Toccando un elenco di Var si apre una finestra di dialogo che ti permette di modificare, spostare, clonare o eliminare la Var evidenziata.</p>
+<h2 id="aggiunta-di-vars">Aggiunta di vars<a class="headerlink" href="#aggiunta-di-vars" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-vars-new_var.png" /></p>
+<p>Valore</p>
+<p>Visualizza il valore attuale della Var.</p>
+<p>Nome</p>
+<p>Permette di dare un nome al Var.</p>
+<p>Commento</p>
+<p>È possibile aggiungere un commento che ne spieghi l'uso o la funzione, per facilitare la comprensione.</p>
+<p>Gamma</p>
+<p>I limiti basso e alto di un intervallo possono essere impostati con un decimale entro il +/- 500% per mantenere il valore del Var entro limiti definiti.</p>
+<p>Valori</p>
+<p>Valori fissi</p>
+<p><img alt="" src="../../assets/model-vars-values.png" /></p>
+<p>Le vars possono contenere un singolo valore fisso (cioè una costante) con un decimale, come nell'esempio precedente.</p>
+<p>Valori multipli o variabili</p>
+<p><img alt="" src="../../assets/model-vars-add-value.png" /></p>
+<p>Seleziona "Aggiungi nuovo valore" per aggiungere un nuovo valore a un Var.</p>
+<p><img alt="" src="../../assets/model-vars-fm-dependent.png" /></p>
+<p>Ogni Var può contenere più valori a seconda delle condizioni attive (come le Fasi di volo) configurate. Nell'esempio precedente, mentre è attiva la Fase di volo Thermal FM4, la Var12 ha un valore del 9%. Quando è attiva la Fase di volo Speed FM5, la Var12 avrà un valore di -3%.</p>
+<p>Si noti che è stato impostato un intervallo tra -10% e +15% per evitare valori superiori a quelli desiderati.</p>
+<p>I vars sono persistenti tra le sessioni.</p>
+<p>Azioni</p>
+<p><img alt="" src="../../assets/model-vars-add-action.png" /></p>
+<p>Possono essere aggiunte azioni di tipo var, ad esempio per riutilizzare i ritagli o per eseguire calcoli.</p>
+<p>Riassegnazione Trim (recupero)</p>
+<p><img alt="" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
+<p>Una dei trim può essere riutilizzata per regolare il valore di un Var.</p>
+<p><img alt="" src="../../assets/model-vars-functions-repurpose.png" /></p>
+<p>Nell'esempio precedente, è stata definita un'azione per riutilizzare il trim del Gas - Throttle per la compensazione della curvatura solo durante la Fase di volo Atterraggio FM3. È stato impostato un intervallo tra 0 e 25% per mantenere il Var tra limiti ragionevoli. È possibile definire un valore di passo di trim con un decimale, ad esempio 1,0% nell'esempio precedente.</p>
+<p>i trim riutilizzate sono riutilizzate solo per quella specifica condizione attiva. In tutti gli altri momenti funzionano secondo le loro normali funzioni.</p>
+<p>Azioni aritmetiche</p>
+<p><img alt="" src="../../assets/model-vars-functions.png" /></p>
+<p>Le azioni possono anche essere impostate su:</p>
 <ul>
-<li><strong>Valore</strong> — valore corrente (visualizzazione in sola lettura).</li>
-<li><strong>Nome</strong> — modificabile.</li>
-<li><strong>Commento</strong> — testo libero che ne spiega lo scopo.</li>
-<li><strong>Intervallo</strong> — limiti inferiore/superiore (un decimale, entro ±500%)
-  che il valore della Var non può mai superare.</li>
+<li>Assegna un valore specifico alla Var</li>
+<li>Aggiungi(+) alla Var</li>
+<li>Sottrai(-) dalla Var</li>
+<li>Moltiplica(*) la Var per il parametro</li>
+<li>Dividi(/) il Var per il parametro</li>
+<li>Applica una percentuale al Var</li>
+<li>Min</li>
+<li>Max</li>
 </ul>
-<h3 id="valori">Valori<a class="headerlink" href="#valori" title="Permanent link">&para;</a></h3>
-<p><img alt="Valori della variabile" src="../../assets/model-vars-values.png" /></p>
-<ul>
-<li><strong>Fisso</strong> — una singola costante, con un decimale.</li>
-<li><strong>Multiplo/variabile</strong> — <strong>Aggiungi nuovo valore</strong> associa un valore a
-  ciascuna condizione attiva. Ad esempio <code>Var12</code> vale 9% mentre è attiva
-  la modalità di volo Thermal (FM4) e −3% mentre è attiva Speed (FM5),
-  con l'intervallo limitato a −10%…+15% affinché nessuno dei due possa
-  eccedere valori ragionevoli:</li>
-</ul>
-<p><img alt="Valori dipendenti dalla modalità di volo" src="../../assets/model-vars-fm-dependent.png" />
-  <img alt="Aggiungi un valore" src="../../assets/model-vars-add-value.png" /></p>
-<h3 id="azioni">Azioni<a class="headerlink" href="#azioni" title="Permanent link">&para;</a></h3>
-<p><img alt="Azioni della variabile" src="../../assets/model-vars-actions.png" />
-<img alt="Aggiungi azione" src="../../assets/model-vars-add-action.png" /></p>
-<p>Le azioni modificano nel tempo il valore di una Var, pilotate da un
-ingresso.</p>
-<p><strong>Trim riassegnato</strong> — affida uno dei trim fisici alla regolazione di
-questa Var anziché alla sua funzione normale, in genere vincolato a una
-sola condizione attiva:</p>
-<p><img alt="Riassegnare un trim" src="../../assets/model-vars-functions-repurpose.png" />
-<img alt="Selezionare il trim da riassegnare" src="../../assets/model-vars-functions-repurpose-select.png" /></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Riassegna il Trim Gas alla regolazione di una Var di compensazione
-del camber, ma solo mentre è attiva la modalità di volo Landing
-(FM3), con intervallo 0–25% e un passo dell'1,0% per scatto. Al di
-fuori di quella condizione attiva, il trim torna automaticamente alla
-sua funzione ordinaria.</p>
-</div>
-<p><strong>Azioni aritmetiche</strong> — pilotate da qualsiasi ingresso:</p>
-<ul>
-<li><strong>Assegna</strong> — imposta la Var su un valore specifico.</li>
-<li><strong>Somma</strong> / <strong>Sottrai</strong> / <strong>Moltiplica</strong> / <strong>Dividi</strong> — operazioni
-  aritmetiche sul valore corrente.</li>
-<li><strong>Percentuale</strong> — applica una percentuale dell'ingresso pilotante.</li>
-<li><strong>Min</strong> / <strong>Max</strong> — limita la Var rispetto all'ingresso pilotante.</li>
-</ul>
-<p><img alt="Azioni delle funzioni" src="../../assets/model-vars-functions.png" /></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>FS3(edge)</code> assegna direttamente 40% a una Var; <code>FS1(edge)</code> somma 2 a
-ogni pressione (fino al massimo dell'intervallo); <code>FS2(edge)</code> sottrae
-2 a ogni pressione (fino al minimo dell'intervallo). In questo caso
-l'opzione <strong>Edge</strong> (pressione prolungata sull'interruttore funzione)
-è importante: senza di essa l'azione verrebbe rieseguita di continuo
-per tutto il tempo in cui l'interruttore resta premuto, anziché una
-sola volta per ogni pressione.</p>
-</div>
-<p><img alt="Esempio pratico" src="../../assets/model-vars-calc-example.png" /></p>
+<p>Le azioni sono guidate dagli input.</p>
+<p><img alt="" src="../../assets/model-vars-calc-example.png" /></p>
+<p>Nell'esempio precedente, l'interruttore di funzione FS3(edge) assegnerà un valore di 40% alla Var, mentre FS1(edge) aumenterà il suo valore di 2 a ogni pressione del pulsante fino a raggiungere il massimo dell'intervallo e FS2(edge) diminuirà il suo valore di 2 fino a raggiungere il minimo dell'intervallo. Tieni presente che l'opzione Edge deve essere selezionata (premendo a lungo il tasto FS) in modo che l'azione venga eseguita solo quando l'interruttore di funzione cambia stato.</p>
+<h2 id="rimuovi-vars">Rimuovi VARS<a class="headerlink" href="#rimuovi-vars" title="Permanent link">&para;</a></h2>
+<p>La rimozione di un VAR convertirà contemporaneamente tutti i suoi utilizzi nel valore VAR.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modalita-di-connessione-usb" class="md-skip">
+        <a href="#modalita-di-connessione-usb-al-pc" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -799,10 +799,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modalita-a-radio-spenta" class="md-nav__link">
+  <a href="#modalita-radio-spenta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modalità a radio spenta
+        Modalità Radio Spenta
       
     </span>
   </a>
@@ -810,10 +810,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bootloader-mode" class="md-nav__link">
+  <a href="#modalita-bootloader" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modalità bootloader
+        Modalità Bootloader
       
     </span>
   </a>
@@ -821,10 +821,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modalita-a-radio-accesa" class="md-nav__link">
+  <a href="#modalita-radio-accesa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modalità a radio accesa
+        Modalità Radio Accesa
       
     </span>
   </a>
@@ -939,7 +939,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1276,7 +1276,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1865,7 +1865,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2343,7 +2343,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2961,7 +2961,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3270,7 +3270,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3740,10 +3740,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modalita-a-radio-spenta" class="md-nav__link">
+  <a href="#modalita-radio-spenta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modalità a radio spenta
+        Modalità Radio Spenta
       
     </span>
   </a>
@@ -3751,10 +3751,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bootloader-mode" class="md-nav__link">
+  <a href="#modalita-bootloader" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modalità bootloader
+        Modalità Bootloader
       
     </span>
   </a>
@@ -3762,10 +3762,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modalita-a-radio-accesa" class="md-nav__link">
+  <a href="#modalita-radio-accesa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modalità a radio accesa
+        Modalità Radio Accesa
       
     </span>
   </a>
@@ -3797,19 +3797,41 @@
   
 
 
-<h1 id="modalita-di-connessione-usb">Modalità di connessione USB<a class="headerlink" href="#modalita-di-connessione-usb" title="Permanent link">&para;</a></h1>
-<p><img alt="Menu USB" src="../../assets/usbmenu.png" /></p>
-<p>Ciò che avviene collegando la radio a un PC tramite USB dipende da come era alimentata la radio al momento del collegamento.</p>
-<h2 id="modalita-a-radio-spenta">Modalità a radio spenta<a class="headerlink" href="#modalita-a-radio-spenta" title="Permanent link">&para;</a></h2>
-<p>Collegando la radio a un PC tramite USB <strong>mentre è spenta</strong>, questa entra in modalità DFU, utilizzata per eseguire il flashing del bootloader stesso.</p>
-<h2 id="bootloader-mode">Modalità bootloader<a class="headerlink" href="#bootloader-mode" title="Permanent link">&para;</a></h2>
-<p>Accendi la radio <strong>tenendo premuto <code>ENT</code></strong> per avviarla in modalità bootloader (lo schermo mostra "Bootloader"). Collegando ora l'USB, lo stato cambia in "USB Plugged" e il PC monta <strong>due</strong> unità: la memoria flash interna della radio e il contenuto della SD card/eMMC. Questa è la modalità che permette di leggere e scrivere i file direttamente in entrambe le aree di memoria ed è anche il modo in cui <a href="../../ethos-suite/">Ethos Suite</a> aggiorna il firmware della radio: consulta la sezione Bootloader Mode di Ethos Suite.</p>
-<h2 id="modalita-a-radio-accesa">Modalità a radio accesa<a class="headerlink" href="#modalita-a-radio-accesa" title="Permanent link">&para;</a></h2>
-<p>Collegando l'USB mentre la radio è <strong>accesa normalmente</strong> compare un menu di selezione della modalità:</p>
+<h1 id="modalita-di-connessione-usb-al-pc">Modalità di connessione USB al PC<a class="headerlink" href="#modalita-di-connessione-usb-al-pc" title="Permanent link">&para;</a></h1>
+<h2 id="modalita-radio-spenta">Modalità Radio Spenta<a class="headerlink" href="#modalita-radio-spenta" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Joystick</strong> — la radio viene riconosciuta come joystick USB HID, per utilizzare i simulatori di volo su PC.</li>
-<li><strong>FrSky Suite</strong> — porta la radio in "modalità Ethos" per la comunicazione con <a href="../../ethos-suite/">Ethos Suite</a>.</li>
-<li><strong>Serial</strong> — invia le tracce di debug Lua tramite USB-seriale (115200 bps). La scheda Lua Development Tools di Ethos Suite dispone di un terminale integrato per visualizzarle; su Windows può essere necessario il driver Virtual COM Port.</li>
+<li>collegare la radio spenta a un PC tramite un cavo USB è la modalità DFU per il flashing del bootloader.</li>
+</ul>
+<h2 id="modalita-bootloader">Modalità Bootloader<a class="headerlink" href="#modalita-bootloader" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>La radio viene messa in modalità bootloader accendendo la radio e tenendo premuto il tasto enter. Sullo schermo verrà visualizzato il messaggio di stato "Bootloader".</p>
+</li>
+<li>
+<p>La radio può quindi essere collegata a un PC tramite un cavo dati USB. Il messaggio di stato cambierà in "USB Plugged" e il PC dovrebbe visualizzare due unità esterne collegate. La prima è la memoria flash della radio, mentre la seconda è il contenuto della scheda SD o eMMC.</p>
+</li>
+<li>
+<p>Questa modalità è utilizzata per leggere e scrivere file sulla scheda SD o eMMC e/o sulla memoria flash della radio.</p>
+</li>
+<li>
+<p>Questa modalità può essere utilizzata anche per collegarsi a FrSky Suite per aggiornare la radio. Fai riferimento alla <a href="#Bootloader_Mode">Modalità Bootloader </a>nella sezione FrSky Suite.</p>
+</li>
+</ul>
+<h2 id="modalita-radio-accesa">Modalità Radio Accesa<a class="headerlink" href="#modalita-radio-accesa" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Se la radio è collegata a un PC tramite un cavo dati USB mentre è accesa, viene visualizzata la seguente finestra di dialogo:</li>
+</ul>
+<p><img alt="" src="../../assets/usbmenu.png" /></p>
+<ul>
+<li>
+<p>In modalità joystick la radio può essere configurata per controllare i simulatori RC.</p>
+</li>
+<li>
+<p>In modalità FrSky Suite la radio entrerà in "modalità Ethos" per comunicare con FrSky Suite. Fai riferimento alla <a href="#Ethos_Mode">Modalità Ethos </a>nella sezione FrSky Suite.</p>
+</li>
+<li>
+<p>In modalità Seriale le tracce di debug Lua vengono inviate a USB-Seriale, se presente. La scheda Strumenti di sviluppo Lua di FrSky Suite ha una finestra di terminale integrata per visualizzare le tracce. Il baud rate è di 115200bps. Un driver per la porta COM virtuale di Windows può essere trovato <a href="https://www.st.com/en/development-tools/stsw-stm32102.html">qui</a>.</p>
+</li>
 </ul>
 
 
@@ -3817,9 +3839,6 @@
 
 
 
-
-  
-  
 
 
 

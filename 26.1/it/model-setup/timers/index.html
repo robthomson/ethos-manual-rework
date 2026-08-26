@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1196,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1417,10 +1417,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#campi-comuni-conteggio-decrescente-e-crescente" class="md-nav__link">
+  <a href="#timer-per-il-conto-alla-rovescia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Campi comuni (conteggio decrescente e crescente)
+        Timer per il conto alla rovescia
       
     </span>
   </a>
@@ -1428,10 +1428,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#azioni-audio" class="md-nav__link">
+  <a href="#timer-per-il-conto-alla-rovescia-crescente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Azioni audio
+        Timer per il conto alla rovescia crescente
       
     </span>
   </a>
@@ -1854,7 +1854,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2332,7 +2332,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2950,7 +2950,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3259,7 +3259,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3729,10 +3729,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#campi-comuni-conteggio-decrescente-e-crescente" class="md-nav__link">
+  <a href="#timer-per-il-conto-alla-rovescia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Campi comuni (conteggio decrescente e crescente)
+        Timer per il conto alla rovescia
       
     </span>
   </a>
@@ -3740,10 +3740,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#azioni-audio" class="md-nav__link">
+  <a href="#timer-per-il-conto-alla-rovescia-crescente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Azioni audio
+        Timer per il conto alla rovescia crescente
       
     </span>
   </a>
@@ -3776,85 +3776,99 @@
 
 
 <h1 id="timer">Timer<a class="headerlink" href="#timer" title="Permanent link">&para;</a></h1>
-<p><img alt="Timer" src="../../assets/model-timers.png" /></p>
-<p>Otto timer completamente programmabili, ciascuno con conteggio crescente o
-decrescente. Puoi aggiungerne uno toccando il simbolo <strong>+</strong> accanto alle
-intestazioni delle colonne, oppure selezionando <strong>Aggiungi</strong> più sotto.
-Toccando un timer si apre un menu a comparsa che consente di azzerare,
-modificare, aggiungere, spostare o copiare/incollare il timer.</p>
-<p><img alt="Modifica timer" src="../../assets/model-timer1-edit.png" /></p>
-<h2 id="campi-comuni-conteggio-decrescente-e-crescente">Campi comuni (conteggio decrescente e crescente)<a class="headerlink" href="#campi-comuni-conteggio-decrescente-e-crescente" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-icon-timers.png" /></p>
+<p><img alt="" src="../../assets/model-timers.png" /></p>
+<p>Ci sono 8 timer completamente programmabili che possono contare sia verso l'alto che verso il basso.</p>
+<p>Nella schermata principale dei timer (vedi sopra) è possibile aggiungere nuovi timer toccando il simbolo “+” accanto alle intestazioni delle colonne.</p>
+<p><img alt="" src="../../assets/model-timers-action-select.png" /></p>
+<p>Toccando una riga del timer si apre un popup con le opzioni per resettare o modificare il timer, aggiungere un nuovo timer, spostare o copiare/incollare il timer.</p>
+<h2 id="timer-per-il-conto-alla-rovescia">Timer per il conto alla rovescia<a class="headerlink" href="#timer-per-il-conto-alla-rovescia" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-timer1-edit.png" /></p>
+<p>Valore</p>
+<p>Mostra il valore attuale del timer.</p>
+<p>Nome</p>
+<p>Permette di dare un nome al timer.</p>
+<p>Modalità</p>
+<p>Il timer può contare su o <strong>giù</strong>.</p>
+<p>Valore iniziale</p>
+<p>Se il timer è stato impostato per il conteggio alla rovescia, il valore iniziale è il valore a partire dal quale il timer conta alla rovescia fino a zero.</p>
+<p>Condizione iniziale</p>
+<p>La condizione di avvio avvia il timer. Se la condizione di stop sottostante è impostata come predefinita, allora il timer si avvia e si ferma solo con la condizione di avvio. Se la condizione di stop sottostante non è "predefinita", allora il timer si avvia quando la condizione di avvio diventa vera e poi continua a scorrere.</p>
+<p>Condizione di stop</p>
+<p>Se la condizione di arresto è "predefinita", il timer è controllato solo dalla condizione di avvio.</p>
+<p><img alt="" src="../../assets/model-timer1-edit-stop.png" /></p>
+<p>Se non è "predefinito", una volta che il timer è in funzione, la condizione di stop controlla il timer. Il timer smette di funzionare quando la condizione di stop è vera, ma continua a funzionare quando la condizione di stop è falsa.</p>
+<p>Nell'esempio precedente, il timer viene avviato quando ThrottleActive diventa True e si ferma quando la telemetria non è più attiva.</p>
+<p>Sorgente di temporizzazione proporzionale</p>
+<p>Se è impostato su '---' il timer conta in tempo reale. Se è stata selezionata una fonte di temporizzazione proporzionale, la velocità del timer è controllata da questa fonte, ad esempio lo stick del Gas - Throttle o il canale del Gas - Throttle. Quando il valore del Gas - Throttle è -100%, il timer si ferma. Quando il valore del Gas - Throttle è +100%, il timer conta in tempo reale. Con valori intermedi del Gas - Throttle, il timer conta in modo proporzionale.</p>
+<p><img alt="" src="../../assets/model-timer1-add-action.png" /></p>
+<p>Reset - Azzeramento</p>
+<p>Il timer può essere resettato da posizioni di interruttori, interruttori di funzione, interruttori logici o posizioni di interruttori di trim. Si noti che il timer viene mantenuto in reset finché la condizione di reset è valida.</p>
+<p>Persistente</p>
+<p>L'opzione Persistente su On consente di memorizzare il valore del timer quando la radio viene spenta o il modello viene cambiato. Il valore verrà ricaricato al successivo utilizzo del modello.</p>
+<p>Voce</p>
+<p>Seleziona la voce da utilizzare per gli annunci vocali. Per maggiori dettagli, consulta la sezione <a href="../../system-setup/general/">Scelta delle voci</a>.</p>
+<p>Azioni audio</p>
+<p>Le azioni audio sono molto potenti e flessibili e consentono di configurare gli avvisi temporizzati esattamente in base alle esigenze dell'utente.</p>
+<p>Clicca su "Aggiungi una nuova azione audio".</p>
+<p><img alt="" src="../../assets/model-timer1-action-countdown.png" /></p>
+<p>Seleziona il tipo di azione audio richiesta, ad esempio "Conto alla rovescia" nell'esempio precedente.</p>
+<p>Iniziare</p>
+<p>Il valore iniziale è il valore da cui parte l'azione di conto alla rovescia.</p>
+<p>Passo</p>
+<p>Il valore del passo stabilisce gli intervalli in cui il valore del timer verrà annunciato. Il valore del passo può arrivare fino a 10 minuti (600 secondi).</p>
+<p>Aptico</p>
+<p>Se abilitato, il feedback aptico accompagnerà gli annunci.</p>
+<p><img alt="" src="../../assets/model-timer1-action-type-select.png" /></p>
+<p>I tipi di azione audio includono "Conta secondi" (con voce), "Conto alla rovescia con bip" (con bip al posto della voce), "Riproduci file" e "Riproduci valore".</p>
+<p><img alt="" src="../../assets/model-timer1-actions-summary.png" /></p>
+<p>In questo esempio sono state configurate tre azioni audio:</p>
 <ul>
-<li><strong>Valore</strong> — il valore attuale del timer.</li>
-<li><strong>Nome</strong> — permette di dare un nome al timer.</li>
-<li><strong>Modo</strong> — <strong>Up</strong> (crescente) o <strong>Down</strong> (decrescente).</li>
-<li><strong>Valore iniziale</strong> (solo conteggio decrescente) — il valore da cui parte il
-  conteggio alla rovescia.</li>
-<li><strong>Valore allarme</strong> (solo conteggio crescente) — il valore al quale il timer è
-  considerato scaduto; il conteggio prosegue oltre questo valore, ma nei widget
-  timer viene visualizzato in rosso.</li>
-<li><strong>Condizione di avvio</strong> — avvia il timer. Se la <strong>Condizione di arresto</strong> è
-  lasciata al valore predefinito, la sola condizione di avvio controlla sia
-  l'avvio <em>sia</em> l'arresto. In caso contrario, il timer parte la prima volta che
-  la condizione di avvio diventa vera e continua a funzionare da quel momento.</li>
-<li><strong>Condizione di arresto</strong> — se non lasciata al valore predefinito, controlla
-  il timer una volta avviato: fermo quando è vera, in funzione quando è falsa.
-  Nell'esempio seguente, un timer parte quando <code>ThrottleActive</code> diventa vero e
-  si ferma quando la telemetria non è più attiva:</li>
+<li>Innanzitutto, ogni 30 secondi verrà emesso un avviso di conto alla rovescia a partire dai 2 minuti rimanenti. L'avviso sarà vocale ed è stato attivato anche un feedback aptico.</li>
+<li>In secondo luogo un avviso di conto alla rovescia a partire dai 10 secondi rimanenti, dopodiché verrà emesso un segnale acustico ogni secondo. È stato attivato anche il feedback aptico.</li>
+<li>Infine, un file audio personalizzato "timup" verrà riprodotto quando il timer scade (cioè raggiunge lo zero), accompagnato da un feedback aptico.</li>
 </ul>
-<p><img alt="Condizione di arresto" src="../../assets/model-timer1-edit-stop.png" /></p>
+<p>Ulteriori azioni audio possono essere aggiunte toccando il pulsante "Aggiungi". Tieni presente che l'elenco deve essere in ordine di priorità, con la priorità più alta alla fine dell'elenco.</p>
+<h2 id="timer-per-il-conto-alla-rovescia-crescente">Timer per il conto alla rovescia crescente<a class="headerlink" href="#timer-per-il-conto-alla-rovescia-crescente" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-timer2-edit.png" /></p>
+<p>Valore</p>
+<p>Mostra il valore attuale del timer.</p>
+<p>Nome</p>
+<p>Permette di dare un nome al timer.</p>
+<p>Modalità</p>
+<p>Il timer può contare <strong>su</strong> o giù.</p>
+<p>Valore dell<strong><em>'allarme</em></strong></p>
+<p><img alt="" src="../../assets/model-timers-widget.png" /></p>
+<p>Se il timer è stato impostato per il conto alla rovescia, il parametro del valore dell'allarme imposta il valore al quale il timer scade. Il timer continua a contare, ma il valore diventa rosso nei widget del timer.</p>
+<p>Condizione iniziale</p>
+<p>La condizione di avvio avvia il timer. Se la condizione di stop sottostante è impostata come predefinita, allora il timer si avvia e si ferma solo con la condizione di avvio. Se la condizione di stop sottostante non è "predefinita", allora il timer si avvia quando la condizione di avvio diventa vera e poi continua a scorrere.</p>
+<p>Condizione di stop</p>
+<p>Se la condizione di arresto è "predefinita", il timer è controllato solo dalla condizione di avvio.</p>
+<p>Se non è "predefinito", una volta che il timer è in funzione, la condizione di stop controlla il timer. Il timer smette di funzionare quando la condizione di stop è vera, ma continua a funzionare quando la condizione di stop è falsa.</p>
+<p>Sorgente di temporizzazione proporzionale</p>
+<p>Se è impostato su '---' il timer conta in tempo reale. Se è stata selezionata una fonte di temporizzazione proporzionale, la velocità del timer è controllata da questa fonte, ad esempio lo stick del Gas - Throttle o il canale del Gas - Throttle. Quando il valore del Gas - Throttle è -100%, il timer si ferma. Quando il valore del Gas - Throttle è +100%, il timer conta in tempo reale. Con valori intermedi del Gas - Throttle, il timer conta in modo proporzionale.</p>
+<p>Reset - Azzeramento</p>
+<p>Il timer può essere resettato da posizioni di interruttori, interruttori di funzione, interruttori logici o posizioni di interruttori di trim. Si noti che il timer viene mantenuto in reset finché la condizione di reset è valida.</p>
+<p>Persistente</p>
+<p>L'opzione Persistente su On consente di memorizzare il valore del timer quando la radio viene spenta o il modello viene cambiato. Il valore verrà ricaricato al successivo utilizzo del modello.</p>
+<p>Voce</p>
+<p>Seleziona la voce da utilizzare per gli annunci vocali. Per maggiori dettagli, consulta la sezione <a href="../../system-setup/general/">Scelta delle voci</a>.</p>
+<p>Azioni audio</p>
+<p>Le azioni audio sono molto potenti e flessibili e consentono di configurare gli avvisi temporizzati esattamente in base alle esigenze dell'utente.</p>
+<p><img alt="" src="../../assets/model-timer2-actions-summary.png" /></p>
+<p>In questo esempio sono state configurate tre azioni audio:</p>
 <ul>
-<li><strong>Sorgente di temporizzazione proporzionale</strong> — con <code>---</code> il conteggio avviene
-  in tempo reale. Qualsiasi altra sorgente (ad esempio lo stick del gas o il
-  canale del gas) modifica la velocità del timer: a −100% il timer è fermo, a
-  +100% procede alla velocità reale e nei valori intermedi varia in modo
-  proporzionale.</li>
-<li><strong>Reset</strong> — un interruttore, un interruttore di funzione, un interruttore
-  logico o una posizione di trim che azzera il timer; il timer resta azzerato
-  per tutto il tempo in cui la condizione è vera.</li>
-<li><strong>Persistente</strong> — mantiene il valore del timer allo spegnimento o al cambio di
-  modello, ricaricandolo al successivo utilizzo del modello.</li>
-<li><strong>Voce</strong> — quale <a href="../../system-setup/general/#audio-settings">pacchetto vocale</a>
-  annuncia questo timer.</li>
+<li>In primo luogo, ogni 30 secondi verrà emesso un conto alla rovescia verso il valore dell'allarme a partire dai 2 minuti rimanenti. L'allarme sarà vocale ed è stato abilitato anche il feedback aptico.</li>
+<li>In secondo luogo un conto alla rovescia che parte dai 10 secondi rimanenti, dopodiché verrà emesso un segnale acustico ogni secondo. È stato attivato anche il feedback aptico.</li>
+<li>Infine, un file audio personalizzato "timsup" verrà riprodotto quando il timer scadrà raggiungendo il valore di allarme, accompagnato da un feedback aptico.</li>
 </ul>
-<h2 id="azioni-audio">Azioni audio<a class="headerlink" href="#azioni-audio" title="Permanent link">&para;</a></h2>
-<p><img alt="Aggiungi azione audio" src="../../assets/model-timer1-add-action.png" />
-<img alt="Tipo di azione" src="../../assets/model-timer1-action-type-select.png" />
-<img alt="Azione di conto alla rovescia" src="../../assets/model-timer1-action-countdown.png" /></p>
-<p>Configurazione degli avvisi completamente flessibile, specifica per ciascun
-timer. Ogni azione ha un tipo — <strong>Countdown</strong> (annuncio vocale), <strong>Beep
-countdown</strong> (segnali acustici anziché voce), <strong>Play file</strong> (riproduci file) o
-<strong>Play value</strong> (riproduci valore) — oltre ai seguenti parametri:</p>
-<ul>
-<li><strong>Start</strong> — il valore da cui inizia il conto alla rovescia di questa azione.</li>
-<li><strong>Step</strong> — intervallo tra gli annunci, fino a 10 minuti (600 s).</li>
-<li><strong>Haptic</strong> — accompagna l'annuncio con una vibrazione.</li>
-</ul>
-<p>Una tipica sequenza di tre azioni:</p>
-<p><img alt="Riepilogo azioni" src="../../assets/model-timer1-actions-summary.png" />
-<img alt="Azioni del timer 2" src="../../assets/model-timer2-actions-summary.png" /></p>
-<ol>
-<li>Conto alla rovescia vocale a partire da 2:00 rimanenti, ogni 30 s, con
-   vibrazione.</li>
-<li>Conto alla rovescia acustico a partire da 0:10 rimanenti, ogni 1 s, con
-   vibrazione.</li>
-<li>Un file personalizzato (ad esempio <code>timer-1-elapsed</code>) riprodotto allo
-   scadere, con vibrazione.</li>
-</ol>
-<p>Puoi aggiungere altre azioni con <strong>Aggiungi</strong>; l'elenco viene eseguito in ordine
-di priorità, con la <strong>priorità più alta per ultima</strong>.</p>
-<p>Consulta anche il <a href="../../displays/#widget-types">widget Timer Log</a> per uno
-storico delle esecuzioni precedenti del timer.</p>
-<p><img alt="Widget timer" src="../../assets/model-timers-widget.png" /></p>
+<p>Ulteriori azioni audio possono essere aggiunte toccando il pulsante "Aggiungi". Tieni presente che l'elenco deve essere in ordine di priorità, con la priorità più alta alla fine dell'elenco.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

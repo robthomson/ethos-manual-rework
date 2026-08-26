@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1196,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1529,46 +1529,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#funzione" class="md-nav__link">
+  <a href="#aggiunta-di-interruttori-logici" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funzione
+        Aggiunta di interruttori logici
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Funzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sticky" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sticky
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Edge
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shared-parameters" class="md-nav__link">
+  <a href="#parametri-condivisi" class="md-nav__link">
     <span class="md-ellipsis">
       
         Parametri condivisi
@@ -1579,10 +1551,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#da-utilizzare-con-la-telemetria" class="md-nav__link">
+  <a href="#interruttori-logici-da-utilizzare-con-la-telemetria" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Da utilizzare con la telemetria
+        Interruttori logici - da utilizzare con la telemetria
       
     </span>
   </a>
@@ -1601,10 +1573,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opzione-per-ignorare-linput-del-trainer-dallo-slave" class="md-nav__link">
+  <a href="#opzione-per-ignorare-linput-istruttore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opzione per ignorare l'input del trainer dallo slave
+        Opzione per ignorare l'input istruttore
       
     </span>
   </a>
@@ -1915,7 +1887,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2393,7 +2365,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -3011,7 +2983,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3320,7 +3292,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3790,46 +3762,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#funzione" class="md-nav__link">
+  <a href="#aggiunta-di-interruttori-logici" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funzione
+        Aggiunta di interruttori logici
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Funzione">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sticky" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sticky
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Edge
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shared-parameters" class="md-nav__link">
+  <a href="#parametri-condivisi" class="md-nav__link">
     <span class="md-ellipsis">
       
         Parametri condivisi
@@ -3840,10 +3784,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#da-utilizzare-con-la-telemetria" class="md-nav__link">
+  <a href="#interruttori-logici-da-utilizzare-con-la-telemetria" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Da utilizzare con la telemetria
+        Interruttori logici - da utilizzare con la telemetria
       
     </span>
   </a>
@@ -3862,10 +3806,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opzione-per-ignorare-linput-del-trainer-dallo-slave" class="md-nav__link">
+  <a href="#opzione-per-ignorare-linput-istruttore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opzione per ignorare l'input del trainer dallo slave
+        Opzione per ignorare l'input istruttore
       
     </span>
   </a>
@@ -3898,214 +3842,181 @@
 
 
 <h1 id="interruttori-logici">Interruttori logici<a class="headerlink" href="#interruttori-logici" title="Permanent link">&para;</a></h1>
-<p><img alt="Menu degli interruttori logici" src="../../assets/model-lsw-menu.png" /></p>
-<p>Gli interruttori logici sono interruttori <em>virtuali</em> programmati dall'utente:
-non sono comandi fisici, ma possono essere usati ovunque sia utilizzabile un
-interruttore fisico, come innesco di una funzione. Ciascuno valuta la
-condizione configurata rispetto ai propri ingressi (altri interruttori, valori
-di telemetria, valori dei mix, valori dei timer, canali gyro/trainer e altro
-ancora) per diventare Vero o Falso. Ne sono supportati fino a 100; non ne
-esiste nessuno per impostazione predefinita. Tocca il pulsante <strong>+</strong> per
-aggiungerne uno; l'etichetta di menu di un interruttore definito appare verde
-quando è Vero, rossa quando è Falso. Toccando un interruttore già definito si
-apre un menu a comparsa che consente di <strong>Modifica</strong>/<strong>Muovi</strong>/<strong>Copia-incolla</strong>/<strong>Clona</strong>/<strong>Cancella</strong>.</p>
-<p><img alt="Aggiunta di un interruttore logico" src="../../assets/model-lsw-add.png" /></p>
-<h2 id="funzione">Funzione<a class="headerlink" href="#funzione" title="Permanent link">&para;</a></h2>
-<p>Ogni funzione supporta un'uscita normale o invertita.</p>
+<p><img alt="" src="../../assets/model-icon-lsw.png" /></p>
+<p>Gli interruttori logici sono interruttori virtuali programmati dall'utente. Non si tratta di interruttori fisici che si possono girare da una posizione all'altra, ma possono essere utilizzati come trigger del programma allo stesso modo di qualsiasi interruttore fisico. Vengono attivati e disattivati (in termini logici diventano Vero o Falso) valutando le condizioni di ingresso rispetto alla programmazione dell'interruttore logico. Possono utilizzare una serie di ingressi come comandi e interruttori fisici, altri interruttori logici e altre fonti come valori di telemetria, valori di mix, valori di timer, canali di giroscopi e trainer. Possono anche utilizzare i valori restituiti da un modello di script LUA (da supportare).</p>
+<p>Sono supportati fino a 100 interruttori logici.</p>
+<p><img alt="" src="../../assets/model-lsw-add.png" /></p>
+<p>Non ci sono interruttori logici predefiniti. Tocca il pulsante "+" per aggiungere un interruttore logico.</p>
+<p><img alt="" src="../../assets/model-lsw-menu.png" /></p>
+<p>Una volta definiti gli interruttori logici, toccandone uno si aprirà il menu a comparsa di cui sopra, che ti permetterà di modificare, aggiungere, spostare, copiare/incollare, clonare o eliminare quell'interruttore.</p>
+<p><img alt="" src="../../assets/model-lsw-move.png" /></p>
+<p>Selezionando "Muovi" appariranno dei tasti freccia che permetteranno di spostare l'interruttore logico verso l'alto o verso il basso.</p>
+<h2 id="aggiunta-di-interruttori-logici">Aggiunta di interruttori logici<a class="headerlink" href="#aggiunta-di-interruttori-logici" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-lsw-A~X.png" /></p>
+<p>Nota che l'etichetta dell'interruttore logico nell'intestazione del menu è verde quando lo stato dell'interruttore logico è Vero, o rossa quando è Falso.</p>
+<p>Nome</p>
+<p>Permette di dare un nome all'interruttore logico.</p>
+<p>Funzione</p>
+<p>Le funzioni disponibili sono elencate di seguito. Tieni presente che tutte le funzioni possono avere uscite normali o invertite. Consulta anche la sezione dedicata ai parametri condivisi e le sezioni relative alla telemetria e al confronto delle sorgenti che seguono le descrizioni delle funzioni.</p>
+<p>A ~ X</p>
+<p>La condizione è Vera se il valore della sorgente selezionata 'A' è approssimativamente uguale (entro il 10% circa) a 'X', un valore definito dall'utente.</p>
+<p>Nella maggior parte dei casi, è meglio utilizzare la funzione approssimativamente uguale piuttosto che la funzione "esattamente" uguale.</p>
+<p>A = X</p>
+<p>La condizione è Vera se il valore della sorgente selezionata 'A' è 'esattamente' uguale a 'X', un valore definito dall'utente.</p>
+<p>È necessario prestare attenzione quando si utilizza la funzione "esattamente" uguale. Ad esempio, quando si verifica se una tensione è uguale a un'impostazione di 8,4V, la lettura telemetrica effettiva può saltare da 8,5V a 8,35V, quindi la condizione non è mai soddisfatta e l'interruttore logico non si accende.</p>
+<p>A &gt; X</p>
+<p>La condizione è Vera se il valore della sorgente selezionata 'A' è maggiore di 'X', un valore definito dall'utente.</p>
+<p>A &lt; X</p>
+<p>La condizione è Vera se il valore della sorgente selezionata 'A' è inferiore a 'X', un valore definito dall'utente.</p>
+<p>|A| &gt; X</p>
+<p>La condizione è Vera se il valore assoluto della sorgente selezionata 'A' è maggiore di 'X', un valore definito dall'utente. (Assoluto significa che non si tiene conto del fatto che 'A' sia positivo o negativo e si utilizza solo il valore).</p>
+<p>&lt;A| &lt; X</p>
+<p>La condizione è Vera se il valore assoluto della sorgente selezionata 'A' è inferiore a 'X', un valore definito dall'utente. (Assoluto significa che non si tiene conto del fatto che 'A' sia positivo o negativo e si utilizza solo il valore).</p>
+<p>∆ &gt; X</p>
+<p><img alt="" src="../../assets/model-lsw-delta-gtX.png" /></p>
+<p>La condizione è Vera se la variazione del valore "d" (cioè delta) della sorgente selezionata "A" è maggiore o uguale al valore definito dall'utente "X", entro l'"Intervallo di controllo". Se l'"Intervallo di controllo" è impostato su "---", l'intervallo di controllo diventa infinito.</p>
+<p>Consulta <a href="../../tutorials/basic-flybarless-heli/">questo esempio </a>per un utilizzo della funzione Delta.</p>
+<p>|∆| &gt; X</p>
+<p>La condizione è Vera se il valore assoluto della variazione '|d|' nella sorgente selezionata 'A' è maggiore o uguale al valore definito dall'utente 'X' (Assoluto significa che non tiene conto del fatto che 'A' sia positivo o negativo).</p>
+<p>RANGE Gamma (intervallo)</p>
+<p><img alt="" src="../../assets/model-lsw-range.png" /></p>
+<p>La condizione è Vera se il valore della sorgente selezionata "A" rientra nell'intervallo specificato</p>
+<p>AND</p>
+<p><img alt="" src="../../assets/model-lsw-AND.png" /></p>
+<p>La funzione AND può avere più valori. La condizione è vera se <strong>tutte le</strong> fonti selezionate in Valore 1, Valore 2 ... Valore(n) sono vere (cioè ON).</p>
+<p>OR</p>
+<p><img alt="" src="../../assets/model-lsw-OR.png" /></p>
+<p>La condizione è Vera se <strong>almeno una o più</strong> delle fonti selezionate in Valore 1, Valore 2 ... Valore(n) sono vere (cioè ON).</p>
+<p>XOR (OR esclusivo)</p>
+<p><img alt="" src="../../assets/model-lsw-XOR.png" /></p>
+<p>La condizione è Vera se <strong>solo una</strong> delle fonti selezionate in Valore 1, Valore 2 ... Valore(n) è vera (cioè ON).</p>
+<p>Generatore di timer</p>
+<p><img alt="" src="../../assets/model-lsw-timer-generator.png" /></p>
+<p>L'interruttore logico si accende e si spegne continuamente. Si accende per il tempo "Durata attiva" e si spegne per il tempo "Durata inattiva".</p>
+<p>Sticky / appicicoso</p>
+<p><img alt="" src="../../assets/model-lsw-sticky.png" /></p>
+<p>O con l’opzione EDGE/SOGLIA:</p>
+<p><img alt="" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
+<p>Per l’opzione Edge-Soglia, premere a lungo [Enter] sulla condizione di  Trigger ON o Trigger OFF quindi selezionare Edge-soglia.</p>
+<p><img alt="" src="../../assets/model-lsw-sticky-with-edge.png" /></p>
+<p>L'interruttore logico Sticky ha una funzione di blocco, nota anche come flip-flop Set/Reset. Il suo funzionamento è simile a quello di un flip-flop JK e quindi ha sempre stati inequivocabili in uscita.</p>
+<p>Si blocca su ON (cioè diventa True) quando vengono soddisfatte le condizioni di attivazione ON e mantiene il suo valore fino a quando non viene forzato su False quando vengono soddisfatte le condizioni di disattivazione OFF. Questo può essere controllato dal parametro opzionale “Condizione attiva”. Ciò significa che se la condizione attiva è True, l'uscita Sticky segue la condizione di blocco della funzione Sticky, soggetta a ritardi. Tuttavia, se la condizione attiva è False, anche l'uscita dell'interruttore logico viene mantenuta su False.</p>
+<p><strong>Nota:</strong> la funzione dell'interruttore logico Sticky è stata migliorata nella versione Ethos 1.6.2 con l'aggiunta dell'opzione Edge sugli ingressi trigger, che consente un'enorme flessibilità nella sua configurazione. È necessario eseguire test accurati per garantire il corretto funzionamento.</p>
+<p><strong>C</strong>ondizione di attivazione</p>
+<p>Se la condizione di attivazione è ad esempio SA↑ (nessun ritardo), l'uscita Sticky  passerà da False a True non appena SA diventa alta.</p>
+<p>Se la condizione di attivazione è SA↑ (ritardo=1s), l'uscita Sticky passerà da False a  True 1 secondo dopo che SA è diventato alto, a condizione che SA rimanga alto   durante questo ritardo.</p>
+<p>Se la condizione di attivazione è <bordo>SA↑ (ritardo=1s), l'uscita Sticky passerà  da True a False 1 secondo dopo che SA è diventato alto, anche se SA non rimane  alto durante questo ritardo.</p>
+<p>Condizione di disattivazione</p>
+<p>Se la condizione di disattivazione è ad esempio SB↑ (nessun ritardo), l'uscita Sticky   passerà da True a False non appena SB diventa alto.</p>
+<p>Se la condizione di Trigger OFF è SB↑ (ritardo=1s), l'uscita Sticky passerà da True a   False 1 secondo dopo che SB è diventato alto, a condizione che SB rimanga alto  durante questo ritardo.</p>
+<p>Se il Trigger OFF è <edge>SB↑ (ritardo=1s), lo Sticky passerà da True a False 1     secondo dopo che SB è diventato alto, anche se SB non rimane alto durante questo    ritardo.</p>
+<p>Condizione attiva</p>
+<p>Si noti che la funzione Sticky continua a funzionare, anche se il suo output è  controllato dall'ingresso “Condizione attiva”. Non appena la condizione attiva  diventa di nuovo True, la condizione di blocco di Sticky viene commutata all'output,    soggetta a eventuali ritardi.</p>
+<p>Ritardo prima di attivo/inattivo</p>
+<p>I ritardi di attivazione/disattivazione del trigger descritti sopra vengono applicati   DOPO la condizione attiva. Ciò significa che se la condizione attiva cambia, i periodi  di ritardo verranno applicati prima che la condizione di Sticky venga nuovamente    commutata sull'uscita.</p>
+<p>Funzione di commutazione</p>
+<p>Commutando contemporaneamente entrambi gli ingressi delle condizioni di trigger     da False a True, l'uscita di Sticky cambierà stato una volta.</p>
+<p>Nota: fare riferimento anche alla sezione “Parametri comuni” di seguito.</p>
+<p>Edge</p>
+<p><img alt="" src="../../assets/model-lsw-edge.png" /></p>
+<p>Edge è un interruttore momentaneo che diventa Vero per il periodo specificato in "Durata" quando le condizioni di attivazione del Edge sono soddisfatte.</p>
 <ul>
-<li><strong>A ~ X</strong> — Vero quando la sorgente <code>A</code> è <em>approssimativamente</em> uguale
-  (entro circa il 10%) a un valore fisso <code>X</code>. In genere preferibile
-  all'uguaglianza esatta —</li>
+<li>Opzione Edge ascendente</li>
 </ul>
-<p><img alt="A ~ X" src="../../assets/model-lsw-A~X.png" /></p>
-<p>— poiché, con <code>A = X</code>, una lettura di telemetria che oscilla, per esempio,
-  tra 8,5 V e 8,35 V attorno a un obiettivo di 8,4 V potrebbe semplicemente
-  non assumere mai esattamente il valore 8,4 V, e quindi l'interruttore non
-  scatterebbe mai.
-- <strong>A = X</strong> — Vero solo quando <code>A</code> è esattamente uguale a <code>X</code>.
-- <strong>A &gt; X</strong> / <strong>A &lt; X</strong> — Vero quando <code>A</code> è maggiore/minore di <code>X</code>.
-- <strong>|A| &gt; X</strong> / <strong>|A| &lt; X</strong> — come sopra, ma confrontando il valore assoluto
-  di <code>A</code> (segno ignorato).
-- <strong>Δ &gt; X</strong> — Vero quando la variazione di <code>A</code> (delta) nell'arco del
-  <strong>Controllo intervallo</strong> raggiunge almeno <code>X</code>. Un intervallo pari a <code>---</code>
-  indica una finestra temporale infinita.</p>
-<p><img alt="Delta maggiore di X" src="../../assets/model-lsw-delta-gtX.png" />
-  <img alt="Delta assoluto maggiore di X" src="../../assets/model-lsw-delta-AgtX.png" /></p>
+<p><img alt="" src="../../assets/model-lsw-edge-rising-edge.png" /></p>
+<p>During è diviso in due parti [t1:t2]. Con t1 di During = 0,0s e t2= 'Fronte di salita', l'interruttore logico diventa Vero (per il periodo specificato in 'Durata') nell'istante in cui la 'condizione di attivazione' passa da Falso a Vero.</p>
+<p><img alt="" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" /></p>
+<p>During è diviso in due parti [t1:t2]. Se t1 di During è un valore positivo (ad esempio 5,0s) e t2= 'Edge crescente', l'interruttore logico diventa Vero  (per il periodo specificato in 'Durata') 5 secondi dopo che la 'condizione di attivazione' passa da Falso a Vero. Qualsiasi altro "picco" durante il periodo t1 viene ignorato.</p>
 <ul>
-<li><strong>|Δ| &gt; X</strong> — come sopra, utilizzando il valore assoluto della variazione.</li>
-<li><strong>Intervallo</strong> — la condizione è Vera se il valore della sorgente
-  selezionata <code>A</code> rientra nell'intervallo specificato.</li>
+<li>Opzione Edge di caduta</li>
 </ul>
-<p><img alt="Intervallo" src="../../assets/model-lsw-range.png" /></p>
+<p><img alt="" src="../../assets/model-lsw-edge.png" /></p>
+<p>During è diviso in due parti [t1:t2]. Con During t1=0.0s e t2= '---' (fronte di caduta), l'interruttore logico diventa Vero (per il periodo specificato in 'Durata') nell'istante in cui la 'condizione di attivazione' passa da Vero a Falso.</p>
+<p><img alt="" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
+<p>During è diviso in due parti [t1:t2]. Se t1 di During è un valore positivo (ad esempio 3,0s) e t2= '---' (Edge di caduta), l'interruttore logico diventa Vero (per il periodo specificato in 'Durata') quando la 'condizione di attivazione' passa da Vero a Falso, dopo essere stata Vera per almeno 3 secondi.</p>
 <ul>
-<li><strong>AND</strong> — la condizione è Vera solo se tutte le fonti elencate
-  (Valore 1…Valore n) sono vere.</li>
+<li>Opzione impulso</li>
 </ul>
-<p><img alt="AND" src="../../assets/model-lsw-AND.png" /></p>
+<p>Il tempo è diviso in due parti [t1:t2]; se si inseriscono valori sia per t1 che per t2, è necessario un impulso per attivare l'interruttore logico.</p>
+<p><img alt="" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
+<p>Nell'esempio precedente, l'interruttore logico diventerà Vero per il periodo di "Durata" se la "Condizione di attivazione" passa da Falso a Vero, e poi passa da Vero a Falso dopo almeno 2 secondi ma non oltre 5 secondi.</p>
+<h2 id="parametri-condivisi">Parametri condivisi<a class="headerlink" href="#parametri-condivisi" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/model-lsw-common-parameters.png" /></p>
+<p>Gli interruttori logici hanno tutti una serie di parametri condivisi:</p>
+<p>Condizione attiva</p>
+<p>Gli interruttori logici possono essere regolati dal parametro opzionale "Condizione attiva". Ciò significa che se la condizione attiva è Vera, l'uscita dell'interruttore logico segue la condizione della funzione. Tuttavia, se la condizione attiva è Falsa, anche l'uscita dell'interruttore logico viene mantenuta Falsa.</p>
+<p>La "Condizione attiva" può essere selezionata tra le seguenti:</p>
 <ul>
-<li><strong>OR</strong> — la condizione è Vera se almeno una delle fonti elencate è vera.</li>
+<li>Sempre acceso</li>
+<li>Posizioni degli interruttori</li>
+<li>Interruttori di funzione</li>
+<li>Interruttori logici</li>
+<li>Posizioni di assetto</li>
+<li>Telemetria</li>
+<li>Fase di volo</li>
+<li>Eventi di sistema </li>
+<li>Mantenimento del Gas - Throttle</li>
+<li>Taglio del Gas - Throttle</li>
+<li>Gas - Throttle attivo</li>
+<li>Telemetria attiva</li>
+<li>RSSI basso</li>
+<li>Trainer attivo</li>
+<li>Reset - Azzeramento del volo</li>
 </ul>
-<p><img alt="OR" src="../../assets/model-lsw-OR.png" /></p>
-<ul>
-<li><strong>XOR</strong> (OR esclusivo) — la condizione è Vera se è vera <em>solo una</em> delle
-  fonti elencate.</li>
-</ul>
-<p><img alt="XOR" src="../../assets/model-lsw-XOR.png" /></p>
-<ul>
-<li><strong>Generatore di timer</strong> — l'interruttore logico si accende e si spegne
-  continuamente: si accende per il tempo <strong>Durata attiva</strong> e si spegne per il
-  tempo <strong>Durata inattiva</strong>.</li>
-</ul>
-<p><img alt="Generatore di timer" src="../../assets/model-lsw-timer-generator.png" /></p>
-<ul>
-<li><strong>Sticky</strong> — una funzione di blocco (Flip-flop SR); vedere
-  <a href="#sticky">più avanti</a>.</li>
-<li><strong>Edge</strong> — un impulso momentaneo; vedere <a href="#edge">più avanti</a>.</li>
-</ul>
-<h3 id="sticky">Sticky<a class="headerlink" href="#sticky" title="Permanent link">&para;</a></h3>
-<p><img alt="Sticky" src="../../assets/model-lsw-sticky.png" /></p>
-<p>Si blocca su <strong>Vero</strong> quando viene soddisfatta la <strong>Condizione Trigger ON</strong> e
-mantiene il suo valore finché non viene soddisfatta la <strong>Condizione Trigger
-OFF</strong> — il tutto controllato, facoltativamente, dal parametro <strong>Condizione
-attiva</strong> (finché questa è Falsa, anche l'uscita viene mantenuta su Falso; la
-funzione Sticky continua però a funzionare in background e la sua condizione
-di blocco viene nuovamente commutata all'uscita non appena la condizione
-attiva torna Vera, soggetta a eventuali ritardi).</p>
-<p>Dalla versione Ethos 1.6.2 entrambi i trigger accettano l'opzione <strong>Edge</strong>
-(premere a lungo <code>ENT</code> sulla condizione di trigger, quindi selezionare Edge —
-indicata dal prefisso <code>†</code>), che consente un controllo molto più fine:</p>
-<p><img alt="Sticky con edge" src="../../assets/model-lsw-sticky-with-edge.png" />
-<img alt="Selezione dell'opzione Edge" src="../../assets/model-lsw-sticky-edge-select.png" /></p>
-<ul>
-<li><strong>Trigger ON <code>SA</code> (nessun ritardo)</strong> — l'uscita Sticky passa da Falso a Vero
-  non appena SA diventa alto.</li>
-<li><strong>Trigger ON <code>SA</code> (ritardo = 1 s)</strong> — l'uscita Sticky passa da Falso a Vero
-  1 secondo dopo che SA è diventato alto, <em>a condizione</em> che SA rimanga alto
-  durante questo ritardo.</li>
-<li><strong>Trigger ON <code>†SA</code> (ritardo = 1 s)</strong> — l'uscita Sticky passa da Vero a Falso
-  1 secondo dopo che SA è diventato alto, <strong>anche se</strong> SA non rimane alto
-  durante questo ritardo (il fronte si è già verificato; il ritardo si limita
-  a temporizzare l'esito).</li>
-</ul>
-<p>La Condizione Trigger OFF si comporta allo stesso modo, in senso inverso. I
-ritardi vengono applicati <strong>DOPO</strong> la condizione attiva: ciò significa che se
-la condizione attiva cambia, i periodi di ritardo verranno applicati prima che
-la condizione di Sticky venga nuovamente commutata sull'uscita. Commutando
-contemporaneamente entrambi gli ingressi delle condizioni di trigger da Falso
-a Vero, l'uscita di Sticky <strong>cambierà stato</strong> una volta. Fare riferimento
-anche ai <a href="#shared-parameters">Parametri condivisi</a> più avanti.</p>
-<h3 id="edge">Edge<a class="headerlink" href="#edge" title="Permanent link">&para;</a></h3>
-<p><img alt="Edge" src="../../assets/model-lsw-edge.png" /></p>
-<p>Un interruttore momentaneo: diventa Vero per il periodo specificato in
-<strong>Durata</strong> quando le condizioni di attivazione del Edge sono soddisfatte.
-<strong>Durante</strong> è diviso in due parti <code>[t1:t2]</code> che ne determinano esattamente il
-momento:</p>
-<ul>
-<li><strong>Fronte di salita, Durante = 0.0s</strong> — l'interruttore logico diventa Vero
-  nell'istante in cui la Condizione Trigger ON passa da Falso a Vero.</li>
-</ul>
-<p><img alt="Fronte di salita" src="../../assets/model-lsw-edge-rising-edge.png" />
-  <img alt="Durante = 0" src="../../assets/model-lsw-edge-during-eq0.png" /></p>
-<ul>
-<li><strong>Fronte di salita, Durante ≥ 0.0s (ad es. 5.0s)</strong> — l'interruttore logico
-  diventa Vero 5 secondi dopo che la Condizione Trigger ON è passata a Vero;
-  qualsiasi altro "picco" più breve durante il periodo t1 viene ignorato.</li>
-</ul>
-<p><img alt="Durante &gt; 0, fronte di salita" src="../../assets/model-lsw-edge-during-gt0-rising-edge.png" />
-  <img alt="Durante &gt; 0" src="../../assets/model-lsw-edge-during-gt0.png" /></p>
-<ul>
-<li><strong>Fronte di caduta, Durante = 0.0s</strong> — l'interruttore logico diventa Vero
-  nell'istante in cui la Condizione Trigger ON passa da Vero a Falso.</li>
-<li><strong>Fronte di caduta, Durante ≥ 0.0s (ad es. 3.0s)</strong> — l'interruttore logico
-  diventa Vero al passaggio da Vero a Falso, ma solo dopo essere stato Vero
-  per almeno 3 secondi.</li>
-<li><strong>Impulso (t1 e t2 entrambi impostati)</strong> — l'interruttore logico diventa
-  Vero solo se la Condizione Trigger ON compie la sequenza Falso→Vero→Falso
-  all'interno di quella finestra (ad esempio dopo almeno 2 secondi ma non
-  oltre 5 secondi).</li>
-</ul>
-<h2 id="shared-parameters">Parametri condivisi<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
-<p><img alt="Parametri condivisi" src="../../assets/model-lsw-common-parameters.png" /></p>
-<ul>
-<li><strong>Condizione attiva</strong> — regola l'uscita dell'interruttore nello stesso modo
-  descritto sopra per Sticky. Può essere selezionata tra: Sempre acceso,
-  Posizioni degli interruttori, Interruttori di funzione, Interruttori logici,
-  Posizioni di Trim, Telemetria, Modalità di volo oppure un evento di sistema
-  (Mantenimento del Gas, Taglio del Gas, Gas attivo, Telemetria attiva, RSSI
-  basso, Trainer attivo, Azzeramento del volo).</li>
-<li><strong>Ritardo prima di attivare</strong> / <strong>Ritardo prima di disattivare</strong> —
-  determinano per quanto tempo le condizioni dell'interruttore logico devono
-  essere vere (o false) prima che l'uscita le segua; i ritardi possono
-  arrivare fino a 60.0s. Non sono rilevanti per il generatore di timer e il
-  Edge. (Vedere <a href="../../how-to/battery-capacity-warning/">Guida pratica: avviso di capacità della batteria</a>
-  per un ritardo usato per filtrare una caduta di tensione.)</li>
-<li><strong>Conferma prima di attivare</strong> / <strong>disattivare</strong> — quando l'interruttore
-  logico rileva un cambiamento di stato, questa opzione richiede la conferma
-  dell'utente prima che lo stato cambi (esiste un'opzione di cancellazione per
-  le situazioni in cui il menu di conferma viene attivato troppo
-  frequentemente) — comodo prima di iniziare qualcosa di pericoloso, ad
-  esempio per avere una conferma prima dello spegnimento a distanza di un
-  veicolo terrestre.</li>
-</ul>
-<p><img alt="Conferma vero" src="../../assets/model-lsw-confirm-lsw-true.png" />
-  <img alt="Conferma falso" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
-<ul>
-<li><strong>Durata Min</strong> — una volta che l'interruttore logico diventa Vero, rimarrà
-  Vero per almeno la durata minima specificata. Se si lascia il valore
-  predefinito <code>---</code>, l'interruttore diventerà Vero solo per un ciclo di
-  elaborazione del mix, troppo breve anche solo per vedere la riga diventare
-  in grassetto nell'interfaccia.</li>
-<li><strong>Durata Max</strong> — una volta che l'interruttore logico diventa Vero, torna
-  automaticamente Falso dopo la durata massima specificata, se impostata.
-  Entrambe le durate possono arrivare fino a 60.0s.</li>
-<li><strong>Commento</strong> — testo libero, che viene visualizzato quando questo
-  interruttore logico viene aggiunto a un widget di valori, per documentarne
-  l'utilizzo o la funzione.</li>
-</ul>
-<h2 id="da-utilizzare-con-la-telemetria">Da utilizzare con la telemetria<a class="headerlink" href="#da-utilizzare-con-la-telemetria" title="Permanent link">&para;</a></h2>
-<p>L'evento di sistema <strong>Telemetria attiva</strong> (oppure un interruttore la cui fonte
-è un sensore di telemetria, attivo solo mentre tale sensore fornisce dati)
-copre le condizioni del tipo "la telemetria è attualmente ricevuta".</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Quando in un <a href="../mixes/">mix</a> viene utilizzato un interruttore logico che
-utilizza la telemetria, è necessario aggiungere una <strong>seconda</strong> azione di
-mix che utilizzi lo stesso interruttore logico <strong>invertito</strong>, per
-garantire che il mix abbia valori validi anche in caso di perdita della
-telemetria: ricordate che quando un mix è inattivo l'uscita del canale
-sarà neutra (0% / 1500 µs, ovvero a <strong>metà accelerazione</strong> se si trova su
-un canale dell'acceleratore). In alternativa è possibile utilizzare
-un'azione <strong>Offset</strong>, che ha già due valori predefiniti distinti, uno per
-quando l'azione è attiva e uno per quando è inattiva — ad esempio con la
-sorgente impostata sul valore speciale <strong>0</strong> e l'offset regolato in modo
-che l'uscita del mix sia +100% quando <code>LS3</code> è attivo e −100% quando è
-inattivo, coprendo entrambi i casi con un'unica azione.</p>
-</div>
+<p>Nota che la funzione Appiccicosa continua a funzionare anche se la sua uscita è regolata dall'interruttore "Condizione attiva". Non appena la condizione attiva diventa di nuovo Vera, la condizione della funzione passa all'uscita dell'interruttore logico.</p>
+<p>Ritardo prima dell'attivazione</p>
+<p>Questo valore determina il tempo per cui le condizioni dell'interruttore logico devono essere vere prima che l'uscita dell'interruttore logico diventi vera (non è rilevante per il generatore di timer e il Edge). I ritardi possono arrivare fino a 60.0s.</p>
+<p>Fai riferimento a <a href="../../tutorials/basic-flybarless-heli/">questo esempio in </a>cui la tensione del Neuron ESC scende sotto i 4,2V per almeno x secondi.</p>
+<p>Ritardo prima dell'inattività</p>
+<p>Allo stesso modo, questo valore determina il tempo per cui le condizioni dell'interruttore logico devono essere false prima che l'uscita dell'interruttore logico diventi falsa (non rilevante per il generatore di timer e il Edge). I ritardi possono arrivare fino a 60.0s.</p>
+<p>Conferma prima dell'attivazione</p>
+<p>Quando un interruttore logico rileva un cambiamento di stato in attivo, questa opzione richiede la conferma dell'utente prima che lo stato cambi.</p>
+<p><img alt="" src="../../assets/model-lsw-confirm-lsw-true.png" /></p>
+<p>Alcuni esempi di utilizzo della funzione:</p>
+<ol>
+<li>
+<p>Per le macchine a terra dove puoi usarlo prima di iniziare qualcosa di pericoloso.</p>
+</li>
+<li>
+<p>Per quanto riguarda l'interruttore NFC, che consente di spegnere il modello dal trasmettitore, potrebbe essere utilizzato per avere una conferma prima dello spegnimento.</p>
+</li>
+</ol>
+<p>Conferma prima dell'inattività</p>
+<p>Quando un interruttore logico rileva un cambiamento di stato in attivo, questa opzione richiede la conferma dell'utente prima che lo stato cambi.</p>
+<p><img alt="" src="../../assets/model-lsw-confirm-lsw-false.png" /></p>
+<p>Durata minima</p>
+<p>Una volta che l'interruttore logico diventa Vero, rimarrà Vero per almeno la durata minima specificata. Se la durata è quella predefinita "---", l'interruttore logico diventerà Vero solo per un ciclo di elaborazione del mix, che è troppo breve per essere visto, quindi la linea LSW non sarà in grassetto. La durata può arrivare fino a 60.0s.</p>
+<p>Durata massima</p>
+<p>Se viene impostata una durata massima, una volta che l'interruttore logico diventa Vero, rimarrà Vero solo per la durata massima specificata. La durata può arrivare fino a 60.0s.</p>
+<p>Commento</p>
+<p>Un commento può essere aggiunto come spiegazione del suo utilizzo o della sua funzione, per facilitare la comprensione. Il commento viene visualizzato quando un interruttore logico viene aggiunto a un widget di valori.</p>
+<h2 id="interruttori-logici-da-utilizzare-con-la-telemetria">Interruttori logici - da utilizzare con la telemetria<a class="headerlink" href="#interruttori-logici-da-utilizzare-con-la-telemetria" title="Permanent link">&para;</a></h2>
+<p>Se la fonte di un interruttore logico è un sensore di telemetria, se il sensore è attivo l'interruttore logico sarà attivo.</p>
+<p>Oltre alle normali categorie di condizioni attive, gli interruttori logici e le funzioni speciali hanno una condizione "Telemetria attiva" (sotto "Evento di sistema") che è attiva quando viene ricevuta la telemetria.</p>
+<p>Attenzione Warning!</p>
+<p>Quando in un mix viene utilizzato un interruttore logico che utilizza la telemetria, è necessario aggiungere un'azione di mix aggiuntiva che utilizza lo stesso interruttore logico invertito (cioè quando è inattivo) per garantire che il mix abbia valori validi anche in caso di perdita della telemetria. Ricordate che quando un mix è inattivo, l'uscita del canale sarà neutra = 0% = 1500us o metà acceleratore se si trova su un canale dell'acceleratore!</p>
+<p><img alt="" src="../../assets/model-mix-eg-using-weight.png" /></p>
+<p>L'esempio sopra mostra l'aggiunta dell'interruttore logico VFRlow, nonché il suo inverso !VFRlow per garantire che il mix abbia sempre valori validi.</p>
+<p>In alternativa, è possibile utilizzare un'azione Offset:</p>
+<p><img alt="" src="../../assets/model-mix-eg-using-offset-actions.png" /></p>
+<p>Le azioni di offset hanno due valori predefiniti: uno per quando l'azione di offset è attiva e uno per quando l'azione di offset è inattiva. Questo copre tutti i casi.</p>
+<p><img alt="" src="../../assets/model-mix-eg-using-offset.png" /></p>
+<p>Quanto sopra mostra la riga di riepilogo del mix con l'offset che ha sempre un valore valido. L'origine è stata impostata sul valore speciale 0, quindi l'offset verrà aggiunto allo 0% e l'uscita del mix sarà +100% quando VFRlow è attivo, o -100% quando VFRlow è inattivo.</p>
 <h2 id="confronto-tra-le-fonti">Confronto tra le fonti<a class="headerlink" href="#confronto-tra-le-fonti" title="Permanent link">&para;</a></h2>
-<p>Normalmente la sorgente viene confrontata con un valore fisso, ma è possibile
-confrontare direttamente due sorgenti dello <em>stesso</em> formato (cioè con le
-stesse unità di misura) — ad esempio due timer, due tensioni o due sorgenti
-RPM.</p>
-<h2 id="opzione-per-ignorare-linput-del-trainer-dallo-slave">Opzione per ignorare l'input del trainer dallo slave<a class="headerlink" href="#opzione-per-ignorare-linput-del-trainer-dallo-slave" title="Permanent link">&para;</a></h2>
-<p><img alt="Ignora ingresso trainer" src="../../assets/model-lsw-ignore-trainer-input.png" /></p>
-<p>Le <a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">opzioni</a>
-di una sorgente permettono di ignorare qualsiasi sorgente proveniente
-dall'ingresso del trainer slave (cioè dell'allievo). Un'applicazione tipica è
-quella in cui un interruttore logico è configurato per rilevare il movimento
-degli stick del <strong>master</strong> (ad esempio per consentire un intervento immediato
-se le cose vanno male), evitando che anche gli ingressi degli stick
-dell'allievo lo facciano scattare. Viene utilizzato in genere insieme a un
-interruttore di addestramento per disabilitare/abilitare la condizione attiva
-nella funzione di addestramento master.</p>
+<p><img alt="" src="../../assets/model-lsw-delta-AgtX.png" /></p>
+<p>Normalmente la sorgente (A) viene confrontata con un Valore fisso (X). Tuttavia, è possibile confrontare due sorgenti dello stesso formato (cioè con le stesse unità di misura). Ad esempio, si possono confrontare due timer, due tensioni o due sorgenti RPM.</p>
+<h2 id="opzione-per-ignorare-linput-istruttore">Opzione per ignorare l'input istruttore<a class="headerlink" href="#opzione-per-ignorare-linput-istruttore" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/trainer-take-back-ailinput-ignore.png" /></p>
+<p>Nei commutatori logici le sorgenti possono avere l'opzione "Ignora ingresso trainer" impostata per ignorare qualsiasi sorgente proveniente dall'ingresso del trainer slave.</p>
+<p>Un'applicazione tipica è quella in cui un interruttore logico è configurato per rilevare il movimento degli stick dell'istruttore master (ad esempio gli stick degli alettoni e dell'elevatore) per consentire un intervento immediato se le cose vanno male. Questa opzione è necessaria per evitare che gli ingressi degli stick del trainer slave (cioè dell'allievo) facciano scattare l'interruttore logico.</p>
+<p>L'interruttore logico viene utilizzato in genere insieme a un interruttore di addestramento per disabilitare/abilitare la "condizione attiva" nella funzione di addestramento master.</p>
+<p>Si prega di far riferimento alla sezione appendice 11. Come configurare la ripresa istantandea dell’istruttore per un esempio pratico.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 

@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#script-lua-modello" class="md-skip">
+        <a href="#lua" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -854,7 +854,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione di sistema
+    Panoramica
   
 
     
@@ -1196,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Configurazione del modello
+    Panoramica
   
 
     
@@ -1747,10 +1747,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#per-gli-autori-di-script" class="md-nav__link">
+  <a href="#funzioni-di-script-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Per gli autori di script
+        Funzioni di script Lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installazione
       
     </span>
   </a>
@@ -1865,7 +1876,7 @@
   <span class="md-ellipsis">
     
   
-    Display
+    Configura le schermate
   
 
     
@@ -2343,7 +2354,7 @@
   <span class="md-ellipsis">
     
   
-    Tutorial
+    Tutorial di programmazione
   
 
     
@@ -2961,7 +2972,7 @@
   <span class="md-ellipsis">
     
   
-    Note sulle radio
+    Radio Notes
   
 
     
@@ -3270,7 +3281,7 @@
   <span class="md-ellipsis">
     
   
-    Ethos Suite
+    FrSky Suite
   
 
     
@@ -3762,10 +3773,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#per-gli-autori-di-script" class="md-nav__link">
+  <a href="#funzioni-di-script-lua" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Per gli autori di script
+        Funzioni di script Lua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installazione
       
     </span>
   </a>
@@ -3797,51 +3819,39 @@
   
 
 
-<h1 id="script-lua-modello">Script Lua (modello)<a class="headerlink" href="#script-lua-modello" title="Permanent link">&para;</a></h1>
-<p><img alt="Configurazione Lua" src="../../assets/model-lua-config.png" /></p>
-<p>Il menu Lua appare solo se è stato installato uno script sorgente o di
-attività Lua nella cartella <code>scripts/</code> sulla SD card o eMMC (vedi
-<a href="../../system-setup/file-manager/#top-level-folders">Gestione file</a>) —
-serve per attivare e configurare selettivamente tali script <strong>per il
-modello attivo</strong>, non per installarli. Una volta installati, i sorgenti o
-le attività Lua sono disponibili globalmente per ogni modello; questa
-pagina è il punto in cui ogni modello li abilita e ne definisce la
-propria configurazione. Alcuni esempi di script sorgente e attività Lua
-sono pubblicati sulla pagina web Ethos-Feedback-Community
-(<code>/lua/examples/task</code>, <code>/lua/examples/source</code>).</p>
+<h1 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-lua.png" /></p>
+<p>Il menu Lua appare solo se l'utente ha installato uno script sorgente o di attività Lua nella cartella <em>scripts (</em>/ sulla scheda SD o eMMC.</p>
+<p>Utilizzando gli script Lua è possibile creare sorgenti personalizzate, come ad esempio sensori personalizzati, o creare attività che eseguono azioni personalizzate, come ad esempio la registrazione dei dati in un file al termine del volo.</p>
+<p>Una volta installati, i sorgenti o le attività Lua sono disponibili globalmente per ogni modello. Questo menu può quindi essere utilizzato per attivare e configurare selettivamente i rispettivi script sorgente e attività per il modello attivo.</p>
+<p>Ci sono alcuni esempi di script sorgente e attività Lua nella pagina web ETHOS-Feedback-Community, vedi /lua/examples/task e /lua/examples/source.</p>
+<p><img alt="" src="../../assets/model-lua-config.png" /></p>
 <h2 id="compiti-lua">Compiti Lua<a class="headerlink" href="#compiti-lua" title="Permanent link">&para;</a></h2>
-<p>Vengono elencate tutte le attività disponibili, ciascuna con un
-interruttore di abilitazione per il modello attivo. Se un'attività è
-abilitata, viene mostrato il modulo di configurazione Lua associato (se
-previsto) — lo script dell'attività fornisce una funzione di lettura e
-una di scrittura per consentire a ogni modello di salvare i propri
-parametri di configurazione. Ad esempio, un'attività può esporre un
-intervallo numerico configurabile, impostabile in modo indipendente per
-ciascun modello.</p>
-<h2 id="sorgenti-lua">Sorgenti Lua<a class="headerlink" href="#sorgenti-lua" title="Permanent link">&para;</a></h2>
-<p>Per le sorgenti vale lo stesso schema: abilitazione per il modello
-attivo, quindi configurazione tramite il modulo fornito dallo script
-della sorgente. Una sorgente registrata in questo modo diventa
-utilizzabile come una comune
-<a href="../../getting-started/user-interface-and-navigation/#choosing-a-source">sorgente</a>
-in qualsiasi altra parte di Ethos, esattamente come una sorgente
-integrata.</p>
-<h2 id="per-gli-autori-di-script">Per gli autori di script<a class="headerlink" href="#per-gli-autori-di-script" title="Permanent link">&para;</a></h2>
-<p>Le sorgenti e le attività vengono registrate da Lua tramite
-<code>system.registerSource()</code> e <code>system.registerTask()</code> — consulta la Ethos
-Lua Reference Guide e la sezione <a href="../../lua-scripts/">Script
-Lua</a> di questo manuale per l'ambiente di
-scripting generale (i widget sono un meccanismo separato ma correlato —
-vedi <a href="../../displays/custom-widgets/">Widget personalizzati</a>).</p>
+<p>Per ogni attività:</p>
+<p>Abilitazione dell'attività</p>
+<p>Vengono elencati tutti i compiti disponibili. Ogni attività può essere abilitata per il modello attivo.</p>
+<p>Configurazione dell'attività</p>
+<p>Se un'attività è abilitata, viene mostrato il modulo di configurazione Lua associato per consentire all'attività di essere configurata per il modello attivo. L'attività avrà una funzione di lettura e una di scrittura per consentire all'utente di salvare tutti i parametri di configurazione.</p>
+<p>Nell'esempio precedente, l'attività ha un intervallo configurabile che può essere personalizzato per ogni modello che utilizza l'attività.</p>
+<h2 id="sorgenti-lua"><strong><em>Sorgenti</em></strong> Lua<a class="headerlink" href="#sorgenti-lua" title="Permanent link">&para;</a></h2>
+<p>Per ogni fonte:</p>
+<p>Abilitazione <strong><em>fonte</em></strong></p>
+<p>Vengono elencate tutte le fonti Lua disponibili. Ogni sorgente può essere abilitata per il modello attivo.</p>
+<p>Configurazione della <strong><em>fonte</em></strong></p>
+<p>Se una sorgente è abilitata, viene mostrato il modulo di configurazione Lua associato per consentire alla sorgente di essere configurata per il modello attivo (come Range nell'esempio della schermata dell’attività sopra). La sorgente avrà una funzione di lettura e una di scrittura per consentire all'utente di salvare tutti i parametri di configurazione.</p>
+<h2 id="funzioni-di-script-lua">Funzioni di script Lua<a class="headerlink" href="#funzioni-di-script-lua" title="Permanent link">&para;</a></h2>
+<p>Le funzioni Lua applicabili sono:</p>
+<p>system.registerSource()</p>
+<p>system.registerTask()</p>
+<p>Per maggiori dettagli, consulta la <a href="https://www.frsky-rc.com/wp-content/uploads/Downloads/EthosSuite/LuaDoc/index.html">Guida di riferimento Ethos Lua</a>.</p>
+<h2 id="installazione">Installazione<a class="headerlink" href="#installazione" title="Permanent link">&para;</a></h2>
+<p>I sorgenti e i task Lua sono installati nella cartella "scripts" sulla scheda SD o eMMC. Consulta la sezione <a href="../../system-setup/file-manager/">scripts </a>in Sistema / File manager.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
