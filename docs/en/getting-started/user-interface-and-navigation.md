@@ -1,172 +1,204 @@
-# User Interface & Navigation
+# User Interface and Navigation
 
-Ethos can be operated entirely with the right-hand **rotary encoder** (turn
-to move the highlight, press for `ENT`) and the `RTN` key to back out of a
-menu — the touchscreen, where fitted, is a shortcut for the same actions,
-not a separate way of working. `MDL`, `DISP`, and `SYS` jump straight to
-Model Setup, Configure Screens, and System Setup respectively (the same
-three tiles as the bottom bar); a long press on `RTN` from anywhere returns
-straight to the home screen.
+The radio has a touch screen, making the user interface quite intuitive. Touching the [Model Setup](../model-setup/index.md) (Airplane icon), [Configure Screens](../displays/index.md) (Multiple screens icon), and [System Setup](../system-setup/index.md) (Gear icon) tabs take you directly to those functions, which are described in those sections of the manual. They can also be accessed using the \[MDL\], \[DISP\] and \[SYS\] keys respectively.
 
-## The reset menu
+Alternately the rotary selector may be used to move the highlight to the desired tile or parameter, followed by pressing Enter to select it.
 
-![Contextual menu](../assets/resetmenu.png)
+A long press on the \[RTN\] key will return you to the Home screen from any sub-menu.
 
-A long press on `ENT` from the home screen opens a reset menu:
+Touching the system time on the right of the bottom bar takes you to the Date & Time section, allowing you to set the time and date.
 
-- **Reset flight** — resets telemetry, timers, and function switches, and
-  re-runs the pre-flight [checklist](../model-setup/checklist.md).
-- **Reset telemetry** — resets telemetry only.
-- **Reset timers** — resets timers only.
-- **Lock touchscreen** — also reachable by pressing `ENT` + `PAGE`
-  together for one second from the home screen, or as a [special
-  function](../model-setup/special-functions.md) trigger.
+Touching the speaker or battery icons in the top bar will bring up the relevant Sound & Vibr. and Battery control panels.
+
+## Reset menu
+
+![](../assets/resetmenu.png)
+
+A long press on the \[ENT\] key from the Home screens brings up a reset menu:
+
+### Reset flight
+
+Reset flight will reset telemetry, the timers, and the function switches. Note that preflight checks will be done after a ‘Reset flight’.
+
+### Reset telemetry
+
+Will reset telemetry, and clear any ‘sensor lost’ or ‘sensor conflict’ red dot alerts. Please refer to [Sensor lost / conflict alerts](../model-setup/telemetry.md).
+
+### Reset timers
+
+Will reset the timers.
+
+## Lock touchscreen
+
+The LCD touchscreen may be locked to prevent inadvertent operation by pressing \[ENT\] and \[Page\] simultaneously for 1 second from the Home screen. It is also available as a special function.
 
 ## Editing controls
 
-**Adding functional elements** — a timer, logical switch, special
-function, curve, or variable is created by tapping the **+** next to the
-column headings in the relevant menu. On a non-touch radio, highlight an
-existing element, press `ENT`, and choose **Add** from the menu — the same
-option is available on touch radios too.
+### Adding functional elements
+
+You can create a new functional element such as a timer, logic switch, special function, curve or variable by tapping on the ‘+’ symbol next to the column headings in the relevant main menu.
+
+On radios without a touchscreen, use the rotary encoder to scroll to the ‘+’ button and then press ENT.
 
 ### Virtual keyboard
 
-![Text keyboard](../assets/keyboard-text-azerty.png)
+On touchscreen radios Ethos provides a virtual keyboard for editing text fields.
 
-Touching any text field (or pressing `ENT` on one) opens the on-screen
-keyboard. The backspace key erases to the left of the cursor; `PAGE`
-deletes to the right, and once the cursor reaches the end of the text,
-continues deleting from the left. Touching the field itself moves the
-cursor to that position — or use `SYS`/`DISP` to move it left/right without
-touch. The **?123**/**abc** key toggles the numeric keypad (which also
-carries special characters):
+![](../assets/keyboard-text-azerty.png)
 
-![Numeric keyboard](../assets/keyboard-text-numbers.png)
+Simply touch on any text field (or click \[ENT\]) to bring up the keyboard.
 
-On a **non-touch radio**, pressing `ENT` on a text field enters edit mode
-directly: turn the encoder to scroll through lower case, upper case, digits,
-then special characters, pressing `ENT` to insert each one. `MDL` toggles
-the case of the character immediately to the right of the cursor (and
-every character typed after stays in that case until toggled again).
-`PAGE` deletes to the right of the cursor; `SYS`/`DISP` move it left/right.
+Touch the backspace key (above the Enter button) to back space, erasing characters to the left of the cursor. Press the \[Page\] key to delete characters to the right of the cursor. Once you get to the end on the right, the \[Page\] key will start deleting any remaining characters to the left of the cursor.
 
-## Number value controls
+Touch the text field to move the cursor to that position. Alternatively, press the \[SYS\] key to move the cursor to the left, or the \[DISP\] key to move it to the right.
 
-![Number entry](../assets/keyboard-numbers.png)
+![](../assets/keyboard-text-numbers.png)
 
-Touching a numeric field opens a control strip at the bottom of the
-screen: **`<`**/**`>`** change the step size (cycling between decades —
-e.g. 0.01/0.1/1.0/10.0), **`-`**/**`+`** (or the rotary encoder) adjust the
-value by that step, and **More** opens further options:
+Touch the '?123' or 'abc' key to toggle between alpha and numeric keypads. The numeric keyboard also has the special characters. There is also a caps lock for entering uppercase letters.
 
-![Number entry options](../assets/keyboard-numbers-options.png)
+#### Radios without a touchscreen
 
-- Jump to the field's default value
-- Set to minimum / set to maximum
-- Replace the stepper with a **slider**
+On radios without a touchscreen, press the \[ENT\] key on any text field to go into edit mode.
 
-![Slider entry](../assets/keyboard-numbers-slider.png)
+Rotate the rotary encoder to scroll through the upper and lower case alphabets and the numerals, followed by the special characters. Press \[ENT\] to insert the character. The \[MDL\] key will change the case of the character to the immediate right of the cursor. Any following characters will remain in the new case until the case is changed again.
 
-The slider (also adjustable with the rotary encoder) is faster for coarse
-changes; **Disable slider** reverts to the stepper. Telemetry range values
-are edited the same way:
+Press the \[Page\] key to delete characters to the right of the cursor.
 
-![Slider disabled](../assets/keyboard-numbers-options-disable-slider.png)
+Press the \[SYS\] key to move the cursor to the left, or the \[DISP\] key to move it to the right.
 
-## The Options feature {: #the-options-feature }
+### Number value controls
 
-Almost anywhere a value or [source](#choosing-a-source) is expected, a long
-press on `ENT` opens an **Options** dialog — look for the small menu
-("hamburger") icon in a field's top-left corner as the sign that it's
-available.
+![](../assets/keyboard-numbers.png)
 
-### Value options
+When touching a number value a dialog appear at the bottom of the screen with the number value controls:
 
-![Source options](../assets/source-with-options.png)
+- ‘<’ and ‘>’ buttons for changing the step size between the minimum (as appropriate) and going up in decades, e.g. 0.01%, 0.1%, 1.0% or 10.0%.  
 
-The value options dialog names the parameter being edited and offers a
-choice between fixed minimum/maximum or driving it from a **source** (e.g.
-a pot, to adjust the value in flight). If the field already uses a source,
-the same long press instead offers to convert that source's current value
-into a fixed value:
+- ‘-’ and ‘+’ buttons incrementing or decrementing the value by the selected step size. The rotary encoder can also be used to adjust the value.  
 
-![Convert source to value](../assets/source-convert-to-value.png)
+- a ‘More’ button on the right for additional options, see below.
 
-### Choosing a source {: #choosing-a-source }
+![](../assets/keyboard-numbers-options.png)
 
-Selecting **Choose a source** opens a two-column picker — a **category**
-first (analogs, switches, logical switches, trims, channels, a gyro axis,
-a trainer channel, a timer, a telemetry sensor, or a handful of special
-values), then the specific member of it:
+The ‘More’ button on the right opens another dialog for additional options:
 
-![Source menu](../assets/source-menu.png)
+- the default value
+- set to minimum
+- set to maximum
+- replace the controls with a slider for adjustment, see below
 
-Once a source is set, the same long press opens options specific to what
-kind of source it is:
+![](../assets/keyboard-numbers-slider.png)
 
-**Any source** —
+The slider allows for the value to be adjusted quickly. The rotary encoder can also be used.
 
-- **Invert** — negates the source (e.g. active when a switch is *not* up,
-  instead of when it is).
-- **Edge** — fires once on a transition (false→true or true→false) rather
-  than staying active for the whole state; shown with a `†` prefix on the
-  source. Available on switches generally, and specifically on the
-  [Sticky logical switch](../model-setup/logical-switches.md) trigger
-  condition.
+![](../assets/keyboard-numbers-options-disable-slider.png)
 
-**Stick sources** — calibration/subtrim-style options:
+To revert back to the number adjustment keys, select ‘Disable slider.
 
-![Stick source options](../assets/source-stick-options.png)
+![](../assets/keyboard-numbers-on-telemetry.png)
 
-**Switch sources** —
+Another example is a telemetry range value, which can be edited in a similar way.
 
-![2-position switch options](../assets/source-2pos-options.png)
-![Switch options](../assets/switch-options.png)
+### Options feature
 
-- **Invert** — inverts the switch action.
-- **Half range** — for a 2-position switch or logical switch, changes its
-  output range from ±100% to 0–100%.
+Ethos has a very powerful 'Options' feature. Almost anywhere a value or source is expected, a long press of the Enter key will bring up an options dialog.
 
-**Throttle sources** — the throttle input has its own extra options:
+![](../assets/source-with-options.png)
 
-- **Positive** — only the positive-going half of the input feeds the mix.
-- **Negative** — only the negative-going half of the input feeds the mix.
-  **Positive**/**Negative** together are the usual way to split a single
-  surface-model trigger into throttle (positive half) and brake (negative
-  half).
-- **Invert** — reverses the input.
-- **Ignore trainer input** — see below.
+Fields with this feature can be identified by the menu icon (hamburger symbol) in the top left corner of the field.
 
-**Trim sources** —
+For radio-level adjustments like Main volume, Speaker mute, Vario volume, Display brightness and Sleep brightness you cannot select a source which is model-dependent (like a logic switch, function switch or a flight mode).
 
-![Trim source options](../assets/source-trim-options.png)
+#### Value options
 
-- **Invert** — inverts the trim action (useful inside a free mix's
-  Actions).
-- **Full range** — trims default to ±25%; as a source this can be widened
-  to ±100% with a long press on `ENT` on the trim.
-- **Ignore trainer input** — on a [logical
-  switch](../model-setup/logical-switches.md), excludes trainer-input
-  movement from tripping the switch. Typical use: detecting the *master*
-  trainer's own stick movement (e.g. to intervene instantly if the student
-  does something wrong) without the student's stick inputs also triggering
-  it.
+![](../assets/source-menu.png)
 
-**Variable sources** —
+The value options dialog shows which parameter is being configured. In this example you have the choice of setting the weight/rates to maximum, 0, minimum, or to use a source. Using a source like a pot would allow the weight/rates to be adjusted in flight.
 
-![Variable source options](../assets/source-var-options.png)
+![](../assets/source-convert-to-value.png)
 
-- **Invert** — negates the variable's value for this use.
-- **Ignore range** — some fields have asymmetric ranges (e.g. Outputs'
-  Min/Max, which run −150–0% and 0–150% respectively). Unless a
-  [variable](../model-setup/variables.md) used as that field's source has
-  an identical range, enable this to skip Ethos's automatic range
-  conversion and avoid unexpected values.
+If you long press Enter on a value field that has already been changed to use a source, a dialog pops up allowing you to convert the source's current value to a fixed value.
 
-**Telemetry sensor sources** — reduce the source to its live minimum or
-maximum instead of the instantaneous reading (some sensors add further
-sensor-specific options beyond this):
+Clicking on 'Options' will bring up options for the source, see below.
 
-![Sensor min/max options](../assets/source-sensor-options.png)
-![Sensor max selected](../assets/source-sensor-maxi.png)
+#### Source options
+
+##### Source option for logic switches
+
+![](../assets/switch-options.png)
+
+###### Invert
+
+Invert allows a source such as a switch position to be negated or inverted. For example instead of being active when switch SA is up, it would be active when switch SA is NOT up, i.e. in either the mid or down positions.
+
+###### Edge
+
+You can select the 'Edge' option if you need a one-time action when the source transitions from False to True or from True to False. Only the transition is acted upon, not the True or False state.
+
+A ‘†’ character will be displayed as a prefix to the source indicate the Edge option.
+
+Please note that the ‘Edge’ option is available on switches but depending on the context. It is also available on the [Sticky](../model-setup/logical-switches.md) logic switch trigger conditions.
+
+##### Source option for switches
+
+![](../assets/source-2pos-options.png)
+
+###### Invert
+
+The invert option allows the switch action to be inverted.
+
+###### Half range
+
+The ‘Half range’ option is available when using a 2-POS Switch or logic switch as a source. The range becomes \[0-100%\] instead of \[-100%-100%\].
+
+##### Source option for the throttle input
+
+##### ![](../assets/model-mixes-thr-options.png)
+
+- If ‘Positive’ is enabled, only the positive-going half of the input control is fed into the mix.
+- If ‘Negative ’ is enabled, only the negative-going half of the input control is fed into the mix.
+
+The above two options are commonly used in surface models where the trigger operates both throttle (positive going half) and brake (negative going half).
+
+- Enable ‘Invert’ to reverse the input control.
+- Enabling ‘Ignore trainer input’ prevents the student radio from affecting the mix. Refer to the ‘Ignore trainer input’ section for more details.
+
+##### Source option for trims
+
+![](../assets/source-trim-options.png)
+
+###### Invert
+
+The invert option allows trim action to be inverted, useful in mixes Actions.
+
+###### Full range
+
+By default trims have a range of +/- 25%. When used as a source, trims can optionally be changed to full range +/- 100% (long press Enter on the trim).
+
+##### Ignore trainer input
+
+![](../assets/model-lsw-ignore-trainer-input.png)
+
+In logic switches the sources may have this option set to ignore sources coming from the trainer input. A typical application is where a logic switch is configured to detect movement of the master trainer’s sticks (e.g. Elevator stick) to allow for instant intervention if things go wrong. This option is needed to prevent the student stick inputs from triggering the logic switch.
+
+#### Var options
+
+![](../assets/source-var-options.png)
+
+##### Invert
+
+Enabling Invert will make the Var value negative in this instance.
+
+##### Ignore range
+
+Some parameters have asymmetric ranges, such as the Min/Max parameters in the Channels section, which have ranges of (-150% to 0%) and (0% to +150%) respectively. When using VARs as a source to adjust the Min/Max parameters, unless the Var has an identical range, it will be necessary to set the Var range to be ignored to avoid unexpected values due to range conversion.
+
+#### Sensor options
+
+![](../assets/source-sensor-options.png)
+
+On a telemetry source the options dialog allows its maximum or minimum value to be used.
+
+![](../assets/source-sensor-maxi.png)
+
+Some sensors have additional options specific to that sensor.

@@ -1,0 +1,7 @@
+# X18/X18SE Layout
+
+![](../assets/Pictures/1000000100000834000006B3FAE8CCDC.png)
+
+![](../assets/Pictures/10000001000008FA000006B8BE5EE54D.png)
+
+![](../assets/Pictures/10000001000006B80000057C416CF024.png)

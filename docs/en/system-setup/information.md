@@ -1,70 +1,99 @@
-# Information
+# Info
 
-![System information](../assets/system-info.png)
+![](../assets/system-icon-info.png)
 
-System firmware details, gimbal type, internal/external RF module info,
-bound receiver info, radio runtime, error logs, and factory reset.
+The Info page displays system firmware information, gimbals type, internal module firmware version, ACCESS, TD or TW receiver firmware and external module information.
 
-## Radio information
+## X18 and X20
 
-- **Serial number** — the radio's serial number.
-- **Firmware** — Ethos version and radio type (e.g. X20).
-- **Firmware Version** — build variant, e.g. FCC, LBT, or Flex.
-- **Date** — firmware build date/time.
-- **RAM available** — free system RAM, useful for spotting a misbehaving
-  Lua script; also exposed as a System [source](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-  so it can be shown in a widget.
-- **Sticks** — installed gimbal Hall sensor version (or "ADC" for analog
-  gimbals).
-- **Internal Module** — hardware and firmware versions of the internal RF
-  module.
-- **Receiver** — the currently bound receiver's details, shown after the
-  internal module. If a redundant receiver shares the same slot as the
-  main one, the two alternate on the display (e.g. an Archer SR10 Pro
-  shown alongside its redundant R9MM-OTA under "Receiver1").
-- **External Module** — hardware/firmware details for a fitted FrSky
-  external RF module using the ACCESS protocol. Multi-protocol modules
-  aren't shown here.
+![](../assets/system-info.png)
 
-![X20 Pro info](../assets/system-info-x20pro.png)
+### Serial number
 
-## Radio runtime
+Serial number of the radio.
 
-![Radio runtime](../assets/system-info-radio-runtime.png)
+### Firmware
 
-Tracks total transmitter usage time; **Reset** zeroes it.
+Ethos firmware, and radio type (e.g. X20).
 
-## Errors
+### Firmware Version
 
-![Errors](../assets/system-info-errors.png)
+Current firmware version and type, e.g. FCC, LBT, or Flex.
 
-A red triangle in the main-view top bar means Ethos has logged an error,
-shown in detail here. Causes include:
+### Date
 
-- **Lua script errors** — a problem in a running Lua script.
-- **RAM backup error** — a model too large for the model-backup RAM. Ethos
-  expanded this from 4K to 32K, so it's now unlikely to be hit, but if it
-  is, it's a significant error: the model loads more slowly from the SD
-  card instead of backup RAM if [Emergency
-  Mode](../getting-started/emergency-mode.md) is triggered.
-- **Running a nightly firmware build** — a reminder that nightly builds
-  aren't intended for flying.
+The firmware version date and time.
 
-**Reset** clears logged errors — handy mid Lua-debugging session.
+### RAM available
 
-## Factory reset
+Shows the system RAM available. This is useful for checking for misbehaving Lua scripts. This is also available as a System Value so it can be displayed in a widget for example.
 
-![Factory reset](../assets/system-info-factory-reset.png)
+### Sticks
 
-Restores the radio to factory settings entirely on-device — no PC
-connection needed.
+The gimbal Hall sensor version installed. ADC is for analog.
 
-![Factory reset confirmation](../assets/system-info-factory-reset-confirm.png)
+### Internal Module
 
-!!! danger
-    Confirming erases **all** models, logs, screenshots, documents,
-    scripts, bitmaps, and radio settings. A progress bar tracks the erase,
-    after which all drives unmount and the radio reboots.
+Details of the internal RF module, including hardware and firmware versions.
 
-The X20 Pro/R/RS Info page shows the equivalent information for that
-radio family.
+### Receiver
+
+![](../assets/system-info-radio-runtime.png)
+
+Bound receiver details are shown after the Internal Module. If a redundant receiver is bound to the same slot as the main receiver, the receiver details will be shown alternately on the display. The example above shows an Archer SR10 Pro and it's redundant R9MM-OTA shown against Receiver1 details.
+
+### Radio runtime
+
+The radio runtime timer keeps track of the total transmitter usage. A Reset button allows it to be reset to zero.
+
+### Errors
+
+![](../assets/Pictures/1000000100000320000001E06CE26A5D.png)
+
+When ETHOS detects an error a red triangle error warning icon is displayed in the main view top bar. The Errors panel displays the errors.
+
+Errors may be due to:
+
+#### Lua script errors
+
+Lua script related problems will result in error messages.
+
+#### RAM backup error
+
+A model may be so huge that it exceeds the backup ram. ETHOS has now expanded the RAM space for model backup from 4k to 32k, so it is unlikely to be exceeded now. This is a major error and will make the model load slower in Emergency Mode from the SD instead of backup RAM.
+
+#### Write log errors
+
+A log writing error alert is raised if problems are encountered by the ‘Write logs’ special function, probably due to SD card errors.
+
+#### Running a nightly firmware build
+
+If a nightly firmware build has been loaded, the warning icon serves to remind the user that nightly builds are not for flying.
+
+A Reset button allows the errors to be cleared, for example during Lua debug sessions.
+
+### External Module
+
+Details of any external FrSky RF module (if fitted), including hardware and firmware versions if ACCESS protocol.
+
+Multimodules are not shown.
+
+### Reset factory settings
+
+![](../assets/system-info-factory-reset.png)
+
+Allows returning the radio to its factory settings. No PC USB connection is needed, it is all done on the radio.
+
+![](../assets/system-info-factory-reset-confirm.png)
+
+When you confirm that you want to reset to the factory settings, the radio erases all models, log files, screenshots, documents, scripts, bitmaps and the radio settings.
+
+![](../assets/Pictures/1000000100000320000001E069ACF0CF.png)
+
+There is a progress bar during the erase process. It will then unmount all drives and reboot the radio.
+
+## X20 Pro/R/RS
+
+![](../assets/system-info-x20pro.png)
+
+Similar information for the X20 Pro/R/RS.

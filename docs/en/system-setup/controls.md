@@ -1,38 +1,21 @@
-# Controls
+# Sticks
 
-![Sticks](../assets/system-sticks.png)
+![](../assets/system-icon-sticks.png)
 
-Called **Sticks** in the menu — stick mode and the default channel
-assignment order.
+![](../assets/system-sticks.png)
 
-## Stick mode
+Select your preferred stick mode. Mode 1 has throttle and aileron on the right stick, and elevator and rudder on the left. Mode 2 has throttle and rudder on the left stick, and aileron and elevator on the right.
 
-- **Mode 1** — throttle and aileron on the right stick, elevator and
-  rudder on the left.
-- **Mode 2** — throttle and rudder on the left stick, aileron and elevator
-  on the right.
-
-Sticks are named for the industry-standard modes by default, and can be
-renamed.
+By default the sticks are named as listed above for the industry standard stick modes. They may be renamed as desired.
 
 ## Channel order
 
-Defines the order the four stick inputs are assigned to channels when a
-new model is built by the [Model Select](../model-setup/model-select.md)
-wizards. Default is **AETR**. Where an airframe has more than one of a
-given surface, they group together unless [First four channels
-fixed](#first-four-channels-fixed) is on — e.g. 2 ailerons becomes
-**AAETR**.
+![](../assets/system-sticks-rx-order.png)
 
-![Receiver channel order](../assets/system-sticks-rx-order.png)
+The ‘Channel order’ defines the order in which the four stick inputs are assigned to channels in the mixes when a new model is created by the wizards. The default order is AETR. If there are more than one of each type of surface, they will be grouped unless the first four channels are fixed, see below. For example, for 2 ailerons the channel order will be AAETR.
 
-## First four channels fixed {: #first-four-channels-fixed }
+## First four channels fixed
 
-With this enabled, the first four channels are never grouped. With order
-**AETR** and an airframe with 2 ailerons, 1 elevator, 1 motor, 1 rudder,
-and 2 flaps, the wizard produces **AETRAFF** (channels 1–4 stay exactly
-A-E-T-R, with the second aileron and both flaps appended after) instead of
-**AAETRFF**. This is the setting that makes the wizard build models
-suited to SRx stabilized receivers, which expect that fixed layout.
+![](../assets/system-sticks-4ch-fixed.png)
 
-![4-channel fixed order](../assets/system-sticks-4ch-fixed.png)
+When this option is enabled, then channel grouping will not occur on the first four channels. If the channel order is AETR, then the wizard will create a model suited to the SRx stabilized receivers. For example, a model with 2 Ailerons, 1 Elevator, 1 Motor, 1 Rudder and 2 Flaps will be created with a channel order of AETRAFF. If this option is not enabled, the channel order would be AAETRFF.

@@ -1,183 +1,307 @@
-# Logical Switches
+# Logic Switches
 
-![Logical switches menu](../assets/model-lsw-menu.png)
+![](../assets/model-icon-lsw.png)
 
-Logical switches are user-programmed *virtual* switches — not physical
-controls, but usable anywhere a physical switch can be, as a program
-trigger. Each one evaluates its configured condition against its inputs
-(other switches, telemetry values, mix values, timer values, gyro/trainer
-channels, and more) to become True or False. Up to 100 are supported;
-none exist by default. Add one with **+**; a defined switch's menu label
-shows green when True, red when False. Tap an existing one for
-**Edit**/**Move**/**Copy-paste**/**Clone**/**Delete**.
+Logical switches are user programmed virtual switches. They aren’t physical switches that you flip from one position to another, however they can be used as program triggers in the same way as any physical switch. They are turned on and off (in logical terms they become True or False) by evaluating the input conditions against the programming for the logical switch. They may use a variety of inputs such as physical controls and switches, other logical switches, and other sources such as telemetry values, mixes values, timer values, gyro and trainer channels. They can even use values returned by a LUA model script (to be supported).
 
-![Add logical switch](../assets/model-lsw-add.png)
+Up to 100 logic switches are supported.
 
-## Function
+![](../assets/model-lsw-add.png)
 
-Every function supports a normal or inverted output.
+There are no default logic switches. Tap on the ‘+’ button to add a logic switch.
 
-- **A ~ X** — true when source `A` is *approximately* equal (within
-  ~10%) to a fixed value `X`. Generally preferable to exact equality —
+![](../assets/model-lsw-menu.png)
 
-  ![A ~ X](../assets/model-lsw-A~X.png)
+Once logic switches have been defined, tapping on a logic switch will bring up the above popup menu, allowing you to edit, move, copy/paste, clone or delete that switch.
 
-  — since with `A = X`, a telemetry reading that jitters between, say,
-  8.5V and 8.35V around an 8.4V target may simply never land exactly on
-  8.4V, so the switch would never fire.
-- **A = X** — true only when `A` exactly equals `X`.
-- **A > X** / **A < X** — true when `A` is greater/less than `X`.
-- **|A| > X** / **|A| < X** — as above, but comparing `A`'s absolute
-  value (sign ignored).
-- **Δ > X** — true when the change in `A` (delta) over the **Check
-  interval** reaches at least `X`. An interval of `---` means an infinite
-  window.
+![](../assets/model-lsw-move.png)
 
-  ![Delta greater than X](../assets/model-lsw-delta-gtX.png)
-  ![Absolute delta greater than X](../assets/model-lsw-delta-AgtX.png)
+Selecting 'Move' will bring up arrow keys allowing the logic switch to be moved up or down.
 
-- **|Δ| > X** — as above, using the absolute value of the change.
-- **Range** — true when `A` falls within a specified range.
+## Adding logic switches
 
-  ![Range](../assets/model-lsw-range.png)
+![](../assets/model-lsw-A~X.png)
 
-- **AND** — true only if every source listed (Value 1…N) is true.
+Note that the logic switch label in the menu heading is green when the state of the logic switch is True, or red when False.
 
-  ![AND](../assets/model-lsw-AND.png)
+### Name
 
-- **OR** — true if at least one listed source is true.
+Allows the logic switch to be named.
 
-  ![OR](../assets/model-lsw-OR.png)
+### Function
 
-- **XOR** (exclusive OR) — true if *exactly one* listed source is true.
+The functions available are listed below. Please note that all functions may have normal or inverted outputs. Please also refer to the shared parameters section, as well as the telemetry and comparison of sources sections following the function descriptions below.
 
-  ![XOR](../assets/model-lsw-XOR.png)
+#### A ~ X
 
-- **Timer generator** — free-runs on/off continuously: on for **Duration
-  active**, off for **Duration inactive**.
+The condition is True if the value of the selected source 'A' is approximately equal (within about 10%) to 'X', a user defined value.
 
-  ![Timer generator](../assets/model-lsw-timer-generator.png)
+In most cases, it is better to use the approximately equals function rather than the 'exactly' equals function.
 
-- **Sticky** — a latch (SR flip-flop); see [below](#sticky).
-- **Edge** — a momentary pulse; see [below](#edge).
+#### A = X
 
-### Sticky
+The condition is True if the value of the selected source 'A' is 'exactly' equal to 'X', a user defined value.
 
-![Sticky](../assets/model-lsw-sticky.png)
+Care must be taken when using the 'exactly' equals function. For example, when testing if a voltage is equal to a setting of 8.4V, the actual telemetry reading may jump from 8.5V to 8.35V, so the condition is never met and the Logical Switch will never turn on.
 
-Latches **True** once its **Trigger ON** condition is met, and stays
-True until **Trigger OFF** is met — gated, optionally, by **Active
-condition** (while that's False, the output is held False regardless;
-Sticky's internal latch keeps evaluating in the background and is
-switched through to the output again as soon as Active condition returns
-True, subject to delays).
+#### A > X
 
-Since Ethos 1.6.2, both triggers accept an **Edge** modifier (long-press
-`ENT` on the trigger condition, select Edge — shown with a `†` prefix) for
-much finer control:
+The condition is True if the value of the selected source 'A' is greater than 'X', a user defined value.
 
-![Sticky with edge](../assets/model-lsw-sticky-with-edge.png)
-![Edge option select](../assets/model-lsw-sticky-edge-select.png)
+#### A < X
 
-- **Trigger ON `SA` (no delay)** — latches True the instant SA goes high.
-- **Trigger ON `SA` (delay = 1s)** — latches True 1s after SA goes high,
-  *provided* SA is still high at the end of that second.
-- **Trigger ON `†SA` (delay = 1s)** — latches True→False 1s after SA goes
-  high, **regardless** of whether SA is still high by then (the edge
-  already happened; the delay just times the outcome).
+The condition is True if the value of the selected source 'A' is less than 'X', a user defined value.
 
-Trigger OFF behaves the same way in reverse. Delays apply **after** the
-Active condition — so a change in Active condition re-triggers the delay
-timing before the latched value reaches the output again. Flipping both
-triggers from False→True simultaneously **toggles** the Sticky's output
-once. See also [Shared parameters](#shared-parameters) below.
+#### |A| > X
 
-### Edge
+The condition is True if the absolute value of the selected source 'A' is greater than 'X', a user defined value. (Absolute means disregarding whether 'A' is positive or negative, and just using the value.)
 
-![Edge](../assets/model-lsw-edge.png)
+#### |A| < X
 
-A momentary pulse: True for **Duration**, once its trigger condition is
-satisfied. **During** is a `[t1:t2]` pair controlling exactly when:
+The condition is True if the absolute value of the selected source 'A' is less than 'X', a user defined value. (Absolute means disregarding whether 'A' is positive or negative, and just using the value.)
 
-- **Rising edge, During = 0.0s** — fires the instant Trigger ON goes
-  False→True.
+#### ∆ > X
 
-  ![Rising edge](../assets/model-lsw-edge-rising-edge.png)
-  ![During = 0](../assets/model-lsw-edge-during-eq0.png)
+![](../assets/model-lsw-delta-gtX.png)
 
-- **Rising edge, During ≥ 0.0s (e.g. 5.0s)** — fires 5s after Trigger ON
-  goes True, ignoring any shorter "spikes" during that 5s window.
+The condition is True if the change in value 'd' (i.e. delta) of the selected source ‘A’ is greater than or equal to the user defined value 'X', within the 'Check interval'. If the 'Check interval' is set to '---', then the check interval becomes infinite.
 
-  ![During > 0, rising edge](../assets/model-lsw-edge-during-gt0-rising-edge.png)
-  ![During > 0](../assets/model-lsw-edge-during-gt0.png)
+Please refer to this example for one use of the Delta function.
 
-- **Falling edge, During = 0.0s** — fires the instant Trigger ON goes
-  True→False.
-- **Falling edge, During ≥ 0.0s (e.g. 3.0s)** — fires on the True→False
-  transition, but only if it had been True for at least 3s first.
-- **Pulse (both t1 and t2 set)** — fires only if Trigger ON goes
-  False→True→False within that window (e.g. between 2s and 5s later).
+#### |∆| > X
 
-## Shared parameters {: #shared-parameters }
+The condition is True if the absolute value of the change '|d|' in the selected source ‘A’ is greater than or equal to the user defined value 'X'. (Absolute means disregarding whether ‘A’ is positive or negative.). again, if the 'Check interval' is set to '---', then the check interval becomes infinite.
 
-![Common parameters](../assets/model-lsw-common-parameters.png)
+#### Range
 
-- **Active condition** — gates the switch's output the same way as
-  Sticky's, above. Options: Always on, switch/function switch/logical
-  switch/trim positions, Telemetry, Flight modes, or a system event
-  (Throttle hold, Throttle cut, Throttle active, Telemetry active, RSSI
-  low, Trainer active, Flight reset).
-- **Delay before active** / **Delay before inactive** — how long the
-  condition must hold True (or False) before the output follows, up to
-  60s. Not relevant to Timer generator or Edge. (See [How-To: Battery
-  Capacity Warning](../how-to/battery-capacity-warning.md) for a delay
-  used to debounce a voltage dip.)
-- **Confirmation before active** / **inactive** — prompts for user
-  confirmation before the state actually changes (with a Cancel option,
-  for cases where it fires too often to be useful) — handy for gating
-  something risky, e.g. confirming before powering down a ground vehicle
-  remotely.
+![](../assets/model-lsw-range.png)
 
-  ![Confirm true](../assets/model-lsw-confirm-lsw-true.png)
-  ![Confirm false](../assets/model-lsw-confirm-lsw-false.png)
+The condition is True if the value of the selected source 'A' is within the range specified.
 
-- **Min Duration** — once True, stays True for at least this long. Left
-  at `---`, the output may only be True for a single mixer cycle — too
-  brief to even see the line go bold in the UI.
-- **Max Duration** — once True, automatically reverts to False after this
-  long, if still set. Both durations go up to 60s.
-- **Comment** — free text, shown wherever this switch is added to a value
-  widget, to document its purpose.
+#### AND
 
-## Using with telemetry
+![](../assets/model-lsw-AND.png)
 
-A **Telemetry active** system event (or a switch whose source is a
-telemetry sensor, active only while that sensor reports data) covers
-"is telemetry currently being received" style conditions.
+The AND function can have multiple values. The condition is True if **all** the sources selected in Value 1, Value 2 ... Value(n) are true (i.e. ON).
 
-!!! warning
-    A [mix](mixes.md) gated by a telemetry-based logical switch needs a
-    **second** mix action using the same switch **inverted**, so the mix
-    still has a valid value once telemetry is lost — remember an inactive
-    mix outputs neutral (0% / 1500µs, or **half throttle** on a throttle
-    channel). Alternatively, use an **Offset** action, which already has
-    separate active/inactive values built in — e.g. source **0** (the
-    special value) with the offset set so the mix reads +100% while `LS3`
-    is active and −100% while inactive covers both cases in one action.
+#### OR
+
+![](../assets/model-lsw-OR.png)
+
+The condition is True if **at least one** **or more** of the sources selected in Value 1, Value 2 … Value(n) are true (i.e. ON).
+
+#### XOR (Exclusive OR)
+
+![](../assets/model-lsw-XOR.png)
+
+The condition is True if **only** **one** of the sources selected in Value 1, Value 2 … Value(n) are true (i.e. ON).
+
+#### Timer generator
+
+![](../assets/model-lsw-timer-generator.png)
+
+The logical switch toggles on and off continuously. It switches on for time ‘Duration active’, and off for time ‘Duration inactive’.
+
+#### Sticky
+
+![](../assets/model-lsw-sticky.png)
+
+Or with Edge options:
+
+![](../assets/model-lsw-sticky-edge-select.png)
+
+For the Edge option, long press \[ENT\] on the Trigger ON or Trigger OFF condition, then select Edge. A ‘†’ character will be displayed as a prefix to indicate the Edge option.
+
+![](../assets/model-lsw-sticky-with-edge.png)
+
+The Sticky logic switch has a latching function, also known as a Set/Reset Flip-flop. Its operation is akin to that of a JK flip-flop, and therefore always has unambiguous states at its output. It latches ON (i.e becomes True) when the Trigger ON conditions are met, and holds its value until it is forced to False when the Trigger OFF conditions are met. This can be gated by the optional ‘Active condition’ parameter. This means that if the active condition is True, then the Sticky output follows the Sticky function's latched condition, subject to Delays. However, if the active condition is False, then the logical switch output is also held False.
+
+**Note**: The Sticky logic switch function has been enhanced in Ethos 1.6.2 by the addition of the Edge option on the trigger inputs, which allows enormous flexibility in its configuration. Careful testing should be performed to ensure correct operation.
+
+##### Trigger ON condition
+
+If the Trigger ON condition is for example SA↑ (no delay), then the Sticky output will switch from False to True as soon as SA goes high.
+
+If the Trigger ON condition is SA↑ (delay=1s), then the Sticky output will switch from False to True 1 second after SA has gone high, provided SA remains high during this delay.
+
+If the Trigger ON condition is †SA↑ (delay=1s) then the Sticky output will switch from True to False 1 second after SA has gone high, even if SA doesn't remain high during this delay.
+
+##### Trigger OFF condition
+
+If the Trigger OFF condition is for example SB↑ (no delay) then the Sticky output will switch from True to False as soon as SB goes high.
+
+If the Trigger OFF condition is SB↑ (delay=1s) then the Sticky output will switch from True to False 1 second after SB has gone high, provided SB remains high during this delay.
+
+If the Trigger OFF is †SB↑ (delay=1s) then the Sticky will switch from True to False 1 second after SB has gone high, even if SB doesn't remain high during this delay.
+
+##### Active condition
+
+Note that the Sticky function continues to operate, even if its output is gated by the ‘Active condition’ input. As soon as the active condition becomes True again, the Sticky’s latched condition is switched through to the output, subject to any Delays.
+
+##### Delay before active/inactive
+
+The trigger ON / OFF delays described above are applied AFTER the Active condition. This means that if the Active condition changes, the delay periods will be applied before the Sticky’s condition is switched through to the output again.
+
+##### Toggle function
+
+Simultaneously switching both trigger condition inputs from False to True will cause the Sticky output to change state once.
+
+Note: Please also refer to the ‘Common parameters’ section below.
+
+#### Edge
+
+![](../assets/model-lsw-edge.png)
+
+Edge is a momentary switch that becomes True for the period specified in 'Duration' when its edge trigger conditions are satisfied.
+
+##### Rising edge option
+
+![](../assets/model-lsw-edge-rising-edge.png)
+
+##### During = '0.0s'
+
+During is in two parts \[t1:t2\]. With t1 of During = 0.0s and t2= 'Rising edge', the logic switch becomes True (for the period specified in 'Duration') the instant the 'Trigger On condition' transitions from False to True.
+
+![](../assets/model-lsw-edge-during-gt0-rising-edge.png)
+
+##### During >= '0.0s
+
+During is in two parts \[t1:t2\]. With t1 of During a positive value (say 5.0s) and t2= 'Rising edge', the logic switch becomes True  (for the period specified in 'Duration') 5 seconds after the 'Trigger On condition' transitions from False to True. Any additional 'spikes' during the t1 period are ignored.
+
+##### Falling edge option
+
+![](../assets/model-lsw-edge.png)
+
+##### During = '0.0s'
+
+During is in two parts \[t1:t2\]. With During t1=0.0s and t2= '---' (Falling edge), the logic switch becomes True (for the period specified in 'Duration') the instant the 'Trigger On condition' transitions from True to False.
+
+![](../assets/model-lsw-edge-during-eq0.png)
+
+##### During >= '0.0s
+
+During is in two parts \[t1:t2\]. With t1 of During a positive value (say 3.0s) and t2= '---' (Falling Edge), the logic switch becomes True (for the period specified in 'Duration') when the 'Trigger On condition' transitions from True to False, having been True for at least 3 seconds.
+
+##### Pulse option
+
+During is in two parts \[t1:t2\]; if values are entered for both t1 and t2, then a pulse is needed to trigger the logic switch.
+
+![](../assets/model-lsw-edge-during-gt0.png)
+
+In the example above the logic switch will become True for the 'Duration' period if the 'Trigger On condition' goes from False to True, and then goes from True to False after at least 2 seconds but no later than 5 seconds.
+
+## Shared parameters
+
+![](../assets/model-lsw-common-parameters.png)
+
+The logic switches all have a number of shared parameters:
+
+### Active condition
+
+The logic switches can be gated by the optional ‘Active condition’ parameter. This means that if the active condition is True, then the logic switch output follows the Function's condition. However, if the active condition is False, then the logic switch output is also held False.
+
+The ‘Active condition’ may be selected from any of the following:
+
+- Always on
+- Switch positions
+- Function switches
+- Logic switches
+- Trim positions
+- Telemetry
+- Flight modes
+- System events 
+  - Throttle hold
+  - Throttle cut
+  - Throttle active
+  - Telemetry active
+  - RSSI low
+  - Trainer active
+  - Flight reset
+
+Note that the Sticky function continues to operate, even if its output is gated by the ‘Active condition’ switch. As soon as the active condition becomes True again, the Function's condition is switched through to the logic switch output.
+
+### Delay before active
+
+This value determines the time for which the logic switch conditions have to be True before the logic switch output becomes True (Not relevant to Timer Generator and Edge). Delays can go up to 60.0s.
+
+Please refer to this example about the Neuron ESC voltage going below 4.2V for at least x seconds.
+
+### Delay before inactive
+
+Similarly, this value determines the time for which the logic switch conditions have to be False before the logic switch output becomes False (Not relevant to Timer Generator and Edge). Delays can go up to 60.0s.
+
+### Confirmation before active
+
+When a logic switch detects a change of state to active this option requests user confirmation before the state changes.
+
+There is a Cancel option for situations where the Confirmation Dialog is being raised too frequently.
+
+![](../assets/model-lsw-confirm-lsw-true.png)
+
+Some examples where the feature might be used:
+
+1. For ground machines where you could use it before starting something dangerous.
+
+2. For the NFC switch, where you can power off the model from the transmitter, it could be used to have a confirmation before powering off.
+
+### Confirmation before inactive
+
+When a logic switch detects a change of state to active this option requests user confirmation before the state changes.
+
+There is a Cancel option for situations where the Confirmation Dialog is being raised too frequently.
+
+![](../assets/model-lsw-confirm-lsw-false.png)
+
+### Min Duration
+
+Once the logic switch becomes True, it will remain True for at least the minimum duration specified. If the duration is the default ‘---’, the logic switch will only become True for one mixes processing cycle, which is too short to see,  so the LSW line will not go bold. Durations can go up to 60.0s.
+
+### Max Duration
+
+If a maximum duration is set, once the logic switch becomes True, it will only remain True for the maximum duration specified. Durations can go up to 60.0s.
+
+### Comment
+
+A comment may be added as explanation of its use or function, to aid in understanding. The comment is displayed when a logic switch is added to a value widget.
+
+## Logic switches – use with telemetry
+
+Besides the normal Active Condition categories, logic switches and special functions have a ‘Telemetry active’ condition (under ‘System event’) which is active when telemetry is being received.
+
+If the source of a logic switch is a telemetry sensor, if your sensor is active then the logic switch will be active.
+
+Warning!
+
+When a logic switch using telemetry is used in a mix, an additional mix action using the same logic switch inverted (i.e when inactive) must be added to ensure that the mix will have valid values even when telemetry is lost. Remember that when a mix is inactive its channel output will be at neutral = 0% = 1500us or half throttle if on a throttle channel!
+
+![](../assets/model-mix-eg-using-weight.png)
+
+The example above shows logic switch VFRlow added, as well as its inverse !VFRlow to ensure that the mix will always have valid values.
+
+Alternatively you could use an Offset action:
+
+![](../assets/model-mix-eg-using-offset-actions.png)
+
+Offset actions have two values by default: one for when the offset action is active, and one for when the offset action is inactive. This covers all cases.
+
+![](../assets/model-mix-eg-using-offset.png)
+
+The above shows the mix summary line with the offset always having a valid value. The source has been set to the Special value 0, so the offset will be added to 0% and the mix output will be +100% when VFRlow is active, or -100% when VFRlow is inactive.
 
 ## Comparison of sources
 
-A source is normally compared against a fixed value, but two sources of
-the *same* type can be compared directly instead — e.g. two timers, two
-voltages, or two RPM sensors.
+![](../assets/model-lsw-delta-AgtX.png)
 
-## Ignore trainer input from slave
+Normally source (A) is compared to a fixed Value (X). However, comparison of two same-format (i.e. having the same units) sources is allowed. For example, two timers, or two voltages, or two RPM sources may be compared.
 
-![Ignore trainer input](../assets/model-lsw-ignore-trainer-input.png)
+## Option to ignore trainer input from slave
 
-A source's [options](../getting-started/user-interface-and-navigation.md#choosing-a-source)
-can exclude trainer input from a connected student (slave) radio —
-typically used on a logical switch that's watching the **master's** own
-stick movement (e.g. to intervene instantly if something goes wrong),
-without the student's inputs also tripping it. Commonly paired with a
-trainer switch that gates the master's own Active condition.
+![](../assets/trainer-take-back-ailinput-ignore.png)
+
+In logic switches the sources may have the ‘Ignore trainer input’ option set to ignore any sources coming from the slave trainer input.
+
+A typical application is where a logic switch is configured to detect movement of the master trainer’s sticks (e.g. Aileron and Elevator sticks) to allow for instant intervention if things go wrong. This option is needed to prevent the slave trainer (i.e. student) stick inputs from triggering the logic switch.
+
+The logic switch is then typically used in conjunction with a trainer switch to disable/enable the ‘Active condition’ in the master trainer function.
+
+Please refer to How-To 11. How to configure instant take-back for the trainer function for an example.

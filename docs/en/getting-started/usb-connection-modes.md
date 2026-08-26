@@ -1,34 +1,23 @@
-# USB Connection Modes
-
-![USB menu](../assets/usbmenu.png)
-
-What a USB connection to a PC does depends on how the radio was powered
-when you plugged it in.
+# USB Connection To PC modes
 
 ## Power Off mode
 
-Connecting the radio to a PC via USB **while it's powered off** puts it
-into DFU mode, used for flashing the bootloader itself.
+- Connecting the radio while powered off to a PC via a USB cable is the DFU mode for flashing the bootloader.
 
-## Bootloader mode {: #bootloader-mode }
+## Bootloader mode
 
-Power the radio on **with `ENT` held down** to boot into bootloader mode
-(the screen shows "Bootloader"). Connecting USB now changes the status to
-"USB Plugged" and the PC mounts **two** drives: the radio's internal flash
-memory, and the SD card/eMMC content. This is the mode for reading and
-writing files directly to either storage area, and it's also how [Ethos
-Suite](../ethos-suite/index.md) updates the radio's firmware — see Ethos
-Suite's own Bootloader Mode section.
+- The radio is placed in bootloader mode by switching on the radio with the enter key held down. The status message ‘Bootloader’ will be displayed on the screen. 
+- The radio can then be connected to a PC via a USB data cable. The status message will change to ‘USB Plugged’, and the PC should display two external drives connected. The first is for the radio flash memory, and the second is the content of the SD card or eMMC.
+- This mode is used for reading and writing files to SD card or eMMC and/or the radio flash memory.
+- This mode can also be used to connect to Ethos Suite for updating the radio. Please refer to [Bootloader Mode](#Bootloader Mode) in the Ethos Suite section.
 
 ## Power On mode
 
-Connecting USB while the radio is **powered on normally** brings up a mode
-picker:
+- If the radio is connected to a PC via a USB data cable while powered on, the following option dialog is displayed:
 
-- **Joystick** — presents the radio as a USB HID joystick, for driving PC
-  flight simulators.
-- **Ethos Suite** — puts the radio into "Ethos mode" for communication
-  with [Ethos Suite](../ethos-suite/index.md).
-- **Serial** — routes Lua debug traces over USB-serial (115200 bps). Ethos
-  Suite's Lua Development Tools tab has an integrated terminal to display
-  them; a Windows Virtual COM Port driver may be needed.
+![](../assets/usbmenu.png)
+
+- In joystick mode the radio can be configured for controlling RC simulators.
+- In Ethos Suite mode the radio will enter ‘Ethos mode’ for communication with Ethos Suite. Please refer to [Ethos Mode](#Ethos Mode) in the Ethos Suite section.
+
+- In Serial mode Lua debug traces are sent to USB-Serial if present. The Lua Development Tools tab in Ethos Suite has an integrated terminal window to display the traces. The baud rate is 115200bps. A suitable Windows Virtual COM Port driver may be found [here](https://www.st.com/en/development-tools/stsw-stm32102.html).

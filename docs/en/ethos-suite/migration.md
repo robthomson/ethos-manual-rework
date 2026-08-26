@@ -1,30 +1,11 @@
-# Migration
+# Procedure for migrating to FrSky Suite
 
-Moving a radio from the older, separate PC update tools to Ethos Suite,
-for the first time.
-
-1. **Confirm Ethos ≥ 1.1.4** — the minimum version that can flash the new
-   Suite-compatible bootloader (FRSK format) directly from [File
-   Manager](../system-setup/file-manager.md). Update manually to 1.1.4
-   first if needed.
-2. **Back up the SD card/eMMC** — copy the whole thing to a folder on a
-   PC.
-3. **Download the latest bootloader** from
-   [ETHOS-Feedback-Community releases](https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases)
-   and unzip it. Each release publishes a `components.json` listing every
-   component's current version — see [How-To: Find the Latest
-   Bootloader](../how-to/find-latest-bootloader.md) for reading it.
-4. Find the radio under its `targets` entry in that file for the exact
-   bootloader version to use, and locate the matching file in that
-   release's assets.
-5. Power the radio into [bootloader mode](../getting-started/usb-connection-modes.md#bootloader-mode)
-   (hold `ENT`, then power on) and connect via USB.
-6. Copy the bootloader file to the SD card/eMMC (normally into
-   `Firmware/`), then eject the drives and disconnect.
-7. Start the radio normally, go to **System → File Manager**, tap the
-   `bootloader.frsk` file just copied, and **Flash bootloader**.
-8. Download and install Ethos Suite — [Operation](operation.md) covers
-   updating firmware/files and the rest of Suite's features from here.
-9. If Ethos Suite doesn't do it automatically, the `bitmaps/user` folder
-   on the SD card/eMMC may need renaming to `bitmaps/models` (this is
-   where user model bitmaps live).
+- Ensure that you are on at least Ethos version 1.1.4, the minimum version needed to flash the new FrSky Suite compatible bootloader (FRSK format) from the File Manager on the radio. If not, you will need to manually update to 1.1.4 to be able to migrate to FrSky Suite for automated updates.
+- Make a backup your SD card or eMMC (it’s advisable to copy all of it to a folder on your computer).
+- Download the zip file for the latest bootloader from [https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases](https://github.com/FrSkyRC/ETHOS-Feedback-Community/releases) for your radio, and unzip it. The current bootloader versions are listed in a file called components.json which lists all components used in a release. The file is published with each new firmware release, and can be opened with a text editor such as note pad.
+- Simply look for your radio under the “targets” headings, then the relevant Bootloader version number will be listed underneath. You will find the Bootloader listed in the assets of the Ethos release with that number.
+- Power the radio on in bootloader mode (hold the enter key down, keep it down and then press power ON) and connect the system to the PC with a data USB cable.
+- Copy the bootloader to a folder on your SD card or eMMC (normally the Firmware folder), then eject the drives and disconnect the radio from the PC.
+- Start the radio, go to System / File Manager, tap the bootloader.frsk file you have just copied and select the ‘Flash bootloader’ option.
+- Download and install the FrSky Suite. You should now be able to follow the sections below to update your radio firmware and the Flash and SD card or eMMC files to the latest versions, and make use of the other FrSky Suite features.
+- Please note that you may need to rename the bitmaps/user folder on the SD card or eMMC to bitmaps/models if FrSky Suite does not do it for you. This is the folder where user bitmaps are stored.

@@ -1,24 +1,23 @@
 # Emergency Mode
 
-Emergency mode is Ethos's response to an unexpected low-level fault, such
-as a watchdog reset. The watchdog is a timer continually restarted by
-various parts of the system; if something prevents it from being
-restarted, it times out and forces a hardware reset. Emergency mode then
-restarts the radio as fast as possible, skipping all of the normal startup
-checks so control of the model is handed back with minimal delay. The SD
-card/eMMC is not accessed at all in this mode.
+Emergency mode is the radio’s response to an unexpected event like a watchdog reset. The watchdog is a timer that is continually restarted by different parts of Ethos. If a failure of any kind prevents the watchdog timer from being restarted, it will time out and cause a hardware reset of the radio. In this emergency mode the radio restarts extremely quickly, without any of the normal startup checks so that you get back control of your model as quickly as possible. The SD card or eMMC is not accessed in emergency mode.
 
-Only the essential functions needed to keep controlling the model are
-available — none of the higher-level features. The screen goes blank
-except for the words **EMERGENCY MODE**, accompanied by a repeating 300ms
-beep every 3 seconds; voice alerts, Lua scripts, logging, and telemetry all
-stop. If this happens in the air, land as soon as possible.
+Emergency mode provides only the essential functions for controlling your model but none of the high level functions. The screen will go blank and display the words ‘EMERGENCY MODE’, accompanied by a 300ms beep repeating continually every 3 seconds. Voice alerts, running of scripts, logging etc. will cease operating. If emergency mode occurs, you should obviously land as quickly as possible.
 
-The most common trigger is SD card failure.
+The most common cause of emergency mode is SD card failure.
 
-## Testing emergency mode
+## Emergency mode test
 
-A **System tool** can be added to deliberately trigger emergency mode for
-testing, so it doesn't have to be discovered for the first time in flight.
-Tapping the Emergency Test icon prompts for confirmation, then puts the
-radio into emergency mode exactly as a real fault would.
+In some cases, it can be helpful for users to be able to test the emergency mode.
+
+![](../assets/Pictures/1000000000000320000001E0CAE58A4D.png)
+
+A System tool can be added to test the emergency mode. Tap on the Emergency Test icon to initiate the test.
+
+![](../assets/Pictures/1000000000000320000001E07840F732.png)
+
+A dialog will ask for confirmation to proceed.
+
+![](../assets/Pictures/1000000000000320000001E0FC0300AF.png)
+
+The radio will enter Emergency Mode.
