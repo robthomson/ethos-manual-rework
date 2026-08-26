@@ -1,185 +1,200 @@
----
-translated_from: 4cf1808aa5b70d3f39900c1a7aff575ca60ee89e
----
-
 # Interfaccia utente e navigazione
 
-Ethos può essere utilizzato interamente con l'**encoder rotativo** di destra
-(ruotalo per spostare l'evidenziazione, premilo per `ENT`) e con il tasto `RTN`
-per uscire da un menu: il touchscreen, dove presente, è una scorciatoia per le
-stesse azioni, non un modo di lavorare separato. I tasti `MDL`, `DISP` e `SYS`
-portano direttamente a Configurazione del modello, Configurazione delle
-schermate e Configurazione del sistema rispettivamente (le stesse tre schede
-della barra inferiore); una pressione prolungata su `RTN` ti farà tornare alla
-schermata principale da qualsiasi sottomenu.
+La radio è dotata di un touch screen che rende l'interfaccia utente piuttosto intuitiva. Toccando le schede Model Setup (icona dell'aereo), [Configure Screens ](../displays/index.md)(icona delle schermate multiple) e System Setup (icona dell'ingranaggio) si accede direttamente alle funzioni descritte in queste sezioni del manuale. È possibile accedervi anche utilizzando rispettivamente i tasti \[MDL\], \[DISP\] e \[SYS\].
+
+In alternativa si può usare il selettore rotante per spostare l'evidenziazione sul riquadro o sul parametro desiderato e poi premere Invio per selezionarlo.
+
+Una pressione prolungata sul tasto \[RTN\] ti farà tornare alla schermata principale da qualsiasi sottomenu.
+
+Toccando l'ora del sistema a destra della barra inferiore, si accede alla sezione Data e ora, che ti permette di impostare l'ora e la data.
+
+Toccando le icone dell'altoparlante o della batteria nella barra superiore, si apriranno i pannelli di controllo di Suono e Vibrazione e Batteria.
 
 ## Menu di reset
 
-![Menu contestuale](../assets/resetmenu.png)
+![](../assets/resetmenu.png)
 
-Premendo a lungo il tasto `ENT` dalla schermata principale si accede al menu di
-reset:
+Premendo a lungo il tasto \[ENT\] dalla schermata principale si accede al menu di reset:
 
-- **Azzeramento del volo** — azzera la telemetria, i timer e gli interruttori
-  di funzione, e riesegue la [checklist](../model-setup/checklist.md) pre-volo.
-- **Azzeramento della telemetria** — azzera solo la telemetria.
-- **Azzeramento dei timer** — azzera solo i timer.
-- **Blocca il touchscreen** — si ottiene anche premendo contemporaneamente
-  `ENT` e `PAGE` per 1 secondo dalla schermata principale, oppure come trigger
-  di una [funzione speciale](../model-setup/special-functions.md).
+### Reset - Azzeramento del volo
 
-## Controlli per effettuare modifiche
+Il reset del volo azzera la telemetria, i timer e gli interruttori di funzione. Nota che i controlli pre-volo verranno effettuati dopo un "volo di reset".
 
-**Aggiungi elementi funzionali** — è possibile creare un nuovo elemento
-funzionale, come un timer, un interruttore logico, una funzione speciale, una
-curva o una variabile, toccando il simbolo **+** accanto alle intestazioni
-delle colonne nel menu corrispondente. Sulle radio senza touchscreen,
-evidenzia un elemento esistente, premi `ENT` e seleziona **Aggiungi** dalla
-finestra di dialogo che si apre: naturalmente questa opzione funziona anche
-sulle radio con touchscreen.
+### Reset - Azzeramento della telemetria
+
+Si reimposterà la telemetria e si cancelleranno eventuali avvisi contrassegnati da un punto rosso relativi alla “perdita del sensore” o a un “conflitto tra sensori”. Si prega di fare riferimento alla sezione [Avvisi di perdita o conflitto dei sensori](../model-setup/telemetry.md).
+
+### Reset - Azzeramento dei timer
+
+Azzera i timer.
+
+## Blocca il touchscreen
+
+Il touchscreen LCD può essere bloccato per evitare operazioni involontarie premendo contemporaneamente \[ENTER\] e \[PAGE\] per 1 secondo dalla schermata principale. È disponibile anche come funzione speciale.
+
+## Controlli per effetuare modifiche
+
+### Aggiunta di elementi Funzionali
+
+È possibile creare un nuovo elemento funzionale, come un timer, un interruttore logico, una funzione speciale, una curva o una variabile, toccando il simbolo “+” accanto alle intestazioni delle colonne nel menu principale corrispondente.
+
+Sulle radio senza touchscreen, utilizzare l'encoder rotativo per scorrere fino al pulsante “+” e quindi premere ENT.
 
 ### Tastiera virtuale
 
-![Tastiera alfabetica](../assets/keyboard-text-azerty.png)
+Ethos offre una tastiera virtuale per modificare i campi di testo.
 
-Basta toccare un qualsiasi campo di testo (o premere `ENT` su di esso) per
-visualizzare la tastiera. Il tasto Backspace cancella i caratteri a sinistra
-del cursore; `PAGE` cancella i caratteri a destra del cursore e, una volta
-arrivato alla fine a destra, prosegue cancellando i caratteri rimanenti a
-sinistra. Tocca il campo di testo per spostare il cursore in quella posizione;
-in alternativa, premi il tasto `SYS` per spostare il cursore a sinistra o il
-tasto `DISP` per spostarlo a destra. Il tasto **?123**/**abc** permette di
-passare dalla tastiera alfabetica a quella numerica, che contiene anche i
-caratteri speciali:
+![](../assets/keyboard-text-azerty.png)
 
-![Tastiera numerica](../assets/keyboard-text-numbers.png)
+Basta toccare un qualsiasi campo di testo (o cliccare su \[ENT\]) per visualizzare la tastiera.
 
-Sulle **radio senza touchscreen**, premendo `ENT` su un campo di testo si
-accede direttamente alla modalità di modifica: ruota l'encoder rotativo per
-scorrere i caratteri minuscoli, maiuscoli e i numeri, seguiti dai caratteri
-speciali, e premi `ENT` per inserire ciascun carattere. Il tasto `MDL` cambierà
-la maiuscola/minuscola del carattere immediatamente a destra del cursore (e
-tutti i caratteri successivi rimarranno nella nuova maiuscola/minuscola fino a
-quando non verrà modificata nuovamente). Il tasto `PAGE` cancella i caratteri a
-destra del cursore; `SYS`/`DISP` spostano il cursore a sinistra/destra.
+Tocca il tasto Backspace (sopra il tasto Invio) per tornare indietro e cancellare i caratteri a sinistra del cursore. Premi il tasto \[PAGE\] per cancellare i caratteri a destra del cursore. Una volta arrivato alla fine a destra, il tasto \[PAGE\] inizierà a cancellare i caratteri rimanenti a sinistra del cursore.
 
-## Controlli del valore numerico
+Tocca il campo di testo per spostare il cursore in quella posizione. In alternativa, premere il tasto \[SYS\] per spostare il cursore a sinistra o il tasto \[DISP\] per spostarlo a destra.
 
-![Inserimento numerico](../assets/keyboard-numbers.png)
+![](../assets/keyboard-text-numbers.png)
 
-Quando si tocca un valore numerico, nella parte inferiore dello schermo appare
-una finestra di dialogo con i controlli del valore numerico: i tasti
-**`<`**/**`>`** modificano la dimensione del passo (salendo di decina in
-decina, ad esempio 0,01/0,1/1,0/10,0), i tasti **`-`**/**`+`** (o l'encoder
-rotativo) aumentano o diminuiscono il valore in base al passo selezionato, e il
-pulsante **Altro** apre ulteriori opzioni:
+Tocca il tasto '?123' o 'abc' per passare dalla tastiera alfa a quella numerica. La tastiera numerica contiene anche i caratteri speciali. C'è anche il blocco delle maiuscole per inserire le lettere maiuscole.
 
-![Opzioni di inserimento numerico](../assets/keyboard-numbers-options.png)
+Radio senza touchscreen
 
-- Ripristina il valore predefinito del campo
-- Imposta al minimo / imposta al massimo
-- Sostituisce i tasti di regolazione con un **cursore** (slider)
+Sulle radio senza touchscreen, usare la rotella di selezione fino al bottone + e premere il bottone \[ENT\] su qualsiasi campo di testo per accedere alla modalità di modifica.
 
-![Regolazione con cursore](../assets/keyboard-numbers-slider.png)
+Ruotare l'encoder rotativo per scorrere i caratteri alfabetici maiuscoli e minuscoli e i numeri, seguiti dai caratteri speciali. Premere \[ENT\] per inserire il carattere. Il tasto \[MDL\] cambierà la maiuscola/minuscola del carattere immediatamente a destra del cursore. Tutti i caratteri successivi rimarranno nella nuova maiuscola/minuscola fino a quando non verrà modificata nuovamente.
 
-Il cursore (regolabile anche con l'encoder rotativo) permette di regolare
-rapidamente il valore; per tornare ai tasti di regolazione del numero seleziona
-**Disabilita slider**. Anche il valore della portata telemetrica può essere
-modificato in modo simile:
+Premere il tasto \[PAGE\] per cancellare i caratteri a destra del cursore.
 
-![Cursore disattivato](../assets/keyboard-numbers-options-disable-slider.png)
+Premere il tasto \[SYS\] per spostare il cursore a sinistra o il tasto \[DISP\] per spostarlo a destra.
 
-## La funzione Opzioni {: #the-options-feature }
+### Controlli del valore numerico
 
-Quasi ovunque sia previsto un valore o una [sorgente](#choosing-a-source), una
-pressione prolungata del tasto `ENT` farà apparire una finestra di dialogo
-delle **Opzioni**: i campi con questa funzione possono essere identificati
-dall'icona del menu (simbolo dell'hamburger) nell'angolo in alto a sinistra del
-campo.
+![](../assets/keyboard-numbers.png)
 
-### Opzioni di valore
+Quando si tocca un valore numerico, nella parte inferiore dello schermo appare una finestra di dialogo con i controlli del valore numerico:
 
-![Opzioni della sorgente](../assets/source-with-options.png)
+- a) Tasti '<' e '>' per modificare la dimensione del passo tra il minimo (come appropriato) e 	salire di decina in decina, ad esempio 0,01%, 0,1%, 1,0% o 10,0%.  
 
-La finestra di dialogo delle opzioni del valore mostra quale parametro si sta
-configurando e permette di scegliere se impostarlo al massimo o al minimo,
-oppure se pilotarlo con una **sorgente** (ad esempio un potenziometro, per
-regolare il valore in volo). Se premi a lungo `ENT` su un campo valore che è
-già stato modificato per utilizzare una sorgente, si apre una finestra di
-dialogo che ti permette di convertire il valore attuale della sorgente in un
-valore fisso:
+- b) I tasti "-" e "+" aumentano o diminuiscono il valore in base alla dimensione del passo 	selezionato. Anche l'encoder rotativo può essere utilizzato per regolare il valore.  
 
-![Converti la sorgente in valore](../assets/source-convert-to-value.png)
+- c)	un pulsante "Altro" sulla destra per ulteriori opzioni, vedi sotto.
 
-### Scelta di una sorgente {: #choosing-a-source }
+![](../assets/keyboard-numbers-options.png)
 
-Selezionando **Usa come sorgente** si apre un selettore a due colonne: prima
-una **categoria** (analogici, interruttori, interruttori logici, trim, canali,
-un asse del giroscopio, un canale trainer, un timer, un sensore di telemetria o
-alcuni valori speciali), poi il membro specifico:
+Il pulsante "Altro" sulla destra apre un'altra finestra di dialogo per ulteriori opzioni:
 
-![Menu delle sorgenti](../assets/source-menu.png)
+- 		d) il valore predefinito
+- 		e) impostato al minimo
+- 		f) impostato al massimo
+- 		g)sostituisci i controlli con un cursore per la regolazione, vedi sotto
 
-Una volta impostata la sorgente, la stessa pressione prolungata apre le opzioni
-specifiche per il tipo di sorgente:
+![](../assets/keyboard-numbers-slider.png)
 
-**Qualsiasi sorgente** —
+Il cursore permette di regolare rapidamente il valore. È possibile utilizzare anche l'encoder rotativo.
 
-- **Invertire** — permette di negare o invertire la sorgente (ad esempio è
-  attiva quando un interruttore *non* è alzato, invece di quando lo è).
-- **Edge** — agisce una sola volta sulla transizione (da Falso a Vero o da Vero
-  a Falso), invece di restare attiva per tutta la durata dello stato; viene
-  indicata con il prefisso `†` sulla sorgente. È disponibile sugli interruttori
-  in generale e, in particolare, nella condizione di attivazione
-  dell'[interruttore logico Sticky](../model-setup/logical-switches.md).
+![](../assets/keyboard-numbers-options-disable-slider.png)
 
-**Sorgenti stick** — opzioni di tipo calibrazione/subtrim:
+Per tornare ai tasti di regolazione del numero, seleziona "Disattiva cursore".
 
-![Opzioni della sorgente stick](../assets/source-stick-options.png)
+![](../assets/keyboard-numbers-on-telemetry.png)
 
-**Sorgenti interruttore** —
+Un altro esempio è il valore della portata telemetrica, che può essere modificato in modo simile.
 
-![Opzioni dell'interruttore a 2 posizioni](../assets/source-2pos-options.png)
-![Opzioni dell'interruttore](../assets/switch-options.png)
+### Funzione Opzioni
 
-- **Negativo** — permette di invertire l'azione dell'interruttore.
-- **Metà escursione** — con un interruttore 2-POS o un interruttore logico come
-  sorgente, l'intervallo di uscita diventa [0-100%] invece di [-100%-100%].
+Ethos dispone di una funzione "Opzioni" molto potente. Quasi ovunque sia previsto un valore o una sorgente, una pressione prolungata del tasto Invio farà apparire una finestra di dialogo delle opzioni
 
-**Sorgenti trim** —
+![](../assets/source-with-options.png)
 
-![Opzioni della sorgente trim](../assets/source-trim-options.png)
+I campi con questa funzione possono essere identificati dall'icona del menu (simbolo dell'hamburger) nell'angolo in alto a sinistra del campo.
 
-- **Negativo** — consente di invertire l'azione del trim, utile nei mix Azioni.
-- **Piena escursione** — per impostazione predefinita i trim hanno un
-  intervallo di +/- 25%; quando vengono utilizzati come sorgente possono essere
-  portati a un intervallo completo di +/- 100%.
-- **Ignora l'input del Trainer** — su un [interruttore
-  logico](../model-setup/logical-switches.md) le sorgenti possono essere
-  impostate in modo da ignorare le sorgenti provenienti dall'ingresso del
-  trainer. Un'applicazione tipica è quella in cui l'interruttore logico è
-  configurato per rilevare il movimento degli stick dell'istruttore *master*
-  (ad esempio per consentire un intervento immediato se l'allievo sbaglia),
-  evitando che anche gli ingressi degli stick dell'allievo attivino
-  l'interruttore.
+Per le regolazioni relative alla radio, quali volume principale, disattivazione altoparlanti, volume Vario, luminosità del display e luminosità in modalità sleep, non è possibile selezionare una sorgente che dipenda dal modello (come un interruttore logico, un interruttore di funzione o la modalità di volo).
 
-**Sorgenti variabile** —
+Opzioni di valore
 
-![Opzioni Var](../assets/source-var-options.png)
+![](../assets/source-menu.png)
 
-- **Negativo** — il valore del Var diventerà negativo in questo caso.
-- **Ignora l'intervallo** — alcuni campi hanno intervalli asimmetrici, come i
-  parametri Min/Max delle Uscite, che hanno intervalli rispettivamente di
-  (-150% a 0%) e (0% a +150%). A meno che la
-  [variabile](../model-setup/variables.md) utilizzata come sorgente di quel
-  campo non abbia un intervallo identico, occorre attivare questa opzione per
-  saltare la conversione automatica dell'intervallo eseguita da Ethos ed
-  evitare valori inaspettati.
+La finestra di dialogo delle opzioni del valore mostra quale parametro si sta configurando. In questo esempio puoi scegliere se impostare il escursione/le velocità al massimo, 0, minimo, oppure se utilizzare una sorgente. L'utilizzo di una sorgente come un Potenziometro consente di regolare il escursione/le velocità in volo.
 
-**Sorgenti sensore di telemetria** — su una sorgente telemetrica la finestra di
-dialogo delle opzioni consente di utilizzare il suo valore massimo o minimo
-invece della lettura istantanea (alcuni sensori hanno opzioni aggiuntive
-specifiche per quel sensore):
+![](../assets/source-convert-to-value.png)
 
-![Opzioni min/max del sensore](../assets/source-sensor-options.png)
-![Massimo del sensore selezionato](../assets/source-sensor-maxi.png)
+Se premi a lungo Invio su un campo valore che è già stato modificato per utilizzare una sorgente, si apre una finestra di dialogo che ti permette di convertire il valore attuale della sorgente in un valore fisso
+
+Cliccando su "Opzioni" si apriranno le opzioni per la sorgente, vedi sotto.
+
+Opzioni della sorgente
+
+![](../assets/switch-options.png)
+
+Inverti
+
+L'opzione Inverti permette di negare o invertire una sorgente come la posizione di un interruttore. Ad esempio, invece di essere attivo quando l'interruttore SA è alzato, sarà attivo quando l'interruttore SA NON è alzato, cioè in posizione intermedia o abbassata.
+
+Edge
+
+Puoi selezionare l'opzione "Edge" se hai bisogno di un'azione unica quando la sorgente passa da Falso a Vero o da Vero a Falso. Si agisce solo sulla transizione, non sullo stato Vero o Falso.
+
+Tieni presente che l'opzione "Edge" è disponibile sugli interruttori ma dipende dal contesto. E’ anche disponibile nella condizione di interruttore logico [Sticky-appicicoso](../model-setup/logical-switches.md).
+
+Opzione sorgente per gli interruttori
+
+![](../assets/source-2pos-options.png)
+
+- Negativo
+
+L'opzione negativa permette di invertire l'azione dell'interruttore.
+
+- Metà Escursione
+
+L'opzione "Metà Escursione" è disponibile quando si utilizza un interruttore 2-POS o un interruttore logico come sorgente. L'intervallo diventa \[0-100%\] invece di \[-100%-100%\].
+
+Opzione sorgente input throttle/gas
+
+
+
+- Se è abilitata l'opzione “Positivo”, solo la metà positiva del controllo di ingresso viene inviata al mix.
+- Se è abilitata l'opzione “Negativo”, solo la metà negativa del controllo di ingresso viene inviata al mix.
+
+Le due opzioni sopra indicate sono comunemente utilizzate nei modelli di superficie in cui il trigger aziona sia l'acceleratore (metà positiva) che il freno (metà negativa).
+
+- Abilitare “Inverti” per invertire il controllo di ingresso.
+- Abilitando “Ignora input istruttore” si impedisce alla radio dello studente di influenzare il mix. Per ulteriori dettagli, consultare la sezione “Ignora input istruttore”.
+
+Opzione sorgente per i trim
+
+![](../assets/source-trim-options.png)
+
+- Negativo
+
+L'opzione negativa consente di invertire l'azione del trim, utile nei mix Azioni.
+
+- Piena Escursione
+
+Per impostazione predefinita, i trim hanno un intervallo di +/- 25%. Quando vengono utilizzati come sorgente, i trim possono essere modificati in un intervallo completo di +/- 100% (premi a lungo Invio sul trim).
+
+Ignora l'input del Trainer
+
+![](../assets/model-lsw-ignore-trainer-input.png)
+
+Negli interruttori logici le sorgenti possono essere impostate in modo da ignorare le sorgenti provenienti dall'ingresso del trainer. Un'applicazione tipica è quella in cui un interruttore logico è configurato per rilevare il movimento degli stick dell'istruttore master (ad esempio lo stick dell'elevatore) per consentire un intervento immediato se le cose vanno male. Questa opzione è necessaria per evitare che gli ingressi degli stick degli studenti attivino l'interruttore logico.
+
+Opzioni Var
+
+![](../assets/source-var-options.png)
+
+Negativo
+
+Abilitando Negativo il valore del Var diventerà negativo in questo caso.
+
+Ignora l'intervallo
+
+Alcuni parametri hanno intervalli asimmetrici, come i parametri Min/Max delle Uscite, che hanno intervalli rispettivamente di (-150% a 0%) e (0% a +150%). Quando si utilizzano i VAR come fonte per regolare i parametri Min/Max, a meno che il Var non abbia un intervallo identico, sarà necessario impostare l'intervallo del Var come ignorato per evitare valori inaspettati dovuti alla conversione dell'intervallo.
+
+Opzioni del sensore
+
+![](../assets/source-sensor-options.png)
+
+Su una sorgente telemetrica, la finestra di dialogo delle opzioni consente di utilizzare il suo valore massimo o minimo
+
+![](../assets/source-sensor-maxi.png)
+
+Alcuni sensori hanno opzioni aggiuntive specifiche per quel sensore.

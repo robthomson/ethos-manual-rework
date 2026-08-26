@@ -1,83 +1,93 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
+# Modifica il modello
 
-# Modifica modello
+![](../assets/model-icon-editmodel.png)
 
-![Modifica modello](../assets/model-editmodel.png)
+L'opzione "Modifica modello" serve per modificare i parametri di base del modello come impostato dalla procedura guidata.
 
-Permette di modificare i parametri a livello di modello impostati inizialmente
-dalla procedura guidata — principalmente i dati identificativi, ma anche alcune
-impostazioni specifiche del singolo modello e alcune utilità.
+![](../assets/model-editmodel.png)
 
-## Nome, Immagine
+## Nome, immagine
 
-Consente di rinominare il modello o di cambiarne l'immagine; sfogliando le
-immagini viene mostrata un'anteprima in miniatura.
+Il modello può essere rinominato, l'immagine assegnata o modificata. Quando si cerca un'immagine, viene mostrata una miniatura di anteprima per facilitare l'individuazione dell'immagine corretta.
+
+Le immagini bitmap dei modelli devono trovarsi nella cartella «bitmaps/models» sulla scheda SD o sull'eMMC.
 
 ## Tipo di modello
 
-![Tipo di modello](../assets/model-edit-modeltype.png)
+![](../assets/model-edit-modeltype.png)
 
-!!! warning
-    La modifica del tipo di modello azzera **tutti** i mix.
+Cambiando il tipo di modello, tutti i mix verranno resettati
 
 ## Assegnazione dei canali
 
-Anche la modifica del tipo di coda o (su un elicottero) del tipo di piatto
-ciclico azzera tutti i mix. Per gli altri canali è possibile modificare il
-numero di canali assegnati oppure annullarne l'assegnazione.
+Cambiando il tipo di coda o il piatto oscillante dell'elicottero, tutti i mix verranno resettati. Sugli altri canali, il numero di canali output assegnati può essere modificato o disassegnato.
+
+## Banda morta Acceleratore
+
+
+
+Consente la configurazione di una banda morta dell'acceleratore per acceleratori con base zero con marcia avanti e retromarcia per evitare movimenti involontari del motore quando la leva è in posizione neutra.
 
 ## Filtro analogico
 
-![Filtro analogico](../assets/model-edit-analog-filter.png)
+![](../assets/model-edit-analog-filter.png)
 
-In [Configurazione di sistema → Hardware](../system-setup/hardware.md) è
-presente un filtro analogico-digitale globale che permette di ridurre il jitter
-attorno al centro degli stick; questa impostazione, valida per il singolo
-modello, ha la precedenza su quella globale solo per il modello corrente.
+![](../assets/model-edit-analog-filter-select.png)
 
-![Opzioni del filtro analogico](../assets/model-edit-analog-filter-select.png)
+Esiste un'impostazione globale del filtro del convertitore analogico-digitale nella pagina Hardware alla voce [Filtro analogico](../system-setup/hardware.md), che può migliorare il jitter (disturbo) intorno al centro dello stick. Questa impostazione specifica del modello può essere utilizzata per sovrascrivere l'impostazione globale.
 
-## Interruttori di funzione {: #function-switches }
+## Interruttori di funzione
 
-![Interruttori di funzione](../assets/model-edit-fn-switches.png)
+![](../assets/model-edit-fn-switches.png)
 
-I sei interruttori di funzione sono disponibili ovunque compaia un parametro
-**Condizione attiva** ma, a differenza degli interruttori normali, non possono
-essere utilizzati come sorgente generica. Possono essere configurati in uno dei
-seguenti modi:
+I sei interruttori di funzione sono disponibili ovunque si trovino i parametri "Condizione attiva". Tieni presente che non possono essere utilizzati come sorgente come i normali interruttori.
 
-- **6 posizioni con OFF** — premendo un interruttore di funzione questo resta
-  attivo; premendo nuovamente lo *stesso* interruttore tutti e sei vengono
-  disattivati.
-- **6 posizioni** — premendo un interruttore di funzione questo resta attivo
-  finché non viene premuto un interruttore *diverso*, che ne prende il posto.
-- **2 × 3 posizioni** — divide i sei interruttori in due gruppi di tre, con un
-  interruttore attivo per ogni gruppo.
-- **6 × 2 posizioni** — sei interruttori on/off indipendenti con ritenuta.
-- **Momentaneo** — sei interruttori indipendenti, ciascuno attivo solo mentre
-  viene mantenuto premuto.
-- **Persistente** — se abilitato, un interruttore di funzione mantiene il
-  proprio stato dopo lo spegnimento o il ricaricamento del modello, anziché
-  azzerarsi.
+![](../assets/model-edit-fn-switches-select.png)
 
-![Opzioni degli interruttori di funzione](../assets/model-edit-fn-switches-select.png)
+Configurazione
 
-## Connettore SPort
+Possono essere configurati come segue:
 
-Il pin 5V del connettore S.Port della trasmittente può essere attivato o
-disattivato per ogni singolo modello — utile, ad esempio, per alimentare un
-ricevitore esterno in una configurazione maestro/allievo.
+6-Pos con OFF
+
+Premendo un qualsiasi interruttore di funzione, quell'interruttore si attiverà. Tuttavia, premendo una seconda volta un interruttore già acceso, questo si spegnerà, lasciando tutti e sei gli interruttori di funzione spenti.
+
+6-POS
+
+Premendo un qualsiasi interruttore di funzione, quell'interruttore rimarrà attivo fino a quando non verrà premuto un altro interruttore di funzione per attivare l'interruttore appena premuto.
+
+2 x 3-Pos
+
+Suddivide i 6 interruttori di funzione in due gruppi di 3. Ogni gruppo può avere un interruttore attivo.
+
+6 x 2-Pos
+
+Suddivide i 6 interruttori di funzione in 6 interruttori a scatto. Ogni interruttore può essere ON o OFF.
+
+Momentaneo
+
+Suddivide i 6 interruttori funzionali in 6 interruttori momentanei. Ogni interruttore è attivo quando è premuto.
+
+Persistente
+
+Se abilitato, l'interruttore di funzione si troverà nello stesso stato quando la radio verrà accesa o il modello verrà ricaricato.
+
+## Connettore Sport (5V) Alimentazione
+
+
+
+Il pin “+” (centrale) del connettore S.Port può essere configurato come segue:  
+a) Il pin “+” (centrale) del connettore S.Port può essere lasciato disattivato. Utilizzare l'opzione “---”.  
+b) Il pin “+” (centrale) sul connettore S.Port può essere configurato come “Sempre attivo” per fornire +5 V a un dispositivo periferico.   
+c) Il pin “+” (centrale) sul connettore S.Port può essere controllato da un interruttore o da un'altra fonte per fornire +5 V a un dispositivo periferico.   
+È necessario prestare attenzione a non sovraccaricare l'uscita.
 
 ## Tempo di utilizzo del modello
 
-![Tempo di utilizzo del modello](../assets/model-edit-model-runtime.png)
+Il timer di esecuzione del modello tiene traccia del tempo totale di esecuzione del modello.
 
-Registra il tempo totale di volo/utilizzo di questo modello.
+Premi il bottone di reset per resettare il timer
 
 ## Azzera tutti i mix
 
-![Azzera tutti i mix](../assets/model-edit-model-reset_all_mixes.png)
-
-Riporta tutti i mix del modello al loro stato predefinito.
+Eseguendo "Azzera tutti i mix" si azzerano tutti i mix.

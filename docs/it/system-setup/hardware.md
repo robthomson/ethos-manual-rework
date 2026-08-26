@@ -1,137 +1,160 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # Hardware
 
-![Controllo hardware](../assets/system-hardware-check-x20s.png)
+![](../assets/system-icon-hardware.png)
 
-Test e calibrazione dei comandi fisici della radio, definizione dei tipi di
-interruttore e mappa del "tasto home".
+La sezione Hardware serve per testare tutti gli ingressi, eseguire la calibrazione analogica e del giroscopio e impostare i tipi di interruttori e la mappa del "tasto home".
 
-## Controllo dell'hardware {: #hardware-check }
+![](../assets/system-hardware.png)
 
-Consente di verificare il funzionamento di tutti gli ingressi, controllando
-che ciascuno venga rilevato correttamente.
+## Controllo dell'hardware
 
-![Controllo hardware X20 Pro](../assets/system-hardware-check-x20pro.png)
-![Controllo hardware X18S](../assets/system-hardware-check-x18s.png)
+![](../assets/system-hardware-check-x20s.png)
 
-- **X20 Pro/R/RS** — comprende anche i due interruttori a pulsante **K** e
-  **L** sulle spalle posteriori, nonché i trim aggiuntivi **T5**/**T6**.
-- **X18** — comprende anche i trim aggiuntivi **T5**/**T6**.
+Il controllo dell'hardware consente di verificare il funzionamento di tutti gli ingressi.
 
-## Calibrazione analogica {: #analogs-calibration }
+X20 Pro/R/RS
 
-![Calibrazione analogica](../assets/system-hardware-analogs-calibration.png)
+![](../assets/system-hardware-check-x20pro.png)
 
-Viene eseguita in modo che la radio sappia esattamente dove si trovano i
-centri e i limiti di ogni cardano, potenziometro e cursore. Viene eseguita
-automaticamente all'avvio iniziale; deve essere ripetuta dopo la
-sostituzione di un giunto cardanico, di un potenziometro o di un cursore.
+La verifica dell'hardware delle radio X20 Pro/R/RS comprende i due interruttori a pulsante K e L sulle spalle posteriori, nonché i trim aggiuntivi T5 e T6.
+
+X18
+
+![](../assets/system-hardware-check-x18s.png)
+
+Le radio X18 hanno anche le versioni T5 e T6.
+
+## Calibrazione analogica
+
+![](../assets/system-hardware-analogs-calibration.png)
+
+La calibrazione analogica viene eseguita in modo che la radio sappia esattamente dove si trovano i centri e i limiti di ogni cardano, potenziometro e cursore. Viene eseguita automaticamente all'avvio iniziale. Deve essere ripetuta dopo la sostituzione di un giunto cardanico, di un potenziometro o di un cursore.
 
 ## Calibrazione del giroscopio
 
-![Calibrazione del giroscopio](../assets/system-hardware-gyro-calibration.png)
+![](../assets/system-hardware-gyro-calibration.png)
 
-Calibra il giroscopio integrato in modo che le uscite del sensore rispondano
-correttamente all'inclinazione della radio: la posizione "livellata" diventa
-l'angolo in cui normalmente si tiene la radio. Anche questa viene eseguita
-automaticamente all'avvio iniziale.
+La calibrazione del giroscopio può essere eseguita in modo che le uscite del sensore del giroscopio rispondano correttamente all'inclinazione della radio. Viene eseguita automaticamente all'avvio iniziale. Ad esempio, la posizione "livellata" della radio è l'angolo in cui normalmente si tiene la radio.
 
 ## Filtro analogico
 
-Il filtro del convertitore analogico-digitale per gli stick può essere
-attivato/disattivato; il valore predefinito è ON e può migliorare il jitter
-intorno al centro degli stick. Questa è l'impostazione **globale**; è
-disponibile anche un'opzione specifica **per il modello** alla voce Filtro
-analogico in [Modifica modello](../model-setup/model-edit.md).
+Il filtro del convertitore analogico-digitale per gli stick può essere attivato/disattivato con questa impostazione. Il valore predefinito è ON, che può migliorare il jitter intorno al centro degli stick. Questa è un'impostazione globale nella pagina Hardware. È disponibile un'opzione specifica per il modello nella sezione "Modifica modello" alla voce [Filtro analogico](../model-setup/model-edit.md).
 
-## Impostazioni dei potenziometri e dei cursori {: #potssliders-settings }
+## Impostazioni dei pulsanti e dei cursori
 
-I potenziometri e i cursori possono avere nomi personalizzati. L'**X20
-Pro/R/RS** dispone inoltre di due potenziometri aggiuntivi,
-**Ext1**/**Ext2**, utilizzati in genere quando si installano dei giunti
-cardanici a 3 assi.
+![](../assets/system-hardware-pots-x20s.png)
 
-![Valori ADC, potenziometri](../assets/system-hardware-pots-x20s.png)
-![Valori ADC, potenziometri (X20 Pro)](../assets/system-hardware-pots-x20pro.png)
+I Potenziometro e i cursori possono avere nomi personalizzati.
 
-## Impostazioni degli interruttori {: #switches-settings }
+X20 Pro/R/RS
 
-![Interruttori](../assets/system-hardware-switches.png)
+![](../assets/system-hardware-pots-x20pro.png)
 
-- **Ritardo nel rilevamento del centro dell'interruttore** — garantisce che
-  la posizione centrale degli interruttori a tre vie non venga rilevata
-  quando l'interruttore passa dalla posizione alta a quella bassa con un
-  unico movimento e viceversa; dovrebbe essere rilevata solo quando
-  l'interruttore si ferma effettivamente nella posizione centrale.
-  L'impostazione predefinita è 0ms, per adattarsi ai ricevitori stabilizzati
-  FrSky quando rilevano il "Self check" su CH12.
-- **Tipo di interruttore** — gli interruttori da SA a SJ possono essere
-  definiti come **Nessuno**, **Momentaneo**, **2 POS** o **3 POS**, il che
-  permette di scambiare gli interruttori (ad esempio assegnare
-  all'interruttore momentaneo SH il ruolo normalmente svolto
-  dall'interruttore a 2 posizioni SF), compatibilmente con quanto consente
-  il cablaggio della radio (un ruolo a 3 posizioni generalmente non può
-  essere assegnato a un hardware non cablato per tale scopo).
+L'X20 Pro/R/RS dispone di due potenziometri aggiuntivi Ext1 e Ext2. Questi possono essere utilizzati in genere quando si installano dei giunti cardanici a 3 assi.
 
-  ![Opzioni interruttore](../assets/system-hardware-switches-options.png)
-  ![Interruttori aggiuntivi](../assets/system-hardware-switches-2.png)
+## Impostazioni degli interruttori
 
-- **Rinomina** — gli interruttori possono essere rinominati dai nomi
-  predefiniti SA–SJ a nomi personalizzati; questi nomi saranno globali per
-  tutti i modelli.
-- **X20 Pro** — dispone in più degli interruttori a pulsante **K**/**L**
-  sulle spalle posteriori; inoltre le posizioni **M**/**N** possono essere
-  cablate alla scheda di circuito, tipicamente utilizzate per gli
-  interruttori di fine corsa.
+![](../assets/system-hardware-switches.png)
+
+![](../assets/system-hardware-switches-2.png)
+
+Ritardo nel rilevamento del centro dell'interruttore
+
+Questa impostazione garantisce che la posizione centrale degli interruttori a tre vie non venga rilevata quando l'interruttore passa dalla posizione alta a quella bassa con un unico movimento e viceversa. Dovrebbe essere rilevata solo quando l'interruttore si ferma nella posizione centrale. L'impostazione predefinita è stata modificata a 0ms per adattarsi ai ricevitori stabilizzati FrSky quando rilevano il "Self check" su CH12.
+
+![](../assets/system-hardware-switches-options.png)
+
+Gli interruttori da SA a SJ possono essere definiti come:
+
+- Nessuno
+- Momentaneo
+- 2 POS
+- 3 POS
+
+Questo permette di scambiare gli interruttori, ad esempio l'interruttore momentaneo SH può essere sostituito con l'interruttore a 2 posizioni SF. Si noti che potrebbe non essere possibile sostituire un interruttore momentaneo o a 2 posizioni con uno a 3 posizioni se il cablaggio della radio non lo consente.
+
+Gli interruttori possono anche essere rinominati dai nomi predefiniti SA e SJ a nomi personalizzati. Nota che questi nomi saranno globali per tutti i modelli.
+
+X20 Pro
+
+![](../assets/system-hardware-switches-x20pro.png)
+
+La X20 Pro dispone di due interruttori a pulsante SK e SL supplementari sulle spalle posteriori. Inoltre, le posizioni M e N possono essere cablate alla scheda di circuito, tipicamente utilizzate per gli interruttori di fine corsa.
+
+Serie XE (esclusivamente)
+
+
+
+Nella serie XE gli interruttori sono contrassegnati con le sigle da S1 a S14, che per impostazione predefinita corrispondono a SA-SN in Ethos. Se lo si desidera, è possibile modificare le etichette di Ethos in S1-S14 per rispecchiare le indicazioni presenti sulla radio, oppure assegnare qualsiasi altra denominazione desiderata.
+
+Si noti che, grazie al suo livello di astrazione aggiuntivo, qualsiasi switch può essere mappato su qualsiasi posizione dello switch Ethos.
 
 ## Mappa dei tasti della Home
 
-Consente di riassegnare la destinazione dei tasti home `SYS`, `MDL` e
-`DISP` (`TELE` sui modelli più vecchi).
+![](../assets/system-hardware-shortcuts.png)
 
-- **`DISP`** — le opzioni di pressione breve e lunga possono essere
-  riassegnate a qualsiasi pagina del Modello, del Sistema, a Configura
-  schermate, alla pagina iniziale o alla Registrazione dei dati di volo. Per
-  coerenza con la serie X10, la pressione lunga di `DISP` viene assegnata
-  convenzionalmente alla pagina "Configura schermate".
-- **`SYS`/`MDL`** — solo la pressione lunga può essere riassegnata (allo
-  stesso insieme di destinazioni); una pressione breve richiama
-  rispettivamente la sezione Sistema o Modello.
+I tasti home \[SYS\], \[MDL\] e \[DISP\] (TELE sui modelli più vecchi) possono essere riassegnati in base alle esigenze dell'utente.
 
-## Opzioni hardware specifiche per radio {: #radio-specific-hardware-options }
+Tasto \[DISP\]
 
-- **Attivazione dei gimbal aptici** (X20 Pro, X20R) — l'X20 Pro AW e X20RS
-  sono dotati di gimbals MC20R con motori a feedback tattile (stick shaker);
-  se i gimbals MC20R sono stati adattati a X20 Pro o X20R come opzione, è
-  possibile abilitare qui i motori dei giunti cardanici (fare riferimento a
-  [Funzioni speciali](../model-setup/special-functions.md) per la
-  configurazione dei pattern aptici veri e propri).
+![](../assets/system-hardware-shortcuts-options.png)
 
-  ![Aptico (X20 Pro)](../assets/system-hardware-haptic-x20pro.png)
-  ![Aptico (X20 Pro AW)](../assets/system-hardware-haptic-x20proaw.png)
+Per quanto riguarda il tasto \[DISP\], le opzioni di pressione breve e lunga possono essere riassegnate a qualsiasi pagina del Modello, del Sistema, delle Schermate di configurazione, alla pagina iniziale o alla Registrazione dei dati di volo. Per coerenza con la serie X10, il tasto \[DISP\_long\] può essere assegnato convenzionalmente alla pagina "Configura schermate".
 
-- **Opzione encoder** (X20 Pro AW, X20R/RS) — questi modelli hanno un
-  encoder rotativo più sensibile; l'opzione **mezzi passi** può essere
-  attivata per ridurne la sensibilità.
+Tasti \[SYS\] e \[MDL\]
 
-  ![Opzione encoder (X20 Pro AW)](../assets/system-hardware-x20proaw-encoder-option.png)
+Per i tasti \[SYS\] e \[MDL\] solo le opzioni premute a lungo possono essere riassegnate a qualsiasi pagina del Modello, del Sistema, della Configurazione delle schermate, della Home o della Registrazione dei dati di volo. Una pressione breve richiama rispettivamente la sezione Sistema o Modello.
 
-## Ispettore del valore ADC {: #adc-value-inspector }
+## Bluetooth audio option (X20, X20R, X20RS)
 
-Mostra i valori grezzi di conversione analogico-digitale (ADC) degli
-ingressi analogici letti dalla CPU:
 
-![Controllo ADC (X20S)](../assets/system-hardware-adc-check-x20s.png)
-![Controllo ADC (X20 Pro)](../assets/system-hardware-adc-check-x20pro.png)
 
-**X20S**: 1 stick sinistro orizzontale, 2 stick sinistro verticale, 3 stick
-destro verticale, 4 stick destro orizzontale, 5 Potenziometro 1, 6
-Potenziometro 2, 7 cursore centrale, 8 cursore sinistro, 9 cursore destro.
+Un modulo Bluetooth audio può essere aggiunto alle seguenti radio X20, X20R o X20RS in modo da permettere di cuffie Bluetooth (per esempio). Questa opzione di selezione Hardware sarà abilitata se il modulo è installato.
 
-**X20 Pro**: come sopra, ma con due canali aggiuntivi per i potenziometri
-esterni (7 Ext1, 8 Ext2 — ad esempio potenziometri montati su stick)
-inseriti prima dei cursori, che diventano quindi 9 cursore centrale,
-10 cursore sinistro, 11 cursore destro.
+Nota bene che il modulo non plug and play, deve essere saldato con tecnica SM (surface mount).
+
+## Abilita sistema Aptico gimbal (X20 Pro and X20R)
+
+![](../assets/system-hardware-haptic-x20pro.png)
+
+L'X20 Pro AW e X20RS sono dotati di gimbals MC20R con motori a feedback tattile (stick shaker). Se i gimbals MC20R sono stati adattati a X20 Pro o X20R come opzione, è possibile abilitare i motori dei giunti cardanici qui. Fare riferimento alla sezione “[Selezione motori ](https://www.deepl.com/en/translator?utm_term=&utm_campaign=IT%7CSearch%7CC%7CDSA%7CEnglish&utm_source=google&utm_medium=paid&hsa_acc=1083354268&hsa_cam=20627207960&hsa_grp=157168539729&hsa_ad=676252350153&hsa_src=g&hsa_tgt=dsa-437115340933&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAtYy9BhBcEiwANWQQL3EXIE2Cf7NSZZ0OYMKRgJCFeuGlPViCbNUpEZbVFRHTE1YdWYCrcBoCvrYQAvD_BwE#Select%20haptic%20motors)” per i dettagli sulla loro configurazione.
+
+## Opzione encoder (X20 Pro AW e X20R/RS)
+
+![](../assets/system-hardware-x20proaw-encoder-option.png)
+
+I modelli X20 Pro AW e X20R/RS hanno un encoder rotativo migliorato e più sensibile. L'opzione "mezzi passi" può essere attivata per ridurre la sensibilità.
+
+## Ispettore del valore ADC
+
+![](../assets/system-hardware-adc-check-x20s.png)
+
+Mostra i valori di conversione analogico-digitale (ADC) degli ingressi analogici letti dalla CPU.
+
+- Stick sinistro orizzontale
+- Stick sinistro verticale
+- Stick destro verticale
+- Stick destro orizzontale
+- Potenziometro 1
+- Potenziometro 2
+- Cursore centrale
+- Cursore sinistro
+- Cursore destro
+
+X20 Pro
+
+![](../assets/system-hardware-adc-check-x20pro.png)
+
+L'indice (ADC) per l'X20 Pro è:
+
+- Stick sinistro orizzontale
+- Stick sinistro verticale
+- Stick destro verticale
+- Stick destro orizzontale
+- Potenziometro 1
+- Potenziometro 2
+- Ext1 (potenziometro esterno, ad esempio montato su stick)
+- Ext1 (potenziometro esterno, ad esempio montato su stick)
+- Cursore centrale
+- Cursore sinistro 
+- Cursore destro

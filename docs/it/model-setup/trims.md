@@ -1,211 +1,232 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
-
 # Trim
 
-![Trim](../assets/model-trims.png)
+![](../assets/model-icon-trims.png)
 
-Consente di configurare per ogni stick l'intervallo del trim, l'ampiezza
-del passo e il comportamento, oltre al cross trim e al trim istantaneo.
-Le radio **X20 Pro/R/RS** e **X18** dispongono di due interruttori di trim
-aggiuntivi, **T5**/**T6**, utili per le regolazioni in volo oltre ai quattro
-stick principali:
+La sezione Trims ti permette di configurare l'intervallo di trim e la dimensione del passo di trim, oppure di configurare un comportamento di trim personalizzato per ciascuno dei 4 stick di controllo. È inoltre possibile configurare i trim incrociati e i trim istantanei.
 
-![Trim T5/T6](../assets/model-trims-pro-t5-t6.png)
+L'X20 Pro/R/RS e l'X18 hanno due interruttori di trim aggiuntivi T5 e T6, molto utili per le regolazioni in volo.
 
-Ogni stick dispone di un proprio set indipendente di impostazioni di trim.
+È possibile configurare ulteriori trim a seconda delle esigenze.
 
-## Impostazioni dei trim {: #trim-settings }
+![](../assets/model-trims.png)
 
-- **Intervallo** — per impostazione predefinita ±25%, regolabile fino alla
-  corsa completa dello stick, ±100%. Nella schermata principale, un trim
-  con intervallo predefinito indica valori da −100 a 100; un trim a
-  intervallo completo (100%) indica valori da −400 a 400 (4× l'intervallo
-  normale).
+Esiste una serie di impostazioni di trim per ogni stick.
 
-  !!! warning
-      Ampliando l'intervallo, tenere premuta troppo a lungo una levetta di
-      trim può aggiungere trim a sufficienza da rendere il modello
-      impilotabile.
+![](../assets/model-trims-pro-t5-t6.png)
 
-- **Step** — granularità dell'interruttore di trim: **Extra fine**,
-  **Fine**, **Medio**, **Grossolano**, **Esponenziale** (fine in prossimità
-  del centro, grossolano allontanandosi) oppure **Personalizzato** (una
-  percentuale specifica per ogni clic).
+L'X20 Pro e l'x18 hanno due ulteriori versioni T5 e T6.
 
-  ![Opzioni di step](../assets/model-trims-step-options.png)
+## Impostazioni del trim
 
-  | Step | µs per clic (intervallo 25%) |
-  |---|---|
-  | Extra fine | 0.5 |
-  | Fine | 1 |
-  | Medio | 2 |
-  | Grossolano | 4 |
-  | Esponenziale | 0.3–16 |
+Gamma
 
-  Personalizzato, con intervallo al 25%: step 1% = 1µs/clic, step 100% =
-  128µs/clic. Con intervallo al 100%: step 1% = 5µs/clic, step 100% =
-  512µs/clic.
+L'intervallo di trim predefinito è +/- 25%. La gamma può essere modificata fino a coprire l'intera gamma di stick del 100%. È necessario prestare attenzione a questa opzione, perché se si tengono premuti i trim per troppo tempo si rischia di aggiungere così tanto trim da rendere il modello non volabile.
 
-## Modalità
+Nota che sul display principale l'intervallo di trim predefinito viene visualizzato da -100 a 100. Un intervallo di trim del 100% mostrerà da -400 a 400 (cioè 4 volte l'intervallo di trim normale).
 
-![Modalità del trim dell'elevatore](../assets/model-trims-mode-elevator.png)
+Passo
 
-Per impostazione predefinita i trim sono sempre attivi, ma la voce **Modo**
-ne modifica il comportamento. I trim vengono riportati a 0 quando si cambia
-modalità.
+![](../assets/model-trims-step-options.png)
 
-- **OFF** — il trim è completamente disabilitato.
+Il parametro della fase di trim consente di disabilitare i trim o di configurare la granularità dei passi del trim, da "Extra fine" a Fine, Medio, Grosso, Esponenziale o Ad Hoc - Personalizzato. L'impostazione Esponenziale prevede passi fini vicino al centro e passi grossolani più lontani. L'impostazione Personalizzata permette di specificare il passo del trim come percentuale.
 
-  ![Modo: OFF](../assets/model-trims-mode-option-off.png)
+Con un intervallo predefinito del 25%, i passi del trim per click sono:
 
-  Utile, ad esempio, nei modelli elettrici in cui il trim del gas non è
-  necessario: il trim così liberato può quindi essere
-  [riutilizzato per regolare una Var](variables.md).
+Extra fine	0,5us
 
-- **Modo Facile** — un solo valore di trim condiviso da tutte le modalità
-  di volo. È la scelta abituale per i trim degli alettoni e del timone,
-  dato che questi trim non variano tra le varie modalità di volo.
+Fine	1us
 
-  ![Modo: Facile](../assets/model-trims-mode-option-easy.png)
+Media	2us
 
-- **Trim indipendente per modalità di volo** — il trim influisce solo sulla
-  modalità di volo attiva. È la scelta abituale per il trim dell'elevatore,
-  poiché il trim dell'elevatore richiesto varia in genere per ogni modalità
-  di volo (ad esempio a causa delle differenze di curvatura dell'ala): in
-  effetti, questo è spesso il motivo principale per cui si implementano le
-  modalità di volo.
+Grosso	4us
 
-  ![Modo: indipendente per modalità di volo](../assets/model-trims-mode-option-fm.png)
+Esponenziale	Da 0,3us a 16us
 
-- **Ad hoc** — comportamento completamente personalizzato, costruito
-  tramite i **comportamenti** che si aggiungono manualmente.
+Per i trim personalizzati e un intervallo predefinito del 25%, i passi di trim per click sono:
 
-### Comportamenti di trim personalizzati
+Dimensione del passo 1%	1us
 
-![Aggiungi un comportamento](../assets/model-trims-mode-elevator-add-behaviour.png)
-![Opzioni di comportamento](../assets/model-trims-mode-elevator-edit-behaviour.png)
+Dimensione del passo 100%	128us per passo
 
-Ogni linea di comportamento presenta una condizione e una delle seguenti
-opzioni:
+Per i trim personalizzati e un intervallo del 100%, i passi di trim per click sono:
 
-- **Scollegato** — disabilita il trim in modo selettivo in presenza di
-  questa condizione (anziché disattivarlo del tutto impostando Modo = OFF).
+Dimensione del passo 1%	5us
 
-  ![Scollegato](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
-  ![Condizione per Scollegato](../assets/model-trims-mode-unplugged-select.png)
+Dimensione del passo 100%	512us per passo
 
-- **Normale** (predefinito) — comportamento di trim ordinario.
-- **Uguale (a un altro Trim)** — il Trim di questa condizione è configurato
-  per essere uguale al Trim di un'altra condizione.
+Modalità
 
-  ![Uguale](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
+![](../assets/model-trims-mode-elevator.png)
 
-- **Offset + (un altro Trim)** — il Trim di questa condizione viene sommato
-  al Trim di un'altra condizione.
+Per impostazione predefinita i trim sono sempre attivi, ma le opzioni di comportamento dei trim possono essere configurate per modificare il comportamento dei trim in base a varie condizioni.
 
-  ![Offset](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+Nota: i trim vengono riportati a 0 quando si cambia modalità.
 
-**Esempio di Trim offset** — un aliante con un trim dell'elevatore di base
-per la modalità **Crociera** e trim dipendenti per **Velocità** e
-**Termica**:
+Esistono quattro modalità di comportamento dell'assetto:
 
-![Selezione FM5 Speed](../assets/model-trims-mode-elevator-custom-select.png)
-![Selezione FM4 Thermal](../assets/model-trims-mode-elevator-custom-select-2.png)
+SPENTO
 
-1. Regolare l'elevatore per il volo livellato nella modalità di volo
-   predefinita (Cruise).
-2. Aggiungere un comportamento: **Offset + Default**, con la condizione
-   `FM5(Speed)`. Quando viene selezionata la modalità Speed, qualsiasi
-   regolazione del Trim verrà salvata come un offset rispetto al valore del
-   Trim di base in Cruise: separato, ma comunque dipendente da esso.
+![](../assets/model-trims-mode-option-off.png)
 
-   ![Offset per Speed](../assets/model-trims-mode-elevator-custom-speed.png)
+Se la modalità trim è impostata su OFF, il trim è disabilitato.
 
-3. Allo stesso modo, aggiungere un secondo comportamento: **Offset +
-   Default**, con la condizione `FM4(Thermal)`. (Una volta configurato il
-   primo comportamento, nella finestra di dialogo a discesa compaiono anche
-   le opzioni `Equal FM5(Speed)` e `Offset + FM5(Thermal)`, poiché ora è
-   possibile fare riferimento anche a quel comportamento.)
+Ad esempio, nei modelli elettrici il trim del Gas - Throttle non è necessario e può essere disattivato impostando la modalità su OFF. Il trim può quindi essere riutilizzato per regolare una Var; fai riferimento alla sezione "[Trimmeraggio riutilizzato" ](#Repurposed_trim)nella sezione Vars.
 
-   ![Offset per Speed e Thermal](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+Modalità facile
 
-Con questa configurazione, se in seguito il Trim di crociera di base deve
-essere modificato (ad esempio perché hai alterato il C di G dell'aliante),
-anche i trim di Speed e Thermal saranno modificati automaticamente della
-stessa entità, poiché sono offset rispetto ad esso e non valori
-indipendenti.
+![](../assets/model-trims-mode-option-easy.png)
 
-- **Audio** — per ogni Trim l'audio può essere disattivato se gli annunci
-  standard non sono desiderati, ad esempio se il Trim è stato riutilizzato
-  per altro scopo.
+In modalità Easy c'è un solo valore di trim per ogni controllo, quindi il valore di trim è condiviso in tutte le Fasi di volo. Questo è solitamente appropriato per i trim degli alettoni e del timone, dato che questi trim non variano tra le varie Fasi di volo.
 
-## Trim aggiuntive
+Indipendente per Fase di volo
 
-![Aggiungi Trim extra](../assets/model-trims-add-trim-select.png)
-![Impostazioni del Trim extra](../assets/model-trims-add-trim-edit.png)
+![](../assets/model-trims-mode-option-fm.png)
 
-Il pulsante **Aggiungi Trim extra** crea un Trim ulteriore rispetto ai
-quattro stick standard (e a T5/T6): **Nome**, sorgenti **Su**/**Giù** che lo
-comandano, oltre alle stesse opzioni **Intervallo**, **Step**, **Modo** e
-**Audio** descritte sopra.
+Con l'opzione "Assetto indipendente per Fase di volo", l'assetto influisce solo sulla Fase di volo attiva. Questa opzione viene normalmente utilizzata per il trim dell'elevatore, poiché il trim dell'elevatore richiesto varia in genere per ogni Fase di volo, ad esempio a causa delle differenze di curvatura dell'ala. In effetti, questo è spesso il motivo principale per cui si implementano le Fasi di volo!
 
-## Cross trim
+Ad Hoc - Personalizzato
 
-![Cross Trim](../assets/model-trims-cross.png)
-![Modifica del Cross Trim](../assets/model-trims-cross-edit.png)
+![](../assets/model-trims-mode-elevator-custom-select.png)
 
-Permette di scegliere quale interruttore di trim regola effettivamente
-ciascuno stick, ossia consente di comandare il trim di uno stick con un
-comando fisico di trim diverso da quello abituale. (I trim T5 e T6 sono
-disponibili solo su X20 Pro e X18.)
+Nella modalità Personalizzata, il comportamento dell'assetto può essere personalizzato
 
-## Trim istantaneo {: #instant-trim }
+![](../assets/model-trims-mode-elevator-add-behaviour.png)
 
-![Trim istantaneo](../assets/model-trims-instant-trim.png)
+Una volta selezionata la modalità personalizzata, appare una nuova finestra di dialogo "Comportamento". Clicca su "Aggiungi un nuovo comportamento".
 
-Quando questa funzione è attiva, aggiunge le posizioni correnti degli stick
-ai rispettivi valori dei trim di default (anche dei cross trim). È meglio
-assegnarla a un interruttore che puoi raggiungere senza lasciare gli stick:
-attivandola mentre voli in linea d'aria imposti istantaneamente i trim,
-evitando di premere ripetutamente le levette dei trim quando i trim sono
-molto lontani dalla regolazione corretta. Va disattivata dopo il volo di
-trimmaggio, per evitare di alterare di nuovo i trim per sbaglio.
+![](../assets/model-trims-mode-elevator-edit-behaviour.png)
 
-!!! note
-    Il trim istantaneo è attivo solo quando si è in una delle viste
-    principali della radio.
+Verrà aggiunta una nuova linea di comportamento.
 
-## Sposta i trim ai SubTrim
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
 
-![Muove i trim ai subtrim](../assets/model-trims-move-trims-to-subtrims.png)
+Le opzioni di comportamento iniziali sono:
 
-Dopo aver regolato il modello per il volo livellato, questa funzione sposta
-il valore di trim di un canale (ad esempio dell'elevatore) nella relativa
-impostazione [Subtrim](outputs.md) e riporta a zero il trim nella schermata
-principale: in questo modo è facile verificare che i trim di volo non si
-siano spostati.
+- Scollegato
+- Predefinito
+- Valore predefinito uguale 
+- Offset + default
 
-Quando si utilizzano le modalità di volo, un canale può avere più di un
-valore di trim rilevante, mentre il parametro Subtrim in Outputs è
-un'impostazione globale che si applica a tutte le modalità di volo. La
-funzione ne tiene conto: prende il trim della modalità di volo
-**attualmente selezionata**, ne trasferisce il contenuto al Subtrim,
-resetta quel trim e regola tutti gli *altri* trim interessati delle
-modalità di volo sullo stesso canale, in modo che le posizioni delle
-superfici di controllo in ogni modalità di volo rimangano complessivamente
-invariate.
+Ciascuna delle opzioni è descritta di seguito.
 
-!!! tip
-    Esegui sempre questa operazione dalla stessa modalità di volo "base"
-    (ad esempio Cruise su un aliante) per essere coerente: rispettando
-    questa regola può essere ripetuta senza problemi.
+- Disabilita i trim
 
-Valori di trim o subtrim elevati generano corse molto asimmetriche: sarebbe
-più saggio correggere il problema meccanicamente. Occorre fare ogni sforzo
-per avere 90 gradi ai leveraggi quando le superfici sono in posizione
-neutra (fanno eccezione i flap, dove si sacrifica la corsa verso l'alto per
-massimizzare quella verso il basso); dopo aver avvicinato il più possibile i
-collegamenti a 90 gradi, si dovrebbe usare il **PWM Center** per portarli
-esattamente a 90 gradi.
+![](../assets/model-trims-mode-elevator-edit-behaviour-unplugged.png)
+
+I trim possono essere disabilitati in modo selettivo configurando l'opzione "Scollegato".
+
+![](../assets/model-trims-mode-unplugged-select.png)
+
+I trim possono essere disattivati selettivamente passando da "Sempre attivo" alla condizione desiderata. Per disabilitare completamente un trim, imposta la Modalità trim su OFF come spiegato sopra.
+
+- Uguale (a un altro assetto)
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-equal.png)
+
+L'assetto di una condizione specifica può essere configurato per essere uguale all'assetto di un'altra condizione.
+
+- Offset + (un altro assetto)
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+L'assetto di una specifica condizione può essere configurato per essere aggiunto all'assetto di un'altra condizione.
+
+Su molti modelli si vuole avere un trim dell'elevatore di base per quando si vola in modalità predefinita, e poi avere impostazioni di trim dell'elevatore dipendenti per altre Fasi di volo.
+
+Ad esempio, negli alianti la Fase di volo predefinita è quella chiamata Crociera, in cui l'elevatore viene regolato per primo per ottenere un volo livellato.
+
+Poi vuoi che i trim dell'elevatore dipendano da altre Fasi di volo come Velocità e Termica. Aggiungeremo un nuovo comportamento per le modalità Velocità e Termica.
+
+![](../assets/model-trims-mode-elevator-edit-behaviour-offset.png)
+
+![](../assets/model-trims-mode-elevator-custom-speed.png)
+
+Configuriamo il primo comportamento come "Offset + Default" con la condizione "FM5(Velocità)". Quando viene selezionata la modalità FM5(Speed), qualsiasi regolazione dell'assetto verrà salvata come un offset rispetto al valore dell'assetto della modalità base in FM0(Cruise). Pertanto l'assetto in FM5(Speed) sarà separato ma dipenderà anche dall'assetto di base.
+
+![](../assets/model-trims-mode-elevator-custom-select-2.png)
+
+Nota che quando configuriamo il secondo comportamento, nella finestra di dialogo a discesa compaiono le opzioni "FM5(Velocità) uguale" e "Offset + FM5(Termica)". Queste sono dovute al primo comportamento che abbiamo configurato sopra.
+
+![](../assets/model-trims-mode-elevator-custom-speed-thermal.png)
+
+Analogamente al primo, configuriamo il secondo comportamento come "Offset + Default" con la condizione "FM4(Thermal)". Quando viene selezionata la modalità FM4(Thermal), qualsiasi regolazione dell'assetto verrà salvata come un offset rispetto al valore dell'assetto della modalità base in FM0(Cruise). Pertanto, l'assetto in FM4(Thermal) sarà separato ma dipenderà anche dall'assetto di base.
+
+Se poi l'assetto di crociera di base deve essere modificato perché hai alterato il C di G dell'aliante, anche le impostazioni di assetto dipendenti per la velocità e la termica saranno modificate della stessa entità.
+
+Audio
+
+Per ogni Trim l'audio può essere disattivato se gli annunci standard non sono desiderati, ad esempio se la Trim è stata riallestita.
+
+Muove trim al subtrim
+
+
+
+Dopo aver regolato il modello per il volo livellato, questa funzione può essere utilizzata per spostare il valore di trim richiesto (ad esempio dell'elevatore) nell'impostazione Subtrim nei canali e reimpostare il trim nella schermata principale sulla posizione zero. In questo modo è facile verificare che i trim di volo non si siano spostati.
+
+
+
+L'opzione “Sposta trim su sottotrim” per il trim dell'elevatore avrà “Trim elevatore” selezionato di default. È possibile aggiungere altri trim oppure utilizzare l'opzione principale “Sposta trim su sottotrim” sottostante, che seleziona tutti i trim di default.
+
+## Trim aggiuntivi
+
+![](../assets/model-trims-add-trim-select.png)
+
+È possibile creare ulteriori Trim toccando il pulsante "Aggiungi una Trim extra".
+
+![](../assets/model-trims-add-trim-edit.png)
+
+Nome
+
+Il nuovo assetto può essere chiamato così.
+
+Su
+
+Seleziona la sorgente da utilizzare per aumentare il valore del trim.
+
+In basso
+
+Seleziona la sorgente da utilizzare per diminuire il valore del trim.
+
+Gamma
+
+Consulta la descrizione della gamma di trim standard qui sopra.
+
+Passo
+
+Fai riferimento alla descrizione dei passaggi per i trim standard riportata sopra.
+
+Modalità
+
+Fai riferimento alla descrizione per la configurazione del comportamento dei trim standard di cui sopra.
+
+Audio
+
+Per ogni Trim, l'audio può essere disattivato se non si desiderano gli annunci della Trim standard, ad esempio se la Trim è stata riallestita.
+
+## Cross-trim
+
+![](../assets/model-trims-cross-edit.png)
+
+I trim incrociati possono essere impostati per ogni stick di trim, in modo da poter scegliere quale interruttore di trim utilizzare per ogni stick. (I trim T5 e T6 sono disponibili solo su X20 Pro e X18).
+
+## Trim istantaneo
+
+![](../assets/model-trims-instant-trim.png)
+
+Quando questa funzione diventa attiva, aggiunge le posizioni correnti degli stick ai rispettivi valori di trim per i trim di default (anche i cross trim). È meglio assegnare questa funzione a un interruttore che puoi raggiungere senza lasciare gli stick e che viene utilizzato per impostare istantaneamente i trim mentre voli in linea d'aria. In questo modo si evita di dover premere freneticamente gli interruttori dei trim molte volte se i trim sono molto lontani. Questa impostazione deve essere disattivata dopo il volo di trimming, per evitare di alterare di nuovo i trim per sbaglio.
+
+## Muove i trim ai SubTrim
+
+![](../assets/model-trims-move-trims-to-subtrims.png)
+
+Dopo aver regolato il modello per il volo livellato, questa funzione può essere utilizzata per spostare il valore di trim richiesto (ad esempio dell'elevatore) nell'impostazione Subtrim in Outputs e reimpostare il trim nella schermata principale sulla posizione zero. In questo modo è facile verificare che i trim di volo non si siano spostati.
+
+
+
+Controllare i trim da spostare nei sottotrim. È possibile deselezionare il trim dell'acceleratore..
+
+Quando si utilizzano le Fasi di volo, potrebbe essere necessario considerare più di un valore di trim per ciascun canale. Il parametro Subtrim in Outputs è un'impostazione globale che si applica a tutte le Fasi di volo, mentre i valori di trim possono variare a seconda della Fase di volo. Di conseguenza, lo spostamento del trim in una Fase di volo nel Subtrim globale potrebbe richiedere la regolazione dei trim delle altre Fasi di volo. Pertanto la funzione prenderà il trim della Fase di volo attualmente selezionata, trasferirà il suo contenuto al subtrim, resetterà il trim e regolerà tutti gli altri trim interessati delle Fasi di volo. Alla fine della giornata le posizioni delle superfici di controllo in ogni Fase di volo dovrebbero essere le stesse di prima dell'operazione “Trims ai subtrims”.
+
+Valori di trim o subtrim elevati possono avere un effetto negativo a causa delle conseguenti corse molto asimmetriche. Sarebbe più saggio correggere il problema meccanicamente. Occorre fare ogni sforzo per avere 90 gradi ai leveraggi quando le superfici sono in posizione neutra, ad eccezione dei flap dove si sacrifica la corsa in direzione verso l'alto per massimizzare la corsa in direzione verso il basso. Dopo aver avvicinato il più possibile i collegamenti a 90 gradi, si dovrebbe usare il PWM Center per portarli esattamente a 90 gradi.
+
+Non c'è problema a ripetere i trim ai subtrim, ma si dovrebbe essere coerenti e farlo sempre nella stessa Fase di volo, cioè la Fase di volo “base”. Ad esempio, su un aliante la Fase di volo Cruise è solitamente la modalità base e quella da regolare per prima.

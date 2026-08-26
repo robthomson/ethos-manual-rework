@@ -1,69 +1,99 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Layout di base di un widget Lua
 
-# Layout base di un widget
+Tutti gli script Lua, compresi i widget, utilizzano gli handler (noti anche come moduli di codice) per eseguire operazioni specifiche quali l'elaborazione dei dati in background, il controllo e la visualizzazione dell'interfaccia, la configurazione dei widget, la lettura o il salvataggio delle impostazioni, l'intercettazione e la valutazione degli eventi, ecc.
 
-Un widget Lua personalizzato (vedi [Widget personalizzati](../displays/custom-widgets.md)
-per l'installazione) è costituito da un piccolo insieme di campi/handler
-denominati:
+## init(funzione)
 
-- **`key`** *(stringa)* — un identificatore univoco del widget.
-- **`name`** *(stringa o funzione)* — il nome visualizzato del widget. Può
-  essere una semplice stringa oppure una funzione senza argomenti che ne
-  restituisce una — utile per un nome che varia in base alla lingua.
-- **`create`** *(funzione)* — chiamata una sola volta alla creazione del
-  widget, senza argomenti. Restituisce una **tabella del widget**, che viene
-  poi passata a tutti gli altri handler elencati di seguito: inizializza qui
-  lo stato e memorizzalo in quella tabella.
-- **`configure`** *(funzione)* — chiamata quando l'utente apre la schermata
-  di configurazione del widget; riceve come unico argomento la tabella del
-  widget restituita da `create()` e non restituisce nulla. Costruisci qui il
-  modulo di configurazione e utilizzalo per aggiornare i valori nella
-  tabella del widget.
-- **`wakeup`** *(funzione)* — chiamata a ogni ciclo (all'incirca ogni 50 ms);
-  riceve la tabella del widget e non restituisce nulla. Verifica qui se
-  qualcosa è cambiato; in tal caso, chiama `invalidateWindow()` per
-  attivare un ridisegno tramite `paint()`. Mantieni questo handler veloce —
-  idealmente non deve fare assolutamente nulla nella maggior parte delle
-  chiamate.
-- **`event`** *(funzione)* — chiamata quando il widget riceve un evento:
-  Ethos indirizza al widget eventi arbitrari attraverso questo handler.
-- **`paint`** *(funzione)* — disegna il widget; riceve la tabella del widget
-  e non restituisce nulla. Viene chiamata automaticamente ogni volta che è
-  stato invocato `lcd.invalidate()`. Può essere relativamente lenta, ma
-  dovrebbe comunque ridisegnare effettivamente solo quando qualcosa è
-  cambiato.
-- **`read`** *(funzione, opzionale)* — legge i dati memorizzati in modo
-  persistente dal widget.
-- **`write`** *(funzione, opzionale)* — scrive i dati memorizzati in modo
-  persistente dal widget.
-- **`init`** *(funzione)* — registra il widget e le sue callback in Ethos.
-  Di norma è l'ultimo elemento dello script:
+La funzione di gestione init serve a registrare il widget all'avvio del trasmettitore. Utilizza il metodo system.registerWidget() per dichiarare il widget. Inoltre, specifica quali gestori aggiuntivi vengono utilizzati nello script.
 
-```lua
+Un Esempio di una funzione di gestione init può essere questa:
+
+Code:
+
 local function init()
-  system.registerWidget({
-    key = "unique",
-    name = name,
-    create = create,
-    configure = configure,
-    wakeup = wakeup,
-    paint = paint,
-    read = read,
-    write = write,
-  })
+
+system.registerWidget({
+
+key = "unique",
+
+name = name,
+
+create = create,
+
+configure = configure,
+
+wakeup = wakeup,
+
+paint = paint,
+
+read = read,
+
+write = write,
+
+})
+
 end
 
 return { init = init }
-```
 
-`key` deve essere univoco fra tutti i widget installati; gli altri campi si
-integrano nel ciclo di vita del widget come descritto sopra.
+Nota che "key" è un identificatore unico per il tuo widget. Le varie funzioni elencate sono utilizzate nel ciclo di vita del widget.
 
-Gli script risiedono nella cartella `scripts/` sulla SD card o eMMC,
-preferibilmente organizzati in cartelle separate per ciascun widget (vedi
-[File Manager](../system-setup/file-manager.md#top-level-folders) e
-[Esempi di posizione degli script](example-script-locations.md)). Per
-ulteriori esempi pratici, consulta il thread *FrSky ETHOS Lua Script
-Programming* su rcgroups.
+## system.registerWidget() method
+
+Il metodo \`system.registerWidget()\` può avere i seguenti parametri
+
+## key (stringa)
+
+Il widget deve avere una chiave unica.
+
+## name (stringa o funzione)
+
+La funzione name non richiede argomenti e restituisce il nome del widget come stringa. Il nome può essere semplicemente una stringa o il risultato di una funzione. Ad esempio, il nome può essere in una lingua diversa a seconda del locale.
+
+## create (funzione)
+
+La funzione create handler viene chiamata alla creazione del widget. Non richiede argomenti e restituisce la tabella dei widget che viene poi passata a tutte le funzioni. Inizializza qui le tue variabili e memorizza lo stato nella tabella dei widget restituita.
+
+## configure (funzione)
+
+La funzione configure handler viene chiamata quando l'utente entra nella configurazione del widget. Prende come unico argomento la tabella dei widget restituita da create() e non restituisce nulla. Viene chiamata quando l'utente entra nella configurazione del widget. Qui puoi creare il modulo di configurazione e utilizzarlo per modificare i valori della tabella dei widget.
+
+build (function, optional)
+
+Il gestore di creazione viene chiamato ad ogni modifica del layout quando il widget viene 	creato nella schermata Home,     nonché dopo la creazione e la configurazione.
+
+## wakeup (funzione)
+
+La funzione di wakeup handler viene chiamata durante ogni ciclo, cioè ogni 50ms. Prende come unico argomento la tabella dei widget e non restituisce nulla.
+
+La funzione wakeup() deve verificare se qualcosa è cambiato. In caso affermativo, è necessario un aggiornamento, quindi deve essere richiamata la funzione invalidateWindow(). In questo modo verrà richiamata la funzione paint(). Dovresti assicurarti che questa funzione sia molto veloce e che non faccia nulla per la maggior parte del tempo.
+
+## event (funzione)
+
+La funzione di gestione degli eventi chiamata quando viene ricevuto un evento. ETHOS offre la possibilità di catturare qualsiasi evento in un widget, attraverso questa funzione evento.
+
+menu (function, optional)
+
+Il gestore del menu opzionale viene chiamato quando viene creato un menu contestuale, 	per consentire l'aggiunta di ulteriori opzioni al menu. Il gestore deve restituire una tabella di 	coppie { nome, funzione }.
+
+## paint (funzione)
+
+La funzione paint "disegna" il widget. Prende come unico argomento la tabella dei widget e non restituisce nulla. Dovrebbe essere chiamata quando è necessario un aggiornamento e viene richiamata automaticamente ogni volta che viene chiamato lcd.invalidate(). Può essere lenta, quindi disegna solo se qualcosa è cambiato.
+
+## read (funzione)
+
+Gestore di lettura opzionale. In ETHOS è possibile utilizzare l'archivio come desidera l'utente.
+
+## write (funzione)
+
+Gestore di scrittura opzionale. In ETHOS è possibile utilizzare l'archivio come desidera l'utente.
+
+## persistent (booleano, facoltativo)  
+Gestore dati persistenti facoltativo.  
+  
+title (booleano, facoltativo)  
+Gestore titolo facoltativo. Il titolo del widget viene forzato su ON / OFF.
+
+Gli script Lua sono memorizzati nella cartella scripts/ della scheda SD o eMMC, preferibilmente organizzati in cartelle.
+
+Per maggiori informazioni, consulta il thread di rcgroups "FrSky ETHOS Lua Script Programming".

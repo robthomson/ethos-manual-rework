@@ -1,279 +1,123 @@
----
-translated_from: f134e06b5d1e428e1d1dff7dfb14c47cd1c22630
----
+# Esempio di **aereo** ad ala volante di base (Elevon)
 
-# Esempio base di aereo ad ala fissa
-
-Una guida completa per un aereo con motore + 2 alettoni + 2 flap +
-elevatore + timone, un servo per ogni superficie, realizzato dall'inizio
-alla fine con la procedura guidata. Completa prima la
-[Configurazione iniziale della radio](initial-radio-setup.md).
+Questo semplice esempio di ala volante riguarda la configurazione di un modello con 2 servi per gli elevoni. Utilizzeremo i rates, gli expo e i rapporti di Mix raccomandati da Dreamflight Weasel.
 
 ## Passo 1. Conferma le impostazioni del sistema
 
-Questo esempio utilizza l'ordine dei canali **AETR** predefinito.
+Inizia seguendo l'esempio di "Configurazione iniziale della radio", che serve a configurare le parti dell'hardware del sistema radio comuni a tutti i modelli. Per questo esempio utilizzeremo l'ordine dei canali AETR (Alettoni, Elevatore, Motore, Timone) predefinito. Assicurati che l'impostazione "Primi quattro canali fissi" sia disattivata.
+
+Usa la funzione [RF System ](../model-setup/rf-system.md)per registrare (se il tuo ricevitore è ACCESS) e collegare il tuo ricevitore in preparazione alla configurazione del modello.
 
 ## Passo 2. Identificare i servi/canali necessari
 
-La funzione [Mix](../model-setup/mixes.md) costituisce il cuore della
-radio — fino a 100 canali di mix, normalmente con i numeri più bassi
-assegnati ai servi (poiché i numeri dei canali corrispondono direttamente
-ai canali del ricevitore; il modulo RF interno dell'X20 supporta fino a 24
-canali di uscita). I canali più alti restano liberi per canali virtuali o
-per canali reali aggiuntivi tramite più moduli RF e SBUS. Il nostro
-modello:
+La funzione Mix costituisce il cuore della radio. Per un modello di elevone, i mix vengono utilizzati per combinare i comandi dell'alettone e dell'elevatore in modo che agiscano entrambi sulle superfici dell'elevone.
 
-| Funzione | Canali |
-|---|---|
-| Motore | 1 |
-| Alettoni | 2 |
-| Flap | 2 |
-| Elevatore | 1 |
-| Timone | 1 |
+Il nostro esempio di elevone ha i seguenti servi/canali:
 
-(I retrattili vengono aggiunti più avanti, al
-[Passo 10](#step-10-add-a-mix-for-retracts).)
+2 canali che combinano gli ingressi di alettoni ed elevatori
 
-## Passo 3. Crea un nuovo modello
+## Passo 3. Crea un nuovo modello.
 
-![Creazione del modello aereo](../assets/tut-fw-eg-wiz-create-airplane.png)
+Consulta la sezione Impostazione del modello / [Selezione del modello ](../model-setup/model-select.md)per creare il tuo nuovo modello. Consulta anche la sezione Navigazione dei menu per familiarizzare con l'interfaccia utente della radio, in modo da trovare facilmente le funzioni di cui hai bisogno.
 
-Da [Selezione del modello](../model-setup/model-select.md) scegli una
-categoria, tocca il simbolo **+** e avvia la procedura guidata **Aereo**.
-Per questo esempio scegli l'opzione **Ricevitore non stabilizzato**.
+Tocca la scheda Modello (icona dell'aereo) e seleziona la funzione Seleziona modello. Poi tocca il simbolo '+', che ti presenterà una scelta di procedure guidate per la creazione del modello.
 
-![Canali motore](../assets/tut-fw-eg-wiz-engine.png)
-![Canali alettoni/flap](../assets/tut-fw-eg-wiz-ail-flaps.png)
+![](../assets/tut-wing-eg-wiz-create-airplane.png)
 
-Accetta 1 canale per il motore, quindi 2 canali per gli alettoni e
-seleziona 2 canali per i flap.
+Nel nostro esempio, tocca l'icona dell'aereo per avviare la creazione guidata del modello.
 
-![Tipo di piano di coda](../assets/tut-fw-eg-wiz-tail.png)
-![Canali elevatore/timone](../assets/tut-fw-eg-wiz-ele-rudd.png)
+![](../assets/tut-wing-eg-wiz-rx.png)
 
-Accetta il piano di coda **Tradizionale** predefinito, con 1 canale per
-l'elevatore e 1 per il timone.
+La procedura guidata prevede l'impostazione di mix preimpostati per i ricevitori stabilizzati FrSky. Per questo esempio, sceglieremo l'opzione "Ricevitore non stabilizzato".
 
-![Nome del modello](../assets/tut-fw-eg-wiz-name.png)
-![Ricevitore](../assets/tut-fw-eg-wiz-rx.png)
+![](../assets/tut-wing-eg-wiz-no-engine.png)
 
-Assegna un nome (ad esempio "FWexample" — fino a 15 caratteri) e segui la
-procedura guidata fino alla fine: il modello viene creato nel gruppo
-Airplane e diventa il modello attivo.
+Seleziona "Nessun motore" per il motore.
 
-## Passo 4. Rivedere e configurare i mix
+![](../assets/tut-wing-eg-wiz-ail-flaps.png)
 
-![Panoramica dei mix](../assets/tut-fw-eg-mixes.png)
+Accetta i 2 canali predefiniti per gli alettoni e seleziona "Nessun flap".
 
-La procedura guidata ha già creato i mix di alettoni (canali 1 e 5),
-elevatore, gas, timone e flap (i flap mostrano `---`, cioè nessuna sorgente
-ancora assegnata).
+![](../assets/tut-wing-eg-wiz-no-tail.png)
 
-### Alettoni {: #ailerons }
+Seleziona "Nessuno" per la coda. In questo modo si creerà un mix di elevoni utilizzando gli ingressi degli alettoni e dell'elevatore.
 
-![Mix alettoni](../assets/tut-fw-eg-mixes-ail-mix.png)
-![Modifica del mix alettoni](../assets/tut-fw-eg-mixes-ail-edit.png)
+![](../assets/tut-wing-eg-wiz-name.png)
 
-**Escursione / Rates** — imposta le escursioni prima di far volare qualsiasi
-modello nuovo: una corsa contenuta (ad esempio il 30%) è adatta al volo
-sportivo, il 100% pieno al 3D. Aggiungi un'escursione del 60% per la
-posizione centrale dell'interruttore SB e una del 30% per SB in basso — il
-valore predefinito (SB in alto) resta al 100%:
+Chiameremo il modello 'Weasel', selezioneremo un'immagine bitmap e seguiremo la procedura guidata fino alla fine che porterà alla creazione del modello 'Weasel' nel gruppo Airplane. Sarà anche il modello attivo e potremo continuare a configurare le sue caratteristiche.
 
-![Escursioni](../assets/tut-fw-eg-mixes-ail-weight-rates.png)
+## Passo 4. Rivedere e configurare i ***mix***
 
-**Expo** — una risposta lineare può risultare troppo nervosa al centro dello
-stick; aggiungi delle curve Expo (ad esempio 60%/40%/20% sulle stesse
-posizioni di SB) per appiattire la risposta vicino al centro senza ridurre
-la deflessione massima:
+![](../assets/tut-wing-eg-mixes-icon.png)
 
-![Valori di Expo](../assets/tut-fw-eg-mixes-ail-expo-rates.png)
+Tocca l'icona Mix per rivedere i mix creati dalla procedura guidata dell'aereo.
 
-**Differenziale** — se gli alettoni destro e sinistro si muovono verso
-l'alto o verso il basso della stessa quantità, l'alettone che si muove verso
-il basso causerà una resistenza maggiore rispetto a quello che si muove
-verso l'alto, causando l'imbardata del modello nella direzione opposta alla
-virata ("imbardata avversa"). Un valore positivo di differenziale (il 50% è
-un valore comune) riduce il movimento verso il basso rispetto a quello verso
-l'alto, contrastando questo fenomeno:
+![](../assets/tut-wing-eg-mixes.png)
 
-![Differenziale al 50%](../assets/tut-fw-eg-mixes-ail-diff-50.png)
+La procedura guidata ha creato un mix di Alettoni sui canali 1 e 2, seguito da un mix di Elevatori anch'esso sui canali 1 e 2. Ciò significa che entrambi i controlli di ingresso agiranno sui due canali degli elevoni.
 
-Per mettere a punto il differenziale in volo, premi a lungo `ENT` sul valore,
-seleziona **Usa una sorgente** e scegli Pot1:
+Alettoni
 
-![Usa una sorgente](../assets/tut-fw-eg-mixes-ail-diff-use-source.png)
-![Pot1 selezionato](../assets/tut-fw-eg-mixes-ail-diff-use-pot1.png)
+Per rivedere il mix degli alettoni, tocca la riga Alettoni e seleziona Modifica dal menu a comparsa.
 
-Una volta soddisfatto del valore trovato in volo, premi di nuovo a lungo e
-seleziona **Converti in valore** per fissarlo definitivamente:
+![](../assets/tut-wing-eg-mixes-ail-mix-weight.png)
 
-![Converti in valore](../assets/tut-fw-eg-mixes-ail-diff-convert-to-value.png)
+escursione/rates
 
-**Trim** — puoi scollegare questo mix dal trim associato senza disattivare il
-trim stesso, rendendolo così disponibile per un altro scopo:
+Facendo riferimento al manuale Weasel, le deflessioni consigliate per gli alettoni sono circa 3 volte superiori a quelle dell'elevatore. Vogliamo escursioni combinati del 100%, quindi il escursione degli alettoni dovrebbe essere del 75% e quello dell'elevatore del 25%.
 
-![Trim alettoni](../assets/tut-fw-eg-mixes-ail-trim.png)
+Secondo il manuale Weasel, le velocità basse dovrebbero essere circa il 50% di quelle alte. Pertanto utilizzeremo il 36% per le velocità basse degli alettoni e il 12% per le velocità basse dell'elevatore.
 
-### Elevatore e timone
+Expo
 
-Lo stesso schema con tre escursioni + Expo, qui sull'interruttore SC:
+![](../assets/tut-wing-eg-mixes-ail-mix.png)
 
-![Expo ed escursioni dell'elevatore](../assets/tut-fw-eg-mixes-ele-expo-rates.png)
+Negli esempi di Rates qui sopra puoi vedere che la risposta in uscita è lineare. Per evitare che la risposta sia troppo nervosa al centro dello stick, puoi utilizzare una curva Expo per ridurre il movimento della superficie di controllo al centro dello stick e aumentarlo quando lo stick si allontana dal centro. I valori Expo raccomandati da Weasel sono il 35% per gli alti e il 20% per i bassi, quindi aggiungeremo una curva che sarà attiva nella posizione di abbassamento dell'interruttore SB. Il grafico ora mostra una risposta curva che è più piatta al centro dello stick.
 
-### Gas
+![](../assets/tut-wing-eg-mixes-ail-diff-04.png)
 
-![Mix del gas](../assets/tut-fw-eg-mixes-thr-edit.png)
+Per gli alettoni esiste un'altra impostazione speciale chiamata Differenziale. Se gli alettoni destro e sinistro si muovono verso l'alto o verso il basso della stessa quantità, l'alettone che si muove verso il basso causerà una resistenza maggiore rispetto a quello che si muove verso l'alto, causando l'imbardata dell'ala nella direzione opposta alla virata. Questo fenomeno è noto come imbardata avversa. Per ridurre questo fenomeno, un valore positivo nell'impostazione del differenziale porterà a un minore movimento degli alettoni verso il basso, riducendo l'imbardata avversa e migliorando le caratteristiche di virata/maneggevolezza. Il differenziale consigliato da Weasel è piuttosto piccolo e corrisponde a circa il 4%.
 
-Lascia l'ingresso sullo stick del Gas - Throttle — non servono escursioni né
-Expo — ma un interruttore di sicurezza è indispensabile: l'avviamento
-imprevisto di un motore a scoppio o elettrico può provocare lesioni gravi.
+elevatore
 
-**Posizione Trim Bassa** (motori glow/a scoppio) — regola il regime di minimo
-indipendentemente dal gas massimo:
+![](../assets/tut-wing-eg-mixes-ele-mix.png)
 
-![Posizione Trim Bassa](../assets/tut-fw-eg-mixes-thr-low-pos-trim.png)
+In modo simile agli alettoni, possiamo impostare i rates e l'expo per l'elevatore. Utilizzeremo rates e escursioni dell'elevatore del 25% e del 12%. Utilizzeremo gli stessi valori di Expo degli alettoni.
 
-Con questa opzione attiva, il canale del gas si trova a −75% con lo stick al
-minimo; la leva del trim del gas regola quindi il minimo tra −100% e −50%.
+Timone
 
-**Taglio Gas** — un blocco di sicurezza. Con l'interruttore SA in basso come
-condizione attiva (mostrata in grassetto quando è attiva), l'uscita del gas
-si mantiene a −100% non appena lo stick scende sotto −85%:
+Il Weasel non ha un timone e non ne ha bisogno. Altri modelli con elevoni potrebbero aver bisogno di un timone, in questo caso è necessario utilizzare un mix libero per aggiungere un timone sul canale 3.
 
-![Taglio Gas](../assets/tut-fw-eg-mixes-thr-cut.png)
+![](../assets/tut-wing-eg-mixes-rud-mix.png)
 
-Con l'impostazione **Sticky** attiva, invece, il gas viene tagliato
-**nell'istante** in cui SA va in basso, indipendentemente dalla posizione
-dello stick:
+## Passo 5. ***Bind /collegamento il ricevitore***
 
-![Taglio Gas con Sticky](../assets/tut-fw-eg-mixes-thr-cut-sticky-on.png)
+Utilizza la funzione [RF System ](../model-setup/rf-system.md)per registrare (se il ricevitore è ACCESS) e collegare il ricevitore in preparazione alla configurazione delle uscite.
 
-In entrambi i casi, una volta che la condizione attiva cessa, lo stick deve
-essere riportato sotto −85% prima che il gas possa aumentare di nuovo: si
-evita così che il motore salti a un'elevata apertura del gas nel momento in
-cui l'interruttore di taglio viene rilasciato.
+Prima di procedere, leggi le due sezioni successive sulla revisione dei mix e sulla configurazione delle uscite. Per evitare danni dovuti al sovraccarico dei servi, è consigliabile scollegare i leveraggi dei servi o ridurne la corsa fino a quando non sarai pronto a configurare i limiti min/max dei servi.
 
-**Hold Gas** — un taglio di emergenza da *qualsiasi* posizione dello stick,
-che porta l'uscita direttamente a −100% (o a un valore configurato)
-nell'istante in cui la sua condizione è soddisfatta:
+## Passo 6. Esamina i mix
 
-![Hold Gas](../assets/tut-fw-eg-mixes-thr-hold.png)
+Puoi utilizzare la schermata Uscite per rivedere i mix. I canali di uscita 1 e 2 possono essere rinominati in Elevon1 e Elevon2.
 
-### Flap
+![](../assets/tut-wing-eg-outputs-full-ail.png)
 
-![Ingresso dei flap](../assets/tut-fw-eg-mixes-flaps-input.png)
+L'esempio precedente mostra che è stato applicato tutto l'alettone destro, quindi il canale 1 è al 75%, mentre l'alettone sinistro in discesa è al 72% a causa del differenziale degli alettoni.
 
-Assegna i flap all'interruttore SE e imposta al 100% l'escursione di entrambi
-i canali di uscita:
+![](../assets/tut-wing-eg-outputs-full-ail-full-ele.png)
 
-![Escursioni dei flap](../assets/tut-fw-eg-mixes-flaps-weights.png)
+Questo esempio mostra che è stato applicato tutto l'alettone destro e tutto l'elevatore in discesa, quindi il canale 1 è al 75+25 = 100%, mentre l'alettone sinistro in discesa è al 72-25 = 47% a causa del differenziale degli alettoni.
 
-## Passo 5. Bind /collegamento il ricevitore
+## Passo 7. Configura l’escursione massima del servo
 
-Utilizza la funzione [RF System](../model-setup/rf-system.md) per registrare
-(se il ricevitore è ACCESS) e collegare il ricevitore. Prima di procedere
-con le Uscite, è consigliabile scollegare i leveraggi dei servi o ridurne
-temporaneamente la corsa, per evitare danni dovuti al sovraccarico durante
-l'impostazione dei limiti Min/Max.
+Inizia a regolare i punti centrali del servo utilizzando la regolazione PPM Center.
 
-## Passo 6. Configura le uscite
+Infine, l’escursione massima dei servi devono essere configurati per impostare le deflessioni consigliate ed evitare di superare i limiti dei servi meccanici. L’escursione massima consigliati da Weasel sono 25 mm (alettoni) + 10 mm (elevatore) = 35 mm. Applica gli aiuti completi e gli input opposti di alettoni ed elevatore, quindi imposta le deflessioni massime della superficie assicurandoti che non vengano superati i limiti del servo o del leveraggio.
 
-![Uscite](../assets/tut-fw-eg-outputs.png)
+Min/Max
 
-Le [Uscite](../model-setup/outputs.md) adattano la logica del mixer alla
-meccanica reale del modello.
+Le impostazioni min e max del Canale sono limiti "rigidi", cioè non potranno mai essere superati. Devono essere impostati in modo da evitare un vincolo meccanico. Si noti che servono come impostazioni di guadagno o "punto finale", quindi la riduzione di questi limiti ridurrà la gittata piuttosto che indurre il clipping (ritaglio). I limiti sono predefiniti a +/- 100,0%, ma possono essere aumentati fino a +/- 150,0% se necessario.
 
-**Alettone1** — inizia a regolare il punto centrale del servo utilizzando la
-regolazione **Centro PWM**, dopo aver ottimizzato i collegamenti meccanici,
-quindi configura i limiti con le impostazioni **Min** e **Max**. Per
-semplificare le cose, puoi assegnare temporaneamente un potenziometro a Min
-e poi a Max, come mostrato sopra nell'esempio del differenziale
-dell'alettone:
+Curva
 
-![Modifica dell'uscita alettone](../assets/tut-fw-eg-outputs-edit-ail.png)
-
-**Flap** — i flap normalmente richiedono una grande deflessione verso il
-basso per una frenata efficace; per ottenerla puoi sacrificare una parte
-della deflessione verso l'alto quando realizzi i leveraggi, per cui i flap
-saranno in posizione semi-abbassata al centro del servo, e usare quindi Min
-e Max per ottenere le posizioni desiderate di flap alzati e flap pieni. Una
-curva a 5 punti è il modo consueto per correggere eventuali disallineamenti
-tra flap e alettoni. Infine, utilizza il **[Bilanciamento dei
-canali](../model-setup/outputs.md#balance-channels)** per sincronizzare il
-movimento delle superfici di destra e sinistra, come gli alettoni e i flap.
-
-## Passo 7. Introduzione alle modalità di volo
-
-Le [modalità di volo](../model-setup/flight-modes.md) permettono a un modello
-di avere impostazioni diverse per ogni compito: l'interruttore della modalità
-di volo diventa un po' come cambiare le marce in un'automobile. Delle 20
-disponibili, questo esempio ne usa tre: **Default**, **Flaps Half**
-(interruttore SE-mid) e **Flaps Full** (interruttore SE-Up). La prima
-modalità di volo che ha la condizione attiva su ON è quella attiva; la
-modalità **Default** non ha alcuna condizione ed è attiva quando nessuna
-altra lo è — questo spiega perché non ha un'opzione di selezione degli
-interruttori. Tempi di dissolvenza in entrata e in uscita di 1 secondo
-rendono più graduale la transizione all'estensione dei flap.
-
-## Passo 8. Configurare i Trims
-
-Due modi per gestire il trim dell'elevatore che varia con la posizione dei
-flap:
-
-**Trim indipendenti per modalità di volo** — l'opzione più semplice: il trim
-dell'elevatore diventa completamente indipendente per ogni modalità di volo e
-commuta automaticamente quando azioni i flap sull'interruttore SE. Poiché in
-ogni modalità devi regolare l'elevatore "da zero", la funzione [Instant
-trim](../model-setup/trims.md#instant-trim) è di aiuto: regola prima per il
-volo normale, poi atterra e usa quel valore come punto di partenza per le
-modalità con i flap.
-
-**Trim base con offset** — si esegue il trim una sola volta in Default, e la
-compensazione dell'elevatore di ciascuna modalità flap viene aggiunta come
-offset:
-
-1. Imposta lo **Step** del trim su Medio (per raggiungere più rapidamente il
-   trim desiderato; potrai ridurlo in seguito per una regolazione più
-   precisa), il **Modo** su Personalizzata e aggiungi un nuovo
-   comportamento.
-2. Come **Condizione attiva** seleziona `FM1(Flaps Half)` e come modo
-   **Offset + Default**: nella modalità Flaps Half il valore di trim sarà la
-   somma del trim base o predefinito più il trim di offset risultante dalle
-   regolazioni effettuate mentre quella modalità è attiva:
-
-   ![Aggiungi un comportamento](../assets/tut-fw-eg-trims-ele-add-behavior.png)
-   ![Offset + Default, FM1](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm1.png)
-
-3. Ripeti per `FM2(Flaps Full)`:
-
-   ![Selezione della modalità di volo](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm-select.png)
-   ![Offset + Default, FM2](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-fm2.png)
-
-Ogni modalità flap può ora essere regolata in modo indipendente; tuttavia, se
-in seguito regoli il trim di base utilizzato nella modalità Default (ad
-esempio a causa della deriva termica del servo), anche i due trim delle
-modalità flap verranno modificati automaticamente della stessa quantità.
-
-![Selezione del trim personalizzato](../assets/tut-fw-eg-trims-ele-custom-default-plus-offset-select.png)
-
-## Passo 9. Imposta un timer per le batterie di volo
-
-Nella sezione [Timer](../model-setup/timers.md) modifica il Timer 1:
-modalità **Tim.Giu**, valore iniziale di 5 minuti, in funzione ogni volta che
-**Gas attivo** è vero (a condizione che non sia in fase di reset).
-Facoltativamente puoi assegnare una sorgente di temporizzazione
-proporzionale (ad esempio lo stick del gas), così al massimo
-dell'accelerazione il timer conterà in tempo reale, ma rallenterà man mano
-che il gas viene ridotto.
-
-## Passo 10. Aggiungi una Mix per i retrattili {: #step-10-add-a-mix-for-retracts }
-
-![Sorgente del mix dei retrattili](../assets/tut-fw-eg-retracts-source.png)
-
-Tocca un mix, seleziona **Aggiungi mix** → **Mix libero**, chiamalo
-"Retracts", imposta l'attivazione su Attivo e la sorgente sull'interruttore
-SF. L'azione di miscelazione predefinita di escursione = 100% va bene:
-questo assegna, ad esempio, il canale 8 ai retrattili:
-
-![Uscita dei retrattili](../assets/tut-fw-eg-retracts-outputs.png)
+Le curve sono un modo più veloce e flessibile per configurare il centro e i limiti min/max delle uscite, oltre ad avere un bel grafico. Usa una curva a 3 punti per la maggior parte delle uscite, ma usa una curva a 5 punti per elementi come il secondo elevone, in modo da sincronizzare la corsa su 5 punti. Quando si utilizza una curva, è buona norma lasciare Min, Max e Subtrim ai valori "passanti" di -100, 100 e 0 rispettivamente (o -150, 150 e 0 se si utilizzano limiti estesi).

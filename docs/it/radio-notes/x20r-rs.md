@@ -1,0 +1,7 @@
+# Layout X20R/RS
+
+![](../assets/Pictures/10000001000007DC000006A77F2C3EE7.png)
+
+![](../assets/Pictures/10000001000007420000060CB9054942.png)
+
+![](../assets/Pictures/1000000100000640000005D4176AD727.png)

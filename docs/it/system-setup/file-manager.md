@@ -1,141 +1,249 @@
----
-translated_from: 155bf1cf224c4b0fd100735316cf652f6baef3e6
----
+# Gestore di file
 
-# Gestione file
+![](../assets/system-icon-filemanager.png)
 
-![Gestione file - radio](../assets/system-filemanager-radio.png)
+Il "File manager" serve per gestire file e cartelle e per accedere al firmware flash del modulo RF, della porta S.Port esterna, dei dispositivi OTA (Over The Air) e dei moduli esterni.
 
-Gestione file permette di esplorare la memoria della radio e di aggiornare il
-firmware del modulo RF interno, dei dispositivi collegati via S.Port, dei
-dispositivi OTA (Over-The-Air) e dei moduli esterni.
+Nota che quando si aggiorna il firmware del sistema, potrebbe essere necessario aggiornare anche i file contenuti nella chiavetta e nella scheda SD o eMMC.
 
-## Organizzazione della memoria
+Si prega di notare che a partire dalla versione Ethos 26.1 la radio non utilizza più la memoria Flash interna per memorizzare le bitmap e i font di sistema. Questi file sono ora parte integrante del firmware Ethos, riducendo i tempi di avvio e aumentando la velocità dell'interfaccia utente (nessun caricamento dinamico per le bitmap).
 
-Tocca **Flash** (oppure premi `PAGE` per cambiare unità) per esplorare l'unità
-flash USB virtuale interna della radio, utilizzata per le bitmap e i font di
-sistema:
+ETHOS dispone di una funzione di trasferimento di file Bluetooth da radio a radio. Fai riferimento all'esempio riportato nella sezione [Condivisione di file via Bluetooth](file-manager.md).
 
-![Memoria flash](../assets/system-filemanager-flash.png)
+Nota: sia il Bootloader che il firmware di sistema sono memorizzati nella memoria flash interna su tutte le radio FrSky a partire dal modello originale X9D.
 
-- `bitmaps/system` — le bitmap utilizzate per le schermate e le icone
-- `fonts/` — i font per le diverse lingue selezionabili
+Tocca "Gestione file" per aprire l'esploratore di file.
 
-Sia il bootloader sia il firmware di sistema risiedono in questa memoria flash
-interna, su tutte le radio FrSky fino alla X9D originale.
+![](../assets/system-filemanager-sd.png)
 
-La serie **X20/X20S/X20HD** utilizza una SD card formattata FAT32, di capacità
-pari o inferiore a 32GB (una SanDisk Ultra Micro SDHC Class 10 da 16GB è
-un'ottima scelta). Le **X18** e **X20 Pro/R/RS** utilizzano per impostazione
-predefinita una eMMC interna (a cui è possibile affiancare una SD card esterna)
-— tocca **Radio** per esplorarla. Ethos crea automaticamente le cartelle
-`Logs/`, `models/` e `screenshots/` se mancanti; `Firmware/` è invece una
-convenzione manuale per i file di firmware dei dispositivi, come i ricevitori.
+La serie X20/S/HD richiede una scheda SD da 32 giga o meno formattata in fat32. Le schede SanDisk Ultra Micro SDHC Classe 10 16gig sono una buona opzione. I file sono disponibili sul sito web di FRSky.
 
-## Cartelle di primo livello {: #top-level-folders }
+![](../assets/system-filemanager-radio.png)
 
-- **`audio/`** — file audio utente e di sistema, suddivisi per voce
-  (`audio/en/gb`, `audio/en/us`, `audio/en/default`). I file utente vengono
-  riprodotti dalla [funzione speciale Play Audio](../model-setup/special-functions.md);
-  i file di sistema comprendono `hello.wav` (il messaggio di benvenuto "Welcome
-  to Ethos" — è possibile aggiungere un `bye.wav`, che però non è fornito).
-  Formato: PCM a 16kHz o 32kHz, lineare a 16 bit, oppure A-law (EU)/µ-law (US)
-  a 8 bit; nomi file fino a 31 caratteri più estensione. Tutte e tre le cartelle
-  voce vengono mantenute sincronizzate da Ethos Suite, indipendentemente da
-  quale sia effettivamente selezionata.
+Le radio X18 e X20 Pro/R/RS utilizzano una scheda eMMC interna per l'archiviazione dei file, ma è possibile aggiungere una scheda SD esterna. Tocca la scheda "Radio" per esplorare la memoria della scheda eMMC.
 
-  ![Cartella audio](../assets/system-filemanager-audio.png)
+Il sistema creerà alcune delle cartelle se l'utente non le ha create, come Logs, Models e Screenshots. La cartella Firmware è stata creata manualmente per conservare il firmware dei dispositivi, come i ricevitori, ecc.
 
-- **`bitmaps/`** — `bitmaps/models/` contiene le immagini dei modelli
-  dell'utente (impostate in [Modifica modello](../model-setup/model-edit.md) o
-  nelle procedure guidate di creazione di un nuovo modello); `bitmaps/user/`
-  contiene tutto il resto. Formato consigliato: BMP a 32 bit, 8 bit per colore,
-  con canale alpha, 300×280px — in questo modo la decodifica a bordo della radio
-  resta poco onerosa. Ethos ridimensiona i file BMP al volo, ma non i PNG/JPEG.
-  I nomi file possono contenere solo `A-Z a-z 0-9 ()!-_@#;[]+=` e spazi, e non
-  devono superare gli 11 caratteri (più un'estensione di 4 caratteri) per essere
-  visibili nel selettore delle immagini del modello — i nomi più lunghi
-  compaiono comunque in Gestione file, ma lì non risultano selezionabili. Gli
-  strumenti di conversione immagini di Ethos Suite si occupano automaticamente
-  della conversione di formato.
+Percorso dell'unità della scheda SD quando è collegata a un PC:
 
-  ![Cartella bitmaps](../assets/system-filemanager-bitmaps.png)
+Scheda SD (lettera dell'unità)/ o
 
-- **`documents/user/`** — documenti di testo dell'utente, richiamabili dal
-  widget di visualizzazione **Text**.
+RADIO (lettera dell'unità)/ {radio con scheda eMMC interna}
 
-- **`Firmware/`** — file di firmware per il modulo RF interno, i moduli esterni
-  e altri dispositivi (ricevitori, ecc.), aggiornabili da qui via S.Port o OTA.
-  Copia qui il nuovo firmware mentre la radio è in [modalità
-  bootloader](../getting-started/usb-connection-modes.md) e collegata via USB;
-  toccando un file di firmware e scegliendo **Flash** si avvia l'aggiornamento:
+## Menu File manager
 
-  ![Aggiornamento del modulo RF interno](../assets/system-filemanager-flash.png)
-  ![Aggiornamento del ricevitore S8R via S.Port](../assets/system-filemanager-flash-S8R.png)
-  ![Aggiornamento OTA del ricevitore TD-R18](../assets/system-filemanager-flash-TD-ISRM.png)
-  ![Aggiornamento del bootloader](../assets/system-filemanager-flash-bootloader.png)
+Il File manager dispone di un menu opzioni. Tocca i 3 puntini verticali nella barra dei menu (o scorri all'indietro).
 
-- **`I18n/`** — file di traduzione delle lingue.
 
-- **`Logs/`** — registrazioni dei dati.
 
-- **`models/`** — i file dei modelli veri e propri. Non possono essere
-  modificati direttamente da qui, ma solo salvati come backup o condivisi. A
-  partire da Ethos v1.2.11, un modello viene denominato in base al proprio nome
-  anziché con la sequenza `model01.bin` (ad esempio un modello chiamato "Extra"
-  diventa `Extra.bin`; un secondo "Extra" diventa `Extra01.bin`). Rinominando un
-  modello in [Modifica modello](../model-setup/model-edit.md) viene rinominato
-  anche il relativo file — sempre in caratteri minuscoli (il nome visualizzato
-  con maiuscole e minuscole è memorizzato all'interno del file) e non tutti i
-  caratteri del nome del modello vengono riportati nel nome del file. Dalla
-  versione v1.1.0 Alpha 17, ogni categoria di modelli creata dall'utente
-  dispone di una propria sottocartella.
+Il menu File manager offre due opzioni:
 
-- **`screenshots/`** — output della [funzione speciale
-  Screenshot](../model-setup/special-functions.md).
+• È possibile ricevere un modello tramite Bluetooth. Per ulteriori dettagli, consulta la 	cartella “modelli” riportata di seguito.  
+	• È possibile creare una nuova cartella nella cartella aperta quando si richiama questo 	menu.
 
-- **`scripts/`** — script Lua, eventualmente organizzati in sottocartelle
-  proprie con i relativi file di supporto. I tipi di script sono i **widget**
-  (vedi [Display](../displays/index.md)), i **task e le sorgenti** (sensori
-  personalizzati o azioni post-volo — installati qui, compaiono nel menu
-  [Lua](../model-setup/lua-scripts.md) del modello) e i **tool** (ad esempio gli
-  strumenti di configurazione dei ricevitori stabilizzati presenti nei menu di
-  sistema). Ogni modulo esterno di terze parti dispone di un proprio script e
-  di una propria cartella, ad esempio `scripts/multi`, `scripts/elrs`,
-  `scripts/ghost`, `scripts/crossfire`.
+## Opzioni di ordinamento del File Manager
 
-  !!! warning
-      Gli script Lua aumentano il tempo di avvio della radio. Il ritardo
-      introdotto da uno script ben scritto è impercettibile — uno script scritto
-      male può ritardare l'avvio quasi indefinitamente.
 
-- **`radio.bin`** (cartella principale) — il file delle impostazioni di sistema,
-  scritto dalla radio stessa in fase di inizializzazione. Eseguine il backup
-  insieme a `models/` prima di un aggiornamento del firmware, in modo da poter
-  eventualmente tornare a una versione precedente.
 
-- **`firmware.bin`** (cartella principale) — copia qui un nuovo file di firmware
-  della radio per farlo installare automaticamente alla successiva
-  disconnessione della radio dal PC. Potrebbe essere necessario aggiornare nello
-  stesso passaggio anche il contenuto della SD card/eMMC e dell'unità flash
-  interna.
+Tocca l'icona “Opzioni di ordinamento” accanto all'icona del menu del File Manager sopra per aprire la finestra di dialogo delle opzioni di ordinamento:  
+  
+• È possibile ordinare i file in base al nome o alla data dell'ultima modifica.  
+• È possibile ordinare i file in ordine crescente o decrescente.  
+  
+Questa opzione è estremamente utile per trovare il file di log più recente nella cartella “logs”.
 
-- **`sdcard.version`** (cartella principale) — la versione del contenuto della
-  SD card, gestita da Ethos Suite.
+## Cartelle di primo livello
 
-## Condivisione dei file via Bluetooth
+Le cartelle di livello superiore sono:
 
-Ethos può trasferire file da radio a radio tramite Bluetooth. Sulla radio
-**ricevente**, spostati nella cartella di destinazione in Gestione file, premi a
-lungo `ENT` e scegli **Receive file here**:
+audio/
 
-![Ricezione Bluetooth](../assets/system-filemanager-bluetooth-receive.png)
+Questa cartella è dedicata ai file audio.
 
-Sulla radio **mittente**, tocca il file, scegli **Send file** e segui le
-indicazioni su entrambe le radio:
+audio/en/gb	Voce inglese  
+audio/en/us	Voce americana  
+**audio/it/default**	voce predefinita
 
-![Invio Bluetooth](../assets/system-filemanager-bluetooth-send.png)
+Queste cartelle contengono i file audio dell'utente che possono essere riprodotti con la funzione speciale "Riproduzione audio". Consulta la sezione [Modello/Funzioni speciali ](#Special_Functions_section)e la sezione [Scelta delle voci](general.md)
 
-Se una delle due radio ha già una connessione Bluetooth attiva (telemetria,
-collegamento maestro-allievo oppure, sulle X20S/Pro, audio), verrà chiesto se
-disconnettere prima tale dispositivo.
+Il formato deve essere 16kHz o 32kHz PCM lineare a 16 bit o alaw (EU) a 8 bit o mulaw (US) a 8 bit. I nomi dei file wav possono contenere 31 caratteri più l'estensione.
+
+audio/en/gb/system  
+audio/en/us/system  
+*audio/it/default/system*
+
+Queste cartelle sono per i file audio di sistema, ad es.
+
+| hello.wav | Il saluto "Benvenuto in Ethos |
+| --- | --- |
+| bye.wav	 | Questo non è fornito da Ethos, ma puoi aggiungere il tuo file WAV di addio. |
+
+Tocca la cartella \[audio\] per visualizzare il contenuto della cartella.
+
+![](../assets/system-filemanager-audio.png)
+
+Tocca un file WAV e seleziona l'opzione Play per ascoltarlo.
+
+Il file può anche essere copiato, spostato o cancellato. Esistono anche opzioni per inviare o ricevere il file via Bluetooth. Consulta la sezione [Condivisione di file via Bluetooth ](file-manager.md)qui di seguito.
+
+Nota: tutte e tre le cartelle vengono aggiornate da FrSky Suite, indipendentemente da quella o quelle che hai selezionato nelle opzioni della voce.
+
+bitmaps/
+
+Questa cartella è dedicata ai file bitmap.
+
+bitmaps/models/
+
+![](../assets/system-filemanager-bitmaps.png)
+
+Questa cartella è per le immagini dei modelli utente configurati in "Modello / Modifica modello" e nelle procedure guidate per i nuovi modelli.
+
+Nota che il File Manager mostra i dettagli del file nel pannello laterale destro,  come il nome, la grandezza e l’ultima data di modifica.
+
+bitmaps/user/
+
+Questa cartella è per le bitmap utente diverse dalle immagini del modello impostate in "Modello / Modifica modello".
+
+Il formato di immagine consigliato è il seguente: BMP:
+
+Formato BMP a 32 bit
+
+8 bit per colore
+
+Canale alfa (utilizzato per la trasparenza dell'immagine)
+
+Dimensioni: 300x280px
+
+Questo formato riduce il carico di calcolo del microcontrollore a Edge della radio. Inoltre, ETHOS ridimensiona i BMP al volo, ma non i PNG o i JPG.
+
+Regole di denominazione dei file immagine:
+
+Regola 1: usa solo i seguenti caratteri: A-Z, a-z, 0-9, ()!-\_@#;\[\]+= e Spazio
+
+Regola 2: il nome non deve contenere più di 11 caratteri, più 4 per l'estensione. Se il nome è più lungo di 11 caratteri, viene visualizzato nel File Manager ma non appare nell'interfaccia di selezione dell'immagine del modello.
+
+Strumenti di conversione delle immagini
+
+FrSky Suite dispone di strumenti di conversione delle immagini. Consulta la sezione [Gestione immagini ](#Image_manager)di FrSky Suite.
+
+-
+
+documents/
+
+Questa cartella è dedicata ai documenti.
+
+documents/user/
+
+Questa cartella contiene i documenti di testo degli utenti. Possono essere richiamati nel widget "Testo".
+
+Firmware/
+
+Questa cartella contiene i file del firmware. Qui vengono archiviati gli aggiornamenti del firmware per il modulo RF interno, i moduli esterni e altri dispositivi come i ricevitori ecc. Da qui è possibile eseguire il flashing tramite la porta S.Port esterna della radio o OTA (Over The Air). Il nuovo firmware deve essere copiato nella cartella Firmware dopo aver messo la radio in modalità boot-loader e averla collegata a un PC via USB.
+
+![](../assets/system-filemanager-flash-TD-ISRM.png)
+
+Tocca la cartella Firmware per visualizzare i file del firmware che sono stati copiati in questa cartella.  Seleziona il firmware appropriato per il tuo dispositivo, quindi tocca l'opzione Flash nella finestra di dialogo a comparsa. L'esempio sopra mostra l'aggiornamento del modulo RF interno.
+
+![](../assets/system-filemanager-flash-S8R.png)
+
+L'esempio precedente mostra un ricevitore S8R che sta per essere aggiornato tramite la connessione S.Port della radio.
+
+![](../assets/system-filemanager-flash-OTA.png)
+
+L'esempio precedente mostra un ricevitore TD-R18 che sta per essere aggiornato Over-The-Air tramite il collegamento wireless al ricevitore collegato.
+
+![](../assets/system-filemanager-flash-bootloader.png)
+
+L'esempio precedente mostra l'aggiornamento del bootloader.
+
+I file possono anche essere copiati, spostati o eliminati.
+
+i18n
+
+Questa cartella contiene i file di traduzione delle lingue.
+
+Logs/
+
+I registri dei dati vengono memorizzati qui.
+
+
+
+Per visualizzare i registri, è più comodo modificare le opzioni di ordinamento del File Manager in modo che i registri più recenti siano in cima.  
+  
+Passa alla cartella dei registri, quindi tocca l'icona “Opzioni di ordinamento” accanto all'icona del menu del file manager in alto per aprire la finestra di dialogo delle opzioni di ordinamento. Tocca per ordinare come “Ultima modifica” e “Ordine decrescente”.
+
+
+
+Scorri fino al file di log recente desiderato. Tieni presente che File Manager visualizza i dettagli del file nel riquadro di destra, compreso il nome completo del file, che è molto utile per vedere il timestamp completo se è stato troncato nella vista a sinistra.  
+  
+Tocca il file di log e seleziona “Apri” per visualizzarlo. Per ulteriori dettagli, consulta la sezione “Visualizzatore di log”.
+
+models/
+
+La radio memorizza qui i file dei modelli. Questi file non possono essere modificati dall'utente, ma possono essere salvati o condivisi da qui. Inizialmente i modelli venivano nominati semplicemente da model01.bin in poi, ma a partire da Ethos v1.2.11 viene utilizzato il nome del modello, ad esempio un modello chiamato "Extra" avrà un nome di file "Extra.bin". Se esiste più di un modello "Extra", i modelli aggiuntivi saranno denominati "Extra01.bin" e così via.
+
+Quando si modificano i nomi dei modelli nella schermata "Modifica modello", anche il nome del file del modello (.bin) verrà modificato. Il nome del file del modello sarà tutto in minuscolo (il nome effettivo del modello con maiuscole e minuscole viene salvato all'interno del file bin). Non tutti i caratteri sono supportati per il nome del file bin del modello, quindi potrebbe non corrispondere esattamente al nome del modello.
+
+Ci sono delle sottocartelle per ogni cartella di categoria di modello creata dall'utente.
+
+screenshot/
+
+Le schermate create dalla funzione speciale Screenshot vengono memorizzate qui nel formato “.png” si prega di consultare la sezione Modello / [Funzioni speciali](#Special_Functions_section).
+
+scripts/
+
+Questa cartella è utilizzata per memorizzare gli script Lua. Gli script possono essere organizzati in cartelle individuali e i file di supporto possono essere inclusi in una struttura di cartelle.
+
+**Attenzione**! Si prega di notare che gli script Lua aumentano il tempo di avvio della radio. Se sono implementati correttamente, il ritardo non dovrebbe essere percepibile, ma se non è così, il ritardo può essere quasi indefinito.
+
+I tipi di script Lua includono widget, attività, sorgenti e strumenti. Sono utilizzati anche per il controllo di moduli esterni.
+
+Widgets
+
+I widget sono utilizzati nelle viste principali per visualizzare le informazioni desiderate, come la telemetria e lo stato della radio, ecc. Per ulteriori dettagli, consultare la sezione [Configurazione schermate](#Configure Screens section).
+
+Attività e sorgenti dati
+
+Utilizzando gli script Lua è possibile creare sorgenti personalizzate, come ad esempio sensori personalizzati, o creare attività che eseguono azioni personalizzate, come ad esempio la registrazione dei dati in un file al termine del volo. Una volta installata nella cartella scripts/, il menù Lua appare nella sezione Modello per gestire l'attività o la sorgente per ciascun modello. Fare riferimento alla pagina [Lua per](#Lua) maggiori dettagli.
+
+Strumenti
+
+Ad esempio gli strumenti di configurazione del ricevitore stabilizzato che appaiono nei menu di sistema.
+
+script per moduli esterni
+
+Ogni modulo esterno di terze parti ha un proprio file Lua e deve essere memorizzato nella propria cartella.
+
+script/multi
+
+scripts/elrs
+
+scripts/ghost
+
+scripts/crossfire
+
+Per maggiori informazioni, consulta il post sui [moduli esterni di terze parti ](https://www.rcgroups.com/forums/showpost.php?p=49550649&postcount=18844)nella discussione su X20 ed Ethos su rcgroups.
+
+radio.bin
+
+Questo file si trova nella cartella principale e viene creato dal sistema radio quando si inizializza e contiene le impostazioni del sistema. Prima di aggiornare il firmware, è necessario eseguire un backup insieme alla cartella dei modelli di cui sopra, per consentire il downgrade alla versione precedente, se necessario
+
+Il file firmware.bin deve essere salvato nella cartella principale della scheda SD o eMMC quando si effettua un aggiornamento del firmware della radio. Dopo aver salvato il nuovo file firmware.bin, l'aggiornamento verrà automaticamente flashato nella radio quando questa sarà scollegata dal PC. (Tieni presente che potrebbe essere necessario aggiornare contemporaneamente il contenuto della scheda SD o eMMC e della chiavetta della radio).
+
+sdcard.version
+
+Questo file contiene la versione della sdcard ed è utilizzato e gestito da FrSky Suite.
+
+## Condivisione di file tramite Bluetooth
+
+ETHOS dispone di una funzione di trasferimento file Bluetooth da radio a radio.
+
+![](../assets/system-filemanager-bluetooth-receive.png)
+
+Sulla radio ricevente, utilizzando File Manager, naviga fino alla cartella del modello in cui desideri ricevere il file o il modello. Premi a lungo Invio e seleziona "Ricevi il file qui".
+
+![](../assets/system-filemanager-bluetooth-send.png)
+
+Sulla radio di invio, vai al file che vuoi inviare e toccalo. Poi seleziona "Invia file" e segui le istruzioni su entrambe le radio.
+
+Se la radio è già collegata a un altro dispositivo Bluetooth in Telemetria / Bluetooth o Trainer / Modalità di collegamento / Bluetooth o Generale / Audio / Bluetooth (solo X20S/Pro) ti verrà chiesto se desideri scollegare il dispositivo.

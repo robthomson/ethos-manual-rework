@@ -1,74 +1,99 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# Info
 
-# Informazioni
+![](../assets/system-icon-info.png)
 
-![Informazioni di sistema](../assets/system-info.png)
+La pagina Info mostra le informazioni sul firmware del sistema, il tipo di gimbal, la versione del firmware del modulo interno, il firmware del ricevitore ACCESS, TD o TW e le informazioni sul modulo esterno.
 
-Dettagli sul firmware di sistema, tipo di gimbal, informazioni sui moduli RF interno/esterno,
-informazioni sul ricevitore connesso, tempo di utilizzo della radio, registro degli errori e reset di fabbrica.
+X18 e X20
 
-## Informazioni sulla radio
+![](../assets/system-info.png)
 
-- **Serial number** — il numero di serie della radio.
-- **Firmware** — versione di Ethos e tipo di radio (ad esempio X20).
-- **Firmware Version** — variante della build, ad esempio FCC, LBT o Flex.
-- **Date** — data e ora di compilazione del firmware.
-- **RAM available** — RAM di sistema disponibile, utile per individuare uno
-  script Lua che non funziona correttamente; è disponibile anche come [sorgente](../getting-started/user-interface-and-navigation.md#choosing-a-source) di sistema,
-  in modo da poter essere visualizzata in un widget.
-- **Sticks** — versione dei sensori Hall degli stick installati (oppure "ADC" per gli stick
-  analogici).
-- **Internal Module** — versioni hardware e firmware del modulo RF
-  interno.
-- **Receiver** — i dettagli del ricevitore attualmente connesso, mostrati dopo il
-  modulo interno. Se un ricevitore ridondante condivide lo stesso slot di
-  quello principale, i due si alternano sul display (ad esempio un Archer SR10 Pro
-  visualizzato insieme al suo ridondante R9MM-OTA sotto "Receiver1").
-- **External Module** — dettagli hardware e firmware di un modulo RF esterno
-  FrSky installato che utilizza il protocollo ACCESS. I moduli Multi-protocol
-  non vengono mostrati qui.
+Numero di serie
 
-![Informazioni X20 Pro](../assets/system-info-x20pro.png)
+Numero di serie della radio.
 
-## Tempo di utilizzo della radio
+Firmware
 
-![Tempo di utilizzo della radio](../assets/system-info-radio-runtime.png)
+Firmware Ethos e tipo di radio (ad esempio X20).
 
-Tiene traccia del tempo totale di utilizzo della trasmittente; **Reset** lo azzera.
+Versione del firmware
 
-## Errori
+Versione attuale del firmware e tipo, ad esempio FCC, LBT o Flex.
 
-![Errori](../assets/system-info-errors.png)
+Data
 
-Un triangolo rosso nella barra superiore della schermata principale indica che Ethos ha registrato un errore,
-qui mostrato in dettaglio. Le possibili cause sono:
+La data e l'ora della versione del firmware.
 
-- **Errori negli script Lua** — un problema in uno script Lua in esecuzione.
-- **RAM backup error** — un modello troppo grande per la RAM di backup dei modelli. Ethos
-  l'ha ampliata da 4K a 32K, quindi ora è improbabile che si verifichi, ma se accade
-  si tratta di un errore importante: il modello viene caricato più lentamente dalla SD card
-  anziché dalla RAM di backup se viene attivata la [Modalità di
-  emergenza](../getting-started/emergency-mode.md).
-- **Utilizzo di una build nightly del firmware** — un promemoria del fatto che le build nightly
-  non sono destinate al volo.
+RAM disponibile
 
-**Reset** cancella gli errori registrati — comodo durante una sessione di debug degli script Lua.
+Mostra la RAM di sistema disponibile. È utile per verificare se gli script Lua si comportano male. Questo valore è disponibile anche come valore di sistema e può essere visualizzato, ad esempio, in un widget.
 
-## Reset di fabbrica
+Stick
 
-![Reset di fabbrica](../assets/system-info-factory-reset.png)
+La versione del sensore Hall cardanico è installata. ADC è per l'analogico.
 
-Ripristina le impostazioni di fabbrica della radio interamente dalla radio stessa: non è necessaria
-alcuna connessione al PC.
+Modulo interno
 
-![Conferma del reset di fabbrica](../assets/system-info-factory-reset-confirm.png)
+Dettagli del modulo RF interno, comprese le versioni hardware e firmware.
 
-!!! danger
-    La conferma cancella **tutti** i modelli, i log, gli screenshot, i documenti,
-    gli script, le bitmap e le impostazioni della radio. Una barra di avanzamento mostra lo stato della
-    cancellazione, al termine della quale tutte le unità vengono smontate e la radio si riavvia.
+Ricevitore
 
-La pagina Info delle X20 Pro/R/RS mostra le informazioni equivalenti per quella
-famiglia di radio.
+![](../assets/system-info-radio-runtime.png)
+
+I dettagli del ricevitore collegato sono visualizzati dopo il modulo interno. Se un ricevitore ridondante è collegato allo stesso slot del ricevitore principale, i dettagli del ricevitore saranno visualizzati alternativamente sul display. L'esempio qui sopra mostra un Archer SR10 Pro e il suo R9MM-OTA ridondante mostrato con i dettagli del Ricevitore1.
+
+Tempo di esecuzione della radio
+
+Il timer del tempo di funzionamento della radio tiene traccia dell'utilizzo totale del trasmettitore. Un pulsante di reset permette di azzerarlo.
+
+Errori
+
+![](../assets/Pictures/1000000100000320000001E0BFC3EE8D.png)
+
+Quando ETHOS rileva un errore, nella barra superiore della vista principale viene visualizzata un'icona di avvertimento con un triangolo rosso. Il pannello Errori visualizza gli errori.
+
+Gli errori possono essere dovuti a:
+
+Errori dello script Lua
+
+I problemi relativi agli script Lua comporteranno dei messaggi di errore.
+
+Errore di backup della RAM
+
+Un modello potrebbe essere così grande da superare la RAM di backup. ETHOS ha ampliato lo spazio della RAM per il backup dei modelli da 4k a 32k, quindi è improbabile che venga superato. Si tratta di un errore grave che renderà più lento il caricamento del modello in modalità di emergenza dalla SD anziché dalla RAM di backup.
+
+Scrivi Log Errori
+
+Viene generato un avviso di errore nella scrittura dei log se la funzione speciale “Scrivi log” riscontra dei problemi, probabilmente a causa di errori della scheda SD.
+
+Esecuzione di una build notturna del firmware
+
+Se è stata caricata una build notturna del firmware, l'icona di avviso serve a ricordare all'utente che le build notturne non sono adatte al volo.
+
+Il pulsante Reset permette di cancellare gli errori, ad esempio durante le sessioni di debug di Lua.
+
+Modulo esterno
+
+Dettagli di qualsiasi modulo RF FrSky esterno (se montato), comprese le versioni hardware e firmware se il protocollo ACCESS.
+
+I multimoduli non sono mostrati.
+
+Ripristino delle impostazioni di fabbrica
+
+![](../assets/system-info-factory-reset.png)
+
+Permette di riportare la radio alle impostazioni di fabbrica. Non è necessaria una connessione USB al PC, tutto avviene sulla radio.
+
+![](../assets/system-info-factory-reset-confirm.png)
+
+Quando confermi di voler ripristinare le impostazioni di fabbrica, la radio cancella tutti i modelli, i file di log, le schermate, i documenti, gli script, le bitmap e le impostazioni della radio.
+
+![](../assets/Pictures/1000000100000320000001E0A65DBD7D.png)
+
+Durante il processo di cancellazione viene visualizzata una barra di avanzamento. A questo punto smonterà tutte le unità e riavvierà la radio.
+
+## X20 Pro/R/RS
+
+![](../assets/system-info-x20pro.png)
+
+Informazioni simili per la X20 Pro/R/RS.

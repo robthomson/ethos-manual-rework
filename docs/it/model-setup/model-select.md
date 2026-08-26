@@ -1,163 +1,309 @@
----
-translated_from: 827e532e2b0324591f0fdbb61a39e61180642b24
----
+# **Seleziona il modello**
 
-# Selezione modello
+![](../assets/model-icon-modelselect.png)
 
-![Procedura guidata modello - aeroplano](../assets/model-modelselect-model-wizard-airplane.png)
-
-Permette di creare, selezionare, clonare ed eliminare i modelli e di gestire
-le cartelle di categoria definite dall'utente in cui sono organizzati.
+L'opzione di selezione del modello è accessibile selezionando "Seleziona modello" dal menu Modello. Serve per selezionare il modello corrente, aggiungere un nuovo modello, clonarlo o eliminarlo.
 
 ## Gestione delle cartelle dei modelli
 
-![Cartelle dei modelli](../assets/model-modelselect-folders.png)
+Ethos ti permette di creare le tue cartelle modello per classificare e raggruppare i tuoi modelli. I nomi tipici delle cartelle dei modelli possono essere Aereo, Aliante, Heli, Quad, Uccello da guerra, Barca, Auto, Modello, Archivio ecc.
 
-Ethos permette di raggruppare i modelli in cartelle personalizzate — tipicamente
-voci come Aeroplano, Aliante, Elicottero, Quad, Warbird, Barca, Auto, Template
-o Archivio. Finché non ne viene creata nessuna, i modelli risiedono in una
-cartella automatica **Uncategorized** (creata con l'aggiornamento a Ethos 1.1.0
-alpha 17+, oppure quando un file di modello viene copiato in `\Models` da
-un'altra posizione); Ethos la elimina di nuovo non appena è vuota.
+![](../assets/model-modelselect-folders.png)
 
-Per creare una cartella, tocca **+** accanto a "Uncategorized" (oppure premi a
-lungo `PAGE` su/giù), assegnale un nome (fino a 15 caratteri) e conferma. Le
-cartelle sono ordinate alfabeticamente, con **Uncategorized** sempre in ultima
-posizione, e corrispondono direttamente alle sottocartelle di `\Models` sulla
-SD card/eMMC. Toccando il nome di una cartella si apre la funzione di
-rinomina/eliminazione — eliminando una cartella, gli eventuali modelli
-contenuti vengono riportati in Uncategorized.
+Finché non avrai creato e organizzato le tue cartelle, Ethos creerà automaticamente la cartella "Uncategorized". Questo accade quando aggiorni Ethos alla versione 1.1.0 alpha 17 o successiva, oppure quando copi un modello dalla rete o da un amico nella cartella \\Models della scheda SD o eMMC.  Ethos eliminerà automaticamente la cartella "Uncategorized" quando non sarà più necessaria.
 
-![Cambia cartella](../assets/model-modelselect-folder-change-select.png)
+![](../assets/model-modelselect-model-create.png)
 
-Per spostare un modello, tocca la sua icona, scegli **Change folder**, quindi
-tocca la destinazione:
+![](../assets/model-modelselect-create-airplane-folder.png)
 
-![Scelta della cartella](../assets/model-modelselect-folder-airplane-select.png)
+Per creare la tua prima cartella, tocca il "+" a destra dell'etichetta "Uncategorized". Inserisci il nome nella finestra di dialogo "Crea cartella" e tocca OK. I nomi delle cartelle possono essere composti da un massimo di 15 caratteri. Ripeti l'operazione per le altre categorie. Nota che queste cartelle appaiono come sottocartelle sotto la cartella \\Models sulla scheda SD o eMMC.
+
+Le cartelle delle categorie dei modelli sono ordinate in ordine alfabetico, ma la cartella "Uncategorized" apparirà sempre per ultima nell'elenco.
+
+![](../assets/model-modelselect-folder-options.png)
+
+Toccando il nome di una cartella si aprirà una finestra di dialogo che permetterà di rinominare o eliminare la cartella. Se nella cartella che si sta cancellando erano presenti dei modelli, Ethos li collocherà automaticamente nella cartella "Uncategorized".
+
+Spostare i modelli in un'altra cartella
+
+![](../assets/model-modelselect-folder-change-select.png)
+
+Per spostare un modello in un'altra cartella, tocca l'icona del modello e seleziona "Cambia cartella" dalla finestra di dialogo.
+
+![](../assets/model-modelselect-folder-change-glider.png)
+
+Tocca la cartella in cui spostarla.
 
 ## Aggiunta di un nuovo modello
 
-![Crea modello](../assets/model-modelselect-model-create.png)
+![](../assets/model-modelselect-folder-airplane-select.png)
 
-Seleziona la categoria in cui creare il modello, tocca **+**, quindi **Create
-model** per avviare la procedura guidata (se la categoria non esiste ancora,
-creala prima). Sono disponibili procedure guidate per **Airplane**, **Glider**,
-**Helicopter**, **Multirotor** e **Other**; ciascuna guida attraverso la
-configurazione di base per quel tipo di modello, inclusi i mix preimpostati
-opzionali per i ricevitori stabilizzati FrSky (guadagno, modalità di
-stabilizzazione). I nomi dei modelli possono avere fino a 15 caratteri.
+Per creare un nuovo modello, seleziona la categoria in cui desideri creare il modello, quindi tocca l'icona \[+\] per creare un nuovo modello o per ricevere un modello da un'altra radio Ethos via Bluetooth.
 
-### Ricevitori stabilizzati e ordine dei canali
+![](../assets/model-modelselect-model-create.png)
 
-![Procedura guidata: aeroplano](../assets/model-modelselect-model-wizard-airplane.png)
+Tocca "Crea modello" per avviare la procedura guidata per la creazione di un nuovo modello. (Potrebbe essere necessario creare prima le categorie del modello, vedi sopra).
 
-I ricevitori stabilizzati FrSky richiedono specificamente l'ordine dei canali
-**AETR** — lascia [Sticks → Ordine dei canali](../system-setup/controls.md) sul
-valore predefinito AETR con **First four channels fixed** attivo, in modo che
-l'uscita della procedura guidata corrisponda a quanto il ricevitore si aspetta.
+![](../assets/model-modelselect-model-wizard-airplane.png)
 
-La procedura guidata assegna i canali da destra a sinistra. Per 2 alettoni +
-1 elevatore + 1 timone + 1 motore si ottiene:
+Scegli il tipo di modello che vuoi creare e segui le istruzioni.
 
-| Can. | Funzione |
-|---|---|
-| 1 | Alettone 1 (alettone destro) |
-| 2 | Elevatore |
-| 3 | Gas - Throttle |
-| 4 | Timone |
-| 5 | Alettone 2 (alettone sinistro) |
+Ci sono maghi per:
 
-Con questa assegnazione, il differenziale degli alettoni è **positivo** nel caso
-normale (escursione verso l'alto maggiore di quella verso il basso). I manuali
-dei ricevitori FrSky documentano attualmente la convenzione *opposta* (da
-sinistra a destra, quindi Can.1 = alettone sinistro, Can.5 = alettone destro) —
-in tal caso il differenziale dovrebbe essere **negativo** per ottenere lo stesso
-effetto fisico.
+- Aereo
+- Aliante
+- Elicottero
+- Multirotore
+- Altro
 
-!!! tip
-    Si consiglia di utilizzare in modo coerente la convenzione Ethos — in
-    entrambi i casi tutte le funzioni di stabilizzazione continuano a
-    funzionare correttamente, poiché la direzione della compensazione viene
-    impostata durante la configurazione della stabilizzazione. Se occorre
-    davvero adeguarsi alla convenzione del manuale del ricevitore, la via più
-    semplice consiste nel costruire il modello normalmente con la procedura
-    guidata e utilizzare poi **Swap channels** in [Uscite](outputs.md) per
-    scambiare i due canali degli alettoni — in questo modo il segno del
-    differenziale nel mix degli alettoni rimane positivo.
+Le procedure guidate ti assistono nella configurazione di base per il tipo di modello indicato. Nota che i nomi dei modelli possono essere composti da un massimo di 15 caratteri.
 
-### Passaggi della procedura guidata
+![](../assets/model-modelselect-model-wizard-rx.png)
 
-![Procedura guidata: tipo di coda](../assets/model-modelselect-model-wizard-tail.png)
-![Procedura guidata: numero di alettoni/flap](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
-![Procedura guidata: numero di elevatori/timoni](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
-![Procedura guidata: motore](../assets/model-modelselect-model-wizard-engine.png)
-![Procedura guidata: riassegnazione dei canali](../assets/model-modelselect-model-wizard-ch-reassignment.png)
-![Procedura guidata: nome](../assets/model-modelselect-model-wizard-name.png)
-![Procedura guidata: ricevitore](../assets/model-modelselect-model-wizard-rx.png)
+Le procedure guidate includono la possibilità di impostare ulteriori mix preimpostati per i ricevitori stabilizzati FrSky, come il guadagno e la modalità di stabilizzazione.
 
-Per un **Airplane**, dopo il tipo di coda e il numero delle superfici, la
-procedura guidata richiede il numero di canali per il motore e poi il numero di
-canali per alettoni/flap.
+Ricevitori stabilizzati
 
-La **configurazione della coda** offre la scelta fra coda tradizionale a croce,
-coda a V oppure nessuna coda (delta/tuttala):
+I ricevitori stabilizzati FrSky richiedono un ordine di canali specifico, ovvero AETR. Pertanto, l'opzione "Ordine dei canali" nel menu Sticks deve essere lasciata all'impostazione predefinita AETR e l'opzione "Primi quattro canali fissi" deve essere attivata, per garantire che l'ordine dei canali creato dalla procedura guidata sia adatto al ricevitore.
 
-- **Delta/tuttala** — creando un modello Airplane con 2 alettoni e nessuna
-  superficie di coda viene generato automaticamente il mix degli elevoni, con
-  pesi predefiniti del 50%, in modo che i comandi simultanei a fondo corsa di
-  alettoni ed elevatore diano comunque un totale del 100%.
-- **Delta con il mix eseguito da un ricevitore stabilizzato** — seleziona invece
-  1 alettone e 1 elevatore; il mix degli elevoni avviene nel ricevitore, secondo
-  il relativo manuale.
-- **Delta con superfici dedicate di alettoni ed elevatore** — lascia procedere la
-  procedura guidata come se il modello avesse una coda; verranno configurati i
-  canali necessari per alettoni ed elevatore (con o senza timone) e non verrà
-  creato alcun mix degli elevoni.
+![](../assets/model-modelselect-model-wizard-engine.png)
 
-Il passaggio di **riassegnazione dei canali** permette di modificare la mappatura
-predefinita della procedura guidata, tenendo presente che i ricevitori
-stabilizzati richiedono i canali in un ordine specifico (consulta le istruzioni
-del ricevitore). L'ultimo passaggio imposta il nome del modello e associa
-un'immagine.
+Per un modello di tipo Aereo, la pagina successiva è Motore, che consente di selezionare il numero desiderato di canali motore (se presenti).
 
-Il modello completato viene inserito nella cartella di categoria attiva al
-momento dell'avvio della procedura guidata, ordinato alfabeticamente al suo
-interno. Vedi [Esempio base per ala fissa](../tutorials/basic-fixed-wing.md) per
-una procedura completa passo-passo.
+![](../assets/model-modelselect-model-wizard-ail-and-flaps.png)
 
-## Ricezione di un modello da un'altra radio Ethos
+Per un modello di tipo aereo, si seleziona quindi il numero di canali per alettoni e flap.
 
-![Ricevi modello](../assets/model-modelselect-model-receive.png)
+A partire dalla versione 26.1.x di Ethos, le nuove procedure guidate assegnano i canali partendo da sinistra e alternando dall'esterno verso l'interno, in linea con la documentazione del ricevitore FrSky.  
+  
+Pertanto, per un modello semplice con 2 alettoni, 1 elevatore, 1 timone e 1 motore, l'ordine dei canali sarà il seguente (supponendo che l'impostazione predefinita “Ordine dei canali” sia AETR e che l'opzione “Primi quattro canali fissi” sia attiva):  
+  
+CH1 Alettone sinistro  
+CH2 Elevatori   
+CH3 Acceleratore   
+CH4 Timoni   
+CH5 Alettone destro
 
-Seleziona la categoria di destinazione, tocca **+**, quindi **Receive model** —
-la radio si mette in attesa e mostra il proprio indirizzo Bluetooth affinché il
-mittente possa individuarla. Sulla radio trasmittente, tocca il modello e scegli
-**Send model**; la radio ricevente chiede conferma del nome del file in arrivo
-prima di accettarlo.
+Aggiornamento modelli a Ethos 26.1.x
+
+Durante l'aggiornamento a Ethos 26.1, i modelli esistenti possono essere convertiti per adattarsi al nuovo schema di conteggio da sinistra.  
+  
+Ci sono 3 scenari:  
+  
+a) I modelli esistenti con l'ordine dei canali predefinito 1.6.x che conta da destra vedranno i loro mix riorganizzati per adattarsi al nuovo schema di conteggio da sinistra. Tuttavia, l'assegnazione dei canali di uscita rimane la stessa, quindi non sono necessarie modifiche al cablaggio del modello. Solo i mix saranno riorganizzati in una nuova sequenza, ma le assegnazioni originali dei canali di uscita saranno mantenute affinché il modello continui a funzionare correttamente. Ad esempio l’ordine dei mix sarà:  
+  
+da   
+CH1 Alettone destro   
+CH2 Elevatori   
+CH3 Acceleratore   
+CH4 Timoni   
+CH5 Alettone sinistro   
+a   
+CH5 Alettone sinistro   
+CH2 Elevatori   
+CH3 Acceleratore   
+CH4 Timoni   
+CH1 Alettone destro  
+  
+b) Nei modelli esistenti in cui i canali sono stati invertiti per contare da sinistra, le configurazioni saranno modificate per garantire che il differenziale degli alettoni continui a funzionare correttamente, ma l'assegnazione dei canali rimarrà la stessa di prima.  
+  
+c) I modelli esistenti che hanno avuto i loro canali scambiati invertendo il mix alettone e rinominando i canali di uscita funzioneranno correttamente dopo l'aggiornamento, ma subiranno un conflitto nella denominazione dei canali. Per risolvere questo problema, è necessario annullare le modifiche di inversione del mix apportate in precedenza:  
+  
+i) Invertire nuovamente il mix alettone con valori positivi per il peso e il differenziale.  
+ii) Scambiare i canali di uscita del mix Aileron utilizzando la funzione “Swap” nel menu Canali.  
+iii) Rinominare anche i due canali con le loro corrette funzioni sinistra e destra.
+
+iv) **Attenzione!** Dopo aver effetuato i cambiamenti, confermate  che i mix e i canali di uscita funzionino nell’ordine corretto con l’eventuale elica/eliche rimosse.  
+  
+Per una revisione più dettagliata dei tre scenari di conversione, fare riferimento all'[Appendice A - Conversione dei modelli Ethos dalla versione 1.6.x alla versione 26.1.x.](../how-to/converting-1.6-models.md)
+
+![](../assets/model-modelselect-model-wizard-tail.png)
+
+Per un modello di tipo aereo, la configurazione della coda viene scelta tra la tradizionale coda a croce, la coda a V o nessuna coda (ad esempio su un delta o un'ala volante).
+
+Ali Delta
+
+L'impostazione degli elevoni può essere ottenuta creando un nuovo modello di aeroplano con 2 alettoni e nessuna superficie di coda; in questo modo la miscelazione degli elevoni verrà creata automaticamente. le escursioni di miscelazione predefiniti sono del 50% per ottenere un totale del 100% se si applicano contemporaneamente alettoni ed elevatore.
+
+Per un modello ad ala a delta con superfici sia di alettoni che di elevatore, lascia che la procedura guidata si completi come se il modello avesse una coda. Configurerà i canali degli alettoni e dell'elevatore necessari, con o senza timone, come richiesto.
+
+In alternativa, quando si utilizza un ricevitore stabilizzato, la miscelazione delta può essere eseguita dal ricevitore. Per maggiori dettagli, consulta il manuale del ricevitore stabilizzato.
+
+![](../assets/model-modelselect-model-wizard-ele-and-rudder.png)
+
+Per un modello di tipo aereo, avendo scelto ad esempio una coda tradizionale, il numero di canali dell'elevatore e del timone può essere configurato
+
+![](../assets/model-modelselect-model-wizard-ch-reassignment.png)
+
+Dopo aver impostato le opzioni dei canali, il passaggio mostrato sopra ti permette di riassegnare le funzioni del modello a canali diversi. La procedura guidata rispetta l'"ordine dei canali" configurato in Sticks, ma questa schermata ti permette di riassegnare i canali, tranne quando configuri un ricevitore stabilizzato FrSky che richiede che i canali stabilizzati siano in un ordine specifico. Per maggiori dettagli, consulta le istruzioni del ricevitore.
+
+![](../assets/model-modelselect-model-wizard-name.png)
+
+Nell’ultimo step si potrà definire il nome del modello e collegare un immagine modello. NB: il nome modello può contenere fino a 15 caratteri.
+
+![](../assets/model-modelselect-model-wizard-ultimate.png)
+
+Il nuovo modello è stato creato.
+
+![](../assets/model-modelselect-model-airplane-category.png)
+
+Il modello creato apparirà nella cartella della categoria di modelli definita dall'utente che era attiva all'avvio della procedura guidata e sarà ordinato in ordine alfabetico all'interno di ciascun gruppo.
+
+Per un [esempio](https://www.deepl.com/en/translator?utm_term=&utm_campaign=IT%7CSearch%7CC%7CDSA%7CEnglish&utm_source=google&utm_medium=paid&hsa_acc=1083354268&hsa_cam=20627207960&hsa_grp=157168539729&hsa_ad=676252350153&hsa_src=g&hsa_tgt=dsa-437115340933&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAtYy9BhBcEiwANWQQL3EXIE2Cf7NSZZ0OYMKRgJCFeuGlPViCbNUpEZbVFRHTE1YdWYCrcBoCvrYQAvD_BwE#Basic%20Fixed%20Wing%20Airplane%20example) funzionale, consultare anche l'[esempio](https://www.deepl.com/en/translator?utm_term=&utm_campaign=IT%7CSearch%7CC%7CDSA%7CEnglish&utm_source=google&utm_medium=paid&hsa_acc=1083354268&hsa_cam=20627207960&hsa_grp=157168539729&hsa_ad=676252350153&hsa_src=g&hsa_tgt=dsa-437115340933&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAtYy9BhBcEiwANWQQL3EXIE2Cf7NSZZ0OYMKRgJCFeuGlPViCbNUpEZbVFRHTE1YdWYCrcBoCvrYQAvD_BwE#Basic%20Fixed%20Wing%20Airplane%20example) dell'[aereo ad ala fissa di base](https://www.deepl.com/en/translator?utm_term=&utm_campaign=IT%7CSearch%7CC%7CDSA%7CEnglish&utm_source=google&utm_medium=paid&hsa_acc=1083354268&hsa_cam=20627207960&hsa_grp=157168539729&hsa_ad=676252350153&hsa_src=g&hsa_tgt=dsa-437115340933&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAtYy9BhBcEiwANWQQL3EXIE2Cf7NSZZ0OYMKRgJCFeuGlPViCbNUpEZbVFRHTE1YdWYCrcBoCvrYQAvD_BwE#Basic%20Fixed%20Wing%20Airplane%20example) nella sezione Tutorial di programmazione.
+
+## Denominazione dei canali di uscita del wizard
+
+Le nuove procedure guidate per la creazione dei modelli utilizzano le seguenti regole di denominazione dei canali:  
+  
+            ▪ Quando il mix ha una sola uscita, non viene assegnata alcuna numerazione né alcun 					suffisso al nome.  
+            ▪ Quando il mix esegue operazioni diverse sulle uscite, i canali di uscita devono avere 					un nome esplicito (ad esempio “sinistra” / “destra” per gli alettoni).  
+            ▪ Quando il mix esegue esattamente gli stessi calcoli su tutte le uscite, il nome avrà 					semplicemente un numero come suffisso.
+
+## Seleziona un modello
+
+![](../assets/model-icon-modelselect.png)
+
+Tocca “Selezione modello” per visualizzare l'elenco dei tuoi modelli.
+
+![](../assets/model-modelselect-folders.png)
+
+Si prega di notare che dopo un aggiornamento della versione di Ethos, ETHOS converte i modelli singolarmente quando vengono selezionati nella schermata di selezione dei modelli. Non è necessario selezionare ogni modello dopo un aggiornamento perché la conversione può avvenire in un secondo momento quando vengono selezionati, anche con una versione successiva di Ethos. Non vi è alcun ritardo evidente nel processo di conversione quando viene selezionato un modello. Quando avviene la conversione, la data dell'ultima modifica nella parte inferiore della schermata di selezione del modello cambierà con la data corrente. Se non è necessaria alcuna conversione, la data cambia solo se si apporta una modifica al modello.
+
+Selezione Rapida
+
+Toccando a lungo o premendo a lungo il tasto Invio su un'icona del modello, si passerà immediatamente a quel modello. Fare riferimento anche alla sezione “Imposta modello corrente” riportata di seguito.
+
+## Menu gestione Modello
+
+
+
+Tocca un modello per evidenziarlo, quindi toccalo nuovamente per visualizzare il menu di gestione dei modelli.
+
+Imposta modello attuale
+
+
+
+Tocca “Imposta modello corrente” per rendere corrente il modello evidenziato.
+
+In alternativa, utilizza il metodo “Selezione rapida” descritto sopra.
+
+Clona un modello
+
+
+
+Tocca “Clona” per creare una copia clonata del modello evidenziato.
+
+
+
+Si aprirà una finestra di dialogo che consente di personalizzare il clone.
+
+Per impostazione predefinita, il sistema RF non viene clonato, il che significa che il modulo RF sarà disattivato nel clone, ma con un numero di modello diverso. Se si seleziona l'opzione “Sistema RF”, la configurazione RF, compreso il numero di modello, verrà clonata.
+
+I mix di modelli, i timer e le curve non verranno clonati se deselezionati.  
+Toccare “OK” per procedere.
+
+Al termine, verrà visualizzata una finestra di dialogo di conferma “Modello clonato con successo!”..
+
+Cambia Cartella
+
+![](../assets/model-modelselect-folder-change-select.png)
+
+Per spostare un modello in un'altra cartella, tocca l'icona del modello, quindi seleziona “Cambia cartella” dalla finestra di dialogo.
+
+![](../assets/model-modelselect-folder-change-glider.png)
+
+Tocca la cartella per spostarla in.
+
+Ricevi modello
+
+
+
+Toccare “Ricevi modello” per avviare il processo di ricezione di un modello da un'altra radio Ethos tramite Bluetooth. Si prega di notare che l'operazione “Ricevi modello” deve essere avviata prima dell'operazione “Invia modello” nella radio mittente.
+
+
+
+Finché non viene trovata una connessione Bluetooth, viene visualizzata la finestra di dialogo “In attesa di connessione”.
+
+
+
+Una volta stabilita la connessione, viene visualizzata una finestra di dialogo “In attesa di ricezione” che richiede la conferma per procedere.
+
+
+
+Il trasferimento dei file ha inizio e viene visualizzata una barra di avanzamento, seguita da un messaggio di completamento al termine dell'operazione.
+
+Invia modello
+
+
+
+Toccare “Invia modello” per avviare il trasferimento di un modello a un'altra radio Ethos tramite Bluetooth. Si prega di notare che l'opzione “Ricevi modello” deve essere avviata prima dell'opzione “Invia modello” nella radio mittente.
+
+
+
+Finché non viene trovata una connessione Bluetooth, viene visualizzata la finestra di dialogo “In attesa di dispositivi”.
+
+
+
+Una volta individuati i dispositivi, viene visualizzata una finestra di dialogo per la selezione del dispositivo. Selezionare il dispositivo a cui inviare il modello.
+
+
+
+Il trasferimento dei file ha inizio e viene visualizzata una barra di avanzamento.
+
+
+
+Al termine dell'operazione viene visualizzato un messaggio di conferma.
+
+Cancella
+
+Tocca “Elimina” per eliminare un modello. Questa opzione non è disponibile sul modello attivo.
+
+## Ricevere un modello da un'altra radio Ethos
+
+![](../assets/model-modelselect-folder-airplane-select.png)
+
+Per ricevere un modello, seleziona la categoria in cui desideri creare il modello, quindi tocca l'icona \[+\].
+
+![](../assets/model-modelselect-model-receive.png)
+
+Tocca "Ricevi modello" per avviare il processo di ricezione di un modello da un'altra radio Ethos via Bluetooth.
+
+![](../assets/Pictures/1000000000000320000001E0A34D638D.png)
+
+La radio entrerà in modalità di attesa e visualizzerà anche il suo indirizzo Bluetooth locale per consentire l'identificazione dell'indirizzo corretto sulla radio mittente.
+
+![](../assets/Pictures/1000000000000320000001E0D6F5A932.png)
+
+Nella radio di invio, tocca l'icona del modello e seleziona "Invia modello" per avviare il trasferimento.
+
+![](../assets/Pictures/1000000000000320000001E0964706D2.png)
+
+La radio ricevente annuncerà il file del modello che sta per essere ricevuto per conferma. Tocca Sì per ricevere il modello.
 
 ## Selezione di un modello
 
-Tocca **Model select** per visualizzare l'elenco dei modelli.
+![](../assets/model-icon-modelselect.png)
 
-!!! note "Conversione dei modelli dopo un aggiornamento di Ethos"
-    Ethos converte ogni modello singolarmente la prima volta che viene
-    *selezionato* dopo un aggiornamento di versione, e non tutti insieme al
-    momento dell'aggiornamento — non si nota alcun ritardo ed è sicuro farlo in
-    qualsiasi momento successivo, anche con una release di Ethos ancora più
-    recente. La data di **Last Modification** in fondo alla schermata di
-    selezione viene aggiornata quando avviene una conversione (o quando si
-    modifica il modello — altrimenti resta invariata).
+Tocca "Seleziona modello" per visualizzare l'elenco dei tuoi modelli.
 
-**Selezione rapida** — un tocco prolungato o una pressione lunga di `ENT`
-sull'icona di un modello attiva immediatamente quel modello.
+![](../assets/model-modelselect-folders.png)
 
-**Menu di gestione del modello** — tocca un modello per evidenziarlo, toccalo
-nuovamente per aprire il menu:
+Tieni presente che dopo un aggiornamento della versione di Ethos, ETHOS converte i modelli singolarmente quando vengono selezionati nella schermata di selezione dei modelli. Non è necessario selezionare ogni modello dopo un aggiornamento perché la conversione può avvenire in un secondo momento quando vengono selezionati, anche con una versione successiva di Ethos. Il processo di conversione non subisce alcun ritardo quando viene selezionato un modello. Quando avviene la conversione, la data dell'ultima modifica in fondo alla schermata di selezione del modello cambia nella data attuale. Se non è necessaria una conversione, la data cambia solo se si effettua una modifica del modello.
 
-- **Set current model**
-- **Clone** — duplica il modello. Un clone riceve automaticamente un nuovo
-  numero di ricevitore; se invece gli si riassegna il numero di ricevitore
-  dell'originale, funziona senza dover rifare il binding.
-- **Change folder**
-- **Send**/**Receive** — verso o da un'altra radio, come sopra.
-- **Delete** — disponibile solo per un modello che non sia quello corrente.
+Selezione rapida
+
+Toccando a lungo o Invio a lungo sull'icona di un modello si passa immediatamente a quel modello.
+
+Menu di gestione del modello
+
+Tocca un modello per evidenziarlo, poi toccalo di nuovo per visualizzare il menu di gestione del modello.
+
+![](../assets/model-modelselect-folder-change-select.png)
+
+Opzioni nel menu di gestione del modello:
+
+- Tocca "Imposta modello corrente" per rendere il modello evidenziato il modello corrente.
+- Puoi clonare il modello, che verrà duplicato. Tieni presente che quando cloni un modello, Ethos assegna al clone un nuovo numero di ricevitore. Se gli dai il vecchio numero di ricevitore funzionerà, non c'è bisogno di rifare la connessione.
+- Cambia la cartella del modello.
+- Puoi inviare o ricevere il modello a o da un'altra radio.
+- In alternativa, puoi eliminare il modello. Nota che l'opzione Elimina appare solo se il modello selezionato non è quello corrente.
