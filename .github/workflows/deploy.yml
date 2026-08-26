@@ -3,7 +3,16 @@ name: Deploy Docs
 on:
   push:
     branches:
-      - main
+      # Quoted -- unquoted, YAML parses this as the float 1.6, not the
+      # branch name string "1.6", and the trigger silently never matches
+      # anything. This is a frozen 1.6-version branch, not "main" (see
+      # the "Deploy version 1.6 with mike" step below) -- inherited
+      # "main" here from before this branch existed as its own thing
+      # (it used to just *be* main, before 26.1's work started and this
+      # got cut off as a frozen snapshot), which meant this workflow
+      # had never actually triggered on a single push to this branch --
+      # confirmed via `gh run list --branch 1.6` returning empty.
+      - "1.6"
   workflow_dispatch:
 
 permissions:
