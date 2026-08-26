@@ -964,6 +964,18 @@ plugins:
 extra:
   version:
     provider: mike
+  # Locales with real, .odt-sourced manual content (see
+  # ethos-tools/manual-sync) -- everything else in plugins.i18n.languages
+  # above still exists as a locale (real pages, real nav) but its content
+  # is machine-translated-from-fake-English placeholder text, not sourced
+  # from any real manual. Read by ethos-manual-rework-editor to filter its
+  # Language dropdown down to locales actually worth editing right now;
+  # add a locale here the same sync_mapped.py run that gives it real
+  # content for the first time (see ethos-tools/manual-sync/README.md).
+  real_content_locales:
+    - en
+    - de
+    - es
 
 extra_css:
   - stylesheets/extra.css
