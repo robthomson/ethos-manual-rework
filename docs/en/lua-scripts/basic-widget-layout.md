@@ -1,58 +1,79 @@
-# Basic Widget Layout
+# Basic layout of a Lua widget
 
-A custom Lua widget (see [Custom Widgets](../displays/custom-widgets.md)
-for installing one) is built from a small set of named fields/handlers:
+A custom Lua widget has the following basic structure:
 
-- **`key`** *(string)* — a unique identifier for the widget.
-- **`name`** *(string or function)* — the widget's display name. Either a
-  plain string, or a function taking no arguments and returning one —
-  useful for a name that varies by locale.
-- **`create`** *(function)* — called once when the widget is created,
-  taking no arguments. Returns a **widget table**, which is then passed
-  to every other handler below — initialize your state here and store it
-  in that table.
-- **`configure`** *(function)* — called when the user opens the widget's
-  configuration screen, taking the widget table from `create()` as its
-  only argument, returning nothing. Build the configuration form here and
-  use it to update values in the widget table.
-- **`wakeup`** *(function)* — called every loop (roughly every 50ms),
-  taking the widget table, returning nothing. Check here whether anything
-  changed; if so, call `invalidateWindow()` to trigger a repaint via
-  `paint()`. Keep this handler fast — ideally doing nothing at all most
-  of the time it's called.
-- **`event`** *(function)* — called when the widget receives an event;
-  Ethos routes arbitrary events to a widget through this handler.
-- **`paint`** *(function)* — draws the widget, taking the widget table,
-  returning nothing. Called automatically whenever `lcd.invalidate()` has
-  fired. Can be comparatively slow, but should still only actually redraw
-  when something's changed.
-- **`read`** *(function, optional)* — reads persisted widget storage.
-- **`write`** *(function, optional)* — writes persisted widget storage.
-- **`init`** *(function)* — registers the widget and its callbacks with
-  Ethos. Typically the last thing in the script:
+## key (string)
 
-```lua
+The widget must have a unique key.
+
+## name (string or function)
+
+The name function takes no arguments and returns the widget name as a string. The name can simply be a string, or the result of a function. For example, the name can be in a different language depending on locale.
+
+## create (function)
+
+The create handler function is called on widget creation. It takes no arguments and will return the widget table which is then later passed to all functions. Initialize your variables here and store the state in the returned widget table.
+
+## configure (function)
+
+The configure handler function is called when the user enters widget configuration. It takes the widget table returned by create() as its only argument and returns nothing. It is called when the user enters the widget configuration. Here you can create the configuration form and use it to change values in the widget table.
+
+## wakeup (function)
+
+The wakeup handler function is called during each loop, i.e. every 50ms. It takes the widget table as its only argument and returns nothing.
+
+The wakeup() should check if anything has changed. If yes, a refresh is needed so the invalidateWindow() function should be called. This will cause the paint() function to be called. You should make sure this function is very fast, ideally doing nothing most of the time.
+
+## event (function)
+
+The event handler function called when an event is received. ETHOS provides the ability to catch any event in a widget, through this event function.
+
+## paint (function)
+
+The paint function ‘draws’ the widget. It takes the widget table as its only argument and returns nothing. It should be called when a refresh is needed, and is automatically called whenever lcd.invalidate() has been called. It can be slow, so only paint if something has changed.
+
+## read (function)
+
+Optional read handler. In ETHOS it is possible to use the storage as the user wishes.
+
+## write (function)
+
+Optional write handler. In ETHOS it is possible to use the storage as the user wishes.
+
+## init(function)
+
+The init function is used to register the widget and various callbacks. You might have something like this at the bottom of your script:
+
+Code:
+
 local function init()
-  system.registerWidget({
-    key = "unique",
-    name = name,
-    create = create,
-    configure = configure,
-    wakeup = wakeup,
-    paint = paint,
-    read = read,
-    write = write,
-  })
+
+system.registerWidget({
+
+key = "unique",
+
+name = name,
+
+create = create,
+
+configure = configure,
+
+wakeup = wakeup,
+
+paint = paint,
+
+read = read,
+
+write = write,
+
+})
+
 end
 
 return { init = init }
-```
 
-`key` must be unique across installed widgets; the other fields tie into
-the widget's lifecycle as described above.
+Note that 'key' is a unique identifier for your widget. The various functions listed are used in the widget lifecycle.
 
-Scripts live under `scripts/` on the SD card/eMMC, ideally organized into
-per-widget folders (see [File
-Manager](../system-setup/file-manager.md#top-level-folders) and [Example
-Script Locations](example-script-locations.md)). See the *FrSky ETHOS Lua
-Script Programming* thread on rcgroups for further worked examples.
+Lua scripts are stored in the scripts/ folder on the SD card or eMMC, preferably organized in folders.
+
+Please refer to the rcgroups ‘FrSky ETHOS Lua Script Programming’ thread for more information.

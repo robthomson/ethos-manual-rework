@@ -1,0 +1,7 @@
+# X20 Pro Layout
+
+![](../assets/Pictures/1000000100000838000006F95722F78A.png)
+
+![](../assets/Pictures/10000001000007C00000063817A8B456.png)
+
+![](../assets/Pictures/100000010000069C000006163ECFE075.png)
