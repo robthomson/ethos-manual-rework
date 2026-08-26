@@ -27,9 +27,19 @@ STATUS_FILENAME = "translation-status.md"
 # fully_covered_locales(), which gates scripts/build_pdfs.py) since no
 # translation of it is ever expected to exist.
 #
+# SUMMARY.md is the mkdocs-literate-nav plugin's own nav source (see
+# mkdocs.yml's plugins: list) -- English-only by design, exactly like the
+# YAML nav: block it replaced never had a per-locale copy either. Added
+# after the literate-nav migration (which introduced docs/en/SUMMARY.md)
+# didn't update this set to match -- the exact silent-never-fully-covered
+# failure mode described above, just for a different file: every locale
+# was permanently "missing" this one page regardless of real translation
+# coverage, which meant fully_covered_locales() always returned []
+# (confirmed live: de/es/it all had real content but zero PDF exports).
+#
 # Matched by bare filename below (see en_pages()), not full path -- same
 # convention STATUS_FILENAME already relies on.
-UNTRANSLATED_PAGES = {STATUS_FILENAME, "adding-a-language.md"}
+UNTRANSLATED_PAGES = {STATUS_FILENAME, "adding-a-language.md", "SUMMARY.md"}
 
 
 def list_locales(docs_dir: Path) -> list[str]:
