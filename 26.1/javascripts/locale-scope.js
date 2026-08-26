@@ -19,7 +19,7 @@
 // `mkdocs serve`), in which case this is a no-op and search falls back to
 // the stock, unfiltered combined index.
 (function () {
-  var locales = /*__I18N_LOCALES__*/ ["cs", "de", "es", "fr", "he", "it", "nb", "nl", "pl", "pt-BR", "zh"];
+  var locales = /*__I18N_LOCALES__*/ ["de", "es", "fr", "it"];
   if (!locales.length) {
     return;
   }
