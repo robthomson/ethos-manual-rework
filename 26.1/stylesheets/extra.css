@@ -50,3 +50,31 @@
 .md-typeset details.note > summary::before {
   background-color: #8ec31f;
 }
+
+/* =============================================================================
+   Top nav tabs — wrap instead of silently scrolling off-screen
+   Material's default .md-tabs__list is a single-row flex container with
+   overflow:auto and scrollbar-width:none (scrollbar hidden entirely), so any
+   tab that doesn't fit is scrolled out of view with no visual affordance --
+   it just looks clipped at the browser's edge. This bites hardest on longer
+   top-level labels in some locales (e.g. fr, de) combined with our ~10
+   top-level sections. navigation.tabs.sticky is not enabled, so the bar
+   isn't pinned to a fixed height -- letting it wrap to a second line is a
+   safe, no-JS fix: every tab stays reachable and visible instead of
+   depending on a hidden horizontal scrollbar.
+   ============================================================================= */
+.md-tabs__list {
+  flex-wrap: wrap;
+  overflow: visible;
+  white-space: normal;
+  row-gap: 0.2rem;
+}
+
+.md-tabs__item {
+  height: auto;
+}
+
+.md-tabs__link {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
