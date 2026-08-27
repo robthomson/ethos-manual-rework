@@ -1,0 +1,4728 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User manual for the FrSky Ethos radio firmware">
+      
+      
+      
+        <link rel="canonical" href="https://manual.rt-rc.com/it/model-setup/mixes/">
+      
+      
+        <link rel="prev" href="../flight-modes/">
+      
+      
+        <link rel="next" href="../outputs/">
+      
+      
+        
+          <link rel="alternate" href="../../../model-setup/mixes/" hreflang="en">
+        
+          <link rel="alternate" href="../../../es/model-setup/mixes/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="it">
+        
+          <link rel="alternate" href="../../../de/model-setup/mixes/" hreflang="de">
+        
+          <link rel="alternate" href="../../../fr/model-setup/mixes/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Mix - Ethos Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mixer" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../" title="Ethos Manual" class="md-header__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ethos Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mix
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleziona la lingua">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../model-setup/mixes/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../es/model-setup/mixes/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../de/model-setup/mixes/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/model-setup/mixes/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    <a href="https://github.com/robthomson/ethos-manual-rework/releases" title="Download PDF manuals" class="md-header__button md-icon" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg>
+    </a>
+    
+      <div class="md-header__source">
+        <a href="https://github.com/robthomson/ethos-manual-rework" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+  Per iniziare
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../system-setup/" class="md-tabs__link">
+          
+  
+  
+  Configurazione di sistema
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Configurazione del modello
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../displays/" class="md-tabs__link">
+          
+  
+  
+  Display
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lua-scripts/" class="md-tabs__link">
+          
+  
+  
+  Script Lua
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorials/" class="md-tabs__link">
+          
+  
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
+          
+  
+  
+  Guide pratiche
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../radio-notes/" class="md-tabs__link">
+          
+  
+  
+  Note sulla radio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ethos-suite/" class="md-tabs__link">
+          
+  
+  
+  Ethos Suite
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  Riferimento
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+  Contribuire
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Ethos Manual" class="md-nav__button md-logo" aria-label="Ethos Manual" data-md-component="logo">
+      
+  <img src="../../../assets/ethos-logo-reversed.png" alt="logo">
+
+    </a>
+    Ethos Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/robthomson/ethos-manual-rework" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ethos-manual-rework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Per iniziare
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Per iniziare
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Per iniziare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/main-views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Viste principali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/user-interface-and-navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaccia utente e navigazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usb-connection-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modalità di connessione USB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/emergency-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modalità di emergenza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione di sistema
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configurazione di sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/file-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestione file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avvisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/date-and-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data e ora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/battery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batteria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dispositivi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-setup/information/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione del modello
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configurazione del modello
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-select/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selezione modello
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-edit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modifica modello
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flight-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fasi di volo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mix
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica-del-diagramma-di-flusso-di-alto-livello" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panoramica del diagramma di flusso di alto livello
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixer-di-alettoni-elevatore-e-timone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixer di alettoni, elevatore e timone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mix-gasthrottle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mix Gas/Throttle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opzione-di-visualizzazione-per-canale-raggruppamento-dei-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opzione di visualizzazione per canale (raggruppamento dei mix)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libreria-mixer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Libreria Mixer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libreria Mixer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorie-di-fonti-sorgenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorie di Fonti (sorgenti)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possibilita-di-aggiungere-una-var-mentre-si-e-in-seleziona-sorgente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possibilità di aggiungere una Var mentre si è in Seleziona Sorgente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorgente-come-valore-fisso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorgente come valore fisso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riorganizzazione-delle-azioni-di-mixo-libero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riorganizzazione delle azioni di mixo libero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presto-early" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Presto” - Early
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presto-early_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presto - Early
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opzioni-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opzioni Curva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifica-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifica Curva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggiungere-una-curva-indietro-retroattiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aggiungere una curva “indietro”- retroattiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configura-la-curva-attiva-avanti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configura la curva Attiva “Avanti”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configura-una-curva-retro-attiva-indietro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configura una curva retro attiva “indietro”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-di-una-sola-curv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso di una sola curv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rimuovi-uscita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rimuovi Uscita
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uscite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Timer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trims/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rf-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema RF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curves/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curve
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logical-switches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interruttori logici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funzioni speciali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variabili
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../telemetry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telemetria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glasses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Lua (modello)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rearranging-the-model-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rearranging the Model Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Display
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configura le schermate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/configuring-the-main-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring the Main Screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/standard-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-additional-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Additional Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/managing-main-screens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Main Screens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../displays/adding-custom-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Custom Widgets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Lua
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Script Lua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Script Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/lua-interpreter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interprete Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/ethos-lua-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentazione Lua di Ethos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/example-script-locations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posizione degli script di esempio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/configuration-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limiti di configurazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/basic-widget-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layout base di un widget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua-scripts/alternative-display-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alternative Display Themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial di programmazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/initial-radio-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione iniziale della radio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-fixed-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esempio base per aeromodello ad ala fissa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flying-wing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esempio base di ala volante (elevoni)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic-flybarless-heli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esempio base di elicottero flybarless
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide pratiche
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide pratiche
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide pratiche
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/low-battery-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avviso di tensione batteria bassa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/battery-capacity-warning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avviso di capacità della batteria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/sr8-sr10-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurazione modello SR8/SR10 e riordino dei canali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/butterfly-mixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mixer Butterfly (Corvo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/fbus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurare un sistema FBUS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/test-redundant-receiver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testare una configurazione con ricevitore ridondante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/user-defined-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist con testo definito dall'utente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/in-flight-compensation-curve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curva di compensazione regolabile in volo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/instant-takeback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ripresa istantanea del controllo per la funzione Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/find-latest-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trovare il bootloader più recente o altri componenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/converting-1.6-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Converting 1.6.x Models to 26.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/gear-door-sequencer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gear Door and Landing Gear Sequencer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note sulla radio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Note sulla radio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radio Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-x20s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20/X20S
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20-pro-aw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20 Pro AW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x20r-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X20R/RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x18-x18se/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X18/X18SE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/xe-xes-xe-rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XE/XES/XE RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/x14-x14rs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X14/X14RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../radio-notes/twin-xlite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TWIN XLite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Suite
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ethos Suite
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FrSky Suite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilizzo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/web-simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethos Web Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethos-suite/command-line-operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Operation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riferimento
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Riferimento
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riferimento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/toolbars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Barre degli strumenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuire
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contribuire
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/screenshot-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline degli screenshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/adding-a-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a New Language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/translation-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica-del-diagramma-di-flusso-di-alto-livello" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panoramica del diagramma di flusso di alto livello
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixer-di-alettoni-elevatore-e-timone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixer di alettoni, elevatore e timone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mix-gasthrottle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mix Gas/Throttle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opzione-di-visualizzazione-per-canale-raggruppamento-dei-mix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opzione di visualizzazione per canale (raggruppamento dei mix)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libreria-mixer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Libreria Mixer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libreria Mixer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorie-di-fonti-sorgenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorie di Fonti (sorgenti)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possibilita-di-aggiungere-una-var-mentre-si-e-in-seleziona-sorgente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possibilità di aggiungere una Var mentre si è in Seleziona Sorgente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorgente-come-valore-fisso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorgente come valore fisso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riorganizzazione-delle-azioni-di-mixo-libero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riorganizzazione delle azioni di mixo libero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presto-early" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Presto” - Early
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presto-early_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presto - Early
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opzioni-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opzioni Curva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifica-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifica Curva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggiungere-una-curva-indietro-retroattiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aggiungere una curva “indietro”- retroattiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configura-la-curva-attiva-avanti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configura la curva Attiva “Avanti”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configura-una-curva-retro-attiva-indietro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configura una curva retro attiva “indietro”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-di-una-sola-curv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso di una sola curv
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rimuovi-uscita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rimuovi Uscita
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/robthomson/ethos-manual-rework/edit/main/docs/it/model-setup/mixes.md" title="Modifica" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="mixer">Mixer<a class="headerlink" href="#mixer" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="../../assets/model-icon-mixes.png" /></p>
+<p>La funzione Mix costituisce il cuore della radio. È qui che vengono configurate le funzioni di controllo del modello. La sezione Mixes permette di Mixre o combinare a piacimento una qualsiasi delle numerose sorgenti di ingresso e di mapparla su uno qualsiasi dei canali di uscita.</p>
+<h2 id="panoramica-del-diagramma-di-flusso-di-alto-livello">Panoramica del diagramma di flusso di alto livello<a class="headerlink" href="#panoramica-del-diagramma-di-flusso-di-alto-livello" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../assets/Pictures/10000000000004630000031AC30E0488.png" /></p>
+<p>Il diagramma di flusso parte dai controlli hardware, passa attraverso la logica di programmazione nei Mix e finisce per essere adattato alle caratteristiche meccaniche del modello nella sezione Output. Questo approccio passa da un modello fisico, a un modello logico e poi di nuovo a un modello fisico.</p>
+<p>Nella sezione Mix impostiamo l'azione dei diversi controlli. Possiamo trasformare gli ingressi utilizzando escursioni, offset, curve, differenziali o lenti, per poi Mixarli o combinarli come richiesto.</p>
+<p>La sezione Output permette di adattare queste uscite logiche pure alle caratteristiche meccaniche del modello. È l'interfaccia tra la "logica" del setup e il mondo reale con servi, collegamenti e superfici di controllo, nonché motori e trasduttori.</p>
+<p>Ethos ha a disposizione 100 canali di mix per la programmazione del tuo modello. Normalmente i canali con il numero più basso vengono assegnati ai servi, perché i numeri dei canali corrispondono direttamente ai canali del ricevitore. Il modulo RF (radiofrequenza) interno ha a disposizione fino a 24 canali di uscita.</p>
+<p>I canali di mix superiori possono essere utilizzati come "canali virtuali" nella programmazione più avanzata, oppure come canali reali utilizzando più moduli RF (interno + esterno) e SBus. L'ordine dei canali è una questione di preferenze personali o di convenzioni, oppure può essere dettato dal ricevitore. Nel nostro esempio utilizzeremo il canale AETR (Aileron, Elevator, Throttle, Rudder).</p>
+<p>La sorgente o l'ingresso di un mix può essere scelto tra gli ingressi analogici come gli stick, i potenziometri e i cursori; gli interruttori a levetta o i pulsanti; qualsiasi interruttore logico definito; gli interruttori di trim; qualsiasi canale definito; un asse del giroscopio; un canale trainer; un timer; un sensore di telemetria; un valore di sistema come la tensione della radio principale o la tensione della batteria dell'RTC; oppure un valore "speciale" come "minimo", "massimo" o 0.</p>
+<p>Questa sezione permette anche di condizionare la sorgente definendo escursioni/rate e offset e aggiungendo curve (ad esempio Expo). Il mix può essere soggetto a un interruttore e/o a fase di volo e può essere aggiunta una funzione di ritardo. (Nota: i ritardi sono implementati negli interruttori logici perché sono legati agli interruttori).</p>
+<p>L'editor di mix include informazioni di aiuto contestuali che cambiano dinamicamente quando si toccano le opzioni di mix. La prima riga mostra il tipo di mix utilizzato, ad esempio "Alettoni", "Elevatori" o "Mix libero" ecc.</p>
+<p>È possibile definire fino a 120 Mixer. È possibile aggiungere una nuova Mix toccando il simbolo "+" accanto alle intestazioni delle colonne nella schermata principale delle Mixer.</p>
+<p><img alt="" src="../../assets/model-mixes.png" /></p>
+<p>Se il tuo modello è stato creato utilizzando una delle procedure guidate di creazione del modello nella funzione "Selezione del modello" del menu Sistema, le Mixer di base saranno visualizzate quando toccherai "Mixer". Viene visualizzato un grafico per la Mix evidenziata e sotto la fase di volo corrente e la condizione attiva vengono scritte in grassetto se sono attive.</p>
+<p>Inoltre, è possibile aggiungere i mix predefiniti più comuni e i mix liberi configurabili dall'utente. Nella schermata principale dei mix (vedi sopra) è possibile aggiungere nuovi mix toccando il simbolo "+" accanto alle intestazioni delle colonne. C'è un mix per ogni controllo e un display grafico per quel mix.</p>
+<p><img alt="" src="../../assets/model-mixes-ail-edit.png" /></p>
+<p>Per modificare un mix, tocca il mix e tocca di nuovo per visualizzare il menu a comparsa, quindi seleziona Modifica. Altre opzioni sono: aggiungere un nuovo mix, passare alla vista di raggruppamento "<a href="./">Visualizza per canale</a>" (descritta in una sezione più in basso), spostare il mix in alto o in basso, clonare un mix o eliminare un mix.</p>
+<p>Tieni presente che i mix inattivi sono visualizzati in grigio per facilitare il debug.</p>
+<p>La radio chiede conferma prima di cancellare un mix, in caso di selezione involontaria.</p>
+<h2 id="mixer-di-alettoni-elevatore-e-timone">Mixer di alettoni, elevatore e timone<a class="headerlink" href="#mixer-di-alettoni-elevatore-e-timone" title="Permanent link">&para;</a></h2>
+<p>Utilizzeremo gli Alettoni come esempio, ma le Mixer di Elevatore e Timone sono molto simili.</p>
+<p><img alt="" src="../../assets/model-mixes-ail.png" /></p>
+<p>Nome</p>
+<p>Il nome degli alettoni è stato inserito come nome predefinito, ma può essere modificato.</p>
+<p>Condizione attiva</p>
+<p>La condizione attiva predefinita è "Sempre acceso", appropriata per gli alettoni. Può essere resa condizionale scegliendo tra posizioni di interruttori o pulsanti, interruttori di funzione, fase di volo, interruttori logici, un evento di sistema come il taglio o il mantenimento del throttle o le posizioni di trim.</p>
+<p>Fasi di volo</p>
+<p>Se sono state definite delle Fasi di volo nella sezione "Fasi di volo", questo parametro diventa disponibile. Il mix può quindi essere condizionato a una o più fase di volo. Clicca su "Modifica" e seleziona le caselle relative alle fase di volo in cui questo mix deve essere attivo.</p>
+<p>Curva</p>
+<p><img alt="" src="../../assets/model-mixes-ail-expo.png" /></p>
+<p>L'opzione curva standard è Expo, che per impostazione predefinita ha un valore pari a 0, il che significa che la risposta è lineare (cioè non c'è curva). Un valore positivo ammorbidisce la risposta intorno allo 0, mentre un valore negativo la rende più netta. L'esempio precedente mostra un Expo del 30%.</p>
+<p>Si può anche selezionare una qualsiasi curva definita in precedenza. L'uscita del mix sarà quindi modificata da questa curva. In alternativa, è possibile aggiungere una nuova curva.</p>
+<p>Puoi specificare fino a 6 curve, ciascuna con una condizione. Se più di una condizione è vera, prevale la curva più alta nell'elenco. Nota che la curva viene applicata prima del escursione.</p>
+<p>escursione / rates</p>
+<p><img alt="" src="../../assets/model-mixes-ail-weight.png" /></p>
+<p>È possibile definire più escursioni o rates, soggetti alla posizione di un interruttore, a un interruttore di funzione, a un interruttore logico, alla posizione del trim o alla fase di volo. Per ogni escursione/rate viene aggiunta una riga. Il escursione/rate predefinito (cioè la prima riga del escursione/rate) è attivo quando nessuno degli altri rates è attivo. A sinistra dei rates definiti c'è una piccola croce all'interno di una freccia che può essere utilizzata per eliminare una riga di escursione/rate. Nell'esempio precedente sono state impostate tre rates sullo switch SB.</p>
+<p>Differenziale</p>
+<p><img alt="" src="../../assets/model-mixes-ail-diff.png" /></p>
+<p>Il differenziale prevede una corsa maggiore in una direzione. Ad esempio, per gli alettoni si utilizza una corsa maggiore verso l'alto rispetto a quella verso il basso per ridurre l'imbardata e migliorare le caratteristiche di virata/maneggevolezza. Un valore positivo comporta una minore corsa degli alettoni verso il basso, come si può vedere nel grafico qui sopra. (Predefinito = 0. Intervallo da -100 a +100)</p>
+<p>In questo esempio, premendo a lungo il tasto Invio si apre la finestra di dialogo per selezionare una sorgente invece del valore fisso predefinito; in questo caso è stato selezionato "Slider destro". Il grafico a destra mostra che il cursore è al 50%, quindi questo sarà il escursione per i rates degli alettoni, ma regolabile in volo.</p>
+<p>Il differenziale sull'elevatore può essere utilizzato per gli aerei che desiderano un elevatore più basso che alto, in genere in situazioni di gara.</p>
+<p>Nota che il parametro Differenziale è presente solo se hai più di un canale di uscita.</p>
+<p>Il mix Timoni avrà il parametro Differenziale solo se il modello è configurato per la coda a V.</p>
+<p>Trim</p>
+<p>Offre la possibilità di scollegare il trim associato a un mix senza disabilitarlo, in modo da poterlo utilizzare altrove.</p>
+<p>Numero di canali</p>
+<p><img alt="" src="../../assets/model-mixes-ail-ch-count.png" /></p>
+<p>Il conteggio dei canali definisce il numero di canali di uscita assegnati. In questo esempio sono stati configurati due alettoni nella creazione guidata del modello.</p>
+<p>Uscita Sinistra, Uscita Destra</p>
+<p>La procedura guidata per la creazione del modello ha assegnato l'uscita sinistra al canale CH1 (alettone sinistro), poiché l'ordine predefinito dei canali nel menu Sistema – Comandi era impostato su AETR (ovvero alettone, elevatore, acceleratore, timone) e l'opzione «Primi quattro canali fissi» era attiva. La procedura guidata ha quindi assegnato l'Output Right al CH5 (Aileron Right).</p>
+<p>L'impostazione predefinita può essere modificata se necessario, ma occorre prestare attenzione per valutare eventuali altri impatti derivanti da una modifica in questo punto. Se l'opzione “First four channels fixed” è disattivata, la procedura guidata raggruppa i canali simili, ovvero AAETR invece di AETRA.</p>
+<p>Nota che [ENT_long] sul canale di uscita selezionato ti porterà direttamente a quella pagina nelle Uscite.</p>
+<p>Nota anche che il grafico è colorato in base alle uscite. Nell'esempio precedente l'Output1 è rosso e corrisponde alla curva rossa del grafico, mentre l'Output2 è arancione e corrisponde alla curva arancione del grafico.</p>
+<h2 id="mix-gasthrottle">Mix Gas/Throttle<a class="headerlink" href="#mix-gasthrottle" title="Permanent link">&para;</a></h2>
+<p>Il mix Throttle contiene parametri per la gestione del taglio e del mantenimento del Gas - Throttle. Il taglio del Gas - Throttle è dotato di un interblocco di sicurezza dell'ingresso del Gas - Throttle, mentre il mantenimento del Gas - Throttle ha una semplice funzione on/off.</p>
+<p><img alt="" src="../../assets/model-mixes-thr.png" /></p>
+<p>Ingresso</p>
+<p>Qui è possibile selezionare la fonte per il mix del throttle. Il valore predefinito è lo stick del throttle, ma può essere modificato in analogico, interruttore, trim, canale, asse del giroscopio, canale del trainer, timer o valore speciale.</p>
+<p>Premi a lungo [ENT] negli Input per attivare le opzioni di throttle/gas:</p>
+<p>Opzioni di Input</p>
+<p>Le due opzioni sopra indicate sono comunemente utilizzate nei modelli di superficie in cui il trigger aziona sia l'acceleratore (metà positiva) che il freno (metà negativa).</p>
+<p>Fai riferimento alla sezione opzioni sotto <a href="../../getting-started/user-interface-and-navigation/">Opzioni sorgente</a>.</p>
+<p>Trim</p>
+<p>Permette di modificare il comportamento del trim del Gas - Throttle rispetto a quello predefinito.</p>
+<p><img alt="" src="../../assets/model-mixes-thr-trim-menu.png" /></p>
+<p>Può essere modificato per consentire all'uscita del throttle di essere trimmata dagli interruttori dei trim del timone, dell'elevatore, del throttle e dell'alettone. L'X20 Pro/R/RS e l'X18 permettono anche di assegnare i trim T5 o T6.</p>
+<p>Trim in posizione bassa</p>
+<p><img alt="" src="../../assets/model-mixes-thr-trim-low-position.png" /></p>
+<p>Nei motori a scoppio e a gas, il "trim in posizione bassa" viene utilizzato per regolare il regime del minimo. Il regime del minimo può variare a seconda delle condizioni atmosferiche e così via, quindi è importante avere un modo per regolare il regime del minimo senza influenzare la posizione di accelerazione completa.</p>
+<p>Se la funzione "trim in posizione bassa" è attivata, il canale del Gas - Throttle passa a una posizione di minimo di -75% quando lo stick del Gas - Throttle è in posizione bassa (fai riferimento alla barra dei canali visualizzata in basso nella schermata precedente). La leva del trim del Gas - Throttle può essere utilizzata per regolare il minimo tra -100% e -50%. Il Throttle Cut può essere configurato per spegnere il motore con un interruttore.</p>
+<p>Taglio del Gas – Throttle Cut</p>
+<p><img alt="" src="../../assets/model-mixes-thr-cut.png" /></p>
+<p>Il taglio del Gas - Throttle è dotato di un interblocco di sicurezza dell'ingresso del Gas - Throttle che assicura che il motore o il Gas - Throttle si avviino solo a partire da una posizione bassa del Gas - Throttle.</p>
+<p>Se combinato con il "trim in posizione bassa" (vedi sopra), può essere utilizzato per gestire le impostazioni del Gas - Throttle e del minimo su modelli con motore a incandescenza o a gas.</p>
+<p>Condizione attiva</p>
+<p>La condizione attiva può essere scelta tra posizioni di interruttori o pulsanti, interruttori di funzione, fase di volo, interruttori logici o posizioni di trim.</p>
+<p>Sticky / appicicoso</p>
+<p>Quando Sticky è in posizione ON, l'uscita del canale del Gas - Throttle verrà commutata sul valore di uscita al minimo (default -100%) non appena il taglio del Gas - Throttle diventa attivo.</p>
+<p>Quando Sticky è in posizione OFF, una volta che il taglio del Gas - Throttle diventa attivo, l'uscita del canale del Gas - Throttle verrà commutata al "valore di uscita al minimo" (predefinito -100%) solo quando lo stick del Gas - Throttle scende al di sotto del valore di attivazione (predefinito -85%).</p>
+<p>Valore di attivazione</p>
+<p>Il valore di attivazione determina il valore al di sotto del quale l'ingresso del Gas - Throttle attiva l'interblocco di sicurezza del Gas - Throttle.</p>
+<p>Valore di uscita inattivo</p>
+<p>Per sicurezza, una volta che il taglio del Gas - Throttle diventa inattivo, l'uscita del canale del Gas - Throttle lascerà il "valore di uscita al minimo" solo se l'ingresso del Gas - Throttle è stato inferiore al valore di attivazione. In questo modo si garantisce che il motore si avvii solo a partire da un valore basso dell'ingresso del Gas – Throttle.</p>
+<p>Si noti che Ethos si avvia in modo sicuro all'accensione, anche se la condizione “Throttle cut” non è attiva e l'input dell'acceleratore non è al minimo. È necessario spostare l'input dell'acceleratore al di sotto del valore di attivazione prima che il canale dell'acceleratore si armi e consentire al motore di avviarsi da un valore di input dell'acceleratore basso.</p>
+<p>Mantenimento del Gas – Throttle Hold</p>
+<p>Il mantenimento del Gas - Throttle fornisce una semplice funzione di mantenimento del Gas - Throttle senza l'interblocco di sicurezza dell'ingresso del Gas - Throttle di cui sopra.</p>
+<p>Per motivi di sicurezza, con i motori elettrici si consiglia vivamente di utilizzare l'opzione “Throttle cut” con il relativo interblocco di sicurezza invece dell'opzione “Throttle hold”.</p>
+<p><img alt="" src="../../assets/model-mixes-thr-hold.png" /></p>
+<p>Condizione attiva</p>
+<p>La condizione attiva può essere scelta tra posizioni di interruttori o pulsanti, interruttori di funzione, fase di volo, interruttori logici o posizioni di trim.</p>
+<p>Valore</p>
+<p>Una volta attivata la funzione di mantenimento del Gas - Throttle, il valore impostato verrà emesso sul canale del Gas - Throttle. Nei modelli alimentati elettricamente, il valore di mantenimento del Gas - Throttle è normalmente (-100%).</p>
+<p>Il valore di mantenimento del Gas - Throttle può anche provenire da una fonte.</p>
+<p>Fasi di volo</p>
+<p>Se sono state definite delle Fasi di volo nella sezione "Fasi di volo", questo parametro diventa disponibile. Il mix può quindi essere condizionato a una o più Fasi di volo.  Clicca su "Modifica" e seleziona le caselle relative alle Fasi di volo in cui questo mix deve essere attivo.</p>
+<p>Curva</p>
+<p>È possibile definire una curva per modificare l'uscita del canale del Gas - Throttle. Si può anche selezionare una curva precedentemente definita. Un'applicazione tipica consiste nel definire una curva di banda morta in modo che l'uscita rimanga a -100 finché non si sposta leggermente la leva dell'acceleratore. In questo modo si risolvono eventuali problemi di calibrazione degli sticks.</p>
+<p>Conteggio dei canali</p>
+<p><img alt="" src="../../assets/model-mixes-thr-ch-count.png" /></p>
+<p>Il conteggio dei canali definisce il numero di canali di uscita assegnati, di default 1 per il Throttle.</p>
+<h2 id="opzione-di-visualizzazione-per-canale-raggruppamento-dei-mix">Opzione di visualizzazione per canale (raggruppamento dei mix)<a class="headerlink" href="#opzione-di-visualizzazione-per-canale-raggruppamento-dei-mix" title="Permanent link">&para;</a></h2>
+<p>Con i mix complessi può essere difficile vedere l'effetto di altri mix su un determinato canale. L'opzione "Visualizza per canale" è particolarmente utile per il debug dei tuoi mix, perché tutti i mix che influenzano il canale selezionato vengono raggruppati.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator.png" /></p>
+<p>In questo esempio prenderemo in considerazione il canale Elevators. Dalla "Tabella dei mix" qui sopra possiamo vedere che l'Elevator è sul canale 2 e che ci sono altri mix con il canale 2 come uscita.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-select.png" /></p>
+<p>Per vedere l'effetto di tutti i mix sul canale Elevator, tocca il mix Elevators e seleziona "Visualizza per canale" dalla finestra di dialogo a comparsa.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p>L'esempio riportato sopra mostra che ci sono due mix che influiscono su questo canale: il mix Elevators stesso (controllato dallo stick Elevator) e un mix Butterfly che aggiunge la compensazione dell'Elevator quando i flap sono aperti. Osservando la linea di riepilogo CH2 Elevators (evidenziata), possiamo vedere che l'uscita del canale degli elevatori è al 12%. I sub mix mostrano che attualmente lo stick dell'elevatore è a -3%, ma il mix Butterfly aggiunge +15% al canale. L'azionamento del comando dei Flap causerà la modifica di questo mix di compensazione.</p>
+<p>Con questo layout "Vista per canale" è possibile vedere facilmente il contributo dei vari mix che influiscono su un canale, perché il valore di ogni mix è mostrato sia in formato grafico che numerico.</p>
+<p>Gestione della visualizzazione "Vista per canale</p>
+<p>a) Passare da un canale all'altro in "Visualizza per canale".</p>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator-channel.png" /></p>
+<p>Toccando la linea di riepilogo (evidenziata in alto), i mix secondari del canale verranno eliminati.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-collapsed.png" /></p>
+<p>Come si può vedere qui sopra, i mix secondari per CH2 Elevators sono stati eliminati. Ora puoi scorrere verso l'alto o verso il basso e selezionare un altro canale da espandere per mostrare i mix che contribuiscono a quel canale.</p>
+<p>b) <strong><em>Tornare alla "Vista tabella".</em></strong></p>
+<p><img alt="" src="../../assets/model-mixes-chview-elevator-channel-view.png" /></p>
+<p>Cliccando invece su un mix secondario, ad esempio la riga evidenziata sopra, si aprirà una finestra di dialogo a comparsa che permetterà di modificare il mix, di passare alla visualizzazione Tabella o di eliminare il mix.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-table-view-select.png" /></p>
+<p>Selezionando Visualizzazione tabella, tornerai alla visualizzazione normale dei mix in formato tabella. In alternativa puoi modificare il mix evidenziato o eliminarlo.</p>
+<p><img alt="" src="../../assets/model-mixes-chview-back-at-mixes-view.png" /></p>
+<p>Siamo tornati ai mix di Table View.</p>
+<h2 id="libreria-mixer">Libreria Mixer<a class="headerlink" href="#libreria-mixer" title="Permanent link">&para;</a></h2>
+<p>Libreria aerei</p>
+<p><img alt="" src="../../assets/model-mixes-library-airplane.png" /></p>
+<p>L'elenco delle combinazioni predefinite disponibili nella libreria dell'aeroplano è riportato sopra.<br />
+Si prega di notare che alcune combinazioni appaiono solo se nel modello sono presenti i canali richiesti. Ad esempio, le combinazioni con i flap come target vengono popolate solo se sono definite configurazioni valide dei flap.</p>
+<p>Aggiungi Mix</p>
+<p><img alt="" src="../../assets/model-mix-free-add.png" /></p>
+<p>Nella schermata principale dei mix (vedi sopra) è possibile aggiungere nuovi mix toccando il simbolo “+” accanto alle intestazioni delle colonne.</p>
+<p>Seleziona un mix dall'elenco dei mix predefiniti disponibili nella libreria dei mix (vedi la schermata della libreria in alto). In questo esempio viene utilizzato il Free Mix.</p>
+<p><img alt="" src="../../assets/model-mix-free-add-position.png" /></p>
+<p>Successivamente è necessario scegliere la posizione del nuovo mix, in questo esempio aggiunto dopo "Ultima posizione".</p>
+<p><img alt="" src="../../assets/model-mix-free-added.png" /></p>
+<p>Normalmente il nuovo mix libero si apre per la modifica, ma siamo tornati alla vista dei mix per mostrare che il mix libero è stato aggiunto.</p>
+<p>Tocca "Mix libero" per aprire il sottomenu di modifica.</p>
+<p><img alt="" src="../../assets/model-mix-free-select-edit.png" /></p>
+<p>Seleziona Modifica per aprire una nuova schermata che mostra i parametri dettagliati del "Free mix".</p>
+<p>Mix Libero</p>
+<p>I mix liberi sono i mix generici che fanno tutto. Le Mixer predefinite sono per certi versi più potenti, ma anche più limitate alla loro applicazione specifica. Non tutte le opzioni sono necessariamente disponibili nei mix liberi, ma con essi si può fare qualsiasi cosa, solo che potrebbe essere necessario più di un mix libero per duplicare un singolo mix speciale.</p>
+<p>Il grafico a destra mostra l'uscita del mix e l'effetto delle modifiche apportate alle impostazioni.</p>
+<p><img alt="" src="../../assets/model-mix-free-edit.png" /></p>
+<ul>
+<li>Nome</li>
+</ul>
+<p>È possibile inserire un nome descrittivo per il Free Mix.</p>
+<ul>
+<li>Condizione attiva</li>
+</ul>
+<p>La condizione attiva predefinita è "Sempre attivo". Può essere condizionata scegliendo tra posizioni di interruttori o pulsanti, interruttori di funzione, Fasi di volo, interruttori logici, un evento di sistema come il taglio o il mantenimento del Gas - Throttle o le posizioni dei trim.</p>
+<ul>
+<li>Fasi di volo</li>
+</ul>
+<p>Se sono state definite delle Fasi di volo nella sezione "Fasi di volo", questo parametro diventa disponibile. Il mix può quindi essere condizionato a una o più Fasi di volo. Clicca su "Modifica" e seleziona le caselle relative alle Fasi di volo in cui questo mix deve essere attivo.</p>
+<ul>
+<li>Fonte</li>
+</ul>
+<p>L'input per la miscelazione libera può essere qualsiasi sorgente o anche un valore fisso.</p>
+<h5 id="categorie-di-fonti-sorgenti">Categorie di Fonti (sorgenti)<a class="headerlink" href="#categorie-di-fonti-sorgenti" title="Permanent link">&para;</a></h5>
+<p>La sorgente o l'input di questo mix può essere scelto tra le seguenti categorie:</p>
+<p>Si prega di notare che le categorie sono ora identificate da uno speciale prefisso iconografico per distinguerle dagli elementi denominati dall'utente negli elenchi di selezione. Una volta selezionato un membro in una categoria, l'icona della categoria verrà anteposta al nome del membro. Si prega di fare riferimento all'esempio Alettone riportato di seguito.</p>
+<p>a) ingressi analogici come gli stick, i potenziometri e gli slider</p>
+<p>b) gli interruttori o i pulsanti a levetta</p>
+<p>b2) Interuttori funzione</p>
+<p>c) qualsiasi interruttore logico definito</p>
+<p>d) gli interruttori dei trim</p>
+<p>e) qualsiasi canale definito</p>
+<p>f) una Var (variabile)</p>
+<p>g) un asse giroscopico</p>
+<p>h) un canale di addestramento</p>
+<p>i) un timer</p>
+<p>j) un sensore di telemetria</p>
+<p>k) un valore di sistema (ad esempio, tensione della radio principale, tensione della batteria RTC, orologio (cioè tempo reale), RAM disponibile, tempo di utilizzo radio)</p>
+<p>l) un valore "speciale", cioè minimo, massimo o 0</p>
+<h5 id="possibilita-di-aggiungere-una-var-mentre-si-e-in-seleziona-sorgente">Possibilità di aggiungere una Var mentre si è in Seleziona Sorgente<a class="headerlink" href="#possibilita-di-aggiungere-una-var-mentre-si-e-in-seleziona-sorgente" title="Permanent link">&para;</a></h5>
+<p>E’ possibile creare una nuova VAR mentre si è in seleziona categorie(sorgenti).</p>
+<h5 id="sorgente-come-valore-fisso">Sorgente come valore fisso<a class="headerlink" href="#sorgente-come-valore-fisso" title="Permanent link">&para;</a></h5>
+<p>Premendo a lungo il tasto Invio sul parametro Sorgente si aprirà la finestra di dialogo delle opzioni, che consente di convertire l'ingresso mix libero in un valore fisso.</p>
+<p>(Sebbene sia semplice, valuta la possibilità di utilizzare invece una variabile con un valore fisso. L'uso delle variabili ti consente di inserire tutti i valori di regolazione principali in un unico menu con nomi significativi. Per ulteriori dettagli, consulta la sezione Variabili (VAR)).</p>
+<p>Il valore fisso può essere adesso modificato.</p>
+<p>Premendo a lungo sul valore fisso è possibile selezionare Massimo, 0, Minimo o tornare all'utilizzo di una sorgente.</p>
+<p>Siamo tornati all'opzione di selezione della fonte.</p>
+<p><img alt="" src="../../assets/model-mix-free-source-ail.png" /></p>
+<p>In questo esempio è stato scelto come sorgente lo stick dell'alettone. Nota che l’icona della categoria analogico è stata associata ad “alettone”</p>
+<ul>
+<li>Funzionamento</li>
+</ul>
+<p>Il tipo di operazione definisce il modo in cui il mix corrente interagisce con gli altri dello stesso canale. Esistono tre tipi di funzione:</p>
+<p>L'uscita di questo mix verrà aggiunta a qualsiasi altro mix sullo stesso canale di uscita. Tieni presente che i mix di aggiunta possono essere in qualsiasi ordine (A+B+C = C+B+A).</p>
+<p>L'uscita di questo mix verrà moltiplicata con il risultato di altri mix superiori sullo stesso canale di uscita.</p>
+<p>L'uscita di questo mix sostituirà il risultato di qualsiasi altro mix sullo stesso canale di uscita.</p>
+<p>Un canale "bloccato" non potrà mai essere modificato da nessun altro mix mentre il mix bloccato è attivo. (Questa è una buona alternativa alla funzione Override di OpenTX).</p>
+<p>La combinazione di queste operazioni permette di creare operazioni matematiche complesse.</p>
+<ul>
+<li>Azioni</li>
+</ul>
+<p>Il free mix è estremamente flessibile: è possibile definire fino a 50 azioni di mix.</p>
+<p><img alt="" src="../../assets/model-mix-free-add-action.png" /></p>
+<p>Tocca "+ Aggiungi una nuova azione" per aggiungere un'azione mix gratuita.</p>
+<p><img alt="" src="../../assets/model-mix-free-action-types.png" /></p>
+<p>Le azioni disponibili sono:</p>
+<ul>
+<li>Curva</li>
+<li>escursione</li>
+<li>Differenziale </li>
+<li>Offset</li>
+<li>Lento</li>
+</ul>
+<p>Le azioni possono essere combinate per creare, ad esempio, rates multipli con diverse curve di expo, diverse quantità di differenziale e così via.</p>
+<p>L'ordine consigliato per le azioni è Lento, Curva, escursione e poi Offset. Questo ordine deve essere rispettato a meno che non ci sia una ragione specifica per utilizzare un ordine diverso.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-active-condition.png" /></p>
+<p>Ogni azione di mix libero può avere una propria "condizione attiva".</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-direction-select.png" /></p>
+<p>La condizione attiva predefinita è "Sempre acceso". Può essere condizionata scegliendo tra posizioni di interruttori o pulsanti, interruttori di funzione, Fasi di volo, interruttori logici, un evento di sistema come il taglio o il mantenimento del Gas - Throttle o le posizioni dei trim.</p>
+<p>Inoltre, nelle condizioni attive per le azioni di Mix libera, è disponibile il vincolo "Direzione".</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-directions.png" /></p>
+<p>I vincoli di direzione disponibili sono Alto, Basso, Destra e Sinistra.</p>
+<p>-</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-directions-summary.png" /></p>
+<p>Per i diverse escursioni in alto e in basso (per imitare i precedenti "escursione in alto" e "escursione in basso") le condizioni possono essere impostate su "In alto" e sul valore predefinito "Altrimenti". Vedi anche l'azione escursione qui sotto.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight.png" /></p>
+<p>Per impostazione predefinita, il mix libero inizia con un'azione "escursione" del 100% che è "Sempre attiva". Nota: a titolo di esempio, la sorgente è stata impostata su "Alettoni".</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-edit-select.png" /></p>
+<p><strong>Importante</strong>: per configurare il escursione del mix libero, tocca la riga del escursione predefinito e seleziona Modifica per apportare modifiche o aggiunte. Selezionando "+Aggiungi una nuova azione" si aggiungerà invece una seconda azione escursione.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-add-weight.png" /></p>
+<p>Tocca "Aggiungi un nuovo escursione" per aggiungere altre escursioni. Ad esempio, per creare rates multiple, basta aggiungere altre azioni "escursione" condizionate, ad esempio, da un interruttore a 3 posizioni.</p>
+<p>L'esempio sopra riportato mostra che è stato selezionato lo switch SA- per rendere condizionale la nuova escursione</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-edit.png" /></p>
+<p>Nell'esempio precedente sono stati aggiunti due escursioni (o rates) supplementari utilizzando l'interruttore SA.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-weight-summary.png" /></p>
+<p>Quando l'interruttore non è in posizione centrale o abbassata, il escursione sarà del 100%.</p>
+<p><img alt="" src="../../assets/model-mix-free-action-types.png" /></p>
+<p>Per aggiungere le curve al mix, seleziona "Curve" dal menu a discesa delle azioni.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-select.png" /></p>
+<p>L'opzione curva standard è Expo, che per impostazione predefinita ha un valore pari a 0, il che significa che la risposta è lineare (cioè non c'è curva). Un valore positivo ammorbidisce la risposta intorno allo 0, mentre un valore negativo la rende più netta.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-edit.png" /></p>
+<p>In questo esempio sono stati definiti 3 rates di esposizione per accompagnare i rates di escursione definiti in precedenza.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-edit-summary.png" /></p>
+<p>Con l'interruttore SA in posizione centrale, il escursione/rate di escursione è del 70% mentre l'esponenziale è del 40%. Con l'interruttore SA in posizione bassa, il escursione/rate di escursione è del 50% mentre l'expo è del 30%. Con l'interruttore SA in posizione predefinita (su), il escursione/rate di escursione predefinito è del 100% mentre la curva expo predefinita è del 50%.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-select-move-option.png" /></p>
+<p>L'ordine delle azioni consigliato è Rallenta, Curva, Escursione, Differenziale, Offset e infine Trim, quindi sposteremo l'azione Curve prima di escursione. Tocca [ENT] sull'azione Curve evidenziata, quindi seleziona l'opzione Muovi.</p>
+<p><img alt="" src="../../assets/Pictures/1000000000000320000001E06F3621BA.png" /></p>
+<p>Tocca la freccia verso l'alto evidenziata o utilizza l'encoder rotativo per spostare l'azione della curva al di sopra del escursione.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-expo-edit-summary-moved.png" /></p>
+<p>L’azione curva è ora nella prima posizione.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-curve-cv1-select.png" /></p>
+<p>È inoltre possibile selezionare qualsiasi curva definita in precedenza (ad esempio CV1 nell'esempio precedente). L'uscita del mix sarà quindi modificata da questa curva.</p>
+<p>Con il Free Mix e alcuni altri mix, puoi specificare fino a 6 curve, ciascuna con una condizione. Se più di una condizione è vera, prevale la curva più in alto nell'elenco.</p>
+<p>Nota che le Curve vengono applicate prima del escursione.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-differential.png" /></p>
+<p>Per aggiungere il differenziale al mix, seleziona "Differenziale" dal menu a discesa delle azioni.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-diff-edit.png" /></p>
+<p>Se il valore è positivo, l'uscita del mix avrà una minore corsa verso il basso. (Predefinito = 0. Intervallo da -100 a +100). Con un valore del 50% la corsa verso il basso è la metà della corsa verso l'alto, come si può vedere nell'esempio precedente.</p>
+<p>Per maggiori dettagli, consulta la descrizione del mix Alettoni.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-offset.png" /></p>
+<p>Per aggiungere un offset al mix, seleziona "Offset" dal menu a discesa delle azioni.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-edit.png" /></p>
+<p>Un offset sposterà l'uscita del mix verso l'alto o verso il basso del valore di offset inserito qui. Sono ammessi valori negativi.</p>
+<p>Si possono definire due valori di offset, uno per quando la Mix libera è attiva e un altro per quando la Mix libera è inattiva.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-use-source.png" /></p>
+<p>Un trim può essere assegnato a un mix libero utilizzando il trimmer come sorgente (premendo a lungo sul campo del valore) per il parametro Offset.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-use-source-thr-trim.png" /></p>
+<p>Nell'esempio precedente, il trim del Gas - Throttle è stato selezionato come fonte per regolare l'offset.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-offset-use-source-thr-trim-full-range.png" /></p>
+<p>Per impostazione predefinita, i trim hanno un intervallo di +/- 25%. Quando vengono utilizzati come sorgente, i trim possono essere modificati in un intervallo completo di +/- 100% (premi a lungo Invio sul trim).</p>
+<p>La direzione dell'assetto può essere cambiata selezionando "Inverti".</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-slow.png" /></p>
+<p>Per aggiungere un rallentamento all'uscita del free mix, seleziona "Slow" dal menu a discesa delle azioni.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-edit.png" /></p>
+<p>Slow (ad esempio) è comunemente usato per rallentare l'apertura dei flap, perché aumenti improvvisi della portanza possono causare problemi di controllo.</p>
+<p>Se si imposta Slow come prima azione, i valori slow corrispondono al tempo in secondi che l'uscita impiegherà per passare da 0 a +100% (o cambiare del 100%).</p>
+<p>Ad esempio:</p>
+<p>Azione 1 - Slow up/down=2s/2s</p>
+<p>Azione 2 – Peso=50%</p>
+<p>Se l'input cambia da -100% a +100%,</p>
+<p>l'output impiegherà (2+2)=4s per passare da -50% a +50%.</p>
+<p>Se invece l'azione Slow segue l'azione Weight, la transizione lenta sarà proporzionalmente più breve.</p>
+<p>Ad esempio:</p>
+<p>Azione 1 - Peso=50%</p>
+<p>Azione 2 - Rallenta/Accelera=2s/2s</p>
+<p>Se l'input cambia da -100% a +100%,</p>
+<p>l'output impiegherà solo (2+2)*50% ‎=2s per passare da -50% a +50%.</p>
+<p>Si possono definire valori diversi per le direzioni verso l'alto e verso il basso.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-summary.png" /></p>
+<p>Un riepilogo delle azioni di mix è riportato qui sopra.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-type-trim.png" /></p>
+<p>Per aggiungere un assetto al mix, seleziona "Assetto" dal menu a discesa delle azioni. Questa operazione è più semplice rispetto all'aggiunta di un assetto con l'azione Offset.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-trim-edit.png" /></p>
+<p>Seleziona l'interruttore di assetto da utilizzare.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-trim-summary.png" /></p>
+<p>Un riepilogo di tutte le azioni di mix è riportato qui sopra.</p>
+<h5 id="riorganizzazione-delle-azioni-di-mixo-libero">Riorganizzazione delle azioni di mixo libero<a class="headerlink" href="#riorganizzazione-delle-azioni-di-mixo-libero" title="Permanent link">&para;</a></h5>
+<p>Come discusso in precedenza, l'ordine consigliato delle azioni è Slow, Curve, Weight, Differential, Offset e infine Trim. Questo ordine dovrebbe essere rispettato a meno che non vi sia un motivo specifico per utilizzare un ordine diverso. Ad esempio, potresti voler rimuovere un offset da un input.</p>
+<p>Poiché Peso è l'azione predefinita quando si crea un mix libero, qualsiasi azione aggiuntiva creata avrà un ordine inferiore, a meno che non si elimini prima l'azione Peso. Tuttavia, è più semplice modificare l'ordine delle azioni di mix utilizzando l'opzione “Sposta” nel sottomenu di modifica.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-move.png" /></p>
+<p>Tocca l'azione da spostare, ad esempio l'azione “Slow” nell'esempio sopra riportato, quindi seleziona l'opzione “Sposta” nel sottomenu di modifica. Appariranno delle frecce di spostamento che consentono di spostare l'azione verso l'alto o verso il basso nell'ordine.</p>
+<p><img alt="" src="../../assets/model-mix-free-actions-slow-at-top.png" /></p>
+<p>Questo riepilogo mostra che le azioni Slow e Curve sono state spostate in alto nell'ordine delle azioni.  Si noti che Trim deve sempre essere l'ultima.</p>
+<ul>
+<li>Numero di canali</li>
+</ul>
+<p>Il conteggio dei canali definisce il numero di canali di uscita assegnati.</p>
+<ul>
+<li>Invertire</li>
+</ul>
+<p>L'uscita di questo mix può essere invertita o invertita attivando questa opzione. Tieni presente che l'inversione del servo deve essere effettuata nella sezione Uscite. Questa opzione serve per ottenere la giusta logica di miscelazione.</p>
+<ul>
+<li>Uscita</li>
+</ul>
+<p>Qualsiasi canale può essere selezionato per ricevere l'uscita di questo mix. Se il conteggio dei canali di cui sopra è maggiore di uno, è necessario configurare un canale per ogni uscita.</p>
+<p>Libreria di mix continua...</p>
+<p>Alettone, Elevatore, Timone</p>
+<p>Fai riferimento alla  dettagliata <a href="#Aileron_Elevator_Rudder_mixes">delle Mixer di alettoni, elevatori e timoni </a>riportata sopra.</p>
+<p>Flap</p>
+<p>Il mix Flaps mixa un ingresso a uno o più canali con escursioni individuali. Offre anche le opzioni Slow Up e Slow Down.</p>
+<p>Gas - Throttle</p>
+<p>Il mix Throttle è per il controllo del motore e comprende le opzioni Throttle Cut e Throttle Hold. Consulta la discussione dettagliata <a href="#Throttle_Mix">sul mix di accelerazione </a>riportata sopra.</p>
+<p>Da alettone a flap</p>
+<p>Questa Mix è comunemente utilizzata sugli alianti in modo che i flap si muovano insieme agli alettoni per aumentare la risposta degli alettoni del modello.</p>
+<p>Dall'alettone al timone</p>
+<p>Questa Mix è comunemente utilizzata per ridurre il sideslipping nelle virate. Tuttavia, questa Mix è adatta solo a una particolare velocità e orientamento dell'aria. È meglio imparare a correggere il sideslipping con il controllo manuale del timone.</p>
+<p>Aereofreno</p>
+<p>La Mix Airbrake è simile alla Mix Butterfly, ma è controllata da una condizione attiva on-off.</p>
+<p>Butterfly</p>
+<p>La frenata a Butterfly o a crow viene utilizzata per controllare la velocità di discesa di un aereo. Gli alettoni sono impostati per salire di poco, mentre i flap scendono di molto. Questa combinazione crea una forte resistenza aerodinamica ed è molto efficace per frenare e quindi ideale per controllare l'approccio all'atterraggio. L'input è normalmente impostato su un cursore (o sullo stick del Gas - Throttle in un aliante).</p>
+<p>La compensazione è necessaria anche sull'elevatore per evitare che l'aliante si sollevi quando si applica la folla.</p>
+<p>Tieni presente che il mix ha un offset incorporato in modo che l'uscita del mix sia pari a zero nella posizione neutra dei flap, cioè quando lo stick del Gas - Throttle (o la fonte alternativa) è in posizione bassa, e al massimo nella posizione di apertura completa dei flap, cioè nella posizione alta dello stick del Gas - Throttle (o della fonte alternativa). Questo offset viene disattivato quando si aggiunge una curva utente per dare a quest'ultima il pieno controllo.</p>
+<p>Camber</p>
+<p>La Mix Camber viene solitamente utilizzata per applicare un po' di camber alle superfici alari per aumentare la portanza.</p>
+<p>Flap a Elevatore</p>
+<p>La Mix Flap/Elevatore è utile per la compensazione di flap/camber/crow, quando è necessaria una curva di compensazione personalizzata.</p>
+<p>Elevatore a Camber</p>
+<p>Conosciuta anche come Snap Flap, questa Mix aggiunge camber all'ala quando si applica l'elevatore. Questo permette all'ala di generare portanza in modo più efficiente quando l'aereo riceve i comandi di beccheggio.</p>
+<p>Dal timone all'alettone</p>
+<p>Questa Mix viene utilizzata per contrastare l'imbardata indotta dal timone nel volo a coltello.</p>
+<p>Dal timone all'elevatore</p>
+<p>Questa Mix può aiutare a migliorare il volo a coltello in caso di problemi di accoppiamento.</p>
+<p>Snap Roll</p>
+<p>Lo snap roll è una manovra di autorotazione in condizioni di stallo. Durante uno snap, un'ala viene stallata mentre l'altra viene accelerata intorno all'asse di rollio. Questo crea un'accelerazione improvvisa del rollio che non si può ottenere semplicemente dando un input all'alettone. Per ottenere questa condizione in un modello, è necessario dare diversi input, tra cui l'elevatore, il timone e l'alettone. Ad esempio, puoi eseguire uno snap interno a sinistra programmando il mix in modo da applicare simultaneamente l'elevatore, il timone sinistro e l'alettone sinistro per 1 o 2 secondi. Recupera la manovra neutralizzando gli stick e aggiungendo immediatamente il timone destro per correggere la perdita di rotta.</p>
+<p>Gas - Throttle all'elevatore</p>
+<p>Questo mix permette di compensare l'elevatore per gli aerei che cambiano passo al variare della manetta.</p>
+<p>Tieni presente che il mix ha un offset incorporato in modo che l'uscita del mix sia pari a zero quando lo stick del Gas - Throttle è in posizione bassa e al massimo quando lo stick del Gas - Throttle è in posizione alta. Questo offset viene disattivato quando si aggiunge una curva utente per dare a quest'ultima il pieno controllo.</p>
+<p>Gas - Throttle al timone</p>
+<p>Questa Mix aiuterà l'aereo a volare dritto quando è a pieno regime; in genere è necessaria quando si vola in verticale.</p>
+<p>Tieni presente che il mix ha un offset incorporato in modo che l'uscita del mix sia pari a zero quando lo stick del Gas - Throttle è in posizione bassa e al massimo quando lo stick del Gas - Throttle è in posizione alta. Questo offset viene disattivato quando si aggiunge una curva utente per dare a quest'ultima il pieno controllo.</p>
+<p>Mix di Test</p>
+<p>Questa Mix è ideale per testare i servi. Include un'impostazione di gamma, oltre a Slow Up e Slow Down.</p>
+<p>Per motivi di sicurezza, il mix di test esclude i canali dell'acceleratore/gas</p>
+<p>Offset</p>
+<p>La Mix Offset viene utilizzata per aggiungere un valore fisso alla Mix quando è necessario un offset. Un'applicazione comune è quella dei flap, dove la squadretta del servo viene spostata in una direzione per massimizzare la corsa dei flap verso il basso. In questo modo i flap si trovano in una posizione di mezza discesa al centro del servo. La Mix Offset può quindi essere utilizzata per portare i flap nella posizione "neutra in superficie" quando l'uscita della Mix flap è pari a zero.</p>
+<p>Sequencer</p>
+<p>Il mix sequencer consente di sequenziare più canali in avanti e indietro utilizzando basi temporali e curve programmabili. È molto utile per programmare elementi quali le sequenze del carrello di atterraggio e dello sportello del carrello. Il sequencer è stato progettato con i comandi necessari per rendere la sequenza facile da programmare, consentendo al contempo una flessibilità totale limitata solo dalla vostra immaginazione.</p>
+<p>Prima di iniziare la programmazione, è opportuno pianificare il funzionamento desiderato del sequencer.</p>
+<p>Nome</p>
+<p>Un nome descrittivo può essere assegnato per il mix Sequencer.</p>
+<p>Condizione Attiva</p>
+<p>La condizione attiva predefinita è “Sempre attivo”. È possibile renderla condizionale scegliendo tra posizioni di interruttori o pulsanti, interruttori di funzione, Fasi di volo, interruttori logici, eventi di sistema quali taglio o mantenimento della potenza o posizioni di trim.</p>
+<p>Fasi di Volo</p>
+<p>Se nella sezione “Fasi di volo” sono state definite delle Fasi di volo, questo parametro diventa disponibile. Il mix può quindi essere reso condizionale a una o più Fasi di volo. Fare clic su “Modifica” e selezionare le caselle relative alle Fasi di volo in cui questo mix deve essere attivo.</p>
+<p>Modo Loop</p>
+<p>Con la modalità loop attivata, il sequencer funzionerà in avanti e indietro in modo continuo in un loop. Con la modalità loop disattivata, la condizione di avanzamento o arretramento deve essere soddisfatta prima che la sequenza pertinente abbia inizio.</p>
+<p>Un buon esempio di applicazione della modalità loop è una sequenza di test del servomotore.</p>
+<p>Condizione “Avanti” Forward</p>
+<p>La condizione "Avanti" - forward avvia il sequenziatore nella direzione forward. Eseguirà quindi fino al completamento per la durata forward indicata di seguito, a meno che il parametro presto - Early non sia impostato su On.</p>
+<h5 id="presto-early">“Presto” - Early<a class="headerlink" href="#presto-early" title="Permanent link">&para;</a></h5>
+<p>L'opzione Early consente di terminare anticipatamente la sequenza di esecuzione in avanti se viene asserita la condizione di inversione.</p>
+<p>Condizione “Indietro” - Backward</p>
+<p>La condizione backward avvia il sequencer nella direzione inversa. Il sequencer verrà quindi eseguito fino al completamento per la durata inversa indicata di seguito, a meno che il parametro Early non sia impostato su On.</p>
+<h5 id="presto-early_1">Presto - Early<a class="headerlink" href="#presto-early_1" title="Permanent link">&para;</a></h5>
+<p>L'opzione Early consente di terminare anticipatamente la sequenza di esecuzione all'indietro se viene asserita la condizione in avanti..</p>
+<p>Condizion Pausa</p>
+<p>Il sequenziatore può essere messo in pausa attivando la condizione di pausa. Rimarrà in modalità pausa fino a quando la condizione di pausa non tornerà falsa.</p>
+<p>Durata Avanti - Forward</p>
+<p>Qui è possibile configurare la base temporale per la sequenza in avanti.</p>
+<p>Durata Indietro - Backward</p>
+<p>Qui è possibile configurare la base temporale per la sequenza inversa. Può essere diversa dalla durata in avanti.</p>
+<p>Uscita1</p>
+<p>Any channel can be selected to receive the output from the sequencer.</p>
+<p>Menu Uscita1</p>
+<p>Tocca sui 3 punti per aprire il menu delle opzioni curva.</p>
+<h5 id="opzioni-curva">Opzioni Curva<a class="headerlink" href="#opzioni-curva" title="Permanent link">&para;</a></h5>
+<h5 id="modifica-curva">Modifica Curva<a class="headerlink" href="#modifica-curva" title="Permanent link">&para;</a></h5>
+<p>La curva ha 5 punti come default, ma puoò essere estesa fino a 21 punti. Entrambe le coordinate X e Y sono configurabili.</p>
+<h5 id="aggiungere-una-curva-indietro-retroattiva">Aggiungere una curva “indietro”- retroattiva<a class="headerlink" href="#aggiungere-una-curva-indietro-retroattiva" title="Permanent link">&para;</a></h5>
+<p>Come default la stessa curva è usata per entrambe le direzioni, ma è aggiungibile una curva retroattiva “indietro”.</p>
+<p>Non appena viene aggiunta una curva “indietro”, il menu opzioni permetterà di configurare entrambe le curve.</p>
+<h5 id="configura-la-curva-attiva-avanti">Configura la curva Attiva “Avanti”<a class="headerlink" href="#configura-la-curva-attiva-avanti" title="Permanent link">&para;</a></h5>
+<p>La curva attiva avanti può essere configurata. Quando ci sono due curve una freccia indica quale si stà modificando.</p>
+<p>L’esempio mostra un applicazione tipica come sequenza test servocomandi.</p>
+<h5 id="configura-una-curva-retro-attiva-indietro">Configura una curva retro attiva “indietro”<a class="headerlink" href="#configura-una-curva-retro-attiva-indietro" title="Permanent link">&para;</a></h5>
+<p>La curva retroattiva “indietro” può essere configurata. Quando presenti due curve una freccia indicherà quella che si sta modificando.</p>
+<p>Se la curva “indietro viene creata dopo aver configurato la curva “avanti”, la curva avanti verrà replicat sulla curva “indietro e sarà comunque possibile modificarla.</p>
+<h5 id="uso-di-una-sola-curv">Uso di una sola curv<a class="headerlink" href="#uso-di-una-sola-curv" title="Permanent link">&para;</a></h5>
+<p>Nel caso si cambiasse idea, la curva “indietro” potrà essere rimossa selezionando “usa solo una curva”.</p>
+<h5 id="rimuovi-uscita">Rimuovi Uscita<a class="headerlink" href="#rimuovi-uscita" title="Permanent link">&para;</a></h5>
+<p>L’uscita può essere anche essa rimossa.</p>
+<p>Aggiungere una nuova uscita</p>
+<p>Uscite addizionali possono essere aggiunte, ognuna delle quaili avrà una sua curva (o piu curve).</p>
+<p>Ciò consente, ad esempio, che un'uscita controlli i portelli del carrello, mentre un'altra controlla il carrello retrattile. Utilizzando le curve di ciascuna uscita, è possibile configurare una sequenza che preveda prima l'apertura graduale dei portelli del carrello, seguita dall'apertura del carrello retrattile e infine dalla chiusura dei portelli, con una tempistica tale da consentire il tempo necessario per ciascuna fase. Le curve possono essere configurate con una pendenza per controllare la velocità di variazione dell'uscita o per passare istantaneamente da una fase all'altra se, ad esempio, il controller retrattile controlla la propria velocità di funzionamento.</p>
+<p>Si prega di fare riferimento alla sezione ‘Come configurare un sequencer per portelli e carrelli’ per un esempio.</p>
+<p>Sommario operazioni Sequencer</p>
+<p>Una volta soddisfatta la condizione di avanzamento, ogni uscita del mix del sequenziatore   segue la sua curva di avanzamento (o singola) da sinistra a destra per tutta la durata  dell'avanzamento. Allo stesso modo, una volta soddisfatta la condizione di arretramento,    ogni uscita del mix del sequenziatore segue la sua curva di arretramento (o singola) da     destra a sinistra per tutta la durata dell'arretramento..</p>
+<p>Il parametro Early consente al sequencer di cambiare direzione in anticipo, mentre la   condizione Pause consente di mettere in pausa la sequenza.</p>
+<p>In modalità loop l'operazione è continua.</p>
+<p>Tutto quanto sopra è ovviamente soggetto alle condizioni attive configurate e alle modalità     di volo.</p>
+<p>Libreria alianti</p>
+<p><img alt="" src="../../assets/model-mixes-library-glider.png" /></p>
+<p>L'elenco delle combinazioni predefinite disponibili nella libreria del velivolo è riportato sopra.</p>
+<p>Si prega di notare che alcune combinazioni appaiono solo se nel modello sono presenti i canali richiesti. Ad esempio, le combinazioni con i flap come obiettivo vengono popolate solo se sono definite configurazioni valide dei flap. Le combinazioni relative ai flap appariranno nella libreria delle combinazioni se i flap sono definiti in Modifica modello.</p>
+<p>Mix Libero</p>
+<p>Fai riferimento alla descrizione del <a href="./">mix gratuito </a>nella sezione Biblioteca di aerei.</p>
+<p>Alettone, Elevatore, Timone</p>
+<p>Fai riferimento alla descrizione dettagliata delle Mixer di <a href="#Aileron_Elevator_Rudder_mixes">alettoni, elevatori e timoni </a>riportata sopra.</p>
+<p>Flap</p>
+<p>Il mix Flaps mixa un ingresso a uno o più canali con escursioni individuali. Offre anche le opzioni Slow Up e Slow Down.</p>
+<p>Gas - Throttle</p>
+<p>Il mix Throttle è per il controllo del motore e comprende le opzioni Throttle Cut e Throttle Hold. Consulta la discussione dettagliata <a href="#Throttle_Mix">sul mix di accelerazione </a>riportata sopra.</p>
+<p>Da alettone a flap</p>
+<p>Questa Mix è comunemente utilizzata sugli alianti in modo che i flap si muovano insieme agli alettoni per aumentare la risposta degli alettoni del modello.</p>
+<p>Dall'alettone al timone</p>
+<p>Questa Mix è comunemente utilizzata per ridurre il sideslipping nelle virate. Tuttavia, questa Mix è adatta solo a una particolare velocità e orientamento dell'aria. È meglio imparare a correggere il sideslipping con il controllo manuale del timone.</p>
+<p>Aereofreno</p>
+<p>La Mix Airbrake è simile alla Mix Butterfly, ma è controllata da una condizione attiva on-off.</p>
+<p>Butterfly</p>
+<p>La frenata a Butterfly o a crow viene utilizzata per controllare la velocità di discesa di un aereo. Gli alettoni sono impostati per salire di poco, mentre i flap scendono di molto. Questa combinazione crea una forte resistenza aerodinamica ed è molto efficace per frenare e quindi ideale per controllare l'approccio all'atterraggio. L'input è normalmente impostato su un cursore (o sullo stick del Gas - Throttle in un aliante).</p>
+<p>La compensazione è necessaria anche sull'elevatore per evitare che l'aliante si sollevi quando si applica la folla.</p>
+<p>Tieni presente che il mix ha un offset incorporato in modo che l'uscita del mix sia pari a zero nella posizione neutra dei flap, cioè quando lo stick del Gas - Throttle (o la fonte alternativa) è in posizione bassa, e al massimo nella posizione di apertura completa dei flap, cioè nella posizione alta dello stick del Gas - Throttle (o della fonte alternativa). Questo offset viene disattivato quando si aggiunge una curva utente per dare a quest'ultima il pieno controllo.</p>
+<p>Camber</p>
+<p>Il Camber viene solitamente utilizzato per applicare un po' di camber alle superfici alari per aumentare la portanza.</p>
+<p>Flap a elevatore</p>
+<p>La Mix Flap/Elevatore è utile per la compensazione di flap/camber/crow, quando è necessaria una curva di compensazione personalizzata.</p>
+<p>Elevatore a Camber</p>
+<p>Conosciuta anche come Snap Flap, questa Mix aggiunge camber all'ala quando si applica l'elevatore. Questo permette all'ala di generare portanza in modo più efficiente quando l'aereo riceve i comandi di beccheggio.</p>
+<p>Dal timone all'alettone</p>
+<p>Questa Mix può essere utilizzata per contrastare l'imbardata indotta dal timone.</p>
+<p>Dal timone all'elevatore</p>
+<p>Questa Mix può essere utile in caso di problemi di accoppiamento. Può essere utilizzata anche per aggiungere una funzione differenziale V-Tail.</p>
+<p>Gas - Throttle all'elevatore</p>
+<p>Questo mix consente di compensare l'elevatore per gli aerei che cambiano passo al variare della manetta.</p>
+<p>Gas - Throttle al timone</p>
+<p>Questa Mix aiuterà l'aereo a volare dritto quando è a pieno regime; in genere è necessaria quando si vola in verticale.</p>
+<p>Mix di Test</p>
+<p>Questa Mix è ideale per testare i servi. Include un'impostazione di gamma, oltre a Slow Up e Slow Down.</p>
+<p>Offset</p>
+<p>La Mix Offset viene utilizzata per aggiungere un valore fisso alla Mix quando è necessario un offset. Un'applicazione comune è quella dei flap, dove la squadretta del servo viene spostata in una direzione per massimizzare la corsa dei flap verso il basso. In questo modo i flap si trovano in una posizione di mezza discesa al centro del servo. La Mix Offset può quindi essere utilizzata per portare i flap nella posizione "neutra in superficie" quando l'uscita della Mix flap è pari a zero.</p>
+<p>Libreria Elicotteri</p>
+<p><img alt="" src="../../assets/model-mixes-library-heli.png" /></p>
+<p>Mix Libero</p>
+<p>Fai riferimento alla descrizione del <a href="./">mix gratuito </a>nella sezione Biblioteca di aerei.</p>
+<p>Alettone, Elevatore, Timone</p>
+<p>Fai riferimento alla descrizione dettagliata delle Mixer di <a href="#Aileron_Elevator_Rudder_mixes">alettoni, elevatori e timoni </a>riportata sopra.</p>
+<p>Piatto ciclico</p>
+<p>Il mix Pitch mixa il controllo del passo (Throttle Stick di default) al canale del passo, che normalmente è il canale 6. Controlla il collettivo. Controlla il collettivo.</p>
+<p>Banco Memoria</p>
+<p>Nei tipici sistemi FBL per elicotteri, la modalità banco consente ai piloti di passare da un'impostazione salvata all'altra durante il volo. Assegnando l'input di mix a un interruttore a tre posizioni, è possibile scorrere queste banche (in genere Banca 0, 1 e 2) in volo per modificare rapidamente i parametri di volo o attivare le funzioni di soccorso secondo necessità.</p>
+<p>Gas - Throttle</p>
+<p>Il mix Throttle è per il controllo del motore e comprende le opzioni Throttle Cut e Throttle Hold. Consulta la discussione dettagliata <a href="#Throttle_Mix">sul mix di accelerazione </a>riportata sopra.</p>
+<p>Gyro</p>
+<p>Questo mix viene utilizzato per fornire le impostazioni di guadagno al controller FBL, che possono ad esempio dipendere dalla Fasi di volo. Il canale del giroscopio è spesso il canale 5.</p>
+<p>Passo del timone</p>
+<p>Serve per Mixre il passo al canale del timone.</p>
+<p>Mix di Test</p>
+<p>Questa Mix è ideale per testare i servi. Include un'impostazione di gamma, oltre a Slow Up e Slow Down.</p>
+<p>Offset</p>
+<p>Il mix Offset si usa per aggiungere un valore fisso al mix quando è necessario un offset.</p>
+<p>Libreria Multirotori</p>
+<p><img alt="" src="../../assets/model-mixes-library-multirotor.png" /></p>
+<p>Mix Libero</p>
+<p>Fai riferimento alla descrizione del <a href="./">mix gratuito </a>nella sezione Biblioteca di aerei.</p>
+<p>Rollio, beccheggio, imbardata</p>
+<p>Queste Mixer sono simili alle Mixer di alettoni, elevatori e timoni. Fai riferimento alla descrizione dei <a href="#Aileron_Elevator_Rudder_mixes">mix Alettoni, Elevatore e Timone </a>riportata sopra.</p>
+<p>Banco memoria</p>
+<p>Nei tipici sistemi Flight controller per multirotore, la modalità banco consente ai piloti di passare da un'impostazione salvata all'altra durante il volo. Assegnando l'input di mix a un interruttore a tre posizioni, è possibile scorrere queste banche (in genere Banca 0, 1 e 2) in volo per modificare rapidamente i parametri di volo o attivare le funzioni di soccorso secondo necessità.</p>
+<p>Gas - Throttle</p>
+<p>La Mix Throttle è per il controllo del motore e comprende le opzioni Throttle Cut e Throttle Hold. Consulta la discussione dettagliata <a href="#Throttle_Mix">sulla Mix Throttle </a>riportata sopra.</p>
+<p>Mix di Test</p>
+<p>Questa Mix è ideale per testare i servi. Include un'impostazione di gamma, oltre a Slow Up e Slow Down.</p>
+<p>Offset</p>
+<p>Il mix Offset si usa per aggiungere un valore fisso al mix quando è necessario un offset.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../flight-modes/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Fasi di volo">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Fasi di volo
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../outputs/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Uscite">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                Uscite
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": {"provider": "mike"}}</script>
+    
+    
+  <script src="../../../javascripts/locale-scope.js"></script>
+  
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+
+  </body>
+</html>
